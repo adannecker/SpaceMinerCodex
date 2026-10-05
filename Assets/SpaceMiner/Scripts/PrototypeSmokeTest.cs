@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -18,7 +19,10 @@ namespace SpaceMiner
             running = true;
             Application.logMessageReceived += OnLog;
             Directory.CreateDirectory("Logs");
+            File.Delete("Logs/smoke-test-result.json");
+            File.Delete("Logs/smoke-test-error.txt");
             var scenario = FindFirstObjectByType<WaterScenario>();
+            File.Delete("Logs/asteroid-" + scenario.Asteroids.Length + "-performance.json");
             yield return null;
             yield return CheckIntro(scenario);
             if (!running) yield break;
@@ -35,6 +39,11 @@ namespace SpaceMiner
             camera.Overview();
             yield return new WaitForEndOfFrame();
             Capture("Logs/prototype-overview.png");
+            if (!running) yield break;
+            var spiral = GetComponent<SpiralBelt>();
+            if (spiral != null && spiral.IsReady && !Guard(() => Require(spiral.LastVisibleCount == 9900 && spiral.LastDrawCalls > 0,
+                "all 9900 additional bodies submitted in instanced overview"))) yield break;
+            yield return MeasureAsteroidPerformance(camera);
             if (!running) yield break;
             camera.Zoom(-1000);
             yield return new WaitForEndOfFrame();
@@ -73,16 +82,55 @@ namespace SpaceMiner
             {
                 var controller = GetComponent<OrbitCamera>();
                 var objects = FindObjectsByType<SpaceObject>(FindObjectsSortMode.None);
-                Require(objects.Length == 23, "12 asteroids, a ship and ten drones");
+                var spiral = GetComponent<SpiralBelt>();
+                bool spiralMode = spiral != null && spiral.IsReady;
+                int expected = spiralMode ? 10000 : 100;
+                Require(objects.Length == expected + 11, expected + " asteroids, a ship and ten drones");
                 var asteroids = GameObject.Find("Asteroids (1 unit = 1 metre)");
-                Require(asteroids.transform.childCount == 12, "12 asteroids");
+                Require(asteroids.transform.childCount == expected, expected + " asteroids");
+                var shapes = new HashSet<string>();
+                var meshes = new HashSet<Mesh>();
+                var types = new HashSet<AsteroidType>();
                 foreach (Transform body in asteroids.transform)
                 {
                     var generator = body.GetComponent<AsteroidGenerator>();
+                    var instance = body.GetComponent<SpiralAsteroid>();
+                    if (instance != null)
+                    {
+                        Require(instance.Template != null && instance.Template.BakedMeshes.Length == 4, "instanced body has four shared LODs");
+                        Require(body.GetComponent<MeshCollider>().sharedMesh == instance.Template.BakedMeshes[2], "instanced body has matching picking geometry");
+                        Require(body.GetComponent<SpaceObject>() != null && body.GetComponent<AsteroidResource>() != null, "instanced body can be selected and inspected");
+                        Require(instance.Template.Type.SurfaceMaterial.enableInstancing, "instancing material preserved in build");
+                        continue;
+                    }
                     Require(generator != null && generator.Type != null, "configured generated asteroid " + body.name);
+                    types.Add(generator.Type);
+                    shapes.Add(generator.Type.name + ":" + generator.Seed);
+                    meshes.Add(body.GetComponent<MeshFilter>().sharedMesh);
                     Require(body.GetComponent<LODGroup>().GetLODs().Length == 4, "four asteroid LODs");
                     Require(body.GetComponent<MeshCollider>().sharedMesh != null && body.GetComponent<SphereCollider>() == null, "irregular picking collider");
                     Require(body.GetComponent<Renderer>().sharedMaterial.shader.name == "SpaceMiner/Asteroid Surface", "asteroid PBR shader");
+                }
+                Require(shapes.Count == 100 && meshes.Count == 100, "100 distinct seeds and baked high-detail meshes");
+                Require(types.Count >= 3, "ice, rock and metal variants represented");
+                if (spiralMode)
+                {
+                    ValidateSpiral(asteroids.transform, spiral);
+                }
+                else
+                {
+                    for (int i = 12; i < asteroids.transform.childCount; i++)
+                    {
+                        var body = asteroids.transform.GetChild(i).GetComponent<SpaceObject>();
+                        for (int j = 0; j < i; j++)
+                        {
+                            var other = asteroids.transform.GetChild(j).GetComponent<SpaceObject>();
+                            if (Vector3.Distance(body.transform.position, other.transform.position) <
+                                (body.DiameterMeters + other.DiameterMeters) * 0.5f + 399f)
+                                throw new Exception("Test asteroids overlap: " + body.name + " / " + other.name);
+                        }
+                    }
+                    Require(true, "all 88 additional asteroids have at least 400 metres clearance");
                 }
                 var largest = GameObject.Find("A-12 / Grossasteroid").GetComponent<SpaceObject>();
                 Require(Mathf.Approximately(largest.transform.localScale.x, 5000), "5 km asteroid scale");
@@ -140,6 +188,15 @@ namespace SpaceMiner
                     Vector3 projected = view.WorldToViewportPoint(child.position);
                     Require(projected.z > 0 && projected.x > 0 && projected.x < 1 && projected.y > 0 && projected.y < 1, "overview includes " + child.name);
                 }
+                if (spiralMode)
+                {
+                    foreach (int index in new[] { 100, 4998, 9998 })
+                    {
+                        var target = asteroids.transform.GetChild(index).GetComponent<SpaceObject>();
+                        Require(spiral.PickOverview(view.WorldToScreenPoint(target.transform.position), view) == target,
+                            "tiny overview symbol is selectable at index " + index);
+                    }
+                }
                 controller.Focus(drone);
                 Require(controller.Pivot == drone.transform.position && controller.Selected == drone, "focus selects drone");
                 Physics.SyncTransforms();
@@ -147,6 +204,16 @@ namespace SpaceMiner
                 Require(hit.collider.GetComponentInParent<SpaceObject>() == drone, "object picking targets drone");
                 controller.Focus(largest);
                 Require(controller.Distance > 5000 && view.farClipPlane > controller.Distance + 5000, "large asteroid focus and far clip");
+                if (spiralMode)
+                {
+                    foreach (int index in new[] { 100, 4999, 9999 })
+                    {
+                        var target = asteroids.transform.GetChild(index).GetComponent<SpaceObject>();
+                        controller.Focus(target);
+                        Require(Physics.Raycast(view.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)), out RaycastHit picked)
+                            && picked.collider.GetComponent<SpaceObject>() == target, "instanced asteroid picking at index " + index);
+                    }
+                }
                 return true;
             }
             catch (Exception error)
@@ -156,8 +223,124 @@ namespace SpaceMiner
             }
         }
 
+        [Serializable]
+        private sealed class PerformanceSample
+        {
+            public string view;
+            public int frames;
+            public float averageFps;
+            public float p95FrameMs;
+            public int visibleInstancedBodies, instancedDrawCalls;
+        }
+
+        [Serializable]
+        private sealed class PerformanceReport
+        {
+            public int asteroidCount, width, height, vSyncCount;
+            public string gpu;
+            public float outerRadiusMeters, spiralTurns;
+            public PerformanceSample[] samples;
+        }
+
+        private IEnumerator MeasureAsteroidPerformance(OrbitCamera camera)
+        {
+            var samples = new List<PerformanceSample>();
+            var spiral = GetComponent<SpiralBelt>();
+            foreach (string name in new[] { "overview", "orbit-overview", "near-5km-asteroid", "outer-arm" })
+            {
+                if (name == "near-5km-asteroid") camera.Focus(GameObject.Find("A-12 / Grossasteroid").GetComponent<SpaceObject>());
+                else if (name == "outer-arm") camera.Focus(GameObject.Find("Asteroids (1 unit = 1 metre)").transform.GetChild(FindFirstObjectByType<WaterScenario>().Asteroids.Length - 1).GetComponent<SpaceObject>());
+                else camera.Overview();
+                // Exclude captures, shader warmup and changes of view from the measurement.
+                for (int i = 0; i < 30; i++) yield return null;
+                var times = new List<float>();
+                float seconds = 0;
+                while (seconds < 3f && running)
+                {
+                    if (name == "orbit-overview") camera.Orbit(new Vector2(12f * Time.unscaledDeltaTime, 0));
+                    yield return null;
+                    float dt = Time.unscaledDeltaTime;
+                    times.Add(dt * 1000f);
+                    seconds += dt;
+                }
+                if (!running) yield break;
+                times.Sort();
+                samples.Add(new PerformanceSample { view = name, frames = times.Count,
+                    averageFps = times.Count / seconds, p95FrameMs = times[Mathf.Clamp(Mathf.CeilToInt(times.Count * 0.95f) - 1, 0, times.Count - 1)],
+                    visibleInstancedBodies = spiral != null ? spiral.LastVisibleCount : 0, instancedDrawCalls = spiral != null ? spiral.LastDrawCalls : 0 });
+            }
+            int count = FindFirstObjectByType<WaterScenario>().Asteroids.Length;
+            File.WriteAllText("Logs/asteroid-" + count + "-performance.json", JsonUtility.ToJson(new PerformanceReport {
+                asteroidCount = count, width = Screen.width, height = Screen.height, gpu = SystemInfo.graphicsDeviceName,
+                outerRadiusMeters = spiral != null ? spiral.OuterRadius : 0, spiralTurns = spiral != null ? spiral.LastAngle / (Mathf.PI * 2f) : 0,
+                vSyncCount = QualitySettings.vSyncCount, samples = samples.ToArray() }, true));
+            camera.Overview();
+        }
+
+        private void ValidateSpiral(Transform root, SpiralBelt spiral)
+        {
+            var cells = new Dictionary<Vector3Int, List<SpaceObject>>();
+            float previousRadius = 0;
+            const float cellSize = 6000f;
+            for (int i = 0; i < root.childCount; i++)
+            {
+                var body = root.GetChild(i).GetComponent<SpaceObject>();
+                Vector3 p = body.transform.position;
+                var cell = new Vector3Int(Mathf.FloorToInt(p.x / cellSize), Mathf.FloorToInt(p.y / cellSize), Mathf.FloorToInt(p.z / cellSize));
+                for (int x = -1; x <= 1; x++) for (int y = -1; y <= 1; y++) for (int z = -1; z <= 1; z++)
+                    if (cells.TryGetValue(cell + new Vector3Int(x, y, z), out var neighbours))
+                        foreach (var other in neighbours)
+                            if (Vector3.Distance(p, other.transform.position) < (body.DiameterMeters + other.DiameterMeters) * 0.5f + SpiralBelt.Clearance - 1f)
+                                throw new Exception("Spiral clearance failed: " + body.name + " / " + other.name);
+                if (!cells.TryGetValue(cell, out var bucket)) cells[cell] = bucket = new List<SpaceObject>();
+                bucket.Add(body);
+                float radius = new Vector2(p.x, p.z).magnitude;
+                if (radius <= previousRadius) throw new Exception("Spiral radius must increase at " + body.name);
+                previousRadius = radius;
+                if (i >= 3)
+                {
+                    float theta = (radius - 1500f) / SpiralBelt.RadialGrowth;
+                    if (Vector2.Distance(new Vector2(p.x, p.z), new Vector2(Mathf.Sin(theta), Mathf.Cos(theta)) * radius) > 5f)
+                        throw new Exception("Body is not on the spiral: " + body.name);
+                }
+            }
+            Require(true, "all 10000 bodies have at least 200 m clearance, increasing radii and spiral positions");
+            Require(spiral.OuterRadius < 250000f && spiral.LastAngle > Mathf.PI * 8, "spiral has multiple turns within the camera range");
+        }
+
         private static void Capture(string path)
         {
+            if (path.Contains("asteroid-"))
+            {
+                // Hidden test windows may have no presented backbuffer; render asset QA offscreen.
+                Camera camera = Camera.main;
+                RenderTexture previousTarget = camera.targetTexture;
+                RenderTexture previousActive = RenderTexture.active;
+                var target = RenderTexture.GetTemporary(1440,900,24,RenderTextureFormat.ARGB32,RenderTextureReadWrite.sRGB);
+                var renderedImage = new Texture2D(1440,900,TextureFormat.RGB24,false);
+                try
+                {
+                    camera.targetTexture = target;
+                    camera.Render();
+                    RenderTexture.active = target;
+                    renderedImage.ReadPixels(new Rect(0,0,1440,900),0,0);
+                    renderedImage.Apply();
+                    Color[] samples = renderedImage.GetPixels();
+                    int visible = 0;
+                    for (int i = 0; i < samples.Length; i+=37)
+                        if (samples[i].maxColorComponent > 0.025f) visible++;
+                    if (visible < 300) throw new Exception("Offscreen asteroid rendering produced an empty image.");
+                    File.WriteAllBytes(path,renderedImage.EncodeToPNG());
+                }
+                finally
+                {
+                    camera.targetTexture = previousTarget;
+                    RenderTexture.active = previousActive;
+                    RenderTexture.ReleaseTemporary(target);
+                    Destroy(renderedImage);
+                }
+                return;
+            }
             Texture2D image = ScreenCapture.CaptureScreenshotAsTexture();
             File.WriteAllBytes(path, image.EncodeToPNG());
             Destroy(image);

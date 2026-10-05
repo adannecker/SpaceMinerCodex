@@ -41,6 +41,9 @@ namespace SpaceMiner.Editor
             PlayerSettings.defaultScreenWidth = 1440;
             PlayerSettings.defaultScreenHeight = 900;
             PlayerSettings.fullScreenMode = FullScreenMode.Windowed;
+            PlayerSettings.resizableWindow = true;
+            // Our controller handles Alt+Enter so one keypress cannot trigger two switches.
+            PlayerSettings.allowFullscreenSwitch = false;
             PlayerSettings.runInBackground = true;
             PlayerSettings.colorSpace = ColorSpace.Linear;
             PlayerSettings.SetScriptingBackend(UnityEditor.Build.NamedBuildTarget.Standalone, ScriptingImplementation.Mono2x);
@@ -122,13 +125,75 @@ namespace SpaceMiner.Editor
             EditorBuildSettings.scenes = new[] { new EditorBuildSettingsScene(ScenePath, true) };
             EditorSceneManager.SaveScene(scene, ScenePath);
             AssetDatabase.SaveAssets();
-            Debug.Log("SPACE MINER: Scene ready, 12 asteroids, ship and two 2 m drones.");
+            Debug.Log("SPACE MINER: Scene ready, " + settings.Asteroids.Length + " asteroids and water scenario.");
+        }
+
+        [MenuItem("Space Miner/Testfeld mit 100 Asteroiden bauen")]
+        public static void BuildHundredAsteroids()
+        {
+            var settings = AssetDatabase.LoadAssetAtPath<BeltSettings>("Assets/SpaceMiner/BeltSettings.asset");
+            if (settings == null) { Setup(); settings = AssetDatabase.LoadAssetAtPath<BeltSettings>("Assets/SpaceMiner/BeltSettings.asset"); }
+            if (settings.Asteroids.Length > 100) throw new InvalidOperationException("Das vorhandene Feld hat bereits mehr als 100 Asteroiden.");
+            var catalog = settings.Catalog != null ? settings.Catalog : AsteroidAssets.EnsureDefaults();
+            var field = new System.Collections.Generic.List<BeltSettings.Asteroid>(settings.Asteroids);
+            var random = new System.Random(10071423);
+            while (field.Count < 100)
+            {
+                int index = field.Count;
+                float diameter = index % 17 == 0 ? 5000f : Mathf.Lerp(300f, 3200f, Mathf.Pow((float)random.NextDouble(), 1.6f));
+                Vector3 position = Vector3.zero;
+                bool placed = false;
+                for (int attempt = 0; attempt < 10000; attempt++)
+                {
+                    position = new Vector3(Mathf.Lerp(-15000, 15000, (float)random.NextDouble()),
+                        Mathf.Lerp(-4000, 4000, (float)random.NextDouble()), Mathf.Lerp(4500, 22000, (float)random.NextDouble()));
+                    if (position.magnitude < 6000f + diameter * 0.5f) continue;
+                    placed = true;
+                    foreach (var existing in field)
+                        if (Vector3.Distance(position, existing.PositionMeters) < (diameter + existing.DiameterMeters) * 0.5f + 400f)
+                        { placed = false; break; }
+                    if (placed) break;
+                }
+                if (!placed) throw new InvalidOperationException("Kein freier Platz für Asteroid " + (index + 1));
+                int seed = 71423 + index * 101;
+                field.Add(new BeltSettings.Asteroid { Name = "A-" + (index + 1).ToString("00"),
+                    PositionMeters = position, DiameterMeters = diameter, Type = catalog.Choose(seed), Seed = seed });
+            }
+            settings.Catalog = catalog;
+            settings.Asteroids = field.ToArray();
+            EditorUtility.SetDirty(settings);
+            AssetDatabase.SaveAssets();
+            Setup();
+            ConfigureSpiral(0);
+            BuildPreparedScene();
+        }
+
+        [MenuItem("Space Miner/Spirale mit 10000 Asteroiden bauen")]
+        public static void BuildSpiralAsteroids()
+        {
+            Setup();
+            ConfigureSpiral(10000);
+            BuildPreparedScene();
+        }
+
+        private static void ConfigureSpiral(int count)
+        {
+            var camera = GameObject.Find("Main Camera");
+            var spiral = camera.GetComponent<SpiralBelt>();
+            if (spiral == null && count > 0) spiral = camera.AddComponent<SpiralBelt>();
+            if (spiral != null) { spiral.AsteroidCount = count; EditorUtility.SetDirty(spiral); }
+            EditorSceneManager.SaveScene(SceneManager.GetActiveScene());
         }
 
         [MenuItem("Space Miner/Windows-Spiel bauen")]
         public static void BuildWindows()
         {
             Setup();
+            BuildPreparedScene();
+        }
+
+        private static void BuildPreparedScene()
+        {
             Directory.CreateDirectory("Builds/Windows");
             BuildReport report = BuildPipeline.BuildPlayer(new BuildPlayerOptions
             {
@@ -149,6 +214,7 @@ namespace SpaceMiner.Editor
             GameObject camera = GameObject.Find("Main Camera");
             if (camera.GetComponent<WaterScenarioHud>() == null) camera.AddComponent<WaterScenarioHud>();
             if (camera.GetComponent<IntroSequence>() == null) camera.AddComponent<IntroSequence>();
+            if (camera.GetComponent<DisplayModeController>() == null) camera.AddComponent<DisplayModeController>();
         }
 
         private static void CreateLight(string name, Vector3 rotation, Color color, float intensity)

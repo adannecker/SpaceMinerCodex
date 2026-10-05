@@ -125,6 +125,7 @@ namespace SpaceMiner.Editor
             }
             Material target = type.SurfaceMaterial;
             if (target.shader != shader) return; // Custom material implementations stay owned by the author.
+            target.enableInstancing = true;
             target.SetTexture("_DetailTex",detail);
             SetLayer(target,"_Crust",type.Surface.Crust);
             SetLayer(target,"_Exposure",type.Surface.Exposure);
@@ -203,6 +204,7 @@ namespace SpaceMiner.Editor
             for (int i = 0; i < result.Levels.Length; i++)
             {
                 string path = prefix+"_LOD"+i+".asset";
+                result.Levels[i].name = Path.GetFileNameWithoutExtension(path);
                 Mesh existing = AssetDatabase.LoadAssetAtPath<Mesh>(path);
                 if (existing == null) AssetDatabase.CreateAsset(result.Levels[i],path);
                 else
@@ -238,7 +240,13 @@ namespace SpaceMiner.Editor
                 Transform bodyTransform = null;
                 foreach (Transform child in root.transform)
                     if (child.name == entry.Name) { bodyTransform = child; break; }
-                if (bodyTransform == null) continue;
+                if (bodyTransform == null)
+                {
+                    var newBody = new GameObject(entry.Name);
+                    newBody.transform.SetParent(root.transform,false);
+                    newBody.transform.localPosition = entry.PositionMeters;
+                    bodyTransform = newBody.transform;
+                }
                 GameObject body = bodyTransform.gameObject;
                 var oldCollider = body.GetComponent<SphereCollider>();
                 if (oldCollider != null) UnityEngine.Object.DestroyImmediate(oldCollider);
@@ -312,6 +320,7 @@ namespace SpaceMiner.Editor
             AssetDatabase.SaveAssets();
         }
 
+        [MenuItem("Space Miner/Asteroiden/Vorhandene Beispiel-Prefabs neu backen")]
         public static void RebuildSamples()
         {
             foreach (string guid in AssetDatabase.FindAssets("t:Prefab",new[] { Root+"/Prefabs" }))
@@ -368,7 +377,7 @@ namespace SpaceMiner.Editor
             if (GUILayout.Button("Meshes und Oberfläche neu backen"))
             {
                 var generator = (AsteroidGenerator)target;
-                Undo.RecordObject(generator,"Asteroidenparameter ändern");
+                Undo.RegisterFullObjectHierarchyUndo(generator.gameObject,"Asteroidenparameter ändern");
                 AsteroidAssets.EnsureDefaults();
                 AsteroidAssets.Bake(generator);
                 AssetDatabase.SaveAssets();

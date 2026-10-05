@@ -74,3 +74,443 @@ MonoBehaviour:
     DiameterMeters: 5000
     Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
     Seed: 72534
+  - Name: A-13
+    PositionMeters: {x: 9934.504, y: -63.66086, z: 14972.819}
+    DiameterMeters: 325.0762
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 72635
+  - Name: A-14
+    PositionMeters: {x: -14137.282, y: -516.61346, z: 9320.013}
+    DiameterMeters: 340.8658
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 72736
+  - Name: A-15
+    PositionMeters: {x: 1793.2104, y: -3393.454, z: 20021.264}
+    DiameterMeters: 520.08954
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 72837
+  - Name: A-16
+    PositionMeters: {x: -4373.954, y: 1839.5658, z: 7112.3584}
+    DiameterMeters: 315.59918
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 72938
+  - Name: A-17
+    PositionMeters: {x: -665.2272, y: 3910.9111, z: 12776.491}
+    DiameterMeters: 2619.327
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 73039
+  - Name: A-18
+    PositionMeters: {x: -8652.597, y: 52.096844, z: 20955.496}
+    DiameterMeters: 5000
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 73140
+  - Name: A-19
+    PositionMeters: {x: 5902.947, y: 1528.6565, z: 14386.019}
+    DiameterMeters: 449.34293
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 73241
+  - Name: A-20
+    PositionMeters: {x: -970.9793, y: -2510.105, z: 11243.22}
+    DiameterMeters: 1394.5131
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 73342
+  - Name: A-21
+    PositionMeters: {x: 10849.274, y: 2742.0005, z: 9106.622}
+    DiameterMeters: 3107.4475
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 73443
+  - Name: A-22
+    PositionMeters: {x: -6462.8784, y: -1995.2728, z: 17761.371}
+    DiameterMeters: 636.8309
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 73544
+  - Name: A-23
+    PositionMeters: {x: -11746.665, y: -3168.326, z: 13931.572}
+    DiameterMeters: 2938.6995
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 73645
+  - Name: A-24
+    PositionMeters: {x: -5673.344, y: 2535.873, z: 19637}
+    DiameterMeters: 2301.715
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 73746
+  - Name: A-25
+    PositionMeters: {x: 4165.356, y: -3129.735, z: 11418.217}
+    DiameterMeters: 2996.1982
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 73847
+  - Name: A-26
+    PositionMeters: {x: 1345.135, y: 3126.6875, z: 10369.769}
+    DiameterMeters: 2445.89
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 73948
+  - Name: A-27
+    PositionMeters: {x: -3642.0947, y: -289.26492, z: 20101.762}
+    DiameterMeters: 2757.4426
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 74049
+  - Name: A-28
+    PositionMeters: {x: -14599.585, y: -2604.425, z: 6178.006}
+    DiameterMeters: 2361.01
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 74150
+  - Name: A-29
+    PositionMeters: {x: -9137.487, y: -3272.2722, z: 12717.127}
+    DiameterMeters: 308.0729
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 74251
+  - Name: A-30
+    PositionMeters: {x: -4065.0647, y: -3139.0332, z: 21432.389}
+    DiameterMeters: 2598.2024
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 74352
+  - Name: A-31
+    PositionMeters: {x: 5949.88, y: 746.3598, z: 11175.939}
+    DiameterMeters: 435.11035
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 74453
+  - Name: A-32
+    PositionMeters: {x: 6807.3, y: 821.30096, z: 8538.264}
+    DiameterMeters: 623.7467
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 74554
+  - Name: A-33
+    PositionMeters: {x: 11134.472, y: -269.47333, z: 4750.5977}
+    DiameterMeters: 2116.4717
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 74655
+  - Name: A-34
+    PositionMeters: {x: -3913.2097, y: 3593.2427, z: 10605.906}
+    DiameterMeters: 2008.37
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 74756
+  - Name: A-35
+    PositionMeters: {x: -6115.0815, y: 204.79822, z: 15328.019}
+    DiameterMeters: 5000
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 74857
+  - Name: A-36
+    PositionMeters: {x: -12654.509, y: -3086.5383, z: 8348.645}
+    DiameterMeters: 871.6383
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 74958
+  - Name: A-37
+    PositionMeters: {x: -14992.065, y: -1308.7688, z: 20579.21}
+    DiameterMeters: 834.3104
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 75059
+  - Name: A-38
+    PositionMeters: {x: -14075.136, y: 1766.4747, z: 14602.272}
+    DiameterMeters: 334.43854
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 75160
+  - Name: A-39
+    PositionMeters: {x: 4112.581, y: -1532.9044, z: 21949.506}
+    DiameterMeters: 2105.7026
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 75261
+  - Name: A-40
+    PositionMeters: {x: -10061.424, y: -2358.9387, z: 18195.312}
+    DiameterMeters: 538.4166
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 75362
+  - Name: A-41
+    PositionMeters: {x: -8257.89, y: 471.76837, z: 7669.2017}
+    DiameterMeters: 1045.8501
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 75463
+  - Name: A-42
+    PositionMeters: {x: -12000.286, y: 3324.4124, z: 9227.907}
+    DiameterMeters: 897.4854
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 75564
+  - Name: A-43
+    PositionMeters: {x: 2019.6372, y: -2819.3396, z: 18700.496}
+    DiameterMeters: 818.1712
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 75665
+  - Name: A-44
+    PositionMeters: {x: 851.3832, y: -1312.6581, z: 13514.46}
+    DiameterMeters: 1085.2701
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 75766
+  - Name: A-45
+    PositionMeters: {x: -13976.872, y: -964.19165, z: 15041.968}
+    DiameterMeters: 651.2329
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 75867
+  - Name: A-46
+    PositionMeters: {x: -5637.9204, y: -3675.8242, z: 11186.421}
+    DiameterMeters: 2725.5664
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 75968
+  - Name: A-47
+    PositionMeters: {x: -13431.117, y: -3271.7498, z: 17502.684}
+    DiameterMeters: 654.8893
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 76069
+  - Name: A-48
+    PositionMeters: {x: 10420.629, y: -2020.4518, z: 5982.476}
+    DiameterMeters: 504.76028
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 76170
+  - Name: A-49
+    PositionMeters: {x: 2339.2456, y: -37.67753, z: 19956.809}
+    DiameterMeters: 337.68488
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 76271
+  - Name: A-50
+    PositionMeters: {x: -10940.778, y: -2277.335, z: 9770.444}
+    DiameterMeters: 2790.976
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 76372
+  - Name: A-51
+    PositionMeters: {x: 6894.45, y: -2594.314, z: 18240.006}
+    DiameterMeters: 2302.0552
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 76473
+  - Name: A-52
+    PositionMeters: {x: 3082.0352, y: 3105.8816, z: 15005.175}
+    DiameterMeters: 5000
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 76574
+  - Name: A-53
+    PositionMeters: {x: 13762.681, y: -1613.7128, z: 6167.513}
+    DiameterMeters: 1013.31354
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 76675
+  - Name: A-54
+    PositionMeters: {x: 14876.999, y: -1326.2872, z: 7768.1245}
+    DiameterMeters: 2016.0922
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 76776
+  - Name: A-55
+    PositionMeters: {x: -5602.583, y: 417.92584, z: 11222.768}
+    DiameterMeters: 413.6285
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 76877
+  - Name: A-56
+    PositionMeters: {x: -2684.5818, y: -3912.7915, z: 8826.822}
+    DiameterMeters: 300.7691
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 76978
+  - Name: A-57
+    PositionMeters: {x: 10643.26, y: 723.8641, z: 17125.814}
+    DiameterMeters: 1763.7866
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 77079
+  - Name: A-58
+    PositionMeters: {x: -13635.036, y: 927.2885, z: 18032.752}
+    DiameterMeters: 958.0103
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 77180
+  - Name: A-59
+    PositionMeters: {x: 8638.793, y: -2488.5854, z: 12136.171}
+    DiameterMeters: 1199.8358
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 77281
+  - Name: A-60
+    PositionMeters: {x: -11912.247, y: 2379.0002, z: 11423.017}
+    DiameterMeters: 2653.8423
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 77382
+  - Name: A-61
+    PositionMeters: {x: 4593.3203, y: -3319.6057, z: 5552.082}
+    DiameterMeters: 3148.948
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 77483
+  - Name: A-62
+    PositionMeters: {x: -11911.432, y: 569.9463, z: 13309.999}
+    DiameterMeters: 842.1245
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 77584
+  - Name: A-63
+    PositionMeters: {x: -13091.116, y: 740.64923, z: 21691.951}
+    DiameterMeters: 567.8055
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 77685
+  - Name: A-64
+    PositionMeters: {x: -8851.16, y: 2625.0686, z: 8562.255}
+    DiameterMeters: 737.18353
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 77786
+  - Name: A-65
+    PositionMeters: {x: 7413.5347, y: -185.85515, z: 15003.011}
+    DiameterMeters: 2511.5342
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 77887
+  - Name: A-66
+    PositionMeters: {x: 14745.68, y: 1043.807, z: 6534.2495}
+    DiameterMeters: 697.32837
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 77988
+  - Name: A-67
+    PositionMeters: {x: 12239.279, y: -401.0241, z: 8991.642}
+    DiameterMeters: 2186.2656
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 78089
+  - Name: A-68
+    PositionMeters: {x: 3421.2666, y: -774.01996, z: 18406.486}
+    DiameterMeters: 377.99695
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 78190
+  - Name: A-69
+    PositionMeters: {x: 14761.292, y: 3678.6099, z: 21243.965}
+    DiameterMeters: 5000
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 78291
+  - Name: A-70
+    PositionMeters: {x: -11081.564, y: 1009.25586, z: 7951.052}
+    DiameterMeters: 1554.0531
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 78392
+  - Name: A-71
+    PositionMeters: {x: -12942.109, y: 1761.0011, z: 21767.416}
+    DiameterMeters: 381.03433
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 78493
+  - Name: A-72
+    PositionMeters: {x: -11982.073, y: -2287.2693, z: 19005.424}
+    DiameterMeters: 2357.6106
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 78594
+  - Name: A-73
+    PositionMeters: {x: 217.07475, y: 2865.9624, z: 18074.53}
+    DiameterMeters: 323.66415
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 78695
+  - Name: A-74
+    PositionMeters: {x: -10880.214, y: -1458.0243, z: 6673.495}
+    DiameterMeters: 2117.1077
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 78796
+  - Name: A-75
+    PositionMeters: {x: -7846.9995, y: 3818.3345, z: 11537.924}
+    DiameterMeters: 2347.3901
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 78897
+  - Name: A-76
+    PositionMeters: {x: -7419.9287, y: -2801.7632, z: 16509.232}
+    DiameterMeters: 682.2525
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 78998
+  - Name: A-77
+    PositionMeters: {x: 3954.4004, y: -3859.8213, z: 8592.778}
+    DiameterMeters: 767.6358
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 79099
+  - Name: A-78
+    PositionMeters: {x: -11162.501, y: 341.20035, z: 15409.127}
+    DiameterMeters: 2068.6008
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 79200
+  - Name: A-79
+    PositionMeters: {x: 4359.5, y: 3206.3174, z: 20797.227}
+    DiameterMeters: 2200.623
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 79301
+  - Name: A-80
+    PositionMeters: {x: 10875.292, y: -3979.9397, z: 5720.868}
+    DiameterMeters: 975.792
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 79402
+  - Name: A-81
+    PositionMeters: {x: 12001.35, y: -685.15466, z: 20152.48}
+    DiameterMeters: 1860.4696
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 79503
+  - Name: A-82
+    PositionMeters: {x: -5296.105, y: 3899.8318, z: 8462.56}
+    DiameterMeters: 1178.9786
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 79604
+  - Name: A-83
+    PositionMeters: {x: 13312.822, y: 2525.24, z: 5459.7456}
+    DiameterMeters: 2162.1729
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 79705
+  - Name: A-84
+    PositionMeters: {x: -13238.403, y: -3115.8665, z: 12106.232}
+    DiameterMeters: 581.47125
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 79806
+  - Name: A-85
+    PositionMeters: {x: -13495.738, y: 2410.0642, z: 5231.7637}
+    DiameterMeters: 2243.8784
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 79907
+  - Name: A-86
+    PositionMeters: {x: 13262.109, y: 1260.2701, z: 13237.216}
+    DiameterMeters: 5000
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 80008
+  - Name: A-87
+    PositionMeters: {x: -3000.9868, y: 2039.8484, z: 18754.209}
+    DiameterMeters: 1246.9703
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 80109
+  - Name: A-88
+    PositionMeters: {x: 72.55733, y: -3769.8242, z: 8122.5674}
+    DiameterMeters: 820.45465
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 80210
+  - Name: A-89
+    PositionMeters: {x: 6624.3193, y: 188.25006, z: 19366.225}
+    DiameterMeters: 2822.1628
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 80311
+  - Name: A-90
+    PositionMeters: {x: -5472.5913, y: 1375.3848, z: 7016.5156}
+    DiameterMeters: 373.1446
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 80412
+  - Name: A-91
+    PositionMeters: {x: 6595.414, y: -2159.0105, z: 7662.7324}
+    DiameterMeters: 1513.5416
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 80513
+  - Name: A-92
+    PositionMeters: {x: 748.24335, y: -983.28735, z: 20041.332}
+    DiameterMeters: 1078.6417
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 80614
+  - Name: A-93
+    PositionMeters: {x: -1702.0654, y: -1939.4667, z: 17525.047}
+    DiameterMeters: 610.74695
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 80715
+  - Name: A-94
+    PositionMeters: {x: -11706.259, y: 2728.1199, z: 16146.991}
+    DiameterMeters: 1873.1376
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 80816
+  - Name: A-95
+    PositionMeters: {x: -13945.983, y: 675.22003, z: 7318.3335}
+    DiameterMeters: 2196.1086
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 80917
+  - Name: A-96
+    PositionMeters: {x: 3895.0378, y: -2718.4792, z: 16380.972}
+    DiameterMeters: 549.6169
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 81018
+  - Name: A-97
+    PositionMeters: {x: 6755.138, y: -3595.346, z: 21589.14}
+    DiameterMeters: 1268.3965
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 81119
+  - Name: A-98
+    PositionMeters: {x: -4328.6274, y: -3672.0212, z: 16150.949}
+    DiameterMeters: 2499.156
+    Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Seed: 81220
+  - Name: A-99
+    PositionMeters: {x: 14979.7705, y: -3293.9236, z: 12160.503}
+    DiameterMeters: 1990.5859
+    Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Seed: 81321
+  - Name: A-100
+    PositionMeters: {x: -6632.5254, y: -1130.0297, z: 7171.857}
+    DiameterMeters: 1973.337
+    Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Seed: 81422

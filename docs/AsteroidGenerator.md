@@ -15,6 +15,8 @@ Unter `Assets/SpaceMiner/Asteroids` liegen nach **Space Miner → Prototyp einri
 
 Die zwölf Asteroiden der bestehenden Szene erhalten den Generator; ihre Positionen bleiben erhalten. Schon konfigurierte Generatoren werden beim Einrichten mit ihren aktuellen Szenenparametern neu gebacken. Bestehende Beispiel-Prefabs werden erhalten.
 
+Neue Einträge in `BeltSettings.Asteroids` werden beim Einrichten zusätzlich erzeugt. Ihre Position, Größe, Typ und Seed stammen aus dem Eintrag. Fehlender Typ und Seed null erhalten Startwerte. Vorhandene Szenenobjekte werden erhalten; das Entfernen eines Listeneintrags löscht daher keine bereits bearbeiteten Objekte. Die Beispielbibliothek lässt sich über **Space Miner → Asteroiden → Vorhandene Beispiel-Prefabs neu backen** nach Profiländerungen aktualisieren.
+
 ## Einen Asteroiden erstellen
 
 1. **GameObject → Space Miner → Prozeduraler Asteroid** wählen. Ein im Project-Fenster ausgewähltes Typasset wird übernommen.
@@ -31,9 +33,9 @@ Am einfachsten ein bestehendes Typasset duplizieren und umbenennen. Ein eigenes 
 
 Im Profil einstellen:
 
-- **Form:** Achsenverhältnisse, deren Variation, gelappte Formen, Asymmetrie, großflächige Unregelmäßigkeit, kleinere Rücken, Bruchflächen und Einschlagsmulden.
+- **Form:** Achsenverhältnisse, deren Variation, gelappte Formen, Asymmetrie, großflächige Unregelmäßigkeit, kleinere Rücken, gestufte Klippen, feiner geometrischer Schutt, Bruchflächen und Einschlagsmulden.
 - **Oberfläche:** Farbe, Metallic und Smoothness für Kruste, Freilegungen und Akzente; Anzahl, Radien und Vertiefung der Freilegungen.
-- **Details:** Kontrast, Detailgröße in Metern und Stärke des feinen Reliefs.
+- **Details:** Kontrast, Detailgröße in Metern, Stärke des feinen Reliefs und Gewichtung geometrischer Facetten in der Beleuchtung.
 - **Wasseranteil:** ein Ressourcen-Entwurfswert für das bestehende Szenario; sichtbare Eisfläche und innerer Wasseranteil sind getrennte Größen.
 
 Ein Körper kann über `Water Fraction Override` einen eigenen Ressourcenanteil erhalten; -1 übernimmt den Typwert. Die bestehenden Startquellen behalten 80 %, 65 % und 80 % Wasser. Das ist vom Flächenanteil der sichtbaren Eisfenster unabhängig.
@@ -73,6 +75,8 @@ Alle Stufen werten dasselbe Formfeld und dieselben Materialregionen aus und verw
 
 Das feine Relief wird triplanar projiziert und besitzt keine klassische UV-Naht. Es ist eine wiederverwendbare generierte Detailbasis, noch kein individuelles Scan-Texturset. Die Oberfläche der Eiskörper bleibt überwiegend dunkle Kruste; helle Flächen liegen lokal an Vertiefungen. Metall erscheint nur in freigelegten Regionen deutlich metallisch, Staub bleibt rau.
 
+Eine zweite Projektion liefert größere Oberflächenunregelmäßigkeiten relativ zum Körper. Farben im Profil werden als sRGB-Farben bearbeitet und für die lineare Beleuchtung umgerechnet. Sonnenschatten sind aktiv; ihre Reichweite passt sich dem Kameraabstand an. Der Shader benötigt Shader Model 3.5; der Windows-Build wurde auf dem vorhandenen Direct3D-System geprüft.
+
 ## Prüfen
 
 ```powershell
@@ -82,6 +86,6 @@ Das feine Relief wird triplanar projiziert und besitzt keine klassische UV-Naht.
 .\tools\Unity.ps1 Check
 ```
 
-`AsteroidCheck` prüft geschlossene Topologie, nichtdegenerierte Dreiecke, Größen, Seed-Reproduzierbarkeit, LOD-Konsistenz, begrenzte Eisflächen, einen neuen unregistrierten Typ, wiederholte Generierung und Collider-Raycast. Der Spieltest ergänzt die bestehenden Kamera-, Intro- und Wasserprüfungen um Generator-, Material- und Colliderprüfungen und speichert Ansichten der drei Materialfamilien in `Logs/asteroid-*.png`.
+`AsteroidCheck` prüft geschlossene Topologie, nichtdegenerierte Dreiecke, Größen, Seed-Reproduzierbarkeit, LOD-Konsistenz, begrenzte Eisflächen, einen neuen unregistrierten Typ, wiederholte Generierung und Collider-Raycast. Dabei werden auch die Beispiel-Prefabs aktualisiert. Der Spieltest ergänzt die bestehenden Kamera-, Intro- und Wasserprüfungen um Generator-, Material- und Colliderprüfungen und speichert Ansichten der drei Materialfamilien in `Logs/asteroid-*.png`. Diese Ansichten werden ohne HUD separat gerendert, damit auch ein verborgenes Testfenster gültige Bilder liefert; ein praktisch leeres Rendering führt zum Testfehler.
 
 Die Konzepte geben die gemeinsame Richtung vor. Das ist die erste prozedurale Umsetzung; Nahdetails, Materialvariation und Fernlesbarkeit können anhand der echten Spielansichten weiter abgestimmt werden.

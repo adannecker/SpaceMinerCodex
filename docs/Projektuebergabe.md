@@ -10,20 +10,20 @@ Zehn Drohnen, davon zunächst **nur Drohne 01 einsatzfähig**. Drohnen sind etwa
 
 ## Implementierter Stand
 
-- Startbare Windows-Version und Unity-Szene mit zwölf Asteroiden, Schiff und zehn Drohnen.
+- Startbare Windows-Version mit 10.000 Asteroiden in einer Spirale um das Schiff, knapp zehn Windungen und etwa 186 km Außenradius. Die Szene speichert 100 individuelle Formvorlagen (drei Materialfamilien, vier Detailstufen); zur Laufzeit entstehen 9.900 weitere auswählbare Körper mit gemeinsamen Meshes und GPU-Instancing. Dazu kommen Schiff und zehn Drohnen. B zeigt die Spirale von oben, R kehrt zum Schiff zurück; Objektzahl und FPS stehen im HUD. F11 oder Alt+Enter wechselt zwischen Fenster und Vollbild.
 - Flüssige Kamera: drehen, verschieben, bewegen, fokussieren und von 3 m bis 1.000 km zoomen. Fokussierte Drohnen werden verfolgt.
 - Wasserauftrag: Eisquelle auswählen, hinfliegen, bremsen, abbauen, zurückfliegen, Wasser abliefern, Batterie laden und Treibwasser nachtanken. Der Auftrag läuft bis zum vollen Tank oder einer erschöpften Quelle.
 - Tank- und Aufgabenanzeige, Balken über der Drohne, Objektinformationen mit Batterie, Treibwasser, Ladung, Geschwindigkeit, Zielentfernung und Zeitangaben. Asteroiden zeigen bekannten Wasseranteil und unbekannten Rest.
 - Einstellbare Spielannahmen: 200-L-Schiffstank mit 20 L Startwasser, Drohne 200 kg Trockenmasse, 50 kg Ladung, 10 L Treibwasser, 8 kWh Batterie, höchstens 5 m/s, 5 N Schub. Geradlinige Flüge mit vereinfachter Physik, keine vollständige Orbitalmechanik.
 - Miras Intro mit Untertiteln, Kamerafahrten und lokal erzeugter deutscher Teststimme ist hinzugekommen. Die Sprachdateien liegen im Projekt; beim Spielen ist kein Sprachdienst erforderlich. Esc überspringt das Intro.
 
-Der Wasserprototyp bestand hier zunächst 80 Laufzeitprüfungen. Nach Intro- und Asteroiden-Ergänzungen meldete der lokale Integrationstest zuletzt 140 bestandene Prüfungen; die separate Geometrieprüfung meldete 57 Checks. Nach weiteren Änderungen erneut bauen und prüfen.
+Der Integrationstest mit 10.000 Asteroiden bestand hier 60.079 Laufzeitprüfungen, einschließlich Objektzahl, Detailstufen, Collider, Spiralpositionen, Mindestabständen von 200 m, Sichtbarkeit, Auswahl kleiner Übersichtssymbole und Auswahl per Raycast bis zum äußeren Arm, Intro und Wasserauftrag. Eine kurze Messung bei 1440 × 900 auf einer AMD Radeon RX 9070 XT ergab etwa 164–165 FPS in Feldansicht, Kameradrehung, Nahansicht eines 5-km-Asteroiden und äußerem Arm, bei aktiviertem VSync. Die 9.900 zusätzlichen Körper benötigen in der Übersicht 100 instanzierte Zeichenaufrufe; die ursprünglichen 100 Körper werden zusätzlich regulär dargestellt. Details: `Logs/asteroid-10000-performance.json` (lokal, nicht in Git). Nach weiteren Änderungen erneut bauen und prüfen.
 
 ## Parallel bearbeitete Bereiche
 
-Der Chat **Story, Dialoge & Bordcomputer** hat das Intro fertiggestellt. **Asteroidenvarianten entwerfen** prüft bei Vorbereitung dieser Übergabe noch die abschließende Darstellung.
+Die Chats **Story, Dialoge & Bordcomputer** und **Asteroidenvarianten entwerfen** haben Intro und Asteroidenbibliothek fertiggestellt.
 
-Asteroidenkonzepte liegen unter `docs/Art/Asteroiden`. Ein erweiterbarer Generator, Asteroidentypen, Oberflächenshader, Detailstufen, Collider und Editor-Werkzeuge entstehen unter `Assets/SpaceMiner`. Vor dem Upload den finalen Import- und Prüfstand des Asteroiden-Chats übernehmen. Bereits vorhandener Quellcode allein bedeutet nicht, dass alle generierten Assets und Tests fertig sind.
+Asteroidenkonzepte liegen unter `docs/Art/Asteroiden`. Der erweiterbare Generator, Asteroidentypen, Oberflächenshader, Detailstufen, Collider und Editor-Werkzeuge liegen unter `Assets/SpaceMiner`. `.\tools\Unity.ps1 SpiralBuild` aktiviert die Spirale mit 10.000 Körpern, `.\tools\Unity.ps1 HundredBuild` kehrt zum ursprünglichen Test mit 100 Körpern zurück. Ein normales `Build` behält den gewählten Modus bei. In Unity erscheint die Spirale nach Play; die 9.900 zusätzlichen Körper werden zur Laufzeit erzeugt. Im normalen Szene-Editor stehen die 100 Vorlagen in ihrer ursprünglichen Anordnung.
 
 Mira spricht ruhig und warm mit weiblicher Stimme und duzt den Spieler. Sprechertexte und Regie stehen in `docs/Dialoge`; das Laufzeitskript und die WAV-Dateien liegen unter `Assets/SpaceMiner/Resources/Intro`. Die aktuelle Windows-Teststimme kann später ersetzt werden.
 

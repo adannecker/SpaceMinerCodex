@@ -17,6 +17,7 @@ namespace SpaceMiner.Editor
             try
             {
                 AsteroidCatalog catalog = AsteroidAssets.EnsureDefaults();
+                AsteroidAssets.RebuildSamples();
                 foreach (string name in new[] { "IceRich", "Rocky", "MetalRich" })
                 {
                     var type = AssetDatabase.LoadAssetAtPath<AsteroidType>(AsteroidAssets.Root+"/Types/"+name+".asset");

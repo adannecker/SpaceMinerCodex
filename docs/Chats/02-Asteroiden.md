@@ -1,6 +1,6 @@
 # Asteroidenvarianten entwerfen
 
-Exportstand: 2026-10-05 21:16:56 UTC. Lesbares Textarchiv; Hinweise in [README](README.md).
+Exportstand: 2026-10-05 21:58:26 UTC. Lesbares Textarchiv; Hinweise in [README](README.md).
 
 ## Nutzer · 10/05/2026 20:47:24
 
@@ -88,4 +88,35 @@ Als Nächstes prüfe ich im gebauten Spiel die drei Oberflächen und den vollst�
 Der Build und alle 140 Spielprüfungen sind bestanden, einschließlich des Wasserauftrags. Im Sichttest fallen die Oberflächen aber noch zu glatt und die dunklen Krusten zu hell aus.
 
 Ich überarbeite deshalb die Farbwerte, das Oberflächenrelief und die Schatten. Die technische Funktion steht; die nächste Runde soll die Darstellung näher an unsere Konzeptbilder bringen.
+
+## Assistent · 10/05/2026 21:21:26
+
+Die überarbeitete Version hat die Geometrie- und Shaderprüfung bestanden. Auch die neun Beispiel-Prefabs sind jetzt auf demselben Stand wie die Szenenasteroiden.
+
+Ich prüfe noch die endgültigen Spielansichten und dokumentiere, wie neue Typen angelegt werden. Zusätzliche Einträge im Asteroidenfeld können dann ebenfalls über die Konfiguration erzeugt werden.
+
+## Assistent · 10/05/2026 21:24:23
+
+Umgesetzt: **Alle zwölf Asteroiden im Testfeld verwenden jetzt erzeugte Meshes und Materialien.**
+
+Enthalten sind:
+
+- Drei Typen: eisreich, felsig und metallreich.
+- 84 Meshassets mit jeweils vier Detailstufen pro Körper und passenden Kollisionsflächen.
+- Drei konfigurierbare Oberflächenmaterialien und neun Beispiel-Prefabs für 100 m, 1 km und 5 km.
+- Ein Generator mit reproduzierbaren Seeds, variablen Formen, Kratern, Bruchflächen und lokalen Freilegungen.
+
+**Weitere Arten entstehen durch neue Typassets und Katalogeinträge**, ohne zusätzliche Typzweige im Generatorcode. Die [Anleitung](C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/docs/AsteroidGenerator.md) beschreibt das Anlegen und Anpassen.
+
+Spielansichten: [Eisreich](C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/docs/Art/Asteroiden/03-Unity-Eisreich.png) · [Felsig](C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/docs/Art/Asteroiden/04-Unity-Felsig.png) · [Metallreich](C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/docs/Art/Asteroiden/05-Unity-Metallreich.png)
+
+Die Windows-Version wurde neu gebaut. **60 Generatorprüfungen und 140 Spielprüfungen bestanden**, einschließlich des Wasserabbaus. Die Optik ist die erste prozedurale Ausarbeitung unserer Konzepte.
+
+## Nutzer · 10/05/2026 21:24:44
+
+Ok super...
+
+## Assistent · 10/05/2026 21:24:47
+
+Dann steht die Grundlage für unsere Asteroidenbibliothek. Weitere Arten können wir darauf aufbauen.
 

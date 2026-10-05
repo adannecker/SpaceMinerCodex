@@ -159,7 +159,7 @@ namespace SpaceMiner
             Color previousColor = GUI.color;
             int previousDepth = GUI.depth;
             GUI.depth = -100;
-            float scale = Mathf.Clamp(Screen.height / 900f, 0.35f, 2f);
+            float scale = Mathf.Clamp(Mathf.Min(Screen.height / 900f, Screen.width / 1440f), 0.35f, 2f);
             GUI.matrix = Matrix4x4.Scale(Vector3.one * scale);
             float width = Screen.width / scale, height = Screen.height / scale;
             Cue cue = script.Cues[CueIndex];
@@ -175,7 +175,7 @@ namespace SpaceMiner
             introFont.RequestCharactersInTexture(cue.Heading, 21, FontStyle.Normal);
             introFont.RequestCharactersInTexture(cue.Text, 31, FontStyle.Normal);
             introFont.RequestCharactersInTexture("MIRA", 14, FontStyle.Bold);
-            hintFont.RequestCharactersInTexture("SPACE MINER  /  ERWACHEN ESC  ·  Intro überspringen 0123456789/", 13, FontStyle.Normal);
+            hintFont.RequestCharactersInTexture("SPACE MINER  /  ERWACHEN ESC  ·  Intro überspringen  F11  Vollbild Fenster 0123456789/", 13, FontStyle.Normal);
 
             float textWidth = Mathf.Min(900, width - 100);
             float left = (width - textWidth) * 0.5f;
@@ -186,7 +186,7 @@ namespace SpaceMiner
             GUI.Label(new Rect(left, height * 0.47f, textWidth, height * 0.28f), cue.Text, caption);
             GUI.color = Color.white;
             GUI.Label(new Rect(35, 28, width - 70, 30), "SPACE MINER  /  ERWACHEN", hint);
-            GUI.Label(new Rect(left, height - 71, textWidth, 26), "ESC  ·  Intro überspringen", hint);
+            GUI.Label(new Rect(left, height - 71, textWidth, 26), "ESC  ·  Intro überspringen     F11  ·  Vollbild / Fenster", hint);
             GUI.Label(new Rect(left, height - 39, textWidth, 22), (CueIndex + 1) + " / " + CueCount, hint);
             GUI.depth = previousDepth;
             GUI.color = previousColor;

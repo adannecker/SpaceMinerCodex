@@ -9,24 +9,42 @@ namespace SpaceMiner
         private WaterScenario scenario;
         private OrbitCamera orbit;
         private Camera view;
+        private DisplayModeController display;
+        private float frameSeconds;
+        private int frameCount;
+        private float framesPerSecond;
         private GUIStyle title, text, muted, button, marker;
         private readonly List<Rect> markers = new List<Rect>();
+        private readonly List<AsteroidResource> knownSources = new List<AsteroidResource>();
         private static readonly Color Cyan = new Color(0.35f, 0.85f, 0.95f);
-        private float Scale => Mathf.Clamp(Screen.height / 900f, 0.65f, 1.5f);
+        private float Scale => Mathf.Clamp(Mathf.Min(Screen.height / 900f, Screen.width / 1440f), 0.35f, 1.5f);
         private float Width => Screen.width / Scale;
         private float Height => Screen.height / Scale;
         private Rect LeftTop => new Rect(18, 18, 310, 192);
         private Rect Quest => new Rect(18, 224, 310, 260);
         private Rect Controls => new Rect(18, Height - 154, 540, 136);
         private Rect Inspector => new Rect(Width - 358, 18, 340, 622);
-        private Rect Clock => new Rect(Width - 358, Height - 128, 340, 110);
-        private Rect Notice => new Rect(346, 18, Mathf.Max(140, Width - 722), 70);
+        private Rect Clock => new Rect(Width - 358, Height - 164, 340, 146);
+        private Rect Notice => new Rect(346, 18, Mathf.Max(140, Width - 722), 94);
 
         private void Start()
         {
             scenario = FindFirstObjectByType<WaterScenario>();
             orbit = GetComponent<OrbitCamera>();
             view = GetComponent<Camera>();
+            display = GetComponent<DisplayModeController>();
+            foreach (AsteroidResource source in scenario.Asteroids)
+                if (source.WaterIdentified) knownSources.Add(source);
+        }
+
+        private void Update()
+        {
+            frameSeconds += Time.unscaledDeltaTime;
+            frameCount++;
+            if (frameSeconds < 0.5f) return;
+            framesPerSecond = frameCount / frameSeconds;
+            frameSeconds = 0;
+            frameCount = 0;
         }
 
         public bool OwnsScreenPoint(Vector3 mouse)
@@ -50,7 +68,7 @@ namespace SpaceMiner
             markers.Clear();
             DrawWorld(scenario.GetComponent<SpaceObject>(), "SCHIFF", null);
             DrawWorld(scenario.Worker.Info, "DROHNE 01", scenario.Worker);
-            foreach (AsteroidResource asteroid in scenario.Asteroids)
+            foreach (AsteroidResource asteroid in knownSources)
                 if (asteroid.WaterIdentified) DrawWorld(asteroid.Info, asteroid.Info.DisplayName + " · EIS", null);
 
             Panel(LeftTop);
@@ -75,7 +93,7 @@ namespace SpaceMiner
             Label(34, cy + 36, 508, 22, "Mausrad Zoom  ·  Shift + Rad Schnellzoom  ·  Rechtsziehen Drehen", muted);
             Label(34, cy + 59, 508, 22, "Mittelziehen Verschieben  ·  WASD / Q E Bewegen  ·  Shift Schnell", muted);
             Label(34, cy + 82, 508, 22, "R Startansicht  ·  B Feldansicht  ·  Klick + F Fokus  ·  Tab Drohne folgen", muted);
-            Label(34, cy + 105, 508, 22, "Leertaste Pause  ·  H Anzeige  ·  Escape Schließen", muted);
+            Label(34, cy + 105, 508, 22, "Leertaste Pause  ·  F11 Vollbild / Fenster  ·  H Anzeige  ·  Escape Schließen", muted);
 
             Panel(Inspector);
             DrawInspector(Inspector.x + 16, Inspector.y + 16);
@@ -87,8 +105,18 @@ namespace SpaceMiner
                 if (GUI.Button(new Rect(cx + i * 77, ty + 30, 69, 27), rates[i] + "×", button)) scenario.SimulationRate = rates[i];
             if (GUI.Button(new Rect(cx, ty + 64, 300, 24), scenario.SimulationRate > 0 ? "Pause" : "Weiter (100×)", button))
                 scenario.SimulationRate = scenario.SimulationRate > 0 ? 0 : 100;
+            if (display != null)
+            {
+                bool previousEnabled = GUI.enabled;
+                GUI.enabled = display.CanSwitch;
+                string label = display.IsFullscreen ? "Zum Fenster wechseln (F11)" : "Vollbild einschalten (F11)";
+                if (GUI.Button(new Rect(cx, ty + 98, 300, 24), label, button)) display.Toggle();
+                GUI.enabled = previousEnabled;
+            }
             Panel(Notice);
             Label(Notice.x + 12, Notice.y + 10, Notice.width - 24, 54, scenario.Message, muted);
+            Label(Notice.x + 12, Notice.y + 68, Notice.width - 24, 20,
+                scenario.Asteroids.Length + " Asteroiden  ·  " + framesPerSecond.ToString("0") + " FPS", muted);
             GUI.matrix = previous;
         }
 
@@ -101,7 +129,7 @@ namespace SpaceMiner
             {
                 Label(x, y, 308, 80, "Wähle einen Asteroiden im Weltraum oder hier eine bekannte Eisquelle. Weise danach Drohne 01 den Tankauftrag zu.");
                 y += 100;
-                foreach (AsteroidResource source in scenario.Asteroids)
+                foreach (AsteroidResource source in knownSources)
                 {
                     if (!source.WaterIdentified) continue;
                     if (GUI.Button(new Rect(x, y, 308, 36), source.Info.DisplayName + " · " + source.KnownWaterPercent.ToString("0") + "% Wasser", button)) orbit.Select(source.Info);
@@ -167,6 +195,8 @@ namespace SpaceMiner
             float x = point.x / Scale - 88, y = (Screen.height - point.y) / Scale - 24;
             Rect rect = new Rect(x, y, 176, drone != null ? 53 : 27);
             if (IsPanel(rect.center) || IsPanel(rect.min) || IsPanel(rect.max)) return;
+            // Nearby objects converge to the same pixels in the belt overview.
+            foreach (Rect existing in markers) if (existing.Overlaps(rect)) return;
             markers.Add(rect);
             if (GUI.Button(new Rect(x, y, 176, 26), label, marker)) orbit.Select(item);
             if (drone != null)

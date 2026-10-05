@@ -104,6 +104,11 @@ namespace SpaceMiner
                 var resource = body.GetComponent<AsteroidResource>();
                 if (resource == null) resource = body.AddComponent<AsteroidResource>();
                 var generator = body.GetComponent<AsteroidGenerator>();
+                if (generator == null)
+                {
+                    var instance = body.GetComponent<SpiralAsteroid>();
+                    if (instance != null) generator = instance.Template;
+                }
                 bool startingSource = body.name == "A-01" || body.name == "A-02" || body.name == "A-03";
                 resource.WaterFraction = generator != null && generator.Type != null
                     ? (generator.WaterFractionOverride >= 0 ? generator.WaterFractionOverride : generator.Type.WaterFraction)

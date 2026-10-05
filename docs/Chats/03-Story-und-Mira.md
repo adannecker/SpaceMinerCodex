@@ -1,6 +1,6 @@
 # Story, Dialoge & Bordcomputer
 
-Exportstand: 2026-10-05 21:16:56 UTC. Lesbares Textarchiv; Hinweise in [README](README.md).
+Exportstand: 2026-10-05 21:58:26 UTC. Lesbares Textarchiv; Hinweise in [README](README.md).
 
 ## Nutzer · 10/05/2026 20:06:41
 

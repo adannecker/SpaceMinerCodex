@@ -1,6 +1,8 @@
 SPACE MINER — ASTEROIDEN / STILRICHTUNG 01
 Stand: 05.10.2026
 Status: Konzeptphase. Erste visuelle Richtung; Grundlage für spätere Modelle und Materialien.
+Diese Datei hält den ursprünglichen Konzeptstand fest. Die spätere prozedurale Unity-Umsetzung
+ist inzwischen vorhanden und separat in docs/AsteroidGenerator.md dokumentiert.
 
 LIEFERUMFANG
 01-Stilstudie.png: Drei Materialfamilien, kleine Fernansichten und Oberflächenausschnitte.
@@ -82,4 +84,3 @@ Dies dient als Oberflächenreferenz für eisreiche kleine Körper, nicht als uni
 NASA beschreibt Psyche mit variabler Zusammensetzung und unsicherer Oberflächenbeschaffenheit:
 https://science.nasa.gov/solar-system/asteroids/16-psyche/
 Die deutlichen Familienunterschiede und die Flächenanteile in diesen Tafeln sind Spielabstraktionen.
-

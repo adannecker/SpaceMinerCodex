@@ -224,6 +224,7 @@ MonoBehaviour:
   Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
   Seed: 3901
   DiameterMeters: 5000
+  WaterFractionOverride: -1
   HighestSubdivision: 5
   BakedMeshes:
   - {fileID: 4300000, guid: e59aa324f7d47c34f949018c388fa0e9, type: 2}

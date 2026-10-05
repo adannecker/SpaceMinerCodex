@@ -224,6 +224,7 @@ MonoBehaviour:
   Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
   Seed: 1907
   DiameterMeters: 100
+  WaterFractionOverride: -1
   HighestSubdivision: 5
   BakedMeshes:
   - {fileID: 4300000, guid: c12b56490975e24418d444ba429948b6, type: 2}
@@ -245,7 +246,7 @@ LODGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077655660523647668}
   serializedVersion: 2
-  m_LocalReferencePoint: {x: 0, y: 0, z: -0.000000014901161}
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0.000000029802322}
   m_Size: 1
   m_FadeMode: 0
   m_AnimateCrossFading: 0

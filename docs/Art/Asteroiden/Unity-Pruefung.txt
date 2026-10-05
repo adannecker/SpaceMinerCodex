@@ -1,0 +1,26 @@
+SPACE MINER — ERSTE UNITY-UMSETZUNG
+Stand: 05.10.2026
+
+Bibliothek: Assets/SpaceMiner/Asteroids
+3 erweiterbare Typassets, 3 Oberflächenmaterialien, 1 gemeinsame lineare Detailtextur.
+84 gespeicherte Meshassets: 12 Szenenkörper und 9 Beispiele mit jeweils 4 LODs.
+9 Beispiel-Prefabs: Eisreich, Felsig, Metallreich × 100 m, 1 km, 5 km.
+Alle zwölf Szenenasteroiden besitzen Generator und MeshCollider.
+
+Prüfergebnisse:
+- Unity-Assetimport und Windows-Build erfolgreich.
+- 60 Geometrie-, Shader-, Katalog- und Colliderprüfungen bestanden.
+- 140 Spielprüfungen inklusive Kamera, Intro und vollständigem Wasserauftrag bestanden.
+- Die drei hier gespeicherten Ansichten stammen aus dem tatsächlichen Windows-Spiel.
+- Bilder wurden ohne HUD separat gerendert und anschließend visuell geprüft.
+
+03-Unity-Eisreich.png: dunkle Kruste und lokale helle Eisfreilegungen.
+04-Unity-Felsig.png: kantige Form mit matter Gesteinsoberfläche.
+05-Unity-Metallreich.png: kompakte Form, raue Oberfläche mit einzelnen Metallreflexen.
+Andere Szenenasteroiden sind in diesen Spielansichten ebenfalls sichtbar.
+Die Ansichten zeigen unterschiedliche Körpergrößen bei entsprechend angepasstem Kameraabstand.
+
+Die Umsetzung folgt der Konzeptfamilie; sie ist eine erste prozedurale Ausarbeitung.
+Materialprofile, Grundformen, Detailstufen und Beleuchtung können weiter abgestimmt werden.
+Weitere Arten entstehen als Typassets und Katalogeinträge; keine feste Typen-Enum.
+Anleitung und Erweiterungspunkte: docs/AsteroidGenerator.md

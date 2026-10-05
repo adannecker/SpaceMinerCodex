@@ -24,7 +24,9 @@ Shader "SpaceMiner/Asteroid Surface"
         LOD 300
         CGPROGRAM
         #pragma surface surf Standard fullforwardshadows vertex:vert
-        #pragma target 3.0
+        #pragma target 3.5
+        #pragma multi_compile_instancing
+        #pragma instancing_options assumeuniformscaling
         #include "UnityCG.cginc"
         sampler2D _DetailTex;
         float4 _DetailTex_TexelSize;
@@ -55,7 +57,9 @@ Shader "SpaceMiner/Asteroid Surface"
             float3 n = normalize(IN.localNormal);
             float3 projection = pow(abs(n), 4);
             projection /= max(dot(projection, float3(1,1,1)), 0.0001);
-            float3 p = IN.localPosition * (_BodySize / max(_DetailSize,0.25));
+            // Uniform object scale gives each instance its physical texture scale.
+            float bodySize = length(float3(unity_ObjectToWorld._m00, unity_ObjectToWorld._m10, unity_ObjectToWorld._m20));
+            float3 p = IN.localPosition * (bodySize / max(_DetailSize,0.25));
             float4 x = tex2D(_DetailTex, p.yz);
             float4 y = tex2D(_DetailTex, p.xz);
             float4 z = tex2D(_DetailTex, p.xy);

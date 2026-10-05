@@ -70,7 +70,10 @@ namespace SpaceMiner
                 if (Physics.Raycast(view.ScreenPointToRay(mouse), out RaycastHit hit, view.farClipPlane))
                     Select(hit.collider.GetComponentInParent<SpaceObject>());
                 else
-                    Select(null);
+                {
+                    var spiral = GetComponent<SpiralBelt>();
+                    Select(spiral != null ? spiral.PickOverview(mouse, view) : null);
+                }
             }
             ApplyPose();
         }
@@ -89,10 +92,24 @@ namespace SpaceMiner
         public void Overview()
         {
             followTarget = null;
-            Pivot = new Vector3(1300, 0, 3800);
-            Distance = 16500f;
+            var root = GameObject.Find("Asteroids (1 unit = 1 metre)");
+            Bounds bounds = new Bounds(Vector3.zero, Vector3.one * 24f);
+            if (root != null)
+                foreach (Transform body in root.transform)
+                {
+                    var info = body.GetComponent<SpaceObject>();
+                    if (info != null) bounds.Encapsulate(new Bounds(body.position, Vector3.one * info.DiameterMeters));
+                }
+            Pivot = bounds.center;
+            if (view == null) view = GetComponent<Camera>();
+            float halfVertical = view.fieldOfView * Mathf.Deg2Rad * 0.5f;
+            float halfHorizontal = Mathf.Atan(Mathf.Tan(halfVertical) * view.aspect);
+            // Bounding sphere also covers the field when the window is tall and narrow.
+            Distance = Mathf.Clamp(bounds.extents.magnitude / Mathf.Sin(Mathf.Min(halfVertical, halfHorizontal)) * 1.12f,
+                MinimumDistance, MaximumDistance);
             yaw = -18f;
-            pitch = 28f;
+            var spiral = FindFirstObjectByType<SpiralBelt>();
+            pitch = spiral != null && spiral.IsReady ? 78f : 28f;
             ApplyPose();
         }
 
