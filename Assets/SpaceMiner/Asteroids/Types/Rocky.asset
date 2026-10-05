@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff22cf8101ceebb428745cea43eb9423, type: 3}
+  m_Name: Rocky
+  m_EditorClassIdentifier: Assembly-CSharp::SpaceMiner.AsteroidType
+  DisplayName: Felsig
+  SurfaceMaterial: {fileID: 2100000, guid: 9320de925b656aa41a9b34ff581a8827, type: 2}
+  Shape:
+    AxisScale: {x: 1.4, y: 0.8, z: 1}
+    AxisVariation: 0.12
+    LobeStrength: 0.04
+    Asymmetry: 0.12
+    MacroAmplitude: 0.14
+    MacroFrequency: 2.5
+    RidgeAmplitude: 0.04
+    RidgeFrequency: 9
+    FracturePlanes: 14
+    FractureDepth: 0.24
+    CraterCount: 4
+    CraterRadius: {x: 0.18, y: 0.48}
+    CraterDepth: 0.22
+  Surface:
+    Crust:
+      Color: {r: 0.34, g: 0.31, b: 0.27, a: 1}
+      Metallic: 0
+      Smoothness: 0.12
+    Exposure:
+      Color: {r: 0.42, g: 0.39, b: 0.34, a: 1}
+      Metallic: 0
+      Smoothness: 0.17
+    Accent:
+      Color: {r: 0.19, g: 0.175, b: 0.15, a: 1}
+      Metallic: 0
+      Smoothness: 0.07
+    ExposureCount: 4
+    ExposureRadius: {x: 0.3, y: 0.6}
+    ExposureRecess: 0.025
+    AccentCount: 4
+    AccentRadius: {x: 0.22, y: 0.4}
+    DetailStrength: 0.65
+    DetailSizeMeters: 32
+    BumpStrength: 0.3
+  WaterFraction: 0

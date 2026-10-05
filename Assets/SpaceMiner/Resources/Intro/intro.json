@@ -1,0 +1,101 @@
+{
+  "Voice": "Microsoft Hedda Desktop",
+  "Cues": [
+    {
+      "Stage": 0,
+      "Heading": "NOTFALLSYSTEM AKTIV",
+      "Text": "Du kannst mich hören … gut.",
+      "Audio": "Intro/mira_00"
+    },
+    {
+      "Stage": 0,
+      "Heading": "NOTFALLSYSTEM AKTIV",
+      "Text": "Ich bin Mira. Dein Bordcomputer.",
+      "Audio": "Intro/mira_01"
+    },
+    {
+      "Stage": 0,
+      "Heading": "NOTFALLSYSTEM AKTIV",
+      "Text": "Lass dir Zeit. Du musst noch nichts tun.",
+      "Audio": "Intro/mira_02"
+    },
+    {
+      "Stage": 0,
+      "Heading": "NOTFALLSYSTEM AKTIV",
+      "Text": "Du hast die Explosion überlebt.",
+      "Audio": "Intro/mira_03"
+    },
+    {
+      "Stage": 1,
+      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
+      "Text": "Unser Schiff ist schwer beschädigt. Viele Systeme antworten nicht mehr.",
+      "Audio": "Intro/mira_04"
+    },
+    {
+      "Stage": 1,
+      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
+      "Text": "Wir arbeiten auf Notstrom. Die internen Schiffsbatterien müssen erst wieder aufgeladen werden.",
+      "Audio": "Intro/mira_05"
+    },
+    {
+      "Stage": 1,
+      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
+      "Text": "Die Lebenserhaltung arbeitet noch. Aber unsere Vorräte werden nicht für immer reichen.",
+      "Audio": "Intro/mira_06"
+    },
+    {
+      "Stage": 2,
+      "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
+      "Text": "Um uns herum liegt ein Asteroidengürtel.",
+      "Audio": "Intro/mira_07"
+    },
+    {
+      "Stage": 2,
+      "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
+      "Text": "Von unseren zehn Drohnen funktionieren noch zwei.",
+      "Audio": "Intro/mira_08"
+    },
+    {
+      "Stage": 2,
+      "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
+      "Text": "Treibstoff und Energie reichen im Moment aber nur für eine. Die Batterie der zweiten müssen wir erst aufladen.",
+      "Audio": "Intro/mira_09"
+    },
+    {
+      "Stage": 2,
+      "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
+      "Text": "Mit der ersten können wir die Umgebung untersuchen und Rohstoffe bergen. Wir müssen ihre Einsätze sorgfältig planen.",
+      "Audio": "Intro/mira_10"
+    },
+    {
+      "Stage": 2,
+      "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
+      "Text": "Für weitere Reparaturen brauchen wir Material. Für neue Technik brauchen wir Wissen — vielleicht finden wir etwas davon in alten Aufzeichnungen und Artefakten.",
+      "Audio": "Intro/mira_11"
+    },
+    {
+      "Stage": 3,
+      "Heading": "ERSTES ZIEL: WASSER SICHERN",
+      "Text": "Zuerst brauchen wir eine verlässliche Wasserquelle.",
+      "Audio": "Intro/mira_12"
+    },
+    {
+      "Stage": 3,
+      "Heading": "ERSTES ZIEL: WASSER SICHERN",
+      "Text": "Wir sehen uns die nahen Asteroiden an.",
+      "Audio": "Intro/mira_13"
+    },
+    {
+      "Stage": 3,
+      "Heading": "ERSTES ZIEL: WASSER SICHERN",
+      "Text": "Ein Schritt nach dem anderen.",
+      "Audio": "Intro/mira_14"
+    },
+    {
+      "Stage": 3,
+      "Heading": "ERSTES ZIEL: WASSER SICHERN",
+      "Text": "Ich bin hier.",
+      "Audio": "Intro/mira_15"
+    }
+  ]
+}

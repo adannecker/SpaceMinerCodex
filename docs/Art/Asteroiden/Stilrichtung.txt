@@ -1,0 +1,85 @@
+SPACE MINER — ASTEROIDEN / STILRICHTUNG 01
+Stand: 05.10.2026
+Status: Konzeptphase. Erste visuelle Richtung; Grundlage für spätere Modelle und Materialien.
+
+LIEFERUMFANG
+01-Stilstudie.png: Drei Materialfamilien, kleine Fernansichten und Oberflächenausschnitte.
+02-Formvarianten.png: Neun Formstudien für etwa 100 m, 1 km und 5 km maximale Körperausdehnung.
+Generierungsprompts.json: Vollständige verwendete Prompts; eingebautes Imagegen-Werkzeug.
+Die Größen im Variantenblatt sind auf ähnliche Bildgröße normiert. Es ist kein Maßstabsvergleich.
+Die Materialausschnitte sind Konzeptillustrationen, keine nahtlosen Texturen oder fertigen PBR-Maps.
+
+GEMEINSAME BILDSPRACHE
+Realistische, zurückhaltende Darstellung mit geologischer Formensprache.
+Entsättigte natürliche Farben; neutrales gerichtetes Sonnenlicht und ausgeprägte Schatten.
+Sehr schwache neutrale Aufhellung ist eine Präsentationshilfe dieser Tafeln.
+Unregelmäßige Grundkörper und deutlich asymmetrische Silhouetten bei allen Größen.
+Große Masseverteilung zuerst, dann Brüche, Becken und Klippen, zuletzt feines Regolith.
+Details nicht gleichmäßig über den gesamten Körper verteilen: ruhige Flächen und markante Zonen.
+Die Fernansicht lebt von Silhouette, großen Helligkeitsflächen und breiten Materialreflexen.
+Kein Eigenleuchten, keine bunten Kristalle, keine allgegenwärtigen glänzenden Erzadern.
+Familientypische Silhouetten sind eine bewusste Spielgestaltung, keine wissenschaftliche Klassifikation.
+
+EISREICH
+Palette: sehr dunkles Anthrazit und staubiges Grau; freigelegtes Eis gebrochen weiß bis leicht kühlgrau.
+Form: gelappte, eingeschnittene, teils längliche Körper; Hälse, erodierte Klippen und Gruben.
+Oberfläche: dunkle Gesteins-/Staubkruste auf ungefähr 90–95 % der sichtbaren Fläche als Entwurfsziel.
+Einzelne größere unregelmäßige Eisfenster an Bruchstellen, Vertiefungen und Klippen.
+Eisflächen bleiben lokal; die Kanten der Kruste überdecken Teile der Freilegungen.
+Eis körnig bis kompakt, überwiegend matt; kein transparenter blauer Eisberg.
+Fernsignal: dunkle gelappte Silhouette mit wenigen deutlichen hellen Flecken.
+Die Anteile sind gestalterische Ziele, keine Messwerte oder Aussage über den Eisgehalt im Inneren.
+
+FELSIG
+Palette: warmes Grau, gedämpftes Taupe, geringe Farbvariation.
+Form: kantige asymmetrische Blöcke und längliche Bruchstücke, markante planare Bruchflächen.
+Oberfläche: überwiegend mattes Silikatgestein, lokal Schutt und Staub, große Brüche und Einschlagsbecken.
+Fernsignal: kantige Kontur, mittelhelle breite Felsflächen, wenig Glanz.
+Auch innerhalb dieser Familie kompakte und gelappte Varianten zulassen.
+
+METALLREICH
+Palette: Graphit und Eisen-Nickel-Grau; sparsame gedämpfte bronzegraue Akzente.
+Form: kompakte, gedrungene, asymmetrische Keile und zerbeulte Massen.
+Oberfläche: raues, vernarbtes Metall mit dunklem Regolith und Gesteinseinschlüssen.
+Nur einzelne breite freigelegte Facetten liefern gedämpfte Reflexe.
+Fernsignal: kompakte Silhouette und breiter Glanzwechsel unter Rotation.
+Keine Chromkugel, keine flüssigen Metallflächen, kein flächiger orangefarbener Erdrost.
+Diese Gestaltung ist eine plausible künstlerische Interpretation, keine Rekonstruktion von Psyche.
+
+GRÖSSEN UND VARIATION
+100 m: wenige dominante Bruchformen, lokale Schuttzonen und einzelne Vertiefungen.
+1 km: mehrere große Formmassen, markante Klippen, Bruchsysteme oder ein dominantes Becken.
+5 km: größere zusammenhängende Geländeformen, Becken und Staubflächen; trotzdem unregelmäßig.
+Für jede Familie mehrere unabhängige Grundformen entwerfen; nicht nur ein Mesh unterschiedlich skalieren.
+Zwischengrößen etwa 300 m, 700 m und 2 km später aus diesen Formfamilien ableiten.
+Projektkonvention beibehalten: eine Unity-Einheit entspricht einem Meter.
+100 m bis 5 km meint hier ungefähr die größte Ausdehnung, nicht den Radius.
+
+LEITLINIEN FÜR DIE SPÄTERE UNITY-UMSETZUNG
+Die vorhandene Built-in Render Pipeline ist die Ausgangsbasis.
+Geometrie trägt große Form und mittelgroße Brüche; Materialien tragen die feinen Oberflächendetails.
+Separate Masken für Kruste, freigelegtes Eis, Silikat und Metall ermöglichen konsistente Materialmischung.
+Große Materialflecken bis in entfernte LODs erhalten; feine Details mit Entfernung reduzieren.
+Regolith auf metallreichen Körpern bleibt ein eigener nichtmetallischer Oberflächenanteil.
+Raues Metall braucht ausreichende Reflexionsinformationen, damit seine Lesbarkeit nicht verloren geht.
+Die Konzeptbeleuchtung nicht als in Materialtexturen eingebrannte Schatten übernehmen.
+Später echte Maßstabs-, Rotations- und Lichttests in der Spielkamera durchführen.
+Mesh, Kollision, Textursets, LODs und Shader sind in dieser Konzeptphase noch nicht umgesetzt.
+
+PRÜFKRITERIEN FÜR DEN NÄCHSTEN SCHRITT
+Jede Familie unter gleicher Beleuchtung bei etwa 32, 64 und 128 Pixel Bildschirmbreite vergleichen.
+Mehrere Rotationen prüfen: die Identität darf nicht von einer einzigen sichtbaren Fläche abhängen.
+Auch in Graustufen vergleichen; keine alleinige Farbcodierung.
+Die kleinen Ansichten der ersten Tafel sind eine qualitative Konzeptprüfung, kein Unity-Rendering-Test.
+Unter sehr wenigen Pixeln oder auf vollständig verschatteten Seiten ist sichere Materialerkennung begrenzt.
+Die visuelle Familie kann einen Hinweis geben; ein Scan bleibt passend zur Spielidee für sichere Ressourcenaussagen.
+
+WISSENSCHAFTLICHE REFERENZEN UND SPIELABSTRAKTION
+ESA/Rosetta beschreibt einen dunklen, staubigen Kometenkern mit lokal freigelegtem Wassereis:
+https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Exposed_water_ice_detected_on_comet_s_surface
+https://blogs.esa.int/rosetta/2016/01/13/exposed-ice-on-rosettas-comet-confirmed-as-water/
+Dies dient als Oberflächenreferenz für eisreiche kleine Körper, nicht als universelle Asteroidenform.
+NASA beschreibt Psyche mit variabler Zusammensetzung und unsicherer Oberflächenbeschaffenheit:
+https://science.nasa.gov/solar-system/asteroids/16-psyche/
+Die deutlichen Familienunterschiede und die Flächenanteile in diesen Tafeln sind Spielabstraktionen.
+

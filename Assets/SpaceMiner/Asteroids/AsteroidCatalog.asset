@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15db11d9662a1140ba20f16ce18548b, type: 3}
+  m_Name: AsteroidCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::SpaceMiner.AsteroidCatalog
+  Types:
+  - Type: {fileID: 11400000, guid: fc1b8175346ff7b4d8cf4c44098d96a4, type: 2}
+    Weight: 1
+  - Type: {fileID: 11400000, guid: f4fe9f384d3332048a10b09326775c8f, type: 2}
+    Weight: 1
+  - Type: {fileID: 11400000, guid: f98986be771d7034dbb83c762251f809, type: 2}
+    Weight: 1
