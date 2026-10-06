@@ -101,12 +101,11 @@ namespace SpaceMiner
             DrawInspector(Inspector.x + 16, Inspector.y + 16);
             Panel(Clock);
             float cx = Clock.x + 16, ty = Clock.y + 12;
-            Label(cx, ty, 310, 20, scenario.SimulationRate == 0 ? "SIMULATION PAUSIERT" : "ZEITRAFFER  " + scenario.SimulationRate.ToString("0") + "×", muted);
-            float[] rates = { 1, 20, 100, 500 };
+            Label(cx, ty, 310, 20, scenario.SimulationRate == 0 ? "SIMULATION PAUSIERT" : "SPIELTEMPO  " + scenario.SimulationRate.ToString("0.#") + "×", muted);
+            float[] rates = { .5f, 1, 2, 3, 5 };
             for (int i = 0; i < rates.Length; i++)
-                if (GUI.Button(new Rect(cx + i * 77, ty + 30, 69, 27), rates[i] + "×", button)) scenario.SimulationRate = rates[i];
-            if (GUI.Button(new Rect(cx, ty + 64, 300, 24), scenario.SimulationRate > 0 ? "Pause" : "Weiter (100×)", button))
-                scenario.SimulationRate = scenario.SimulationRate > 0 ? 0 : 100;
+                if (GUI.Button(new Rect(cx + i * 61, ty + 30, 57, 27), rates[i] + "×", button)) scenario.SetSimulationRate(rates[i]);
+            if (GUI.Button(new Rect(cx, ty + 64, 300, 24), scenario.SimulationRate > 0 ? "Pause" : "Weiter", button)) scenario.TogglePause();
             if (display != null)
             {
                 bool previousEnabled = GUI.enabled;
@@ -157,7 +156,9 @@ namespace SpaceMiner
                 Label(x, y, 308, 24, "Ankunft in   " + (drone.IsFlying ? WaterScenario.Duration(drone.ArrivalSeconds) : "—")); y += 30;
                 Label(x, y, 308, 24, "Abbau verbleibend   " + (drone.Phase == DronePhase.Mining ? WaterScenario.Duration(drone.MiningSecondsRemaining) : "—")); y += 30;
                 Label(x, y, 308, 24, "Phase verbleibend   " + WaterScenario.Duration(drone.PhaseSecondsRemaining)); y += 30;
-                Label(x, y, 308, 22, "Zeitangaben in Spielzeit", muted); y += 28;
+                Label(x, y, 308, 22, "Abbauwissen Lv. " + scenario.Mining.Level + " · " + (scenario.Mining.Progress * 100).ToString("0") + " %", muted); y += 28;
+                Label(x, y, 308, 22, drone.EffectiveMiningRate.ToString("0.000") + " kg/s · " + drone.EffectiveMiningPower.ToString("0.0") + " kW", muted); y += 28;
+                Label(x, y, 308, 22, "Reserve " + (drone.ReserveFraction * 100).ToString("0") + " % · Zeiten in Spielzeit", muted); y += 28;
                 Bar(new Rect(x, y, 308, 9), drone.PhaseProgress); y += 22;
                 Label(x, y, 308, 24, "Eisquelle   " + (drone.Target == null ? "—" : drone.Target.Info.DisplayName), muted); y += 30;
                 if (!drone.IsOperational) { Label(x, y, 308, 42, "Havarieschaden. Eine Reparatur ist später möglich.", muted); y += 50; }

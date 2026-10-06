@@ -1,101 +1,108 @@
 {
-  "Voice": "Microsoft Hedda Desktop",
+  "Voice": "ElevenLabs · Maya - Supportive Agent · Nutzer-Testaufnahme",
+  "Track": "Intro/mira_maya_preview",
   "Cues": [
     {
       "Stage": 0,
       "Heading": "NOTFALLSYSTEM AKTIV",
       "Text": "Du kannst mich hören … gut.",
-      "Audio": "Intro/mira_00"
+      "StartSeconds": 0
     },
     {
       "Stage": 0,
       "Heading": "NOTFALLSYSTEM AKTIV",
       "Text": "Ich bin Mira. Dein Bordcomputer.",
-      "Audio": "Intro/mira_01"
+      "StartSeconds": 3.284
     },
     {
       "Stage": 0,
       "Heading": "NOTFALLSYSTEM AKTIV",
       "Text": "Lass dir Zeit. Du musst noch nichts tun.",
-      "Audio": "Intro/mira_02"
+      "StartSeconds": 6.143
     },
     {
       "Stage": 0,
       "Heading": "NOTFALLSYSTEM AKTIV",
       "Text": "Du hast die Explosion überlebt.",
-      "Audio": "Intro/mira_03"
+      "StartSeconds": 9.744
     },
     {
       "Stage": 1,
-      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
-      "Text": "Unser Schiff ist schwer beschädigt. Viele Systeme antworten nicht mehr.",
-      "Audio": "Intro/mira_04"
+      "Heading": "STATIONSSTATUS: NOTBETRIEB",
+      "Text": "Unsere Raumstation ist schwer beschädigt. Viele Systeme antworten nicht mehr.",
+      "StartSeconds": 12.001
     },
     {
       "Stage": 1,
-      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
-      "Text": "Wir arbeiten auf Notstrom. Die internen Schiffsbatterien müssen erst wieder aufgeladen werden.",
-      "Audio": "Intro/mira_05"
+      "Heading": "STATIONSSTATUS: NOTBETRIEB",
+      "Text": "Wir arbeiten auf Notstrom. Die internen Batterien müssen erst wieder aufgeladen werden.",
+      "StartSeconds": 16.842
     },
     {
       "Stage": 1,
-      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
-      "Text": "Die Lebenserhaltung arbeitet noch. Aber unsere Vorräte werden nicht für immer reichen.",
-      "Audio": "Intro/mira_06"
+      "Heading": "STATIONSSTATUS: NOTBETRIEB",
+      "Text": "Die Lebenserhaltung funktioniert noch. Aber unsere Vorräte sind begrenzt.",
+      "StartSeconds": 21.793
     },
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
       "Text": "Um uns herum liegt ein Asteroidengürtel.",
-      "Audio": "Intro/mira_07"
+      "StartSeconds": 26.741
     },
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
-      "Text": "Von unseren zehn Drohnen funktionieren noch zwei.",
-      "Audio": "Intro/mira_08"
+      "Text": "Von unseren zehn Drohnen ist nur eine einsatzfähig. Die anderen müssen wir reparieren.",
+      "StartSeconds": 29.285
     },
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
-      "Text": "Treibstoff und Energie reichen im Moment aber nur für eine. Die Batterie der zweiten müssen wir erst aufladen.",
-      "Audio": "Intro/mira_09"
+      "Text": "Für diese eine haben wir noch Treibstoff und Energie.",
+      "StartSeconds": 34.394
     },
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
-      "Text": "Mit der ersten können wir die Umgebung untersuchen und Rohstoffe bergen. Wir müssen ihre Einsätze sorgfältig planen.",
-      "Audio": "Intro/mira_10"
+      "Text": "Mit ihr können wir Rohstoffe bergen … und damit beginnen, die Station wieder aufzubauen.",
+      "StartSeconds": 37.417
     },
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
-      "Text": "Für weitere Reparaturen brauchen wir Material. Für neue Technik brauchen wir Wissen — vielleicht finden wir etwas davon in alten Aufzeichnungen und Artefakten.",
-      "Audio": "Intro/mira_11"
+      "Text": "Wir müssen ihre Einsätze sorgfältig planen.",
+      "StartSeconds": 42.353
+    },
+    {
+      "Stage": 2,
+      "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
+      "Text": "Für Reparaturen brauchen wir Material. Für neue Technik brauchen wir Wissen. Vielleicht finden wir Antworten in alten Aufzeichnungen und Artefakten.",
+      "StartSeconds": 44.958
     },
     {
       "Stage": 3,
       "Heading": "ERSTES ZIEL: WASSER SICHERN",
       "Text": "Zuerst brauchen wir eine verlässliche Wasserquelle.",
-      "Audio": "Intro/mira_12"
+      "StartSeconds": 54.014
     },
     {
       "Stage": 3,
       "Heading": "ERSTES ZIEL: WASSER SICHERN",
-      "Text": "Wir sehen uns die nahen Asteroiden an.",
-      "Audio": "Intro/mira_13"
+      "Text": "Wir beginnen mit den nahen Asteroiden.",
+      "StartSeconds": 56.834
     },
     {
       "Stage": 3,
       "Heading": "ERSTES ZIEL: WASSER SICHERN",
-      "Text": "Ein Schritt nach dem anderen.",
-      "Audio": "Intro/mira_14"
+      "Text": "Ein Schritt nach dem anderen …",
+      "StartSeconds": 59.345
     },
     {
       "Stage": 3,
       "Heading": "ERSTES ZIEL: WASSER SICHERN",
       "Text": "Ich bin hier.",
-      "Audio": "Intro/mira_15"
+      "StartSeconds": 61.906
     }
   ]
 }

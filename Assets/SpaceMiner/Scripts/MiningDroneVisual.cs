@@ -9,8 +9,14 @@ namespace SpaceMiner
         private Transform arm;
         private Transform upperArm, forearm, elbow, palm, hatch, chunk, drillShaft;
         private readonly Transform[] clamps = new Transform[3];
+        private readonly Transform[] clampFeet = new Transform[3];
         private readonly Transform[] crystals = new Transform[36];
         private readonly Transform[] unloadChunks = new Transform[8];
+        private readonly Transform[] storedCargo = new Transform[24];
+        private Mesh iceMesh;
+        public int VisibleCargoPieces { get; private set; }
+        public bool TankCoupled => agent != null && agent.Phase == DronePhase.Unloading
+            && Vector3.Distance(agent.CargoOutletPoint,agent.TankInlet)<0.01f;
         public Vector3 ContactPoint { get; private set; }
         public bool ClampDeployed { get; private set; }
         public bool HatchOpen { get; private set; }
@@ -50,14 +56,31 @@ namespace SpaceMiner
             Material metal = Surface("Drone tools",new Color(0.62f,0.66f,0.68f),0.85f);
             Material amber = Surface("Drone markings",new Color(0.95f,0.46f,0.08f),0.2f);
             Material status = Surface("Drone status",ready ? new Color(0.06f,0.7f,0.9f) : new Color(0.13f,0.16f,0.18f),0f,ready);
-            Material ice = Surface("Fresh ice", new Color(0.50f,0.88f,1f),0.1f,true);
-            materials = new[] { hull,dark,metal,amber,status,ice };
+            Material ice = Surface("Fresh ice", new Color(0.66f,0.88f,0.98f),0.1f);
+            Material glass = new Material(Resources.Load<Shader>("CargoGlass")) {
+                name="Cargo inspection glass",color=new Color(0.25f,0.65f,0.80f,0.12f)
+            };
+            materials = new[] { hull,dark,metal,amber,status,ice,glass };
+            iceMesh = CreateIceMesh();
             var body = new GameObject("Mining Drone Geometry").transform; body.SetParent(transform,false);
             Part(PrimitiveType.Cube,"Main chassis",body,Vector3.zero,new Vector3(1.25f,0.8f,1.45f),hull);
-            Part(PrimitiveType.Cube,"Cargo container",body,new Vector3(0,0.46f,-0.15f),new Vector3(1.05f,0.42f,0.9f),dark);
-            Part(PrimitiveType.Cube,"Cargo opening",body,new Vector3(0,0.69f,-0.15f),new Vector3(0.98f,0.025f,0.83f),dark);
-            hatch = new GameObject("Cargo hatch hinge").transform; hatch.SetParent(body,false); hatch.localPosition = new Vector3(0,0.7f,-0.565f);
-            Part(PrimitiveType.Cube,"Cargo lid",hatch,new Vector3(0,0,0.415f),new Vector3(0.98f,0.06f,0.83f),hull);
+            Part(PrimitiveType.Cube,"Cargo container floor",body,new Vector3(0,0.43f,-0.15f),new Vector3(1.05f,0.06f,0.9f),dark);
+            for(int side=-1;side<=1;side+=2) {
+                Part(PrimitiveType.Cube,"Cargo side wall " + side,body,new Vector3(side*0.51f,0.64f,-0.15f),new Vector3(0.045f,0.38f,0.9f),hull);
+                if(side==1) Part(PrimitiveType.Cube,"Cargo front window",body,new Vector3(0,0.64f,0.28f),new Vector3(0.99f,0.38f,0.045f),glass);
+                Part(PrimitiveType.Cube,"Cargo rear opening post " + side,body,new Vector3(side*0.40f,0.64f,-0.58f),new Vector3(0.18f,0.38f,0.045f),hull);
+            }
+            hatch = new GameObject("Cargo hatch hinge").transform; hatch.SetParent(body,false); hatch.localPosition = new Vector3(0,0.84f,-0.565f);
+            Part(PrimitiveType.Cube,"Cargo lid window",hatch,new Vector3(0,0,0.415f),new Vector3(0.94f,0.025f,0.79f),glass);
+            for(int side=-1;side<=1;side+=2) {
+                Part(PrimitiveType.Cube,"Cargo lid side " + side,hatch,new Vector3(side*0.50f,0,0.415f),new Vector3(0.06f,0.06f,0.89f),hull);
+                Part(PrimitiveType.Cube,"Cargo lid end " + side,hatch,new Vector3(0,0,0.415f+side*0.415f),new Vector3(1.04f,0.06f,0.06f),hull);
+            }
+            Part(PrimitiveType.Cube,"Rear transfer floor",body,new Vector3(0,0.37f,-0.72f),new Vector3(0.60f,0.06f,0.46f),dark);
+            Part(PrimitiveType.Cube,"Rear transfer inspection cover",body,new Vector3(0,0.70f,-0.72f),new Vector3(0.60f,0.04f,0.46f),glass);
+            for(int side=-1;side<=1;side+=2)
+                Part(PrimitiveType.Cube,"Rear transfer side " + side,body,new Vector3(side*0.29f,0.53f,-0.72f),new Vector3(0.05f,0.34f,0.46f),hull);
+            Part(PrimitiveType.Cube,"Tank docking collar",body,DroneAgent.CargoOutletOffset,new Vector3(0.62f,0.42f,0.08f),amber);
             Part(PrimitiveType.Cube,"Sensor visor",body,new Vector3(0,0.22f,0.74f),new Vector3(0.65f,0.15f,0.05f),status);
             Part(PrimitiveType.Cube,"Warning stripe",body,new Vector3(0,-0.26f,0.74f),new Vector3(0.9f,0.1f,0.04f),amber);
             for (int side=-1;side<=1;side+=2)
@@ -88,15 +111,22 @@ namespace SpaceMiner
             for (int i=0;i<3;i++)
             {
                 clamps[i] = Part(PrimitiveType.Cube,"Docking clamp " + i,body,Vector3.zero,Vector3.one,metal);
-                Part(PrimitiveType.Cube,"Clamp foot",clamps[i],new Vector3(0,0,0.5f),new Vector3(2.4f,2.4f,0.12f),amber);
+                // Shoes are siblings of the telescopic beams: extension never stretches their depth.
+                clampFeet[i]=new GameObject("Clamp shoe " + i).transform; clampFeet[i].SetParent(body,false);
+                Part(PrimitiveType.Cube,"Clamp foot",clampFeet[i],Vector3.zero,new Vector3(0.28f,0.24f,0.10f),amber);
                 for(int side=-1;side<=1;side+=2)
-                    Part(PrimitiveType.Cube,"Clamp jaw " + side,clamps[i],new Vector3(side*1.1f,0,0.51f),new Vector3(0.45f,2f,0.18f),metal,Quaternion.Euler(0,-side*25f,0));
+                    Part(PrimitiveType.Cube,"Clamp jaw " + side,clampFeet[i],new Vector3(side*0.13f,0,0.03f),new Vector3(0.045f,0.22f,0.06f),metal);
             }
-            chunk = Part(PrimitiveType.Sphere,"Collected ice chunk",body,Vector3.zero,new Vector3(0.23f,0.16f,0.2f),ice);
+            chunk = Ice("Collected ice chunk",body,new Vector3(0.29f,0.22f,0.26f),ice);
             for (int i=0;i<crystals.Length;i++)
                 crystals[i] = Part(PrimitiveType.Cube,"Ice crystal " + i,body,Vector3.zero,Vector3.one*0.04f,ice);
             for (int i=0;i<unloadChunks.Length;i++)
-                unloadChunks[i] = Part(PrimitiveType.Sphere,"Tank transfer ice " + i,body,Vector3.zero,Vector3.one*0.15f,ice);
+                unloadChunks[i] = Ice("Tank transfer ice " + i,body,Vector3.one*0.11f,ice);
+            for(int i=0;i<storedCargo.Length;i++) {
+                storedCargo[i]=Ice("Stored cargo " + i,body,new Vector3(0.14f,0.10f,0.13f),ice);
+                storedCargo[i].localPosition=new Vector3((i%3-1)*0.29f,0.55f+(i/12)*0.18f,-0.45f+((i/3)%4)*0.21f);
+                storedCargo[i].localRotation=Quaternion.Euler(i*37f,i*71f,i*23f);
+            }
             // Moving presentation pieces must not interfere with selection rays or surface queries.
             foreach (var collider in body.GetComponentsInChildren<Collider>()) collider.enabled = false;
             // Keep one hull collider for drone selection.
@@ -131,15 +161,19 @@ namespace SpaceMiner
             {
                 float a=(i*120f+30f)*Mathf.Deg2Rad;
                 Vector3 anchor=new Vector3(Mathf.Cos(a)*0.68f,Mathf.Sin(a)*0.5f,0.65f);
-                Vector3 foot=transform.InverseTransformPoint(SurfaceContact(transform.TransformPoint(anchor)));
-                Link(clamps[i],anchor,Vector3.Lerp(anchor+Vector3.forward*0.22f,foot,dock),0.10f);
+                Vector3 hit=SurfaceContact(transform.TransformPoint(anchor),out Vector3 normal);
+                Vector3 foot=transform.InverseTransformPoint(hit+normal*0.09f);
+                Vector3 end=Vector3.Lerp(anchor+Vector3.forward*0.22f,foot,dock);
+                Link(clamps[i],anchor,end,0.10f);
+                clampFeet[i].localPosition=end;
+                clampFeet[i].rotation=Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(-normal,transform.up),dock);
             }
-            bool unloading=agent.Phase == DronePhase.Unloading && agent.CargoKg > 0;
+            bool unloading=TankCoupled && agent.CargoKg > 0;
             HatchOpen=mining || unloading;
             hatch.localRotation=Quaternion.Euler(HatchOpen ? -105f : 0,0,0);
             float cycle=Mathf.Repeat(time,120f)/120f;
-            Vector3 rest=new Vector3(-0.56f,-0.05f,1.72f), mouth=new Vector3(0,0.87f,-0.15f);
-            Vector3 loose=contact+new Vector3(-0.25f,0.18f,-0.22f);
+            Vector3 rest=new Vector3(-0.56f,-0.05f,1.72f), mouth=new Vector3(0,1.03f,-0.15f);
+            Vector3 loose=contact+new Vector3(-0.25f,0.18f,-0.30f);
             Vector3 grip=rest;
             if(mining)
             {
@@ -165,22 +199,52 @@ namespace SpaceMiner
                 float a=i*2.39996f;
                 Vector3 eject=new Vector3(Mathf.Cos(a)*0.7f,Mathf.Sin(a)*0.7f,-0.5f-(i%4)*0.2f);
                 crystals[i].localPosition=contact+eject*age;
-                crystals[i].localScale=Vector3.one*(0.045f*(1f-age));
+                crystals[i].localScale=Vector3.one*(0.07f*(1f-age));
                 crystals[i].localRotation=Quaternion.Euler(i*17f+time*2f,i*43f,time*4f);
             }
             for(int i=0;i<unloadChunks.Length;i++)
             {
-                unloadChunks[i].gameObject.SetActive(unloading && time>30f);
-                float progress=Mathf.Repeat((time-30f)/65f+i/8f,1f);
-                unloadChunks[i].position=Vector3.Lerp(transform.TransformPoint(mouth),agent.TankInlet,progress)+Vector3.up*Mathf.Sin(progress*Mathf.PI)*0.5f;
+                unloadChunks[i].gameObject.SetActive(unloading && time>25f && time<215f);
+                float progress=Mathf.Repeat((time-25f)/35f+i/8f,1f);
+                unloadChunks[i].localPosition=Vector3.Lerp(new Vector3(0,0.53f,-0.48f),DroneAgent.CargoOutletOffset,progress);
             }
+            float fill=agent.CargoKg/Mathf.Max(0.01f,agent.CargoCapacityKg)*(1f-agent.UnloadProgress);
+            VisibleCargoPieces=Mathf.CeilToInt(fill*storedCargo.Length);
+            for(int i=0;i<storedCargo.Length;i++) storedCargo[i].gameObject.SetActive(i<VisibleCargoPieces);
         }
 
         private Vector3 SurfaceContact(Vector3 origin)
         {
+            return SurfaceContact(origin,out _);
+        }
+
+        private Vector3 SurfaceContact(Vector3 origin,out Vector3 normal)
+        {
             var surface=agent.Target != null ? agent.Target.GetComponent<Collider>() : null;
-            if(surface != null && surface.Raycast(new Ray(origin,transform.forward),out RaycastHit hit,8f)) return hit.point;
-            return agent.SurfacePoint;
+            if(surface != null && surface.Raycast(new Ray(origin,transform.forward),out RaycastHit hit,8f)) { normal=hit.normal; return hit.point; }
+            normal=agent.Target != null ? agent.SurfaceNormal : -transform.forward;
+            return agent.Target != null ? agent.SurfacePoint : origin+transform.forward*2.4f;
+        }
+
+        private Transform Ice(string name,Transform parent,Vector3 scale,Material material)
+        {
+            Transform piece=Part(PrimitiveType.Sphere,name,parent,Vector3.zero,scale,material);
+            piece.GetComponent<MeshFilter>().sharedMesh=iceMesh;
+            return piece;
+        }
+
+        private static Mesh CreateIceMesh()
+        {
+            float t=(1f+Mathf.Sqrt(5f))*0.5f;
+            Vector3[] points={new Vector3(-1,t,0),new Vector3(1,t,0),new Vector3(-1,-t,0),new Vector3(1,-t,0),
+                new Vector3(0,-1,t),new Vector3(0,1,t),new Vector3(0,-1,-t),new Vector3(0,1,-t),
+                new Vector3(t,0,-1),new Vector3(t,0,1),new Vector3(-t,0,-1),new Vector3(-t,0,1)};
+            int[] faces={0,11,5,0,5,1,0,1,7,0,7,10,0,10,11,1,5,9,5,11,4,11,10,2,10,7,6,7,1,8,
+                3,9,4,3,4,2,3,2,6,3,6,8,3,8,9,4,9,5,2,4,11,6,2,10,8,6,7,9,8,1};
+            var vertices=new Vector3[faces.Length]; var indices=new int[faces.Length];
+            for(int i=0;i<faces.Length;i++) { int p=faces[i]; vertices[i]=points[p].normalized*(0.82f+(p*7%11)*0.025f); indices[i]=i; }
+            var mesh=new Mesh { name="Faceted mined ice",vertices=vertices,triangles=indices };
+            mesh.RecalculateNormals(); mesh.RecalculateBounds(); return mesh;
         }
 
         private static void Link(Transform link, Vector3 start, Vector3 end, float width)
@@ -191,6 +255,6 @@ namespace SpaceMiner
             link.localScale=new Vector3(width,width,Mathf.Max(0.01f,delta.magnitude));
         }
 
-        private void OnDestroy() { if (materials != null) foreach (var material in materials) Destroy(material); }
+        private void OnDestroy() { if (materials != null) foreach (var material in materials) Destroy(material); if(iceMesh != null)Destroy(iceMesh); }
     }
 }

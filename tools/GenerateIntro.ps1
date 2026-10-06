@@ -4,6 +4,11 @@ Add-Type -AssemblyName System.Speech
 $taskProject = Split-Path -Parent $PSScriptRoot
 $taskSource = Join-Path $taskProject 'docs\Dialoge\01_Intro_Erwachen.md'
 $taskDestination = Join-Path $taskProject 'Assets\SpaceMiner\Resources\Intro'
+$taskExistingJson = Join-Path $taskDestination 'intro.json'
+if (Test-Path -LiteralPath $taskExistingJson) {
+    $taskExisting = Get-Content -LiteralPath $taskExistingJson -Raw -Encoding UTF8 | ConvertFrom-Json
+    if ($taskExisting.Track) { throw 'Das Intro verwendet eine importierte Aufnahme. Teststimmen-Generator darf die Aufnahme und ihre Zeitmarken nicht ersetzen.' }
+}
 New-Item -ItemType Directory -Force -Path $taskDestination | Out-Null
 $taskMarkdown = Get-Content -LiteralPath $taskSource -Raw -Encoding UTF8
 $taskSections = [regex]::Matches($taskMarkdown, '(?ms)^## ([1-4])\. ([^\r\n]+)\r?\n(.*?)(?=^## |\z)')

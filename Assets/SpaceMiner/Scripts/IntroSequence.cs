@@ -14,11 +14,13 @@ namespace SpaceMiner
             public string Heading;
             public string Text;
             public string Audio;
+            public float StartSeconds;
         }
 
         [Serializable] private sealed class Script
         {
             public string Voice;
+            public string Track;
             public Cue[] Cues;
         }
 
@@ -32,6 +34,8 @@ namespace SpaceMiner
 
         private Script script;
         private AudioClip[] clips;
+        private AudioClip continuousTrack;
+        private float playbackSeconds;
         private float[] durations;
         private AudioSource voice;
         private OrbitCamera orbit;
@@ -67,21 +71,34 @@ namespace SpaceMiner
                 if (script?.Cues == null || script.Cues.Length == 0) { Skip(); return; }
                 clips = new AudioClip[CueCount];
                 durations = new float[CueCount];
+                if (!string.IsNullOrEmpty(script.Track)) continuousTrack = Resources.Load<AudioClip>(script.Track);
                 HasCompleteVoiceTrack = true;
                 for (int i = 0; i < CueCount; i++)
                 {
                     Cue cue = script.Cues[i];
-                    clips[i] = Resources.Load<AudioClip>(cue.Audio);
+                    clips[i] = continuousTrack != null ? continuousTrack
+                        : string.IsNullOrEmpty(cue.Audio) ? null : Resources.Load<AudioClip>(cue.Audio);
                     HasCompleteVoiceTrack &= clips[i] != null;
                     float readingTime = cue.Text.Split(' ').Length / 2.1f;
                     durations[i] = Mathf.Max(3.5f, clips[i] != null ? clips[i].length + 1.2f : readingTime + 1.5f);
+                    if (continuousTrack != null)
+                        durations[i] = i + 1 < CueCount
+                            ? script.Cues[i + 1].StartSeconds - cue.StartSeconds
+                            : continuousTrack.length + 1.2f - cue.StartSeconds;
                 }
                 initialized = true;
             }
             IsPlaying = true;
             completedFrame = -1;
-            elapsed = stageElapsed = 0;
+            elapsed = stageElapsed = playbackSeconds = 0;
+            settingsPausedVoice = false;
             CueIndex = 0;
+            if (continuousTrack != null)
+            {
+                voice.Stop();
+                voice.clip = continuousTrack;
+                voice.Play();
+            }
             BeginCue();
             SetCamera();
         }
@@ -92,14 +109,19 @@ namespace SpaceMiner
             if (SettingsMenu.BlocksInput) { if (!settingsPausedVoice) { voice.Pause(); settingsPausedVoice = true; } return; }
             if (settingsPausedVoice) { voice.UnPause(); settingsPausedVoice = false; }
             if (Input.GetKeyDown(KeyCode.Escape)) { Skip(); return; }
-            AdvancePlayback(Time.unscaledDeltaTime);
+            // Captions follow the actual recording position, including menu pause/resume.
+            float delta = continuousTrack != null && voice.isPlaying
+                ? Mathf.Max(0, voice.time - playbackSeconds)
+                : Time.unscaledDeltaTime;
+            AdvancePlayback(delta, false);
             if (IsPlaying) SetCamera();
         }
 
         // Also used by the opt-in player integration check to exercise timed completion.
-        public void AdvancePlayback(float seconds)
+        public void AdvancePlayback(float seconds, bool seekVoice = true)
         {
             if (!IsPlaying || !initialized || seconds <= 0) return;
+            playbackSeconds += seconds;
             elapsed += seconds;
             stageElapsed += seconds;
             while (IsPlaying && elapsed >= CueDuration)
@@ -111,10 +133,13 @@ namespace SpaceMiner
                 if (previousStage != script.Cues[CueIndex].Stage) stageElapsed = elapsed;
                 BeginCue();
             }
+            if (continuousTrack != null && seekVoice && IsPlaying)
+                voice.time = Mathf.Min(playbackSeconds, continuousTrack.length - 0.01f);
         }
 
         private void BeginCue()
         {
+            if (continuousTrack != null) return;
             voice.Stop();
             voice.clip = clips[CueIndex];
             if (voice.clip != null) voice.Play();
@@ -125,6 +150,7 @@ namespace SpaceMiner
             if (!IsPlaying) return;
             IsPlaying = false;
             completedFrame = Time.frameCount;
+            settingsPausedVoice = false;
             if (voice != null) { voice.Stop(); voice.clip = null; }
             if (orbit != null) orbit.ResetView();
         }
@@ -166,8 +192,9 @@ namespace SpaceMiner
             GUI.matrix = Matrix4x4.Scale(Vector3.one * scale);
             float width = Screen.width / scale, height = Screen.height / scale;
             Cue cue = script.Cues[CueIndex];
-            float fade = Mathf.SmoothStep(0, 1, Mathf.Clamp01(elapsed / 0.7f))
-                * Mathf.SmoothStep(0, 1, Mathf.Clamp01((CueDuration - elapsed) / 0.7f));
+            float fadeSeconds = continuousTrack != null ? 0.18f : 0.7f;
+            float fade = Mathf.SmoothStep(0, 1, Mathf.Clamp01(elapsed / fadeSeconds))
+                * Mathf.SmoothStep(0, 1, Mathf.Clamp01((CueDuration - elapsed) / fadeSeconds));
             float darkness = cue.Stage == 0 ? 1 : Mathf.Lerp(1, 0.45f, Mathf.Clamp01(stageElapsed / 2.5f));
             Fill(new Rect(0, 0, width, height), new Color(0.003f, 0.007f, 0.015f, darkness));
             Fill(new Rect(0, 0, width, 92), new Color(0, 0, 0, 0.85f));

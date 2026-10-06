@@ -35,6 +35,8 @@ namespace SpaceMiner
             camera.ResetView();
             yield return new WaitForEndOfFrame();
             Capture("Logs/prototype-home.png");
+            var dock=scenario.GetComponent<StationVisual>().DroneDock;
+            CaptureView("Logs/dock-charging.png",dock.TransformPoint(new Vector3(12,15,15)),dock.position+Vector3.up);
             if (!running) yield break;
             camera.Overview();
             yield return new WaitForEndOfFrame();
@@ -145,8 +147,12 @@ namespace SpaceMiner
                 var largest = GameObject.Find("A-12 / Grossasteroid").GetComponent<SpaceObject>();
                 Require(Mathf.Approximately(largest.transform.localScale.x, 5000), "5 km asteroid scale");
                 var drone = GameObject.Find("Drone 1").GetComponent<SpaceObject>();
-                var droneBounds = new Bounds(drone.transform.position, Vector3.zero);
-                foreach (var renderer in drone.GetComponentsInChildren<Renderer>()) droneBounds.Encapsulate(renderer.bounds);
+                var droneBounds = new Bounds(Vector3.zero, Vector3.zero);
+                foreach (var filter in drone.GetComponentsInChildren<MeshFilter>()) {
+                    Bounds b=filter.sharedMesh.bounds;
+                    for(int c=0;c<8;c++) droneBounds.Encapsulate(drone.transform.InverseTransformPoint(filter.transform.TransformPoint(
+                        b.center+Vector3.Scale(b.extents,new Vector3((c&1)==0?-1:1,(c&2)==0?-1:1,(c&4)==0?-1:1)))));
+                }
                 Require(Mathf.Abs(droneBounds.size.x - 2f) < 0.02f, "2 m drone width" );
                 Require(drone.transform.Find("Mining Drone Geometry/Mining Drill") != null && drone.transform.Find("Mining Drone Geometry/Gripper Arm") != null, "mining drone drill and gripper" );
                 controller.ResetView();
@@ -380,7 +386,8 @@ namespace SpaceMiner
 
         private static void Capture(string path)
         {
-            if (path.Contains("asteroid-"))
+            if (path.Contains("asteroid-") || path.Contains("dock-")
+                || Array.IndexOf(Environment.GetCommandLineArgs(), "-spaceMinerOffscreenCheck") >= 0)
             {
                 // Hidden test windows may have no presented backbuffer; render asset QA offscreen.
                 Camera camera = Camera.main;
@@ -424,6 +431,14 @@ namespace SpaceMiner
             Destroy(image);
         }
 
+        private static void CaptureView(string path,Vector3 position,Vector3 target)
+        {
+            var camera=Camera.main; Vector3 previousPosition=camera.transform.position;
+            Quaternion previousRotation=camera.transform.rotation;
+            try { camera.transform.position=position; camera.transform.LookAt(target); Capture(path); }
+            finally { camera.transform.SetPositionAndRotation(previousPosition,previousRotation); }
+        }
+
         private IEnumerator CheckIntro(WaterScenario scenario)
         {
             IntroSequence intro = GetComponent<IntroSequence>();
@@ -431,8 +446,9 @@ namespace SpaceMiner
             if (!Guard(() =>
             {
                 Require(intro != null && IntroSequence.IsPlaying && IntroSequence.BlocksGameplay, "intro blocks gameplay at startup");
-                Require(intro.CueCount == 16 && intro.HasCompleteVoiceTrack, "all Mira captions have local voice clips");
+                Require(intro.CueCount == 17 && intro.HasCompleteVoiceTrack, "all Mira captions have the local Maya recording");
                 Require(GetComponent<AudioSource>().isPlaying, "Mira voice starts playing");
+                Require(GetComponent<AudioSource>().clip.name == "mira_maya_preview", "intro uses imported Maya recording");
             })) yield break;
             float simulationRate = scenario.SimulationRate;
             yield return new WaitForSecondsRealtime(1.1f);
@@ -442,6 +458,7 @@ namespace SpaceMiner
             {
                 Require(scenario.SimulationRate == simulationRate && !scenario.SourceAssigned, "intro preserves simulation state");
                 intro.AdvancePlayback(intro.CueDuration - 1.2f);
+                Require(GetComponent<AudioSource>().time > 2f, "caption preview seeks the continuous voice recording");
             })) yield break;
             yield return new WaitForSecondsRealtime(1.1f);
             yield return new WaitForEndOfFrame();
@@ -488,6 +505,14 @@ namespace SpaceMiner
             bool prepared = Guard(() =>
             {
                 Require(scenario.Drones.Length == 10, "ten starting drones");
+                var station=scenario.GetComponent<StationVisual>();
+                Require(station.DroneDock.childCount >= 13, "eight charging bays and two maintenance bays on a common dock");
+                for(int i=0;i<scenario.Drones.Length;i++) {
+                    Require(Vector3.Distance(scenario.Drones[i].transform.position,station.Berth(i).position)<0.01f,
+                        "parked drone belongs to its berth " + i);
+                    Require(Quaternion.Angle(scenario.Drones[i].transform.rotation,station.Berth(i).rotation)<0.1f,
+                        "parked drone faces out of its berth " + i);
+                }
                 int operational = 0;
                 foreach (DroneAgent unit in scenario.Drones) if (unit.IsOperational) operational++;
                 Require(operational == 2 && drone.IsReady, "two functional drones, worker ready");
@@ -498,8 +523,9 @@ namespace SpaceMiner
                 AsteroidResource rock = scenario.Asteroids[3];
                 Require(rock.KnownWaterPercent == 0 && rock.UnknownPercent == 100, "unscanned composition remains unknown");
                 Require(!scenario.AssignTankOrder(rock) && drone.IsReady && scenario.WaterLiters == 20, "unconfirmed source rejects order without spending water");
-                Require(scenario.AssignTankOrder(source) && drone.Phase == DronePhase.Outbound, "tank order launches worker");
+                Require(scenario.AssignTankOrder(source) && drone.Phase == DronePhase.Launching, "tank order leaves charging berth first");
                 Require(!scenario.AssignTankOrder(source), "busy worker rejects duplicate order");
+                Until(scenario,()=>drone.Phase==DronePhase.Outbound,3000);
                 scenario.Advance(60);
                 Require(drone.Speed > 0 && drone.FuelLiters < 10 && drone.BatteryKwh < 8, "acceleration consumes both fuel and battery");
                 Require(drone.ArrivalSeconds > 0 && drone.TargetDistance > 0 && drone.PhaseProgress > 0, "flight status advances with ETA");
@@ -531,6 +557,15 @@ namespace SpaceMiner
                 var visual = drone.GetComponent<MiningDroneVisual>();
                 visual.RefreshPose();
                 Require(visual.IceSprayActive && visual.HatchOpen && visual.ChunkVisible, "ice spray and arm cargo transfer active");
+                Require(visual.VisibleCargoPieces>0 && visual.VisibleCargoPieces<24,"visible cargo hold fills with mining inventory");
+                Require(source.GetComponent<MeshCollider>().sharedMesh==source.GetComponent<AsteroidGenerator>().BakedMeshes[0],
+                    "working collider matches detailed visible asteroid surface");
+                for(int i=0;i<3;i++) {
+                    var shoe=drone.transform.Find("Mining Drone Geometry/Clamp shoe " + i);
+                    var surface=source.GetComponent<Collider>();
+                    Require(surface.Raycast(new Ray(shoe.position-shoe.forward, shoe.forward),out RaycastHit hit,2f)
+                        && Vector3.Dot(shoe.position-hit.point,hit.normal)>0.055f,"clamp shoe stays outside asteroid surface " + i);
+                }
                 var bit = drone.transform.Find("Mining Drone Geometry/Mining Drill");
                 Require(Vector3.Distance(bit.position + drone.transform.forward * 0.55f, visual.ContactPoint) < 0.04f, "deployed drill touches collider surface");
                 camera.ResetView(); camera.Focus(drone.Info);
@@ -539,6 +574,8 @@ namespace SpaceMiner
             })) yield break;
             yield return new WaitForEndOfFrame();
             Capture("Logs/scenario-mining.png");
+            CaptureView("Logs/dock-cargo.png",drone.transform.TransformPoint(new Vector3(3,3,-4)),
+                drone.transform.TransformPoint(new Vector3(0,0.6f,-0.15f)));
             if (!Guard(() =>
             {
                 Until(scenario, () => drone.Phase == DronePhase.Undocking, 3000);
@@ -552,16 +589,28 @@ namespace SpaceMiner
                 Require(Quaternion.Angle(rotation,drone.transform.rotation)>1f && drone.CargoKg==cargo, "smooth turn retains cargo");
                 Until(scenario, () => drone.Phase == DronePhase.Unloading, 3000);
                 Require(Vector3.Distance(drone.transform.position, drone.TankDockPoint) < 0.01f && drone.Speed == 0, "loaded drone returns to tank inlet");
+                Require(Vector3.Distance(drone.CargoOutletPoint,drone.TankInlet)<0.01f
+                    && Quaternion.Angle(drone.transform.rotation,drone.TankDockRotation)<0.1f,"cargo outlet physically mates to tank receiver");
                 Require(scenario.Deliveries == 0 && scenario.WaterLiters == 20, "water waits for processing at dock");
                 scenario.Advance(100);
+                var unloadVisual=drone.GetComponent<MiningDroneVisual>(); unloadVisual.RefreshPose();
+                Require(unloadVisual.TankCoupled && unloadVisual.HatchOpen && unloadVisual.VisibleCargoPieces<24,
+                    "coupled unloading drains visible cargo inside transfer channel");
                 camera.ResetView(); camera.Focus(drone.Info); camera.Orbit(new Vector2(5,8)); camera.Zoom(-3);
             })) yield break;
             yield return new WaitForEndOfFrame();
             Capture("Logs/scenario-unloading.png");
+            CaptureView("Logs/dock-tank-coupling.png",drone.transform.TransformPoint(new Vector3(3.5f,3.3f,1.5f)),
+                (drone.transform.position+drone.TankInlet)*0.5f);
             if (!Guard(() =>
             {
                 Until(scenario, () => drone.Phase == DronePhase.Servicing, 3000);
-                Require(scenario.Deliveries == 1 && scenario.WaterLiters > 59 && drone.Phase == DronePhase.Servicing, "first delivery enters ship tank");
+                Require(scenario.Deliveries == 1 && scenario.WaterLiters > 20 && scenario.WaterLiters < 59
+                    && drone.Phase == DronePhase.Servicing, "energy-limited partial first delivery enters station tank");
+                Require(scenario.Mining.CompletedTrips == 1 && drone.BatteryKwh >= drone.EnergyReserveKwh
+                    && drone.FuelLiters >= drone.FuelReserveLiters, "productive parked sortie earns knowledge and preserves reserves");
+                Require(Vector3.Distance(drone.transform.position,drone.HomePosition)<0.01f
+                    && Quaternion.Angle(drone.transform.rotation,drone.HomeRotation)<0.1f,"charging starts only after reverse parking");
                 float water = scenario.WaterLiters, fuel = drone.FuelLiters, energy = drone.BatteryKwh;
                 scenario.Advance(2);
                 Require(drone.FuelLiters > fuel && scenario.WaterLiters < water && drone.BatteryKwh > energy, "service draws ship water and charges battery");
@@ -571,7 +620,7 @@ namespace SpaceMiner
             Capture("Logs/scenario-asteroid.png");
             if (!Guard(() =>
             {
-                Until(scenario, () => scenario.QuestComplete, 150000);
+                Until(scenario, () => scenario.QuestComplete, 300000);
                 Until(scenario, () => drone.IsReady, 3000);
                 Require(drone.IsReady && !drone.HasTankOrder && scenario.Deliveries > 4, "tank order completes across multiple trips");
                 Require(Mathf.Abs(scenario.WaterLiters - 200) < 0.001f, "tank capacity reached without overflow");
@@ -607,6 +656,7 @@ namespace SpaceMiner
                 Require(drone.Phase == DronePhase.Undocking && drone.CargoKg > 0, "mining cancellation releases clamp with partial cargo");
                 Until(scenario, () => drone.IsReady, 25000);
                 Require(scenario.Deliveries == 1 && !drone.HasTankOrder, "cancelled mining delivers partial load and parks");
+                Require(scenario.Mining.CompletedTrips == 0, "cancelled sorties do not farm experience");
                 scenario.ResetScenario();
                 camera.ResetView();
             });

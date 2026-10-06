@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('Setup', 'Build', 'HundredBuild', 'SpiralBuild', 'MillionBuild', 'Open', 'Play', 'Check', 'AsteroidCheck')]
+    [ValidateSet('Setup', 'Build', 'HundredBuild', 'SpiralBuild', 'MillionBuild', 'Open', 'Play', 'Check', 'MiningCheck', 'AsteroidCheck')]
     [string]$Action = 'Open',
     [string]$UnityPath = 'C:\Program Files\Unity\Hub\Editor\6000.4.7f1\Editor\Unity.exe',
     [switch]$Visible
@@ -9,16 +9,27 @@ $projectPath = Split-Path -Parent $PSScriptRoot
 $logsPath = Join-Path $projectPath 'Logs'
 New-Item -ItemType Directory -Force -Path $logsPath | Out-Null
 
-if ($Action -eq 'Play' -or $Action -eq 'Check') {
+if ($Action -eq 'Play' -or $Action -eq 'Check' -or $Action -eq 'MiningCheck') {
     $playerPath = Join-Path $projectPath 'Builds\Windows\SpaceMiner.exe'
     if (!(Test-Path -LiteralPath $playerPath)) { throw 'Zuerst bauen: .\tools\Unity.ps1 Build' }
     $arguments = @('-screen-fullscreen', '0', '-screen-width', '1440', '-screen-height', '900', '-logFile', ('"' + (Join-Path $logsPath 'player.log') + '"'))
     if ($Action -eq 'Check') { $arguments += '-spaceMinerSmokeTest' }
+    if ($Action -eq 'MiningCheck') {
+        $arguments += '-miningBalanceCheck'
+        if (!$Visible) { $arguments += '-miningLogicOnly' }
+    }
     $taskWindowStyle = if ($Action -eq 'Play' -or $Visible) { 'Normal' } else { 'Hidden' }
     $process = Start-Process -FilePath $playerPath -WorkingDirectory $projectPath -ArgumentList $arguments -PassThru -WindowStyle $taskWindowStyle
-    if ($Action -eq 'Check') {
+    if ($Action -eq 'Check' -or $Action -eq 'MiningCheck') {
         $process.WaitForExit()
         if ($process.ExitCode -ne 0) { throw 'Spieltest fehlgeschlagen. Siehe Logs\player.log und Logs\smoke-test-error.txt.' }
+        if ($Action -eq 'MiningCheck') {
+            $taskReportPath = Join-Path $logsPath 'mining-balance-result.json'
+            if (!(Test-Path -LiteralPath $taskReportPath) -or !(Get-Content -LiteralPath $taskReportPath -Raw | ConvertFrom-Json).passed) {
+                throw 'Keine erfolgreiche Abbau-Simulation. Siehe Logs\mining-balance-error.txt.'
+            }
+            Write-Output $taskReportPath
+        }
     }
     return
 }

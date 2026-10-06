@@ -1,0 +1,122 @@
+{
+  "exported_at": "2026-10-06T21:28:29.777992+00:00",
+  "threads": [
+    {
+      "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
+      "title": "GitHub",
+      "file": "04-GitHub.md",
+      "status": "preserved"
+    },
+    {
+      "id": "01a11007-2934-7520-96c3-3991e89ccaf8",
+      "title": "MainDev",
+      "file": "05-MainDev.md",
+      "status": "preserved"
+    },
+    {
+      "id": "01a11007-53fc-7d60-af57-f15ed3399d0d",
+      "title": "Asteroidenvarianten",
+      "file": "06-Asteroidenvarianten.md",
+      "status": "preserved"
+    },
+    {
+      "id": "01a11007-910e-7ff0-a749-82c7af51fde7",
+      "title": "Story, Dialoge & Bordcomputer",
+      "file": "07-Story-und-Mira.md",
+      "status": "preserved"
+    },
+    {
+      "id": "01a110c0-50f2-7fa3-8a18-6905e864e5d9",
+      "title": "Settings UI",
+      "file": "08-Settings-UI.md",
+      "status": "preserved"
+    },
+    {
+      "id": "01a110fe-dd07-7f93-9a3d-922c469eccf6",
+      "title": "Sound und Effekte",
+      "file": "09-Sound-und-Effekte.md",
+      "status": "preserved"
+    },
+    {
+      "id": "01a110fc-1a02-7ad0-8b6e-48129d0b7453",
+      "title": "TechTree",
+      "file": "10-TechTree.md",
+      "status": "preserved"
+    },
+    {
+      "id": "01a11127-1368-7990-b23f-38b3524b44ca",
+      "title": "Vehicels",
+      "file": "11-Vehicels.md",
+      "status": "preserved"
+    },
+    {
+      "id": "01a110eb-3487-7061-8a24-86afe58bdc1f",
+      "title": "SpaceMinerCodex – lokaler Arbeitschat",
+      "file": "12-Lokaler-Arbeitschat.md",
+      "status": "unavailable"
+    },
+    {
+      "id": "01a10da1-b11d-7472-b6b4-b34be7f814fd",
+      "title": "MainDev",
+      "file": "13-MainDev-Desktop.md",
+      "status": "exported",
+      "messages": 139
+    },
+    {
+      "id": "01a11264-3942-7ed1-90f4-94bd00b82d06",
+      "title": "GitHub",
+      "file": "14-GitHub-Desktop.md",
+      "status": "exported",
+      "messages": 2
+    },
+    {
+      "id": "01a10dd1-fb99-7451-87bf-2d47afa4be7b",
+      "title": "Asteroidenvarianten",
+      "file": "15-Asteroidenvarianten-Desktop.md",
+      "status": "exported",
+      "messages": 20
+    },
+    {
+      "id": "01a10dac-caae-7492-bec8-24aac83ec430",
+      "title": "Story, Dialoge & Bordcomputer",
+      "file": "16-Story-und-Mira-Desktop.md",
+      "status": "exported",
+      "messages": 68
+    },
+    {
+      "id": "01a11264-4cc8-7ef3-8382-90ae4253b766",
+      "title": "Settings UI",
+      "file": "17-Settings-UI-Desktop.md",
+      "status": "exported",
+      "messages": 3
+    },
+    {
+      "id": "01a11264-5c12-7473-99be-5d5931f63656",
+      "title": "Sound und Effekte",
+      "file": "18-Sound-und-Effekte-Desktop.md",
+      "status": "exported",
+      "messages": 2
+    },
+    {
+      "id": "01a11264-6c41-7131-9f43-3de64ff13f86",
+      "title": "TechTree",
+      "file": "19-TechTree-Desktop.md",
+      "status": "exported",
+      "messages": 2
+    },
+    {
+      "id": "01a11264-7f0e-7dc2-abf0-aa313f838f8c",
+      "title": "Vehicels",
+      "file": "20-Vehicels-Desktop.md",
+      "status": "exported",
+      "messages": 39
+    },
+    {
+      "id": "01a112cc-1896-7182-8dae-4f9802fab337",
+      "title": "Ideenbacklog prüfen",
+      "file": "21-Ideenbacklog-Desktop.md",
+      "status": "exported",
+      "messages": 17
+    }
+  ]
+}

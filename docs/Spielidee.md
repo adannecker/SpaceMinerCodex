@@ -32,6 +32,7 @@ Der Technologiebaum soll möglichst realitätsnah sein. Für die spätere Ausarb
 - Sensoren geben Informationen mit begrenzter Reichweite und Sicherheit; Materialgewinnung und Verarbeitung sind eigene Schritte.
 - Lebensunterhalt und Produktion verbrauchen Ressourcen. Rückgewinnung hat Verluste.
 - Spielvereinfachungen und spekulative Technologien werden ausdrücklich dokumentiert.
+- Beschlossene Ausbaurichtung vom 06.10.2026: Für die erste Abbauauslegung dient ungefähr 1:2 zwischen aktiver Werkzeugzeit und Nachladezeit ihrer verbrauchten Energie als Startziel, zuzüglich Flugverbrauch und Ladeverlusten. Akku und Ladestation sollen in späteren Tiers deutlich verbessert werden können. Kapazität, zulässige Lade-/Entladeleistung und Ladegerät sind getrennte Eigenschaften; konkrete Tiernummern, Technik und Faktoren bleiben offen. Details in [Bergbaudrohnen](Bergbaudrohnen.md) und [Techtree](Techtree.md); bisherige Spielwerte noch unverändert.
 - Größenverhältnisse bleiben nachvollziehbar. Für größere Räume werden wir später prüfen, ob ein verschiebbarer Weltursprung oder getrennte Simulations-/Darstellungskoordinaten nötig sind.
 
 ## Meilenstein 01 — jetzt
@@ -55,3 +56,19 @@ Die Grafik bleibt aus austauschbaren Platzhaltern aufgebaut. Konzepte für Geste
 ## Raumstation: erster visueller Prototyp (06.10.2026)
 
 Die Basis ist nach Nutzerentscheidung eine modulare Raumstation. Ein geschirmter Reaktor sitzt im Zentrum, daneben ein Wasser-/Eisbehälter. Vier Verbindungsgänge führen zum umlaufenden Zugangsring; sechs verschlossene Anschlüsse ermöglichen später weitere Module. Zwei beschädigte Solarflügel zeigen fehlende Zellen und leicht schiefe Halterungen. Die erste Spielgrafik verwendet einfache Grundkörper, etwa 60 m Gesamtbreite. Antrieb, Verteidigung, Modulbau und Reparaturen sind spätere Systeme; der Ring rotiert derzeit nicht. Frühere Schiffbezeichnungen in historischen Texten und Mira-Testsprachdateien werden später abgeglichen.
+
+## Drohnendock und sichtbare Ladung (06.10.2026)
+
+Am Dock stehen auf Nutzerauftrag zwei Reihen mit je vier Ladeplätzen. Die Drohnen parken rückwärts teilweise in den Buchten. Für die zehn bisher vorhandenen Drohnen ergänzt der Prototyp zwei Wartungsplätze. Zum Entladen koppelt die Drohne direkt am Wassertank an; Eis wird durch eine kurze geschlossene Übergabe statt durch freien Wurf entladen. Die Klammern sollen oberflächennah bleiben, die Eisstücke kräftiger und kantiger aussehen. Eine bewegliche Ladeklappe und ein einsehbarer Frachtraum zeigen den Füllstand. Diese Darstellung verändert die zentrale Ressourcenbilanz nicht.
+
+## Geplante Ausbaustufen aus dem Ideenbacklog
+
+Steam-Integration ist als spätere Ausbaustufe vorgesehen. Funktionsumfang, technische Anbindung und Zeitpunkt sind offen; Einzelheiten im [Ideenbacklog](Ideenbacklog.md#steam-integration).
+
+Die Sonne soll sichtbar sein. Ergänzend könnten weitere sichtbare Planeten die Sonne umkreisen; Anzahl, Umlaufdarstellung und Einfluss auf die Spielsimulation sind offen. Daraus ergibt sich noch keine geplante Reise zu diesen Planeten.
+
+Entwurfsrichtung vom 06.10.2026: Batteriewechselstation sowie Reparatur-, Erkundungs-/Scan- und Schrottsammeldrohnen. Rollenwechsel und erforschte Ausstattungsverbesserungen wie größere Frachträume benötigen Umbauaufträge. Neue technische Drohnengenerationen entstehen ausschließlich durch Wiederverwertung und Neubau; das Verhältnis zur separat geplanten Abbau-Erfahrung bleibt offen.
+
+Eine Kartenübersicht soll Asteroiden nach Eigenschaften markieren und Befehle an ausgewählten Objekten erlauben. Nach Erforschung der Stationsbewegung gehören dazu das Navigieren auf die sonnenabgewandte Seite eines Asteroiden und das Verlassen seines Schattens. Sichtbare Sonne und ausrichtbare Solarpanels ergänzen die Energieversorgung. Solarstürme, Schutz hinter Asteroiden beziehungsweise spätere Schutzschilde sowie eindringende Körper mit Kollisionen und beweglichen Fragmenten sind weitere Ereignisideen. Spätere Scanner sollen Bahnen und Einschläge in einer Kartensimulation vorhersagen und sichere Positionen berechnen. Details und offene Spielregeln stehen im [Ideenbacklog](Ideenbacklog.md); noch keine Implementierung oder feste Priorisierung.
+
+Weitere Storyidee vom 06.10.2026: Ein ferner, explodierter und in große Teile gespaltener Planet ist sichtbar, wegen einer Strahlungszone zunächst aber unzugänglich. Das Intro erzählt das Unglück als kurze Cinematic aus stilisierten Bildern mit Mira als Erzählerin. Zusammenhang zwischen Planetenzerstörung und Stationsunglück, Strahlungsursache und spätere Zugangsvoraussetzungen bleiben offen. Die Inszenierung ist noch nicht umgesetzt; Details im [Ideenbacklog](Ideenbacklog.md#zerstörter-planet-und-intro) und unter [Story und Dialoge](Dialoge/README.md#geplante-erweiterung-des-intros).
