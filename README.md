@@ -1,18 +1,20 @@
 # Space Miner — Wasserprototyp
 
-Ein 3D-Aufbau-/Survival-Spiel in einem Asteroidengürtel. Die erste Spielschleife schickt eine Drohne zu einer Eisquelle und lässt sie den Schiffstank befüllen.
+Ein 3D-Aufbau-/Survival-Spiel in einem Asteroidengürtel mit beschädigter modularer Raumstation. Die erste Spielschleife schickt eine Drohne zu einer Eisquelle und lässt sie den Stationstank befüllen.
+
+Für den aktuellen Rechnerwechsel und den Kontext aller bekannten Themenchats: [Projektübergabe](docs/Projektuebergabe.md), [Projektmemory](docs/Projektmemory.md) und [Chatverzeichnis](docs/Chats/README.md). Die neueren Archive ergänzen die drei ursprünglichen Chatverläufe; neue lokale Chats können damit auf einem anderen Rechner fortsetzen.
 
 ## Entwicklungsumgebung
 
-- Unity **6000.3.2f1**, auf diesem Rechner bereits installiert.
+- Unity **6000.4.7f1**, auf diesem Rechner bereits installiert.
 - Windows 64 Bit, Built-in Render Pipeline, C#.
 - Visual Studio Community 2022 ist auf diesem Rechner installiert. Das Unity-Paket für die Visual-Studio-Anbindung ist im Projekt eingetragen; Unity lädt es beim ersten Import. Keine kostenpflichtigen Assets nötig.
-- **1 Unity-Einheit = 1 Meter.** Der aktuelle Test erzeugt beim Spielstart 10.000 Asteroiden in einer Spirale um das Schiff, mit 100 m bis 5 km Durchmesser. Eine Bibliothek aus 100 individuellen Formen wird mit verschiedenen Größen und Drehungen wiederverwendet. Dazu kommen ein 24 m langes Platzhalterschiff und zehn 2 × 2 × 2 m große Drohnen. Drohne 01 ist versorgt und einsatzbereit. Drohne 02 funktioniert, wartet aber ohne Ladung und Treibstoff; acht weitere sind defekt.
+- **1 Unity-Einheit = 1 Meter.** Der aktuelle Test zeigt 100 Asteroiden als räumliche Wolke rund um das Schiff, mit 100 m bis 5 km Durchmesser. Eine Bibliothek aus 100 individuellen Formen wird mit verschiedenen Größen und Drehungen wiederverwendet. Dazu kommen ein 24 m langes Platzhalterschiff und zehn 2 × 2 × 2 m große Drohnen. Drohne 01 ist versorgt und einsatzbereit. Drohne 02 funktioniert, wartet aber ohne Ladung und Treibstoff; acht weitere sind defekt.
 
 ## Starten
 
 1. Unity Hub öffnen → **Projects → Add → Add project from disk** → diesen Ordner auswählen.
-2. Mit Unity **6000.3.2f1** öffnen und den ersten Import abwarten. Die Prototypszene wird beim ersten Öffnen automatisch erstellt.
+2. Mit Unity **6000.4.7f1** öffnen und den ersten Import abwarten. Die Prototypszene wird beim ersten Öffnen automatisch erstellt.
 3. Szene `Assets/SpaceMiner/Scenes/AsteroidBelt.unity` öffnen. Falls sie noch nicht vorhanden ist: Menü **Space Miner → Prototyp einrichten**.
 4. Oben auf **Play** klicken, dann in die **Game**-Ansicht klicken, damit sie Tastatureingaben erhält.
 
@@ -75,7 +77,7 @@ PowerShell aus dem Projektordner:
 
 Batch-Builds bei geschlossenem Unity-Editor ausführen. Das Skript `Check` prüft im Windows-Spiel Introstart, Sprachdateien, Überspringen und automatischen Übergang, die Kamera sowie den vollständigen Tankauftrag, Wasserbilanz, Versorgung, erschöpfte Quellen und Auftragsabbruch. Screenshots und Ergebnis liegen in `Logs/`. Für die Bildkontrolle `Check -Visible` verwenden: Ein verborgenes Spielfenster kann schwarze Screenshots liefern. `Play` öffnet die normale, sichtbare Spielversion.
 
-Das **100-Asteroiden-Testfeld** verwendet drei Materialfamilien (eisreich, felsig, metallreich), individuelle Form-Seeds und vier Detailstufen pro Körper. `HundredBuild` ergänzt das ursprüngliche Feld reproduzierbar auf 100 Körper, deaktiviert die Spirale und baut das Spiel. Die ersten zwölf Körper bleiben erhalten; die weiteren 88 verteilen sich über ungefähr 30 × 8 × 18 km, mit mindestens 400 m Abstand zwischen ihren begrenzenden Kugeln. Bereits bearbeitete Szenenobjekte werden beim erneuten Bauen beibehalten. Neue Quellen bleiben ungescannt. **B** berechnet die Feldansicht automatisch für die aktuelle Ausdehnung und das Fensterformat; **R** kehrt zum Schiff zurück. Oben in der Mitte stehen Objektzahl und aktuelle Bildrate.
+Das **100-Asteroiden-Testfeld** verwendet drei Materialfamilien (eisreich, felsig, metallreich), individuelle Form-Seeds und vier Detailstufen pro Körper. `HundredBuild` ergänzt das ursprüngliche Feld reproduzierbar auf 100 Körper, deaktiviert die Spirale und baut das Spiel. Die drei nahen Eisquellen bleiben erhalten; die weiteren 97 Körper verteilen sich in einer kugelförmigen Wolke in allen acht Raumoktanten bis 18 km Entfernung vom Schiff, mit mindestens 400 m Abstand zwischen ihren begrenzenden Kugeln. HundredBuild ordnet die Körper reproduzierbar neu an; normale Builds behalten die Positionen bei. Neue Quellen bleiben ungescannt. **B** berechnet die Feldansicht automatisch für die aktuelle Ausdehnung und das Fensterformat; **R** kehrt zum Schiff zurück. Oben in der Mitte stehen Objektzahl und aktuelle Bildrate.
 
 Der **10.000-Asteroiden-Spiraltest** wird mit `SpiralBuild` oder **Space Miner → Spirale mit 10000 Asteroiden bauen** aktiviert. In der Szene sind weiterhin nur die 100 Vorlagen gespeichert. `SpiralBelt` platziert sie zur Laufzeit neu und ergänzt 9.900 auswählbare Körper mit Ressourcenstatus und passenden Mesh-Collidern. Ihre Darstellung nutzt gemeinsame Meshes und Materialien, GPU-Instancing, Kamera-Culling und vier automatische Detailstufen. Die Körper liegen auf einer Archimedes-Spirale in der X/Z-Ebene mit kleinen Höhenabweichungen und mindestens 200 m Abstand zwischen ihren begrenzenden Kugeln. Der Außenradius beträgt ungefähr 186 km, das Band hat knapp zehn Windungen. Die ersten drei Eisquellen bilden einen nahen Startabschnitt innerhalb der bisherigen Drohnenreichweite. **B** zeigt die Spirale schräg von oben; Drehen, Zoomen, Anklicken und **F** funktionieren auch am äußeren Arm. Die Anordnung ist eine Testgeometrie und keine Simulation natürlicher Umlaufbahnen. Ein normales `Build` behält den gewählten Feldmodus bei.
 
@@ -102,3 +104,33 @@ Die langfristige Spielidee und fachlichen Leitlinien stehen in [docs/Spielidee.m
 
 Die Anleitung für GitHub und die Fortsetzung auf einem anderen Rechner steht in [docs/Projektuebergabe.md](docs/Projektuebergabe.md). Die drei Projektchats werden als lesbare Textarchive unter [docs/Chats](docs/Chats/README.md) gesichert. Auf dem ursprünglichen Rechner lassen sie sich mit `.\tools\ExportProjectChats.ps1` aktualisieren. Die Archive dienen als Kontext für neue Chats; sie sind kein Codex-Sitzungsimport.
 
+
+## Million-Asteroiden-Spiralwolke (06.10.2026)
+
+`./tools/Unity.ps1 MillionBuild` aktiviert den Laptop-Stresstest mit exakt 1.000.000 Körpern. Fünf gewundene Arme bilden eine räumliche Wolke mit etwa 600 km Außenradius und bis zu 160 km Dicke. Die 100 Startvorlagen und die nahen Eisquellen bleiben erhalten. `SpiralBuild` stellt den bisherigen 10.000-Körper-Test wieder her; `HundredBuild` den 100-Körper-Test. Normales `Build` behält den aktiven Modus bei. Der Kamera-Zoom reicht jetzt bis 5.000 km.
+
+Die zusätzlichen 999.900 Körper haben gespeicherte Positionen und Durchmesser. In der Ferne werden sie als farbige Punkte in 63 Mesh-Gruppen dargestellt. Innerhalb von 60 km um die Kamera werden Körper mit mindestens drei Pixeln projizierter Größe aus den vorhandenen 100 Formen als instanzierte 3D-Meshes dargestellt. Ausgewählte Körper bekommen bei Bedarf eine stabile Identität, Ressourcenanzeige und einen Collider. Die Auswahl nutzt ergänzend Bildschirmkoordinaten; die Collider-Treffergenauigkeit in großen Weltkoordinaten ist nicht bestätigt.
+
+Dies ist ein Darstellungs- und Bedienungstest, keine Simulation einer Million aktiver Förderstellen oder beweglicher Physikkörper. Für die zufällige Wolke sind Mindestabstände und Kollisionsfreiheit nicht garantiert; der frühere 200-m-Abstandstest gilt nur für den 10.000-Körper-Modus. Die 100 Startkörper liegen im bisherigen nahen Spiralabschnitt. Die neue Wolke beginnt etwa 30 km entfernt. Neue Körper sind ungescannt. Beim Anklicken wird einmalig über die kompakten Daten gesucht; sehr große Entfernungen und viele Auswahlen benötigen bei späterem Ausbau weitere Optimierungen.
+
+`Check -Visible` prüft im Millionenmodus Anzahl und gültige Positionen sämtlicher gespeicherter Körper, räumliche Dicke, Übersicht, Auswahl/Fokus, lokale 3D-Darstellung, Intro und Wasserauftrag. `Logs/asteroid-1000000-performance.json` enthält GPU, Auflösung, VSync, vier kurze Ansichtsproben, Generierungszeit und Speicherwerte. Punkt-Übermittlungen sind getrennt von lokalen 3D-Meshes ausgewiesen. Übermittelte Punkte sind keine gemessene Zahl tatsächlich sichtbarer Pixel. Die Messung verwendet pausierte Simulation und VSync; sie misst keine unbeschränkte maximale Bildrate.
+
+## Settings / Configuration
+
+Neu: Rechts oben liegen zwei reine Symbolknöpfe. Das Zahnrad öffnet Settings, das Verzweigungs-Symbol links daneben den Tier-I-Techtree. Hover zeigt Informationen, Klick heftet sie an; Escape oder × schliesst den Baum. Darstellung und Voraussetzungen sind ein Entwurf, Forschungskosten und Knowledge-Progression sind noch nicht angebunden. Bedienung, Architektur und Prüfschritte: [Techtree](docs/Techtree.md).
+
+Der dezente Settings-Knopf rechts oben öffnet die persönlichen Einstellungen auch bei verborgenem HUD. Im Editor und in Development Builds funktioniert zusätzlich **F10**. **Escape / Cancel** verwirft den Entwurf; **Defaults** lädt Standardwerte in den Entwurf, **Apply Changes** speichert und aktiviert sie. Settings bleiben über Spielstarts hinweg erhalten. Die Simulation pausiert im Menü standardmäßig; das lässt sich unter Gameplay abschalten. Das Intro pausiert währenddessen samt Stimme.
+
+Sechs Kategorien: Gameplay, Graphics, Audio, Controls, Interface, Accessibility. Developer / Debug enthält separate Live-Testwerte für Simulationsgeschwindigkeit und Abbaurate, ohne Player-Speicherung. Developer-Seite und F10 werden aus Release-Builds ausgeschlossen. Vorhandenes Build erzeugt weiterhin Development. `SpaceMiner.Editor.SettingsValidation.BuildChecks` baut ohne Szenenneugenerierung geprüfte Development-/Release-Versionen unter `Builds/SettingsDevelopment` und `Builds/SettingsRelease`; `SettingsValidation.Run` prüft Daten und Dateispeicherung. Details und Erweiterung: [docs/Settings.md](docs/Settings.md).
+
+Erweiterung der Settings: Wiederverwendbare IMGUI-Komponenten und Farben in SpaceMinerUi, transaktionaler Entwurf in SettingsSession und zentrale Anwendung in SettingsRuntime. Grafik enthält jetzt Auflösung und Fenster/Randlos/Vollbild; Controls enthält Kamerageschwindigkeit; Accessibility enthält Mira-Untertitel. Details und noch fehlende Spielsysteme stehen in docs/Settings.md.
+
+Die Settings-Speicherung besitzt jetzt eine austauschbare Anbindung über IPlayerSettingsStorage/PlayerSettingsService. Standard bleibt lokale JSON-Speicherung: Apply sichert die Werte, beim Spielstart werden sie geladen. Adapterwechsel erfordert keine Menüänderung. Für Spielstände und einen späteren Server bleiben eigene Zustandsdaten, Simulationsanbindung und gegebenenfalls asynchrone Netzwerkaufrufe erforderlich; Details in docs/Settings.md.
+
+## Einfache Raumstation
+
+Die Versorgungsbasis ist nun eine einfache modulare Raumstation: Reaktor im Zentrum, umlaufender Zugangsring mit sechs Modulanschlüssen, Wasser-/Eistank und zwei beschädigte Solarflügel. StationVisual erzeugt die Grafik aus Grundkörpern beim Start; der bestehende Wasserauftrag bleibt erhalten. Unity-Menü Space Miner → Einfache Raumstation einsetzen und bauen setzt das Component in die bestehende Szene und baut, ohne Asteroiden neu zu erzeugen. Antrieb, Verteidigung und Modulbau sind noch nicht umgesetzt. Ältere Intro-Sprachdateien verwenden teilweise noch Schiffbezeichnungen.
+
+## Bergbaudrohnen
+
+Alle zehn Drohnen verwenden einen einfachen 2 m breiten Bergbaukörper mit Frachtbehälter, Antriebsdüsen, Greifarm und Bohrer. MiningDroneVisual erzeugt die Grafik aus Grundkörpern. Der vollständige sichtbare Ablauf umfasst Andockklammer, ausfahrenden/vibrierenden Bohrer am Collider-Kontakt, Eiskristallspray, eingesammelte Brocken durch die Frachtluke, Abdocken und Wenden sowie Entladen am oberen Tankanschluss. Ressourcenverbrauch und Förderrate kommen weiterhin aus DroneAgent. Einzelheiten, Zeiten und Grenzen: [Bergbaudrohnen](docs/Bergbaudrohnen.md). Tab fokussiert Drohne 01; rechte Maustaste dreht die Ansicht auf die Werkzeuge.

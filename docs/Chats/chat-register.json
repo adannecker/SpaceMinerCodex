@@ -1,0 +1,14 @@
+{
+  "snapshot_date": "2026-10-06",
+  "threads": [
+    {"id":"01a11002-9eca-70a1-95ec-00cbc84132ee","title":"GitHub","file":"04-GitHub.md","topic":"Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung"},
+    {"id":"01a11007-2934-7520-96c3-3991e89ccaf8","title":"MainDev","file":"05-MainDev.md","topic":"Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus"},
+    {"id":"01a11007-53fc-7d60-af57-f15ed3399d0d","title":"Asteroidenvarianten","file":"06-Asteroidenvarianten.md","topic":"Asteroidenformen, Materialien und Generator"},
+    {"id":"01a11007-910e-7ff0-a749-82c7af51fde7","title":"Story, Dialoge & Bordcomputer","file":"07-Story-und-Mira.md","topic":"Mira, Intro und Sprechertexte; Abgleich der Drohnenzahl offen"},
+    {"id":"01a110c0-50f2-7fa3-8a18-6905e864e5d9","title":"Settings UI","file":"08-Settings-UI.md","topic":"Mining-Pulse-Stil, Player-Settings, modulare UI und Audiokanäle"},
+    {"id":"01a110fe-dd07-7f93-9a3d-922c469eccf6","title":"Sound und Effekte","file":"09-Sound-und-Effekte.md","topic":"Configuration- und Gameplay-Musik, Loop-Dateien und Audioübergänge"},
+    {"id":"01a110fc-1a02-7ad0-8b6e-48129d0b7453","title":"TechTree","file":"10-TechTree.md","topic":"Tier-I-Entwurf und integriertes Techtree-Menü; Forschungsmechanik offen"},
+    {"id":"01a11127-1368-7990-b23f-38b3524b44ca","title":"Vehicels","file":"11-Vehicels.md","topic":"Separater Themenchat für Fahrzeuge; bisher überwiegend übernommener Kontext"},
+    {"id":"01a110eb-3487-7061-8a24-86afe58bdc1f","title":"SpaceMinerCodex – lokaler Arbeitschat","file":"12-Lokaler-Arbeitschat.md","topic":"Früher angelegt; derzeit nicht in aktiver Chatliste oder lokalem Sitzungsbestand bestätigt"}
+  ]
+}

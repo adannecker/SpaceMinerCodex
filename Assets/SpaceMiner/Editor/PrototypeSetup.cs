@@ -160,11 +160,37 @@ namespace SpaceMiner.Editor
                     PositionMeters = position, DiameterMeters = diameter, Type = catalog.Choose(seed), Seed = seed });
             }
             settings.Catalog = catalog;
+            // Keep the three reachable water sources. Distribute every other body
+            // throughout a spherical volume around the ship, rather than ahead of it.
+            var cloudRandom = new System.Random(10062026);
+            for (int i = 3; i < field.Count; i++)
+            {
+                var body = field[i];
+                bool placed = false;
+                for (int attempt = 0; attempt < 10000; attempt++)
+                {
+                    var p = new Vector3((float)cloudRandom.NextDouble() * 2f - 1f,
+                        (float)cloudRandom.NextDouble() * 2f - 1f, (float)cloudRandom.NextDouble() * 2f - 1f) * 18000f;
+                    if (p.magnitude > 18000f || p.magnitude < 4000f + body.DiameterMeters * 0.5f) continue;
+                    placed = true;
+                    for (int j = 0; j < i; j++)
+                        if (Vector3.Distance(p, field[j].PositionMeters) < (body.DiameterMeters + field[j].DiameterMeters) * 0.5f + 400f)
+                        { placed = false; break; }
+                    if (!placed) continue;
+                    body.PositionMeters = p;
+                    field[i] = body;
+                    break;
+                }
+                if (!placed) throw new InvalidOperationException("Kein freier Wolkenplatz für Asteroid " + (i + 1));
+            }
             settings.Asteroids = field.ToArray();
             EditorUtility.SetDirty(settings);
             AssetDatabase.SaveAssets();
             Setup();
             ConfigureSpiral(0);
+            var cloudRoot = GameObject.Find("Asteroids (1 unit = 1 metre)").transform;
+            for (int i = 0; i < field.Count; i++) cloudRoot.GetChild(i).position = field[i].PositionMeters;
+            EditorSceneManager.SaveScene(SceneManager.GetActiveScene());
             BuildPreparedScene();
         }
 
@@ -176,6 +202,13 @@ namespace SpaceMiner.Editor
             BuildPreparedScene();
         }
 
+        [MenuItem("Space Miner/Spiralwolke mit einer Million Asteroiden bauen")]
+        public static void BuildMillionAsteroids()
+        {
+            Setup();
+            ConfigureSpiral(1000000);
+            BuildPreparedScene();
+        }
         private static void ConfigureSpiral(int count)
         {
             var camera = GameObject.Find("Main Camera");

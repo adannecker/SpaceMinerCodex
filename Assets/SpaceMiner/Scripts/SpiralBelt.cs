@@ -40,6 +40,7 @@ namespace SpaceMiner
         private Batch[] batches;
         private readonly Plane[] planes = new Plane[6];
         private Camera view;
+        public MillionAsteroidCloud Cloud { get; private set; }
         private readonly List<Material> materials = new List<Material>();
 
         public struct Placement
@@ -111,11 +112,12 @@ namespace SpaceMiner
                         matProps = properties, receiveShadows = true, lightProbeUsage = LightProbeUsage.Off,
                         shadowCastingMode = level == 3 ? ShadowCastingMode.Off : ShadowCastingMode.On } };
             }
-            Placement[] layout = CreateLayout(AsteroidCount);
-            bodies = new Body[AsteroidCount - TemplateCount];
-            identities = new SpaceObject[AsteroidCount];
+            int physicalCount = AsteroidCount >= 100000 ? TemplateCount : AsteroidCount;
+            Placement[] layout = CreateLayout(physicalCount);
+            bodies = new Body[physicalCount - TemplateCount];
+            identities = new SpaceObject[physicalCount];
             var bounds = new Bounds(Vector3.zero, Vector3.one * 24f);
-            for (int i = 0; i < AsteroidCount; i++)
+            for (int i = 0; i < physicalCount; i++)
             {
                 Placement placement = layout[i];
                 int variant = i % TemplateCount;
@@ -146,6 +148,15 @@ namespace SpaceMiner
             FieldBounds = bounds;
             OuterRadius = new Vector2(layout[layout.Length - 1].Position.x, layout[layout.Length - 1].Position.z).magnitude;
             LastAngle = layout[layout.Length - 1].Angle;
+            if (physicalCount != AsteroidCount)
+            {
+                Cloud = gameObject.AddComponent<MillionAsteroidCloud>();
+                Cloud.Initialize(AsteroidCount, templates);
+                bounds.Encapsulate(Cloud.Bounds);
+                FieldBounds = bounds;
+                OuterRadius = MillionAsteroidCloud.Radius;
+                LastAngle = Mathf.PI * 7f;
+            }
             IsReady = true;
             Debug.Log("SPIRAL BELT READY: " + AsteroidCount + " bodies, " + OuterRadius.ToString("0") + " m outer radius");
         }
@@ -153,6 +164,7 @@ namespace SpaceMiner
         private void LateUpdate()
         {
             if (!IsReady) return;
+            if (Cloud != null) { LastVisibleCount = Cloud.Count - TemplateCount; LastDrawCalls = Cloud.PointDrawCalls; return; }
             if (view == null) view = Camera.main;
             GeometryUtility.CalculateFrustumPlanes(view, planes);
             foreach (Batch batch in batches) batch.Count = 0;
@@ -200,6 +212,7 @@ namespace SpaceMiner
         public SpaceObject PickOverview(Vector3 mouse, Camera camera)
         {
             if (!IsReady) return null;
+            if (Cloud != null) return Cloud.Pick(mouse, camera);
             SpaceObject best = null;
             float nearestSquared = 36f;
             float projection = camera.pixelHeight * 0.5f / Mathf.Tan(camera.fieldOfView * Mathf.Deg2Rad * 0.5f);

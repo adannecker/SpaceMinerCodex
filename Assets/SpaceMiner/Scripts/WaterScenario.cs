@@ -31,9 +31,9 @@ namespace SpaceMiner
 
         private void Update()
         {
-            if (IntroSequence.BlocksGameplay) return;
-            if (Input.GetKeyDown(KeyCode.Space)) SimulationRate = SimulationRate > 0f ? 0f : 100f;
-            if (Input.GetKeyDown(KeyCode.Tab) && Worker != null)
+            if (IntroSequence.BlocksGameplay || SettingsMenu.PausesSimulation) return;
+            if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Space)) SimulationRate = SimulationRate > 0f ? 0f : 100f;
+            if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Tab) && Worker != null)
                 Camera.main.GetComponent<OrbitCamera>().Focus(Worker.Info);
             Advance(Time.unscaledDeltaTime * SimulationRate);
         }
@@ -153,6 +153,9 @@ namespace SpaceMiner
                 agent.NeedsInitialCharge = i == 1 && i >= OperationalDrones;
                 agent.HomePosition = body.transform.position;
                 Drones[i] = agent;
+                var miningVisual = body.GetComponent<MiningDroneVisual>();
+                if (miningVisual == null) miningVisual = body.AddComponent<MiningDroneVisual>();
+                miningVisual.Build(agent);
                 if (!agent.IsOperational || agent.NeedsInitialCharge)
                 {
                     var properties = new MaterialPropertyBlock();

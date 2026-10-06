@@ -17,13 +17,13 @@ namespace SpaceMiner
         private readonly List<Rect> markers = new List<Rect>();
         private readonly List<AsteroidResource> knownSources = new List<AsteroidResource>();
         private static readonly Color Cyan = new Color(0.35f, 0.85f, 0.95f);
-        private float Scale => Mathf.Clamp(Mathf.Min(Screen.height / 900f, Screen.width / 1440f), 0.35f, 1.5f);
+        private float Scale => Mathf.Clamp(Mathf.Min(Screen.height / 900f, Screen.width / 1440f) * SettingsStore.Current.Interface.Scale, 0.35f, 1.5f);
         private float Width => Screen.width / Scale;
         private float Height => Screen.height / Scale;
         private Rect LeftTop => new Rect(18, 18, 310, 192);
         private Rect Quest => new Rect(18, 224, 310, 260);
         private Rect Controls => new Rect(18, Height - 154, 540, 136);
-        private Rect Inspector => new Rect(Width - 358, 18, 340, 622);
+        private Rect Inspector => new Rect(Width - 358, 64, 340, 622);
         private Rect Clock => new Rect(Width - 358, Height - 164, 340, 146);
         private Rect Notice => new Rect(346, 18, Mathf.Max(140, Width - 722), 94);
 
@@ -56,17 +56,17 @@ namespace SpaceMiner
         }
 
         private bool IsPanel(Vector2 point) => LeftTop.Contains(point) || Quest.Contains(point)
-            || Controls.Contains(point) || Inspector.Contains(point) || Clock.Contains(point) || Notice.Contains(point);
+            || (SettingsStore.Current.Gameplay.ShowControlHints && Controls.Contains(point)) || Inspector.Contains(point) || Clock.Contains(point) || Notice.Contains(point);
 
         private void OnGUI()
         {
-            if (IntroSequence.BlocksGameplay) return;
+            if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             if (scenario == null || orbit == null || !orbit.ShowHud) return;
             Styles();
             Matrix4x4 previous = GUI.matrix;
             GUI.matrix = Matrix4x4.Scale(Vector3.one * Scale);
             markers.Clear();
-            DrawWorld(scenario.GetComponent<SpaceObject>(), "SCHIFF", null);
+            DrawWorld(scenario.GetComponent<SpaceObject>(), "STATION", null);
             DrawWorld(scenario.Worker.Info, "DROHNE 01", scenario.Worker);
             foreach (AsteroidResource asteroid in knownSources)
                 if (asteroid.WaterIdentified) DrawWorld(asteroid.Info, asteroid.Info.DisplayName + " · EIS", null);
@@ -74,7 +74,7 @@ namespace SpaceMiner
             Panel(LeftTop);
             Label(34, 29, 275, 32, "SPACE MINER", title);
             Label(34, 64, 275, 22, "WASSER SICHERN", muted);
-            Label(34, 95, 275, 24, "Schiffstank   " + scenario.WaterLiters.ToString("0.0") + " / " + scenario.TankCapacityLiters.ToString("0") + " L");
+            Label(34, 95, 275, 24, "Stationstank   " + scenario.WaterLiters.ToString("0.0") + " / " + scenario.TankCapacityLiters.ToString("0") + " L");
             Bar(new Rect(34, 125, 278, 10), scenario.WaterLiters / scenario.TankCapacityLiters);
             Label(34, 146, 280, 22, "Reaktor " + scenario.ReactorPowerKw.ToString("0.0") + " kW  ·  Solar " + scenario.SolarPowerKw.ToString("0.0") + " kW", muted);
             Label(34, 172, 280, 24, "1 bereit  ·  1 wartet auf Ladung  ·  8 defekt", muted);
@@ -87,15 +87,17 @@ namespace SpaceMiner
             Label(34, 379, 278, 44, scenario.Deliveries + " Lieferungen  ·  " + scenario.DeliveredLiters.ToString("0.0") + " L gewonnen\nDrohne 01: " + scenario.Worker.Status, muted);
             if (GUI.Button(new Rect(34, 435, 278, 32), "Drohne 01 auswählen", button)) orbit.Select(scenario.Worker.Info);
 
+            if (SettingsStore.Current.Gameplay.ShowControlHints) {
             Panel(Controls);
             float cy = Controls.y;
             Label(34, cy + 12, 500, 20, "STEUERUNG  ·  Kamera " + OrbitCamera.FormatDistance(orbit.Distance), muted);
             Label(34, cy + 36, 508, 22, "Mausrad Zoom  ·  Shift + Rad Schnellzoom  ·  Rechtsziehen Drehen", muted);
-            Label(34, cy + 59, 508, 22, "Mittelziehen Verschieben  ·  WASD / Q E Bewegen  ·  Shift Schnell", muted);
-            Label(34, cy + 82, 508, 22, "R Startansicht  ·  B Feldansicht  ·  Klick + F Fokus  ·  Tab Drohne folgen", muted);
+            Label(34, cy + 59, 508, 22, "Mittelziehen Verschieben  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Forward) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Left) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Backward) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Right) + " Bewegen  ·  Shift Schnell", muted);
+            Label(34, cy + 82, 508, 22, SettingsStore.Current.Controls.Bindings.Get(CameraAction.Reset) + " Startansicht  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Overview) + " Feldansicht  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Focus) + " Fokus  ·  Tab Drohne", muted);
             Label(34, cy + 105, 508, 22, "Leertaste Pause  ·  F11 Vollbild / Fenster  ·  H Anzeige  ·  Escape Schließen", muted);
 
             Panel(Inspector);
+            }
             DrawInspector(Inspector.x + 16, Inspector.y + 16);
             Panel(Clock);
             float cx = Clock.x + 16, ty = Clock.y + 12;
@@ -116,7 +118,7 @@ namespace SpaceMiner
             Panel(Notice);
             Label(Notice.x + 12, Notice.y + 10, Notice.width - 24, 54, scenario.Message, muted);
             Label(Notice.x + 12, Notice.y + 68, Notice.width - 24, 20,
-                scenario.Asteroids.Length + " Asteroiden  ·  " + framesPerSecond.ToString("0") + " FPS", muted);
+                (GetComponent<SpiralBelt>() != null && GetComponent<SpiralBelt>().IsReady ? GetComponent<SpiralBelt>().AsteroidCount : scenario.Asteroids.Length).ToString("N0") + " Asteroiden  ·  " + framesPerSecond.ToString("0") + " FPS", muted);
             GUI.matrix = previous;
         }
 
@@ -175,7 +177,7 @@ namespace SpaceMiner
                     Label(x, y, 308, 50, "Erreichbares Vorkommen\n" + asteroid.RemainingRawKg.ToString("0.0") + " kg Eisgemisch", muted); y += 65;
                     bool oldEnabled = GUI.enabled;
                     GUI.enabled = scenario.Worker.IsReady && asteroid.CanMineWater && !scenario.QuestComplete;
-                    if (GUI.Button(new Rect(x, y, 308, 42), "Drohne 01: Schiffstank befüllen", button)) scenario.AssignTankOrder(asteroid);
+                    if (GUI.Button(new Rect(x, y, 308, 42), "Drohne 01: Stationstank befüllen", button)) scenario.AssignTankOrder(asteroid);
                     GUI.enabled = oldEnabled;
                     y += 62;
                 }
@@ -183,7 +185,7 @@ namespace SpaceMiner
             }
             else
             {
-                Label(x, y, 308, 80, "Beschädigtes Kommandoschiff. Solarflächen und Reaktor versorgen die Ladestation."); y += 95;
+                Label(x, y, 308, 80, "Beschädigte modulare Raumstation. Solarflächen und Reaktor versorgen die Ladestation."); y += 95;
             }
             if (GUI.Button(new Rect(x, y, 308, 30), drone != null ? "Fokus / Drohne folgen (F)" : "Objekt fokussieren (F)", button)) orbit.Focus(selected);
         }

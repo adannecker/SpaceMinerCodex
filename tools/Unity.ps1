@@ -1,7 +1,7 @@
 param(
-    [ValidateSet('Setup', 'Build', 'HundredBuild', 'SpiralBuild', 'Open', 'Play', 'Check', 'AsteroidCheck')]
+    [ValidateSet('Setup', 'Build', 'HundredBuild', 'SpiralBuild', 'MillionBuild', 'Open', 'Play', 'Check', 'AsteroidCheck')]
     [string]$Action = 'Open',
-    [string]$UnityPath = 'C:\Program Files\Unity\Hub\Editor\6000.3.2f1\Editor\Unity.exe',
+    [string]$UnityPath = 'C:\Program Files\Unity\Hub\Editor\6000.4.7f1\Editor\Unity.exe',
     [switch]$Visible
 )
 $ErrorActionPreference = 'Stop'
@@ -29,7 +29,7 @@ if ($Action -eq 'Open') {
     Start-Process -FilePath $UnityPath -ArgumentList $arguments -WindowStyle Hidden | Out-Null
     return
 }
-$method = if ($Action -eq 'SpiralBuild') { 'SpaceMiner.Editor.PrototypeSetup.BuildSpiralAsteroids' } elseif ($Action -eq 'HundredBuild') { 'SpaceMiner.Editor.PrototypeSetup.BuildHundredAsteroids' } elseif ($Action -eq 'Build') { 'SpaceMiner.Editor.PrototypeSetup.BuildWindows' } elseif ($Action -eq 'AsteroidCheck') { 'SpaceMiner.Editor.AsteroidValidation.Run' } else { 'SpaceMiner.Editor.PrototypeSetup.Setup' }
+$method = if ($Action -eq 'MillionBuild') { 'SpaceMiner.Editor.PrototypeSetup.BuildMillionAsteroids' } elseif ($Action -eq 'SpiralBuild') { 'SpaceMiner.Editor.PrototypeSetup.BuildSpiralAsteroids' } elseif ($Action -eq 'HundredBuild') { 'SpaceMiner.Editor.PrototypeSetup.BuildHundredAsteroids' } elseif ($Action -eq 'Build') { 'SpaceMiner.Editor.PrototypeSetup.BuildWindows' } elseif ($Action -eq 'AsteroidCheck') { 'SpaceMiner.Editor.AsteroidValidation.Run' } else { 'SpaceMiner.Editor.PrototypeSetup.Setup' }
 $arguments += @('-batchmode', '-quit', '-executeMethod', $method, '-logFile', ('"' + (Join-Path $logsPath ($Action.ToLower() + '.log')) + '"'))
 $process = Start-Process -FilePath $UnityPath -ArgumentList $arguments -PassThru -WindowStyle Hidden
 $process.WaitForExit()

@@ -6,7 +6,7 @@ namespace SpaceMiner
     public sealed class OrbitCamera : MonoBehaviour
     {
         public const float MinimumDistance = 3f;
-        public const float MaximumDistance = 1000000f;
+        public const float MaximumDistance = 5000000f;
         public Vector3 Pivot { get; private set; }
         public float Distance { get; private set; }
         public SpaceObject Selected { get; private set; }
@@ -30,15 +30,15 @@ namespace SpaceMiner
 
         private void Update()
         {
-            if (IntroSequence.BlocksGameplay)
+            if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput)
             {
                 lastMouse = Input.mousePosition;
                 return;
             }
-            if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Home)) ResetView();
-            if (Input.GetKeyDown(KeyCode.B)) Overview();
-            if (Input.GetKeyDown(KeyCode.F) && Selected != null) Focus(Selected);
-            if (Input.GetKeyDown(KeyCode.H)) ShowHud = !ShowHud;
+            if (PlayerInput.Pressed(CameraAction.Reset) || Input.GetKeyDown(KeyCode.Home)) ResetView();
+            if (PlayerInput.Pressed(CameraAction.Overview)) Overview();
+            if (PlayerInput.Pressed(CameraAction.Focus) && Selected != null) Focus(Selected);
+            if (PlayerInput.Pressed(CameraAction.ToggleHud)) ShowHud = !ShowHud;
             if (Input.GetKeyDown(KeyCode.Escape))
             {
 #if !UNITY_EDITOR
@@ -50,18 +50,18 @@ namespace SpaceMiner
             Vector3 delta = mouse - lastMouse;
             // Ignore the initial delta after clicking or re-entering the game window.
             if (Input.GetMouseButton(1) && !Input.GetMouseButtonDown(1))
-                Orbit(new Vector2(delta.x, delta.y) * 0.18f);
+                Orbit(new Vector2(delta.x, delta.y * (SettingsStore.Current.Controls.InvertY ? -1 : 1)) * (0.18f * SettingsStore.Current.Controls.Sensitivity));
             if (Input.GetMouseButton(2) && !Input.GetMouseButtonDown(2))
                 Pan(new Vector2(delta.x, delta.y));
             lastMouse = mouse;
 
             float scroll = Input.mouseScrollDelta.y;
             if (Mathf.Abs(scroll) > 0.001f)
-                Zoom(scroll, Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
+                Zoom(scroll * SettingsStore.Current.Controls.ZoomSpeed, Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
 
-            float horizontal = (Input.GetKey(KeyCode.D) ? 1f : 0f) - (Input.GetKey(KeyCode.A) ? 1f : 0f);
-            float forward = (Input.GetKey(KeyCode.W) ? 1f : 0f) - (Input.GetKey(KeyCode.S) ? 1f : 0f);
-            float vertical = (Input.GetKey(KeyCode.E) ? 1f : 0f) - (Input.GetKey(KeyCode.Q) ? 1f : 0f);
+            float horizontal = (PlayerInput.Held(CameraAction.Right) ? 1f : 0f) - (PlayerInput.Held(CameraAction.Left) ? 1f : 0f);
+            float forward = (PlayerInput.Held(CameraAction.Forward) ? 1f : 0f) - (PlayerInput.Held(CameraAction.Backward) ? 1f : 0f);
+            float vertical = (PlayerInput.Held(CameraAction.Up) ? 1f : 0f) - (PlayerInput.Held(CameraAction.Down) ? 1f : 0f);
             Move(new Vector3(horizontal, vertical, forward), Time.unscaledDeltaTime,
                 Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
 
@@ -100,6 +100,8 @@ namespace SpaceMiner
                     var info = body.GetComponent<SpaceObject>();
                     if (info != null) bounds.Encapsulate(new Bounds(body.position, Vector3.one * info.DiameterMeters));
                 }
+            var field = GetComponent<SpiralBelt>();
+            if (field != null && field.IsReady) bounds = field.FieldBounds;
             Pivot = bounds.center;
             if (view == null) view = GetComponent<Camera>();
             float halfVertical = view.fieldOfView * Mathf.Deg2Rad * 0.5f;
@@ -153,7 +155,7 @@ namespace SpaceMiner
         {
             if (localDirection.sqrMagnitude < 0.001f) return;
             followTarget = null;
-            float speed = Mathf.Max(2f, Distance * 0.35f) * (fast ? 3f : 1f);
+            float speed = Mathf.Max(2f, Distance * 0.35f) * SettingsStore.Current.Controls.CameraSpeed * (fast ? 3f : 1f);
             Pivot += transform.TransformDirection(Vector3.ClampMagnitude(localDirection, 1f)) * (speed * seconds);
             ApplyPose();
         }
@@ -173,6 +175,7 @@ namespace SpaceMiner
 
         private bool IsOverHud(Vector3 mouse)
         {
+            if (SettingsMenu.OwnsScreenPoint(mouse)) return true;
             if (!ShowHud) return false;
             var scenarioHud = GetComponent<WaterScenarioHud>();
             if (scenarioHud != null) return scenarioHud.OwnsScreenPoint(mouse);
@@ -184,7 +187,7 @@ namespace SpaceMiner
 
         private void OnGUI()
         {
-            if (IntroSequence.BlocksGameplay) return;
+            if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             if (!ShowHud || GetComponent<WaterScenarioHud>() != null) return;
             EnsureStyles();
             Matrix4x4 previous = GUI.matrix;
@@ -263,7 +266,7 @@ namespace SpaceMiner
 
         private void LateUpdate()
         {
-            if (IntroSequence.BlocksGameplay) return;
+            if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             if (followTarget != null) Pivot = followTarget.position;
             ApplyPose();
         }

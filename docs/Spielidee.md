@@ -2,7 +2,7 @@
 
 ## Ausgangslage
 
-Die Spielfigur überlebt eine Explosion und erwacht auf einem beschädigten Raumschiff im Notstrombetrieb. Zehn kleine Drohnen sind vorhanden, davon ist im ersten Szenario nur Drohne 01 funktionsfähig. Aus diesen Resten entwickelt die Spielfigur schrittweise eine überlebensfähige Infrastruktur in einem Asteroidengürtel.
+Die Spielfigur überlebt eine Explosion und erwacht auf einer beschädigten modularen Raumstation im Notstrombetrieb. Zehn kleine Drohnen sind vorhanden, davon ist im ersten Szenario nur Drohne 01 funktionsfähig. Aus diesen Resten entwickelt die Spielfigur schrittweise eine überlebensfähige Infrastruktur in einem Asteroidengürtel.
 
 Energie, Nahrung und Trinkwasser werden zentrale Bedürfnisse. Neue Sensoren erschließen zunehmend verschiedene Ressourcen. Wissensartefakte liefern benötigtes Wissen für weitere technologische Entwicklung.
 
@@ -51,3 +51,7 @@ Ein Balken über der Drohne zeigt ihren Phasenfortschritt. Die Objektanzeige zei
 Asteroiden zeigen nur bekannte Bestandteile: beispielsweise 80 % Wasser und 20 % unbekannt. Forschung soll die unbekannten Bestandteile später auflösen. Derzeit ist der Wasserscan für drei Testquellen vorgegeben; es gibt noch keine Forschungsmechanik.
 
 Die Grafik bleibt aus austauschbaren Platzhaltern aufgebaut. Konzepte für Gesteins-, Eis- und Metallasteroiden können parallel entwickelt und später als Unity-Modelle integriert werden.
+
+## Raumstation: erster visueller Prototyp (06.10.2026)
+
+Die Basis ist nach Nutzerentscheidung eine modulare Raumstation. Ein geschirmter Reaktor sitzt im Zentrum, daneben ein Wasser-/Eisbehälter. Vier Verbindungsgänge führen zum umlaufenden Zugangsring; sechs verschlossene Anschlüsse ermöglichen später weitere Module. Zwei beschädigte Solarflügel zeigen fehlende Zellen und leicht schiefe Halterungen. Die erste Spielgrafik verwendet einfache Grundkörper, etwa 60 m Gesamtbreite. Antrieb, Verteidigung, Modulbau und Reparaturen sind spätere Systeme; der Ring rotiert derzeit nicht. Frühere Schiffbezeichnungen in historischen Texten und Mira-Testsprachdateien werden später abgeglichen.
