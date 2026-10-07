@@ -153,8 +153,7 @@ namespace SpaceMiner
                 target = Vector3.zero;
             }
             transform.SetPositionAndRotation(position, Quaternion.LookRotation(target - position));
-            view.nearClipPlane = 0.05f;
-            view.farClipPlane = 1200000f;
+            OrbitCamera.ConfigureDepth(view, Vector3.Distance(position, target));
         }
 
         private void OnGUI()

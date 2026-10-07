@@ -53,6 +53,7 @@ namespace SpaceMiner
             // Aim left of the station so its silhouette occupies the open right side.
             Vector3 target = new Vector3(-35, 0, 0);
             menuCamera.transform.SetPositionAndRotation(position, Quaternion.LookRotation(target - position));
+            OrbitCamera.ConfigureDepth(menuCamera, Vector3.Distance(position, target));
             menuCamera.fieldOfView = 48;
             for (int i = 0; i < rocks.Length; i++)
             {

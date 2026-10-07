@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 namespace SpaceMiner
 {
     // Distant scenery only; danger is communicated visually, not a new damage rule.
+    [DefaultExecutionOrder(1000)] // Synchronize the sky after gameplay and menu camera movement.
     public sealed class RuinedWorld : MonoBehaviour
     {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -80,7 +81,8 @@ namespace SpaceMiner
             var sunlight=new GameObject("Sunlight",typeof(Light));sunlight.transform.SetParent(transform);sunlight.transform.rotation=Quaternion.LookRotation(-SunPosition);var light=sunlight.GetComponent<Light>();light.type=LightType.Directional;light.color=new Color(1,.86f,.67f);light.intensity=1.5f;light.shadows=LightShadows.Soft;solarLight=light;
             light.intensity=2.4f;
             var companion=new GameObject("Companion sunlight",typeof(Light));companion.transform.SetParent(transform);companionLight=companion.GetComponent<Light>();companionLight.type=LightType.Directional;companionLight.color=new Color(.78f,.87f,1);companionLight.intensity=1.1f;companionLight.shadows=LightShadows.Soft;
-            light.renderMode=LightRenderMode.ForcePixel;companionLight.renderMode=LightRenderMode.ForcePixel;light.shadowStrength=.65f;companionLight.shadowStrength=.65f;
+            ConfigureLocalSun(light, SunPosition);
+            ConfigureLocalSun(companionLight, CompanionPosition);
             foreach(var other in FindObjectsByType<Light>(FindObjectsSortMode.None))if(other!=light&&other!=companionLight&&other.type==LightType.Directional)other.enabled=false;
             RenderSettings.ambientMode=UnityEngine.Rendering.AmbientMode.Flat;RenderSettings.ambientLight=new Color(.65f,.70f,.78f);RenderSettings.ambientIntensity=1;RenderSettings.reflectionIntensity=.35f;RenderSettings.sun=light;
             var ambientProbe=new UnityEngine.Rendering.SphericalHarmonicsL2();ambientProbe.AddAmbientLight(RenderSettings.ambientLight*1.6f);RenderSettings.ambientProbe=ambientProbe;
@@ -109,21 +111,38 @@ namespace SpaceMiner
                 for(int p=0;p<180;p++){float a=p*Mathf.PI*2/180;line.SetPosition(p,SunPosition+Quaternion.Euler(inclinations[i],0,0)*new Vector3(Mathf.Cos(a)*distances[i],0,Mathf.Sin(a)*distances[i]));}
                 line.enabled=false;
             }
-            foreach(var child in GetComponentsInChildren<Renderer>())child.gameObject.layer=29;
+            foreach(var child in GetComponentsInChildren<Renderer>())
+            {
+                child.gameObject.layer=29;
+                // Celestial meshes are expressed in kilometres, not the local scene's metres.
+                // Their shaders calculate sunlight independently; local shadow maps must not include them.
+                child.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;
+                child.receiveShadows=false;
+            }
+        }
+        static void ConfigureLocalSun(Light light, Vector3 celestialPosition)
+        {
+            // A distant sun illuminates the station from a fixed world direction, independent of the observer.
+            light.transform.rotation=Quaternion.LookRotation(-celestialPosition);
+            light.cullingMask=~((1<<29)|(1<<28));
+            light.renderMode=LightRenderMode.ForcePixel;
+            light.shadowStrength=.65f;
+            light.shadowResolution=UnityEngine.Rendering.LightShadowResolution.VeryHigh;
+            light.shadowBias=.08f;
+            light.shadowNormalBias=.15f;
         }
         void LateUpdate()
         {
             if(localCamera==null||SkyCamera==null)return;
             SkyCamera.transform.SetPositionAndRotation(localCamera.transform.position/1000f,localCamera.transform.rotation);
             SkyCamera.fieldOfView=localCamera.fieldOfView;SkyCamera.aspect=localCamera.aspect;
-            SkyCamera.cullingMask=(1<<29)|(localCamera.GetComponent<OrbitCamera>().IsCelestialView?0:1<<28);
-            solarLight.transform.rotation=Quaternion.LookRotation(localCamera.transform.position/1000f-SunPosition);
-            companionLight.transform.rotation=Quaternion.LookRotation(localCamera.transform.position/1000f-CompanionPosition);
+            SkyCamera.cullingMask=(1<<29)|(localCamera.GetComponent<OrbitCamera>().IsCelestialView&&!StationInteriorMode.IsInside?0:1<<28);
             var orbit=localCamera.GetComponent<OrbitCamera>();
             foreach(var line in guides){line.enabled=orbit.Distance>500000&&!orbit.IsCelestialView;line.startWidth=line.endWidth=orbit.Distance/1000f*.0007f;}
         }
         void OnGUI()
         {
+            if(StationInteriorMode.IsInside)return;
             if(StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput || localCamera==null)return;
             var orbit=localCamera.GetComponent<OrbitCamera>();if(orbit==null||!orbit.ShowHud)return;
             planetUi.Configure(SettingsStore.Current.Accessibility);

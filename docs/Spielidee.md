@@ -14,6 +14,8 @@ Zunächst bleibt das Spiel in einem Asteroidengürtel. Reisen in andere Sternsys
 
 Die Spielfigur übernimmt zunächst die Rolle des Kommandanten aus der Außenansicht. Spätere Produktionslinien werden über eine Planungsansicht, sinngemäß einen Planungstisch, entworfen. Drohnen im Schiffsinneren führen die Transport- und Arbeitsaufträge aus. Die Logistik soll vollständig auf Drohnen beruhen; Förderbänder sind nicht vorgesehen.
 
+Ergänzung vom 07./08.10.2026 auf Nutzerwunsch: Zwischen Außenansicht und First-Person-Innenansicht der Station wechseln können. Das Wohnmodul sitzt am Ringanschluss und besitzt nur ein Frontfenster; die geschlossenen Seiten bleiben für spätere Geräte vorgesehen. Eine elektrische Schleuse mit zwei nacheinander öffnenden Schiebetüren verbindet es mit dem vollständig begehbaren Ring. Ruhige Beleuchtung, eine kleine ausgeschaltete Reparaturdrohne und ein erstes Stationspult sind eingebaut. Am Pult lassen sich der vorhandene Wasserauftrag übernehmen und Außendrohne/Tank/Simulation steuern. V und ein Bildschirmknopf wechseln die Ansicht, E bedient Pult und Schleuse. Bewegung mit WASD und Maus, Wände/Boden mit Kollision und gleichzeitiger Weiterbetrieb der Außendrohnen sind umgesetzt. Gehen mit lokaler Schwerkraft und angezeigter zeitgesteuerter Druckausgleich bleiben Prototypannahmen; Stationsrotation, Gasbilanz, Reparatur- und Innenraum-Produktionslogik sind offen. Bedienung und Prüfung stehen im README.
+
 Für den ersten Prototyp nutzen Außendrohnen elektrisch erhitztes Wasser als ausgestoßene Reaktionsmasse. Sie benötigen sowohl Strom als auch Treibwasser. Ein späterer Technologiebaum kann weitere Antriebe freischalten.
 
 ## Beschlossene Startbedingungen
@@ -41,7 +43,7 @@ Der Technologiebaum soll möglichst realitätsnah sein. Für die spätere Ausarb
 - [x] Startbare 3D-Weltraumszene mit verteilten Asteroiden; inzwischen 100 Körper im aktiven Modus.
 - [x] Kamera mit Zoom, Rotation, Verschieben, Bewegung und Wiederherstellung der Standardansicht.
 
-Ergänzende Testhilfen: einfache Schiff-/Drohnenplatzhalter für den Maßstab, Gesamtübersicht und Objektfokus. Noch keine Survival- oder Forschungsmechanik.
+Ergänzende Testhilfen: Station-/Drohnenmodelle für den Maßstab, Gesamtübersicht und Objektfokus. Survival-Systeme und Hardwareforschung sind noch offen; Wasserabbau-Erfahrung ist inzwischen umgesetzt.
 
 ## Meilenstein 02 — Wasser sichern
 
@@ -49,7 +51,7 @@ Eine Eisquelle auswählen und Drohne 01 mit dem Befüllen des Schiffstanks beauf
 
 Ein Balken über der Drohne zeigt ihren Phasenfortschritt. Die Objektanzeige zeigt Batterie, Treibwasser, Geschwindigkeit, Ladung, Zielentfernung, Ankunftszeit und verbleibende Abbauzeit. Die Aufgabenliste zeigt die Versorgung des Schiffstanks. Ein Zeitraffer macht die bei kleinem Schub langen Flug- und Ladezeiten testbar.
 
-Asteroiden zeigen nur bekannte Bestandteile: beispielsweise 80 % Wasser und 20 % unbekannt. Forschung soll die unbekannten Bestandteile später auflösen. Derzeit ist der Wasserscan für drei Testquellen vorgegeben; es gibt noch keine Forschungsmechanik.
+Asteroiden zeigen nur bekannte Bestandteile: beispielsweise 80 % Wasser und 20 % unbekannt. Forschung soll die unbekannten Bestandteile später auflösen. Derzeit ist der Wasserscan für drei Testquellen vorgegeben; Wasserabbau-Erfahrung verbessert Förderrate oder Energiebedarf, zusätzliche Scans und Forschungsfreischaltungen bleiben offen.
 
 Die Grafik bleibt aus austauschbaren Platzhaltern aufgebaut. Konzepte für Gesteins-, Eis- und Metallasteroiden können parallel entwickelt und später als Unity-Modelle integriert werden.
 
@@ -65,14 +67,14 @@ Beim Auswählen der Station sollen aktuelle und maximal mögliche Solarleistung,
 
 ## Sichtbare Heimatwelt und Sonne (07.10.2026)
 
-Auf Nutzerauftrag als Laufzeitkulisse ergänzt: sichtbare Sonne, zerbrochener Planet mit auseinandergerissenen Hälften und glühendem Kern, halb zerstörter Mond, giftig wirkender grünlicher Auswurf sowie glühender Materialstrom vom Mond zum Planeten. Diese Darstellung ist visuell; Temperatur, Gift, Schaden und das oben beschriebene Sonnenenergie-/Ausrichtungssystem sind weiterhin nicht als Mechanik implementiert. Die ersten drei Erinnerungsbilder mit Enceladus-Narration sind sofort in der Cutscene-Galerie abspielbar; siehe docs/Dialoge/IntroCinematic/README.md.
+Auf Nutzerauftrag als Laufzeitkulisse ergänzt: zwei sichtbare Sonnen, zerbrochener Planet mit auseinandergerissenen Hälften und glühendem Kern, halb zerstörter Mond, giftig wirkender grünlicher Auswurf sowie glühender Materialstrom vom Mond zum Planeten. Diese Darstellung ist visuell; Temperatur, Gift, Schaden und das oben beschriebene Sonnenenergie-/Ausrichtungssystem sind weiterhin nicht als Mechanik implementiert. Alle zwölf Erinnerungsbilder mit durchgehender Enceladus-Narration sind sofort in der Cinematic-Galerie abspielbar; siehe docs/Dialoge/IntroCinematic/README.md.
 
 ## Ideensammlung: Umsetzungsstand (07.10.2026)
 
 - [x] Wasserauftrag mit Drohnenflug, Eisabbau, Rücktransport und Tankübergabe als Prototyp.
 - [x] Modulare Raumstation und Bergbaudrohnen als erste Spielgrafik.
 - [x] Mira-Erwachen mit freigegebener Aoede-Stimme und Galerie-Wiederholung.
-- [x] Erste drei Kohlezeichnungen mit Enceladus als sofort verfügbares Cinematic; abgenutzte, gewölbte und geneigte Bildblätter, Fokusfahrten und direkte Bildüberblendungen.
+- [x] Erinnerungs-Cinematic sofort in der Galerie verfügbar; abgenutzte, gewölbte und geneigte Kohlezeichnungsblätter, Fokusfahrten und direkte Bildüberblendungen.
 - [x] Gemeinsamer Untertitel-Schalter für Cutscenes und Cinematics; Erinnerungssequenz mit satzweisen Untertiteln.
 - [x] Große zentrale Sonne und neun Planeten auf unterschiedlichen geneigten Umlaufbahnen; Planeten 3, 7 und 8 mit Ringen.
 - [x] Planet 4 als zerstörte Heimatwelt nach freigegebenem Konzept: unregelmäßige Kontinentfragmente, tiefe glühende Spalten, beschädigter Mond, giftiger Dunst und Mond-zu-Planet-Materialstrom. Vereinfachte 3D-Umsetzung; keine vollständig ausgearbeitete Oberfläche.
@@ -116,10 +118,10 @@ Am Dock stehen auf Nutzerauftrag zwei Reihen mit je vier Ladeplätzen. Die Drohn
 
 Steam-Integration ist als spätere Ausbaustufe vorgesehen. Funktionsumfang, technische Anbindung und Zeitpunkt sind offen; Einzelheiten im [Ideenbacklog](Ideenbacklog.md#steam-integration).
 
-Die Sonne soll sichtbar sein. Ergänzend könnten weitere sichtbare Planeten die Sonne umkreisen; Anzahl, Umlaufdarstellung und Einfluss auf die Spielsimulation sind offen. Daraus ergibt sich noch keine geplante Reise zu diesen Planeten.
+Zwei Sonnen und neun Planeten mit vereinfachten Umlaufbahnen sind inzwischen sichtbar. Physikalische Umlauf- und Solarertragssimulation bleiben offen. Daraus ergibt sich noch keine geplante Reise zu diesen Planeten.
 
 Entwurfsrichtung vom 06.10.2026: Batteriewechselstation sowie Reparatur-, Erkundungs-/Scan- und Schrottsammeldrohnen. Rollenwechsel und erforschte Ausstattungsverbesserungen wie größere Frachträume benötigen Umbauaufträge. Neue technische Drohnengenerationen entstehen ausschließlich durch Wiederverwertung und Neubau; das Verhältnis zur separat geplanten Abbau-Erfahrung bleibt offen.
 
 Eine Kartenübersicht soll Asteroiden nach Eigenschaften markieren und Befehle an ausgewählten Objekten erlauben. Nach Erforschung der Stationsbewegung gehören dazu das Navigieren auf die sonnenabgewandte Seite eines Asteroiden und das Verlassen seines Schattens. Sichtbare Sonne und ausrichtbare Solarpanels ergänzen die Energieversorgung. Solarstürme, Schutz hinter Asteroiden beziehungsweise spätere Schutzschilde sowie eindringende Körper mit Kollisionen und beweglichen Fragmenten sind weitere Ereignisideen. Spätere Scanner sollen Bahnen und Einschläge in einer Kartensimulation vorhersagen und sichere Positionen berechnen. Details und offene Spielregeln stehen im [Ideenbacklog](Ideenbacklog.md); noch keine Implementierung oder feste Priorisierung.
 
-Weitere Storyidee vom 06.10.2026: Ein ferner, explodierter und in große Teile gespaltener Planet ist sichtbar, wegen einer Strahlungszone zunächst aber unzugänglich. Das Intro erzählt das Unglück als kurze Cinematic aus stilisierten Bildern mit Mira als Erzählerin. Zusammenhang zwischen Planetenzerstörung und Stationsunglück, Strahlungsursache und spätere Zugangsvoraussetzungen bleiben offen. Die Inszenierung ist noch nicht umgesetzt; Details im [Ideenbacklog](Ideenbacklog.md#zerstörter-planet-und-intro) und unter [Story und Dialoge](Dialoge/README.md#geplante-erweiterung-des-intros).
+Weitere Storyidee vom 06.10.2026: Eine Strahlungszone soll die Annäherung an den zerstörten Planeten zunächst verhindern. Sichtbare Heimatwelt und die zwölfteilige Cinematic mit Enceladus-Narration sind inzwischen umgesetzt; Mira begleitet weiterhin das separate Erwachen. Strahlungsursache, Zugangsvoraussetzungen und genaue Verbindung zum Stationsunglück bleiben offen. Strahlungsschaden ist noch nicht implementiert; Details im [Ideenbacklog](Ideenbacklog.md#zerstörter-planet-und-intro) und unter [Story und Dialoge](Dialoge/README.md#geplante-erweiterung-des-intros).

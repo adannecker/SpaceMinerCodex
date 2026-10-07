@@ -190,16 +190,26 @@ namespace SpaceMiner
             if (view == null) view = GetComponent<Camera>();
             Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
             transform.SetPositionAndRotation(Pivot - rotation * Vector3.forward * Distance, rotation);
-            // Keep nearby drone detail, but extend visibility when surveying a large area.
-            view.nearClipPlane = Mathf.Clamp(Distance * 0.0002f, 0.05f, 200f);
-            view.farClipPlane = Mathf.Max(1200000f, Distance * 2f + 40000f);
-            QualitySettings.shadowDistance = Mathf.Clamp(Distance * 2.5f, 80f, 30000f);
+            ConfigureDepth(view, Distance);
+            QualitySettings.shadowDistance = Mathf.Clamp(Distance * 2.5f, 20f, 30000f);
         }
+
+        internal static void ConfigureDepth(Camera camera, float focusDistance)
+        {
+            // A centimetre-scale near plane at a distant station wastes depth precision:
+            // thin cladding and solar cells then compete for the same depth values.
+            // Still retain the close clipping needed when inspecting a two-metre drone.
+            camera.nearClipPlane = Mathf.Clamp(focusDistance * 0.01f, 0.05f, 200f);
+            camera.farClipPlane = Mathf.Max(1200000f, focusDistance * 2f + 40000f);
+        }
+
+        internal void RestoreViewPose() => ApplyPose();
 
         private static float HudScale => Mathf.Clamp(Screen.height / 900f, 0.65f, 1.5f);
 
         private bool IsOverHud(Vector3 mouse)
         {
+            if (StationInteriorMode.OwnsScreenPoint(mouse)) return true;
             var world=FindFirstObjectByType<RuinedWorld>();if(world!=null&&world.OwnsScreenPoint(mouse))return true;
             if (SettingsMenu.OwnsScreenPoint(mouse)) return true;
             if (!ShowHud) return false;

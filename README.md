@@ -44,7 +44,9 @@ Bei jedem Start beginnt **Miras Intro** mit Texteinblendungen, einer ersten deut
 | R oder Pos1 | Standardansicht beim Schiff wiederherstellen |
 | B | Übersicht über das gesamte Testfeld |
 | Linksklick, dann F | Objekt auswählen und darauf zoomen |
-| Tab | Drohne 01 fokussieren und ihr folgen |
+| Tab | Außen Drohne 01 verfolgen; innen Maus freigeben / einfangen |
+| V | Im Spiel zwischen Kommandanten-Außenansicht und Stations-Innenansicht wechseln |
+| E | Innen in der Nähe das Stationspult bedienen oder die Schleuse starten |
 | Leertaste | Simulation pausieren / mit vorherigem Tempo fortsetzen |
 | F11 oder Alt + Enter | Zwischen Fenster und Vollbild wechseln, auch während des Intros |
 | H | Informationsanzeige ein-/ausblenden |
@@ -138,6 +140,26 @@ Die Settings-Speicherung besitzt jetzt eine austauschbare Anbindung über IPlaye
 ## Einfache Raumstation
 
 Die Versorgungsbasis ist nun eine einfache modulare Raumstation: Reaktor im Zentrum, umlaufender Zugangsring mit sechs Modulanschlüssen, Wasser-/Eistank und zwei beschädigte Solarflügel. StationVisual erzeugt die Grafik aus Grundkörpern beim Start; der bestehende Wasserauftrag bleibt erhalten. Unity-Menü Space Miner → Einfache Raumstation einsetzen und bauen setzt das Component in die bestehende Szene und baut, ohne Asteroiden neu zu erzeugen. Antrieb, Verteidigung und Modulbau sind noch nicht umgesetzt. Ältere Intro-Sprachdateien verwenden teilweise noch Schiffbezeichnungen.
+
+## Beleuchtung und Flimmerprüfung (07.10.2026)
+
+Die beiden Sonnenlichter verwenden feste Weltrichtungen. Himmelsobjekte auf Layer 29 und Sterne auf Layer 28 bleiben außerhalb der lokalen Beleuchtung und Schattenberechnung; ihre eigenen Shader beleuchten sie separat. Die Himmelskamera folgt nach der Menü-/Spielkamera, anschließend folgt das Sternfeld. Angepasste Schattenauflösung und Bias-Werte sowie eine zum Fokusabstand passende Near-Clip-Grenze reduzieren Schattenflimmern und konkurrierende Tiefenwerte dünner Stationsbauteile. Dieselbe Tiefeneinstellung gilt im Startmenü, Intro und Spiel; bei Drohnen-Nahansicht bleiben mindestens 5 cm Near Clip möglich.
+
+Im Development-Player prüft `-batchmode -lightingVisualCheck` die gerenderte Beleuchtung einer unveränderten Station bei wechselnder Beobachterkamera auf zwei Qualitätsstufen, mit den echten lokalen Schattenwerfern. Eine feste Prüfkamera und gleichbleibende Schattenreichweite isolieren dabei die Beleuchtung von der Kameraperspektive. Ein separater Render-Test prüft zwei 1 cm getrennte Flächen in 140 m Abstand über 24 Positionen. Szenenbilder und Testbilder stehen relativ zum Arbeitsordner unter `Logs/Lighting`; Szenenbilder enthalten keine IMGUI-Oberfläche. Dieser Test ersetzt keine visuelle Beurteilung während freier Kamerabewegung.
+
+## First-Person-Innenansicht (08.10.2026)
+
+Im laufenden Spiel wechselt **V** oder der Knopf unten in der Mitte in das angeschlossene Wohnmodul am 330°-Ringanschluss. Der Raum hat etwa 8 × 10 m Grundfläche, 3 m Höhe, ein Frontfenster, geschlossene Seiten mit freien Geräteflächen und konstante Beleuchtung. Innen bewegen die konfigurierten WASD-Tasten den Spieler, die Maus steuert den Blick und Shift erhöht das Gehtempo. **Tab** gibt die Maus frei beziehungsweise fängt sie wieder ein. **V** führt zur vorherigen Außenansicht zurück. Der Wasserauftrag arbeitet währenddessen weiter. Beim Wechsel zum Startmenü werden Innenmodus und Mausfang aufgeräumt.
+
+Mit **E** nahe der rückwärtigen Tür startet die elektrische Schleuse: erste Tür öffnen, eintreten, erste Tür schließen, angezeigter Druckausgleich, zweite Tür öffnen und weitergehen. Der Durchgang funktioniert in beide Richtungen; die Türen öffnen nie gleichzeitig und reagieren beim Schließen auf Spielerannäherung. Der angeschlossene Ring ist vollständig begehbar. Druckausgleich ist eine zeitgesteuerte Darstellung, noch keine Atmosphäre-/Gasbilanz.
+
+Mit **E** nahe dem Pult öffnet sich die Stationssteuerung: bestätigte Eisquelle wählen, vorhandenen Wasserauftrag übernehmen, Drohne zurückrufen, Tank-/Batteriestatus lesen und Simulationsgeschwindigkeit ändern. **E / Escape** schließt das Pult; außerhalb des Pults öffnet Escape das bestehende Menü. Links steht die kleine Reparaturdrohne R-01 auf einem Ladebord; sie hat keine Arbeitslogik.
+
+`StationInteriorMode`, `StationInteriorLayout` und `StationAirlock` ergänzen Raum, Ring, Türen und CharacterController beim Laden der bestehenden Szene. Alte massive Ringsegmente werden ersetzt, Träger enden an den neuen Korridorwänden. Es wird dieselbe Kamera wie außen verwendet, jeweils mit einem aktiven Controller. Gehen mit lokaler Schwerkraft ist eine Prototypannahme; Stationsrotation und künstliche Schwerkraft bleiben Entwurfsstand. Der Innen-/Außenwechsel ist unmittelbar, V/Tab/E sind feste Modustasten. Weitere Innenraum-Produktionssysteme sind offen.
+
+Development-Prüfung: Player mit `-batchmode -stationInteriorCheck` starten. Sie prüft Boden-/Wandkollisionen, Menüpause, Kamerarückkehr, weiterarbeitende Drohne und Kamera-Nachführung während eines echten Wasserflugs. Ergebnis und gerenderte Szenenbilder: `Logs/Interior` relativ zum Arbeitsordner. Die Bilder enthalten die 3D-Szene; die laufende Mausbedienung und das verbleibende visuelle Drohnenflimmern werden zusätzlich am sichtbaren Player beurteilt.
+
+Zusätzliche Development-Prüfung: `-stationHabitatCheck` prüft Pultauftrag, inaktive Reparaturdrohne, beide Schleusenrichtungen, Türverriegelung, Wiederöffnen bei Spielerannäherung und einen vollständigen physischen Rundgang im Ring. Bericht/Bilder stehen in `Logs/Habitat`. Sichtbar ausführen, um auch den Pult-Oberflächenscreenshot zu erhalten; `-batchmode` eignet sich für Logik- und 3D-Renderprüfungen.
 
 ## Bergbaudrohnen
 

@@ -36,7 +36,7 @@ namespace SpaceMiner
         {
             if (IntroSequence.BlocksGameplay || SettingsMenu.PausesSimulation) return;
             if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Space)) TogglePause();
-            if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Tab) && Worker != null)
+            if (!SettingsMenu.BlocksInput && !StationInteriorMode.IsInside && Input.GetKeyDown(KeyCode.Tab) && Worker != null)
                 Camera.main.GetComponent<OrbitCamera>().Focus(Worker.Info);
             Advance(Time.unscaledDeltaTime * SimulationRate);
         }

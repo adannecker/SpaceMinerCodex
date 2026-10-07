@@ -27,6 +27,7 @@ namespace SpaceMiner
         }
         internal void HandleEscape()
         {
+            if (StationInteriorMode.HasConsoleOpen && !SettingsMenu.BlocksInput) { StationInteriorMode.Current.CloseConsole(); return; }
             if (IsOpen) Cancel(); else Open();
         }
         private void OnGUI()

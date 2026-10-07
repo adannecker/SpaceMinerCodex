@@ -1,6 +1,6 @@
 # Ideenbacklog prüfen
 
-Chat-ID: `01a112cc-1896-7182-8dae-4f9802fab337`. Exportstand: 2026-10-06T21:28:29.777992+00:00.
+Chat-ID: `01a112cc-1896-7182-8dae-4f9802fab337`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
 
 Entwicklungsideen, Drohnenrollen und Umbauten, Stationsnavigation, Sonne und Planeten, Gefahren, Intro-Cinematic und Steam-Ausbaustufe
 

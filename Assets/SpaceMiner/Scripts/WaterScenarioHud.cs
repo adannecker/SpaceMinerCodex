@@ -60,6 +60,7 @@ namespace SpaceMiner
 
         private void OnGUI()
         {
+            if (StationInteriorMode.IsInside) return;
             if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             if (scenario == null || orbit == null || !orbit.ShowHud) return;
             Styles();

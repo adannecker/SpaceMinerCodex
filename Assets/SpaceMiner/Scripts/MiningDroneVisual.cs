@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace SpaceMiner
 {
+    [DefaultExecutionOrder(-50)] // Finish moving presentation pieces before the following camera.
     public sealed class MiningDroneVisual : MonoBehaviour
     {
         private DroneAgent agent;
@@ -76,7 +77,8 @@ namespace SpaceMiner
                 Part(PrimitiveType.Cube,"Cargo lid side " + side,hatch,new Vector3(side*0.50f,0,0.415f),new Vector3(0.06f,0.06f,0.89f),hull);
                 Part(PrimitiveType.Cube,"Cargo lid end " + side,hatch,new Vector3(0,0,0.415f+side*0.415f),new Vector3(1.04f,0.06f,0.06f),hull);
             }
-            Part(PrimitiveType.Cube,"Rear transfer floor",body,new Vector3(0,0.37f,-0.72f),new Vector3(0.60f,0.06f,0.46f),dark);
+            // Keep the visible floor above the chassis instead of sharing its top plane at y = .40.
+            Part(PrimitiveType.Cube,"Rear transfer floor",body,new Vector3(0,0.41f,-0.72f),new Vector3(0.60f,0.06f,0.46f),dark);
             Part(PrimitiveType.Cube,"Rear transfer inspection cover",body,new Vector3(0,0.70f,-0.72f),new Vector3(0.60f,0.04f,0.46f),glass);
             for(int side=-1;side<=1;side+=2)
                 Part(PrimitiveType.Cube,"Rear transfer side " + side,body,new Vector3(side*0.29f,0.53f,-0.72f),new Vector3(0.05f,0.34f,0.46f),hull);

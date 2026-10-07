@@ -1,6 +1,6 @@
 # MainDev
 
-Chat-ID: `01a10da1-b11d-7472-b6b4-b34be7f814fd`. Exportstand: 2026-10-06T21:28:29.777992+00:00.
+Chat-ID: `01a10da1-b11d-7472-b6b4-b34be7f814fd`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
 
 Desktop-Fortsetzung: Unity-Spielsysteme, Station, Bergbaudrohnen und Integration; vorhandener Hauptchat umbenannt
 
@@ -907,3 +907,194 @@ Die neun aktuellen Projektchats sind jetzt exportiert, einschließlich „Ideenb
 ## Assistent · 2026-10-06T21:27:49.332Z
 
 Die Anleitung für den anderen Rechner ist fertig. Archive, Verweise und Asset-Dateien sind geprüft; die Spielassets stimmen vollständig mit der zuletzt gebauten Vorschau überein. GitHub enthält keine neueren Commits. Ich committe und pushe jetzt den gesamten Stand.
+
+## Assistent · 2026-10-06T21:29:06.386Z
+
+Alles ist committed und zu GitHub gepusht: **`7d8f541`** auf `main`. Der Arbeitsordner ist sauber.
+
+- Alle **neun aktuellen Chats** als lesbare Archive gesichert.
+- Acht ältere Archive bewahrt; eine bestehende Exportlücke dokumentiert.
+- Anleitung und kopierbare Startaufträge für den anderen Rechner ergänzt.
+
+Am anderen Rechner zuerst `git pull` ausführen. Danach den Sammelauftrag aus [Rechnerwechsel-Memory.md](/C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/docs/Rechnerwechsel-Memory.md) verwenden, um vorhandene Chats fortzusetzen und fehlende anzulegen.
+
+## Nutzer · 2026-10-07T20:36:29.028Z
+
+## My request:
+Ok alles pullen und auschecken und dann neu machen schau dir auch das memory an und alle Entscheidungen
+
+## Assistent · 2026-10-07T20:36:34.726Z
+
+Ich prüfe zuerst den lokalen Stand und hole die Änderungen von GitHub. Danach lese ich das aktualisierte Memory und die Entscheidungen, baue die aktuelle Spielversion neu und starte sie.
+
+## Assistent · 2026-10-07T20:38:02.061Z
+
+Der GitHub-Abruf läuft noch. Der lokale Stand ist sauber. Unity 6000.4.7f1 fehlt hier weiterhin; falls die neue Projektversion unverändert bleibt, baue ich wie zuvor in einer separaten Kopie mit dem installierten Unity 6000.6.4f1.
+
+## Assistent · 2026-10-07T20:39:14.649Z
+
+Auf GitHub liegt ein neuer Stand (`158b929`). Die Verbindung funktioniert, aber der erste Download liefert noch keinen Fortschritt. Ich starte den Abruf mit Fortschrittsanzeige und Zeitlimit neu, damit ein Verbindungsabbruch sichtbar wird.
+
+## Assistent · 2026-10-07T20:41:46.680Z
+
+Der neue Abruf läuft: rund zwei Drittel der Git-Objekte und über 140 MB sind angekommen. Danach prüfe ich die neuen Entscheidungen und den Code, bevor ich den Build starte.
+
+## Assistent · 2026-10-07T20:43:27.779Z
+
+Der neue Stand ist übernommen. Enthalten sind das Startmenü, eine zwölfteilige Kohlezeichnungs-Cinematic mit Enceladus-Narration, Aoede für Miras Erwachen sowie zwei Sonnen und neun benannte Planeten. Die jüngste Entscheidung ersetzt die astronomischen Entfernungen durch komprimierte Spielabstände. Ich baue diesen Stand neu und prüfe die wichtigsten Abläufe.
+
+## Assistent · 2026-10-07T20:46:39.893Z
+
+Der Neubau ist erfolgreich. Jetzt prüfe ich Wassertransport und Docking, Forschung, Start- und Beenden-Menü, Planetenauswahl und die vollständige Cinematic. Danach öffne ich dir die normale Spielversion.
+
+## Assistent · 2026-10-07T20:48:28.165Z
+
+821 Spielprüfungen und 194 Abbau-/Forschungsprüfungen sind bestanden. Startmenü, Beenden-Rückkehr, Techtree und die Auswahl aller neun Planeten funktionieren ebenfalls. Die Cinematic läuft noch durch ihren vollständigen Test. Im Memory korrigiere ich außerdem veraltete Zusammenfassungen zur früheren Maya-Stimme.
+
+## Assistent · 2026-10-07T20:50:29.486Z
+
+Auch die vollständige Cinematic-Prüfung ist bestanden. Ich übernehme jetzt den geprüften Build und starte ihn. Offen bleibt der bekannte Widerspruch: Die Spielidee sieht nur Drohne 01 als funktionsfähig vor, der Code führt Drohne 02 noch als funktionsfähig, aber unversorgt.
+
+## Nutzer · 2026-10-07T20:52:05.026Z
+
+## My request:
+Die Raumstation und auch das licht flakert sehr unnatürilch
+
+## Assistent · 2026-10-07T20:52:09.028Z
+
+Der aktuelle Stand ist neu gebaut und gestartet. Ich untersuche jetzt das Flackern der Station und Beleuchtung, besonders Schatten, Kameradarstellung und mögliche überlagerte Flächen.
+
+## Nutzer · 2026-10-07T20:55:06.683Z
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_bac59d437b2546f082b5afba1022ce81\",0]","question":"Flackert die Station bereits im Startmenü, während des Spiels oder in beiden Ansichten?","answer":"In beiden Ansichten"}]
+</send_user_message_question_reply>
+
+## Assistent · 2026-10-07T20:55:31.666Z
+
+Danke, dann betrifft es die gemeinsame Darstellung. Im Code hängen die Sonnenlichter derzeit an der Kameraposition, und die Himmelskörper teilen sich die Beleuchtung mit der Station trotz unterschiedlicher Maßstäbe. Ich trenne diese Bereiche und prüfe zusätzlich die Schatten und überlappende Stationsflächen.
+
+## Assistent · 2026-10-07T20:58:56.645Z
+
+Die erste Korrektur ist eingebaut: Beide Sonnen beleuchten die Station nun aus festen Richtungen, und die Himmelskörper bleiben außerhalb ihrer Schattenberechnung. Außerdem habe ich die Reihenfolge der Kameraaktualisierung korrigiert. Der neue Build läuft; anschließend vergleiche ich die gerenderte Stationsbeleuchtung bei verschiedenen Kameraansichten.
+
+## Assistent · 2026-10-07T21:01:25.002Z
+
+Der Beleuchtungsvergleich ist stabil, und die Spieltests bestehen. Zusätzlich war die Tiefendarstellung sehr knapp eingestellt: Die Kamera konnte selbst aus rund 140 Metern noch Flächen ab fünf Zentimetern Entfernung darstellen. Das begünstigt Flimmern zwischen dünnen Bauteilen. Ich passe diese Grenze an den Kameraabstand an und prüfe dabei auch die Drohnen-Nahansicht.
+
+## Assistent · 2026-10-07T21:05:32.423Z
+
+Die Kameraänderung besteht auch den Nahansicht-Test. Zusätzlich bleiben zwei nur einen Zentimeter voneinander entfernte Testflächen in 24 Kamerapositionen sauber getrennt. Beleuchtung, Startmenü, Sonnensystem und alle 821 Spielprüfungen bestehen. Ich übernehme jetzt den neuen Build und starte ihn für deine Sichtkontrolle.
+
+## Assistent · 2026-10-07T21:07:35.072Z
+
+Ich habe Beleuchtung, Schatten und die Tiefendarstellung dünner Stationsbauteile korrigiert. Die neue Version läuft bereits.
+
+Die Beleuchtungsprüfung und alle **821 Spieltests** bestehen. Schau bitte im Startmenü und beim Drehen um die Station, ob das Flackern jetzt verschwunden ist.
+
+## Nutzer · 2026-10-07T21:07:46.898Z
+
+## My request:
+JA sieht super aus
+
+## Assistent · 2026-10-07T21:07:54.433Z
+
+Dann halte ich im Projektmemory fest, dass du die Darstellung nach der Korrektur geprüft und bestätigt hast.
+
+## Assistent · 2026-10-07T21:08:35.280Z
+
+Prima! Deine Bestätigung ist im Projektmemory und in der Übergabe gespeichert. Die Korrektur liegt lokal vor; sie ist noch nicht committed oder auf GitHub gepusht.
+
+## Nutzer · 2026-10-07T21:22:32.480Z
+
+## My request:
+Wenn dir Drohne fliegt flackert es auch ganz schön.... Eine Frage könnte ich in first person sicht in die Station reingehen? Könnte man das machen einfach ma ohne irgendetwas fest drinnen, so ein Modus drinnen und drausssen
+
+## Assistent · 2026-10-07T21:22:36.840Z
+
+Ich prüfe das Flackern während des Drohnenflugs. Dazu baue ich einen ersten Innen-/Außenmodus: außen die bisherige Kommandantenkamera, innen eine einfache First-Person-Ansicht in einem begehbaren Stationsraum.
+
+## Assistent · 2026-10-07T21:25:55.720Z
+
+Bei der Drohne habe ich eine überlagerte Fläche am Frachtkanal gefunden. Außerdem ist die Schattenreichweite für die Nahansicht recht groß; beides passe ich an. Für den Innenmodus ergänze ich einen leeren Raum mit Fenstern: **V** wechselt die Ansicht, innen bewegst du dich mit **WASD** und Maus. Die Drohnen arbeiten dabei weiter.
+
+## Nutzer · 2026-10-07T21:28:27.366Z
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_496fe6e08f4548888d389dcaa1afb129\",0]","question":"Beim Drohnenflug: Flackert die Drohne selbst, oder flackert auch die Umgebung, wenn die Kamera ihr mit Tab folgt?","answer":"Vor allem die Drohne selbst"}]
+</send_user_message_question_reply>
+
+## Assistent · 2026-10-07T21:28:59.991Z
+
+Danke, dann konzentriere ich die Flimmerkorrektur auf den Drohnenkörper. Der Innenmodus ist inzwischen eingebaut. Ich prüfe jetzt, ob die Wände und der Boden den Spieler zuverlässig halten, der Rückwechsel die Außenkamera wiederherstellt und die Drohne währenddessen weiterfliegt.
+
+## Assistent · 2026-10-07T21:31:57.076Z
+
+Der Innenmodus besteht die Bewegungs-, Kollisions- und Wechseltests; auch der Wasserauftrag läuft darin weiter. Bei der Bildkontrolle ragte noch ein Teil des Docks in den Raum. Ich verschiebe das neue Modul etwas zur Seite und prüfe anschließend den Drohnenflug weiter außerhalb des Ladebereichs.
+
+## Assistent · 2026-10-07T21:34:07.780Z
+
+Die finale Version besteht **59 Innenraum-/Flugprüfungen** und alle **821 bisherigen Spieltests**. Der Raum ist jetzt frei von hineinragenden Dockteilen. Ich starte die neue Version: Im Spiel bringt dich **V** hinein und wieder zurück. Schau dabei bitte auch, ob die Drohne beim Fliegen ruhiger dargestellt wird.
+
+## Assistent · 2026-10-07T21:35:52.172Z
+
+Der erste **Innen-/Außenmodus ist eingebaut** und die neue Version läuft:
+
+- **V:** Station betreten oder zur Außenansicht zurückkehren.
+- **WASD + Maus:** Gehen und umsehen.
+- **Shift:** Schneller gehen.
+- **Tab:** Maus freigeben oder wieder einfangen.
+
+Innen erwartet dich ein leerer Raum mit Fenstern. Die Drohnen arbeiten draußen weiter.
+
+Am Drohnenkörper habe ich überlagerte Flächen korrigiert und die Schatten angepasst. Schau bitte beim Flug, ob das Flimmern nachgelassen hat.
+
+**59 Innenraum-/Flugprüfungen und 821 Spieltests bestanden.**
+
+## Nutzer · 2026-10-07T21:41:54.913Z
+
+## My request:
+Ok sieht schon cool aus.... Kannst du vielleicht es so machen, dass die Station angedockt ist an einem so Quasi Ausgang, dann eine so Türe machen elektrische mir ist der Name entfallen so mit 2 Türen die nacheinander aufgehen um durchzugehen und dann kommt man in den Ring Das Modul wo man standardmässig ist nur mit einem Fenster nach vorne an die Seiten kommen dann verschieden Sachen hin. und du kannst eine klleine drohne wirklich eine kleine die gg. Sachen reparieren kann da rienmachen die aber noch nicht funktioniert. MAche noch eine kleine Beleuchtung rein und ein erstes Pult wo man man steuern und Aufträge annehmen kann.
+
+## Assistent · 2026-10-07T21:42:01.866Z
+
+Das heißt eine **Luftschleuse**. Ich verbinde den Raum damit mit dem Stationsring: zwei elektrische Türen öffnen nacheinander. Der Startraum bekommt nur ein Frontfenster, eine kleine stillgelegte Reparaturdrohne, Beleuchtung und ein erstes Bedienpult für Steuerung und Aufträge.
+
+## Assistent · 2026-10-07T21:48:52.399Z
+
+Das Modul kommt an einen freien Anschluss des Rings; der bislang massive Ring wird innen begehbar. An der Schleuse startet **E** den Durchgang: erste Tür öffnen, eintreten, Tür schließen, zweite Tür öffnen. Das Pult bindet den vorhandenen Wasserauftrag und die Drohnensteuerung an.
+
+## Assistent · 2026-10-07T21:56:47.901Z
+
+Raum, Frontfenster, Pult und die kleine ausgeschaltete Reparaturdrohne sind eingebaut. Als Nächstes prüfe ich die Schleuse in beide Richtungen und einen vollständigen Rundgang im Ring. Besonders wichtig ist, dass beide Türen nie gleichzeitig öffnen und beim Schließen auf den Spieler reagieren.
+
+## Assistent · 2026-10-07T22:01:19.278Z
+
+Die Schleuse und das Steuerpult funktionieren bereits im Test. Beim Rundgang habe ich noch eine Überschneidung mit dem alten Zugang zum Drohnendock gefunden. Ich korrigiere diese Stelle, damit man den Ring vollständig durchlaufen kann.
+
+## Assistent · 2026-10-07T22:03:41.382Z
+
+Der Ring ist jetzt vollständig begehbar. Der Test hat beide Schleusenrichtungen, die Türverriegelung und das Wiederöffnen bei Spielerannäherung geprüft. Am Pult lässt sich der echte Wasserauftrag annehmen und die Drohne zurückrufen; die kleine Reparaturdrohne bleibt wie gewünscht ausgeschaltet. Ich dokumentiere noch den Stand und starte die neue Version.
+
+## Assistent · 2026-10-07T22:05:50.132Z
+
+Eingebaut und die neue Version gestartet 😊 Die Doppeltür heißt **Luftschleuse**.
+
+- Wohnmodul am Stationsring, mit einem Frontfenster und freien Seitenflächen.
+- Zwei elektrische Schiebetüren, die nacheinander öffnen.
+- Vollständig begehbarer Ring und ruhige Beleuchtung.
+- Kleine ausgeschaltete Reparaturdrohne.
+- Steuerpult für Wasserauftrag, Drohnenrückruf und Statusanzeigen.
+
+**V** wechselt innen/außen. **E** bedient Schleuse und Pult; **E oder Escape** schließt das Pult.
+
+Schleuse, Ringrundgang und bestehende Spielabläufe wurden erfolgreich geprüft.
+
+## Nutzer · 2026-10-07T22:08:01.710Z
+
+## My request:
+Ok alles einchecken und commiten und pushen
+
+## Assistent · 2026-10-07T22:08:07.138Z
+
+Ich prüfe den gesamten Arbeitsstand, sichere die aktuellen Änderungen samt Projektdokumentation in einem Commit und pushe ihn zu GitHub.
