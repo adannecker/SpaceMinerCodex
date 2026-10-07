@@ -40,9 +40,9 @@
 
 **Sprechertext:**
 
-> Unser Schiff ist schwer beschädigt. Viele Systeme antworten nicht mehr.
+> Unsere Station ist schwer beschädigt. Viele Systeme antworten nicht mehr.
 >
-> Wir arbeiten auf Notstrom. Die internen Schiffsbatterien müssen erst wieder aufgeladen werden.
+> Wir arbeiten auf Notstrom. Die internen Stationsbatterien müssen erst wieder aufgeladen werden.
 >
 > Die Lebenserhaltung arbeitet noch. Aber unsere Vorräte werden nicht für immer reichen.
 
@@ -62,13 +62,13 @@
 
 > Um uns herum liegt ein Asteroidengürtel.
 >
-> Von unseren zehn Drohnen funktionieren noch zwei.
+> Von unseren zehn Drohnen ist nur Drohne 01 funktionsfähig. Die übrigen neun müssen wir reparieren.
 >
-> Treibstoff und Energie reichen im Moment aber nur für eine. Die Batterie der zweiten müssen wir erst aufladen.
+> Treibwasser und Energie sind begrenzt. Wir müssen ihre Einsätze sorgfältig planen.
 >
-> Mit der ersten können wir die Umgebung untersuchen und Rohstoffe bergen. Wir müssen ihre Einsätze sorgfältig planen.
+> Mit ihr können wir die Umgebung untersuchen und Rohstoffe bergen.
 >
-> Für weitere Reparaturen brauchen wir Material. Für neue Technik brauchen wir Wissen — vielleicht finden wir etwas davon in alten Aufzeichnungen und Artefakten.
+> Für weitere Reparaturen brauchen wir Material. Für neue Technik brauchen wir Wissen. Vielleicht finden wir etwas davon in alten Aufzeichnungen und Artefakten.
 
 **Regie:** Etwas zuversichtlicher. Die Drohnen wirken wie eine konkrete Möglichkeit, tätig zu werden. Kein schneller Wechsel vieler Anzeigen.
 
@@ -110,3 +110,10 @@ Das Bild geht ohne Schnitt in die steuerbare Außenansicht über. Im aktuellen W
 - Die funktionierende Lebenserhaltung und die Darstellung mit Funken sind erzählerische Annahmen dieses Entwurfs; genaue Schäden und Restvorräte sind noch offen.
 - Welche Quelle den Notstrom liefert und wie die vorhandenen Solarflächen und der kleine Kernreaktor anfangs nutzbar sind, ist noch offen. Ladezeiten, Ladeprioritäten und die Reichweite der ersten Drohne müssen abgestimmt werden. Die Aussage zur Versorgung einer Drohne legt keine feste Zahl möglicher Flüge fest.
 - Sind alte Aufzeichnungen eine Form der Wissensartefakte? Die Formulierung ist ein Vorschlag.
+
+
+## Aktuelle Sprachfassung vom 07.10.2026
+
+Aoede (Gemini 3.1 Flash TTS Preview) wurde vom Nutzer für Mira freigegeben. Die 79,920-s-Gesamtaufnahme ist an gemessenen Sprechpausen auf die 16 vorhandenen Laufzeitabschnitte verteilt; Untertitel in intro.json auf Station und nur Drohne 01 abgeglichen. Alte Hedda-WAVs sind unter Sprachproben/Hedda_Original gesichert. Die obigen Angaben zur zweiten funktionsfähigen Drohne, Schiffsdarstellung und Windows-Teststimme beschreiben den historischen Stand und sind überholt. Das Original-Aoede-Audio samt Regie liegt unter Sprachproben/Mira_Erwachen_Aoede_Test01.*. GenerateIntro.ps1 erzeugt weiterhin Hedda und darf die freigegebene Fassung nicht unbeabsichtigt ersetzen. Der Spielcode und die bestehenden Asset-Metadaten bleiben erhalten. Eine subjektive Prüfung sämtlicher Schnittstellen bleibt offen.
+
+Prüfung 07.10.2026: Windows-Build erfolgreich; Spielintegrationstest Check erfolgreich (Logs/smoke-test-result.json). Audiogrenzen anhand gemessener Stille festgelegt; subjektive Hörprüfung sämtlicher Schnitte noch offen.

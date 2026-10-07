@@ -24,3 +24,13 @@ Regieanweisungen werden nicht mitgesprochen. Überarbeitungen erfolgen in dersel
 Die beschlossenen Spielbedingungen stehen in [Spielidee.md](../Spielidee.md). Neue erzählerische Annahmen bleiben als offen gekennzeichnet, bis sie abgestimmt sind.
 
 Die Dateien sind Drehbücher. Der jeweilige Abschnitt zur Umsetzung hält fest, welche Teile bereits im Spiel vorhanden sind. Das Intro hat eine erste Umsetzung mit einer lokalen weiblichen Teststimme; spätere Szenen bleiben zunächst Entwürfe.
+
+## Neues Intro-Cinematic
+
+- [Teil 01 – Unsere alte Welt](IntroCinematic/01_Unsere_alte_Welt.md): freigegebene Enceladus-Aufnahme, erster von zwölf geplanten Teilen; in „Erinnerungen · Teile 1–3“ integriert.
+- [Teil 02 – Der Blick zu den Sternen](IntroCinematic/02_Der_Blick_zu_den_Sternen.md): Enceladus mit Neugier und Sehnsucht; generiert, Hörfreigabe offen.
+- [Teil 03 – Grenzen überwinden](IntroCinematic/03_Grenzen_ueberwinden.md): Enceladus mit Zuversicht und Aufbruchskraft; generiert, Hörfreigabe offen.
+
+## Storygalerie im Splashscreen (07.10.2026)
+
+Cinematics öffnet die zwei Bereiche Cinematics und Cutscenen. Miras integrierte Sequenz wird nach ihrem Erscheinen in der Story zum Wiederansehen freigeschaltet. Das bisherige Mira-Intro wird als Cutscene katalogisiert. Die ersten drei Teile des Intro-Cinematics sind seit 07.10.2026 als sofort verfügbares Cinematic „Erinnerungen · Teile 1–3“ integriert; Gestaltung und Prüfung siehe [Intro-Cinematic](IntroCinematic/README.md). Der Gesehen-Status wird ab dieser Erweiterung lokal gespeichert; früheres Ansehen ist nicht rekonstruierbar. Wiederholungen enden wieder in der Galerie und verändern den Wasserauftrag nicht.

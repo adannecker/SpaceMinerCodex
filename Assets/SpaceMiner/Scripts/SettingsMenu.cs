@@ -7,8 +7,8 @@ namespace SpaceMiner
     {
         public static bool IsOpen { get; private set; }
         private static int closedFrame = -1;
-        public static bool BlocksInput => IsOpen || closedFrame == Time.frameCount || TechTreeMenu.BlocksInput;
-        public static bool PausesSimulation => BlocksInput && SettingsStore.Current.Gameplay.PauseInMenu;
+        public static bool BlocksInput => QuitMenu.BlocksInput || StartMenu.IsOpen || IsOpen || closedFrame == Time.frameCount || TechTreeMenu.BlocksInput;
+        public static bool PausesSimulation => QuitMenu.BlocksInput || StartMenu.IsOpen || (BlocksInput && SettingsStore.Current.Gameplay.PauseInMenu);
         private readonly SettingsSession session = new SettingsSession();
         private SpaceMinerPlayerSettings draft => session.Draft;
         private int page; private int bindingCapture = -1;
@@ -38,7 +38,7 @@ namespace SpaceMiner
             if (FindFirstObjectByType<SettingsMenu>() == null && FindFirstObjectByType<OrbitCamera>() != null)
                 new GameObject("SpaceMiner Settings").AddComponent<SettingsMenu>();
         }
-        private void Awake() { SettingsStore.Load(); gameObject.AddComponent<SettingsUiAudio>(); gameObject.AddComponent<TechTreeMenu>(); }
+        private void Awake() { SettingsStore.Load(); gameObject.AddComponent<SettingsUiAudio>(); gameObject.AddComponent<TechTreeMenu>(); gameObject.AddComponent<StartMenu>(); gameObject.AddComponent<QuitMenu>(); }
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         private System.Collections.IEnumerator Start()
         {
@@ -77,6 +77,7 @@ namespace SpaceMiner
 #endif
         private void Update()
         {
+            if (QuitMenu.BlocksInput) return;
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             if (Input.GetKeyDown(KeyCode.F10)) { if (IsOpen) Cancel(); else Open(); }
 #endif
@@ -99,13 +100,14 @@ namespace SpaceMiner
         }
         private void DrawMenu()
         {
+            if (QuitMenu.BlocksInput) return;
             GUI.tooltip = "";
             if (IsOpen && bindingCapture >= 0 && Event.current.type == EventType.KeyDown && Event.current.keyCode != KeyCode.Escape)
             { if (draft.Controls.Bindings.TryAssign((CameraAction)bindingCapture, Event.current.keyCode)) bindingCapture = -1; Event.current.Use(); }
             ui.Configure(themeOverride ?? SettingsStore.Current.Accessibility); int previousDepth = GUI.depth; GUI.depth = -200;
             if (!IsOpen)
             {
-                if (TechTreeMenu.IsOpen) return;
+                if (StartMenu.IsOpen || TechTreeMenu.IsOpen) return;
                 if (GUI.Button(EntryButton, new GUIContent("", "Einstellungen öffnen"), ui.Button)) { Open(); SettingsUiAudio.Activate(); }
                 entryIcons.Draw(new Rect(EntryButton.x + 7, EntryButton.y + 5, 20, 20), "settings", SpaceMinerUi.Cyan);
                 SettingsUiAudio.Observe(EntryButton, "settings-entry");
@@ -177,13 +179,13 @@ namespace SpaceMiner
                     draft.Interface.Scale = Slider("HUD-Skalierung", draft.Interface.Scale, .75f, 1.5f);
                     draft.Interface.ShowHud = Toggle("HUD anzeigen", draft.Interface.ShowHud); break;
                 case 5:
-                    draft.Accessibility.Subtitles = Toggle("Untertitel im Mira-Intro", draft.Accessibility.Subtitles);
+                    draft.Accessibility.Subtitles = Toggle("Untertitel in Cutscenes und Cinematics", draft.Accessibility.Subtitles);
                     draft.Accessibility.HighContrast = Toggle("Stärkerer Menü-Kontrast", draft.Accessibility.HighContrast);
                     draft.Accessibility.TextScale = Slider("Menü-Textgröße", draft.Accessibility.TextScale, 1, 1.4f); break;
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
                 case 6:
                     GUILayout.Label("Live-Testwerte // nur für diese Spielsitzung", small);
-                    developer.SimulationRate = Slider("Simulationsgeschwindigkeit", developer.SimulationRate, 0, 1000);
+                    developer.SimulationRate = Slider("Simulationsgeschwindigkeit (0 = Pause)", developer.SimulationRate, 0, 500);
                     developer.MiningRate = Slider("Abbaurate kg/s", developer.MiningRate, .01f, 10); break;
 #endif
             }

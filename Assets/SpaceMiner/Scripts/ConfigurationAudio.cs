@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 namespace SpaceMiner
 {
-    // Two scene-local tracks for gameplay/menu, using the existing applied master.
+    // Scene-local tracks for splash, configuration and gameplay, using existing audio settings.
     [DefaultExecutionOrder(-1900)]
     public sealed class ConfigurationAudio : MonoBehaviour
     {
@@ -11,10 +11,14 @@ namespace SpaceMiner
         private const float FadeSeconds = 1.2f;
         private AudioSource source;
         private AudioSource ambience;
+        private AudioSource splash;
+        private bool splashStarted;
+        private float splashEnvelope;
         private bool ambienceStarted;
         private float menuEnvelope, ambienceEnvelope;
         internal AudioSource PlaybackSource => source;
         internal AudioSource AmbienceSource => ambience;
+        internal AudioSource SplashSource => splash;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Install()
@@ -48,18 +52,40 @@ namespace SpaceMiner
             ambience.volume = 0;
             ambience.clip = Resources.Load<AudioClip>("Audio/Asteroid-Solitude-Loop");
             if (ambience.clip == null) Debug.LogWarning("Space ambience: WAV asset missing.");
+            splash = gameObject.AddComponent<AudioSource>();
+            splash.playOnAwake = false; splash.loop = true; splash.spatialBlend = 0; splash.volume = 0;
+            splash.clip = Resources.Load<AudioClip>("Audio/Orbal-Observation-Loop");
+            if (splash.clip == null) Debug.LogWarning("Splash music: WAV asset missing.");
         }
 
         private void Update()
         {
-            bool open = SettingsMenu.IsOpen || TechTreeMenu.IsOpen;
+            bool configuration = SettingsMenu.IsOpen || TechTreeMenu.IsOpen;
+            bool start = StartMenu.IsOpen && !configuration && !MemoryCinematic.IsPlaying;
+            bool open = StartMenu.IsOpen || configuration;
+            if (splash.clip != null)
+            {
+                if (start && !splash.isPlaying)
+                {
+                    if (splashStarted) splash.UnPause();
+                    else { splash.Play(); splashStarted = true; }
+                }
+                splashEnvelope = Mathf.MoveTowards(splashEnvelope, start ? Level : 0,
+                    Level * Time.unscaledDeltaTime / FadeSeconds);
+                splash.volume = splashEnvelope * PlayerAudio.Gain(PlayerAudioChannel.Background);
+                if (!start && splashEnvelope == 0)
+                {
+                    if (StartMenu.IsOpen) { if (splash.isPlaying) splash.Pause(); }
+                    else { splash.Stop(); splashStarted = false; }
+                }
+            }
             if (source.clip != null)
             {
-                if (open && !source.isPlaying) source.Play();
-                menuEnvelope = Mathf.MoveTowards(menuEnvelope, open ? Level : 0,
+                if (configuration && !source.isPlaying) source.Play();
+                menuEnvelope = Mathf.MoveTowards(menuEnvelope, configuration ? Level : 0,
                     Level * Time.unscaledDeltaTime / FadeSeconds);
                 source.volume = menuEnvelope * PlayerAudio.Gain(PlayerAudioChannel.Background);
-                if (!open && menuEnvelope == 0 && source.isPlaying) source.Stop();
+                if (!configuration && menuEnvelope == 0 && source.isPlaying) source.Stop();
             }
             if (ambience.clip == null) return;
             if (!open && !ambience.isPlaying)
@@ -79,6 +105,8 @@ namespace SpaceMiner
             if (source == null) return;
             source.Stop(); source.volume = 0;
             menuEnvelope = ambienceEnvelope = 0;
+            splashEnvelope = 0;
+            if (splash != null) { splash.Stop(); splash.volume = 0; splashStarted = false; }
             if (ambience != null) { ambience.Stop(); ambience.volume = 0; ambienceStarted = false; }
         }
 
@@ -86,6 +114,7 @@ namespace SpaceMiner
         {
             if (source != null) Destroy(source);
             if (ambience != null) Destroy(ambience);
+            if (splash != null) Destroy(splash);
         }
     }
 }

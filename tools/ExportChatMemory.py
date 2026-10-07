@@ -20,8 +20,12 @@ index = ['# Projektchats und gemeinsames Chatmemory', '', f'Exportstand: {stamp}
          '- [Unity-Spiel gemeinsam entwickeln](01-Unity-Spiel.md)',
          '- [Asteroidenvarianten entwerfen](02-Asteroiden.md)',
          '- [Story, Dialoge & Bordcomputer](03-Story-und-Mira.md)', '',
-         '## Neuere Chats vom 06.10.2026', '']
+         '## Registrierte Themenchats', '']
 for thread in register['threads']:
+    if thread.get('source') == 'cloud_snapshot':
+        available = (root / 'docs/Chats' / thread['file']).is_file()
+        index.append(f"- [{thread['title']}]({thread['file']}) — historische Cloud-Textmomentaufnahme vom {thread.get('snapshot_date', 'unbekannt')}; Anhänge nicht enthalten. {thread['topic']}." if available else f"- **{thread['title']}**: Cloud-Archiv fehlt.")
+        continue
     matches = [p for p in paths if p.name.endswith(thread['id'] + '.jsonl')]
     if len(matches) != 1:
         index.append(f"- **{thread['title']}** (`{thread['id']}`): kein eindeutiges lokales Archiv verfügbar. {thread['topic']}.")

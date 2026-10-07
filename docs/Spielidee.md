@@ -36,9 +36,9 @@ Der Technologiebaum soll möglichst realitätsnah sein. Für die spätere Ausarb
 
 ## Meilenstein 01 — jetzt
 
-1. Entwicklungsumgebung und neues Unity-Projekt einrichten.
-2. Eine startbare 3D-Weltraumszene mit wenigen verteilten Asteroiden; Kugeln reichen zunächst aus.
-3. Kamera mit Zoom, Rotation, Verschieben und Bewegung; eine Taste stellt die Standardansicht wieder her.
+- [x] Entwicklungsumgebung und Unity-Projekt eingerichtet; das bestehende gemeinsame Projekt wird weiterverwendet.
+- [x] Startbare 3D-Weltraumszene mit verteilten Asteroiden; inzwischen 100 Körper im aktiven Modus.
+- [x] Kamera mit Zoom, Rotation, Verschieben, Bewegung und Wiederherstellung der Standardansicht.
 
 Ergänzende Testhilfen: einfache Schiff-/Drohnenplatzhalter für den Maßstab, Gesamtübersicht und Objektfokus. Noch keine Survival- oder Forschungsmechanik.
 
@@ -55,3 +55,54 @@ Die Grafik bleibt aus austauschbaren Platzhaltern aufgebaut. Konzepte für Geste
 ## Raumstation: erster visueller Prototyp (06.10.2026)
 
 Die Basis ist nach Nutzerentscheidung eine modulare Raumstation. Ein geschirmter Reaktor sitzt im Zentrum, daneben ein Wasser-/Eisbehälter. Vier Verbindungsgänge führen zum umlaufenden Zugangsring; sechs verschlossene Anschlüsse ermöglichen später weitere Module. Zwei beschädigte Solarflügel zeigen fehlende Zellen und leicht schiefe Halterungen. Die erste Spielgrafik verwendet einfache Grundkörper, etwa 60 m Gesamtbreite. Antrieb, Verteidigung, Modulbau und Reparaturen sind spätere Systeme; der Ring rotiert derzeit nicht. Frühere Schiffbezeichnungen in historischen Texten und Mira-Testsprachdateien werden später abgeglichen.
+
+## Sonne und Stationsausrichtung — bestätigter Entwurf (07.10.2026)
+
+Die Lichtquelle soll als sichtbare Sonne erscheinen. Solarleistung hängt von Sonnenentfernung, Ausrichtung, intakter Panel-Fläche und Abschattung ab. Die Station beginnt mit langsamer Eigenrotation. Zunächst wird die ganze Station über mit Wasser und elektrischer Energie betriebene Dampf-Lagedüsen ausgerichtet: bestehende Rotation abbremsen, drehen und wieder abbremsen. Eine gehaltene Orientierung benötigt ohne Störung keinen dauernden Schub. Startwasser und Restenergie müssen eine Versorgungssackgasse verhindern; konkrete Werte bleiben offen.
+
+Beim Auswählen der Station sollen aktuelle und maximal mögliche Solarleistung, Ausrichtung und Abschattung je Flügel, Rotationsrichtung und -geschwindigkeit sowie Wasser und Lagedüsenstatus sichtbar sein. Eine unabhängige manuelle Panel-Ausrichtung muss zunächst erforscht und die Mechanik repariert werden; automatische Sonnennachführung folgt später. Bewegung der Asteroiden ist eine spätere Erweiterung. Diese Entscheidungen aus MainDev sind Entwurfsstand und noch nicht als Spielsystem umgesetzt.
+
+## Sichtbare Heimatwelt und Sonne (07.10.2026)
+
+Auf Nutzerauftrag als Laufzeitkulisse ergänzt: sichtbare Sonne, zerbrochener Planet mit auseinandergerissenen Hälften und glühendem Kern, halb zerstörter Mond, giftig wirkender grünlicher Auswurf sowie glühender Materialstrom vom Mond zum Planeten. Diese Darstellung ist visuell; Temperatur, Gift, Schaden und das oben beschriebene Sonnenenergie-/Ausrichtungssystem sind weiterhin nicht als Mechanik implementiert. Die ersten drei Erinnerungsbilder mit Enceladus-Narration sind sofort in der Cutscene-Galerie abspielbar; siehe docs/Dialoge/IntroCinematic/README.md.
+
+## Ideensammlung: Umsetzungsstand (07.10.2026)
+
+- [x] Wasserauftrag mit Drohnenflug, Eisabbau, Rücktransport und Tankübergabe als Prototyp.
+- [x] Modulare Raumstation und Bergbaudrohnen als erste Spielgrafik.
+- [x] Mira-Erwachen mit freigegebener Aoede-Stimme und Galerie-Wiederholung.
+- [x] Erste drei Kohlezeichnungen mit Enceladus als sofort verfügbares Cinematic; abgenutzte, gewölbte und geneigte Bildblätter, Fokusfahrten und weichere Schwarzblenden.
+- [x] Gemeinsamer Untertitel-Schalter für Cutscenes und Cinematics; Erinnerungssequenz mit satzweisen Untertiteln.
+- [x] Große zentrale Sonne und neun Planeten auf unterschiedlichen geneigten Umlaufbahnen; Planeten 3, 7 und 8 mit Ringen.
+- [x] Planet 4 als zerstörte Heimatwelt nach freigegebenem Konzept: unregelmäßige Kontinentfragmente, tiefe glühende Spalten, beschädigter Mond, giftiger Dunst und Mond-zu-Planet-Materialstrom. Vereinfachte 3D-Umsetzung; keine vollständig ausgearbeitete Oberfläche.
+- [ ] Weitere neun Teile des Intro-Cinematics: Teil 4 aufgenommen und Bildprompt vorbereitet; Bild, Hoerfreigabe und Integration noch offen.
+- [ ] Gift-, Hitze- und Schadensmechanik sowie entsprechende Warnungen.
+- [x] Erde/Sonne- und Erde/Mond-Abstaende als Bezug, Station mit fuenf Mondabstaenden; Sonnenrichtung als externe Beleuchtungsquelle.
+- [ ] Abstands-/ausrichtungsabhängige Solarleistung, Stationsrotation, Lagedüsen und Panelsteuerung.
+- [ ] Forschungsmechanik hinter dem vorhandenen Techtree-Entwurf; Reparatur und Ausbau der Station und Drohnen.
+
+Aktueller Spielmassstab (07.10.2026, ersetzt den vorherigen astronomischen Entwurf): Auf ausdruecklichen Nutzerwunsch sind die Himmelsabstaende und Koerpergroessen fuer die Sichtbarkeit komprimiert. Heimatweltbahn 1800km, Mondabstand 18km, Stationsabstand zum Planeten 90km. Hauptsonnenradius 55km, Planetenradius 4km, Mondradius 1,1km. Neun Bahnen bei 650 / 1050 / 1400 / 1800 / 2500 / 3500 / 4700 / 6100 / 7800km; diese Werte sind fiktionale Darstellungsmasse, keine echten astronomischen Abstaende. Umlaufbewegungen bleiben vereinfacht, keine N-Koerper-Simulation. Der vorherige Entwurf mit 1 AE und 384400km Mondabstand bleibt im Projektmemory historisch nachvollziehbar.
+
+Die lokale Station, Drohnen und Asteroiden bleiben in Metern. Eine getrennte Kilometer-Kamera stellt Himmelskoerper dar und uebernimmt Orientierung, Blickwinkel und in Kilometer umgerechnete Position der Spielkamera. Zwei sichtbare Sonnen: warme Hauptsonne und kuehler Begleiter, beide mit gerichteter Beleuchtung auch fuer Planeten und Ringe. Schattenseiten werden fuer die Lesbarkeit grafisch aufgehellt; Stationsverkleidung reagiert matter auf diffuses Licht. Das ist keine photometrisch genaue Simulation, keine Doppelstern-N-Koerper-Simulation und noch kein Solarenergieertrag.
+
+Heimatwelt ansehen richtet die Kamera mit 12 Grad Sichtfeld auf Planet 4. Sonnensystem rahmt alle neun Bahnen; beim Herauszoomen erscheinen Bahnlinien und Planetennamen. Zur Station bzw. R stellt die normale Stationsansicht wieder her; Fokus und Felduebersicht beenden ebenfalls die Vergroesserung. Station etwa 60m, Drohnen etwa 2m, Asteroiden bis 5km bleiben erhalten. Andocken bleibt im lokalen Meterraum praezise.
+
+Das freigegebene Planet-/Mond-Konzept liegt unter outputs/Concepts/Planet4-Mond-Freigegeben.png. Gezielte Nah- und Stationsansichten liegen unter outputs/Cinematic.
+
+Neuere Station am 07.10.2026 aus origin/main 7d8f541 integriert: zwei Reihen mit je vier Ladebuchten, zwei Wartungsplaetze und Tankkupplung. Zugehoerige Drohnenlogik uebernommen: Ausfahren, rueckwaerts Einparken, Tank-An-/Abkoppeln und geschlossene Frachtuebergabe; lokale Aoede-Stimme und Cinematic bewahrt. Beenden im Spiel fuehrt zum pausierten Startbildschirm und erhaelt den laufenden Zustand; das eigentliche Schliessen der Anwendung bleibt im Startmenue.
+
+## Planetenarchiv (07.10.2026)
+
+Auf Nutzerauftrag erhalten alle neun Planeten exotische Namen und erfundene Archivtexte. Anklicken des Planeten oder seines Namens in der Gesamtuebersicht oeffnet ein scrollbares Infofenster mit Typ, Besonderheiten, Geschichte und Status. Planet ansehen richtet die Kamera darauf. Texte sind Weltgestaltung; vermutete Vorkommen, Gefahren und Archive sind noch keine freigeschalteten Spielmechaniken. Inhalte liegen in PlanetLore.cs, Auswahl und Infofenster in RuinedWorld.cs.
+
+| Bahn | Name | Charakter |
+| --- | --- | --- |
+| 1 | Veyrath | Glut- und Metallwelt, der erste Funken |
+| 2 | Soryn | Bernsteinwolken, Kristallregen und Korrosion |
+| 3 | Ilythra | Frostwelt mit hellem Ring und alten Funksignalen |
+| 4 | Aetherys | Zerstörte Heimatwelt, offene Glut und verlorene Archive |
+| 5 | Kharuun | Rote Schluchten, Magnetstürme und versunkene Forschungsstation |
+| 6 | Oruvex | Goldener Gasriese mit dauerhaftem Sturmauge |
+| 7 | Nymara | Türkisfarbener Ringriese, verschollenes Observatorium |
+| 8 | Vaelora | Kobaltblauer Eisriese, Polarlichter und schräger Ring |
+| 9 | Xhal'Tir | Violette Grenzwelt, Zwielicht und ungeklärtes Tiefenecho |

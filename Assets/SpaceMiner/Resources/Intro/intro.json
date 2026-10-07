@@ -1,5 +1,5 @@
 {
-  "Voice": "Microsoft Hedda Desktop",
+  "Voice": "Aoede · Gemini 3.1 Flash TTS (Preview)",
   "Cues": [
     {
       "Stage": 0,
@@ -27,19 +27,19 @@
     },
     {
       "Stage": 1,
-      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
-      "Text": "Unser Schiff ist schwer beschädigt. Viele Systeme antworten nicht mehr.",
+      "Heading": "STATIONSSTATUS: NOTBETRIEB",
+      "Text": "Unsere Station ist schwer beschädigt. Viele Systeme antworten nicht mehr.",
       "Audio": "Intro/mira_04"
     },
     {
       "Stage": 1,
-      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
-      "Text": "Wir arbeiten auf Notstrom. Die internen Schiffsbatterien müssen erst wieder aufgeladen werden.",
+      "Heading": "STATIONSSTATUS: NOTBETRIEB",
+      "Text": "Wir arbeiten auf Notstrom. Die internen Stationsbatterien müssen erst wieder aufgeladen werden.",
       "Audio": "Intro/mira_05"
     },
     {
       "Stage": 1,
-      "Heading": "SCHIFFSSTATUS: NOTBETRIEB",
+      "Heading": "STATIONSSTATUS: NOTBETRIEB",
       "Text": "Die Lebenserhaltung arbeitet noch. Aber unsere Vorräte werden nicht für immer reichen.",
       "Audio": "Intro/mira_06"
     },
@@ -52,25 +52,25 @@
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
-      "Text": "Von unseren zehn Drohnen funktionieren noch zwei.",
+      "Text": "Von unseren zehn Drohnen ist nur Drohne 01 funktionsfähig. Die übrigen neun müssen wir reparieren.",
       "Audio": "Intro/mira_08"
     },
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
-      "Text": "Treibstoff und Energie reichen im Moment aber nur für eine. Die Batterie der zweiten müssen wir erst aufladen.",
+      "Text": "Treibwasser und Energie sind begrenzt. Wir müssen ihre Einsätze sorgfältig planen.",
       "Audio": "Intro/mira_09"
     },
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
-      "Text": "Mit der ersten können wir die Umgebung untersuchen und Rohstoffe bergen. Wir müssen ihre Einsätze sorgfältig planen.",
+      "Text": "Mit ihr können wir die Umgebung untersuchen und Rohstoffe bergen.",
       "Audio": "Intro/mira_10"
     },
     {
       "Stage": 2,
       "Heading": "ASTEROIDENGÜRTEL · EINE DROHNE EINSETZBAR",
-      "Text": "Für weitere Reparaturen brauchen wir Material. Für neue Technik brauchen wir Wissen — vielleicht finden wir etwas davon in alten Aufzeichnungen und Artefakten.",
+      "Text": "Für weitere Reparaturen brauchen wir Material. Für neue Technik brauchen wir Wissen. Vielleicht finden wir etwas davon in alten Aufzeichnungen und Artefakten.",
       "Audio": "Intro/mira_11"
     },
     {

@@ -1,6 +1,6 @@
 # TechTree
 
-Chat-ID: `01a110fc-1a02-7ad0-8b6e-48129d0b7453`. Exportstand: 2026-10-06T13:17:29.153160+00:00.
+Chat-ID: `01a110fc-1a02-7ad0-8b6e-48129d0b7453`. Exportstand: 2026-10-07T18:11:27.874744+00:00.
 
 Tier-I-Entwurf und integriertes Techtree-Menü; Forschungsmechanik offen
 

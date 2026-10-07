@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SpaceMiner
 {
-    public enum DronePhase { Ready, Outbound, Mining, Returning, Unloading, Servicing, Disabled, Stranded, WaitingForPower, Docking, Undocking, Turning, Parking }
+    public enum DronePhase { Ready, Outbound, Mining, Returning, Unloading, Servicing, Disabled, Stranded, WaitingForPower, Docking, Undocking, Turning, Parking, Launching, TankDocking, TankUndocking, Berthing }
 
     public sealed class DroneAgent : MonoBehaviour
     {
@@ -10,6 +10,8 @@ namespace SpaceMiner
         public bool IsOperational;
         public bool NeedsInitialCharge;
         public Vector3 HomePosition;
+        public Quaternion HomeRotation = Quaternion.identity;
+        public static readonly Vector3 CargoOutletOffset = new Vector3(0,0.53f,-0.92f);
         public float DryMassKg = 200f;
         public float FuelCapacityLiters = 10f;
         public float BatteryCapacityKwh = 8f;
@@ -17,8 +19,18 @@ namespace SpaceMiner
         public float CruiseSpeed = 5f;
         public float ThrustNewtons = 5f;
         public float ExhaustSpeed = 1000f;
-        public float HeatingKwhPerLiter = 1.1f;
+        public float HeatingKwhPerLiter = 0.2f;
         public float MiningRateKgPerSecond = 0.1f;
+        public float MiningPowerKw = 80f;
+        public float OnboardPowerKw = 0.05f;
+        [Range(0f, .5f)] public float ReserveFraction = .1f;
+        public float EffectiveMiningRate => MiningRateKgPerSecond * Scenario.Mining.RateMultiplier;
+        public float EffectiveMiningPower => MiningPowerKw * Scenario.Mining.PowerMultiplier;
+        public float EnergyReserveKwh => BatteryCapacityKwh * ReserveFraction;
+        public float FuelReserveLiters => FuelCapacityLiters * ReserveFraction;
+        public float RequiredReturnEnergyKwh => ReturnBudget(CargoKg).Energy + EnergyReserveKwh;
+        public float RequiredReturnFuelLiters => ReturnBudget(CargoKg).Fuel + FuelReserveLiters;
+        public string ReturnReason { get; private set; } = "";
 
         public DronePhase Phase { get; private set; }
         public AsteroidResource Target { get; private set; }
@@ -33,23 +45,30 @@ namespace SpaceMiner
         public float PhaseElapsed => phaseSeconds;
         public Vector3 SurfacePoint { get; private set; }
         public Vector3 SurfaceNormal { get; private set; }
-        public Vector3 TankDockPoint => TankInlet + Vector3.back * 3.6f + Vector3.up * 1.5f;
+        public Vector3 CargoOutletPoint => transform.TransformPoint(CargoOutletOffset);
+        private Transform Socket => Scenario != null ? Scenario.GetComponent<StationVisual>()?.TankSocket : null;
+        public Vector3 TankOutward => Socket != null ? Socket.forward : Vector3.back;
+        public Quaternion TankDockRotation => Facing(TankOutward);
+        public Vector3 TankDockPoint => TankInlet - TankDockRotation * CargoOutletOffset;
+        public Vector3 TankApproachPoint => TankDockPoint + TankOutward * 4f + Vector3.up * 0.6f;
+        public Vector3 HomeApproachPoint => HomePosition + HomeRotation * Vector3.forward * 1.8f;
+        public float UnloadProgress => Phase == DronePhase.Unloading ? Mathf.Clamp01((phaseSeconds-25f)/190f) : 0f;
         public Vector3 TankInlet
         {
             get
             {
-                var tank = GameObject.Find("Stranded Ship")?.transform.Find("Station Geometry/Water Ice Tank");
-                return tank != null ? tank.position + Vector3.back * 1.65f + Vector3.up * 2.8f : HomePosition + Vector3.forward * 3.6f;
+                return Socket != null ? Socket.position : HomePosition + Vector3.forward * 3.6f;
             }
         }
         public SpaceObject Info => GetComponent<SpaceObject>();
-        public float MiningSecondsRemaining => Phase == DronePhase.Mining ? Mathf.Max(0f, cargoGoal - CargoKg) / MiningRateKgPerSecond : 0f;
+        public float MiningSecondsRemaining => Phase == DronePhase.Mining ? Mathf.Min(Mathf.Max(0f, cargoGoal - CargoKg) / EffectiveMiningRate,
+            Mathf.Max(0f, BatteryKwh - RequiredReturnEnergyKwh) * 3600f / (EffectiveMiningPower + OnboardPowerKw)) : 0f;
         public float TargetDistance => IsFlying ? Vector3.Distance(transform.position, destination) : 0f;
         public bool IsFlying => Phase == DronePhase.Outbound || Phase == DronePhase.Returning || Phase == DronePhase.Parking;
         public float PhaseProgress => IsFlying ? Mathf.Clamp01(1f - TargetDistance / Mathf.Max(0.01f, legDistance))
             : Phase == DronePhase.Mining ? Mathf.Clamp01(CargoKg / Mathf.Max(0.01f, cargoGoal))
             : Phase == DronePhase.Unloading ? Mathf.Clamp01(phaseSeconds / 240f)
-            : Phase == DronePhase.Docking || Phase == DronePhase.Undocking || Phase == DronePhase.Turning ? Mathf.Clamp01(phaseSeconds / 120f)
+            : IsManeuver ? Mathf.Clamp01(phaseSeconds / 120f)
             : Phase == DronePhase.Servicing ? Mathf.Min(BatteryKwh / BatteryCapacityKwh, FuelLiters / FuelCapacityLiters)
             : Phase == DronePhase.Ready ? 1f : 0f;
 
@@ -58,6 +77,10 @@ namespace SpaceMiner
             : Phase == DronePhase.Undocking ? "Werkzeuge einziehen / Abdocken"
             : Phase == DronePhase.Turning ? "Zum Tank ausrichten"
             : Phase == DronePhase.Parking ? "Zum Ladeplatz"
+            : Phase == DronePhase.Launching ? "Aus Ladebucht ausfahren"
+            : Phase == DronePhase.Berthing ? "Rückwärts in Ladebucht einparken"
+            : Phase == DronePhase.TankDocking ? "Rückwärts am Tank ankoppeln"
+            : Phase == DronePhase.TankUndocking ? "Tankkupplung lösen"
             : Phase == DronePhase.Mining ? "Eisabbau"
             : Phase == DronePhase.Returning ? "Rückflug"
             : Phase == DronePhase.Unloading ? "Eis am Wassertank entladen"
@@ -76,6 +99,13 @@ namespace SpaceMiner
         private Vector3 maneuverStart;
         private Quaternion maneuverRotation;
         private bool parkingAbove;
+        private bool outboundAbove;
+        private bool productiveTrip;
+        private bool cancelledTrip;
+        private MeshCollider workingCollider;
+        private Mesh originalColliderMesh;
+        private bool IsManeuver => Phase == DronePhase.Docking || Phase == DronePhase.Undocking || Phase == DronePhase.Turning
+            || Phase == DronePhase.Launching || Phase == DronePhase.TankDocking || Phase == DronePhase.TankUndocking || Phase == DronePhase.Berthing;
 
         public float ArrivalSeconds
         {
@@ -96,22 +126,23 @@ namespace SpaceMiner
         public float PhaseSecondsRemaining => IsFlying ? ArrivalSeconds
             : Phase == DronePhase.Mining ? MiningSecondsRemaining
             : Phase == DronePhase.Unloading ? Mathf.Max(0f, 240f - phaseSeconds)
-            : Phase == DronePhase.Docking || Phase == DronePhase.Undocking || Phase == DronePhase.Turning ? Mathf.Max(0f, 120f - phaseSeconds)
+            : IsManeuver ? Mathf.Max(0f, 120f - phaseSeconds)
             : Phase == DronePhase.Servicing ? Mathf.Max((BatteryCapacityKwh - BatteryKwh) / Scenario.DroneChargePowerKw * 3600f,
                 Scenario.WaterLiters > 0f ? FuelCapacityLiters - FuelLiters : float.PositiveInfinity)
             : 0f;
 
         public bool CanCompleteTrip(AsteroidResource source, out string reason)
         {
-            float estimatedFuel = (DryMassKg + CargoCapacityKg + FuelCapacityLiters)
-                * (Mathf.Exp(4f * CruiseSpeed / ExhaustSpeed) - 1f) * 1.15f;
-            float distance = Vector3.Distance(HomePosition, ApproachPoint(source));
-            float estimatedSeconds = 4f * CruiseSpeed * (DryMassKg + CargoCapacityKg + FuelCapacityLiters) / ThrustNewtons
-                + 2f * distance / CruiseSpeed + CargoCapacityKg / MiningRateKgPerSecond + 600f;
-            float estimatedEnergy = estimatedFuel * HeatingKwhPerLiter + estimatedSeconds * 0.05f / 3600f
-                + CargoCapacityKg / MiningRateKgPerSecond * 0.3f / 3600f;
-            if (FuelLiters < estimatedFuel) { reason = "Zu wenig Treibwasser für einen sicheren Hin- und Rückflug."; return false; }
-            if (BatteryKwh < estimatedEnergy) { reason = "Batterie zuerst aufladen: Hin- und Rückflug brauchen mehr Energie."; return false; }
+            if (source == null || !source.CanMineWater) { reason = "Kein abbaubares Wasservorkommen."; return false; }
+            Vector3 approach = ApproachPoint(source);
+            Vector3 above = HomeApproachPoint + Vector3.up * 8f;
+            Budget outbound = FlightBudget(CargoCapacityKg, 240f, HomeApproachPoint, above, approach);
+            Budget returning = ReturnBudget(CargoCapacityKg);
+            float minimumKg = Mathf.Min(1f, source.RemainingRawKg);
+            float estimatedEnergy = outbound.Energy + returning.Energy + EnergyReserveKwh
+                + minimumKg / EffectiveMiningRate * (EffectiveMiningPower + OnboardPowerKw) / 3600f;
+            if (FuelLiters < outbound.Fuel + returning.Fuel + FuelReserveLiters) { reason = "Zu wenig Treibwasser für Hinflug, Rückkehr und Reserve."; return false; }
+            if (BatteryKwh < estimatedEnergy) { reason = "Zu wenig Energie für Hinflug, Abbau, Rückkehr und Reserve."; return false; }
             reason = "";
             return true;
         }
@@ -126,14 +157,17 @@ namespace SpaceMiner
 
         public void ResetDrone()
         {
+            ReleaseWorkingSurface();
             transform.position = HomePosition;
-            transform.rotation = Quaternion.identity;
+            transform.rotation = HomeRotation;
             Phase = !IsOperational ? DronePhase.Disabled : NeedsInitialCharge ? DronePhase.WaitingForPower : DronePhase.Ready;
             FuelLiters = IsOperational && !NeedsInitialCharge ? FuelCapacityLiters : 0f;
             BatteryKwh = IsOperational && !NeedsInitialCharge ? BatteryCapacityKwh : 0f;
             CargoKg = Speed = BurnedWaterLiters = phaseSeconds = 0f;
             HasTankOrder = false;
             Target = null;
+            productiveTrip = cancelledTrip = false;
+            ReturnReason = "";
         }
 
         private Vector3 ApproachPoint(AsteroidResource source)
@@ -169,7 +203,30 @@ namespace SpaceMiner
             // The final delivery fits the remaining tank space; earlier trips use the full cargo hold.
             finalRawGoal = Mathf.Min(CargoCapacityKg, (Scenario.TankCapacityLiters - Scenario.WaterLiters) / cargoWaterFraction);
             cargoGoal = Mathf.Min(Target.RemainingRawKg, finalRawGoal);
-            BeginFlight(ApproachPoint(Target), DronePhase.Outbound);
+            productiveTrip = cancelledTrip = false;
+            ReturnReason = "";
+            UseWorkingSurface();
+            ApproachPoint(Target);
+            BeginManeuver(DronePhase.Launching);
+        }
+
+        // Only the working asteroid needs an exact near-surface collider. Restore the shared LOD after mining.
+        private void UseWorkingSurface()
+        {
+            ReleaseWorkingSurface();
+            var generator = Target.GetComponent<AsteroidGenerator>();
+            var instance = Target.GetComponent<SpiralAsteroid>();
+            if (generator == null && instance != null) generator = instance.Template;
+            var collider = Target.GetComponent<MeshCollider>();
+            if (collider == null || generator == null || generator.BakedMeshes == null || generator.BakedMeshes.Length == 0) return;
+            workingCollider = collider; originalColliderMesh = collider.sharedMesh;
+            collider.sharedMesh = generator.BakedMeshes[0];
+        }
+
+        private void ReleaseWorkingSurface()
+        {
+            if (workingCollider != null) workingCollider.sharedMesh = originalColliderMesh;
+            workingCollider = null; originalColliderMesh = null;
         }
 
         private void BeginFlight(Vector3 point, DronePhase phase)
@@ -184,14 +241,42 @@ namespace SpaceMiner
         public void Tick(float seconds)
         {
             if (!IsOperational || Phase == DronePhase.Disabled || Phase == DronePhase.Stranded) return;
-            if (IsFlying || Phase == DronePhase.Mining)
+            if (IsFlying || IsManeuver || Phase == DronePhase.Unloading)
             {
-                float demand = (0.05f + (Phase == DronePhase.Mining ? 0.3f : 0f)) * seconds / 3600f;
+                float demand = OnboardPowerKw * seconds / 3600f;
                 if (BatteryKwh < demand) { Strand(); return; }
                 BatteryKwh -= demand;
             }
             switch (Phase)
             {
+                case DronePhase.Launching:
+                    phaseSeconds += seconds;
+                    transform.rotation = HomeRotation;
+                    transform.position = Vector3.Lerp(maneuverStart, HomeApproachPoint, Mathf.SmoothStep(0,1,phaseSeconds/120f));
+                    if (phaseSeconds >= 120f) { outboundAbove = true; BeginFlight(HomeApproachPoint + Vector3.up * 8f, DronePhase.Outbound); }
+                    break;
+                case DronePhase.TankDocking:
+                    phaseSeconds += seconds;
+                    transform.rotation = Quaternion.Slerp(maneuverRotation,TankDockRotation,Mathf.SmoothStep(0,1,phaseSeconds/45f));
+                    transform.position = Vector3.Lerp(maneuverStart,TankDockPoint,Mathf.SmoothStep(0,1,Mathf.Clamp01((phaseSeconds-45f)/75f)));
+                    if (phaseSeconds >= 120f) { transform.rotation = TankDockRotation; BeginManeuver(DronePhase.Unloading); }
+                    break;
+                case DronePhase.TankUndocking:
+                    phaseSeconds += seconds;
+                    transform.position = Vector3.Lerp(maneuverStart,TankApproachPoint,Mathf.SmoothStep(0,1,Mathf.Clamp01((phaseSeconds-30f)/90f)));
+                    if (phaseSeconds >= 120f) { parkingAbove = true; BeginFlight(HomeApproachPoint + Vector3.up * 8f, DronePhase.Parking); }
+                    break;
+                case DronePhase.Berthing:
+                    phaseSeconds += seconds;
+                    transform.rotation = Quaternion.Slerp(maneuverRotation,HomeRotation,Mathf.SmoothStep(0,1,phaseSeconds/45f));
+                    transform.position = Vector3.Lerp(maneuverStart,HomePosition,Mathf.SmoothStep(0,1,Mathf.Clamp01((phaseSeconds-45f)/75f)));
+                    if (phaseSeconds >= 120f) {
+                        transform.rotation = HomeRotation;
+                        if (productiveTrip && !cancelledTrip) Scenario.Mining.CompleteTrip();
+                        productiveTrip = false;
+                        Phase = Scenario.QuestComplete ? DronePhase.Ready : DronePhase.Servicing;
+                    }
+                    break;
                 case DronePhase.Docking:
                     phaseSeconds += seconds;
                     float docking = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(phaseSeconds / 60f));
@@ -203,13 +288,13 @@ namespace SpaceMiner
                     phaseSeconds += seconds;
                     transform.position = Vector3.Lerp(maneuverStart, SurfacePoint + SurfaceNormal * 5f,
                         Mathf.SmoothStep(0f, 1f, Mathf.Clamp01((phaseSeconds - 60f) / 60f)));
-                    if (phaseSeconds >= 120f) BeginManeuver(DronePhase.Turning);
+                    if (phaseSeconds >= 120f) { ReleaseWorkingSurface(); BeginManeuver(DronePhase.Turning); }
                     break;
                 case DronePhase.Turning:
                     phaseSeconds += seconds;
-                    transform.rotation = Quaternion.Slerp(maneuverRotation, Facing(TankDockPoint - transform.position),
+                    transform.rotation = Quaternion.Slerp(maneuverRotation, Facing(TankApproachPoint - transform.position),
                         Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(phaseSeconds / 120f)));
-                    if (phaseSeconds >= 120f) BeginFlight(TankDockPoint, DronePhase.Returning);
+                    if (phaseSeconds >= 120f) BeginFlight(TankApproachPoint, DronePhase.Returning);
                     break;
                 case DronePhase.Outbound:
                 case DronePhase.Returning:
@@ -217,22 +302,18 @@ namespace SpaceMiner
                     Fly(seconds);
                     break;
                 case DronePhase.Mining:
-                    phaseSeconds += seconds;
-                    float mined = Target.Mine(Mathf.Min(MiningRateKgPerSecond * seconds, cargoGoal - CargoKg));
-                    CargoKg += mined;
-                    if (CargoKg >= cargoGoal - 0.001f || !Target.CanMineWater)
-                        BeginManeuver(DronePhase.Undocking);
+                    MineWithinBudget(seconds);
                     break;
                 case DronePhase.Unloading:
                     phaseSeconds += seconds;
-                    transform.rotation = Quaternion.RotateTowards(transform.rotation, Facing(TankInlet - transform.position), seconds * 2f);
+                    transform.rotation = TankDockRotation;
                     if (phaseSeconds >= 240f)
                     {
                         float accepted = Scenario.DepositWater(CargoWaterLiters);
+                        productiveTrip = accepted > .001f;
                         CargoKg = Mathf.Max(0f, CargoKg - accepted / Mathf.Max(0.001f, cargoWaterFraction));
                         if (Scenario.QuestComplete) HasTankOrder = false;
-                        parkingAbove = true;
-                        BeginFlight(HomePosition + Vector3.up * 11f, DronePhase.Parking);
+                        BeginManeuver(DronePhase.TankUndocking);
                     }
                     break;
                 case DronePhase.Servicing:
@@ -257,6 +338,54 @@ namespace SpaceMiner
             }
         }
 
+        private struct Budget { public float Fuel, Energy; }
+
+        // Conservative full-mass estimates include every accelerate/brake leg and onboard power.
+        private Budget FlightBudget(float cargo, float maneuverSeconds, params Vector3[] points)
+        {
+            float mass = DryMassKg + FuelCapacityLiters + cargo;
+            float acceleration = Mathf.Max(.0001f, ThrustNewtons / mass);
+            float deltaV = 0f, duration = maneuverSeconds;
+            for (int i = 1; i < points.Length; i++) {
+                float distance = Vector3.Distance(points[i - 1], points[i]);
+                float peak = Mathf.Min(CruiseSpeed, Mathf.Sqrt(acceleration * distance));
+                deltaV += 2f * peak;
+                duration += 2f * peak / acceleration + Mathf.Max(0f, distance - peak * peak / acceleration) / Mathf.Max(.001f, peak);
+            }
+            float fuel = mass * (1f - Mathf.Exp(-deltaV / ExhaustSpeed)) * 1.15f;
+            return new Budget { Fuel = fuel, Energy = fuel * HeatingKwhPerLiter + duration * OnboardPowerKw / 3600f };
+        }
+
+        private Budget ReturnBudget(float cargo) => FlightBudget(cargo, 840f,
+            SurfacePoint + SurfaceNormal * 5f, TankApproachPoint, HomeApproachPoint + Vector3.up * 8f, HomeApproachPoint);
+
+        private void MineWithinBudget(float seconds)
+        {
+            float planned = Mathf.Min(EffectiveMiningRate * seconds, cargoGoal - CargoKg, Target.RemainingRawKg);
+            float power = EffectiveMiningPower + OnboardPowerKw;
+            bool Fits(float kg) {
+                Budget returning = ReturnBudget(CargoKg + kg);
+                return BatteryKwh >= returning.Energy + EnergyReserveKwh + kg / EffectiveMiningRate * power / 3600f
+                    && FuelLiters >= returning.Fuel + FuelReserveLiters;
+            }
+            bool limited = !Fits(planned);
+            if (limited) {
+                float lo = 0, hi = planned;
+                for (int i = 0; i < 16; i++) { float mid = (lo + hi) * .5f; if (Fits(mid)) lo = mid; else hi = mid; }
+                planned = lo;
+            }
+            float mined = Target.Mine(planned);
+            float workingSeconds = mined / EffectiveMiningRate;
+            phaseSeconds += workingSeconds;
+            BatteryKwh = Mathf.Max(0, BatteryKwh - workingSeconds * power / 3600f);
+            CargoKg += mined;
+            if (limited || CargoKg >= cargoGoal - .001f || !Target.CanMineWater) {
+                ReturnReason = limited ? "Rückkehrversorgung und Reserve erreicht" : !Target.CanMineWater ? "Quelle erschöpft" : "Ladeziel erreicht";
+                Scenario.Notify(ReturnReason + ". Drohne kehrt zum Tank zurück.");
+                BeginManeuver(DronePhase.Undocking);
+            }
+        }
+
         private void Fly(float seconds)
         {
             Vector3 offset = destination - transform.position;
@@ -277,13 +406,16 @@ namespace SpaceMiner
                 transform.position = destination;
                 Speed = 0f;
                 phaseSeconds = 0f;
-                if (Phase == DronePhase.Outbound) BeginManeuver(DronePhase.Docking);
+                if (Phase == DronePhase.Outbound) {
+                    if (outboundAbove) { outboundAbove = false; BeginFlight(ApproachPoint(Target),DronePhase.Outbound); }
+                    else BeginManeuver(DronePhase.Docking);
+                }
                 else if (Phase == DronePhase.Parking)
                 {
-                    if (parkingAbove) { parkingAbove = false; BeginFlight(HomePosition, DronePhase.Parking); }
-                    else Phase = Scenario.QuestComplete ? DronePhase.Ready : DronePhase.Servicing;
+                    if (parkingAbove) { parkingAbove = false; BeginFlight(HomeApproachPoint, DronePhase.Parking); }
+                    else BeginManeuver(DronePhase.Berthing);
                 }
-                else BeginManeuver(DronePhase.Unloading);
+                else BeginManeuver(DronePhase.TankDocking);
             }
         }
 
@@ -302,12 +434,14 @@ namespace SpaceMiner
         {
             if (!IsOperational || !HasTankOrder) return;
             HasTankOrder = false;
+            cancelledTrip = true;
             Scenario.Notify("Auftrag beendet. Drohne kehrt mit ihrer Ladung zurück.");
             if (IsFlying)
             {
                 if (!Burn(Speed)) { Strand(); return; }
                 BeginManeuver(DronePhase.Turning);
             }
+            else if (Phase == DronePhase.Launching) { parkingAbove = false; BeginFlight(HomeApproachPoint,DronePhase.Parking); }
             else if (Phase == DronePhase.Mining || Phase == DronePhase.Docking) BeginManeuver(DronePhase.Undocking);
         }
 
@@ -327,6 +461,7 @@ namespace SpaceMiner
 
         private void Strand()
         {
+            ReleaseWorkingSurface();
             Phase = DronePhase.Stranded;
             HasTankOrder = false;
             Scenario.Notify("Drohne 01 braucht Hilfe: Energie oder Treibwasser erschöpft.");

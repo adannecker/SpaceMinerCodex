@@ -29,6 +29,7 @@ namespace SpaceMiner
         public int CueCount => script?.Cues?.Length ?? 0;
         public float CueDuration => durations[CueIndex];
         public bool HasCompleteVoiceTrack { get; private set; }
+        public event Action Finished;
 
         private Script script;
         private AudioClip[] clips;
@@ -55,9 +56,9 @@ namespace SpaceMiner
             PlayerAudioSource.Attach(voice, PlayerAudioChannel.Voices);
         }
 
-        private void Start() => PlayIntro();
+        private void Start() { if (StartMenu.IsOpen) IsPlaying = false; else PlayIntro(); }
 
-        public void PlayIntro()
+        public void PlayIntro(bool replay = false)
         {
             if (!initialized)
             {
@@ -84,6 +85,7 @@ namespace SpaceMiner
             CueIndex = 0;
             BeginCue();
             SetCamera();
+            if (!replay) CinematicLibrary.MarkSeen(CinematicLibrary.MiraAwakening);
         }
 
         private void Update()
@@ -127,6 +129,7 @@ namespace SpaceMiner
             completedFrame = Time.frameCount;
             if (voice != null) { voice.Stop(); voice.clip = null; }
             if (orbit != null) orbit.ResetView();
+            Finished?.Invoke();
         }
 
         private void SetCamera()
@@ -151,7 +154,7 @@ namespace SpaceMiner
             }
             transform.SetPositionAndRotation(position, Quaternion.LookRotation(target - position));
             view.nearClipPlane = 0.05f;
-            view.farClipPlane = 80000f;
+            view.farClipPlane = 1200000f;
         }
 
         private void OnGUI()

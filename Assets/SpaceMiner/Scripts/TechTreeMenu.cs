@@ -39,9 +39,10 @@ namespace SpaceMiner
         }
         private void Draw()
         {
+            if(QuitMenu.BlocksInput)return;
             ui.Configure(previewTheme??SettingsStore.Current.Accessibility);GUI.depth=-210;
             if(!IsOpen) {
-                if(SettingsMenu.IsOpen)return;
+                if(StartMenu.IsOpen||SettingsMenu.IsOpen)return;
                 if(GUI.Button(EntryButton,new GUIContent("","Technologiebaum öffnen"),ui.Button)){Open();SettingsUiAudio.Activate();}
                 icons.Draw(new Rect(EntryButton.x+7,EntryButton.y+5,20,20),"research",SpaceMinerUi.Cyan);
                 SettingsUiAudio.Observe(EntryButton,"techtree-entry");ui.Tooltip(1,Screen.width,Screen.height);return;

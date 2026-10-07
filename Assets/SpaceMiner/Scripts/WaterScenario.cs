@@ -11,7 +11,9 @@ namespace SpaceMiner
         public float ReactorPowerKw = 2f;
         public float SolarPowerKw = 0.5f;
         public float DroneChargePowerKw = 2f;
-        public float SimulationRate = 100f;
+        public float SimulationRate = 1f;
+        public MiningResearch Mining = new MiningResearch();
+        private float resumeRate = 1f;
 
         public float WaterLiters { get; private set; }
         public int Deliveries { get; private set; }
@@ -26,17 +28,21 @@ namespace SpaceMiner
         private void Awake()
         {
             InitializeObjects();
+            SimulationRate = 1f; // Legacy scene stores 100x; normal play now starts at 1x.
             ResetScenario();
         }
 
         private void Update()
         {
             if (IntroSequence.BlocksGameplay || SettingsMenu.PausesSimulation) return;
-            if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Space)) SimulationRate = SimulationRate > 0f ? 0f : 100f;
+            if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Space)) TogglePause();
             if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Tab) && Worker != null)
                 Camera.main.GetComponent<OrbitCamera>().Focus(Worker.Info);
             Advance(Time.unscaledDeltaTime * SimulationRate);
         }
+
+        public void SetSimulationRate(float rate) { SimulationRate = rate; if (rate > 0) resumeRate = rate; }
+        public void TogglePause() { if (SimulationRate > 0) { resumeRate = SimulationRate; SimulationRate = 0; } else SimulationRate = resumeRate; }
 
         public void Advance(float seconds)
         {
@@ -89,6 +95,7 @@ namespace SpaceMiner
             Deliveries = 0;
             DeliveredLiters = 0f;
             SourceAssigned = false;
+            Mining.Reset();
             Message = "Wähle eine Eisquelle und starte den Tankauftrag.";
             foreach (AsteroidResource asteroid in Asteroids) asteroid.ResetDeposit();
             foreach (DroneAgent drone in Drones) drone.ResetDrone();
@@ -125,6 +132,8 @@ namespace SpaceMiner
             }
 
             Drones = new DroneAgent[10];
+            var station = GetComponent<StationVisual>();
+            if (station != null) station.Build();
             Material hull = GameObject.Find("Drone 1").GetComponentInChildren<Renderer>().sharedMaterial;
             for (int i = 0; i < Drones.Length; i++)
             {
@@ -151,7 +160,9 @@ namespace SpaceMiner
                 agent.Scenario = this;
                 agent.IsOperational = i < OperationalDrones || i == 1;
                 agent.NeedsInitialCharge = i == 1 && i >= OperationalDrones;
-                agent.HomePosition = body.transform.position;
+                var berth = station != null ? station.Berth(i) : null;
+                agent.HomePosition = berth != null ? berth.position : body.transform.position;
+                agent.HomeRotation = berth != null ? berth.rotation : Quaternion.identity;
                 Drones[i] = agent;
                 var miningVisual = body.GetComponent<MiningDroneVisual>();
                 if (miningVisual == null) miningVisual = body.AddComponent<MiningDroneVisual>();

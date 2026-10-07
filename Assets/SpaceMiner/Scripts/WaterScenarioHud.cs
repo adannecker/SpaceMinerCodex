@@ -66,10 +66,12 @@ namespace SpaceMiner
             Matrix4x4 previous = GUI.matrix;
             GUI.matrix = Matrix4x4.Scale(Vector3.one * Scale);
             markers.Clear();
+            if(orbit.Distance<=500000){
             DrawWorld(scenario.GetComponent<SpaceObject>(), "STATION", null);
             DrawWorld(scenario.Worker.Info, "DROHNE 01", scenario.Worker);
             foreach (AsteroidResource asteroid in knownSources)
                 if (asteroid.WaterIdentified) DrawWorld(asteroid.Info, asteroid.Info.DisplayName + " · EIS", null);
+            }
 
             Panel(LeftTop);
             Label(34, 29, 275, 32, "SPACE MINER", title);
@@ -94,7 +96,7 @@ namespace SpaceMiner
             Label(34, cy + 36, 508, 22, "Mausrad Zoom  ·  Shift + Rad Schnellzoom  ·  Rechtsziehen Drehen", muted);
             Label(34, cy + 59, 508, 22, "Mittelziehen Verschieben  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Forward) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Left) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Backward) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Right) + " Bewegen  ·  Shift Schnell", muted);
             Label(34, cy + 82, 508, 22, SettingsStore.Current.Controls.Bindings.Get(CameraAction.Reset) + " Startansicht  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Overview) + " Feldansicht  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Focus) + " Fokus  ·  Tab Drohne", muted);
-            Label(34, cy + 105, 508, 22, "Leertaste Pause  ·  F11 Vollbild / Fenster  ·  H Anzeige  ·  Escape Schließen", muted);
+            Label(34, cy + 105, 508, 22, "Leertaste Pause  ·  F11 Vollbild / Fenster  ·  H Anzeige  ·  Escape Beenden…", muted);
 
             Panel(Inspector);
             }
@@ -102,9 +104,14 @@ namespace SpaceMiner
             Panel(Clock);
             float cx = Clock.x + 16, ty = Clock.y + 12;
             Label(cx, ty, 310, 20, scenario.SimulationRate == 0 ? "SIMULATION PAUSIERT" : "ZEITRAFFER  " + scenario.SimulationRate.ToString("0") + "×", muted);
-            float[] rates = { 1, 20, 100, 500 };
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            float[] rates = { 0, 1, 20, 100, 500 };
+#else
+            float[] rates = { 0, 1, 20, 100 };
+#endif
+            float rateWidth = 300f / rates.Length;
             for (int i = 0; i < rates.Length; i++)
-                if (GUI.Button(new Rect(cx + i * 77, ty + 30, 69, 27), rates[i] + "×", button)) scenario.SimulationRate = rates[i];
+                if (GUI.Button(new Rect(cx + i * rateWidth, ty + 30, rateWidth - 4, 27), rates[i] == 0 ? "Pause" : rates[i] + "×", button)) scenario.SimulationRate = rates[i];
             if (GUI.Button(new Rect(cx, ty + 64, 300, 24), scenario.SimulationRate > 0 ? "Pause" : "Weiter (100×)", button))
                 scenario.SimulationRate = scenario.SimulationRate > 0 ? 0 : 100;
             if (display != null)

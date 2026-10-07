@@ -12,7 +12,7 @@ namespace SpaceMiner
         { SimulationRate = scenario.SimulationRate, MiningRate = scenario.Worker.MiningRateKgPerSecond };
         public void Apply(WaterScenario scenario)
         {
-            scenario.SimulationRate = Mathf.Clamp(SimulationRate, 0, 1000);
+            scenario.SimulationRate = Mathf.Clamp(SimulationRate, 0, 500);
             scenario.Worker.MiningRateKgPerSecond = Mathf.Clamp(MiningRate, .01f, 10);
         }
     }

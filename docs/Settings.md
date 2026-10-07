@@ -21,7 +21,7 @@ Die vorhandene Architektur wurde erweitert, ohne UI-Pakete oder ein neues Unity-
 - `SpaceMinerUi`: wiederverwendbare Panels, Buttons, Tabs, Slider, Toggles, Dropdowns, Tooltips, Dialograhmen, Header-Stile und Statusfarben. Cyan für System/Navigation, Amber für Produktion, Rot für Fehler, Grün für Erfolg, Grau für deaktivierte Elemente. Ein gemeinsamer Stil berücksichtigt Textgröße und Kontrast; andere IMGUI-Ansichten können ihn schrittweise übernehmen.
 - `SettingsMenu`: Navigation, Datenbindung und modale Eingaben auf den vorhandenen Systemen.
 
-Neu angebunden: Kamerageschwindigkeit, Mira-Untertitel, Auflösung sowie Fenster/Randlos/Exclusive-Fullscreen. Display-Einstellungen werden im Windows-Spiel angewendet, nicht auf die Game-Ansicht des Editors. Standard `DisplayMode=-1` und Auflösung `0×0` behalten die aktuelle Startanzeige; explizite Player-Auswahl wird gespeichert. F11/Alt+Enter bleiben eine vorübergehende Umschaltung. Intro und Settings-Menü verwenden getrennte GUI-Tiefen; das Intro zeichnet hinter einem geöffneten Menü nicht weiter.
+Neu angebunden: Kamerageschwindigkeit, Untertitel in Cutscenes und Cinematics, Auflösung sowie Fenster/Randlos/Exclusive-Fullscreen. Display-Einstellungen werden im Windows-Spiel angewendet, nicht auf die Game-Ansicht des Editors. Standard `DisplayMode=-1` und Auflösung `0×0` behalten die aktuelle Startanzeige; explizite Player-Auswahl wird gespeichert. F11/Alt+Enter bleiben eine vorübergehende Umschaltung. Intro und Settings-Menü verwenden getrennte GUI-Tiefen; das Intro zeichnet hinter einem geöffneten Menü nicht weiter.
 
 Nicht implementierte Beispiele bleiben bewusst ausstehend: Übersetzungen/Sprache, Autosave/Spielstandspeicherung, Tutorials, vollständiges Rebinding, Camera Shake sowie Music/Effects/UI-Kanäle. Dafür fehlen derzeit die zugehörigen Spiel-/Audiosysteme. Der Master-Regler ist wirksam. Developer-Balancing wird weiterhin nur während der Sitzung angewendet; keine Änderung an Asteroiden- oder Szenenassets.
 
@@ -52,3 +52,25 @@ Der dezente Settings-Button liegt jetzt rechts oben oberhalb der Objektinformati
 ## Techtree-Einstieg (06.10.2026)
 
 Rechts oben zeigen Settings und der benachbarte Forschungsbaum jetzt ausschliesslich Piktogramme mit Tooltips. Das Zahnrad sitzt ganz rechts, das Verzweigungs-Symbol direkt links daneben. Der Techtree teilt UI-Stil, Menü-Hintergrundaudio und modale Eingabe mit Settings; die Menüs schliessen sich gegenseitig. Player-Settings und ihre Speicherung bleiben eigenständig. Einzelheiten und Prüfungen: [Techtree](Techtree.md).
+
+## Startmenü (07.10.2026)
+
+Beim normalen Start erscheint der Splashscreen mit Demo starten, Konfiguration und Beenden. Demo starten beginnt Miras bestehendes Intro; Escape überspringt weiterhin das Intro. Konfiguration verwendet die bestehenden persistenten Player-Settings und kehrt beim Schliessen zum Startmenü zurück. Beenden fragt kurz nach. Solange das Startmenü offen ist, bleiben Simulation und Kamera unabhängig von PauseInMenu gesperrt. Die vorhandene Configuration-Musik begleitet das Menü. Automatisierte bestehende Prüfmodi überspringen den Splashscreen; -startMenuCheck prüft ihn gezielt im Development-Build.
+
+### Animierte Startansicht
+
+Das Startmenü steht links, die echte Station rechts. Eine langsame Kamerafahrt und sieben rein visuelle Asteroiden mit vorhandenen Meshes/Materialien animieren die Ansicht über unskalierte Zeit, während die Simulation pausiert bleibt. Beim Demostart verschwinden die zusätzlichen Hintergrundobjekte, Kamerablick/FOV werden zurückgesetzt und Miras Intro übernimmt. Sonne und kaputter Planet sind für die spätere Gestaltung vorgesehen. StartMenuBuild.Run baut die vorhandene Szene ohne Setup oder Asset-Neugenerierung.
+
+### Cinematics-Galerie
+
+Der Splashscreen enthält Cinematics. Die Galerie zeigt zwei getrennte Bereiche: Cinematics und Cutscenen. Nur bereits in der Story erschienene und tatsächlich abspielbare Sequenzen werden aufgelistet; zukünftige Storyinhalte werden nicht vorweggenommen. Miras vorhandenes Echtzeit-Intro Erwachen gehört zu Cutscenen. Die neuen Intro-Cinematic-Aufnahmen unter docs/Dialoge sind noch nicht integriert und erscheinen deshalb nicht als abspielbare Einträge.
+
+Gesehen bedeutet: Die Sequenz ist in der Story angelaufen; auch Überspringen lässt den Eintrag freigeschaltet. Stabile Sequenz-IDs werden lokal über PlayerPrefs unter SpaceMiner.Story.Seen. gespeichert, getrennt von Player-Settings. Früheres Ansehen vor Einführung der Galerie kann nicht automatisch rekonstruiert werden. Wiederansehen startet das vorhandene Intro mit Stimme und Kamerafahrt; Ende und Escape führen zur Galerie zurück, ohne den Wasserauftrag neu zu starten. Der animierte Splashhintergrund wird bei Rückkehr wiederhergestellt. Weitere integrierte Sequenzen müssen katalogisiert und ihre Storyauslöser mit MarkSeen verbunden werden; hierfür bestehen noch keine weiteren Player.
+
+Der Development-Modus -cinematicGalleryCheck prüft ungesehene Sperre, Freischaltung beim Storyauftritt, persistente Statusabfrage, Replay/Skip/Abschluss, Hintergrund-Rückkehr und normalen Demostart mit isolierten Testschlüsseln.
+
+### Pause und Beenden im Spiel
+
+Escape auf dem Hauptschirm öffnet eine Beenden-Rückfrage. Sie sperrt Kamera, HUD-Eingaben und Simulation unabhängig von PauseInMenu. Weiterspielen oder erneutes Escape schliesst die Rückfrage und stellt den vorherigen Lauf-/Pausezustand durch Beibehalten von SimulationRate wieder her; der Schliessframe bleibt gesperrt. Escape im Intro, in der Galerie oder in Settings behält die jeweilige bisherige Funktion.
+
+Die Geschwindigkeitsleiste beginnt mit Pause (0×), danach 1×, 20× und 100×. Im Editor/Development kommt 500× hinzu. Der Developer-Regler reicht von 0 (Pause) bis 500×; Werte werden beim Anwenden auf diesen Bereich begrenzt. Leertaste und der separate Pause-/Weiterknopf bleiben verfügbar. -quitMenuCheck prüft Dialogpause bei ausgeschalteter Menüpause, Rate-Erhalt, Abbruchframe, bereits pausierten Zustand und Dev-Grenzen.

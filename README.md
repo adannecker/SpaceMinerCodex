@@ -20,7 +20,7 @@ Für den aktuellen Rechnerwechsel und den Kontext aller bekannten Themenchats: [
 
 Alternativ kann das gebaute Spiel unter `Builds/Windows/SpaceMiner.exe` direkt gestartet werden.
 
-Bei jedem Start beginnt **Miras Intro** mit Texteinblendungen, einer ersten deutschen weiblichen Teststimme und Kamerafahrten. **Esc** überspringt das Intro und wechselt direkt ins Spiel. Währenddessen pausieren Simulation und Kamerasteuerung. Nach dem letzten Satz startet das Spiel automatisch.
+Beim Start erscheint ein kleines Startmenü mit **Demo starten**, **Konfiguration** und **Beenden**. Demo starten beginnt **Miras Intro** mit Texteinblendungen, einer ersten deutschen weiblichen Teststimme und Kamerafahrten. **Esc** überspringt das Intro und wechselt direkt ins Spiel. Währenddessen pausieren Simulation und Kamerasteuerung. Nach dem letzten Satz startet das Spiel automatisch.
 
 ## Steuerung
 
@@ -40,7 +40,7 @@ Bei jedem Start beginnt **Miras Intro** mit Texteinblendungen, einer ersten deut
 | Leertaste | Simulation pausieren / mit 100× fortsetzen |
 | F11 oder Alt + Enter | Zwischen Fenster und Vollbild wechseln, auch während des Intros |
 | H | Informationsanzeige ein-/ausblenden |
-| Escape | Im Intro: überspringen und ins Spiel wechseln. Im Spiel: Windows-Spiel schließen; im Editor über Play stoppen |
+| Escape | Im Intro: überspringen. Im Spiel: pausierte Beenden-Rückfrage; erneut Escape oder Weiterspielen bricht ab |
 
 Die Kamera kann von **3 Metern bis 1.000 Kilometern** Abstand herauszoomen. Die Sichtweite und die Bewegungsgeschwindigkeit passen sich dem Zoomabstand an. **B** bringt dich zur Übersicht über das aktuelle Testfeld, **R** zurück zum Schiff. Bei sehr großen Abständen werden die maßstabsgetreuen Objekte entsprechend klein.
 
@@ -102,7 +102,7 @@ Die langfristige Spielidee und fachlichen Leitlinien stehen in [docs/Spielidee.m
 
 ## Rechnerwechsel und Chatarchive
 
-Die Anleitung für GitHub und die Fortsetzung auf einem anderen Rechner steht in [docs/Projektuebergabe.md](docs/Projektuebergabe.md). Die drei Projektchats werden als lesbare Textarchive unter [docs/Chats](docs/Chats/README.md) gesichert. Auf dem ursprünglichen Rechner lassen sie sich mit `.\tools\ExportProjectChats.ps1` aktualisieren. Die Archive dienen als Kontext für neue Chats; sie sind kein Codex-Sitzungsimport.
+Die Anleitung für GitHub und die Fortsetzung auf einem anderen Rechner steht in [docs/Projektuebergabe.md](docs/Projektuebergabe.md). Registrierte Projektchats werden als lesbare Textarchive unter [docs/Chats](docs/Chats/README.md) gesichert. Lokale Archive lassen sich mit `python tools/ExportChatMemory.py` aktualisieren; separat abgerufene Cloud-Momentaufnahmen bleiben dabei erhalten. Die Archive dienen als Kontext für neue Chats; sie sind kein Codex-Sitzungsimport.
 
 
 ## Million-Asteroiden-Spiralwolke (06.10.2026)
@@ -123,7 +123,7 @@ Der dezente Settings-Knopf rechts oben öffnet die persönlichen Einstellungen a
 
 Sechs Kategorien: Gameplay, Graphics, Audio, Controls, Interface, Accessibility. Developer / Debug enthält separate Live-Testwerte für Simulationsgeschwindigkeit und Abbaurate, ohne Player-Speicherung. Developer-Seite und F10 werden aus Release-Builds ausgeschlossen. Vorhandenes Build erzeugt weiterhin Development. `SpaceMiner.Editor.SettingsValidation.BuildChecks` baut ohne Szenenneugenerierung geprüfte Development-/Release-Versionen unter `Builds/SettingsDevelopment` und `Builds/SettingsRelease`; `SettingsValidation.Run` prüft Daten und Dateispeicherung. Details und Erweiterung: [docs/Settings.md](docs/Settings.md).
 
-Erweiterung der Settings: Wiederverwendbare IMGUI-Komponenten und Farben in SpaceMinerUi, transaktionaler Entwurf in SettingsSession und zentrale Anwendung in SettingsRuntime. Grafik enthält jetzt Auflösung und Fenster/Randlos/Vollbild; Controls enthält Kamerageschwindigkeit; Accessibility enthält Mira-Untertitel. Details und noch fehlende Spielsysteme stehen in docs/Settings.md.
+Erweiterung der Settings: Wiederverwendbare IMGUI-Komponenten und Farben in SpaceMinerUi, transaktionaler Entwurf in SettingsSession und zentrale Anwendung in SettingsRuntime. Grafik enthält jetzt Auflösung und Fenster/Randlos/Vollbild; Controls enthält Kamerageschwindigkeit; Accessibility enthält Untertitel in Cutscenes und Cinematics. Details und noch fehlende Spielsysteme stehen in docs/Settings.md.
 
 Die Settings-Speicherung besitzt jetzt eine austauschbare Anbindung über IPlayerSettingsStorage/PlayerSettingsService. Standard bleibt lokale JSON-Speicherung: Apply sichert die Werte, beim Spielstart werden sie geladen. Adapterwechsel erfordert keine Menüänderung. Für Spielstände und einen späteren Server bleiben eigene Zustandsdaten, Simulationsanbindung und gegebenenfalls asynchrone Netzwerkaufrufe erforderlich; Details in docs/Settings.md.
 
@@ -134,3 +134,10 @@ Die Versorgungsbasis ist nun eine einfache modulare Raumstation: Reaktor im Zent
 ## Bergbaudrohnen
 
 Alle zehn Drohnen verwenden einen einfachen 2 m breiten Bergbaukörper mit Frachtbehälter, Antriebsdüsen, Greifarm und Bohrer. MiningDroneVisual erzeugt die Grafik aus Grundkörpern. Der vollständige sichtbare Ablauf umfasst Andockklammer, ausfahrenden/vibrierenden Bohrer am Collider-Kontakt, Eiskristallspray, eingesammelte Brocken durch die Frachtluke, Abdocken und Wenden sowie Entladen am oberen Tankanschluss. Ressourcenverbrauch und Förderrate kommen weiterhin aus DroneAgent. Einzelheiten, Zeiten und Grenzen: [Bergbaudrohnen](docs/Bergbaudrohnen.md). Tab fokussiert Drohne 01; rechte Maustaste dreht die Ansicht auf die Werkzeuge.
+
+
+### Aktueller Dock- und Sonnensystemstand (07.10.2026)
+
+Die neuere Station besitzt acht Ladebuchten, zwei Wartungsplaetze und eine direkte Tankkupplung mit den zugehoerigen Andockmanoevern. Lokale Aoede-Stimme und Intro-Cinematic bleiben erhalten. Beenden aus dem Spiel fuehrt zum pausierten Startbildschirm; die Anwendung wird dort ueber die eigene Beenden-Funktion geschlossen.
+
+Das Sonnensystem verwendet nun bewusst komprimierte Spielabstaende. Heimatwelt ansehen zeigt Planet 4; Sonnensystem rahmt neun sichtbare Bahnlinien und markierte Planeten. R fuehrt zur Station zurueck. Lokale Dockinggeometrie bleibt in Metern. Werte und Grenzen: docs/Spielidee.md; Docking: docs/Bergbaudrohnen.md. Build station-playable-system-build.log und finaler Weltcheck station-playable-world-check.log erfolgreich. Rueckkehr-zum-Startbildschirm-Test station-playable-quit-check.log erfolgreich; Docking-/Kamera-/Wasserauftrag 821 Checks in station-playable-smoke.log bestanden.

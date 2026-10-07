@@ -18,3 +18,12 @@ UserSettings/
 MemoryCaptures/
 Recordings/
 .DS_Store
+/work/
+**/__pycache__/
+/outputs/**
+!/outputs/Cinematic/
+!/outputs/Cinematic/SpaceMiner-IntroCinematic.mp4
+!/outputs/Cinematic/IntroCinematic-mix.wav
+!/outputs/Cinematic/IntroCinematic.srt
+!/outputs/Concepts/
+!/outputs/Concepts/Planet4-Mond-Freigegeben.png

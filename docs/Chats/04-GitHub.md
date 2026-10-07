@@ -1,6 +1,6 @@
 # GitHub
 
-Chat-ID: `01a11002-9eca-70a1-95ec-00cbc84132ee`. Exportstand: 2026-10-06T13:17:29.153160+00:00.
+Chat-ID: `01a11002-9eca-70a1-95ec-00cbc84132ee`. Exportstand: 2026-10-07T18:11:27.874744+00:00.
 
 Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung
 
@@ -401,4 +401,30 @@ Die neueren Chats haben bereits umfangreiche Änderungen dokumentiert: Raumstati
 ## Assistent · 2026-10-06T13:17:14.066Z
 
 Die Chatarchive und die aktuelle Übergabe sind gesichert. Das gemeinsame Projektmemory liegt damit in Git und kann auf dem anderen Rechner direkt gelesen werden. Ein früher angelegter Arbeitschat ist nicht mehr lokal abrufbar; diese Lücke ist im Verzeichnis gekennzeichnet. Der abschließende Spieltest läuft noch.
+
+## Assistent · 2026-10-06T13:18:00.027Z
+
+Der Spieltest ist mit 789 Prüfungen bestanden. Alle offenen Projektänderungen und das gemeinsame Chatmemory sind unter Commit `5cfd179` gesichert. Ich übertrage diesen Stand jetzt nach GitHub.
+
+## Assistent · 2026-10-06T13:18:53.498Z
+
+Alles ist **committed und nach GitHub gepusht**: `5cfd179` auf `main`. Der Arbeitsordner ist sauber; der Spieltest bestand 789 Prüfungen.
+
+Gesichert sind Projektmemory, Chatverzeichnis, acht neue Gesprächsarchive und die drei ursprünglichen Archive. Ein nicht mehr abrufbarer Arbeitschat ist als Lücke gekennzeichnet.
+
+Heute Abend:
+
+1. Auf dem anderen Rechner den aktuellen Git-Stand holen.
+2. Den Checkout als lokales Codex-Projekt öffnen.
+3. Im neuen Chat schreiben: „Lies AGENTS.md, docs/Projektuebergabe.md, docs/Projektmemory.md und docs/Chats/README.md.“
+
+Unity-Version: **6000.4.7f1**. Persönliches Memory musst du dafür nicht zusammenführen.
+
+## Nutzer · 2026-10-06T13:19:33.302Z
+
+War ein guter Fortschritt heute
+
+## Assistent · 2026-10-06T13:19:36.891Z
+
+Ja 🙂 Von der Grundversion zur Raumstation mit sichtbarem Bergbau, Settings, Musik und Techtree – und der ganze Stand ist jetzt samt Projektgedächtnis für heute Abend gesichert.
 

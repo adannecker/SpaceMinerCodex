@@ -6,15 +6,17 @@ namespace SpaceMiner
     public sealed class OrbitCamera : MonoBehaviour
     {
         public const float MinimumDistance = 3f;
-        public const float MaximumDistance = 5000000f;
+        public const float MaximumDistance = 200000000f;
         public Vector3 Pivot { get; private set; }
         public float Distance { get; private set; }
         public SpaceObject Selected { get; private set; }
+        public bool IsCelestialView { get; private set; }
         public bool ShowHud = true;
 
         private float yaw;
         private float pitch;
         private Camera view;
+        private float normalFieldOfView;
         private Vector3 lastMouse;
         private GUIStyle titleStyle;
         private GUIStyle textStyle;
@@ -25,6 +27,7 @@ namespace SpaceMiner
         private void Awake()
         {
             view = GetComponent<Camera>();
+            normalFieldOfView = view.fieldOfView;
             ResetView();
         }
 
@@ -39,13 +42,6 @@ namespace SpaceMiner
             if (PlayerInput.Pressed(CameraAction.Overview)) Overview();
             if (PlayerInput.Pressed(CameraAction.Focus) && Selected != null) Focus(Selected);
             if (PlayerInput.Pressed(CameraAction.ToggleHud)) ShowHud = !ShowHud;
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-#if !UNITY_EDITOR
-                Application.Quit();
-#endif
-            }
-
             Vector3 mouse = Input.mousePosition;
             Vector3 delta = mouse - lastMouse;
             // Ignore the initial delta after clicking or re-entering the game window.
@@ -56,7 +52,7 @@ namespace SpaceMiner
             lastMouse = mouse;
 
             float scroll = Input.mouseScrollDelta.y;
-            if (Mathf.Abs(scroll) > 0.001f)
+            if (Mathf.Abs(scroll) > 0.001f && !IsOverHud(mouse))
                 Zoom(scroll * SettingsStore.Current.Controls.ZoomSpeed, Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
 
             float horizontal = (PlayerInput.Held(CameraAction.Right) ? 1f : 0f) - (PlayerInput.Held(CameraAction.Left) ? 1f : 0f);
@@ -68,9 +64,11 @@ namespace SpaceMiner
             if (Input.GetMouseButtonDown(0) && !IsOverHud(mouse))
             {
                 if (Physics.Raycast(view.ScreenPointToRay(mouse), out RaycastHit hit, view.farClipPlane))
-                    Select(hit.collider.GetComponentInParent<SpaceObject>());
+                {FindFirstObjectByType<RuinedWorld>()?.SelectPlanet(-1);Select(hit.collider.GetComponentInParent<SpaceObject>());}
                 else
                 {
+                    var world=FindFirstObjectByType<RuinedWorld>();
+                    if(world!=null&&world.TrySelectPlanet(mouse)){Select(null);return;}
                     var spiral = GetComponent<SpiralBelt>();
                     Select(spiral != null ? spiral.PickOverview(mouse, view) : null);
                 }
@@ -80,6 +78,8 @@ namespace SpaceMiner
 
         public void ResetView()
         {
+            IsCelestialView=false;
+            if(view!=null)view.fieldOfView=normalFieldOfView;
             followTarget = null;
             Pivot = Vector3.zero;
             Distance = 140f;
@@ -91,6 +91,8 @@ namespace SpaceMiner
 
         public void Overview()
         {
+            IsCelestialView=false;
+            view.fieldOfView=normalFieldOfView;
             followTarget = null;
             var root = GameObject.Find("Asteroids (1 unit = 1 metre)");
             Bounds bounds = new Bounds(Vector3.zero, Vector3.one * 24f);
@@ -118,6 +120,8 @@ namespace SpaceMiner
         public void Focus(SpaceObject target)
         {
             if (target == null) return;
+            IsCelestialView=false;
+            view.fieldOfView=normalFieldOfView;
             Selected = target;
             followTarget = target.transform;
             Pivot = target.transform.position;
@@ -133,6 +137,27 @@ namespace SpaceMiner
             else if (logDistance >= Mathf.Log(MaximumDistance)) Distance = MaximumDistance;
             else Distance = Mathf.Exp(logDistance);
             ApplyPose();
+        }
+
+        public void LookAtCelestial(Vector3 direction, float fieldOfView)
+        {
+            IsCelestialView=true;
+            followTarget=null;Selected=null;
+            Vector3 target=transform.position+direction*1000;
+            view.fieldOfView=fieldOfView;
+            for(int i=0;i<3;i++)
+            {
+                Vector3 angles=Quaternion.LookRotation(target-transform.position).eulerAngles;
+                yaw=angles.y;pitch=angles.x>180?angles.x-360:angles.x;ApplyPose();
+            }
+        }
+        public void SolarOverview(Vector3 centerKilometres,float radiusKilometres)
+        {
+            IsCelestialView=false;followTarget=null;Selected=null;
+            view.fieldOfView=normalFieldOfView;Pivot=centerKilometres*1000;
+            float halfAngle=Mathf.Min(normalFieldOfView*Mathf.Deg2Rad*.5f,Mathf.Atan(Mathf.Tan(normalFieldOfView*Mathf.Deg2Rad*.5f)*view.aspect));
+            Distance=Mathf.Clamp(radiusKilometres*1000/Mathf.Sin(halfAngle)*1.12f,MinimumDistance,MaximumDistance);
+            yaw=0;pitch=72;ApplyPose();
         }
 
         public void Orbit(Vector2 deltaDegrees)
@@ -167,7 +192,7 @@ namespace SpaceMiner
             transform.SetPositionAndRotation(Pivot - rotation * Vector3.forward * Distance, rotation);
             // Keep nearby drone detail, but extend visibility when surveying a large area.
             view.nearClipPlane = Mathf.Clamp(Distance * 0.0002f, 0.05f, 200f);
-            view.farClipPlane = Mathf.Max(80000f, Distance * 2f + 40000f);
+            view.farClipPlane = Mathf.Max(1200000f, Distance * 2f + 40000f);
             QualitySettings.shadowDistance = Mathf.Clamp(Distance * 2.5f, 80f, 30000f);
         }
 
@@ -175,6 +200,7 @@ namespace SpaceMiner
 
         private bool IsOverHud(Vector3 mouse)
         {
+            var world=FindFirstObjectByType<RuinedWorld>();if(world!=null&&world.OwnsScreenPoint(mouse))return true;
             if (SettingsMenu.OwnsScreenPoint(mouse)) return true;
             if (!ShowHud) return false;
             var scenarioHud = GetComponent<WaterScenarioHud>();

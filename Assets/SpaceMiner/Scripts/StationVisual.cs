@@ -5,6 +5,11 @@ namespace SpaceMiner
     // Lightweight visual placeholder; logistics continue to use the existing root.
     public sealed class StationVisual : MonoBehaviour
     {
+        private readonly Transform[] berths = new Transform[10];
+        public const int ChargingBerthCount = 8;
+        public Transform TankSocket { get; private set; }
+        public Transform DroneDock { get; private set; }
+        public Transform Berth(int index) { Build(); return berths[index]; }
         private void Awake() => Build();
 
         private Material Surface(string name, Color color, float metal, bool glow = false)
@@ -69,8 +74,16 @@ namespace SpaceMiner
             Part(PrimitiveType.Cylinder,"Water Ice Tank",geometry,new Vector3(5.7f,0.5f,-4.3f),new Vector3(3.2f,3f,3.2f),hull);
             Part(PrimitiveType.Cylinder,"Tank cap",geometry,new Vector3(5.7f,3.6f,-4.3f),new Vector3(3.35f,0.12f,3.35f),dark);
             Part(PrimitiveType.Cube,"Tank blue band",geometry,new Vector3(5.7f,1.4f,-5.95f),new Vector3(1.4f,0.5f,0.1f),cyan);
-            Part(PrimitiveType.Cube,"Ice unloading inlet frame",geometry,new Vector3(5.7f,3.3f,-5.96f),new Vector3(0.8f,0.65f,0.13f),cyan);
-            Part(PrimitiveType.Cube,"Ice unloading inlet",geometry,new Vector3(5.7f,3.3f,-6.04f),new Vector3(0.6f,0.45f,0.03f),dark);
+            TankSocket = new GameObject("Tank transfer socket").transform;
+            TankSocket.SetParent(geometry,false); TankSocket.localPosition = new Vector3(5.7f,3.3f,-6.30f);
+            TankSocket.localRotation = Quaternion.Euler(0,180,0);
+            Part(PrimitiveType.Cube,"Ice unloading inlet",TankSocket,new Vector3(0,0,-0.10f),new Vector3(0.62f,0.42f,0.10f),dark);
+            for(int side=-1;side<=1;side+=2) {
+                Part(PrimitiveType.Cube,"Receiver side " + side,TankSocket,new Vector3(side*0.38f,0,-0.08f),new Vector3(0.12f,0.6f,0.35f),hull);
+                Part(PrimitiveType.Cube,"Receiver rim " + side,TankSocket,new Vector3(0,side*0.27f,-0.08f),new Vector3(0.74f,0.08f,0.35f),cyan);
+                Part(PrimitiveType.Cube,"Dock guide " + side,TankSocket,new Vector3(side*0.65f,-0.70f,0.55f),new Vector3(0.12f,0.12f,1.7f),dark);
+            }
+            BuildDroneDock(geometry,hull,dark,cyan,amber);
             Part(PrimitiveType.Cube,"Tank service pipe",geometry,new Vector3(3.9f,-1.7f,-4.3f),new Vector3(3.4f,0.3f,0.3f),dark);
             for (int side = 0; side < 2; side++)
             {
@@ -88,6 +101,37 @@ namespace SpaceMiner
                 Part(PrimitiveType.Cube,"Damaged panel brace",wing,new Vector3(side==0?-3.1f:3.1f,0.25f,side==0?2.05f:-4.1f),new Vector3(2.8f,0.16f,0.18f),hull,Quaternion.Euler(0,side==0?23f:-30f,0));
             }
             Part(PrimitiveType.Cube,"Dock warning",geometry,new Vector3(-7f,1.2f,-1.1f),new Vector3(1.5f,0.1f,0.2f),amber);
+        }
+
+        private void BuildDroneDock(Transform geometry, Material hull, Material dark, Material cyan, Material amber)
+        {
+            DroneDock = new GameObject("Drone Charging Dock").transform;
+            DroneDock.SetParent(geometry,false);
+            DroneDock.localRotation = Quaternion.Euler(0,150,0);
+            DroneDock.localPosition = DroneDock.localRotation * Vector3.forward * 22f + Vector3.up * 1.6f;
+            Part(PrimitiveType.Cube,"Dock access bridge",DroneDock,new Vector3(0,-0.4f,-6f),new Vector3(2.2f,0.6f,10f),dark);
+            Part(PrimitiveType.Cube,"Charging deck",DroneDock,new Vector3(0,-0.15f,1f),new Vector3(14.4f,0.3f,12.5f),dark);
+            Part(PrimitiveType.Cube,"Central maneuver aisle",DroneDock,new Vector3(0,0.015f,0),new Vector3(13.7f,0.025f,2.5f),hull);
+            for(int index=0;index<10;index++) {
+                bool maintenance=index>=ChargingBerthCount;
+                var bay = new GameObject((maintenance ? "Maintenance Bay " : "Charging Bay ") + (index+1).ToString("00")).transform;
+                bay.SetParent(DroneDock,false);
+                int row=index/4;
+                bay.localPosition=maintenance ? new Vector3(index==8 ? -5f : 5f,0,5.5f)
+                    : new Vector3((index%4-1.5f)*3.2f,0,row==0 ? -3.1f : 3.1f);
+                bay.localRotation=Quaternion.Euler(0,maintenance || row==1 ? 180f : 0f,0);
+                Material light=maintenance ? amber : cyan;
+                Part(PrimitiveType.Cube,"Bay back wall",bay,new Vector3(0,0.95f,-1.28f),new Vector3(2.6f,1.8f,0.18f),hull);
+                Part(PrimitiveType.Cube,"Bay canopy",bay,new Vector3(0,1.85f,-0.48f),new Vector3(2.6f,0.15f,1.7f),hull);
+                for(int side=-1;side<=1;side+=2) {
+                    Part(PrimitiveType.Cube,"Bay post " + side,bay,new Vector3(side*1.22f,0.9f,0.30f),new Vector3(0.14f,1.8f,0.14f),dark);
+                    Part(PrimitiveType.Cube,"Guide rail " + side,bay,new Vector3(side*0.55f,0.25f,-0.05f),new Vector3(0.17f,0.13f,2.1f),hull);
+                    Part(PrimitiveType.Cube,"Entry light " + side,bay,new Vector3(side*1.10f,0.04f,1.0f),new Vector3(0.12f,0.04f,0.8f),light);
+                }
+                Part(PrimitiveType.Cube,"Charging connector",bay,new Vector3(0,0.85f,-1.10f),new Vector3(0.46f,0.24f,0.30f),light);
+                berths[index]=new GameObject("Parked drone pose").transform;
+                berths[index].SetParent(bay,false); berths[index].localPosition=new Vector3(0,0.88f,-0.12f);
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 # MainDev
 
-Chat-ID: `01a11007-2934-7520-96c3-3991e89ccaf8`. Exportstand: 2026-10-06T13:17:29.153160+00:00.
+Chat-ID: `01a11007-2934-7520-96c3-3991e89ccaf8`. Exportstand: 2026-10-07T18:11:27.874744+00:00.
 
 Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus
 
@@ -377,4 +377,188 @@ Super....
 ## Assistent · 2026-10-06T12:43:17.844Z
 
 Damit steht der Ablauf: **zunächst die ganze Station mit Wasser und Strom ausrichten; bewegliche Solarflügel erst nach Forschung und Reparatur.** Beim Anklicken zeigt die Station Leistung, Ausrichtung und Rotation.
+
+## Nutzer · 2026-10-07T05:46:30.053Z
+
+checke alles aus und schau dir die doku an
+
+## Assistent · 2026-10-07T05:46:42.660Z
+
+Ich prüfe den aktuellen Repository-Stand und lese die Projektdokumentation samt Chatregister. Danach fasse ich zusammen, was umgesetzt ist, welche Entscheidungen gelten und wo noch Lücken oder Widersprüche bestehen.
+
+## Assistent · 2026-10-07T05:47:27.212Z
+
+Der Checkout ist sauber und enthält inzwischen Station, sichtbaren Bergbauzyklus, Settings, Audio und das Techtree-Menü. Eine wichtige Dokumentationslücke ist aufgefallen: Unsere bestätigte Entscheidung zu Sonne, Stationsrotation und Ausrichtung mit Wasserdüsen steht im Chatarchiv, aber noch nicht in der aktuellen Spielidee.
+
+## Assistent · 2026-10-07T05:47:54.628Z
+
+Ich habe Repository, Projektdoku, Fachunterlagen und das aktuelle MainDev-Archiv geprüft.
+
+**Aktueller Stand:** Branch `main`, Commit `5cfd179`, keine lokalen Änderungen. Unity **6000.4.7f1**; 100-Asteroiden-Wolke, modulare Station, sichtbarer Bergbauzyklus, gespeicherte Settings, Musik und Tier-I-Techtree-Menü sind integriert. Forschung selbst fehlt noch.
+
+Die wichtigsten offenen Punkte:
+
+- **Sonne und Stationsausrichtung:** Unsere bestätigte Entscheidung steht im Chatarchiv, fehlt aber in der aktuellen Spielidee. Noch keine Umsetzung; Solarleistung weiterhin fest bei 0,5 kW.
+- **Drohnen:** Beschlossen ist nur eine funktionsfähige Drohne. Der Code behandelt Drohne 02 weiterhin als funktionsfähig, aber unversorgt.
+- **Ressourcen:** Eisquellen haben weiterhin pauschal 10.000 kg Rohmaterial. Volumenbasierte Vorräte fehlen.
+- **Dokumentation:** Ältere Settings-/Audioabschnitte widersprechen neueren Ergänzungen. Das README verweist noch auf den alten Chatexporter statt `ExportChatMemory.py`.
+- **Weitere Systeme:** Spielstandspeicherung, vollständige Energieversorgung, Reparaturen und echte Forschungsfreischaltungen bleiben offen.
+
+Der letzte dokumentierte vollständige Spieltest bestand **789 Prüfungen**. Heute habe ich keine Builds oder Spieltests ausgeführt und nichts geändert.
+
+## Nutzer · 2026-10-07T05:48:31.030Z
+
+Ok kannst du zuerst prüfen ob es neue Chats gibt und die dann anlegen und auch das memory updaten
+
+## Assistent · 2026-10-07T05:48:33.859Z
+
+Ich gleiche die aktuellen SpaceMiner-Chats mit dem Register ab, ergänze fehlende Einträge und aktualisiere die lesbaren Archive sowie das gemeinsame Projektmemory.
+
+## Assistent · 2026-10-07T05:50:13.195Z
+
+Die acht lokalen Themenchats sind bereits registriert. Zusätzlich habe ich zwei frühere Cloud-Chats zu Techtree und Audio gefunden. Ich ergänze sie als historische Quellen und kennzeichne, wie vollständig ihre Texte verfügbar sind.
+
+## Assistent · 2026-10-07T05:51:19.613Z
+
+Die beiden Cloud-Archive sind angelegt, und die acht lokalen Archive wurden aktualisiert. Der früher registrierte lokale Arbeitschat bleibt nicht auffindbar. Im Projektmemory ergänze ich jetzt auch die bestätigten Entscheidungen zu Sonne, Solarleistung und Stationsausrichtung, die bisher nur im Chat standen.
+
+## Assistent · 2026-10-07T05:51:41.672Z
+
+Erledigt:
+
+- Zwei bisher fehlende Cloud-Chats zu **Sound/Effekten** und **Techtree** registriert und archiviert.
+- Acht lokale Chatarchive aktualisiert.
+- [Projektmemory](C:/Users/achim.dannecker/source/repos/SpaceMinerCodex/docs/Projektmemory.md) und Spielidee um die bestätigten Solar- und Ausrichtungsentscheidungen ergänzt.
+- Exporter und Archivzuordnung erfolgreich geprüft.
+
+Ein früherer lokaler Arbeitschat bleibt nicht auffindbar; die Lücke ist dokumentiert. Kein Commit oder Push.
+
+## Nutzer · 2026-10-07T05:54:00.413Z
+
+Es müsste noch einen mit Ideenbacklog geben oder?
+
+## Assistent · 2026-10-07T05:54:04.054Z
+
+Ich prüfe gezielt, ob „Ideenbacklog“ in der Chatliste oder den archivierten Chats auftaucht.
+
+## Assistent · 2026-10-07T05:54:16.307Z
+
+„Ideenbacklog“ fehlt tatsächlich im Register. Ich finde ihn aber auch in der aktuell verfügbaren Chatliste und den Archiven nicht.
+
+Er könnte auf deinem anderen Rechner liegen. Öffne den Chat dort und teile mir seine Chat-ID oder einen Link mit; dann kann ich ihn eindeutig zuordnen und ergänzen.
+
+## Nutzer · 2026-10-07T10:14:27.008Z
+
+Baue mal einen kleinen Splashscreen ein in dem man das Spiel starten kann über Demo starten. Dann noch alles was so dazu gehört, Beenden und auch Konfiguration.
+
+## Assistent · 2026-10-07T10:14:30.118Z
+
+Ich baue ein kleines Startmenü mit „Demo starten“, „Konfiguration“ und „Beenden“ und binde es an die vorhandene Settings-Oberfläche an. Zuerst prüfe ich den aktuellen Einstieg und den Arbeitsstand.
+
+## Assistent · 2026-10-07T10:15:29.285Z
+
+Das Startmenü ist eingebaut: „Demo starten“ beginnt Miras Intro, „Konfiguration“ öffnet die vorhandenen Einstellungen, und „Beenden“ zeigt eine kurze Rückfrage. Solange das Startmenü offen ist, bleiben Simulation und Intro pausiert. Ich prüfe jetzt den Build und den Übergang ins Spiel.
+
+## Assistent · 2026-10-07T10:16:41.310Z
+
+Der erste Build blieb beim Unity-Lizenzzugriff hängen. Ich habe den eigenen Batch-Prozess beendet und den Build mit Zugriff auf den lokalen Lizenzdienst neu gestartet. Die bestehenden Änderungen an den Intro-Aufnahmen bleiben erhalten.
+
+## Assistent · 2026-10-07T10:17:51.651Z
+
+Die Skripte sind erfolgreich kompiliert. Der vorhandene Build-Befehl bereitet zusätzlich die Asteroidenassets neu auf; das dauert noch. Danach prüfe ich das Startmenü und den bestehenden Spieltest.
+
+## Assistent · 2026-10-07T10:19:12.790Z
+
+Der Startmenü-Test ist bestanden: Die Konfiguration kehrt zum Splashscreen zurück, und „Demo starten“ beginnt das Intro. Die Ansicht mit den drei Schaltflächen ist auch visuell geprüft. Der bestehende Spieltest läuft noch.
+
+## Assistent · 2026-10-07T10:20:00.670Z
+
+Eingebaut und das Spiel geöffnet:
+
+- **Demo starten** beginnt Miras Intro.
+- **Konfiguration** öffnet die vorhandenen Einstellungen.
+- **Beenden** mit kurzer Rückfrage.
+
+Build, Startmenü-Test und alle **789 Spielprüfungen** bestanden. Projektmemory aktualisiert.
+
+## Nutzer · 2026-10-07T10:22:42.964Z
+
+Ok das sieht schon gut aus, kannst du das Stylisch nach links machen und irgendwie eine animierte Szene aus dem Spiel machen so mit der Station und ein paar Asteoriten und ein wenig bewegung drum herum, später dann mit der sonne und dem kaputten planeten
+
+## Assistent · 2026-10-07T10:22:45.998Z
+
+Ich rücke das Menü nach links und setze die Station mit ein paar Asteroiden als animierten Hintergrund in Szene. Die Bewegung bleibt dezent; Sonne und kaputter Planet folgen später.
+
+## Assistent · 2026-10-07T10:23:57.607Z
+
+Das Menü sitzt jetzt links. Rechts läuft eine langsame Kamerafahrt um die echte Station, mit sieben dezent driftenden und rotierenden Asteroiden aus den vorhandenen Spielmodellen. Beim Demostart werden diese Hintergrundobjekte entfernt und die Kamera an das Intro übergeben.
+
+## Assistent · 2026-10-07T10:25:07.504Z
+
+Der Build ist erfolgreich. Ich prüfe gerade die neue Bildkomposition und den Demostart, damit die Station neben dem linken Menü gut sichtbar bleibt.
+
+## Assistent · 2026-10-07T10:25:48.650Z
+
+Die Ansicht passt: Das Menü steht links, die Station ist rechts frei sichtbar, und Asteroiden geben dem Hintergrund räumliche Tiefe. Der Startmenü-Test ist bestanden. Sonne und kaputter Planet sind als spätere Ergänzung vorgemerkt.
+
+## Assistent · 2026-10-07T10:26:08.168Z
+
+Fertig und geöffnet: Menü links, rechts die Station mit langsamer Kamerafahrt und driftenden, rotierenden Asteroiden.
+
+Sonne und kaputter Planet sind für später vorgemerkt. Build, Startmenü-Test und **789 Spielprüfungen** bestanden; Projektmemory aktualisiert.
+
+## Nutzer · 2026-10-07T10:28:28.291Z
+
+Mache in den Splashscreen noch ein Cinematics rein, da soll man dann alle Cinematics die man schon gesehen hat sprich die in der Story schon kamen reinkommen und auch einen Bereich für CutSceens. Also wenn Cinematics auf geht zwei Bereiche einmal die Cinematics selber und einmal Cutscenen
+
+## Assistent · 2026-10-07T10:28:31.528Z
+
+Ich ergänze „Cinematics“ im Splashscreen. Dahinter kommen zwei Bereiche: „Cinematics“ und „Cutscenen“, jeweils mit den bereits in der Story gesehenen Sequenzen. Ich prüfe zuerst, welche Sequenzen vorhanden sind und wie wir ihren gesehenen Status speichern können.
+
+## Assistent · 2026-10-07T10:29:07.471Z
+
+Aktuell ist Miras „Erwachen“ die einzige abspielbare Storysequenz; ich ordne sie unter „Cutscenen“ ein. Das neue Intro-Cinematic ist noch nicht im Spiel integriert. Die Galerie zeigt deshalb nur freigeschaltete, abspielbare Einträge und speichert ab jetzt, welche Sequenzen in der Story erschienen sind.
+
+## Assistent · 2026-10-07T10:30:29.732Z
+
+Die Galerie ist eingebaut: zwei getrennte Bereiche, und „Wiederansehen“ erscheint nur bei freigeschalteten Sequenzen. Nach dem Ende oder Überspringen einer Wiederholung geht es zurück zur Galerie. Ich prüfe jetzt Freischaltung, Rückkehr und Demostart.
+
+## Assistent · 2026-10-07T10:31:23.600Z
+
+Freischaltung, Wiederholung und Rückkehr sind geprüft; auch die beiden Galerieansichten passen. Die 789 bestehenden Spielprüfungen sind bestanden. Einen kleinen Eingabeschutz ergänze ich noch, damit Escape beim Überspringen der Wiederholung in der Galerie bleibt.
+
+## Assistent · 2026-10-07T10:32:26.266Z
+
+Eingebaut und geöffnet: **Cinematics** führt zu zwei Bereichen, **Cinematics** und **Cutscenen**.
+
+Storysequenzen werden beim ersten Auftreten gespeichert und zum Wiederansehen freigeschaltet. Miras „Erwachen“ erscheint nach dem nächsten Demostart unter Cutscenen. Nach einer Wiederholung geht es zurück zur Galerie.
+
+Build und Galerie-Test bestanden; Projektmemory aktualisiert.
+
+## Nutzer · 2026-10-07T10:36:17.254Z
+
+WEnn man im Spiel auf dem Hauptschirm ESC drückt dann sollte gefragt werden ob beendet wird das Spiel in Pause gesetzt sein. Pause Modus sollte auch gehen als erste Option bei der Geschwindigkeit im Dev Mode sollte man die Geschwindigkeit auch bis zu 500 machen können.
+
+## Assistent · 2026-10-07T10:36:21.657Z
+
+Ich ergänze die Beenden-Rückfrage bei Escape und pausiere das Spiel, solange sie offen ist. Außerdem kommt „Pause“ als erste Geschwindigkeitsoption dazu; im Dev-Modus erhöhe ich das Limit auf 500×.
+
+## Assistent · 2026-10-07T10:37:53.926Z
+
+Escape öffnet jetzt im Spiel eine Rückfrage mit „Weiterspielen“ und „Beenden“. Sie hält die Simulation auch dann an, wenn die normale Menüpause deaktiviert ist. Beim Abbrechen bleibt die gewählte Geschwindigkeit erhalten, auch eine manuell gesetzte Pause.
+
+## Assistent · 2026-10-07T10:38:43.687Z
+
+Die Prüfungen für Dialogpause, Abbruch und das 500×-Limit sind bestanden, ebenso die 789 bestehenden Spielprüfungen. Ich kontrolliere noch die Darstellung der Rückfrage und der neuen „Pause“-Option.
+
+## Assistent · 2026-10-07T10:39:42.949Z
+
+Erledigt und Spiel geöffnet:
+
+- **ESC** fragt nach dem Beenden und pausiert das Spiel.
+- **Weiterspielen** oder erneut ESC kehrt zum bisherigen Tempo zurück.
+- **Pause** steht als erste Geschwindigkeitsoption.
+- Im Dev-Modus sind **0 bis 500×** möglich.
+
+Build, Dialogtest und **789 Spielprüfungen** bestanden. Projektmemory aktualisiert.
 
