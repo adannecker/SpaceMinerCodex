@@ -1,6 +1,6 @@
 # TechTree
 
-Chat-ID: `01a110fc-1a02-7ad0-8b6e-48129d0b7453`. Exportstand: 2026-10-07T18:11:27.874744+00:00.
+Chat-ID: `01a110fc-1a02-7ad0-8b6e-48129d0b7453`. Exportstand: 2026-10-07T18:23:52.330197+00:00.
 
 Tier-I-Entwurf und integriertes Techtree-Menü; Forschungsmechanik offen
 
@@ -172,4 +172,3 @@ Im Spiel umgesetzt und gestartet. Rechts oben öffnet das Verzweigungs-Symbol ne
 Overlays, versetzte Andockpunkte und gerade Verbindungen sind integriert. Builds, Menütest und 789 Spielprüfungen bestanden.
 
 Die eigentliche Forschungsmechanik folgt noch.
-

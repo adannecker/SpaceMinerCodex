@@ -1,6 +1,6 @@
 # Asteroidenvarianten
 
-Chat-ID: `01a11007-53fc-7d60-af57-f15ed3399d0d`. Exportstand: 2026-10-07T18:11:27.874744+00:00.
+Chat-ID: `01a11007-53fc-7d60-af57-f15ed3399d0d`. Exportstand: 2026-10-07T18:23:52.330197+00:00.
 
 Asteroidenformen, Materialien und Generator
 
@@ -51,4 +51,3 @@ Ich prüfe die Anweisungen am neuen Projektort und übernehme den neuen Pfad.
 Bestätigt: Ab sofort verwende ich ausschliesslich `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex`.
 
 `AGENTS.md` am neuen Ort ist gelesen. Keine Projektänderungen vorgenommen.
-

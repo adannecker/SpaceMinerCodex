@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SpaceMiner
 {
-    // Presentation definitions. These do not claim that a research simulation exists.
+    // Water-mining knowledge is live; the other planned fields remain presentation definitions.
     public sealed class TechnologyNode
     {
         public readonly string Id, Title, Icon, Description, Requirements, Practical;
@@ -27,7 +27,7 @@ namespace SpaceMiner
             N("energy","Stationsversorgung","power",1,4,true,P("start"),"Solarflächen und kleiner Kernreaktor sind vorhandene Technik. Vollständiger Notstrombetrieb ist noch offen.","Vorhandene Stromquelle und Ladestation.","Nutzbare elektrische Leistung."),
             N("logistics","Wassertransport","cargo",1,5,true,P("start"),"Der vorhandene Drohnenkreislauf bringt Eis zur Station und befüllt den Tank.","Drohne 01 und Stationstank.","Batterie, Treibwasser und freie Tankkapazität."),
             N("robotics","Drohnensteuerung","robot",1,6,true,P("start"),"Drohne 01 übernimmt den wiederholten Wasserauftrag.","Einsatzfähige Drohne.","Versorgung und erreichbare Arbeitsquelle."),
-            N("ice","Gezielte Eisgewinnung","ice",2,1,false,P("mining"),"Abbauparameter an die bekannte Eisquelle anpassen.","Basisabbau, Wasser entdeckt und praktische Erfahrung. Wissensschwellen noch offen.","Abbaudrohne und analysierte Eisquelle."),
+            N("ice","Wasserabbau optimieren","ice",2,1,true,P("mining"),"Material besser verstehen: produktive Fahrten verbessern den gewählten Schwerpunkt.","Basisabbau und bekannte Eisquelle.","Förderrate steigern oder den Strombedarf des Abbaus senken."),
             N("quality","Wasserqualität","water",2,2,false,P("science"),"Verunreinigungen erkennen und geeignete Aufbereitung bestimmen.","Ressourcenanalyse und Wasserprobe.","Analyseplatz; passende Aufbereitung für Trinkwasser."),
             N("survey","Prospektion","scan",2,3,false,P("explore","science"),"Scans und Proben zu einer Lagerstättenbewertung verbinden.","Nahbereichsscan und Ressourcenanalyse.","Scanner, Analyseplatz und Probendrohne."),
             N("load","Lastmanagement","battery",2,4,false,P("energy"),"Verbraucher priorisieren und verfügbare Leistung aufteilen.","Stationsversorgung und Energy Knowledge; Schwelle offen.","Steuerung, Stromverteilung und Leistungsreserven."),

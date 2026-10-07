@@ -1,6 +1,6 @@
 # GitHub
 
-Chat-ID: `01a11002-9eca-70a1-95ec-00cbc84132ee`. Exportstand: 2026-10-07T18:11:27.874744+00:00.
+Chat-ID: `01a11002-9eca-70a1-95ec-00cbc84132ee`. Exportstand: 2026-10-07T18:23:52.330197+00:00.
 
 Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung
 
@@ -38,10 +38,10 @@ Ja, **alle drei Chatverläufe sind vorhanden** unter `SpaceMinerCodex/docs/Chats
 
 Die Doku beschreibt sie korrekt als Textarchive vom 5. Oktober 2026. Sie enthalten Gesprächsinhalte, aber keine vollständigen Werkzeugprotokolle oder Chat-Anhänge. Sie lassen sich als Kontext lesen, jedoch nicht als ursprüngliche Codex-Sitzungen importieren.
 
-**1. Kann ich die Chats anlegen?**  
+**1. Kann ich die Chats anlegen?**
 Ja, ich kann hier neue Codex-Chats mit passenden Namen und Startaufträgen anlegen. Jeder kann beim Start die Projektübergabe und seinen archivierten Chat lesen. Dadurch können wir inhaltlich dort weiterarbeiten.
 
-**2. Kannst du sie selbst anlegen?**  
+**2. Kannst du sie selbst anlegen?**
 Ja, ebenso. Entscheidend ist, dass alle drei Chats auf denselben Projektordner zugreifen und anfangs die entsprechenden Unterlagen lesen.
 
 **Zum Memory:** Die Archive können unser gemeinsames Projektgedächtnis bilden. Andere Chatverläufe sind aber nicht automatisch vollständig im Kontext jedes Chats. Für zuverlässige Nutzung empfehle ich eine `AGENTS.md`, die neue Chats auf `docs/Projektuebergabe.md`, `docs/Spielidee.md` und das passende Chatarchiv verweist. Codex unterstützt solche Projektanweisungen offiziell. [OpenAI-Dokumentation](https://learn.chatgpt.com/docs/agent-configuration/agents-md)
@@ -301,7 +301,7 @@ Ok dann kann ich aktuell das lokal SpaceMinerCodex Projekt so nicht nutzen oder 
 Das bisherige „SpaceMinerCodex“ ist laut Projektliste ein ChatGPT-Projekt. Eine direkte Umwandlung kann ich nicht bestätigen. Der zuverlässige Weg ist:
 
 1. In der **Codex-Ansicht ein lokales Projekt hinzufügen**.
-2. Diesen vorhandenen Ordner auswählen:  
+2. Diesen vorhandenen Ordner auswählen:
    `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex`
 3. Neue Entwicklungs-Chats aus diesem lokalen Projekt starten.
 
@@ -331,7 +331,7 @@ Ja, **aber wechsle zuerst oben links von „ChatGPT“ zu „Codex“** – dein
 Dann:
 
 1. Neben **Projekte** auf **+** klicken.
-2. Den vorhandenen Projektordner auswählen:  
+2. Den vorhandenen Projektordner auswählen:
    `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex`
 3. Das lokale Projekt beispielsweise **„SpaceMinerCodex lokal“** nennen, damit du beide unterscheiden kannst.
 
@@ -427,4 +427,3 @@ War ein guter Fortschritt heute
 ## Assistent · 2026-10-06T13:19:36.891Z
 
 Ja 🙂 Von der Grundversion zur Raumstation mit sichtbarem Bergbau, Settings, Musik und Techtree – und der ganze Stand ist jetzt samt Projektgedächtnis für heute Abend gesichert.
-

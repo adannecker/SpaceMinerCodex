@@ -164,7 +164,9 @@ namespace SpaceMiner
                 Label(x, y, 308, 24, "Ankunft in   " + (drone.IsFlying ? WaterScenario.Duration(drone.ArrivalSeconds) : "—")); y += 30;
                 Label(x, y, 308, 24, "Abbau verbleibend   " + (drone.Phase == DronePhase.Mining ? WaterScenario.Duration(drone.MiningSecondsRemaining) : "—")); y += 30;
                 Label(x, y, 308, 24, "Phase verbleibend   " + WaterScenario.Duration(drone.PhaseSecondsRemaining)); y += 30;
-                Label(x, y, 308, 22, "Zeitangaben in Spielzeit", muted); y += 28;
+                Label(x, y, 308, 22, "Abbauwissen Lv. " + scenario.Mining.Level + " · " + (scenario.Mining.Progress * 100).ToString("0") + " %", muted); y += 28;
+                Label(x, y, 308, 22, drone.EffectiveMiningRate.ToString("0.000") + " kg/s · " + drone.EffectiveMiningPower.ToString("0.0") + " kW", muted); y += 28;
+                Label(x, y, 308, 22, "Reserve " + (drone.ReserveFraction * 100).ToString("0") + " % · Zeiten in Spielzeit", muted); y += 28;
                 Bar(new Rect(x, y, 308, 9), drone.PhaseProgress); y += 22;
                 Label(x, y, 308, 24, "Eisquelle   " + (drone.Target == null ? "—" : drone.Target.Info.DisplayName), muted); y += 30;
                 if (!drone.IsOperational) { Label(x, y, 308, 42, "Havarieschaden. Eine Reparatur ist später möglich.", muted); y += 50; }

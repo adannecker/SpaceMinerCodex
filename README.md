@@ -6,10 +6,10 @@ Für den aktuellen Rechnerwechsel und den Kontext aller bekannten Themenchats: [
 
 ## Entwicklungsumgebung
 
-- Unity **6000.4.7f1**, auf diesem Rechner bereits installiert.
+- Projektversion: Unity **6000.4.7f1**. Die passende lokale Installation beim Rechnerwechsel prüfen.
 - Windows 64 Bit, Built-in Render Pipeline, C#.
 - Visual Studio Community 2022 ist auf diesem Rechner installiert. Das Unity-Paket für die Visual-Studio-Anbindung ist im Projekt eingetragen; Unity lädt es beim ersten Import. Keine kostenpflichtigen Assets nötig.
-- **1 Unity-Einheit = 1 Meter.** Der aktuelle Test zeigt 100 Asteroiden als räumliche Wolke rund um das Schiff, mit 100 m bis 5 km Durchmesser. Eine Bibliothek aus 100 individuellen Formen wird mit verschiedenen Größen und Drehungen wiederverwendet. Dazu kommen ein 24 m langes Platzhalterschiff und zehn 2 × 2 × 2 m große Drohnen. Drohne 01 ist versorgt und einsatzbereit. Drohne 02 funktioniert, wartet aber ohne Ladung und Treibstoff; acht weitere sind defekt.
+- **1 Unity-Einheit = 1 Meter.** Der aktuelle Test zeigt 100 Asteroiden als räumliche Wolke rund um die Station, mit 100 m bis 5 km Durchmesser. Eine Bibliothek aus 100 individuellen Formen wird mit verschiedenen Größen und Drehungen wiederverwendet. Die etwa 60 m breite Raumstation besitzt einen Drohnendock mit zwei Reihen zu je vier Ladebuchten und zwei Wartungsbuchten für die zehn vorhandenen Drohnen. Drohne 01 ist versorgt und einsatzbereit. Drohne 02 funktioniert, wartet aber ohne Ladung und Treibstoff; acht weitere sind defekt. Diese ältere Zwei-Drohnen-Logik bleibt gegenüber der Ein-Drohnen-Spielidee abzugleichen.
 
 ## Starten
 
@@ -21,6 +21,14 @@ Für den aktuellen Rechnerwechsel und den Kontext aller bekannten Themenchats: [
 Alternativ kann das gebaute Spiel unter `Builds/Windows/SpaceMiner.exe` direkt gestartet werden.
 
 Beim Start erscheint ein kleines Startmenü mit **Demo starten**, **Konfiguration** und **Beenden**. Demo starten beginnt **Miras Intro** mit Texteinblendungen, einer ersten deutschen weiblichen Teststimme und Kamerafahrten. **Esc** überspringt das Intro und wechselt direkt ins Spiel. Währenddessen pausieren Simulation und Kamerasteuerung. Nach dem letzten Satz startet das Spiel automatisch.
+
+Lokale Desktop-Vorschau vom 06.10.2026: Der Stand `5cfd179` wurde mit der hier installierten Unity-Version **6000.6.4f1** in einer separaten Kopie unter `Builds/LocalPreview-6000.6.4f1` gebaut. `Builds/Windows` enthält diese neue Spielversion; die vorherige liegt unter `Builds/Windows-before-current-preview`. Die gemeinsame Projektversion bleibt 6000.4.7f1. Development-/Release-Build und Techtree-Datenprüfung erfolgreich; der automatische Spieltest endete ohne Abschlussbericht und gilt nicht als bestanden. Die normale Spielversion wurde anschließend sichtbar gestartet.
+
+Die anschließend ergänzte Dock-Version enthält rückwärts geparkte Drohnen, eine direkte Tankkupplung, Klammern mit fest dimensionierten Schuhen sowie kantige Eisstücke im sichtbaren Frachtraum hinter einer verglasten Klappe. Finale Development-/Release-Builds und **819 Spielprüfungen** auf diesem Desktop mit Unity 6000.6.4f1 bestanden, inklusive Wasserbilanz und Rückwärtsparken. Diese überarbeitete Version liegt jetzt unter `Builds/Windows`; ihr Vorgänger unter `Builds/Windows-before-drone-dock`. Details: [Bergbaudrohnen](docs/Bergbaudrohnen.md).
+
+Der spätere Stand vom 06.10.2026 ergänzt Wasserabbau-Erfahrung, Rückkehrreserve und das durchgehende Maya-Testintro mit zeitgekoppelten Untertiteln. Letzte dokumentierte Vorschau: 823 Spielprüfungen; Abbaubalance separat mit 194 Prüfungen. Die Übergabe nennt Herkunft und Grenzen dieser Ergebnisse. Alle neun aktuellen Themenchats sind als Textarchive gesichert; kopierbare Startaufträge zum Fortsetzen beziehungsweise Anlegen am anderen Rechner stehen in [Rechnerwechsel-Memory](docs/Rechnerwechsel-Memory.md). Builds werden nicht durch Git übertragen und müssen dort neu erstellt werden.
+
+Bei jedem Start beginnt **Miras Intro** mit Texteinblendungen, einer ersten deutschen weiblichen Teststimme und Kamerafahrten. **Esc** überspringt das Intro und wechselt direkt ins Spiel. Währenddessen pausieren Simulation und Kamerasteuerung. Nach dem letzten Satz startet das Spiel automatisch.
 
 ## Steuerung
 
@@ -37,7 +45,7 @@ Beim Start erscheint ein kleines Startmenü mit **Demo starten**, **Konfiguratio
 | B | Übersicht über das gesamte Testfeld |
 | Linksklick, dann F | Objekt auswählen und darauf zoomen |
 | Tab | Drohne 01 fokussieren und ihr folgen |
-| Leertaste | Simulation pausieren / mit 100× fortsetzen |
+| Leertaste | Simulation pausieren / mit vorherigem Tempo fortsetzen |
 | F11 oder Alt + Enter | Zwischen Fenster und Vollbild wechseln, auch während des Intros |
 | H | Informationsanzeige ein-/ausblenden |
 | Escape | Im Intro: überspringen. Im Spiel: pausierte Beenden-Rückfrage; erneut Escape oder Weiterspielen bricht ab |
@@ -49,7 +57,7 @@ Unten rechts lässt sich auch per Knopf zwischen Fenster und Vollbild wechseln. 
 ## Bearbeiten und bauen
 
 - Kamera: `Assets/SpaceMiner/Scripts/OrbitCamera.cs`.
-- Intro: `Assets/SpaceMiner/Scripts/IntroSequence.cs`; Sprechertext und Regie stehen in [docs/Dialoge/01_Intro_Erwachen.md](docs/Dialoge/01_Intro_Erwachen.md). Nach Textänderungen die lokalen Sprachdateien mit `powershell.exe -NoProfile -File .\tools\GenerateIntro.ps1` neu erzeugen und das Spiel bauen. Die Teststimme ist Microsoft Hedda Desktop; Sprachdateien sind im Build enthalten und benötigen beim Spielen keinen Sprachdienst.
+- Intro: `Assets/SpaceMiner/Scripts/IntroSequence.cs`; Sprechertext und Regie stehen in [docs/Dialoge/01_Intro_Erwachen.md](docs/Dialoge/01_Intro_Erwachen.md). Aktuell spielt die lokale Maya-Testaufnahme durchgehend; 17 Untertitel folgen ihren gemessenen Zeitmarken und der Audioposition. Nach Textänderungen eine passende Aufnahme und neue Zeitmarken bereitstellen. `tools/GenerateIntro.ps1` schützt die importierte Aufnahme vor Überschreiben mit der alten Hedda-Teststimme. Audio ist im Build enthalten und benötigt beim Spielen keinen Sprachdienst.
 - Asteroidenpositionen und Größen werden beim Einrichten aus `Assets/SpaceMiner/BeltSettings.asset` übernommen. Danach lassen sie sich direkt in der Szene im Inspector bearbeiten und speichern.
 - **Space Miner → Windows-Spiel bauen** erzeugt die Windows-Version. Vorher die Szene speichern.
 - Asteroiden verwenden jetzt prozedurale Formen, vier LODs und gemischte PBR-Oberflächen. Neun Beispiel-Prefabs und drei erweiterbare Typen liegen unter `Assets/SpaceMiner/Asteroids`; Anleitung: [Asteroidengenerator](docs/AsteroidGenerator.md).
@@ -92,11 +100,11 @@ Sehr kleine instanzierte Körper werden in der Übersicht mit mindestens 1,8 Pix
 3. Drohne anklicken oder links auswählen, um Batterie, Treibwasser, Ladung, Geschwindigkeit, Entfernung und Zeitangaben zu sehen. **Tab** folgt ihr mit der Kamera.
 4. Laden und Nachtanken erfolgen automatisch. Weitere Flüge füllen den Tank. Leertaste und die Knöpfe unten rechts steuern die Simulationszeit; Kamera und Anzeigen bleiben unabhängig davon bedienbar.
 
-Der Balken über der Drohne zeigt den Fortschritt ihrer aktuellen Phase. Die Aufgabenliste zeigt Eiszuweisung, erste Lieferung und den vollen Tank. A-01 und A-03 enthalten im Test 80 % Wasser und 20 % unbekannte Bestandteile, A-02 65 % Wasser. Andere Asteroiden sind vollständig unbekannt. Forschung und zusätzliche Scans sind noch nicht spielbar.
+Der Balken über der Drohne zeigt den Fortschritt ihrer aktuellen Phase. Die Aufgabenliste zeigt Eiszuweisung, erste Lieferung und den vollen Tank. A-01 und A-03 enthalten im Test 80 % Wasser und 20 % unbekannte Bestandteile, A-02 65 % Wasser. Andere Asteroiden sind vollständig unbekannt. Wasserabbau-Erfahrung verbessert wahlweise Förderrate oder Energieeffizienz; weitere Forschung und zusätzliche Scans sind noch nicht spielbar.
 
 Die Zahlen sind einstellbare Spielannahmen: Schiffstank 200 L mit 20 L Startbestand; Drohne 200 kg Trockenmasse, 50 kg Ladung, 10 L Treibwasser und 8 kWh Batterie. Fluggeschwindigkeit höchstens 5 m/s, Schub 5 N, angenommene Ausströmgeschwindigkeit 1.000 m/s. Beschleunigen und Bremsen kosten Treibwasser sowie elektrische Energie. Beim Nachtanken wird Wasser aus dem Schiffstank entnommen. Der gemeldete Solar-/Reaktorstrom beträgt zusammen 2,5 kW, davon nutzt die Ladestation 2 kW. Ein komplexes Stromnetz gibt es noch nicht.
 
-Standardmäßig läuft die Simulation mit 100× Zeitraffer. Zeitangaben stehen in **Spielzeit**. Es gibt geradlinige Flüge mit Beschleunigungs- und Bremsphasen; Orbitalmechanik, Kollisionsvermeidung, bewegliche Asteroiden, Reparaturen, Nahrung und Trinkwasseraufbereitung folgen später. Auftragsabbruch vereinfacht das Wendemanöver, berücksichtigt aber den Treibstoff für das Abbremsen. Die 30 Sekunden Wasseraufbereitung sind ein Spielwert; Verunreinigungen werden bislang nicht als eigene Ressource verwaltet. Neue Spielstarts setzen den Zustand zurück; Speichern ist noch nicht implementiert. Die Asteroiden besitzen prozedurale Meshes und Materialien; Schiff und Drohnen sind weiterhin Platzhalter.
+Standardmäßig läuft die Simulation mit 1×; unten rechts stehen 0,5×, 1×, 2×, 3× und 5× zur Auswahl. Zeitangaben stehen in **Spielzeit**. Es gibt geradlinige Flüge mit Beschleunigungs- und Bremsphasen; Orbitalmechanik, Kollisionsvermeidung, bewegliche Asteroiden, Reparaturen, Nahrung und Trinkwasseraufbereitung folgen später. Auftragsabbruch vereinfacht das Wendemanöver, berücksichtigt aber den Treibstoff für das Abbremsen. Entladen dauert 240 Spielsekunden; Verunreinigungen werden bislang nicht als eigene Ressource verwaltet. Neue Spielstarts setzen Weltzustand und Abbauwissen zurück; Speichern ist noch nicht implementiert. Station und Drohnen verwenden einfache austauschbare Grundkörper.
 
 Die langfristige Spielidee und fachlichen Leitlinien stehen in [docs/Spielidee.md](docs/Spielidee.md).
 
@@ -117,7 +125,7 @@ Dies ist ein Darstellungs- und Bedienungstest, keine Simulation einer Million ak
 
 ## Settings / Configuration
 
-Neu: Rechts oben liegen zwei reine Symbolknöpfe. Das Zahnrad öffnet Settings, das Verzweigungs-Symbol links daneben den Tier-I-Techtree. Hover zeigt Informationen, Klick heftet sie an; Escape oder × schliesst den Baum. Darstellung und Voraussetzungen sind ein Entwurf, Forschungskosten und Knowledge-Progression sind noch nicht angebunden. Bedienung, Architektur und Prüfschritte: [Techtree](docs/Techtree.md).
+Rechts oben liegen zwei Symbolknöpfe: Settings und Tier-I-Techtree. Hover zeigt Informationen, Klick heftet sie an; Escape oder × schliesst den Baum. „Wasserabbau optimieren“ besitzt jetzt Erfahrung und einen wählbaren Schwerpunkt; weitere Forschungsfelder und Forschungskosten bleiben Entwürfe. Bedienung, Architektur und Prüfschritte: [Techtree](docs/Techtree.md).
 
 Der dezente Settings-Knopf rechts oben öffnet die persönlichen Einstellungen auch bei verborgenem HUD. Im Editor und in Development Builds funktioniert zusätzlich **F10**. **Escape / Cancel** verwirft den Entwurf; **Defaults** lädt Standardwerte in den Entwurf, **Apply Changes** speichert und aktiviert sie. Settings bleiben über Spielstarts hinweg erhalten. Die Simulation pausiert im Menü standardmäßig; das lässt sich unter Gameplay abschalten. Das Intro pausiert währenddessen samt Stimme.
 
@@ -141,3 +149,15 @@ Alle zehn Drohnen verwenden einen einfachen 2 m breiten Bergbaukörper mit Frach
 Die neuere Station besitzt acht Ladebuchten, zwei Wartungsplaetze und eine direkte Tankkupplung mit den zugehoerigen Andockmanoevern. Lokale Aoede-Stimme und Intro-Cinematic bleiben erhalten. Beenden aus dem Spiel fuehrt zum pausierten Startbildschirm; die Anwendung wird dort ueber die eigene Beenden-Funktion geschlossen.
 
 Das Sonnensystem verwendet nun bewusst komprimierte Spielabstaende. Heimatwelt ansehen zeigt Planet 4; Sonnensystem rahmt neun sichtbare Bahnlinien und markierte Planeten. R fuehrt zur Station zurueck. Lokale Dockinggeometrie bleibt in Metern. Werte und Grenzen: docs/Spielidee.md; Docking: docs/Bergbaudrohnen.md. Build station-playable-system-build.log und finaler Weltcheck station-playable-world-check.log erfolgreich. Rueckkehr-zum-Startbildschirm-Test station-playable-quit-check.log erfolgreich; Docking-/Kamera-/Wasserauftrag 821 Checks in station-playable-smoke.log bestanden.
+
+Abbau-Testbalance: 80 kW Abbauleistung, 0,05 kW Bordsysteme und 0,2 kWh/L Antriebsenergie. Die Drohne beendet den Abbau vor Verbrauch der berechneten Rückkehrversorgung plus 10 % Reserve. Erste Fahrt mit A-01: knapp 29 von 50 kg Fracht. 20 produktive beendete Fahrten ergeben einen Wissenslevel, mit +15 % Förderrate oder -15 % Abbauleistung im gewählten Schwerpunkt. Testwerte stehen in Settings → Developer (Editor/Development); sie werden nicht als Player-Settings gespeichert.
+
+`tools/Unity.ps1 MiningCheck` simuliert Tankfüllung und Levelaufstieg im aktuellen Development-Spiel. `-Visible` ergänzt Menübilder. Bericht und Tempovergleich: [Bergbaudrohnen](docs/Bergbaudrohnen.md#gemessene-abbauzeiten-06102026). Bei 5× dauert die 200-L-Tankfüllung aktuell etwa 6 h 42 min; Laden mit 2 kW macht die Testbalance sehr langsam. Der normale Tankauftrag endet vor dem ersten Wissenslevel; die Levelmessung nutzt ausschließlich im Prüflauf ein größeres Lager.
+
+## Aktueller Einstieg und Sicherung (07.10.2026)
+
+Verbindlicher Einstieg: docs/Projektuebergabe.md. Zwölfteilige Erinnerungssequenz mit durchgehender Narration und Musik: docs/Dialoge/IntroCinematic/README.md. Wasserabbauwissen ist inzwischen angebunden; ältere Aussagen zum reinen Techtree-Entwurf gelten nur für Hardwareforschung. Aoede bleibt die aktuelle Erwachen-Stimme, Maya ist eine archivierte Vorschau.
+
+Bei geschlossenem Editor baut SpaceMiner.Editor.StartMenuBuild.Run die vorhandene Szene ohne Neugenerierung. Zusätzliche Player-Prüfargumente: -worldVisualCheck, -quitMenuCheck, -memoryCinematicCheck, -miningBalanceCheck -miningLogicOnly und -techTreeCheck; Logs im lokalen Logs-Ordner. Chatarchive: python tools/ExportChatMemory.py; bestehende fremde Rechnerexporte bleiben erhalten.
+
+Der finale MP4-Export und Mix liegen unter outputs/Cinematic und sind versioniert. Reproduzierbarer Videoexport benötigt Python mit numpy, imageio-ffmpeg (oder FFMPEG als Pfad/ffmpeg im PATH), den Unity-Zwischenexport IntroCinematic-silent.mp4 und optional dessen Bildzeitdaten. Encoder-/Whisper-Caches und ältere lokale Exporte werden nicht eingecheckt. Original-WAVs, aktuelle Bilder und Metadaten stehen unter docs/Dialoge/IntroCinematic sowie Assets/SpaceMiner/Resources/MemoryCinematic.

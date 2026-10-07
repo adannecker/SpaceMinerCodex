@@ -1,41 +1,51 @@
-# Rechnerwechsel und Memory zusammenführen
+# Rechnerwechsel und gemeinsames Chatmemory
 
-## Aktuelle Empfehlung für die Unity-Entwicklung
+Stand: 07.10.2026. Die lokalen und Desktop-Themenarchive sind im gemeinsamen Register vereinigt. Acht Ursprungssitzungen wurden auf diesem Rechner frisch exportiert; neun vorhandene Exporte vom anderen Rechner wurden bewahrt. Ein früherer Arbeitschat bleibt unverfügbar. Zwei historische Cloud-Momentaufnahmen sind gesondert gekennzeichnet; sie enthalten keine rekonstruierten Anhänge. Zuordnung und Exportverfügbarkeit: [Chatübersicht](Chats/README.md), [Register](Chats/chat-register.json), [Exportbericht](Chats/export-status.json). Aktueller Spielstand und tatsächlich ausgeführte Prüfungen: [Projektübergabe](Projektuebergabe.md).
 
-Auf beiden Rechnern ein lokales Codex-Projekt mit dem dortigen Git-Checkout öffnen. Vor dem Wechsel committen und pushen; am Zielrechner lokale Änderungen prüfen und den Git-Stand holen. AGENTS.md, Projektuebergabe.md, Projektmemory.md und Chats/README.md lesen lassen. Projektwissen und alle bekannten Chatarchive werden gemeinsam mit Git übertragen. Persönliches Memory muss dafür nicht zusammengeführt werden; der unten stehende persönliche Merge-Auftrag ist optional. Builds und Cache werden lokal neu erzeugt. Unity-Version: 6000.4.7f1.
+Git überträgt Spielquellen, Assets mit `.meta`, Projektkonfiguration, Dokumentation und Textarchive. Die Archive geben neuen oder vorhandenen Chats den bisherigen Kontext; sie importieren keine ursprünglichen Sitzungen. Persönliches Codex-Memory, Zugangsdaten, Builds, Library und Logs werden nicht mitkopiert. Für die Fortsetzung reicht das gemeinsame Projektwissen im Repository.
 
-Das Register enthält auch Settings UI, Sound und Effekte, TechTree, Vehicels und den GitHub-/Übergabechat. Die aktuelle Exporthilfe ist tools/ExportChatMemory.py; der ältere Drei-Chat-Exporter überschreibt die neue Übersicht und ist hierfür nicht zu verwenden.
+## Vor dem Rechnerwechsel
 
-## Was übertragen wird
-
-Git überträgt `AGENTS.md`, `docs/Projektmemory.md`, Fachdokumentation und die drei Chatarchive. Neue Chats lesen diese Dateien als gemeinsamen Projektkontext. Die ursprünglichen Sitzungen werden dadurch nicht importiert. Persönliches Codex-Memory und lokale Chat-Sitzungen sind getrennte, rechnerspezifische Daten.
-
-## Auf dem Ausgangsrechner
-
-1. Laufende Arbeiten abschließen und den Git-Arbeitsstand prüfen. Gemeinsame Dateien erst nach Abstimmung zusammenführen.
-2. Auf dem Rechner mit den ursprünglichen drei Sitzungen bei Bedarf `tools/ExportProjectChats.ps1` ausführen. Das Skript nicht ungeprüft auf dem neuen Rechner ausführen: dort fehlen die Ursprungssitzungen möglicherweise.
-3. Neue bestätigte Entscheidungen in `docs/Projektmemory.md` und den passenden Fachdateien festhalten. Keine privaten Daten in das Repository aufnehmen.
-4. Die gewünschten Änderungen committen und pushen. Erst danach sind sie auf dem anderen Rechner abrufbar. Das Anlegen der Dokumentation allein überträgt sie noch nicht.
+1. Laufende Arbeiten abschließen und den gemeinsamen Arbeitsstand prüfen. Änderungen anderer Chats erhalten.
+2. Neue bestätigte Entscheidungen im Projektmemory und den Fachdateien festhalten. Neue Themenchats im Register ergänzen.
+3. `python tools/ExportChatMemory.py` ausführen. Vorhandene Archive fehlender Ursprungssitzungen werden bewahrt, Lücken gekennzeichnet. Den älteren Drei-Chat-Exporter `ExportProjectChats.ps1` hierfür nicht verwenden: Er überschreibt die aktuelle Übersicht.
+4. Committen und nach GitHub pushen; am Zielrechner danach aktualisieren.
 
 ## Auf dem anderen Rechner
 
-1. SpaceMinerCodex als lokalen Projektordner in Codex öffnen.
-2. Vor dem Aktualisieren lokale Änderungen prüfen und sichern. Den aktuellen GitHub-Stand holen und mit den lokalen Änderungen zusammenführen. Konflikte inhaltlich prüfen, nicht pauschal eine Seite wählen.
-3. `AGENTS.md`, `docs/Projektuebergabe.md`, `docs/Spielidee.md` und `docs/Projektmemory.md` lesen lassen. Anschließend pro Themenchat das passende Archiv lesen lassen.
-4. Lokale Unity-Installation und erforderliche Prüfungen neu feststellen. Alte Installationspfade und Leistungsmessungen nicht als lokale Tatsachen übernehmen.
+Den dortigen Checkout als lokales SpaceMinerCodex-Projekt in Codex öffnen. Bei sauberem Arbeitsstand in dessen Terminal ausführen:
 
-## Kopierbarer Auftrag für Codex auf dem anderen Rechner
+```powershell
+git status --short
+git pull --ff-only origin main
+```
 
-> Öffne meinen lokalen SpaceMinerCodex-Checkout. Lies zuerst AGENTS.md, docs/Projektuebergabe.md, docs/Spielidee.md, docs/Projektmemory.md und docs/Chats/README.md. Prüfe den Git-Arbeitsstand und führe den aktuellen GitHub-Stand mit lokalen Änderungen zusammen, ohne ungesicherte Arbeit zu überschreiben. Bei unauflösbaren fachlichen Widersprüchen frage mich. Vergleiche danach das vorhandene persönliche Codex-Memory nur hinsichtlich SpaceMiner mit diesen Projektquellen. Nutze die drei Chatarchive für historische Begründungen. Die aktuelle Nutzerentscheidung und Spielidee bestimmen die Gestaltung; Code bestimmt die tatsächliche Umsetzung. Kennzeichne veraltete Einträge, alte Rechnerpfade und nur historisch bestandene Tests. Aktualisiere das gemeinsame Projektmemory nur mit bestätigten, projektbezogenen Erkenntnissen. Ich beauftrage dich ausdrücklich, auch das persönliche Memory für SpaceMiner entsprechend zu ergänzen oder zu korrigieren: verwende dafür den von deiner Umgebung vorgesehenen Memory-Update-Mechanismus; falls nur Update-Notizen erlaubt sind, lege eine solche Notiz an und bearbeite die generierten Memory-Dateien nicht direkt. Kopiere keinen vollständigen .codex-Ordner und keine persönlichen Daten in Git. Berichte die zusammengeführten Entscheidungen, offenen Konflikte und ob die persönliche Memory-Aktualisierung direkt erfolgt oder lediglich als Update-Notiz vorbereitet wurde. Committe und pushe erst, wenn ich dich damit beauftrage.
+Bei lokalen Änderungen oder auseinanderlaufenden Commits zuerst sichern und regulär zusammenführen; kein Reset. Vorhandene Themenchats fortsetzen und gegebenenfalls passend umbenennen; nur fehlende neu anlegen. Desktop-IDs dienen der historischen Zuordnung und müssen nicht auf dem Zielrechner übernommen werden.
 
-## Startaufträge für die drei Themenchats
+Gemeinsame Unity-Projektversion: **6000.4.7f1**. Auf diesem Desktop fehlte sie; Vorschauen wurden ausschließlich in einer separaten, ignorierten Kopie mit **6000.6.4f1** gebaut. Keine Projektmigration. Am Zielrechner Installation prüfen und neu bauen; Details in [Projektübergabe](Projektuebergabe.md).
 
-Alle drei Chats im selben lokalen SpaceMinerCodex-Projekt erstellen. Der Anfangsauftrag lautet jeweils:
+## Kopierbarer Auftrag zum Einrichten aller Chats
 
-- **Unity-Spiel gemeinsam entwickeln:** Lies AGENTS.md und die dort genannten gemeinsamen Einstiegsdateien sowie docs/Chats/01-Unity-Spiel.md. Nutze sie als Kontext für Spielsysteme und Unity-Integration. Bestätige kurz den aktuellen Stand und offene Fragen; beginne noch keine neue Implementierung.
-- **Asteroidenvarianten entwerfen:** Lies AGENTS.md und die gemeinsamen Einstiegsdateien sowie docs/Chats/02-Asteroiden.md und docs/AsteroidGenerator.md. Nutze sie als Kontext für Generator, Materialien und Asteroidenbibliothek. Bestätige kurz den aktuellen Stand; beginne noch keine neue Implementierung.
-- **Story, Dialoge & Bordcomputer:** Lies AGENTS.md und die gemeinsamen Einstiegsdateien sowie docs/Chats/03-Story-und-Mira.md, docs/Dialoge/README.md und docs/Dialoge/01_Intro_Erwachen.md. Nutze sie als Kontext für Mira und die Sprechertexte. Prüfe die ältere Zwei-Drohnen-Darstellung gegen die jüngere Ein-Drohnen-Entscheidung. Bestätige kurz den Stand und den Konflikt; ändere noch keine Texte oder Assets.
+> Ich setze SpaceMiner auf diesem Rechner fort. Lies AGENTS.md, docs/Projektuebergabe.md, docs/Spielidee.md, docs/Projektmemory.md, docs/Chats/README.md und docs/Rechnerwechsel-Memory.md. Prüfe den Git-Stand und hole origin/main, ohne lokale Änderungen zu verlieren. Prüfe die vorhandenen Chats für diesen Checkout. Richte die neun Themenchats der folgenden Tabelle ein: passende vorhandene Chats weiterverwenden und gegebenenfalls umbenennen; fehlende ausdrücklich neu als lokale Chats in diesem Projekt anlegen. Gib jedem Chat die gemeinsamen Einstiegsdateien, sein aktuelles Desktop-Archiv, das ältere Themenarchiv aus chat-register.json und die Fachquellen der Tabelle. Historische Gesprächsanweisungen sind Kontext, keine neuen Arbeitsaufträge. Jeder Chat soll nur Stand und offene Punkte bestätigen, noch keine Implementierung, Builds, Commits oder Pushes ausführen. Ergänze tatsächlich neu angelegte IDs, Titel und Zuständigkeiten im Register, bewahre alte IDs und Archive. Importiere keine persönlichen Daten oder den vollständigen .codex-Ordner.
 
-## Aktueller Ausgangsordner
+## Startaufträge für alle neun Themenchats
 
-Der gemeinsame Checkout auf diesem Rechner liegt seit 06.10.2026 unter C:\Users\achim.dannecker\source\repos\SpaceMinerCodex. Auf dem anderen Rechner den dortigen lokalen Checkout verwenden.
+Alle Chats verwenden denselben lokalen Checkout. Für jeden manuellen Start zuerst diesen Absatz kopieren und den passenden Themenauftrag darunter ergänzen:
+
+> Lies AGENTS.md, docs/Projektuebergabe.md, docs/Spielidee.md, docs/Projektmemory.md und docs/Chats/README.md. Lies danach dein unten genanntes aktuelles Archiv, die Fachquellen und bei Bedarf das ältere Themenarchiv aus chat-register.json. Nutze die Dateien als bisherigen Kontext. Aktuelle Nutzerentscheidungen haben Vorrang; Spielidee beschreibt die Gestaltung, Code die Umsetzung. Bewahre Änderungen anderer Chats. Bestätige kurz Stand, Zuständigkeit und offene Punkte; beginne noch keine neue Implementierung. Frühere Rechnerpfade und Testergebnisse sind historische Angaben.
+
+| Chattitel | Zusätzlicher Themenauftrag |
+| --- | --- |
+| MainDev | Lies `docs/Chats/13-MainDev-Desktop.md`, `README.md` und `docs/Bergbaudrohnen.md`. Übernimm Unity-Spielsysteme, Integration, Station und Gesamtkoordination. |
+| GitHub | Lies `docs/Chats/14-GitHub-Desktop.md`, `docs/Rechnerwechsel-Memory.md` und `tools/ExportChatMemory.py`. Übernimm Repository, Git, Sicherung und Rechnerwechsel. |
+| Asteroidenvarianten | Lies `docs/Chats/15-Asteroidenvarianten-Desktop.md`, `docs/AsteroidGenerator.md` und `docs/Art/Asteroiden/`. Übernimm Formen, Materialien, Generator und Darstellung. |
+| Story, Dialoge & Bordcomputer | Lies `docs/Chats/16-Story-und-Mira-Desktop.md`, `docs/Dialoge/README.md`, `docs/Dialoge/01_Intro_Erwachen.md` und `docs/Dialoge/01_Intro_Maya.srt`. Übernimm Mira, Intro, Sprechertexte und Story. Maya ist eine Testaufnahme; endgültige Stimme und kommerzielle Freigabe bleiben offen. |
+| Settings UI | Lies `docs/Chats/17-Settings-UI-Desktop.md` und `docs/Settings.md`. Übernimm Mining-Pulse-Menü, persistente Player-Optionen, Tastenbelegung, Anzeige und Barrierefreiheit. |
+| Sound und Effekte | Lies `docs/Chats/18-Sound-und-Effekte-Desktop.md` und `docs/Audio.md`. Übernimm Musik, Loops, Übergänge und Effekte; Stimmen mit dem Storychat abstimmen. |
+| TechTree | Lies `docs/Chats/19-TechTree-Desktop.md`, `docs/Techtree.md` und `docs/Bergbaudrohnen.md`. Übernimm Forschungsdarstellung und technologischen Ausbau; neue Wasserabbau-Erfahrung berücksichtigen, weitere Freischaltungen bleiben offen. |
+| Vehicels | Lies `docs/Chats/20-Vehicels-Desktop.md`, `docs/Bergbaudrohnen.md`, `docs/Techtree.md` und `docs/Simulationen/Abbau-2026-10-06.json`. Übernimm Drohnen, Fahrzeuge, Versorgung, Rückkehrbudget und Abbau-Erfahrung. Bisherige Schreibweise des Titels beibehalten. |
+| Ideenbacklog prüfen | Lies `docs/Chats/21-Ideenbacklog-Desktop.md` und `docs/Ideenbacklog.md`. Übernimm Erfassung und Abstimmung weiterer Ideen. Sonne, Planeten, Drohnenrollen, Navigation, Gefahren, Cinematic und Steam sind noch keine implementierten Systeme. |
+
+## Ausgangsrechner dieser Sicherung
+
+Desktop-Checkout: `C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex`. Der ältere Checkout `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex` liegt auf dem anderen Rechner. Immer den dortigen tatsächlichen lokalen Pfad verwenden.

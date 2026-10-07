@@ -185,8 +185,24 @@ namespace SpaceMiner
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
                 case 6:
                     GUILayout.Label("Live-Testwerte // nur für diese Spielsitzung", small);
-                    developer.SimulationRate = Slider("Simulationsgeschwindigkeit (0 = Pause)", developer.SimulationRate, 0, 500);
-                    developer.MiningRate = Slider("Abbaurate kg/s", developer.MiningRate, .01f, 10); break;
+                    developer.SimulationRate = Slider("Simulationsgeschwindigkeit", developer.SimulationRate, 0, 500);
+                    developer.MiningRate = Slider("Basis-Förderrate kg/s", developer.MiningRate, .01f, 10);
+                    developer.TripsPerLevel = Mathf.RoundToInt(Slider("Fahrten pro Wissenslevel", developer.TripsPerLevel, 1, 100));
+                    developer.LevelGain = Slider("Verbesserung pro Level", developer.LevelGain, 0, .5f);
+                    GUILayout.Label("Versorgung und Flugparameter: Änderungen nur bei bereiter Drohne; Vorräte werden zum Testen aufgefüllt.", small);
+                    bool developerEnabled = GUI.enabled;
+                    var balanceScenario = FindFirstObjectByType<WaterScenario>();
+                    GUI.enabled = developerEnabled && balanceScenario != null && balanceScenario.Worker.IsReady;
+                    developer.MiningPower = Slider("Basis-Abbauleistung kW", developer.MiningPower, 1, 150);
+                    developer.OnboardPower = Slider("Bordsysteme kW", developer.OnboardPower, 0, 1);
+                    developer.Reserve = Slider("Rückkehrreserve", developer.Reserve, 0, .5f);
+                    developer.BatteryCapacity = Slider("Batterie kWh", developer.BatteryCapacity, 1, 30);
+                    developer.FuelCapacity = Slider("Treibwasser L", developer.FuelCapacity, 2, 30);
+                    developer.CargoCapacity = Slider("Frachtraum kg", developer.CargoCapacity, 5, 150);
+                    developer.CruiseSpeed = Slider("Fluggeschwindigkeit m/s", developer.CruiseSpeed, .5f, 10);
+                    developer.Thrust = Slider("Schub N", developer.Thrust, 1, 50);
+                    developer.HeatingEnergy = Slider("Antriebsenergie kWh/L", developer.HeatingEnergy, .15f, 2);
+                    GUI.enabled = developerEnabled; break;
 #endif
             }
             GUILayout.EndScrollView(); GUILayout.EndArea();

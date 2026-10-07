@@ -91,17 +91,24 @@ namespace SpaceMiner
             GUI.enabled=enabled;
             foreach(var edge in edges){Color tint=highlighted.Contains(edge.Source)&&highlighted.Contains(edge.Target)?SpaceMinerUi.Amber:SpaceMinerUi.Cyan;Port(edge.Points[0],tint);Port(edge.Points[edge.Points.Length-1],tint);}
             SpaceMinerUi.Fill(new Rect(panel.x+24,panel.y+594,panel.width-48,1),new Color(.15f,.7f,.9f,.6f));
-            GUI.Label(new Rect(panel.x+30,panel.y+613,1150,26),"RESEARCH CORE ONLINE  |  TIER I  |  Forschung, Kosten und Wissenslevel folgen im nächsten Schritt",ui.Small);
+            GUI.Label(new Rect(panel.x+30,panel.y+613,1150,26),"RESEARCH CORE ONLINE  |  Wasserabbau: Erfahrung und Schwerpunkt aktiv  |  Weitere Forschungsfelder im Entwurf",ui.Small);
             if(shown>=0)DrawInfo(shown,hover<0,panel);else lastInfoRect=default;
         }
         private void DrawInfo(int index,bool isPinned,Rect panel)
         {
             var n=TechnologyCatalog.TierOne[index];
+            var scenario=FindFirstObjectByType<WaterScenario>();
+            bool mining=n.Id=="ice"&&scenario!=null;
             string status=n.Installed?"VORHANDENE TECHNIK":"GEPLANTES FORSCHUNGSFELD";
             string body=n.Description+"\n\nFORSCHUNGSVORAUSSETZUNGEN\n"+n.Requirements+"\n\nPRAKTISCHE NUTZUNG\n"+n.Practical;
+            if(mining) body="Besseres Materialverständnis durch produktive, beendete Fahrten.\n\nWISSENSLEVEL "+scenario.Mining.Level
+                +"  ·  "+scenario.Mining.TripsIntoLevel+" / "+scenario.Mining.TripsPerLevel+" Fahrten\n"
+                +"Förderrate: "+scenario.Worker.EffectiveMiningRate.ToString("0.000")+" kg/s\nAbbauleistung: "+scenario.Worker.EffectiveMiningPower.ToString("0.0")+" kW\n\n"
+                +"Nächster Level: +"+(scenario.Mining.ImprovementPerLevel*100).ToString("0")+" % Förderrate oder -"+(scenario.Mining.ImprovementPerLevel*100).ToString("0")+" % Abbauleistung.\nGelerntes bleibt bei Schwerpunktwechsel erhalten.";
             float bodyHeight=ui.Small.CalcHeight(new GUIContent(body),406);
             float titleHeight=ui.Text.CalcHeight(new GUIContent(n.Title),374);
-            float boxHeight=bodyHeight+titleHeight+105;
+            float focusTitleHeight=ui.Small.CalcHeight(new GUIContent("Lernschwerpunkt für den nächsten Level"),406);
+            float boxHeight=bodyHeight+titleHeight+105+(mining?focusTitleHeight+112:0);
             Vector2 mouse=Event.current.mousePosition;
             if(previewHover>=0||isPinned)mouse=nodeRects[index].center;
             float x=mouse.x+22,y=mouse.y+18;
@@ -115,7 +122,15 @@ namespace SpaceMiner
             var title=new GUIStyle(ui.Text);title.normal.textColor=SpaceMinerUi.Amber;
             GUI.Label(new Rect(x+16,y+44,374,titleHeight),n.Title,title);
             GUI.Label(new Rect(x+16,y+49+titleHeight,406,bodyHeight),body,ui.Small);
-            GUI.Label(new Rect(x+16,rect.yMax-32,406,24),n.Installed?"Aktuelle Startfähigkeit":"Entwurf · noch keine Forschungsfreigabe",ui.Small);
+            if(mining) {
+                float controlsY=y+59+titleHeight+bodyHeight;
+                GUI.Label(new Rect(x+16,controlsY,406,focusTitleHeight),"Lernschwerpunkt für den nächsten Level",ui.Small);
+                bool before=GUI.enabled;GUI.enabled=before&&isPinned;
+                if(GUI.Button(new Rect(x+16,controlsY+focusTitleHeight+8,406,38),(scenario.Mining.Focus==MiningFocus.Throughput?"✓ ":"")+"Förderrate",ui.Button))scenario.Mining.Focus=MiningFocus.Throughput;
+                if(GUI.Button(new Rect(x+16,controlsY+focusTitleHeight+54,406,38),(scenario.Mining.Focus==MiningFocus.Efficiency?"✓ ":"")+"Energieeffizienz",ui.Button))scenario.Mining.Focus=MiningFocus.Efficiency;
+                GUI.enabled=before;
+            }
+            GUI.Label(new Rect(x+16,rect.yMax-32,406,24),mining?(isPinned?"Materialwissen · Wasser":"Klicken zum Auswählen"):n.Installed?"Aktuelle Startfähigkeit":"Entwurf · noch keine Forschungsfreigabe",ui.Small);
             if(pinned>=0){Rect close=new Rect(rect.xMax-42,rect.y+9,28,28);if(GUI.Button(close,GUIContent.none,ui.Button))pinned=-1;icons.Draw(new Rect(close.x+7,close.y+7,14,14),"close",SpaceMinerUi.Cyan);}
         }
         private void Legend(Rect rect,string text,Color color){SpaceMinerUi.Fill(new Rect(rect.x,rect.y+9,8,8),color);GUI.Label(new Rect(rect.x+17,rect.y,rect.width-17,rect.height),text,ui.Small);}
@@ -126,6 +141,11 @@ namespace SpaceMiner
           else SpaceMinerUi.Fill(new Rect(a.x-thickness/2,Mathf.Min(a.y,b.y),thickness,Mathf.Abs(a.y-b.y)),color); }
 
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
+        internal void PreviewMiningForCheck(bool largeText)
+        {
+            Open(); pinned=TechnologyCatalog.IndexOf("ice");
+            previewTheme=largeText?new AccessibilitySettings{TextScale=1.4f,HighContrast=true}:null;
+        }
         private System.Collections.IEnumerator Start()
         {
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-techTreeCheck")<0)yield break;

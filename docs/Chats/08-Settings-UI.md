@@ -1,6 +1,6 @@
 # Settings UI
 
-Chat-ID: `01a110c0-50f2-7fa3-8a18-6905e864e5d9`. Exportstand: 2026-10-07T18:11:27.874744+00:00.
+Chat-ID: `01a110c0-50f2-7fa3-8a18-6905e864e5d9`. Exportstand: 2026-10-07T18:23:52.330197+00:00.
 
 Mining-Pulse-Stil, Player-Settings, modulare UI und Audiokanäle
 
@@ -76,231 +76,231 @@ Development- und Release-Build erfolgreich; **769 Spielprüfungen bestanden**, M
 
 ## Nutzer · 2026-10-06T10:57:39.991Z
 
-## SpaceMinerCodex – Settings / Configuration UI 
- 
-Arbeite ausschließlich im bestehenden gemeinsamen SpaceMiner-Repository: 
- 
- 
-### WICHTIG – zuerst Projektstand prüfen 
- 
-Bevor du irgendetwas änderst: 
- 
-1. Lies `AGENTS.md`. 
-2. Lies `docs/Projektuebergabe.md`. 
-3. Lies `docs/Projektmemory.md`. 
-4. Prüfe den aktuellen Git-/Arbeitsstand. 
-5. Prüfe die vorhandene Unity-Projektstruktur und insbesondere bestehende UI-, Input- und Konfigurationssysteme. 
-6. Berücksichtige Änderungen, die möglicherweise parallel von anderen Chats vorgenommen wurden. 
-7. Bestehende Änderungen anderer Chats dürfen nicht überschrieben, zurückgesetzt oder unnötig umgebaut werden. 
-8. KEIN neues Unity-Projekt anlegen. 
-9. Bestehende Architektur und Konventionen des Projekts verwenden. 
- 
---- 
- 
-# Aktuelles Thema: Settings / Configuration UI 
- 
-Für SpaceMiner soll ein modular aufgebautes Settings- und Configuration-System entstehen. 
- 
-Wichtig ist die Trennung zwischen: 
- 
-### 1. Player Settings 
- 
-Einstellungen, die der Spieler selbst verändern kann: 
- 
-- Gameplay 
-- Graphics 
-- Audio 
-- Controls 
-- Interface 
-- Accessibility 
- 
-Beispiele: 
- 
-- Sprache 
-- Autosave-Intervall 
-- Tutorials/Hinweise 
-- Auflösung 
-- Fullscreen / Windowed / Borderless 
-- VSync 
-- FPS-Limit 
-- Grafikqualität 
-- Master Volume 
-- Music Volume 
-- Effects Volume 
-- UI Volume 
-- Maus-Sensitivität 
-- Tastenbelegung 
-- Kamera-/Zoom-Geschwindigkeit 
-- UI-Skalierung 
-- Untertitel 
-- Textgröße 
-- Camera Shake / Motion Effects 
- 
-Player Settings sollen persistent gespeichert werden. 
- 
-Das UI soll mindestens folgende Aktionen unterstützen: 
- 
-- Apply 
-- Cancel 
-- Restore Defaults 
- 
---- 
- 
-# 2. Game Configuration / Developer Configuration 
- 
-Gameplay- und Balancing-Werte müssen technisch von den Player Settings getrennt bleiben. 
- 
-Beispiele: 
- 
-- Mining Speed 
-- Ore Yield 
-- Drone Speed 
-- Drone Capacity 
-- Energieverbrauch 
-- Energieproduktion 
-- Ressourcenmengen 
-- Building Costs 
-- Research Costs 
-- Produktionsgeschwindigkeit 
-- Cargo Capacity 
-- Difficulty-/Balancing-Multiplikatoren 
- 
-Diese Werte gehören NICHT automatisch in das normale Settings-Menü des Spielers. 
- 
-Für Development soll jedoch ein eigener Developer-/Debug-Bereich vorgesehen werden, über den geeignete Werte später während des Testens verändert werden können. 
- 
---- 
- 
-# Development Mode 
- 
-Im Development-Modus soll das Settings-/Configuration-UI direkt über einen sinnvollen Hotkey geöffnet werden können. 
- 
-Der Developer-Bereich und dessen Hotkey sollen in normalen Release-Builds nicht zugänglich bzw. nicht aktiv sein. 
- 
-Das System so strukturieren, dass später weitere Debug-/Balancing-Funktionen einfach ergänzt werden können. 
- 
---- 
- 
-# Visuelles Konzept 
- 
-Das UI soll futuristisch wirken und zum Space-/Mining-Thema passen. 
- 
-Gewünschter Stil: 
- 
-**Deep Space Command + Industrial Mining** 
- 
-Grundprinzipien: 
- 
-- sehr dunkles Navy / Graphit als Hintergrund 
-- technische, teilweise transparente Panels 
-- Cyan / kaltes Blau als primäre UI-Farbe 
-- dezenter Glow 
-- dünne technische Linien 
-- HUD-/Raumschiffcomputer-Charakter 
-- futuristisch, aber sehr gut lesbar 
-- keine übertriebene Hologramm-Optik 
-- geeignet für lange Spielsitzungen 
- 
-Semantische Farblogik: 
- 
-- Cyan/Blau = Navigation / System / Information 
-- Orange/Amber = Mining / Produktion / Ressourcen 
-- Rot = Gefahr / Fehler 
-- Grün = betriebsbereit / erfolgreich 
-- Grau = deaktiviert 
- 
-Das Settings-Menü soll gleichzeitig als Grundlage für ein späteres einheitliches SpaceMiner-UI-Designsystem dienen. 
- 
-Komponenten wie: 
- 
-- Panels 
-- Buttons 
-- Tabs 
-- Slider 
-- Toggles 
-- Dropdowns 
-- Tooltips 
-- Dialoge 
-- Header 
-- Statusanzeigen 
- 
-sollen möglichst wiederverwendbar aufgebaut werden. 
- 
---- 
- 
-# Grobe UI-Struktur 
- 
-Links vertikale Navigation: 
- 
-- GAMEPLAY 
-- GRAPHICS 
-- AUDIO 
-- CONTROLS 
-- INTERFACE 
-- ACCESSIBILITY 
- 
-Rechts erscheint jeweils der Inhalt der ausgewählten Kategorie. 
- 
-Unten: 
- 
-- Restore Defaults 
-- Cancel 
-- Apply Changes 
- 
-Optional können dezente technische Statusinformationen integriert werden, damit das Menü wie ein Teil des Bordcomputers wirkt. 
- 
-Beispiel: 
- 
-`SPACEMINER // SYSTEM CONFIGURATION` 
- 
-und unten dezente Statusanzeigen wie: 
- 
-`CORE ONLINE | SYSTEM NOMINAL | BUILD ...` 
- 
-Diese Elemente sollen Atmosphäre schaffen, dürfen aber die Bedienbarkeit nicht beeinträchtigen. 
- 
---- 
- 
-# Architektur 
- 
-Die konkrete Ordner-/Klassenstruktur NICHT blind neu anlegen. 
- 
-Zuerst die vorhandene SpaceMinerCodex-Architektur untersuchen und anschließend passend integrieren. 
- 
-Konzeptionell sollen jedoch folgende Verantwortlichkeiten getrennt bleiben: 
- 
-Player Settings 
-→ Settings Data   
-→ Persistence / Save & Load   
-→ Runtime Application   
-→ UI Binding 
- 
-und getrennt davon: 
- 
-Game Configuration 
-→ Gameplay-/Balancing-Daten   
-→ Developer Configuration   
-→ Debug-/Development UI 
- 
-UI-Code soll nicht selbst Gameplay- oder Persistenzlogik enthalten. 
- 
-Das System muss modular und für weitere Settings erweiterbar bleiben. 
- 
---- 
- 
-# Vorgehen 
- 
-1. Bestehenden Projektstand vollständig prüfen. 
-2. Vorhandene UI-/Input-/Settings-Strukturen identifizieren. 
-3. Eine zum Projekt passende Architektur festlegen. 
-4. Wiederverwendbare UI-Komponenten erstellen bzw. vorhandene erweitern. 
-5. Settings-Menü implementieren. 
-6. Development-Hotkey integrieren. 
-7. Persistenz der Player Settings implementieren. 
-8. Developer Configuration sauber davon trennen. 
-9. Funktion in Unity prüfen. 
-10. Relevante Projektdokumentation aktualisieren. 
- 
+## SpaceMinerCodex – Settings / Configuration UI
+
+Arbeite ausschließlich im bestehenden gemeinsamen SpaceMiner-Repository:
+
+
+### WICHTIG – zuerst Projektstand prüfen
+
+Bevor du irgendetwas änderst:
+
+1. Lies `AGENTS.md`.
+2. Lies `docs/Projektuebergabe.md`.
+3. Lies `docs/Projektmemory.md`.
+4. Prüfe den aktuellen Git-/Arbeitsstand.
+5. Prüfe die vorhandene Unity-Projektstruktur und insbesondere bestehende UI-, Input- und Konfigurationssysteme.
+6. Berücksichtige Änderungen, die möglicherweise parallel von anderen Chats vorgenommen wurden.
+7. Bestehende Änderungen anderer Chats dürfen nicht überschrieben, zurückgesetzt oder unnötig umgebaut werden.
+8. KEIN neues Unity-Projekt anlegen.
+9. Bestehende Architektur und Konventionen des Projekts verwenden.
+
+---
+
+# Aktuelles Thema: Settings / Configuration UI
+
+Für SpaceMiner soll ein modular aufgebautes Settings- und Configuration-System entstehen.
+
+Wichtig ist die Trennung zwischen:
+
+### 1. Player Settings
+
+Einstellungen, die der Spieler selbst verändern kann:
+
+- Gameplay
+- Graphics
+- Audio
+- Controls
+- Interface
+- Accessibility
+
+Beispiele:
+
+- Sprache
+- Autosave-Intervall
+- Tutorials/Hinweise
+- Auflösung
+- Fullscreen / Windowed / Borderless
+- VSync
+- FPS-Limit
+- Grafikqualität
+- Master Volume
+- Music Volume
+- Effects Volume
+- UI Volume
+- Maus-Sensitivität
+- Tastenbelegung
+- Kamera-/Zoom-Geschwindigkeit
+- UI-Skalierung
+- Untertitel
+- Textgröße
+- Camera Shake / Motion Effects
+
+Player Settings sollen persistent gespeichert werden.
+
+Das UI soll mindestens folgende Aktionen unterstützen:
+
+- Apply
+- Cancel
+- Restore Defaults
+
+---
+
+# 2. Game Configuration / Developer Configuration
+
+Gameplay- und Balancing-Werte müssen technisch von den Player Settings getrennt bleiben.
+
+Beispiele:
+
+- Mining Speed
+- Ore Yield
+- Drone Speed
+- Drone Capacity
+- Energieverbrauch
+- Energieproduktion
+- Ressourcenmengen
+- Building Costs
+- Research Costs
+- Produktionsgeschwindigkeit
+- Cargo Capacity
+- Difficulty-/Balancing-Multiplikatoren
+
+Diese Werte gehören NICHT automatisch in das normale Settings-Menü des Spielers.
+
+Für Development soll jedoch ein eigener Developer-/Debug-Bereich vorgesehen werden, über den geeignete Werte später während des Testens verändert werden können.
+
+---
+
+# Development Mode
+
+Im Development-Modus soll das Settings-/Configuration-UI direkt über einen sinnvollen Hotkey geöffnet werden können.
+
+Der Developer-Bereich und dessen Hotkey sollen in normalen Release-Builds nicht zugänglich bzw. nicht aktiv sein.
+
+Das System so strukturieren, dass später weitere Debug-/Balancing-Funktionen einfach ergänzt werden können.
+
+---
+
+# Visuelles Konzept
+
+Das UI soll futuristisch wirken und zum Space-/Mining-Thema passen.
+
+Gewünschter Stil:
+
+**Deep Space Command + Industrial Mining**
+
+Grundprinzipien:
+
+- sehr dunkles Navy / Graphit als Hintergrund
+- technische, teilweise transparente Panels
+- Cyan / kaltes Blau als primäre UI-Farbe
+- dezenter Glow
+- dünne technische Linien
+- HUD-/Raumschiffcomputer-Charakter
+- futuristisch, aber sehr gut lesbar
+- keine übertriebene Hologramm-Optik
+- geeignet für lange Spielsitzungen
+
+Semantische Farblogik:
+
+- Cyan/Blau = Navigation / System / Information
+- Orange/Amber = Mining / Produktion / Ressourcen
+- Rot = Gefahr / Fehler
+- Grün = betriebsbereit / erfolgreich
+- Grau = deaktiviert
+
+Das Settings-Menü soll gleichzeitig als Grundlage für ein späteres einheitliches SpaceMiner-UI-Designsystem dienen.
+
+Komponenten wie:
+
+- Panels
+- Buttons
+- Tabs
+- Slider
+- Toggles
+- Dropdowns
+- Tooltips
+- Dialoge
+- Header
+- Statusanzeigen
+
+sollen möglichst wiederverwendbar aufgebaut werden.
+
+---
+
+# Grobe UI-Struktur
+
+Links vertikale Navigation:
+
+- GAMEPLAY
+- GRAPHICS
+- AUDIO
+- CONTROLS
+- INTERFACE
+- ACCESSIBILITY
+
+Rechts erscheint jeweils der Inhalt der ausgewählten Kategorie.
+
+Unten:
+
+- Restore Defaults
+- Cancel
+- Apply Changes
+
+Optional können dezente technische Statusinformationen integriert werden, damit das Menü wie ein Teil des Bordcomputers wirkt.
+
+Beispiel:
+
+`SPACEMINER // SYSTEM CONFIGURATION`
+
+und unten dezente Statusanzeigen wie:
+
+`CORE ONLINE | SYSTEM NOMINAL | BUILD ...`
+
+Diese Elemente sollen Atmosphäre schaffen, dürfen aber die Bedienbarkeit nicht beeinträchtigen.
+
+---
+
+# Architektur
+
+Die konkrete Ordner-/Klassenstruktur NICHT blind neu anlegen.
+
+Zuerst die vorhandene SpaceMinerCodex-Architektur untersuchen und anschließend passend integrieren.
+
+Konzeptionell sollen jedoch folgende Verantwortlichkeiten getrennt bleiben:
+
+Player Settings
+→ Settings Data
+→ Persistence / Save & Load
+→ Runtime Application
+→ UI Binding
+
+und getrennt davon:
+
+Game Configuration
+→ Gameplay-/Balancing-Daten
+→ Developer Configuration
+→ Debug-/Development UI
+
+UI-Code soll nicht selbst Gameplay- oder Persistenzlogik enthalten.
+
+Das System muss modular und für weitere Settings erweiterbar bleiben.
+
+---
+
+# Vorgehen
+
+1. Bestehenden Projektstand vollständig prüfen.
+2. Vorhandene UI-/Input-/Settings-Strukturen identifizieren.
+3. Eine zum Projekt passende Architektur festlegen.
+4. Wiederverwendbare UI-Komponenten erstellen bzw. vorhandene erweitern.
+5. Settings-Menü implementieren.
+6. Development-Hotkey integrieren.
+7. Persistenz der Player Settings implementieren.
+8. Developer Configuration sauber davon trennen.
+9. Funktion in Unity prüfen.
+10. Relevante Projektdokumentation aktualisieren.
+
 Keine bestehenden Systeme unnötig ersetzen und keine Änderungen anderer paralleler SpaceMiner-Chats überschreiben.
 
 ## Assistent · 2026-10-06T10:57:43.112Z
@@ -599,4 +599,3 @@ Die finale Version ist gebaut. Musik, Stimmen und UI-Sounds haben eigene Regler;
 - Dezente technische Hover- und Aktivierungssounds sind eingebaut.
 
 Builds, Audioprüfung und **769 Spielprüfungen bestanden**. Maschinen-/Drohnensounds fehlen noch; ihr Effekte-Kanal ist vorbereitet.
-

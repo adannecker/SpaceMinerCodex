@@ -1,6 +1,6 @@
 # Story, Dialoge & Bordcomputer
 
-Chat-ID: `01a11007-910e-7ff0-a749-82c7af51fde7`. Exportstand: 2026-10-07T18:11:27.874744+00:00.
+Chat-ID: `01a11007-910e-7ff0-a749-82c7af51fde7`. Exportstand: 2026-10-07T18:23:52.330197+00:00.
 
 Mira, Intro und Sprechertexte; Abgleich der Drohnenzahl offen
 
@@ -218,54 +218,54 @@ Die neue Version ist fertig: **Enceladus**, mit der Regie „tief, warm und leic
 ## Nutzer · 2026-10-07T08:49:05.725Z
 
 ## My request:
-Ok mache mal folgendes ich werde 12 Audiodatein erezugen und dann Bilder dazu und eine Anweisung wie wir das erste Cinematic dann gestalten ok. 
+Ok mache mal folgendes ich werde 12 Audiodatein erezugen und dann Bilder dazu und eine Anweisung wie wir das erste Cinematic dann gestalten ok.
 
 Ich würde gerne noch ein wenig anpassen pro Sequenze auch die Stimmung ein wenig anpassen£
 
 Der komplette Text wird wie folgt aussehen.
 
-Einst waren wir eine hoch entwickelte Kultur.
-Technologie hatte unsere Welt verändert.
-Doch trotz all unseres Fortschritts hatten wir nie vergessen, woher wir kamen.
-Wir lebten mit unseren Familien, unserer Natur.
-Aber wir waren neugierig.
-Seit Generationen blickten wir zu den Sternen.
-Wir wollten verstehen, was dort draußen auf uns wartete.
-Wir wollten unsere Grenzen überwinden. Weiter reisen. Weiter forschen.
-Das Unmögliche möglich machen.
-Dann glaubten wir, etwas gefunden zu haben, das alles verändern würde.
-Eine neue Energiequelle.
-Mächtig genug, um unsere Welt nahezu unbegrenzt mit Energie zu versorgen … und uns den Weg zu den Sternen zu öffnen.
-Wir sahen eine Zukunft ohne Grenzen.
-
-Doch es gab Warnungen.
-Messwerte, die wir nicht verstanden.
-Wissenschaftler, die uns zur Vorsicht mahnten.
-Stimmen, die verlangten, das Projekt zu stoppen.
-
-Wir hörten sie.
-
-Aber unser Drang nach Fortschritt war stärker.
-Wir irrten uns.
-Eine Kettenreaktion hatte begonnen.
-Als wir begriffen, was geschehen würde, versuchten wir zu retten, was noch zu retten war.
-Wir evakuierten unsere Welt.
-Menschen. Tiere. Samen. DNA. Wissen.
-Alles, was von uns bleiben konnte.
-Doch es war zu spät.
-Noch während die letzten Schiffe starteten … zerbrach unsere Welt.
-Seitdem herrscht Stille.
-Kein Signal.
-Keine Antwort.
-Niemand scheint überlebt zu haben.
-Niemand …
-außer dir.
-Wochen zuvor warst du aufgebrochen. Allein. In einer kleinen Raumstation am Rande eines Asteroidengürtels.
-Weit genug entfernt, um zu überleben.
-Nicht weit genug, um unversehrt zu bleiben.
-Jetzt bist du allein.
-Deine Station ist beschädigt. Deine Vorräte sind begrenzt.
-Und dort draußen liegen die Überreste unserer Welt.
+Einst waren wir eine hoch entwickelte Kultur.
+Technologie hatte unsere Welt verändert.
+Doch trotz all unseres Fortschritts hatten wir nie vergessen, woher wir kamen.
+Wir lebten mit unseren Familien, unserer Natur.
+Aber wir waren neugierig.
+Seit Generationen blickten wir zu den Sternen.
+Wir wollten verstehen, was dort draußen auf uns wartete.
+Wir wollten unsere Grenzen überwinden. Weiter reisen. Weiter forschen.
+Das Unmögliche möglich machen.
+Dann glaubten wir, etwas gefunden zu haben, das alles verändern würde.
+Eine neue Energiequelle.
+Mächtig genug, um unsere Welt nahezu unbegrenzt mit Energie zu versorgen … und uns den Weg zu den Sternen zu öffnen.
+Wir sahen eine Zukunft ohne Grenzen.
+
+Doch es gab Warnungen.
+Messwerte, die wir nicht verstanden.
+Wissenschaftler, die uns zur Vorsicht mahnten.
+Stimmen, die verlangten, das Projekt zu stoppen.
+
+Wir hörten sie.
+
+Aber unser Drang nach Fortschritt war stärker.
+Wir irrten uns.
+Eine Kettenreaktion hatte begonnen.
+Als wir begriffen, was geschehen würde, versuchten wir zu retten, was noch zu retten war.
+Wir evakuierten unsere Welt.
+Menschen. Tiere. Samen. DNA. Wissen.
+Alles, was von uns bleiben konnte.
+Doch es war zu spät.
+Noch während die letzten Schiffe starteten … zerbrach unsere Welt.
+Seitdem herrscht Stille.
+Kein Signal.
+Keine Antwort.
+Niemand scheint überlebt zu haben.
+Niemand …
+außer dir.
+Wochen zuvor warst du aufgebrochen. Allein. In einer kleinen Raumstation am Rande eines Asteroidengürtels.
+Weit genug entfernt, um zu überleben.
+Nicht weit genug, um unversehrt zu bleiben.
+Jetzt bist du allein.
+Deine Station ist beschädigt. Deine Vorräte sind begrenzt.
+Und dort draußen liegen die Überreste unserer Welt.
 Nun liegt es an dir … zu retten, was noch zu retten ist.
 
 
@@ -1358,7 +1358,7 @@ Welche Szenen sollen wir neu aufnehmen, und was möchtest du daran ändern?
 ## Nutzer · 2026-10-07T13:34:47.856Z
 
 Wav 2 fängt zu tief an
-Wav 7 auch 
+Wav 7 auch
 Wav 12 ist die Pause vor retten wasnoch zu retten ist zu lange....
 
 Im Video das erstellt wurde und auch als übergänge kann man das so machen, dass keine so grossen pausen zwischen den Szenen sind und es quasi von einer zu r nächsten geht und belnde das eine Bild nicht aus und das andere ein sondern mache eine überblende also das eine bild in das nöchste. Die Audios verschlucken manchmal den Anfang wahrscheinlich liegt es daran wie der Übergang vom Audio gemacht ist und man ggf. die LAutstärke hochregelt oder so.
@@ -1697,3 +1697,22 @@ Ok bitte alles sauber dokumentieren und dann einchecken inkl. memory und commite
 
 Ich prüfe alle offenen Änderungen, vervollständige die Projektdokumentation und das gemeinsame Memory und sichere den gesamten Stand mit Commit und Push. Dabei prüfe ich auch, ob der neuere GitHub-Stand sauber eingebunden ist.
 
+## Assistent · 2026-10-07T18:12:16.501Z
+
+Der lokale Stand ist jetzt vollständig in einem Sicherungscommit enthalten, einschließlich WAV-Dateien, Bildern und fertigem Video. Auf GitHub liegt zusätzlich Arbeit vom anderen Rechner. Ich führe beide Stände zusammen und bewahre dabei die aktuelle Aoede-Stimme und das neue Cinematic.
+
+## Assistent · 2026-10-07T18:16:04.221Z
+
+Die Zusammenführung lässt sich erfolgreich mit Unity bauen. Die Übergabedokumentation wird jetzt auf den aktuellen Stand gebracht; anschließend prüfe ich Gameplay, Docking, Planeten und Cinematic im zusammengeführten Spiel. Vorhandene Chatarchive vom anderen Rechner bleiben erhalten.
+
+## Assistent · 2026-10-07T18:20:03.789Z
+
+821 Gameplayprüfungen, 194 Abbaubalanceprüfungen sowie Startmenü und Sonnensystem sind bestanden. Beim Cinematic-Test wurde ein Bildwechsel verpasst; ich prüfe diesen Lauf noch einmal einzeln, bevor ich den Stand pushe.
+
+## Assistent · 2026-10-07T18:22:04.206Z
+
+Die Dokumentation benennt jetzt auch die noch offenen Spielmechaniken und die Lücke im Chatarchiv. Alle Assets haben ihre `.meta`-Dateien; im gemeinsamen Register sind 20 Archive eindeutig zugeordnet. WAVs, Bilder, Video und Projektmemory kommen mit auf GitHub, temporäre Build- und Download-Caches bleiben lokal.
+
+## Assistent · 2026-10-07T18:23:20.256Z
+
+Der einzelne Cinematic-Lauf ist bestanden, ebenso die Techtree-Prüfung. Ich halte den fehlgeschlagenen ersten Lauf und die erfolgreiche Wiederholung im Memory fest und pushe jetzt den zusammengeführten Stand nach `main`.

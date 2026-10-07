@@ -32,6 +32,7 @@ Der Technologiebaum soll möglichst realitätsnah sein. Für die spätere Ausarb
 - Sensoren geben Informationen mit begrenzter Reichweite und Sicherheit; Materialgewinnung und Verarbeitung sind eigene Schritte.
 - Lebensunterhalt und Produktion verbrauchen Ressourcen. Rückgewinnung hat Verluste.
 - Spielvereinfachungen und spekulative Technologien werden ausdrücklich dokumentiert.
+- Beschlossene Ausbaurichtung vom 06.10.2026: Für die erste Abbauauslegung dient ungefähr 1:2 zwischen aktiver Werkzeugzeit und Nachladezeit ihrer verbrauchten Energie als Startziel, zuzüglich Flugverbrauch und Ladeverlusten. Akku und Ladestation sollen in späteren Tiers deutlich verbessert werden können. Kapazität, zulässige Lade-/Entladeleistung und Ladegerät sind getrennte Eigenschaften; konkrete Tiernummern, Technik und Faktoren bleiben offen. Details in [Bergbaudrohnen](Bergbaudrohnen.md) und [Techtree](Techtree.md); bisherige Spielwerte noch unverändert.
 - Größenverhältnisse bleiben nachvollziehbar. Für größere Räume werden wir später prüfen, ob ein verschiebbarer Weltursprung oder getrennte Simulations-/Darstellungskoordinaten nötig sind.
 
 ## Meilenstein 01 — jetzt
@@ -71,15 +72,15 @@ Auf Nutzerauftrag als Laufzeitkulisse ergänzt: sichtbare Sonne, zerbrochener Pl
 - [x] Wasserauftrag mit Drohnenflug, Eisabbau, Rücktransport und Tankübergabe als Prototyp.
 - [x] Modulare Raumstation und Bergbaudrohnen als erste Spielgrafik.
 - [x] Mira-Erwachen mit freigegebener Aoede-Stimme und Galerie-Wiederholung.
-- [x] Erste drei Kohlezeichnungen mit Enceladus als sofort verfügbares Cinematic; abgenutzte, gewölbte und geneigte Bildblätter, Fokusfahrten und weichere Schwarzblenden.
+- [x] Erste drei Kohlezeichnungen mit Enceladus als sofort verfügbares Cinematic; abgenutzte, gewölbte und geneigte Bildblätter, Fokusfahrten und direkte Bildüberblendungen.
 - [x] Gemeinsamer Untertitel-Schalter für Cutscenes und Cinematics; Erinnerungssequenz mit satzweisen Untertiteln.
 - [x] Große zentrale Sonne und neun Planeten auf unterschiedlichen geneigten Umlaufbahnen; Planeten 3, 7 und 8 mit Ringen.
 - [x] Planet 4 als zerstörte Heimatwelt nach freigegebenem Konzept: unregelmäßige Kontinentfragmente, tiefe glühende Spalten, beschädigter Mond, giftiger Dunst und Mond-zu-Planet-Materialstrom. Vereinfachte 3D-Umsetzung; keine vollständig ausgearbeitete Oberfläche.
-- [ ] Weitere neun Teile des Intro-Cinematics: Teil 4 aufgenommen und Bildprompt vorbereitet; Bild, Hoerfreigabe und Integration noch offen.
+- [x] Alle zwölf Teile des Intro-Cinematics integriert, durchgehende Enceladus-Narration, Charcoal-Atmosphere-Musik und direkter Bildüberblendung; korrigierte Szene 9.
 - [ ] Gift-, Hitze- und Schadensmechanik sowie entsprechende Warnungen.
-- [x] Erde/Sonne- und Erde/Mond-Abstaende als Bezug, Station mit fuenf Mondabstaenden; Sonnenrichtung als externe Beleuchtungsquelle.
+- [x] Komprimierte Spielabstände mit fünf Mondabständen zur Station; zwei Sonnen als externe Beleuchtung. Der astronomische Entwurf wurde auf Nutzerwunsch ersetzt.
 - [ ] Abstands-/ausrichtungsabhängige Solarleistung, Stationsrotation, Lagedüsen und Panelsteuerung.
-- [ ] Forschungsmechanik hinter dem vorhandenen Techtree-Entwurf; Reparatur und Ausbau der Station und Drohnen.
+- [x] Wasserabbauwissen mit Förderrate-/Energieschwerpunkt im Techtree; weitere Hardwareforschung, Reparatur und Ausbau bleiben offen.
 
 Aktueller Spielmassstab (07.10.2026, ersetzt den vorherigen astronomischen Entwurf): Auf ausdruecklichen Nutzerwunsch sind die Himmelsabstaende und Koerpergroessen fuer die Sichtbarkeit komprimiert. Heimatweltbahn 1800km, Mondabstand 18km, Stationsabstand zum Planeten 90km. Hauptsonnenradius 55km, Planetenradius 4km, Mondradius 1,1km. Neun Bahnen bei 650 / 1050 / 1400 / 1800 / 2500 / 3500 / 4700 / 6100 / 7800km; diese Werte sind fiktionale Darstellungsmasse, keine echten astronomischen Abstaende. Umlaufbewegungen bleiben vereinfacht, keine N-Koerper-Simulation. Der vorherige Entwurf mit 1 AE und 384400km Mondabstand bleibt im Projektmemory historisch nachvollziehbar.
 
@@ -106,3 +107,19 @@ Auf Nutzerauftrag erhalten alle neun Planeten exotische Namen und erfundene Arch
 | 7 | Nymara | Türkisfarbener Ringriese, verschollenes Observatorium |
 | 8 | Vaelora | Kobaltblauer Eisriese, Polarlichter und schräger Ring |
 | 9 | Xhal'Tir | Violette Grenzwelt, Zwielicht und ungeklärtes Tiefenecho |
+
+## Drohnendock und sichtbare Ladung (06.10.2026)
+
+Am Dock stehen auf Nutzerauftrag zwei Reihen mit je vier Ladeplätzen. Die Drohnen parken rückwärts teilweise in den Buchten. Für die zehn bisher vorhandenen Drohnen ergänzt der Prototyp zwei Wartungsplätze. Zum Entladen koppelt die Drohne direkt am Wassertank an; Eis wird durch eine kurze geschlossene Übergabe statt durch freien Wurf entladen. Die Klammern sollen oberflächennah bleiben, die Eisstücke kräftiger und kantiger aussehen. Eine bewegliche Ladeklappe und ein einsehbarer Frachtraum zeigen den Füllstand. Diese Darstellung verändert die zentrale Ressourcenbilanz nicht.
+
+## Geplante Ausbaustufen aus dem Ideenbacklog
+
+Steam-Integration ist als spätere Ausbaustufe vorgesehen. Funktionsumfang, technische Anbindung und Zeitpunkt sind offen; Einzelheiten im [Ideenbacklog](Ideenbacklog.md#steam-integration).
+
+Die Sonne soll sichtbar sein. Ergänzend könnten weitere sichtbare Planeten die Sonne umkreisen; Anzahl, Umlaufdarstellung und Einfluss auf die Spielsimulation sind offen. Daraus ergibt sich noch keine geplante Reise zu diesen Planeten.
+
+Entwurfsrichtung vom 06.10.2026: Batteriewechselstation sowie Reparatur-, Erkundungs-/Scan- und Schrottsammeldrohnen. Rollenwechsel und erforschte Ausstattungsverbesserungen wie größere Frachträume benötigen Umbauaufträge. Neue technische Drohnengenerationen entstehen ausschließlich durch Wiederverwertung und Neubau; das Verhältnis zur separat geplanten Abbau-Erfahrung bleibt offen.
+
+Eine Kartenübersicht soll Asteroiden nach Eigenschaften markieren und Befehle an ausgewählten Objekten erlauben. Nach Erforschung der Stationsbewegung gehören dazu das Navigieren auf die sonnenabgewandte Seite eines Asteroiden und das Verlassen seines Schattens. Sichtbare Sonne und ausrichtbare Solarpanels ergänzen die Energieversorgung. Solarstürme, Schutz hinter Asteroiden beziehungsweise spätere Schutzschilde sowie eindringende Körper mit Kollisionen und beweglichen Fragmenten sind weitere Ereignisideen. Spätere Scanner sollen Bahnen und Einschläge in einer Kartensimulation vorhersagen und sichere Positionen berechnen. Details und offene Spielregeln stehen im [Ideenbacklog](Ideenbacklog.md); noch keine Implementierung oder feste Priorisierung.
+
+Weitere Storyidee vom 06.10.2026: Ein ferner, explodierter und in große Teile gespaltener Planet ist sichtbar, wegen einer Strahlungszone zunächst aber unzugänglich. Das Intro erzählt das Unglück als kurze Cinematic aus stilisierten Bildern mit Mira als Erzählerin. Zusammenhang zwischen Planetenzerstörung und Stationsunglück, Strahlungsursache und spätere Zugangsvoraussetzungen bleiben offen. Die Inszenierung ist noch nicht umgesetzt; Details im [Ideenbacklog](Ideenbacklog.md#zerstörter-planet-und-intro) und unter [Story und Dialoge](Dialoge/README.md#geplante-erweiterung-des-intros).

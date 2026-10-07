@@ -1,6 +1,8 @@
 """Mux Unity-rendered cinematic frames with continuous narration, music and subtitles."""
 from pathlib import Path
 import csv
+import os
+import shutil
 import subprocess
 import wave
 import json
@@ -10,7 +12,14 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'outputs/Cinematic'
 ASSETS = ROOT / 'Assets/SpaceMiner/Resources/MemoryCinematic'
 DOCS = ROOT / 'docs/Dialoge/IntroCinematic'
-ENCODER = next((ROOT / 'work/video-dependencies/imageio_ffmpeg/binaries').glob('ffmpeg*.exe'))
+ENCODER = os.environ.get('FFMPEG') or shutil.which('ffmpeg')
+if not ENCODER:
+    bundled = list((ROOT / 'work/video-dependencies/imageio_ffmpeg/binaries').glob('ffmpeg*.exe'))
+    if bundled:
+        ENCODER = str(bundled[0])
+    else:
+        import imageio_ffmpeg
+        ENCODER = imageio_ffmpeg.get_ffmpeg_exe()
 
 def timestamp(seconds):
     ms = round(seconds * 1000)
