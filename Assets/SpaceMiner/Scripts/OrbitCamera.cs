@@ -195,7 +195,7 @@ namespace SpaceMiner
             Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
             transform.SetPositionAndRotation(Pivot - rotation * Vector3.forward * Distance, rotation);
             ConfigureDepthRange(view, Distance);
-            QualitySettings.shadowDistance = Mathf.Clamp(Distance * 2.5f, 80f, 30000f);
+            QualitySettings.shadowDistance = Mathf.Clamp(Distance * 2.5f, 20f, 30000f);
         }
 
         public static void ConfigureDepthRange(Camera camera, float focusDistance)

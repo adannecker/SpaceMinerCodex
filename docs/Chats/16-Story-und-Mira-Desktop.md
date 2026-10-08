@@ -1,6 +1,6 @@
 # Story, Dialoge & Bordcomputer
 
-Chat-ID: `01a10dac-caae-7492-bec8-24aac83ec430`. Exportstand: 2026-10-06T21:28:29.777992+00:00.
+Chat-ID: `01a10dac-caae-7492-bec8-24aac83ec430`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
 
 Desktop-Fortsetzung: Mira, Story, Intro und Sprechertexte; vorhandener Storychat weiterverwendet
 

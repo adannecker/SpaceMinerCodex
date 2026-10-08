@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 namespace SpaceMiner
 {
     // Distant scenery only; danger is communicated visually, not a new damage rule.
+    [DefaultExecutionOrder(1000)]
     public sealed class RuinedWorld : MonoBehaviour
     {
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -90,6 +91,8 @@ namespace SpaceMiner
             int localLayers = ~((1 << 29) | (1 << 28));
             light.cullingMask = localLayers;
             companionLight.cullingMask = localLayers;
+            foreach(var localSun in new[]{light,companionLight}) { localSun.shadowResolution=UnityEngine.Rendering.LightShadowResolution.VeryHigh;localSun.shadowBias=.08f;localSun.shadowNormalBias=.15f; }
+            companionLight.transform.rotation=Quaternion.LookRotation(-CompanionPosition);
             foreach(var other in FindObjectsByType<Light>(FindObjectsSortMode.None))if(other!=light&&other!=companionLight&&other.type==LightType.Directional)other.enabled=false;
             RenderSettings.ambientMode=UnityEngine.Rendering.AmbientMode.Flat;RenderSettings.ambientLight=new Color(.65f,.70f,.78f);RenderSettings.ambientIntensity=1;RenderSettings.reflectionIntensity=.35f;RenderSettings.sun=light;
             var ambientProbe=new UnityEngine.Rendering.SphericalHarmonicsL2();ambientProbe.AddAmbientLight(RenderSettings.ambientLight*1.6f);RenderSettings.ambientProbe=ambientProbe;
@@ -118,7 +121,7 @@ namespace SpaceMiner
                 for(int p=0;p<180;p++){float a=p*Mathf.PI*2/180;line.SetPosition(p,SunPosition+Quaternion.Euler(inclinations[i],0,0)*new Vector3(Mathf.Cos(a)*distances[i],0,Mathf.Sin(a)*distances[i]));}
                 line.enabled=false;
             }
-            foreach(var child in GetComponentsInChildren<Renderer>())child.gameObject.layer=29;
+            foreach(var child in GetComponentsInChildren<Renderer>()) { child.gameObject.layer=29; child.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off; child.receiveShadows=false; }
             archiveShape=new Material(Shader.Find("SpaceMiner/SolarTerrain")){name="Archive shape - surface not mapped",color=new Color(.25f,.5f,.6f)};
             foreach(var planet in orbits)foreach(var renderer in planet.GetComponentsInChildren<Renderer>())archiveMaterials[renderer]=renderer.sharedMaterials;
         }
@@ -139,8 +142,6 @@ namespace SpaceMiner
             SkyCamera.transform.SetPositionAndRotation(localCamera.transform.position/1000f,localCamera.transform.rotation);
             SkyCamera.fieldOfView=localCamera.fieldOfView;SkyCamera.aspect=localCamera.aspect;
             SkyCamera.cullingMask=(1<<29)|(localCamera.GetComponent<OrbitCamera>().IsCelestialView&&!StationInteriorMode.IsInside?0:1<<28);
-            solarLight.transform.rotation=Quaternion.LookRotation(localCamera.transform.position/1000f-SunPosition);
-            companionLight.transform.rotation=Quaternion.LookRotation(localCamera.transform.position/1000f-CompanionPosition);
             var orbit=localCamera.GetComponent<OrbitCamera>();
             foreach(var line in guides){line.enabled=orbit.Distance>500000&&!orbit.IsCelestialView;line.startWidth=line.endWidth=orbit.Distance/1000f*.0007f;}
         }

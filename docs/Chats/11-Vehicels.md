@@ -1,6 +1,6 @@
 # Vehicels
 
-Chat-ID: `01a11127-1368-7990-b23f-38b3524b44ca`. Exportstand: 2026-10-08T15:27:09.763748+00:00.
+Chat-ID: `01a11127-1368-7990-b23f-38b3524b44ca`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
 
 Separater Themenchat für Fahrzeuge; bisher überwiegend übernommener Kontext
 

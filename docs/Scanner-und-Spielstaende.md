@@ -44,3 +44,5 @@ Aktuelle Innenraumintegration vom 08.10.2026: station-entry-verified-build.log E
 ## Offene Nutzerprüfung vom 08.10.2026
 
 Trotz bestandenem automatischem Positions-Roundtrip meldet der Nutzer weiteren Bedarf bei der Innenraumposition. Als nächste Fehlerprüfung vorgemerkt: tatsächlich gespeicherte Position nach manuellem Speichern/Autosave und erneutem Laden im Wohnmodul, in der Schleuse und im Ring wiederherstellen; unerwünschten Spawn-Reset und Blickrichtung prüfen. Zusätzlich funktioniert laut Rückmeldung Beenden aus dem Spiel nicht. Den kompletten Beenden-/Speicherablauf in Innenraum, Pult und VR prüfen und reparieren. Ursachen in diesem Dokumentationsschritt nicht untersucht. Siehe Ideenbacklog.
+
+Finale Git-Übergabe erneut geprüft: handoff-station-final-build.log Exit0, handoff-scanSaveCheck.log39 und handoff-stationHabitatCheck.log504 bestanden; zusätzliche Beleuchtungsprüfung bestanden. Siehe versionierten Bericht in Pruefungen/Stationsstart-2026-10-08.json.

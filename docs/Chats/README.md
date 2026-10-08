@@ -1,6 +1,6 @@
 # Projektchats und gemeinsames Chatmemory
 
-Exportstand: 2026-10-08T15:27:09.763748+00:00.
+Exportstand: 2026-10-08T15:29:49.366675+00:00.
 
 Lesbare Momentaufnahmen, kein importierbares Codex-Sitzungsformat. Exportiert werden ausschließlich Nutzer- und Assistententexte der ausdrücklich registrierten Projektchats. Systemanweisungen, interne Überlegungen, Werkzeugprotokolle und Umgebungskontext werden ausgelassen. Anhänge werden nicht rekonstruiert; übernommene Assets liegen im Projekt.
 
@@ -17,7 +17,7 @@ Startaufträge für die neun aktuellen Themenchats: [Chats am anderen Rechner an
 ## Registrierte Archive und Exportverfügbarkeit
 
 - [GitHub](04-GitHub.md) — 55 Textnachrichten. Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung.
-- [MainDev](05-MainDev.md) — 196 Textnachrichten. Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus.
+- [MainDev](05-MainDev.md) — 198 Textnachrichten. Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus.
 - [Asteroidenvarianten](06-Asteroidenvarianten.md) — 7 Textnachrichten. Asteroidenformen, Materialien und Generator.
 - [Story, Dialoge & Bordcomputer](07-Story-und-Mira.md) — 389 Textnachrichten. Mira, Intro und Sprechertexte; Abgleich der Drohnenzahl offen.
 - [Settings UI](08-Settings-UI.md) — 64 Textnachrichten. Mining-Pulse-Stil, Player-Settings, modulare UI und Audiokanäle.

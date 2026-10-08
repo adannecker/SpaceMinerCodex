@@ -1,6 +1,6 @@
 # Story, Dialoge & Bordcomputer
 
-Chat-ID: `01a11007-910e-7ff0-a749-82c7af51fde7`. Exportstand: 2026-10-08T15:27:09.763748+00:00.
+Chat-ID: `01a11007-910e-7ff0-a749-82c7af51fde7`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
 
 Mira, Intro und Sprechertexte; Abgleich der Drohnenzahl offen
 

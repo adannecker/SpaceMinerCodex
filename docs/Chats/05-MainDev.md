@@ -1,6 +1,6 @@
 # MainDev
 
-Chat-ID: `01a11007-2934-7520-96c3-3991e89ccaf8`. Exportstand: 2026-10-08T15:27:09.763748+00:00.
+Chat-ID: `01a11007-2934-7520-96c3-3991e89ccaf8`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
 
 Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus
 
@@ -1155,3 +1155,11 @@ Ok nun alles sauber dokumentieren und einchecken und pushen... Irgendwie müssen
 ## Assistent · 2026-10-08T15:26:20.039Z
 
 Ich prüfe den gemeinsamen Arbeitsstand, vervollständige die Übergabe für den anderen Rechner und aktualisiere die Chatarchive. Danach checke ich die Projektänderungen ein und pushe sie auf GitHub.
+
+## Assistent · 2026-10-08T15:27:26.917Z
+
+Die Chatarchive sind aktualisiert: neun lokale Chats exportiert, neun Archive vom anderen Rechner bewahrt; eine ältere Sitzung bleibt als nicht verfügbar markiert. Ich korrigiere außerdem veraltete Übergabeangaben und dokumentiere, dass Spielstände separat übertragen werden müssen. Die Mira-Quelldateien kommen ebenfalls ins Repository.
+
+## Assistent · 2026-10-08T15:29:09.622Z
+
+Die Übergabe enthält jetzt den aktuellen Spielstand, die offenen Fehler und eine Anleitung zum Aktualisieren und Bauen auf dem anderen Rechner. Alle Unity-Assets haben ihre `.meta`-Dateien. Das Einchecken der umfangreichen Mira-Modelldateien dauert etwas; anschließend führe ich den GitHub-Stand zusammen und pushe alles.

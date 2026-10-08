@@ -140,3 +140,8 @@ Weitere Storyidee vom 06.10.2026: Ein ferner, explodierter und in große Teile g
 ## Spielstände (08.10.2026)
 
 Manuelle Spielstände erhalten Namen und Kommentar. Laden zeigt Scanstatus, Wasserabbau-Level, Forschungsfortschritt und Vorräte. Autosave alle 60 Sekunden aktiver Spielzeit sowie beim Verlassen; Speicherabfrage vor der Rückkehr zum Startmenü und beim Anwendungsschliessen. Laufende Drohnenaufträge, Fracht und Scanwissen werden gespeichert. Weitere Techtree-Felder bleiben Entwürfe. Details: [Scanner und Spielstände](Scanner-und-Spielstaende.md).
+
+
+### Bestehender Innenraum aus dem anderen Rechner
+
+Ergänzung vom 07./08.10.2026 auf Nutzerwunsch: Zwischen Außenansicht und First-Person-Innenansicht der Station wechseln können. Das Wohnmodul sitzt am Ringanschluss und besitzt nur ein Frontfenster; die geschlossenen Seiten bleiben für spätere Geräte vorgesehen. Eine elektrische Schleuse mit zwei nacheinander öffnenden Schiebetüren verbindet es mit dem vollständig begehbaren Ring. Ruhige Beleuchtung, eine kleine ausgeschaltete Reparaturdrohne und ein erstes Stationspult sind eingebaut. Am Pult lassen sich der vorhandene Wasserauftrag übernehmen und Außendrohne/Tank/Simulation steuern. V und ein Bildschirmknopf wechseln die Ansicht, E bedient Pult und Schleuse. Bewegung mit WASD und Maus, Wände/Boden mit Kollision und gleichzeitiger Weiterbetrieb der Außendrohnen sind umgesetzt. Gehen mit lokaler Schwerkraft und angezeigter zeitgesteuerter Druckausgleich bleiben Prototypannahmen; Stationsrotation, Gasbilanz, Reparatur- und Innenraum-Produktionslogik sind offen. Bedienung und Prüfung stehen im README.

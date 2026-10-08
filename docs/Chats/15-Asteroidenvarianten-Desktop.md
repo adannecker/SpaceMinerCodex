@@ -1,6 +1,6 @@
 # Asteroidenvarianten
 
-Chat-ID: `01a10dd1-fb99-7451-87bf-2d47afa4be7b`. Exportstand: 2026-10-06T21:28:29.777992+00:00.
+Chat-ID: `01a10dd1-fb99-7451-87bf-2d47afa4be7b`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
 
 Desktop-Fortsetzung: Asteroidenformen, Materialien, Generator und Darstellung; vorhandener Asteroidenchat umbenannt
 

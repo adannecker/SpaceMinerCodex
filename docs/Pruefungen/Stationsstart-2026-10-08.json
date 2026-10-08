@@ -3,19 +3,24 @@
   "unity": "6000.4.7f1",
   "scope": "Stationsstart/Scanner/Spielstaende/begehbarer Stationsring",
   "build": {
-    "log": "Logs/station-entry-verified-build.log",
+    "log": "Logs/handoff-station-final-build.log",
     "exitCode": 0
   },
   "checks": [
     {
-      "log": "Logs/station-entry-verified-check.log",
+      "log": "Logs/handoff-scanSaveCheck.log",
       "exitCode": 0,
       "checks": 39
     },
     {
-      "log": "Logs/station-entry-habitat-check.log",
+      "log": "Logs/handoff-stationHabitatCheck.log",
       "exitCode": 0,
       "checks": 504
+    },
+    {
+      "log": "Logs/handoff-lightingVisualCheck.log",
+      "exitCode": 0,
+      "scope": "Stabile Beleuchtung, zwei Qualitaetsstufen, 24 Tiefenproben"
     }
   ],
   "visualReview": [
@@ -27,5 +32,5 @@
     "Beenden aus dem Spiel funktioniert laut Nutzer nicht",
     "Innenraumposition im realen Speicher-/Ladeablauf pruefen"
   ],
-  "note": "Pruefungen in vorangehenden Arbeitsschritten dieser Sitzung ausgefuehrt; Logs/Builds bleiben lokal. Kein Ersatz fuer Zielrechnerpruefung."
+  "note": "Nach Zusammenfuehren mit origin/main ff0ff7b in dieser Sitzung erneut gebaut und alle aufgefuehrten Playerchecks erneut bestanden. Logs/Builds bleiben lokal; Zielrechner erneut pruefen."
 }

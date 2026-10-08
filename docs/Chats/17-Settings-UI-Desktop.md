@@ -1,6 +1,6 @@
 # Settings UI
 
-Chat-ID: `01a11264-4cc8-7ef3-8382-90ae4253b766`. Exportstand: 2026-10-06T21:28:29.777992+00:00.
+Chat-ID: `01a11264-4cc8-7ef3-8382-90ae4253b766`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
 
 Desktop-Fortsetzung: Mining-Pulse-Menü, modulare UI, Player-Einstellungen, Rebinding und Barrierefreiheit
 
