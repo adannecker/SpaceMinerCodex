@@ -22,16 +22,18 @@ namespace SpaceMiner
         public void ReturnToStart() { Cancel(); FindFirstObjectByType<StartMenu>()?.ReturnToStart(); }
         private void Update()
         {
+            if (SaveGameMenu.BlocksInput) return;
             if (!Input.GetKeyDown(KeyCode.Escape)) return;
             HandleEscape();
         }
         internal void HandleEscape()
         {
+            if (StationInteriorMode.HasConsoleOpen && !SettingsMenu.BlocksInput) { StationInteriorMode.Current.CloseConsole(); return; }
             if (IsOpen) Cancel(); else Open();
         }
         private void OnGUI()
         {
-            if (!IsOpen) return;
+            if (!IsOpen || SaveGameMenu.IsOpen) return;
             var matrix = GUI.matrix;
             int depth = GUI.depth;
             try
@@ -49,7 +51,7 @@ namespace SpaceMiner
                 if (GUI.Button(new Rect(panel.x + 28, panel.y + 212, 212, 54), "Weiterspielen", ui.Primary)) { Cancel(); SettingsUiAudio.Activate(); }
                 if (GUI.Button(new Rect(panel.x + 260, panel.y + 212, 212, 54), "Beenden", ui.Button))
                 {
-                    ReturnToStart();
+                    Cancel(); GetComponent<SaveGameMenu>()?.Leave(ReturnToStart);
                 }
             }
             finally { GUI.matrix = matrix; GUI.depth = depth; }

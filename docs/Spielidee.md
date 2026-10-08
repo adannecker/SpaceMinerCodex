@@ -8,11 +8,24 @@ Energie, Nahrung und Trinkwasser werden zentrale Bedürfnisse. Neue Sensoren ers
 
 Der Bordcomputer heißt **Mira**. Sie begleitet den Spieler mit einer sanften, warmen und ruhigen weiblichen Stimme und spricht ihn mit „du“ an. Ihre Sprechertexte und die Inszenierung entstehen in [docs/Dialoge](Dialoge/README.md).
 
+Aktuelle Nutzerentscheidung vom 08.10.2026: 3D-Avatar vorerst zurückgestellt. Mira verwendet die freigegebene Zeichnung als Identitätsvorlage und statische Ausdrucksvarianten für ihre gesprochenen Dialoge: freundlich, besorgt, konzentriert und ermutigend, mit weichen Bildüberblendungen. Keine Mundanimation in dieser Fassung. Die bisherigen 3D-Quellen bleiben für später erhalten. Dialogvorschau im isolierten AvatarLab; gezeichnetes Porträt inzwischen im Hauptspiel-Intro und in Questdialogen integriert. Details: [MiraAvatar](MiraAvatar.md), bisherige 3D-Versuche: [Mira3D](Mira3D.md).
+
 Zunächst bleibt das Spiel in einem Asteroidengürtel. Reisen in andere Sternsysteme gehören nicht zum ersten Umfang. Drohnen beginnen bei etwa 2 × 2 Metern, einzelne Asteroiden können 5 Kilometer Durchmesser erreichen.
 
 ## Steuerung und Logistik
 
-Die Spielfigur übernimmt zunächst die Rolle des Kommandanten aus der Außenansicht. Spätere Produktionslinien werden über eine Planungsansicht, sinngemäß einen Planungstisch, entworfen. Drohnen im Schiffsinneren führen die Transport- und Arbeitsaufträge aus. Die Logistik soll vollständig auf Drohnen beruhen; Förderbänder sind nicht vorgesehen.
+Die Spielfigur beginnt in der Station. Die frei navigierbare Außenansicht soll einen virtuellen, aus bekannten Messdaten aufgebauten Raum darstellen; ein Blick aus dem Fenster zeigt dagegen nur den tatsächlichen sichtbaren und erkennbaren Ausschnitt. Spätere Produktionslinien werden über eine Planungsansicht, sinngemäß einen Planungstisch, entworfen. Drohnen im Schiffsinneren führen die Transport- und Arbeitsaufträge aus. Die Logistik soll vollständig auf Drohnen beruhen; Förderbänder sind nicht vorgesehen. Der Einstieg verwendet den vorhandenen begehbaren Stationsinnenraum aus Commit ff0ff7b mit Wohnmodul, Schleuse und Stationsring. Der erste Nahbereichsscan wird nach Annäherung über E am realen Stationspult ausgeführt. Die virtuelle Aussenansicht zeigt bis dahin keine Asteroiden; Debugsicht erteilt keine Arbeitsfreigabe. Die aktuelle Quest bleibt am linken Rand; Mira begleitet sie mit dem gezeichneten Porträt.
+
+### Scanner und bekannte Arbeitsgebiete (Entscheidung 08.10.2026)
+
+- Der virtuelle Nahraum enthält zunächst nur die Station; die Planetenübersicht bleibt beim Herauszoomen verfügbar. Herkunft und Detailumfang der anfänglichen Planetendaten sind noch auszuarbeiten.
+- Erste Aufgabe ist ein Nahbereichsscan, der die ersten Asteroiden erreichbar entdeckt. Scanner besitzen einen eigenen aufladbaren Energiespeicher; Startladung 97 Prozent, volle Ladung nach zehn Sekunden bei 1×. Implementierter Einstieg: 0,1 kWh eigener Speicher, 1,08 kW Ladeleistung, ein erster Kugelscan mit fest 10 km Reichweite für zehn Kontakte einschliesslich drei Wasserquellen. Die zehn Startkontakte liegen innerhalb von 10 km, übrige Körper ausserhalb; spätere Tierwerte bleiben zu balancieren.
+- Ortung und grobe Forminformation sind von Oberflächenkartierung, visueller Erkundung und Materialanalyse getrennt. Ohne Kartierung zeigt die virtuelle Ansicht nur den jeweils bekannten Detailstand, gegebenenfalls eine grobe Form ohne Textur. Spätere Erkundungsdrohnen ergänzen Oberflächendaten und Bilder, bei Bedarf mit eigener Beleuchtung.
+- Arbeitsdrohnen dürfen nur bereits gescannte Bereiche anfliegen. Welche Datenqualität und Aktualität einen Bereich für Arbeitsflüge freigibt, bleibt festzulegen; ein Kontakt ist nicht automatisch eine sichere Bohrstelle.
+- Später entwickelte Drohnen ermöglichen eine Verbindung mit visueller Live-Ansicht. Grundlegende autonome Navigation setzt keinen für den Spieler verfügbaren Videostream voraus.
+- Scannertechnik soll in jedem Tier einen eigenen Techtree erhalten. Details werden im Techtree-Themenchat ausgearbeitet. Effizienz und regelmäßige Aktualisierung werden für bewegte Objekte und kontinuierliche Überwachung wichtig.
+
+Stationskonsole, erster Scan, datenabhängige VR-Sicht und Auftragsfreigabe sind implementiert. Oberflächenkartierung und Drohnen-Livebilder stehen aus. Debugsicht zeigt alle Objekte ohne Wissens-/Arbeitsfreigabe. Details und Prüfung: [Scanner und Spielstände](Scanner-und-Spielstaende.md). Nahbereichssensorik und Voraussetzungen für sicheres Bohren bleiben Gegenstand weiterer Ausarbeitung.
 
 Für den ersten Prototyp nutzen Außendrohnen elektrisch erhitztes Wasser als ausgestoßene Reaktionsmasse. Sie benötigen sowohl Strom als auch Treibwasser. Ein späterer Technologiebaum kann weitere Antriebe freischalten.
 
@@ -41,7 +54,7 @@ Der Technologiebaum soll möglichst realitätsnah sein. Für die spätere Ausarb
 - [x] Startbare 3D-Weltraumszene mit verteilten Asteroiden; inzwischen 100 Körper im aktiven Modus.
 - [x] Kamera mit Zoom, Rotation, Verschieben, Bewegung und Wiederherstellung der Standardansicht.
 
-Ergänzende Testhilfen: einfache Schiff-/Drohnenplatzhalter für den Maßstab, Gesamtübersicht und Objektfokus. Noch keine Survival- oder Forschungsmechanik.
+Ergänzende Testhilfen: einfache Schiff-/Drohnenplatzhalter für den Maßstab, Gesamtübersicht und Objektfokus. Noch keine vollständige Survival-Mechanik; Wasserabbauwissen ist als erste Erfahrungsprogression implementiert.
 
 ## Meilenstein 02 — Wasser sichern
 
@@ -49,7 +62,7 @@ Eine Eisquelle auswählen und Drohne 01 mit dem Befüllen des Schiffstanks beauf
 
 Ein Balken über der Drohne zeigt ihren Phasenfortschritt. Die Objektanzeige zeigt Batterie, Treibwasser, Geschwindigkeit, Ladung, Zielentfernung, Ankunftszeit und verbleibende Abbauzeit. Die Aufgabenliste zeigt die Versorgung des Schiffstanks. Ein Zeitraffer macht die bei kleinem Schub langen Flug- und Ladezeiten testbar.
 
-Asteroiden zeigen nur bekannte Bestandteile: beispielsweise 80 % Wasser und 20 % unbekannt. Forschung soll die unbekannten Bestandteile später auflösen. Derzeit ist der Wasserscan für drei Testquellen vorgegeben; es gibt noch keine Forschungsmechanik.
+Asteroiden zeigen nur bekannte Bestandteile: beispielsweise 80 % Wasser und 20 % unbekannt. Forschung soll die unbekannten Bestandteile später auflösen. Der erste aktiv ausgelöste Scan bestätigt Wasser bei drei vorbereiteten Testquellen. Weiterer Scan-/Forschungsausbau bleibt offen; Wasserabbau-Erfahrung ist bereits implementiert.
 
 Die Grafik bleibt aus austauschbaren Platzhaltern aufgebaut. Konzepte für Gesteins-, Eis- und Metallasteroiden können parallel entwickelt und später als Unity-Modelle integriert werden.
 
@@ -65,15 +78,15 @@ Beim Auswählen der Station sollen aktuelle und maximal mögliche Solarleistung,
 
 ## Sichtbare Heimatwelt und Sonne (07.10.2026)
 
-Auf Nutzerauftrag als Laufzeitkulisse ergänzt: sichtbare Sonne, zerbrochener Planet mit auseinandergerissenen Hälften und glühendem Kern, halb zerstörter Mond, giftig wirkender grünlicher Auswurf sowie glühender Materialstrom vom Mond zum Planeten. Diese Darstellung ist visuell; Temperatur, Gift, Schaden und das oben beschriebene Sonnenenergie-/Ausrichtungssystem sind weiterhin nicht als Mechanik implementiert. Die ersten drei Erinnerungsbilder mit Enceladus-Narration sind sofort in der Cutscene-Galerie abspielbar; siehe docs/Dialoge/IntroCinematic/README.md.
+Auf Nutzerauftrag als Laufzeitkulisse ergänzt: sichtbare Sonne, zerbrochener Planet mit auseinandergerissenen Hälften und glühendem Kern, halb zerstörter Mond, giftig wirkender grünlicher Auswurf sowie glühender Materialstrom vom Mond zum Planeten. Diese Darstellung ist visuell; Temperatur, Gift, Schaden und das oben beschriebene Sonnenenergie-/Ausrichtungssystem sind weiterhin nicht als Mechanik implementiert. Alle zwölf Erinnerungsbilder mit durchgehender Enceladus-Narration sind sofort im Cinematics-Bereich der Galerie abspielbar; siehe docs/Dialoge/IntroCinematic/README.md.
 
 ## Ideensammlung: Umsetzungsstand (07.10.2026)
 
 - [x] Wasserauftrag mit Drohnenflug, Eisabbau, Rücktransport und Tankübergabe als Prototyp.
 - [x] Modulare Raumstation und Bergbaudrohnen als erste Spielgrafik.
 - [x] Mira-Erwachen mit freigegebener Aoede-Stimme und Galerie-Wiederholung.
-- [x] Erste drei Kohlezeichnungen mit Enceladus als sofort verfügbares Cinematic; abgenutzte, gewölbte und geneigte Bildblätter, Fokusfahrten und direkte Bildüberblendungen.
-- [x] Gemeinsamer Untertitel-Schalter für Cutscenes und Cinematics; Erinnerungssequenz mit satzweisen Untertiteln.
+- [x] Zwölf Kohlezeichnungen mit Enceladus als sofort verfügbares Cinematic; abgenutzte, gewölbte und geneigte Bildblätter, Fokusfahrten und direkte Bildüberblendungen.
+- [x] Gemeinsamer Untertitel-Schalter für Cutscenes und Cinematics; Erinnerungssequenz mit vollständigem Text der aktuellen Szene; keine wortgenauen Zeitmarken.
 - [x] Große zentrale Sonne und neun Planeten auf unterschiedlichen geneigten Umlaufbahnen; Planeten 3, 7 und 8 mit Ringen.
 - [x] Planet 4 als zerstörte Heimatwelt nach freigegebenem Konzept: unregelmäßige Kontinentfragmente, tiefe glühende Spalten, beschädigter Mond, giftiger Dunst und Mond-zu-Planet-Materialstrom. Vereinfachte 3D-Umsetzung; keine vollständig ausgearbeitete Oberfläche.
 - [x] Alle zwölf Teile des Intro-Cinematics integriert, durchgehende Enceladus-Narration, Charcoal-Atmosphere-Musik und direkter Bildüberblendung; korrigierte Szene 9.
@@ -123,3 +136,7 @@ Entwurfsrichtung vom 06.10.2026: Batteriewechselstation sowie Reparatur-, Erkund
 Eine Kartenübersicht soll Asteroiden nach Eigenschaften markieren und Befehle an ausgewählten Objekten erlauben. Nach Erforschung der Stationsbewegung gehören dazu das Navigieren auf die sonnenabgewandte Seite eines Asteroiden und das Verlassen seines Schattens. Sichtbare Sonne und ausrichtbare Solarpanels ergänzen die Energieversorgung. Solarstürme, Schutz hinter Asteroiden beziehungsweise spätere Schutzschilde sowie eindringende Körper mit Kollisionen und beweglichen Fragmenten sind weitere Ereignisideen. Spätere Scanner sollen Bahnen und Einschläge in einer Kartensimulation vorhersagen und sichere Positionen berechnen. Details und offene Spielregeln stehen im [Ideenbacklog](Ideenbacklog.md); noch keine Implementierung oder feste Priorisierung.
 
 Weitere Storyidee vom 06.10.2026: Ein ferner, explodierter und in große Teile gespaltener Planet ist sichtbar, wegen einer Strahlungszone zunächst aber unzugänglich. Das Intro erzählt das Unglück als kurze Cinematic aus stilisierten Bildern mit Mira als Erzählerin. Zusammenhang zwischen Planetenzerstörung und Stationsunglück, Strahlungsursache und spätere Zugangsvoraussetzungen bleiben offen. Die Inszenierung ist noch nicht umgesetzt; Details im [Ideenbacklog](Ideenbacklog.md#zerstörter-planet-und-intro) und unter [Story und Dialoge](Dialoge/README.md#geplante-erweiterung-des-intros).
+
+## Spielstände (08.10.2026)
+
+Manuelle Spielstände erhalten Namen und Kommentar. Laden zeigt Scanstatus, Wasserabbau-Level, Forschungsfortschritt und Vorräte. Autosave alle 60 Sekunden aktiver Spielzeit sowie beim Verlassen; Speicherabfrage vor der Rückkehr zum Startmenü und beim Anwendungsschliessen. Laufende Drohnenaufträge, Fracht und Scanwissen werden gespeichert. Weitere Techtree-Felder bleiben Entwürfe. Details: [Scanner und Spielstände](Scanner-und-Spielstaende.md).

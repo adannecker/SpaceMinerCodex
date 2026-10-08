@@ -13,7 +13,7 @@ Unter `Assets/SpaceMiner/Asteroids` liegen nach **Space Miner → Prototyp einri
 - `Prefabs`: neun Beispiele, drei Typen × 100 m, 1 km und 5 km.
 - `AsteroidCatalog.asset`: erweiterbare Liste von Typen mit Gewichten für reproduzierbare Zufallsauswahl.
 
-Die zwölf Asteroiden der bestehenden Szene erhalten den Generator; ihre Positionen bleiben erhalten. Schon konfigurierte Generatoren werden beim Einrichten mit ihren aktuellen Szenenparametern neu gebacken. Bestehende Beispiel-Prefabs werden erhalten.
+Die ursprüngliche Zwölf-Körper-Szene erhielt den Generator; der aktuelle aktive Modus enthält 100 Körper. Beim Einrichten bleiben vorhandene Positionen erhalten. Schon konfigurierte Generatoren werden beim Einrichten mit ihren aktuellen Szenenparametern neu gebacken. Bestehende Beispiel-Prefabs werden erhalten.
 
 Neue Einträge in `BeltSettings.Asteroids` werden beim Einrichten zusätzlich erzeugt. Ihre Position, Größe, Typ und Seed stammen aus dem Eintrag. Fehlender Typ und Seed null erhalten Startwerte. Vorhandene Szenenobjekte werden erhalten; das Entfernen eines Listeneintrags löscht daher keine bereits bearbeiteten Objekte. Die Beispielbibliothek lässt sich über **Space Miner → Asteroiden → Vorhandene Beispiel-Prefabs neu backen** nach Profiländerungen aktualisieren.
 
@@ -89,3 +89,9 @@ Eine zweite Projektion liefert größere Oberflächenunregelmäßigkeiten relati
 `AsteroidCheck` prüft geschlossene Topologie, nichtdegenerierte Dreiecke, Größen, Seed-Reproduzierbarkeit, LOD-Konsistenz, begrenzte Eisflächen, einen neuen unregistrierten Typ, wiederholte Generierung und Collider-Raycast. Dabei werden auch die Beispiel-Prefabs aktualisiert. Der Spieltest ergänzt die bestehenden Kamera-, Intro- und Wasserprüfungen um Generator-, Material- und Colliderprüfungen und speichert Ansichten der drei Materialfamilien in `Logs/asteroid-*.png`. Diese Ansichten werden ohne HUD separat gerendert, damit auch ein verborgenes Testfenster gültige Bilder liefert; ein praktisch leeres Rendering führt zum Testfehler.
 
 Die Konzepte geben die gemeinsame Richtung vor. Das ist die erste prozedurale Umsetzung; Nahdetails, Materialvariation und Fernlesbarkeit können anhand der echten Spielansichten weiter abgestimmt werden.
+
+## Scan-Startregion und spätere Wolken-Seeds (08.10.2026)
+
+Das aktive 100er-Szenario erhält zur Laufzeit zehn Startkontakte innerhalb des festen Scanner-Radius von 10 km. Zusätzliche Kontakte im Radius werden reproduzierbar ausserhalb platziert; 400 m Kugelabstand und ursprüngliche Oktanten bleiben erhalten. Assets/Szenendaten werden dadurch nicht umgeschrieben. ScannerProgression.ArrangeIntroCloud verwendet dafür intern Seed 7301. Die expliziten Spiral-/Millionen-Stresstests bleiben eigene Geometrien.
+
+Vorgemerkte Nutzeridee: Später eine frei wählbare Seed für die gesamte Wolke mit massiv mehr Asteroiden. Das ist getrennt von den bereits vorhandenen Form-Seeds einzelner Körper. Parameter, Generatorversion, Startregion und Seed im Spielstand bleiben auszuarbeiten; siehe Ideenbacklog und Scanner-und-Spielstaende.

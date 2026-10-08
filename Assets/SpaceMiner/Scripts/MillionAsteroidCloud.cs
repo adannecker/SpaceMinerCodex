@@ -86,6 +86,8 @@ namespace SpaceMiner
         private void LateUpdate()
         {
             if (Bodies == null) return;
+            var scanner = FindFirstObjectByType<WaterScenario>()?.Scanner;
+            if (scanner != null && !scanner.ShowsUnknown) { PointDrawCalls = LocalMeshCount = 0; return; }
             PointDrawCalls = points.Count;
             foreach (Mesh mesh in points) Graphics.DrawMesh(mesh, Matrix4x4.identity, pointMaterial, 0, view, 0, null, ShadowCastingMode.Off, false);
             LocalMeshCount = 0;

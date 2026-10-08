@@ -149,10 +149,53 @@ namespace SpaceMiner
 
         public void Assign(AsteroidResource source)
         {
+            if (source == null || !source.CanMineWater) return;
             Target = source;
             cargoWaterFraction = source.WaterFraction;
             HasTankOrder = true;
             BeginOutbound();
+        }
+
+        [System.Serializable]
+        public sealed class SavedState
+        {
+            public Vector3 position, destination, surfacePoint, surfaceNormal, maneuverStart;
+            public Quaternion rotation, maneuverRotation;
+            public DronePhase phase;
+            public string target, returnReason;
+            public float fuel, battery, cargo, speed, burnedWater, legDistance, phaseSeconds, cargoGoal, cargoWaterFraction, finalRawGoal;
+            public bool tankOrder, parkingAbove, outboundAbove, productiveTrip, cancelledTrip;
+            public bool operational, needsInitialCharge;
+            public float[] hardware;
+        }
+        public SavedState CaptureState() => new SavedState {
+            position=transform.position, rotation=transform.rotation, phase=Phase, target=Target == null ? null : Target.name,
+            fuel=FuelLiters, battery=BatteryKwh, cargo=CargoKg, speed=Speed, burnedWater=BurnedWaterLiters, tankOrder=HasTankOrder,
+            destination=destination, legDistance=legDistance, phaseSeconds=phaseSeconds, cargoGoal=cargoGoal,
+            cargoWaterFraction=cargoWaterFraction, finalRawGoal=finalRawGoal, surfacePoint=SurfacePoint, surfaceNormal=SurfaceNormal,
+            maneuverStart=maneuverStart, maneuverRotation=maneuverRotation, parkingAbove=parkingAbove, outboundAbove=outboundAbove,
+            productiveTrip=productiveTrip, cancelledTrip=cancelledTrip, returnReason=ReturnReason,
+            hardware=new[]{DryMassKg,FuelCapacityLiters,BatteryCapacityKwh,CargoCapacityKg,CruiseSpeed,ThrustNewtons,ExhaustSpeed,HeatingKwhPerLiter,MiningRateKgPerSecond,MiningPowerKw,OnboardPowerKw,ReserveFraction},
+            operational=IsOperational,needsInitialCharge=NeedsInitialCharge
+        };
+        public void RestoreState(SavedState state)
+        {
+            ReleaseWorkingSurface();
+            IsOperational=state.operational;NeedsInitialCharge=state.needsInitialCharge;
+            var h=state.hardware;
+            DryMassKg=h[0];FuelCapacityLiters=h[1];BatteryCapacityKwh=h[2];CargoCapacityKg=h[3];CruiseSpeed=h[4];ThrustNewtons=h[5];
+            ExhaustSpeed=h[6];HeatingKwhPerLiter=h[7];MiningRateKgPerSecond=h[8];MiningPowerKw=h[9];OnboardPowerKw=h[10];ReserveFraction=h[11];
+            transform.SetPositionAndRotation(state.position,state.rotation); Phase=state.phase;
+            Target=System.Array.Find(Scenario.Asteroids,a=>a.name==state.target);
+            FuelLiters=state.fuel; BatteryKwh=state.battery; CargoKg=state.cargo; Speed=state.speed;
+            BurnedWaterLiters=state.burnedWater; HasTankOrder=state.tankOrder; ReturnReason=state.returnReason;
+            destination=state.destination;legDistance=state.legDistance;phaseSeconds=state.phaseSeconds;
+            cargoGoal=state.cargoGoal;cargoWaterFraction=state.cargoWaterFraction;finalRawGoal=state.finalRawGoal;
+            SurfacePoint=state.surfacePoint;SurfaceNormal=state.surfaceNormal;maneuverStart=state.maneuverStart;
+            maneuverRotation=state.maneuverRotation;parkingAbove=state.parkingAbove;outboundAbove=state.outboundAbove;
+            productiveTrip=state.productiveTrip;cancelledTrip=state.cancelledTrip;
+            if(Target!=null && (Phase==DronePhase.Launching || Phase==DronePhase.Outbound || Phase==DronePhase.Docking || Phase==DronePhase.Mining || Phase==DronePhase.Undocking)) UseWorkingSurface();
+            GetComponent<MiningDroneVisual>()?.RefreshPose();
         }
 
         public void ResetDrone()

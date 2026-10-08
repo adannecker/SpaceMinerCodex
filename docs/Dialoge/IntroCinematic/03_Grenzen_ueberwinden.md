@@ -1,5 +1,7 @@
 # Intro-Cinematic – Teil 03: Grenzen überwinden
 
+Aktualisierung 08.10.2026: Das Motiv und sein Textabschnitt sind im vollständigen zwölfteiligen Cinematic integriert. Aktive Stimme ist die durchgehende Enceladus-Gesamtaufnahme; Einzel-WAVs und v2-Stimmen hier sind historische Produktionsquellen. Aktueller Stand: [Cinematic-Übersicht](README.md). Frühere Integrations-/Freigabehinweise unten gelten für den damaligen Arbeitsschritt.
+
 Stand: 07.10.2026. Generierte Fassung; Hörfreigabe offen. Seit 07.10.2026 in der Cutscene „Erinnerungen · Teile 1–3“ eingebaut.
 
 ## Sprechertext

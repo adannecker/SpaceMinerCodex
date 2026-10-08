@@ -76,13 +76,13 @@
 
 **Bild und Ton:** Eine Drohne löst sich vorsichtig von ihrer Halterung. Die Kamera bewegt sich in die spätere Standardansicht beim Schiff.
 
-**Einblendung:** `ERSTES ZIEL: EINE WASSERQUELLE FINDEN`
+**Einblendung:** `ERSTER AUFTRAG: UMGEBUNG SCANNEN`
 
 **Sprechertext:**
 
-> Zuerst brauchen wir eine verlässliche Wasserquelle.
+> Bevor wir eine Drohne losschicken, brauchen wir verlässliche Scandaten.
 >
-> Wir sehen uns die nahen Asteroiden an.
+> Geh an die Konsole. Sobald der Scanner aufgeladen ist, führe einen Nahbereichsscan aus. In unserer virtuellen Aussenansicht sehen wir nur, was wir bereits erfasst haben.
 >
 > Ein Schritt nach dem anderen.
 >
@@ -90,13 +90,13 @@
 
 **Regie:** Eine kleine Pause vor dem letzten Satz. Warm und schlicht, ohne Pathos. Anschließend einige Sekunden Raum lassen, bevor die Bedienoberfläche erscheint.
 
-## Übergang ins Spiel — Entwurf
+## Historischer Übergang ins Spiel — Entwurf
 
 Das Bild geht ohne Schnitt in die steuerbare Außenansicht über. Im aktuellen Wasserprototyp sind erste Eisquellen schon bekannt: Der Spieler wählt eine Quelle und weist Drohne 01 den Tankauftrag zu. Ein eigener erster Scan bleibt ein späterer Entwicklungsschritt. Die zweite funktionsfähige Drohne wartet auf Ladung und Treibstoffversorgung.
 
-## Erste Umsetzung im Prototyp
+## Historische erste Umsetzung im Prototyp
 
-- Das Intro startet bei jedem Spielstart automatisch und endet nach dem letzten Sprecherabschnitt.
+- Die damalige Fassung startete bei jedem Spielstart automatisch. Aktuell beginnt die Cutscene über Demo starten oder Galerie-Wiederholung.
 - **Esc** überspringt es jederzeit, stoppt die Stimme und stellt die normale Spielansicht her. Erst ein erneuter Tastendruck im Spiel kann das Windows-Spiel schließen.
 - Kamerasteuerung, Spielanzeigen und Simulation bleiben während des Intros gesperrt.
 - Sprechertexte und Sprachabschnitte werden mit `tools/GenerateIntro.ps1` aus dieser Datei erzeugt. Die WAV-Dateien und das Laufzeitskript liegen in `Assets/SpaceMiner/Resources/Intro/`.
@@ -117,3 +117,7 @@ Das Bild geht ohne Schnitt in die steuerbare Außenansicht über. Im aktuellen W
 Aoede (Gemini 3.1 Flash TTS Preview) wurde vom Nutzer für Mira freigegeben. Die 79,920-s-Gesamtaufnahme ist an gemessenen Sprechpausen auf die 16 vorhandenen Laufzeitabschnitte verteilt; Untertitel in intro.json auf Station und nur Drohne 01 abgeglichen. Alte Hedda-WAVs sind unter Sprachproben/Hedda_Original gesichert. Die obigen Angaben zur zweiten funktionsfähigen Drohne, Schiffsdarstellung und Windows-Teststimme beschreiben den historischen Stand und sind überholt. Das Original-Aoede-Audio samt Regie liegt unter Sprachproben/Mira_Erwachen_Aoede_Test01.*. GenerateIntro.ps1 erzeugt weiterhin Hedda und darf die freigegebene Fassung nicht unbeabsichtigt ersetzen. Der Spielcode und die bestehenden Asset-Metadaten bleiben erhalten. Eine subjektive Prüfung sämtlicher Schnittstellen bleibt offen.
 
 Prüfung 07.10.2026: Windows-Build erfolgreich; Spielintegrationstest Check erfolgreich (Logs/smoke-test-result.json). Audiogrenzen anhand gemessener Stille festgelegt; subjektive Hörprüfung sämtlicher Schnitte noch offen.
+
+## Scan-Einstieg vom 08.10.2026
+
+Nach dem Intro beginnt die Bedienung an der Stationskonsole. Scannerstart 97 Prozent, zehn Sekunden bis zur vollen Ladung bei 1x. Der erste Scan erfasst zehn Kontakte, darunter A-01 bis A-03 als Wasserquellen. Mira begleitet Scanauftrag, Ergebnis/Wasserauftrag, Drohnenstart, erste Lieferung und Tankabschluss. Neue Texte sind zunächst lesbare Dialoge; passende Aoede-Aufnahmen für die zwei geänderten Intro-Cues und die Questdialoge fehlen noch. Die übrigen 14 Sprach-Cues bleiben erhalten. Die ältere Übergangsbeschreibung oben ist historisch. Details: ../Scanner-und-Spielstaende.md.

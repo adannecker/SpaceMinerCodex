@@ -53,6 +53,7 @@ namespace SpaceMiner
             // Aim left of the station so its silhouette occupies the open right side.
             Vector3 target = new Vector3(-35, 0, 0);
             menuCamera.transform.SetPositionAndRotation(position, Quaternion.LookRotation(target - position));
+            OrbitCamera.ConfigureDepthRange(menuCamera, Vector3.Distance(position, target));
             menuCamera.fieldOfView = 48;
             for (int i = 0; i < rocks.Length; i++)
             {
@@ -147,6 +148,7 @@ namespace SpaceMiner
         {
             string[] args = Environment.GetCommandLineArgs();
             IsOpen = Array.IndexOf(args, "-spaceMinerSmokeTest") < 0
+                && Array.IndexOf(args, "-scanSaveCheck") < 0
                 && Array.IndexOf(args, "-settingsPreview") < 0
                 && Array.IndexOf(args, "-configurationAudioCheck") < 0
                 && Array.IndexOf(args, "-quitMenuCheck") < 0
@@ -155,11 +157,19 @@ namespace SpaceMiner
 
         public void StartDemo()
         {
-            if (!IsOpen || SettingsMenu.IsOpen) return;
+            if (!IsOpen || SettingsMenu.IsOpen || SaveGameMenu.IsOpen) return;
+            var saves = GetComponent<SaveGameMenu>();
+            if (saves != null && !saves.NewSession()) return;
+            FindFirstObjectByType<WaterScenario>()?.ResetScenario();
             IsOpen = false;
             ClearScenery();
             FindFirstObjectByType<IntroSequence>()?.PlayIntro();
             SettingsUiAudio.Activate();
+        }
+        public void ResumeSavedGame()
+        {
+            IsOpen = false; galleryOpen = false; quitPrompt = false; ClearScenery();
+            FindFirstObjectByType<IntroSequence>()?.Skip();
         }
         public void ReturnToStart()
         {
@@ -169,7 +179,7 @@ namespace SpaceMiner
 
         private void OnGUI()
         {
-            if (!IsOpen || SettingsMenu.IsOpen || MemoryCinematic.IsPlaying) return;
+            if (!IsOpen || SettingsMenu.IsOpen || MemoryCinematic.IsPlaying || SaveGameMenu.IsOpen) return;
             Matrix4x4 matrix = GUI.matrix;
             int depth = GUI.depth;
             try
@@ -203,9 +213,10 @@ namespace SpaceMiner
                 else
                 {
                     if (GUI.Button(new Rect(panel.x + 28, panel.y + 212, 344, 48), "Demo starten", ui.Primary)) StartDemo();
-                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 270, 344, 48), "Cinematics", ui.Button)) { galleryOpen = true; SettingsUiAudio.Activate(); }
-                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 328, 344, 48), "Konfiguration", ui.Button)) { GetComponent<SettingsMenu>().Open(); SettingsUiAudio.Activate(); }
-                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 386, 344, 48), "Beenden", ui.Button)) { quitPrompt = true; SettingsUiAudio.Activate(); }
+                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 266, 344, 42), "Spielstand laden", ui.Button)) GetComponent<SaveGameMenu>()?.OpenLoad();
+                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 314, 344, 42), "Cinematics", ui.Button)) { galleryOpen = true; SettingsUiAudio.Activate(); }
+                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 362, 344, 42), "Konfiguration", ui.Button)) { GetComponent<SettingsMenu>().Open(); SettingsUiAudio.Activate(); }
+                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 410, 344, 42), "Beenden", ui.Button)) { quitPrompt = true; SettingsUiAudio.Activate(); }
                 }
                 GUI.Label(new Rect(panel.x + 28, panel.y + 455, 344, 30), "DEMO  //  " + Application.version, new GUIStyle(ui.Small) { alignment = TextAnchor.MiddleLeft });
             }

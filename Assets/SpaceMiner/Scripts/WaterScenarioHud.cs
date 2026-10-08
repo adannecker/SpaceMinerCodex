@@ -33,8 +33,7 @@ namespace SpaceMiner
             orbit = GetComponent<OrbitCamera>();
             view = GetComponent<Camera>();
             display = GetComponent<DisplayModeController>();
-            foreach (AsteroidResource source in scenario.Asteroids)
-                if (source.WaterIdentified) knownSources.Add(source);
+            knownSources.AddRange(scenario.Asteroids);
         }
 
         private void Update()
@@ -62,6 +61,7 @@ namespace SpaceMiner
         {
             if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             if (scenario == null || orbit == null || !orbit.ShowHud) return;
+            if (StationInteriorMode.IsInside) return;
             Styles();
             Matrix4x4 previous = GUI.matrix;
             GUI.matrix = Matrix4x4.Scale(Vector3.one * Scale);
@@ -82,12 +82,20 @@ namespace SpaceMiner
             Label(34, 172, 280, 24, "1 bereit  ·  1 wartet auf Ladung  ·  8 defekt", muted);
 
             Panel(Quest);
-            Label(34, 238, 278, 24, "AUFTRAG: TANK BEFÜLLEN", muted);
+            Label(34, 238, 278, 24, scenario.Scanner.FirstScanComplete ? "AUFTRAG: TANK BEFÜLLEN" : "AUFTRAG: UMGEBUNG SCANNEN", muted);
+            if (!scenario.Scanner.FirstScanComplete)
+            {
+                Label(34, 275, 278, 80, "Öffne die Stationskonsole. Lade den Scanner und führe den ersten Nahbereichsscan aus.");
+                Label(34, 370, 278, 50, "Scanner " + (scenario.Scanner.Charge * 100).ToString("0.0") + "% · " + OrbitCamera.FormatDistance(scenario.Scanner.RangeMeters), muted);
+                if (GUI.Button(new Rect(34, 435, 278, 32), "Zur Scannerkonsole", button)) scenario.Scanner.ReturnToStation();
+            }
+            else {
             Label(34, 275, 278, 24, Tick(scenario.SourceAssigned) + "Eisquelle zuweisen");
             Label(34, 309, 278, 24, Tick(scenario.Deliveries > 0) + "Erste Wasserlieferung");
             Label(34, 343, 278, 24, Tick(scenario.QuestComplete) + "200 Liter Wasser sichern");
             Label(34, 379, 278, 44, scenario.Deliveries + " Lieferungen  ·  " + scenario.DeliveredLiters.ToString("0.0") + " L gewonnen\nDrohne 01: " + scenario.Worker.Status, muted);
             if (GUI.Button(new Rect(34, 435, 278, 32), "Drohne 01 auswählen", button)) orbit.Select(scenario.Worker.Info);
+            }
 
             if (SettingsStore.Current.Gameplay.ShowControlHints) {
             Panel(Controls);
@@ -125,7 +133,7 @@ namespace SpaceMiner
             Panel(Notice);
             Label(Notice.x + 12, Notice.y + 10, Notice.width - 24, 54, scenario.Message, muted);
             Label(Notice.x + 12, Notice.y + 68, Notice.width - 24, 20,
-                (GetComponent<SpiralBelt>() != null && GetComponent<SpiralBelt>().IsReady ? GetComponent<SpiralBelt>().AsteroidCount : scenario.Asteroids.Length).ToString("N0") + " Asteroiden  ·  " + framesPerSecond.ToString("0") + " FPS", muted);
+                scenario.Scanner.KnownCount + " bekannte Kontakte  ·  " + framesPerSecond.ToString("0") + " FPS", muted);
             GUI.matrix = previous;
         }
 
@@ -176,6 +184,7 @@ namespace SpaceMiner
             }
             else if (asteroid != null)
             {
+                Label(x, y, 308, 55, asteroid.IsScanned ? "SCANKONTAKT · Oberfläche nicht kartiert" : "DEBUG · UNBEKANNT / keine Arbeitsfreigabe", muted); y += 60;
                 Label(x, y, 308, 24, "BEKANNTE ZUSAMMENSETZUNG", muted); y += 34;
                 Label(x, y, 308, 24, "Wasser   " + asteroid.KnownWaterPercent.ToString("0") + "%"); y += 32;
                 Bar(new Rect(x, y, 308, 10), asteroid.KnownWaterPercent / 100f); y += 24;

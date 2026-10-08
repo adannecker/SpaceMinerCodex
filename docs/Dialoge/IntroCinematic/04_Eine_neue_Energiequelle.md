@@ -1,5 +1,7 @@
 # Intro-Cinematic – Teil 04: Eine neue Energiequelle
 
+Aktualisierung 08.10.2026: Das Motiv und sein Textabschnitt sind im vollständigen zwölfteiligen Cinematic integriert. Aktive Stimme ist die durchgehende Enceladus-Gesamtaufnahme; Einzel-WAVs und v2-Stimmen hier sind historische Produktionsquellen. Aktueller Stand: [Cinematic-Übersicht](README.md). Frühere Integrations-/Freigabehinweise unten gelten für den damaligen Arbeitsschritt.
+
 Stand: 07.10.2026. Szene 4 setzt die ersten drei Teile fort. Der Abschnitt endet bei „Eine neue Energiequelle.“; die Erklärung der Möglichkeiten gehört zur folgenden Szene. Hörfreigabe und Einbau ins Spiel stehen aus.
 
 ## Sprechertext

@@ -29,6 +29,7 @@ namespace SpaceMiner
         public int CueCount => script?.Cues?.Length ?? 0;
         public float CueDuration => durations[CueIndex];
         public bool HasCompleteVoiceTrack { get; private set; }
+        public int VoicedCueCount { get; private set; }
         public event Action Finished;
 
         private Script script;
@@ -69,10 +70,12 @@ namespace SpaceMiner
                 clips = new AudioClip[CueCount];
                 durations = new float[CueCount];
                 HasCompleteVoiceTrack = true;
+                VoicedCueCount = 0;
                 for (int i = 0; i < CueCount; i++)
                 {
                     Cue cue = script.Cues[i];
-                    clips[i] = Resources.Load<AudioClip>(cue.Audio);
+                    clips[i] = string.IsNullOrEmpty(cue.Audio) ? null : Resources.Load<AudioClip>(cue.Audio);
+                    if (clips[i] != null) VoicedCueCount++;
                     HasCompleteVoiceTrack &= clips[i] != null;
                     float readingTime = cue.Text.Split(' ').Length / 2.1f;
                     durations[i] = Mathf.Max(3.5f, clips[i] != null ? clips[i].length + 1.2f : readingTime + 1.5f);
@@ -134,6 +137,7 @@ namespace SpaceMiner
 
         private void SetCamera()
         {
+            if (StationInteriorMode.Current != null) { StationInteriorMode.Current.Enter(true); return; }
             int stage = script.Cues[CueIndex].Stage;
             Vector3 position, target;
             float drift = Mathf.Clamp01(stageElapsed / 22f);
@@ -153,8 +157,7 @@ namespace SpaceMiner
                 target = Vector3.zero;
             }
             transform.SetPositionAndRotation(position, Quaternion.LookRotation(target - position));
-            view.nearClipPlane = 0.05f;
-            view.farClipPlane = 1200000f;
+            OrbitCamera.ConfigureDepthRange(view, Vector3.Distance(position, target));
         }
 
         private void OnGUI()
@@ -185,6 +188,7 @@ namespace SpaceMiner
 
             float textWidth = Mathf.Min(900, width - 100);
             float left = (width - textWidth) * 0.5f;
+            FindFirstObjectByType<WaterScenario>()?.Scanner?.DrawPortrait(new Rect(30,height*.4f,180,230));
             GUI.color = new Color(1, 1, 1, fade);
             GUI.Label(new Rect(left, height * 0.26f, textWidth, 58), cue.Heading, heading);
             Fill(new Rect(width * 0.5f - 35, height * 0.36f, 70, 2), new Color(0.35f, 0.85f, 0.95f, fade));

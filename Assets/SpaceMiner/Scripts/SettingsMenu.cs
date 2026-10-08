@@ -7,8 +7,8 @@ namespace SpaceMiner
     {
         public static bool IsOpen { get; private set; }
         private static int closedFrame = -1;
-        public static bool BlocksInput => QuitMenu.BlocksInput || StartMenu.IsOpen || IsOpen || closedFrame == Time.frameCount || TechTreeMenu.BlocksInput;
-        public static bool PausesSimulation => QuitMenu.BlocksInput || StartMenu.IsOpen || (BlocksInput && SettingsStore.Current.Gameplay.PauseInMenu);
+        public static bool BlocksInput => SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || IsOpen || closedFrame == Time.frameCount || TechTreeMenu.BlocksInput;
+        public static bool PausesSimulation => SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || (BlocksInput && SettingsStore.Current.Gameplay.PauseInMenu);
         private readonly SettingsSession session = new SettingsSession();
         private SpaceMinerPlayerSettings draft => session.Draft;
         private int page; private int bindingCapture = -1;
@@ -77,7 +77,7 @@ namespace SpaceMiner
 #endif
         private void Update()
         {
-            if (QuitMenu.BlocksInput) return;
+            if (QuitMenu.BlocksInput || SaveGameMenu.IsOpen) return;
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             if (Input.GetKeyDown(KeyCode.F10)) { if (IsOpen) Cancel(); else Open(); }
 #endif
@@ -100,7 +100,7 @@ namespace SpaceMiner
         }
         private void DrawMenu()
         {
-            if (QuitMenu.BlocksInput) return;
+            if (QuitMenu.BlocksInput || SaveGameMenu.IsOpen) return;
             GUI.tooltip = "";
             if (IsOpen && bindingCapture >= 0 && Event.current.type == EventType.KeyDown && Event.current.keyCode != KeyCode.Escape)
             { if (draft.Controls.Bindings.TryAssign((CameraAction)bindingCapture, Event.current.keyCode)) bindingCapture = -1; Event.current.Use(); }

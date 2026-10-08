@@ -164,6 +164,8 @@ namespace SpaceMiner
         private void LateUpdate()
         {
             if (!IsReady) return;
+            var scanner = FindFirstObjectByType<WaterScenario>()?.Scanner;
+            if (scanner != null && !scanner.ShowsUnknown) { LastVisibleCount = LastDrawCalls = 0; return; }
             if (Cloud != null) { LastVisibleCount = Cloud.Count - TemplateCount; LastDrawCalls = Cloud.PointDrawCalls; return; }
             if (view == null) view = Camera.main;
             GeometryUtility.CalculateFrustumPlanes(view, planes);

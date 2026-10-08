@@ -41,6 +41,10 @@ namespace SpaceMiner
         readonly float[] angles = {25,120,215,-42.746f,68,160,250,325,100};
         readonly float[] inclinations = {3,-5,7,0,4,-8,6,9,-4};
         Material crust, lava;
+        Material archiveShape;
+        bool? archiveMode;
+        readonly System.Collections.Generic.Dictionary<Renderer,Material[]> archiveMaterials=new System.Collections.Generic.Dictionary<Renderer,Material[]>();
+        public bool ShowsArchiveShapes => archiveMode == true;
         readonly SpaceMinerUi planetUi=new SpaceMinerUi();
         int selectedPlanet=-1;Vector2 infoScroll;
         public int SelectedPlanet => selectedPlanet;
@@ -81,6 +85,11 @@ namespace SpaceMiner
             light.intensity=2.4f;
             var companion=new GameObject("Companion sunlight",typeof(Light));companion.transform.SetParent(transform);companionLight=companion.GetComponent<Light>();companionLight.type=LightType.Directional;companionLight.color=new Color(.78f,.87f,1);companionLight.intensity=1.1f;companionLight.shadows=LightShadows.Soft;
             light.renderMode=LightRenderMode.ForcePixel;companionLight.renderMode=LightRenderMode.ForcePixel;light.shadowStrength=.65f;companionLight.shadowStrength=.65f;
+            // These lights illuminate metre-scale geometry. The kilometre camera
+            // shades its planets analytically and must not render local shadow maps.
+            int localLayers = ~((1 << 29) | (1 << 28));
+            light.cullingMask = localLayers;
+            companionLight.cullingMask = localLayers;
             foreach(var other in FindObjectsByType<Light>(FindObjectsSortMode.None))if(other!=light&&other!=companionLight&&other.type==LightType.Directional)other.enabled=false;
             RenderSettings.ambientMode=UnityEngine.Rendering.AmbientMode.Flat;RenderSettings.ambientLight=new Color(.65f,.70f,.78f);RenderSettings.ambientIntensity=1;RenderSettings.reflectionIntensity=.35f;RenderSettings.sun=light;
             var ambientProbe=new UnityEngine.Rendering.SphericalHarmonicsL2();ambientProbe.AddAmbientLight(RenderSettings.ambientLight*1.6f);RenderSettings.ambientProbe=ambientProbe;
@@ -110,13 +119,26 @@ namespace SpaceMiner
                 line.enabled=false;
             }
             foreach(var child in GetComponentsInChildren<Renderer>())child.gameObject.layer=29;
+            archiveShape=new Material(Shader.Find("SpaceMiner/SolarTerrain")){name="Archive shape - surface not mapped",color=new Color(.25f,.5f,.6f)};
+            foreach(var planet in orbits)foreach(var renderer in planet.GetComponentsInChildren<Renderer>())archiveMaterials[renderer]=renderer.sharedMaterials;
         }
         void LateUpdate()
         {
             if(localCamera==null||SkyCamera==null)return;
+            var scanner=FindFirstObjectByType<WaterScenario>()?.Scanner;
+            bool rough=scanner!=null&&scanner.VirtualView&&!scanner.DebugVisibility;
+            if(archiveMode!=rough) {
+                foreach(var pair in archiveMaterials) {
+                    var renderer=pair.Key;
+                    if(renderer is ParticleSystemRenderer)renderer.forceRenderingOff=rough;
+                    else if(rough){var materials=new Material[pair.Value.Length];for(int i=0;i<materials.Length;i++)materials[i]=archiveShape;renderer.sharedMaterials=materials;}
+                    else renderer.sharedMaterials=pair.Value;
+                }
+                archiveMode=rough;
+            }
             SkyCamera.transform.SetPositionAndRotation(localCamera.transform.position/1000f,localCamera.transform.rotation);
             SkyCamera.fieldOfView=localCamera.fieldOfView;SkyCamera.aspect=localCamera.aspect;
-            SkyCamera.cullingMask=(1<<29)|(localCamera.GetComponent<OrbitCamera>().IsCelestialView?0:1<<28);
+            SkyCamera.cullingMask=(1<<29)|(localCamera.GetComponent<OrbitCamera>().IsCelestialView&&!StationInteriorMode.IsInside?0:1<<28);
             solarLight.transform.rotation=Quaternion.LookRotation(localCamera.transform.position/1000f-SunPosition);
             companionLight.transform.rotation=Quaternion.LookRotation(localCamera.transform.position/1000f-CompanionPosition);
             var orbit=localCamera.GetComponent<OrbitCamera>();
@@ -125,6 +147,7 @@ namespace SpaceMiner
         void OnGUI()
         {
             if(StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput || localCamera==null)return;
+            if(StationInteriorMode.IsInside)return;
             var orbit=localCamera.GetComponent<OrbitCamera>();if(orbit==null||!orbit.ShowHud)return;
             planetUi.Configure(SettingsStore.Current.Accessibility);
             bool telescope=orbit.IsCelestialView;
@@ -154,7 +177,7 @@ namespace SpaceMiner
             if(GUI.Button(new Rect(r.xMax-52,r.y+14,40,34),"×",planetUi.Button))SelectPlanet(-1);
             else
             {
-                string text=item.Kind+"\n\n"+item.Description+"\n\nArchiv: "+item.Archive+"\n\nStatus: "+item.Status;
+                string text=(ShowsArchiveShapes?"ARCHIVFORM · Oberfläche nicht kartiert\n\n":"")+item.Kind+"\n\n"+item.Description+"\n\nArchiv: "+item.Archive+"\n\nStatus: "+item.Status;
                 var area=new Rect(r.x+20,r.y+62,r.width-40,r.height-130);
                 float height=planetUi.Text.CalcHeight(new GUIContent(text),area.width-22);
                 infoScroll=GUI.BeginScrollView(area,infoScroll,new Rect(0,0,area.width-22,height));

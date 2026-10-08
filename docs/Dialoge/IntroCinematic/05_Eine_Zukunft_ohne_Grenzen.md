@@ -1,5 +1,7 @@
 # Intro-Cinematic – Teil 05: Eine Zukunft ohne Grenzen
 
+Aktualisierung 08.10.2026: Das Motiv und sein Textabschnitt sind im vollständigen zwölfteiligen Cinematic integriert. Aktive Stimme ist die durchgehende Enceladus-Gesamtaufnahme; Einzel-WAVs und v2-Stimmen hier sind historische Produktionsquellen. Aktueller Stand: [Cinematic-Übersicht](README.md). Frühere Integrations-/Freigabehinweise unten gelten für den damaligen Arbeitsschritt.
+
 Stand: 07.10.2026. Fortsetzung der Energiequellen-Entdeckung aus Szene 4. Hörfreigabe und Einbau ins Spiel stehen aus.
 
 ## Sprechertext

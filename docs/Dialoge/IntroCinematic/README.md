@@ -1,5 +1,17 @@
 # Erinnerungen – vollstaendiges Intro-Cinematic
 
+Stand: 08.10.2026. Aktuelle Umsetzung: alle zwölf Kohlebilder, eine unveränderte Enceladus-Gesamtaufnahme (135,280 s) und leise Charcoal-Atmosphere-Musik. Szene 9 verwendet das korrigierte v2-Bild. Direkte Bildüberblendungen von 1,2 s, geneigte abgenutzte Blätter und Fokusfahrten. Der gemeinsame Untertitelschalter zeigt den vollständigen Text der aktuellen Szene; keine wortgenauen Untertitelzeiten.
+
+Startmenü → Cinematics → Cinematics → **Erinnerungen · Teile 1–12**. Auf Nutzerauftrag sofort verfügbar. Ende oder Escape führt zur Galerie zurück. Miras Aoede-Erwachen ist die getrennte Cutscene.
+
+Aktuelles Video: `outputs/Cinematic/SpaceMiner-IntroCinematic.mp4`, 1280×720 / 30 fps, H.264/AAC, 135,767 s, optionale deutsche Untertitel. Quellen und Produktionsrevisionen bleiben erhalten. PrepareCinematicMusic.py und ExportCinematicVideo.py unter tools reproduzieren Musik-/Videoaufbereitung; QA, Abhängigkeiten und frühere Videoentwürfe bleiben lokal.
+
+RuinedWorld zeigt zwei Sonnen, neun Planeten, die zerbrochene Heimatwelt und den beschädigten Mond. Komprimierte fiktionale Abstände in einer getrennten Kilometer-Kamera: Heimatbahn 1800 km, Mondabstand 18 km, Stationsabstand 90 km. Lokale Station, Drohnen und Asteroiden bleiben in Metern. Gift/Hitze/Materialstrom sind visuell; keine Schadens- oder Solarertragsmechanik.
+
+Frühere Beschreibungen mit drei Szenen, Einzelclip-Stimmen, Schwarzblenden oder astronomischen Originalabständen gelten ausschließlich für die jeweiligen Produktionsstände unten. Aktuelle Prüfung: docs/Projektuebergabe.md und docs/Projektmemory.md.
+
+## Historische Produktion und Revisionen
+
 Stand: 07.10.2026. Auf Nutzerauftrag als zusammenhängendes Cinematic eingebaut.
 
 Startmenü → Cinematics → Cinematics → **Erinnerungen · Teile 1–12**. Sofort verfügbar, ohne vorherigen Storydurchlauf. Nach Ende oder Escape zurück in die Galerie. Mira/Aoede bleibt eine eigene Sequenz.

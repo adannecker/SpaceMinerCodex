@@ -1,5 +1,5 @@
 {
-  "snapshot_date": "2026-10-07",
+  "snapshot_date": "2026-10-08",
   "threads": [
     {
       "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
@@ -149,6 +149,22 @@
       "file": "21-Ideenbacklog-Desktop.md",
       "topic": "Entwicklungsideen, Drohnenrollen und Umbauten, Stationsnavigation, Sonne und Planeten, Gefahren, Intro-Cinematic und Steam-Ausbaustufe",
       "host_id": "local"
+    },
+    {
+      "id": "01a11a1b-ae77-7c81-95a0-6b1713dd0579",
+      "title": "Ideenbacklog",
+      "file": "22-Ideenbacklog.md",
+      "topic": "Lokale Fortsetzung der dokumentierten Ideen, Entwicklungsideen und offene Ausbaustufen",
+      "host_id": "local",
+      "source_archive": "21-Ideenbacklog-Desktop.md"
+    },
+    {
+      "id": "6ac60095-1fdc-83eb-8290-d19a09d9ea90",
+      "title": "Intro Cinematic Entwurf",
+      "file": "23-Intro-Cinematic-Entwurf.md",
+      "topic": "Historischer ChatGPT-Storyentwurf mit zwölf Abschnitten; heutige Umsetzung separat dokumentiert",
+      "source": "cloud_snapshot",
+      "snapshot_date": "2026-10-08"
     }
   ]
 }

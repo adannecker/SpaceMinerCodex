@@ -1,5 +1,5 @@
 {
-  "exported_at": "2026-10-07T18:23:52.330197+00:00",
+  "exported_at": "2026-10-08T15:27:09.763748+00:00",
   "threads": [
     {
       "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
@@ -13,7 +13,7 @@
       "title": "MainDev",
       "file": "05-MainDev.md",
       "status": "exported",
-      "messages": 95
+      "messages": 196
     },
     {
       "id": "01a11007-53fc-7d60-af57-f15ed3399d0d",
@@ -27,7 +27,7 @@
       "title": "Story, Dialoge & Bordcomputer",
       "file": "07-Story-und-Mira.md",
       "status": "exported",
-      "messages": 243
+      "messages": 389
     },
     {
       "id": "01a110c0-50f2-7fa3-8a18-6905e864e5d9",
@@ -116,6 +116,13 @@
       "title": "Ideenbacklog prüfen",
       "file": "21-Ideenbacklog-Desktop.md",
       "status": "preserved"
+    },
+    {
+      "id": "01a11a1b-ae77-7c81-95a0-6b1713dd0579",
+      "title": "Ideenbacklog",
+      "file": "22-Ideenbacklog.md",
+      "status": "exported",
+      "messages": 2
     }
   ]
 }

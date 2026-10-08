@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-08",
+  "unity": "6000.4.7f1",
+  "scope": "Stationsstart/Scanner/Spielstaende/begehbarer Stationsring",
+  "build": {
+    "log": "Logs/station-entry-verified-build.log",
+    "exitCode": 0
+  },
+  "checks": [
+    {
+      "log": "Logs/station-entry-verified-check.log",
+      "exitCode": 0,
+      "checks": 39
+    },
+    {
+      "log": "Logs/station-entry-habitat-check.log",
+      "exitCode": 0,
+      "checks": 504
+    }
+  ],
+  "visualReview": [
+    "Station mit Mira-Portraet und Quest links",
+    "Physisches Stationspult",
+    "VR mit bekannten Kontakten und Debugschalter"
+  ],
+  "knownUserIssues": [
+    "Beenden aus dem Spiel funktioniert laut Nutzer nicht",
+    "Innenraumposition im realen Speicher-/Ladeablauf pruefen"
+  ],
+  "note": "Pruefungen in vorangehenden Arbeitsschritten dieser Sitzung ausgefuehrt; Logs/Builds bleiben lokal. Kein Ersatz fuer Zielrechnerpruefung."
+}

@@ -1,6 +1,6 @@
 # Sound und Effekte
 
-Chat-ID: `01a110fe-dd07-7f93-9a3d-922c469eccf6`. Exportstand: 2026-10-07T18:23:52.330197+00:00.
+Chat-ID: `01a110fe-dd07-7f93-9a3d-922c469eccf6`. Exportstand: 2026-10-08T15:27:09.763748+00:00.
 
 Configuration- und Gameplay-Musik, Loop-Dateien und Audioübergänge
 

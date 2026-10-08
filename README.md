@@ -20,7 +20,11 @@ Für den aktuellen Rechnerwechsel und den Kontext aller bekannten Themenchats: [
 
 Alternativ kann das gebaute Spiel unter `Builds/Windows/SpaceMiner.exe` direkt gestartet werden.
 
-Beim Start erscheint ein kleines Startmenü mit **Demo starten**, **Konfiguration** und **Beenden**. Demo starten beginnt **Miras Intro** mit Texteinblendungen, einer ersten deutschen weiblichen Teststimme und Kamerafahrten. **Esc** überspringt das Intro und wechselt direkt ins Spiel. Währenddessen pausieren Simulation und Kamerasteuerung. Nach dem letzten Satz startet das Spiel automatisch.
+Beim Start erscheint das animierte Startmenü mit **Demo starten**, **Cinematics**, **Konfiguration** und **Beenden**. Demo starten beginnt Miras Erwachen mit freigegebener Aoede-Stimme, Untertiteln und Kamerafahrten. Escape überspringt die Cutscene; Simulation und Kamera bleiben währenddessen gesperrt. Die Galerie enthält das sofort verfügbare zwölfteilige Erinnerungs-Cinematic mit durchgehender Enceladus-Narration und Musik. Beenden im Spiel führt nach Rückfrage zum pausierten Startmenü; die Anwendung wird dort geschlossen.
+
+### Historische Desktop-Vorschauen vom 06.10.2026
+
+Die folgenden Angaben gelten für damalige Vorschau-Builds. Aktueller Stand und heutige Prüfungen: docs/Projektuebergabe.md.
 
 Lokale Desktop-Vorschau vom 06.10.2026: Der Stand `5cfd179` wurde mit der hier installierten Unity-Version **6000.6.4f1** in einer separaten Kopie unter `Builds/LocalPreview-6000.6.4f1` gebaut. `Builds/Windows` enthält diese neue Spielversion; die vorherige liegt unter `Builds/Windows-before-current-preview`. Die gemeinsame Projektversion bleibt 6000.4.7f1. Development-/Release-Build und Techtree-Datenprüfung erfolgreich; der automatische Spieltest endete ohne Abschlussbericht und gilt nicht als bestanden. Die normale Spielversion wurde anschließend sichtbar gestartet.
 
@@ -28,7 +32,6 @@ Die anschließend ergänzte Dock-Version enthält rückwärts geparkte Drohnen, 
 
 Der spätere Stand vom 06.10.2026 ergänzt Wasserabbau-Erfahrung, Rückkehrreserve und das durchgehende Maya-Testintro mit zeitgekoppelten Untertiteln. Letzte dokumentierte Vorschau: 823 Spielprüfungen; Abbaubalance separat mit 194 Prüfungen. Die Übergabe nennt Herkunft und Grenzen dieser Ergebnisse. Alle neun aktuellen Themenchats sind als Textarchive gesichert; kopierbare Startaufträge zum Fortsetzen beziehungsweise Anlegen am anderen Rechner stehen in [Rechnerwechsel-Memory](docs/Rechnerwechsel-Memory.md). Builds werden nicht durch Git übertragen und müssen dort neu erstellt werden.
 
-Bei jedem Start beginnt **Miras Intro** mit Texteinblendungen, einer ersten deutschen weiblichen Teststimme und Kamerafahrten. **Esc** überspringt das Intro und wechselt direkt ins Spiel. Währenddessen pausieren Simulation und Kamerasteuerung. Nach dem letzten Satz startet das Spiel automatisch.
 
 ## Steuerung
 
@@ -48,16 +51,16 @@ Bei jedem Start beginnt **Miras Intro** mit Texteinblendungen, einer ersten deut
 | Leertaste | Simulation pausieren / mit vorherigem Tempo fortsetzen |
 | F11 oder Alt + Enter | Zwischen Fenster und Vollbild wechseln, auch während des Intros |
 | H | Informationsanzeige ein-/ausblenden |
-| Escape | Im Intro: überspringen. Im Spiel: pausierte Beenden-Rückfrage; erneut Escape oder Weiterspielen bricht ab |
+| Escape | Im Intro: überspringen. Im Spiel: pausierte Rückfrage; Beenden führt zum Startmenü, Weiterspielen oder erneut Escape bricht ab |
 
-Die Kamera kann von **3 Metern bis 1.000 Kilometern** Abstand herauszoomen. Die Sichtweite und die Bewegungsgeschwindigkeit passen sich dem Zoomabstand an. **B** bringt dich zur Übersicht über das aktuelle Testfeld, **R** zurück zum Schiff. Bei sehr großen Abständen werden die maßstabsgetreuen Objekte entsprechend klein.
+Die Kamera kann von **3 Metern bis 200.000 Kilometern** Abstand herauszoomen; die Sonnensystemansicht verwendet eine getrennte Kilometer-Kamera. Die Sichtweite und die Bewegungsgeschwindigkeit passen sich dem Zoomabstand an. **B** bringt dich zur Übersicht über das aktuelle Testfeld, **R** zurück zum Schiff. Bei sehr großen Abständen werden die maßstabsgetreuen Objekte entsprechend klein.
 
 Unten rechts lässt sich auch per Knopf zwischen Fenster und Vollbild wechseln. Vollbild nutzt die Bildschirmauflösung ohne Fensterrahmen. Beim Zurückwechseln wird die zuvor verwendete Fenstergröße wiederhergestellt; das Fenster kann an seinen Rändern vergrößert und verkleinert werden. Die Oberfläche passt sich an die verfügbare Breite und Höhe an. Dieser Wechsel gilt für die gebaute Spielversion; im Unity-Editor wird die Game-Ansicht weiterhin vom Editor verwaltet.
 
 ## Bearbeiten und bauen
 
 - Kamera: `Assets/SpaceMiner/Scripts/OrbitCamera.cs`.
-- Intro: `Assets/SpaceMiner/Scripts/IntroSequence.cs`; Sprechertext und Regie stehen in [docs/Dialoge/01_Intro_Erwachen.md](docs/Dialoge/01_Intro_Erwachen.md). Aktuell spielt die lokale Maya-Testaufnahme durchgehend; 17 Untertitel folgen ihren gemessenen Zeitmarken und der Audioposition. Nach Textänderungen eine passende Aufnahme und neue Zeitmarken bereitstellen. `tools/GenerateIntro.ps1` schützt die importierte Aufnahme vor Überschreiben mit der alten Hedda-Teststimme. Audio ist im Build enthalten und benötigt beim Spielen keinen Sprachdienst.
+- Intro: `Assets/SpaceMiner/Scripts/IntroSequence.cs`; Sprechertext und Regie stehen in [docs/Dialoge/01_Intro_Erwachen.md](docs/Dialoge/01_Intro_Erwachen.md). Aktuell spielen 14 unveränderte Aoede-WAV-Cues; zwei neue Scan-Introtexte haben noch keine passende Sprachaufnahme. Die ältere Maya-Gesamtaufnahme und ihre Zeitmarken sind historische Alternativen. Nach Textänderungen eine passende Aufnahme und neue Zeitmarken bereitstellen. `tools/GenerateIntro.ps1` schützt die importierte Aufnahme vor Überschreiben mit der alten Hedda-Teststimme. Audio ist im Build enthalten und benötigt beim Spielen keinen Sprachdienst.
 - Asteroidenpositionen und Größen werden beim Einrichten aus `Assets/SpaceMiner/BeltSettings.asset` übernommen. Danach lassen sie sich direkt in der Szene im Inspector bearbeiten und speichern.
 - **Space Miner → Windows-Spiel bauen** erzeugt die Windows-Version. Vorher die Szene speichern.
 - Asteroiden verwenden jetzt prozedurale Formen, vier LODs und gemischte PBR-Oberflächen. Neun Beispiel-Prefabs und drei erweiterbare Typen liegen unter `Assets/SpaceMiner/Asteroids`; Anleitung: [Asteroidengenerator](docs/AsteroidGenerator.md).
@@ -104,7 +107,7 @@ Der Balken über der Drohne zeigt den Fortschritt ihrer aktuellen Phase. Die Auf
 
 Die Zahlen sind einstellbare Spielannahmen: Schiffstank 200 L mit 20 L Startbestand; Drohne 200 kg Trockenmasse, 50 kg Ladung, 10 L Treibwasser und 8 kWh Batterie. Fluggeschwindigkeit höchstens 5 m/s, Schub 5 N, angenommene Ausströmgeschwindigkeit 1.000 m/s. Beschleunigen und Bremsen kosten Treibwasser sowie elektrische Energie. Beim Nachtanken wird Wasser aus dem Schiffstank entnommen. Der gemeldete Solar-/Reaktorstrom beträgt zusammen 2,5 kW, davon nutzt die Ladestation 2 kW. Ein komplexes Stromnetz gibt es noch nicht.
 
-Standardmäßig läuft die Simulation mit 1×; unten rechts stehen 0,5×, 1×, 2×, 3× und 5× zur Auswahl. Zeitangaben stehen in **Spielzeit**. Es gibt geradlinige Flüge mit Beschleunigungs- und Bremsphasen; Orbitalmechanik, Kollisionsvermeidung, bewegliche Asteroiden, Reparaturen, Nahrung und Trinkwasseraufbereitung folgen später. Auftragsabbruch vereinfacht das Wendemanöver, berücksichtigt aber den Treibstoff für das Abbremsen. Entladen dauert 240 Spielsekunden; Verunreinigungen werden bislang nicht als eigene Ressource verwaltet. Neue Spielstarts setzen Weltzustand und Abbauwissen zurück; Speichern ist noch nicht implementiert. Station und Drohnen verwenden einfache austauschbare Grundkörper.
+Standardmäßig läuft die Simulation mit 1×; unten rechts stehen Pause, 1×, 20× und 100× zur Auswahl, im Editor/Development zusätzlich 500×. Der separate Weiterknopf setzt derzeit 100×; Leertaste verwendet das gespeicherte Fortsetzungstempo. Zeitangaben stehen in **Spielzeit**. Es gibt geradlinige Flüge mit Beschleunigungs- und Bremsphasen; Orbitalmechanik, Kollisionsvermeidung, bewegliche Asteroiden, Reparaturen, Nahrung und Trinkwasseraufbereitung folgen später. Auftragsabbruch vereinfacht das Wendemanöver, berücksichtigt aber den Treibstoff für das Abbremsen. Entladen dauert 240 Spielsekunden; Verunreinigungen werden bislang nicht als eigene Ressource verwaltet. Neue Spielstarts setzen Weltzustand und Abbauwissen zurück; Speichern ist noch nicht implementiert. Station und Drohnen verwenden einfache austauschbare Grundkörper.
 
 Die langfristige Spielidee und fachlichen Leitlinien stehen in [docs/Spielidee.md](docs/Spielidee.md).
 
@@ -161,3 +164,23 @@ Verbindlicher Einstieg: docs/Projektuebergabe.md. Zwölfteilige Erinnerungsseque
 Bei geschlossenem Editor baut SpaceMiner.Editor.StartMenuBuild.Run die vorhandene Szene ohne Neugenerierung. Zusätzliche Player-Prüfargumente: -worldVisualCheck, -quitMenuCheck, -memoryCinematicCheck, -miningBalanceCheck -miningLogicOnly und -techTreeCheck; Logs im lokalen Logs-Ordner. Chatarchive: python tools/ExportChatMemory.py; bestehende fremde Rechnerexporte bleiben erhalten.
 
 Der finale MP4-Export und Mix liegen unter outputs/Cinematic und sind versioniert. Reproduzierbarer Videoexport benötigt Python mit numpy, imageio-ffmpeg (oder FFMPEG als Pfad/ffmpeg im PATH), den Unity-Zwischenexport IntroCinematic-silent.mp4 und optional dessen Bildzeitdaten. Encoder-/Whisper-Caches und ältere lokale Exporte werden nicht eingecheckt. Original-WAVs, aktuelle Bilder und Metadaten stehen unter docs/Dialoge/IntroCinematic sowie Assets/SpaceMiner/Resources/MemoryCinematic.
+
+## Scan-Einstieg und Spielstände (08.10.2026)
+
+Demo starten führt nach Mira an die Stationskonsole. Scanner lädt von 97 auf 100 Prozent in zehn Sekunden bei 1×; Scan entdeckt zehn Kontakte und drei Wasserquellen. Virtuelle Aussenansicht zeigt nur bekannte Kontakte ohne Oberflächentextur; Debug schaltet alle Objekte sichtbar, ohne Arbeitsfreigabe zu geben. F5 Speichern, F9 Laden, Laden auch im Startmenü. Namen, Kommentare, Forschungsübersicht, Autosave und Speicherabfrage beim Verlassen. Details: [Scanner und Spielstände](docs/Scanner-und-Spielstaende.md). Prüflauf: Windows-Player mit -scanSaveCheck; Ergebnis Logs/scan-save-result.json.
+
+
+### Vorhandener begehbarer Stationsraum
+
+Mit **E** nahe der rückwärtigen Tür startet die elektrische Schleuse: erste Tür öffnen, eintreten, erste Tür schließen, angezeigter Druckausgleich, zweite Tür öffnen und weitergehen. Der Durchgang funktioniert in beide Richtungen; die Türen öffnen nie gleichzeitig und reagieren beim Schließen auf Spielerannäherung. Der angeschlossene Ring ist vollständig begehbar. Druckausgleich ist eine zeitgesteuerte Darstellung, noch keine Atmosphäre-/Gasbilanz.
+
+Mit **E** nahe dem Pult öffnet sich die Stationssteuerung: bestätigte Eisquelle wählen, vorhandenen Wasserauftrag übernehmen, Drohne zurückrufen, Tank-/Batteriestatus lesen und Simulationsgeschwindigkeit ändern. **E / Escape** schließt das Pult; außerhalb des Pults öffnet Escape das bestehende Menü. Links steht die kleine Reparaturdrohne R-01 auf einem Ladebord; sie hat keine Arbeitslogik.
+
+`StationInteriorMode`, `StationInteriorLayout` und `StationAirlock` ergänzen Raum, Ring, Türen und CharacterController beim Laden der bestehenden Szene. Alte massive Ringsegmente werden ersetzt, Träger enden an den neuen Korridorwänden. Es wird dieselbe Kamera wie außen verwendet, jeweils mit einem aktiven Controller. Gehen mit lokaler Schwerkraft ist eine Prototypannahme; Stationsrotation und künstliche Schwerkraft bleiben Entwurfsstand. Der Innen-/Außenwechsel ist unmittelbar, V/Tab/E sind feste Modustasten. Weitere Innenraum-Produktionssysteme sind offen.
+
+Development-Prüfung: Player mit `-batchmode -stationInteriorCheck` starten. Sie prüft Boden-/Wandkollisionen, Menüpause, Kamerarückkehr, weiterarbeitende Drohne und Kamera-Nachführung während eines echten Wasserflugs. Ergebnis und gerenderte Szenenbilder: `Logs/Interior` relativ zum Arbeitsordner. Die Bilder enthalten die 3D-Szene; die laufende Mausbedienung und das verbleibende visuelle Drohnenflimmern werden zusätzlich am sichtbaren Player beurteilt.
+
+Zusätzliche Development-Prüfung: `-stationHabitatCheck` prüft Pultauftrag, inaktive Reparaturdrohne, beide Schleusenrichtungen, Türverriegelung, Wiederöffnen bei Spielerannäherung und einen vollständigen physischen Rundgang im Ring. Bericht/Bilder stehen in `Logs/Habitat`. Sichtbar ausführen, um auch den Pult-Oberflächenscreenshot zu erhalten; `-batchmode` eignet sich für Logik- und 3D-Renderprüfungen.
+
+
+Aktueller Einstieg: Intro und Spiel beginnen im Wohnmodul. Zum Stationspult gehen und E drücken; Scanner startet bei 97 %, nach zehn Spielsekunden bei 1× bereit. V öffnet die VR; ungescannte Asteroiden sind dort unsichtbar. Debugsicht nur in der VR. Mira zeigt das gezeichnete Porträt, die Quest steht links. Neuer Prüfbuild: Builds/StationEntry/SpaceMiner.exe.

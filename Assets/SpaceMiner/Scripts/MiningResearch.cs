@@ -34,5 +34,7 @@ namespace SpaceMiner
         {
             CompletedTrips = TripsIntoLevel = ThroughputLevels = EfficiencyLevels = 0;
         }
+        public void Restore(int trips, int throughput, int efficiency, int progress)
+        { CompletedTrips = trips; ThroughputLevels = throughput; EfficiencyLevels = efficiency; TripsIntoLevel = progress; }
     }
 }

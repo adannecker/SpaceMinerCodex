@@ -39,7 +39,7 @@ namespace SpaceMiner
         }
         private void Draw()
         {
-            if(QuitMenu.BlocksInput)return;
+            if(QuitMenu.BlocksInput || SaveGameMenu.IsOpen)return;
             ui.Configure(previewTheme??SettingsStore.Current.Accessibility);GUI.depth=-210;
             if(!IsOpen) {
                 if(StartMenu.IsOpen||SettingsMenu.IsOpen)return;

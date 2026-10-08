@@ -1,6 +1,6 @@
 # SpaceMiner Ideenbacklog
 
-Stand: 07.10.2026. Diese Ausbaustufen erweitern Drohneneinsätze, Stationssteuerung und Gefahren im Asteroidengürtel. Die folgenden Ideen stammen aus dem Ideenbacklog-Chat; Prioritäten, Kosten, Forschungsstufen und konkrete Umsetzung sind noch offen. Der aktuelle Umsetzungsstand steht unten; übrige Ausbaustufen bleiben offen.
+Stand: 08.10.2026. Diese Ausbaustufen erweitern Drohneneinsätze, Stationssteuerung und Gefahren im Asteroidengürtel. Die folgenden Ideen stammen aus dem Ideenbacklog-Chat; Prioritäten, Kosten, Forschungsstufen und konkrete Umsetzung sind noch offen. Der aktuelle Umsetzungsstand steht unten; übrige Ausbaustufen bleiben offen.
 
 ## Drohnenversorgung und Spezialisierung
 
@@ -80,7 +80,7 @@ Ursache der Planetenzerstörung, Art und Quelle der Strahlung sowie die spätere
 
 Das Intro soll das Unglück mit stilisierten Bildern erzählen, begleitet von Miras Stimme. Daraus entsteht eine kurze filmische Eröffnungssequenz, die in die beschädigte Station und den Spielbeginn überleitet.
 
-Bildstil, Bildfolge, Dauer und Sprechertext bleiben auszuarbeiten. Dabei ist festzulegen, was Mira über das Unglück weiß und ob die Bilder bekannte Ereignisse oder eine unvollständige Rekonstruktion zeigen. Der zerstörte Planet kann Teil dieser Bildfolge sein; sein Zusammenhang mit der Stationskatastrophe bleibt offen. Die bisherige überspringbare Intro-Sequenz ist die Grundlage für die spätere Erweiterung, siehe [Story und Dialoge](Dialoge/README.md#geplante-erweiterung-des-intros).
+Bildstil, Bildfolge, Dauer und Sprechertext bleiben auszuarbeiten. Dabei ist festzulegen, was Mira über das Unglück weiß und ob die Bilder bekannte Ereignisse oder eine unvollständige Rekonstruktion zeigen. Der zerstörte Planet kann Teil dieser Bildfolge sein; sein Zusammenhang mit der Stationskatastrophe bleibt offen. Die bisherige überspringbare Intro-Sequenz ist die Grundlage für die spätere Erweiterung, siehe [Story und Dialoge](Dialoge/IntroCinematic/README.md).
 
 ## Steam Integration
 
@@ -104,3 +104,16 @@ Diese Abhängigkeiten beschreiben den Entwurf, noch keine festgelegte Reihenfolg
 - [x] Wasserabbauwissen mit Förderrate-/Energieschwerpunkt im Techtree.
 
 Ältere offene Beschreibungen des Planeten und Bildintros oben werden durch diesen Stand ersetzt. Batteriewechsel, Rollenumbau, spätere Hardwaretiers, Strahlungsschaden, Solarleistung und Ereignisvorhersage sind weiterhin auszuarbeiten.
+
+## Reproduzierbare Asteroidenwolken mit Seeds (08.10.2026)
+
+Vorgemerkt auf Wunsch des Nutzers: Eine später frei wählbare Seed definiert reproduzierbar eine Asteroidenwolke. Diese soll massiv mehr Asteroiden als das aktuelle 100er-Feld enthalten. Körperzahl, Ausdehnung, Dichte, Form- und Ressourcenverteilung, sichere Stationsregion sowie Generatorversion und Speicherung des Seeds sind noch auszuarbeiten. Gleicher Seed und gleiche Generatorversion sollen dieselbe Wolke erzeugen. Keine neue Millionenkörper-Welt oder Seed-Eingabe in dieser Aufgabe implementiert. Der erste Scanner verwendet jetzt einen festen 10-km-Radius mit zehn vorbereiteten Kontakten und drei Wasserquellen.
+
+## Nächste Implementierungen: Rückmeldung zum Stationsstart (08.10.2026)
+
+Status: vom Nutzer vorgemerkt, in diesem Schritt nur dokumentiert.
+
+1. **Beenden aus dem laufenden Spiel reparieren.** Nutzer meldet, dass Beenden nicht funktioniert. Innenansicht, geöffnetes Pult und VR prüfen; der Beenden-/Speicherablauf muss erreichbar sein und nach der Auswahl tatsächlich abgeschlossen werden. Ursache noch nicht untersucht.
+2. **Innenraumposition zuverlässig speichern und wiederherstellen.** Die Positionsspeicherung ist bereits eingebaut, wird nach der Rückmeldung aber als offene Fehlerprüfung geführt. Manuelles Speichern, Autosave und Laden müssen die zuletzt gespeicherte Position im Wohnmodul, in der Schleuse und im Stationsring erhalten. Kein unbeabsichtigter Rücksprung zum Startpunkt; Blickrichtung beim Wiederherstellen berücksichtigen.
+3. **Unterschiedliche Interaktionssounds.** Eigene hörbare Rückmeldungen unter anderem für Öffnen/Schliessen der Schleusentüren und Aktivieren des VR-HUDs. Weitere Interaktionen bei der Umsetzung ergänzen; vorhandene Effektlautstärke berücksichtigen.
+4. **UI an Auflösung anpassen und UI-Skalierung anbieten.** Bei hoher Auflösung sollen Texte und Bedienelemente relativ zum Bildschirm kleiner erscheinen können, statt automatisch proportional mitzuwachsen. Eine einstellbare UI-Skalierung in der Konfiguration vorsehen. Questanzeige, Mira-Dialog, Pult und HUD gemeinsam berücksichtigen; Text darf nicht abgeschnitten werden. Konkrete Standardwerte und Skalierungsgrenzen noch festlegen.

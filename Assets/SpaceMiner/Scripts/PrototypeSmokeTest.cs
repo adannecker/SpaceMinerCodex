@@ -25,6 +25,7 @@ namespace SpaceMiner
             File.Delete("Logs/asteroid-" + scenario.Asteroids.Length + "-performance.json");
             yield return null;
             yield return CheckIntro(scenario);
+            PrepareScan(scenario);
             if (!running) yield break;
             scenario.SimulationRate = 0;
             yield return null;
@@ -158,6 +159,13 @@ namespace SpaceMiner
                 controller.ResetView();
                 Vector3 home = transform.position;
                 Require(Mathf.Approximately(controller.Distance, 140), "home distance");
+                var homeView = GetComponent<Camera>();
+                Require(homeView.nearClipPlane >= 1f && homeView.nearClipPlane < 2f,
+                    "station view reserves depth precision for small surface details");
+                foreach (var light in FindObjectsByType<Light>(FindObjectsSortMode.None))
+                    if (light.enabled && light.type == LightType.Directional)
+                        Require((light.cullingMask & ((1 << 29) | (1 << 28))) == 0,
+                            "local sunlight excludes kilometre-scale shadow rendering");
                 controller.Zoom(1);
                 Require(controller.Distance < 140, "zoom in");
                 controller.Zoom(-1);
@@ -176,6 +184,8 @@ namespace SpaceMiner
                         "far zoom retains " + child.name + " inside clipping range");
                 }
                 Require(view.nearClipPlane > 3f, "far zoom adjusts depth range");
+                Require(view.nearClipPlane >= controller.Distance * 0.005f,
+                    "far zoom retains proportional depth precision");
                 controller.Focus(drone);
                 Require(view.nearClipPlane <= 0.1f && controller.Distance <= 6f, "drone detail restored after far zoom");
                 controller.ResetView();
@@ -446,7 +456,7 @@ namespace SpaceMiner
             if (!Guard(() =>
             {
                 Require(intro != null && IntroSequence.IsPlaying && IntroSequence.BlocksGameplay, "intro blocks gameplay at startup");
-                Require(intro.CueCount == 16 && intro.HasCompleteVoiceTrack, "all Mira captions have local voice clips");
+                Require(intro.CueCount == 16 && intro.VoicedCueCount == 14, "original voice clips and two new scan text cues");
                 Require(GetComponent<AudioSource>().isPlaying, "Mira voice starts playing");
             })) yield break;
             float simulationRate = scenario.SimulationRate;
@@ -634,19 +644,19 @@ namespace SpaceMiner
             Capture("Logs/scenario-complete.png");
             Guard(() =>
             {
-                scenario.ResetScenario();
+                scenario.ResetScenario(); PrepareScan(scenario);
                 source.Mine(source.RemainingRawKg - 1);
                 Require(scenario.AssignTankOrder(source), "small deposit can be assigned");
                 Until(scenario, () => !drone.HasTankOrder && drone.IsReady, 25000);
                 Require(!source.CanMineWater && scenario.Deliveries == 1 && !scenario.QuestComplete, "depleted source returns partial load and ends order");
-                scenario.ResetScenario();
+                scenario.ResetScenario(); PrepareScan(scenario);
                 scenario.AssignTankOrder(source);
                 scenario.Advance(60);
                 drone.ReturnToShip();
                 Until(scenario, () => drone.IsReady, 25000);
                 Require(!drone.HasTankOrder && Vector3.Distance(drone.transform.position, drone.HomePosition) < 0.01f, "cancelled flight safely returns to dock");
                 Require(drone.CanCompleteTrip(source, out _), "cancelled drone is recharged for another order");
-                scenario.ResetScenario();
+                scenario.ResetScenario(); PrepareScan(scenario);
                 scenario.AssignTankOrder(source);
                 Until(scenario, () => drone.Phase == DronePhase.Mining, 3000);
                 scenario.Advance(50);
@@ -655,7 +665,7 @@ namespace SpaceMiner
                 Until(scenario, () => drone.IsReady, 25000);
                 Require(scenario.Deliveries == 1 && !drone.HasTankOrder, "cancelled mining delivers partial load and parks");
                 Require(scenario.Mining.CompletedTrips == 0, "cancelled sorties do not farm experience");
-                scenario.ResetScenario();
+                scenario.ResetScenario(); PrepareScan(scenario);
                 camera.ResetView();
             });
         }
@@ -670,6 +680,12 @@ namespace SpaceMiner
         {
             try { action(); return true; }
             catch (Exception error) { Fail(error.ToString()); return false; }
+        }
+
+        private static void PrepareScan(WaterScenario scenario)
+        {
+            scenario.Scanner.Advance(10); var interior=StationInteriorMode.Current; interior.Enter(true); interior.RestoreInterior(interior.Layout.Console.position+interior.Room.forward*-1.5f,false); scenario.Scanner.OpenConsole(); scenario.Scanner.Scan();
+            scenario.Scanner.OpenVirtualView(); scenario.Scanner.SetDebugVisibility(true); scenario.Scanner.DismissDialogue();
         }
 
         private void Require(bool condition, string description)

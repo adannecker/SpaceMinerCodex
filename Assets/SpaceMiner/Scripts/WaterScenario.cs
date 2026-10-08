@@ -24,19 +24,24 @@ namespace SpaceMiner
         public DroneAgent Worker { get; private set; }
         public DroneAgent[] Drones { get; private set; }
         public AsteroidResource[] Asteroids { get; private set; }
+        public ScannerProgression Scanner { get; private set; }
 
         private void Awake()
         {
             InitializeObjects();
             SimulationRate = 1f; // Legacy scene stores 100x; normal play now starts at 1x.
             ResetScenario();
+            Scanner = gameObject.AddComponent<ScannerProgression>();
+            Scanner.Initialize(this);
+            if (Camera.main.GetComponent<SaveGameMenu>() == null) Camera.main.gameObject.AddComponent<SaveGameMenu>();
+            if (Camera.main.GetComponent<ScanSaveCheck>() == null) Camera.main.gameObject.AddComponent<ScanSaveCheck>();
         }
 
         private void Update()
         {
             if (IntroSequence.BlocksGameplay || SettingsMenu.PausesSimulation) return;
             if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Space)) TogglePause();
-            if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Tab) && Worker != null)
+            if (!SettingsMenu.BlocksInput && !StationInteriorMode.IsInside && Input.GetKeyDown(KeyCode.Tab) && Worker != null)
                 Camera.main.GetComponent<OrbitCamera>().Focus(Worker.Info);
             Advance(Time.unscaledDeltaTime * SimulationRate);
         }
@@ -51,6 +56,7 @@ namespace SpaceMiner
             {
                 float step = Mathf.Min(seconds, 0.25f);
                 Worker.Tick(step);
+                Scanner?.Advance(step);
                 seconds -= step;
             }
         }
@@ -65,6 +71,7 @@ namespace SpaceMiner
             Worker.Assign(source);
             SourceAssigned = true;
             Message = "Tankauftrag gestartet: " + source.Info.DisplayName;
+            Scanner?.Say("DROHNE 01 UNTERWEGS", "Der Auftrag ist bestätigt. Drohne 01 fliegt zur gescannten Wasserquelle. Ihre Nahbereichssensoren helfen beim Annähern. Wir überwachen Batterie, Treibwasser und Rückkehrreserve.");
             return true;
         }
 
@@ -88,6 +95,8 @@ namespace SpaceMiner
         }
 
         public void Notify(string message) { Message = message; }
+        public void RestoreSupply(float water, int deliveries, float delivered, bool assigned)
+        { WaterLiters = water; Deliveries = deliveries; DeliveredLiters = delivered; SourceAssigned = assigned; }
 
         public void ResetScenario()
         {
@@ -99,6 +108,7 @@ namespace SpaceMiner
             Message = "Wähle eine Eisquelle und starte den Tankauftrag.";
             foreach (AsteroidResource asteroid in Asteroids) asteroid.ResetDeposit();
             foreach (DroneAgent drone in Drones) drone.ResetDrone();
+            Scanner?.ResetProgress();
         }
 
         private void InitializeObjects()
@@ -117,6 +127,7 @@ namespace SpaceMiner
                     if (instance != null) generator = instance.Template;
                 }
                 bool startingSource = body.name == "A-01" || body.name == "A-02" || body.name == "A-03";
+                resource.IsStarterWaterSource = startingSource;
                 resource.WaterFraction = generator != null && generator.Type != null
                     ? (generator.WaterFractionOverride >= 0 ? generator.WaterFractionOverride : generator.Type.WaterFraction)
                     : startingSource ? (body.name == "A-02" ? 0.65f : 0.8f) : 0f;

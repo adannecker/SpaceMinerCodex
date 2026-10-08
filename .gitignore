@@ -29,3 +29,6 @@ Recordings/
 !/outputs/Concepts/Planet4-Mond-Freigegeben.png
 
 !/outputs/Cinematic/video-timing.csv
+
+*.blend1
+*.blend2

@@ -56,9 +56,9 @@ namespace SpaceMiner
             var source = Array.Find(scenario.Asteroids, a => a.Info.DisplayName == "A-01");
             if (source == null) source = Array.Find(scenario.Asteroids, a => a.CanMineWater);
             Require(source != null && source.WaterFraction == .8f, "known 80 percent water source");
-            scenario.Worker.BatteryCapacityKwh = .1f; scenario.ResetScenario();
+            scenario.Worker.BatteryCapacityKwh = .1f; scenario.ResetScenario(); PrepareScan(scenario);
             Require(!scenario.AssignTankOrder(source), "reject unaffordable round trip before launch");
-            scenario.Worker.BatteryCapacityKwh = 8; scenario.ResetScenario();
+            scenario.Worker.BatteryCapacityKwh = 8; scenario.ResetScenario(); PrepareScan(scenario);
             Require(scenario.AssignTankOrder(source), "assign reserve-safe trip");
             while (scenario.Worker.Phase != DronePhase.Mining) scenario.Advance(.25f);
             scenario.Worker.Tick(10000f);
@@ -78,7 +78,7 @@ namespace SpaceMiner
             });
             report.unityVersion = Application.unityVersion;
             report.assumptions = "A-01, 80% water, one drone; level 1 initially, 20 productive parked sorties/level; +15% rate or -15% mining power per learned level, compounded. Tank: 20->200 L. Level benchmarks: 100000 L storage to allow continued deliveries, unchanged source/start water/charge/flight; no intro, user delays or menu pauses. Real time = simulation time / speed. Gameplay knowledge resets with a new world; no hardware generation upgrades.";
-            scenario.TankCapacityLiters = 200; scenario.ResetScenario();
+            scenario.TankCapacityLiters = 200; scenario.ResetScenario(); PrepareScan(scenario);
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "-miningLogicOnly") >= 0) {
                 report.passed = true;
                 File.WriteAllText("Logs/mining-balance-result.json", JsonUtility.ToJson(report, true));
@@ -115,7 +115,7 @@ namespace SpaceMiner
         }
         private IEnumerator Run(WaterScenario scenario, AsteroidResource source, string mode, MiningFocus focus, float capacity, int targetLevel)
         {
-            scenario.TankCapacityLiters = capacity; scenario.ResetScenario(); scenario.Mining.Focus = focus;
+            scenario.TankCapacityLiters = capacity; scenario.ResetScenario(); PrepareScan(scenario); scenario.Mining.Focus = focus;
             Require(scenario.AssignTankOrder(source), mode + " starts");
             var drone = scenario.Worker;
             var result = new Result { mode = mode, source = source.Info.DisplayName, minimumEnergyAtHome = 8, minimumFuelAtHome = 10 };
@@ -161,6 +161,9 @@ namespace SpaceMiner
             if (drone.Phase == DronePhase.Stranded || (!drone.HasTankOrder && drone.IsReady && !drone.Scenario.QuestComplete))
                 throw new Exception("Mining benchmark stalled: " + drone.Scenario.Message);
         }
+        private static void PrepareScan(WaterScenario scenario)
+        { var interior=StationInteriorMode.Current; interior.Enter(true); interior.RestoreInterior(interior.Layout.Console.position+interior.Room.forward*-1.5f,false); scenario.Scanner.OpenConsole(); scenario.Scanner.Advance(10); scenario.Scanner.Scan(); }
+
         private void Require(bool condition, string message) { if (!condition) throw new Exception("Mining check failed: " + message); report.checks++; }
         private void OnLog(string condition, string stack, LogType type)
         {

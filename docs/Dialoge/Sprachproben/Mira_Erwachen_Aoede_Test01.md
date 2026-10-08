@@ -1,6 +1,6 @@
 # Mira – Erwachen: Aoede-Hörprobe
 
-07.10.2026. Neue Hörprobe für Miras Startansprache zur Wasseraufgabe. Nicht in Unity integriert, Hörfreigabe offen. Alte Spielaufnahmen unverändert.
+07.10.2026. Neue Hörprobe für Miras Startansprache zur Wasseraufgabe. Diese Aufnahme wurde später vom Nutzer für Mira freigegeben und als 16 WAV-Cues integriert; aktueller Stand in ../01_Intro_Erwachen.md. Die folgenden Angaben dokumentieren die ursprüngliche Hörprobe.
 
 ## Einstellungen
 
@@ -34,4 +34,4 @@ Du bist Mira, der weibliche Bordcomputer einer beschädigten Raumstation. Sprich
 
 ## Textabgleich
 
-Auf Basis von 01_Intro_Erwachen.md: Schiff auf aktuelle Raumstation angepasst; nur Drohne 01 funktioniert, neun benötigen Reparatur. Begrenztes Treibwasser/Energie statt einer lediglich ungeladenen zweiten Drohne. Originaldrehbuch noch nicht angeglichen.
+Auf Basis von 01_Intro_Erwachen.md: Schiff auf aktuelle Raumstation angepasst; nur Drohne 01 funktioniert, neun benötigen Reparatur. Begrenztes Treibwasser/Energie statt einer lediglich ungeladenen zweiten Drohne. Die aktive Fassung und das Drehbuch sind inzwischen abgeglichen; ältere Abschnitte im Drehbuch bleiben als historisch gekennzeichnet.

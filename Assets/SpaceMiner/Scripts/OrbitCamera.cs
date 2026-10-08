@@ -38,6 +38,7 @@ namespace SpaceMiner
                 lastMouse = Input.mousePosition;
                 return;
             }
+            if (FindFirstObjectByType<WaterScenario>()?.Scanner?.AtConsole == true) return;
             if (PlayerInput.Pressed(CameraAction.Reset) || Input.GetKeyDown(KeyCode.Home)) ResetView();
             if (PlayerInput.Pressed(CameraAction.Overview)) Overview();
             if (PlayerInput.Pressed(CameraAction.Focus) && Selected != null) Focus(Selected);
@@ -100,7 +101,7 @@ namespace SpaceMiner
                 foreach (Transform body in root.transform)
                 {
                     var info = body.GetComponent<SpaceObject>();
-                    if (info != null) bounds.Encapsulate(new Bounds(body.position, Vector3.one * info.DiameterMeters));
+                    if (info != null && (FindFirstObjectByType<WaterScenario>()?.Scanner?.CanInspect(info) ?? true)) bounds.Encapsulate(new Bounds(body.position, Vector3.one * info.DiameterMeters));
                 }
             var field = GetComponent<SpiralBelt>();
             if (field != null && field.IsReady) bounds = field.FieldBounds;
@@ -120,6 +121,7 @@ namespace SpaceMiner
         public void Focus(SpaceObject target)
         {
             if (target == null) return;
+            if (!(FindFirstObjectByType<WaterScenario>()?.Scanner?.CanInspect(target) ?? true)) return;
             IsCelestialView=false;
             view.fieldOfView=normalFieldOfView;
             Selected = target;
@@ -185,21 +187,33 @@ namespace SpaceMiner
             ApplyPose();
         }
 
+        internal static void ConfigureDepth(Camera camera,float distance) => ConfigureDepthRange(camera,distance);
+        internal void RestoreViewPose() => ApplyPose();
         private void ApplyPose()
         {
             if (view == null) view = GetComponent<Camera>();
             Quaternion rotation = Quaternion.Euler(pitch, yaw, 0f);
             transform.SetPositionAndRotation(Pivot - rotation * Vector3.forward * Distance, rotation);
-            // Keep nearby drone detail, but extend visibility when surveying a large area.
-            view.nearClipPlane = Mathf.Clamp(Distance * 0.0002f, 0.05f, 200f);
-            view.farClipPlane = Mathf.Max(1200000f, Distance * 2f + 40000f);
+            ConfigureDepthRange(view, Distance);
             QualitySettings.shadowDistance = Mathf.Clamp(Distance * 2.5f, 80f, 30000f);
+        }
+
+        public static void ConfigureDepthRange(Camera camera, float focusDistance)
+        {
+            // Reserve depth precision for the object being viewed. A centimetre-scale
+            // near plane in the station view makes small cladding details compete.
+            // Drone focus still retains its close-up range; distant field views keep
+            // a proportional near plane instead of being capped at only 200 metres.
+            camera.nearClipPlane = Mathf.Max(0.05f, focusDistance * 0.01f);
+            camera.farClipPlane = Mathf.Max(1200000f, focusDistance * 2f + 40000f);
         }
 
         private static float HudScale => Mathf.Clamp(Screen.height / 900f, 0.65f, 1.5f);
 
         private bool IsOverHud(Vector3 mouse)
         {
+            if (StationInteriorMode.OwnsScreenPoint(mouse)) return true;
+            if (FindFirstObjectByType<WaterScenario>()?.Scanner?.OwnsScreenPoint(mouse) == true) return true;
             var world=FindFirstObjectByType<RuinedWorld>();if(world!=null&&world.OwnsScreenPoint(mouse))return true;
             if (SettingsMenu.OwnsScreenPoint(mouse)) return true;
             if (!ShowHud) return false;
@@ -286,6 +300,7 @@ namespace SpaceMiner
 
         public void Select(SpaceObject target)
         {
+            if (!(FindFirstObjectByType<WaterScenario>()?.Scanner?.CanInspect(target) ?? true)) target = null;
             if (Selected != target) followTarget = null;
             Selected = target;
         }
@@ -293,6 +308,7 @@ namespace SpaceMiner
         private void LateUpdate()
         {
             if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
+            if (FindFirstObjectByType<WaterScenario>()?.Scanner?.AtConsole == true) return;
             if (followTarget != null) Pivot = followTarget.position;
             ApplyPose();
         }

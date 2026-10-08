@@ -1,6 +1,6 @@
 # Rechnerwechsel und gemeinsames Chatmemory
 
-Stand: 07.10.2026. Die lokalen und Desktop-Themenarchive sind im gemeinsamen Register vereinigt. Acht Ursprungssitzungen wurden auf diesem Rechner frisch exportiert; neun vorhandene Exporte vom anderen Rechner wurden bewahrt. Ein früherer Arbeitschat bleibt unverfügbar. Zwei historische Cloud-Momentaufnahmen sind gesondert gekennzeichnet; sie enthalten keine rekonstruierten Anhänge. Zuordnung und Exportverfügbarkeit: [Chatübersicht](Chats/README.md), [Register](Chats/chat-register.json), [Exportbericht](Chats/export-status.json). Aktueller Spielstand und tatsächlich ausgeführte Prüfungen: [Projektübergabe](Projektuebergabe.md).
+Stand: 08.10.2026. Die lokalen und Desktop-Themenarchive sind im gemeinsamen Register vereinigt. Neun lokale Sitzungen wurden zuletzt exportiert, einschließlich des neu angelegten Ideenbacklog-Chats; neun vorhandene Exporte vom anderen Rechner wurden bewahrt. Ein früherer Arbeitschat bleibt unverfügbar. Drei historische Cloud-/ChatGPT-Momentaufnahmen sind gesondert gekennzeichnet; sie enthalten keine rekonstruierten Anhänge. Zuordnung und Exportverfügbarkeit: [Chatübersicht](Chats/README.md), [Register](Chats/chat-register.json), [Exportbericht](Chats/export-status.json). Aktueller Spielstand und tatsächlich ausgeführte Prüfungen: [Projektübergabe](Projektuebergabe.md).
 
 Git überträgt Spielquellen, Assets mit `.meta`, Projektkonfiguration, Dokumentation und Textarchive. Die Archive geben neuen oder vorhandenen Chats den bisherigen Kontext; sie importieren keine ursprünglichen Sitzungen. Persönliches Codex-Memory, Zugangsdaten, Builds, Library und Logs werden nicht mitkopiert. Für die Fortsetzung reicht das gemeinsame Projektwissen im Repository.
 
@@ -22,7 +22,7 @@ git pull --ff-only origin main
 
 Bei lokalen Änderungen oder auseinanderlaufenden Commits zuerst sichern und regulär zusammenführen; kein Reset. Vorhandene Themenchats fortsetzen und gegebenenfalls passend umbenennen; nur fehlende neu anlegen. Desktop-IDs dienen der historischen Zuordnung und müssen nicht auf dem Zielrechner übernommen werden.
 
-Gemeinsame Unity-Projektversion: **6000.4.7f1**. Auf diesem Desktop fehlte sie; Vorschauen wurden ausschließlich in einer separaten, ignorierten Kopie mit **6000.6.4f1** gebaut. Keine Projektmigration. Am Zielrechner Installation prüfen und neu bauen; Details in [Projektübergabe](Projektuebergabe.md).
+Gemeinsame Unity-Projektversion: **6000.4.7f1**. Die aktuelle Stations-/Scannerfassung wurde hier mit **6000.4.7f1** gebaut. Ältere Vorschauen auf einem anderen Rechner mit **6000.6.4f1** sind historische Angaben; keine Projektmigration. Am Zielrechner Installation prüfen und neu bauen; Details in [Projektübergabe](Projektuebergabe.md).
 
 ## Kopierbarer Auftrag zum Einrichten aller Chats
 
@@ -44,8 +44,16 @@ Alle Chats verwenden denselben lokalen Checkout. Für jeden manuellen Start zuer
 | Sound und Effekte | Lies `docs/Chats/18-Sound-und-Effekte-Desktop.md` und `docs/Audio.md`. Übernimm Musik, Loops, Übergänge und Effekte; Stimmen mit dem Storychat abstimmen. |
 | TechTree | Lies `docs/Chats/19-TechTree-Desktop.md`, `docs/Techtree.md` und `docs/Bergbaudrohnen.md`. Übernimm Forschungsdarstellung und technologischen Ausbau; neue Wasserabbau-Erfahrung berücksichtigen, weitere Freischaltungen bleiben offen. |
 | Vehicels | Lies `docs/Chats/20-Vehicels-Desktop.md`, `docs/Bergbaudrohnen.md`, `docs/Techtree.md` und `docs/Simulationen/Abbau-2026-10-06.json`. Übernimm Drohnen, Fahrzeuge, Versorgung, Rückkehrbudget und Abbau-Erfahrung. Bisherige Schreibweise des Titels beibehalten. |
-| Ideenbacklog prüfen | Lies `docs/Chats/21-Ideenbacklog-Desktop.md` und `docs/Ideenbacklog.md`. Übernimm Erfassung und Abstimmung weiterer Ideen. Sonne, Planeten, Drohnenrollen, Navigation, Gefahren, Cinematic und Steam sind noch keine implementierten Systeme. |
+| Ideenbacklog / Ideenbacklog prüfen | Lies `docs/Chats/21-Ideenbacklog-Desktop.md` und `docs/Ideenbacklog.md`. Übernimm Erfassung und Abstimmung weiterer Ideen. Sonnen, Planeten und Cinematic sind als Darstellung umgesetzt; Drohnenrollen, Stationsnavigation, Gefahrenmechanik und Steam bleiben offen. |
 
 ## Ausgangsrechner dieser Sicherung
 
-Desktop-Checkout: `C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex`. Der ältere Checkout `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex` liegt auf dem anderen Rechner. Immer den dortigen tatsächlichen lokalen Pfad verwenden.
+Historischer Desktop-Checkout: `C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex`. Aktueller Checkout auf diesem Rechner: `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex`. Immer den dortigen tatsächlichen lokalen Pfad verwenden.
+
+## Aktuelle Übergabe: Station, Scanner und Spielstände (08.10.2026)
+
+Nach dem Pull zuerst Projektuebergabe.md, Scanner-und-Spielstaende.md und die neuesten Einträge im Projektmemory lesen. Implementiert sind der vorhandene begehbare Raum mit Schleuse/Ring, Scan am echten Pult (97 %/zehn Sekunden/10 km), zehn Kontakte mit drei Wasserquellen, VR nur bekannter Kontakte, Debug ohne Arbeitsfreigabe, Mira-Porträt und Speichern/Laden mit Namen/Kommentar/Forschung. Neueste offene Aufgaben: Beenden reparieren, Innenraumposition im tatsächlichen Speicher-/Ladeablauf prüfen, Interaktionssounds, Auflösungsanpassung und UI-Skalierungsoption.
+
+Bei geschlossenem Unity-Editor baut `SpaceMiner.Editor.StartMenuBuild.Run` die vorhandene Szene nach Builds/Windows/SpaceMiner.exe, ohne sie neu zu generieren. `SpaceMiner.Editor.StationEntryBuild.Run` erzeugt alternativ Builds/StationEntry/SpaceMiner.exe. Prüfschalter: -scanSaveCheck und -stationHabitatCheck. Der versionierte Prüfbericht unter docs/Pruefungen/Stationsstart-2026-10-08.json dokumentiert den Ursprungsrechner; am Zielrechner erneut prüfen.
+
+Spielstände liegen ausserhalb des Repositorys unter Unitys Application.persistentDataPath/Saves, Player-Einstellungen ebenfalls lokal. Git überträgt deren Funktionen, aber nicht den eigenen Spielfortschritt oder die persönlichen Einstellungen. Wer denselben Spielstand fortsetzen möchte, kopiert den Saves-Ordner separat in den entsprechenden Speicherpfad am Zielrechner. Persönliches Codex-Memory und ursprüngliche Chatzustände werden nicht synchronisiert; die versionierten Projektdateien und lesbaren Archive vermitteln das neue Projektwissen.

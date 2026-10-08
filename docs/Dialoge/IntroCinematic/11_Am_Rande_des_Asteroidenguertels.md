@@ -1,5 +1,7 @@
 # Intro-Cinematic – Teil 11: Am Rande des Asteroidengürtels
 
+Aktualisierung 08.10.2026: Das Motiv und sein Textabschnitt sind im vollständigen zwölfteiligen Cinematic integriert. Aktive Stimme ist die durchgehende Enceladus-Gesamtaufnahme; Einzel-WAVs und v2-Stimmen hier sind historische Produktionsquellen. Aktueller Stand: [Cinematic-Übersicht](README.md). Frühere Integrations-/Freigabehinweise unten gelten für den damaligen Arbeitsschritt.
+
 Stand: 07.10.2026.
 
 ## Sprechertext
