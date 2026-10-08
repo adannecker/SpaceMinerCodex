@@ -12,6 +12,76 @@ Aktuelle Nutzerentscheidung vom 08.10.2026: 3D-Avatar vorerst zurückgestellt. M
 
 Zunächst bleibt das Spiel in einem Asteroidengürtel. Reisen in andere Sternsysteme gehören nicht zum ersten Umfang. Drohnen beginnen bei etwa 2 × 2 Metern, einzelne Asteroiden können 5 Kilometer Durchmesser erreichen.
 
+## Chapter 1: Drohnen, Mira-Forschung und Ausbauziele (08.10.2026)
+
+Die folgenden Punkte erweitern die beschlossene Kapitelrichtung als Gestaltungsplan; konkrete Quests, Rezepte, Kosten und Abschlusswerte sind noch offen. Keine neue Gameplayimplementierung durch diese Dokumentation.
+
+### Vier Drohnenarten
+
+Nach ausdrücklicher Klärung meint der Nutzer **vier Arten**, nicht vier einzelne Drohnen. Die Anzahl bleibt offen; die bisherigen zehn Außendrohnen werden dadurch nicht auf drei reduziert.
+
+| Art | Einsatzgebiet | Vorgesehene Aufgabe |
+| --- | --- | --- |
+| Abbaudrohne | Außen | Bekannte Rohstoffe abbauen und zur Station bringen. |
+| Bau-/Reparaturdrohne | Außen | Beschädigte Außenanlagen reparieren und neue Anlagen/Module anbauen. |
+| Erkundungsdrohne | Außen | Untersuchen und weitere Erkundungs-/Sensordaten gewinnen. |
+| Kleine Helferdrohne | Innen | Einfache interne Arbeiten und Umbau einer Außendrohne im Dock. |
+
+Drohnen sollen zwischen den Rollen umbaubar sein; die Rollen werden durch Forschung erschlossen. Vorhandene Abbaukompetenz bleibt Anfangswissen. Für Drohnen ist ein eigener Technologiebaum mit Zweigen für jede Art vorgesehen. Weitere Drohnenarten gehören in spätere Kapitel; die ältere separate Schrottsammeldrohne aus dem Backlog ist damit nicht als fünfte Chapter-1-Art eingeplant. Forschung macht einen Umbau möglich; Helferdrohne, Dock, passende Teile und Versorgung führen ihn physisch aus. Kosten, Dauer, Rückgewinnung und die technische Grenze beim Wechsel zwischen kleiner Innen- und Außendrohne sind noch auszuarbeiten. Die bestehende Regel Umbau versus Wiederverwertung/Neubau neuer Hardwaregenerationen bleibt erhalten.
+
+### Mira als KI und Forschungsbegleiterin
+
+Mira soll als KI der Station mit Avatar auftreten und die Forschung begleiten. Sie erkennt Möglichkeiten, schlägt Projekte vor und bearbeitet Forschung unter zusätzlichem Energiebedarf. Ihre aktuelle gezeichnete Avatar-Darstellung bleibt erhalten; die erzählerische KI-Rolle legt noch keine echte Online-KI-Anbindung fest.
+
+Erstes Nutzerbeispiel: Mira schlägt vor, die zunächst für Abbau vorgesehenen Außendrohnen zu Bau-/Reparaturdrohnen umzubauen. Sie erforscht die Umfunktionierung; die kleine interne Helferdrohne muss aktiviert werden und kann danach im Dock den Umbau durchführen. Aktivierungsvoraussetzungen der Helferdrohne bleiben offen. Die vorhandene R-01-Darstellung besitzt derzeit keine Arbeitslogik.
+
+Ausarbeitungsvorschläge: Der Spieler bestätigt Projekte und weist Energie zu. Mira verwendet vorhandene Archive, erkannte Schäden, Sensordaten und später Materialproben als Wissensgrundlagen. Forschung, fehlende Daten und fehlende Hardware werden getrennt angezeigt; Kosten/Leistung, Dauer, Unterbrechung und parallele Projekte bleiben offen. Einfache erste Aktivierung der Helferdrohne durch Anschließen/Aufladen und Systemprüfung, gegebenenfalls kleiner manueller Reparaturauftrag; noch keine bestätigte Quest oder Materialliste.
+
+### Mira verbessern: Forschungsfähigkeit und Rechnerausbau
+
+Nutzerentscheidung vom 08.10.2026: Mira erhält einen eigenen Entwicklungsbaum. Wiederholte Forschung verbessert ihre Effizienz und Geschwindigkeit; bestimmte Projekte verlangen eine Forschungsstufe, beispielsweise Stufe 2. Der gelbe/amberfarbene Erfahrungsrand zeigt den Fortschritt wie bei anderen Tätigkeiten. Zusätzliche CPUs und mehr verfügbare elektrische Leistung sollen ihre Performance steigern; neue selbst hergestellte CPUs benötigen passende Chipherstellung. Forschungsstufe, installierte Hardware und nutzbare Versorgung werden getrennt geführt. Forschungsstufe 2 ist keine automatische Chapter-2-Zuordnung. Konkrete Boni, Erfahrungsschwellen, CPU-/Energiewerte und Chapter-1-Grenzen bleiben offen. Weitere Äste und Versorgungs-/Kühlbedingungen als Vorschläge: [Mira-Entwicklung](Mira-Entwicklung.md). Keine Gameplayimplementierung.
+
+### Entwicklungsbereiche und mögliche Abschlussziele
+
+Auf Nutzerauftrag vom 08.10.2026 für alle bisher besprochenen Bereiche Bildvorschläge samt gemeinsamer Forschungsübersicht ausgearbeitet: [Techtree-Galerie](Techtree/README.md). Bereichseinstiege zeigen beispielsweise Mira 0/12; Zähler unterscheiden erreichte Knoten von den wiederholten Erfahrungsleveln am gelben Rand. Nullwerte sind Mockup-Beispiele, bekanntes Startwissen bleibt verfügbar. Konkrete Knoten, Nenner und Kapitelgrenzen sind Gestaltungsvorschläge, keine bestätigten Freischaltungen oder implementierte neue Menüführung.
+
+| Bereich | Nutzerwunsch für den Ausbau | Möglicher Chapter-1-Abschluss, noch Vorschlag |
+| --- | --- | --- |
+| Drohnen | Vier Rollen, Umbau und Forschungszweige je Art. | Alle vier Rollen verfügbar und im Einsatz. |
+| Stromversorgung | Batteriekapazität, Solarpanels und weitere Energieentwicklung. | Energie trägt Versorgung, Forschung und erste Produktion verlässlich. |
+| Ressourcenwissen | Lernen, was verarbeitet werden kann. | Mehrere bekannte Stoffe mit erschlossenen Verarbeitungswegen. |
+| Produktion und Lagerung | Komplexe Fertigung; Containertypen passend zu den Ressourcen. | Mehrere verbundene Herstellungsstufen und passende Lager. |
+| Station | Weitere anbaubare Ringe und Erweiterungen. | Erste funktionsfähige Erweiterung angebaut. |
+| Scanner/Erkundung | Reichweite und Arten erfassbarer Informationen verbessern. | Weiteres Arbeitsgebiet entdeckt und ausreichend untersucht. |
+
+Auch nicht identifizierte Funde sollen in geeigneten Behältern verwahrt werden können. Herkunft, Identifikation und Verarbeitbarkeit sind getrennte Informationen; Untersuchung muss vor Nutzung unbekannter Stoffe ausgearbeitet werden. Für die genaue Containerauslegung sind Stoffeigenschaften und Lagerbedingungen zu berücksichtigen; keine pauschalen Behälterrezepte beschlossen.
+
+Ein Glasdom ist gewünscht; ob er bereits am Anfang vorhanden ist, bleibt offen. Vorschlag: anfangs beschädigt oder abgeschaltet, Wiederherstellung als sichtbarer Meilenstein. Zweck, Versorgung und Bauanforderungen noch festzulegen. Als ergänzender Abschlussbereich sollten Wasser, Luft und Nahrung aus den bisherigen Survival-Zielen berücksichtigt werden; ihre konkrete Chapter-1-Ausgestaltung ist noch offen.
+
+Vorgeschlagener früher Fortschrittsbogen: erste Versorgung sichern → Helferdrohne aktivieren und Reparaturumbau erforschen → im Dock umbauen → beschädigte Solarflächen reparieren → zusätzliche Energie für Erkundung, Materialanalyse und Produktion nutzen. Dies ist eine Reihenfolge zur Diskussion, noch kein finaler Questplan. Die Rückkopplung zwischen Forschung, realem Umbau und Energieausbau soll Planung ermöglichen; der Chapter-1-Abschluss bleibt eine tragfähige Station im Asteroidenfeld, Reisen folgen in Chapter 2.
+
+## Wiederverwertung (08.10.2026)
+
+Nutzerentscheidung: eigener Entwicklungsbereich für Wiederverwertung. Aus Trümmern vollständige nutzbare Bestandteile wie Akkus und Hüllenplatten gewinnen; außerdem kleinere Bestandteile und schließlich Rohstoffe zurückgewinnen. Die gezielte Rückgewinnung eines Rohstoffs setzt dessen Erforschung voraus. Vorschlag: verzweigte Wege Wiederverwendung, Präzisionsdemontage und stoffgerechte Rückgewinnung mit Diagnose, passenden Anlagen und Materialwissen. Unbekannte Anteile bleiben getrennt gelagert; Mengen, Verfahren, Fundorte und Kapitelgrenzen sind offen. Details: [Wiederverwertung](Wiederverwertung.md). Keine neue Gameplaymechanik implementiert.
+
+## Rohstoffwissen vor Nutzung (08.10.2026)
+
+Nutzerentscheidung: benötigte Rohstoffe und Werkstoffe je Anlage sammeln und ihre Zugänglichkeit durch Abbau beziehungsweise Bergung planen. Neue Stoffe müssen erkannt und geeignete Trenn-/Aufbereitungsverfahren erforscht werden, bevor sie als nutzbare Materialien eingesetzt werden können. Ortung, Zusammensetzung, Gewinnbarkeit und Produktqualität sind getrennt. Die vorhandene Wasser-/Starttechnik bleibt Anfangswissen. Erste Sammlung für die Energieversorgung: [Werkstoffe und Rohstoffe](Werkstoffe-und-Rohstoffe.md). Konkrete Materiallisten, Fundorte, Verfahren und Mengen sind Vorschläge beziehungsweise offen; noch keine neue Gameplaymechanik.
+
+## Wartung und praktische Erfahrung (08.10.2026)
+
+Nutzerentscheidung: Beanspruchung führt zu Verschleiß; Reparaturen sind eine wiederkehrende Aufgabe über den Stationsaufbau hinaus. Wiederholte Reparaturen verbessern die praktische Erfahrung und damit die Effizienz. Lernen durch wiederholte Tätigkeit soll dort, wo sinnvoll, auch für weitere Arbeiten gelten. Ein sich füllender gelber/amberfarbener Rand am jeweiligen Techtree-Icon zeigt den Fortschritt zum nächsten Erfahrungslevel; das Info-Overlay erklärt Level und Effizienzverbesserungen. Erfahrung, Anlagenzustand und neue technische Forschung bleiben getrennt. Konkrete Boni, Schwellen, Verschleißregeln und Wartungsorganisation sind offen; noch keine entsprechende Gameplay-/UI-Erweiterung implementiert. Details: [Techtree](Techtree.md#wiederkehrende-reparaturen-und-lernen-durch-tätigkeit-08102026).
+
+## Nahrung: drei Entwicklungspfade (08.10.2026)
+
+Vom Nutzer vorgesehene Entwicklungsrichtung: chemische Synthese, photosynthetische Nahrungserzeugung mit Pflanzen/Algen und mikrobiologische Produktion in Bioreaktoren bilden drei Nahrungspfade. Samen und geeignete lebende Mikroorganismen sollen erst gefunden werden, beispielsweise bei der Bergung von Raumschifftrümmern in späteren Chapters. Organische Verbindungen in Asteroiden sind kein Nachweis lebender Kulturen.
+
+Chemische Synthese ist als möglicher früher Pfad vorgeschlagen, weil sie keine Samen oder lebenden Kulturen benötigt. Das bedeutet nicht, dass das Verfahren technisch einfacher ist. Eine vorhandene, wiederherstellbare Syntheseanlage mit gespeichertem Verfahrenswissen und anfänglichen Notrationen wäre ein Ausarbeitungsvorschlag; Startausstattung, Chapter-Zuordnung und vollständige Nährstoffversorgung bleiben offen. Zucker allein deckt keine vollständige Ernährung ab.
+
+Formaldehyd kann aus Methanol hergestellt werden; Methanol wiederum ist aus CO₂ und Wasserstoff zugänglich. Für eine mögliche Stationskette müssen Wasseraufbereitung/Elektrolyse, Kohlenstoffquelle, Katalysatoren, Energie, Wärmeabfuhr und Produktreinigung ausgelegt werden. Zuckerbildung aus Formaldehyd ist chemisch bekannt, aber eine zuverlässige lebensmitteltaugliche Produktion damit noch nicht als Spielrezept abgesichert. Recherche und offene Anforderungen: [Techtree](Techtree.md#nahrungspfade-und-chemische-synthese-08102026). Keine Nahrungsmechanik implementiert.
+
+Nutzer bestätigt Wasser und Kohlenstoff als die beiden zu findenden Grundrohstoffe dieser frühen chemischen Richtung; Energie treibt die Verarbeitung an. Präzisierung: Wasser ist eine Verbindung, Kohlenstoff ein Element, im Asteroidenmaterial häufig an andere Elemente gebunden. Kohlenstoffform, Gehalt und Aufbereitung bleiben zu untersuchen; keine reine Kohlenstofflagerstätte oder Diamantenressource beschlossen. Die zwei Grundrohstoffe betreffen die C/H/O-Basis einer möglichen Kohlenhydratproduktion, nicht sämtliche Anlagenmaterialien, Hilfsstoffe oder eine vollständige Ernährung.
+
 ## Steuerung und Logistik
 
 Die Spielfigur beginnt in der Station. Die frei navigierbare Außenansicht soll einen virtuellen, aus bekannten Messdaten aufgebauten Raum darstellen; ein Blick aus dem Fenster zeigt dagegen nur den tatsächlichen sichtbaren und erkennbaren Ausschnitt. Spätere Produktionslinien werden über eine Planungsansicht, sinngemäß einen Planungstisch, entworfen. Drohnen im Schiffsinneren führen die Transport- und Arbeitsaufträge aus. Die Logistik soll vollständig auf Drohnen beruhen; Förderbänder sind nicht vorgesehen. Der Einstieg verwendet den vorhandenen begehbaren Stationsinnenraum aus Commit ff0ff7b mit Wohnmodul, Schleuse und Stationsring. Der erste Nahbereichsscan wird nach Annäherung über E am realen Stationspult ausgeführt. Die virtuelle Aussenansicht zeigt bis dahin keine Asteroiden; Debugsicht erteilt keine Arbeitsfreigabe. Die aktuelle Quest bleibt am linken Rand; Mira begleitet sie mit dem gezeichneten Porträt.

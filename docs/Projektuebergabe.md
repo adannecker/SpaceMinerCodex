@@ -1,5 +1,7 @@
 # SpaceMiner: Übergabe auf den anderen Rechner
 
+Chapter-1-Techtree-Planung vom 08.10.2026: [Bildgalerie mit elf Bereichen und gemeinsamer Einstiegsübersicht](Techtree/README.md), zwölf gespeicherte PNGs, Knoten-/Voraussetzungs-/Zählerdokumentation und [Strukturprüfung](Techtree/pruefung-2026-10-08.json). Diskussionsentwürfe mit offenen Kapitelgrenzen; keine zusätzliche Unity-Menü-/Gameplayimplementierung. Git-Sicherung dieser Planung trennt offene Code-/UI-/Audio-/Save-Arbeit anderer Themenchats.
+
 Stand: 08.10.2026, Übergabe mit begehbarer Station, erstem Scan, VR-Scanwissen, Mira-Porträt und Spielständen. Einstieg für neue oder fortgesetzte lokale Codex-Chats. Entscheidungen: [Spielidee](Spielidee.md). Kompakter Kontext: [Projektmemory](Projektmemory.md). [Rechnerwechsel-Memory](Rechnerwechsel-Memory.md) enthält kopierbare Startaufträge für alle neun Themenchats.
 
 ## Aktueller Stand am 08.10.2026

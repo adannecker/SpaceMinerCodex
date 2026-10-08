@@ -1,0 +1,1652 @@
+{
+  "date": "2026-10-08",
+  "status": "Gestaltungsvorschläge, keine neue Gameplay-/UI-Implementierung",
+  "counter": "Erreichte/freigeschaltete Knoten / sichtbarer Entwurfsumfang. 0/N nur Mockup; vorhandenes Startwissen bleibt freigeschaltet. Erfahrung verbessert einen Knoten ohne erneute Zählererhöhung. Gemeinsame Knoten werden als Referenz geteilt.",
+  "edgeSemantics": "layoutEdges beschreiben den vorgeschlagenen Hauptpfad; requirements und note enthalten zusätzliche Bedingungen. Kein vollständiger Technologiekatalog oder Mengen-/Energiebilanz. Rasterabweichungen stehen ausdrücklich in note.",
+  "trees": [
+    {
+      "slug": "energie",
+      "title": "Energieversorgung",
+      "count": 12,
+      "requirements": [
+        "09: Lastmanagement + geeignete Akku-Ladeleistung + Wärmeabfuhr",
+        "12: Versorgung anhand noch auszulegender Bedarfs-/Reservewerte prüfen"
+      ],
+      "note": "04 und09 optionale Verbesserungen.12 ist ein Zielplatzhalter mit offenen Anforderungen, keine feste Kapitelabschlussbedingung. Im korrigierten Raster fehlt die kurze Verbindung08→09; die Voraussetzung steht im Overlay/Text. 11→09 ist ebenfalls zusätzliche Textbedingung. Bestehender kleiner Kernreaktor bleibt Startbestand; kein neu erfundener Reaktorpfad.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Vorhandene Technik"
+        },
+        {
+          "id": "02",
+          "name": "Solarflächen reparieren"
+        },
+        {
+          "id": "03",
+          "name": "Solarfläche erweitern"
+        },
+        {
+          "id": "04",
+          "name": "Solarnachführung"
+        },
+        {
+          "id": "05",
+          "name": "Speicher wiederherstellen"
+        },
+        {
+          "id": "06",
+          "name": "Zusätzliche Speicher"
+        },
+        {
+          "id": "07",
+          "name": "Stromverteilung reparieren"
+        },
+        {
+          "id": "08",
+          "name": "Lastmanagement"
+        },
+        {
+          "id": "09",
+          "name": "Abgestimmte Schnellladung"
+        },
+        {
+          "id": "10",
+          "name": "Kühlkreislauf reparieren"
+        },
+        {
+          "id": "11",
+          "name": "Wärmeabfuhr erweitern"
+        },
+        {
+          "id": "12",
+          "name": "Tragfähige Stationsversorgung"
+        }
+      ],
+      "source": "Vorheriger Bildentwurf dieses Chats, jetzt im Repository gespeichert",
+      "image": "Bilder/energie-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "03",
+          "04"
+        ],
+        [
+          "01",
+          "05"
+        ],
+        [
+          "05",
+          "06"
+        ],
+        [
+          "01",
+          "07"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "08",
+          "09"
+        ],
+        [
+          "01",
+          "10"
+        ],
+        [
+          "10",
+          "11"
+        ]
+      ]
+    },
+    {
+      "slug": "wiederverwertung",
+      "title": "Wiederverwertung",
+      "count": 10,
+      "requirements": [
+        "02: geeignete vorhandene Drohnen mit Bergungswerkzeugen",
+        "09: Zielstoff erforscht + passendes Trennverfahren + Anlage + Versorgung/Lager"
+      ],
+      "note": "Ganze Module, Einzelteile und Rohstoffe sind alternative Verwendungen desselben Fundes; keine doppelte Ausgabe. Zielstoffkenntnis für gezielte Rohstoffrückgewinnung, nicht die vollständige Elementherstellung für Wiederverwendung eines geprüften Moduls.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Trümmerbewertung"
+        },
+        {
+          "id": "02",
+          "name": "Gezielte Bergung"
+        },
+        {
+          "id": "03",
+          "name": "Bauteildiagnose"
+        },
+        {
+          "id": "04",
+          "name": "Aufarbeitung"
+        },
+        {
+          "id": "05",
+          "name": "Wiederverwendung"
+        },
+        {
+          "id": "06",
+          "name": "Präzisionsdemontage"
+        },
+        {
+          "id": "07",
+          "name": "Einzelteilprüfung"
+        },
+        {
+          "id": "08",
+          "name": "Materialsortierung"
+        },
+        {
+          "id": "09",
+          "name": "Stoffgerechte Rückgewinnung"
+        },
+        {
+          "id": "10",
+          "name": "Qualitätsprüfung"
+        }
+      ],
+      "source": "Vorheriger Bildentwurf dieses Chats, jetzt im Repository gespeichert",
+      "image": "Bilder/wiederverwertung-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "03",
+          "04"
+        ],
+        [
+          "04",
+          "05"
+        ],
+        [
+          "03",
+          "06"
+        ],
+        [
+          "06",
+          "07"
+        ],
+        [
+          "03",
+          "08"
+        ],
+        [
+          "08",
+          "09"
+        ],
+        [
+          "09",
+          "10"
+        ]
+      ]
+    },
+    {
+      "slug": "materialien",
+      "title": "Materialkunde und Aufbereitung",
+      "count": 24,
+      "requirements": [
+        "Proben aus erreichbarem Abbau/Bergung",
+        "18: geeignete Verbindungen + Chemieanlage + Prüfung"
+      ],
+      "note": "Stoffkandidaten, keine vollständige bestätigte Kapitelstückliste und keine zugesagten Lagerstätten. Graphit und organische Zwischenstoffe parallel. Existierendes Materialwissen bleibt bekannt. Rohstoffwissen liefert keine hergestellten Chips oder Akkus.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Probenanalyse"
+        },
+        {
+          "id": "02",
+          "name": "Wasseraufbereitung"
+        },
+        {
+          "id": "03",
+          "name": "Elektrolyse"
+        },
+        {
+          "id": "04",
+          "name": "Sauerstoff"
+        },
+        {
+          "id": "05",
+          "name": "Wasserstoff"
+        },
+        {
+          "id": "06",
+          "name": "Metalltrennung"
+        },
+        {
+          "id": "07",
+          "name": "Eisen / Nickel"
+        },
+        {
+          "id": "08",
+          "name": "Aluminium"
+        },
+        {
+          "id": "09",
+          "name": "Kupfer"
+        },
+        {
+          "id": "10",
+          "name": "Zinn / Silber"
+        },
+        {
+          "id": "11",
+          "name": "Mineralaufbereitung"
+        },
+        {
+          "id": "12",
+          "name": "Glas / Keramik"
+        },
+        {
+          "id": "13",
+          "name": "Silizium"
+        },
+        {
+          "id": "14",
+          "name": "Aluminiumoxid"
+        },
+        {
+          "id": "15",
+          "name": "Kohlenstoffaufbereitung"
+        },
+        {
+          "id": "16",
+          "name": "Graphit"
+        },
+        {
+          "id": "17",
+          "name": "Organische Zwischenstoffe"
+        },
+        {
+          "id": "18",
+          "name": "Polymerwerkstoffe"
+        },
+        {
+          "id": "19",
+          "name": "Stofftrennung / Reinigung"
+        },
+        {
+          "id": "20",
+          "name": "Lithium"
+        },
+        {
+          "id": "21",
+          "name": "Phosphate"
+        },
+        {
+          "id": "22",
+          "name": "Fluor / Chlor"
+        },
+        {
+          "id": "23",
+          "name": "Stickstoffverbindungen"
+        },
+        {
+          "id": "24",
+          "name": "Dotierstoffe"
+        }
+      ],
+      "source": "Vorheriger Bildentwurf dieses Chats, jetzt im Repository gespeichert",
+      "image": "Bilder/materialien-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "03",
+          "04"
+        ],
+        [
+          "03",
+          "05"
+        ],
+        [
+          "01",
+          "06"
+        ],
+        [
+          "06",
+          "07"
+        ],
+        [
+          "06",
+          "08"
+        ],
+        [
+          "06",
+          "09"
+        ],
+        [
+          "06",
+          "10"
+        ],
+        [
+          "01",
+          "11"
+        ],
+        [
+          "11",
+          "12"
+        ],
+        [
+          "11",
+          "13"
+        ],
+        [
+          "11",
+          "14"
+        ],
+        [
+          "01",
+          "15"
+        ],
+        [
+          "15",
+          "16"
+        ],
+        [
+          "15",
+          "17"
+        ],
+        [
+          "17",
+          "18"
+        ],
+        [
+          "01",
+          "19"
+        ],
+        [
+          "19",
+          "20"
+        ],
+        [
+          "19",
+          "21"
+        ],
+        [
+          "19",
+          "22"
+        ],
+        [
+          "19",
+          "23"
+        ],
+        [
+          "19",
+          "24"
+        ]
+      ]
+    },
+    {
+      "slug": "verbindungen",
+      "title": "Verbindungen und Zwischenprodukte",
+      "count": 21,
+      "requirements": [
+        "Materialwissen + Ausgangsstoffe + passende Verfahren/Anlagen",
+        "09: Siloxane + Füllstoffe + Vernetzung + Prüfung",
+        "14: Leitsalz UND Lösungsmittel + Formulierung/Qualität"
+      ],
+      "note": "Ausgewählte Bauartbeispiele, keine vollständigen Rezepte. Kathoden- und Elektrolytpfad getrennt. Oxide parallel. Formaldehyd ist kein Lebensmittel. Dekorative doppelte17 im PTFE-Rastericon ist ein Bildfehler; Zielknoten ist18 entsprechend dem Index.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Verbindungsanalyse"
+        },
+        {
+          "id": "02",
+          "name": "Kohlendioxid"
+        },
+        {
+          "id": "03",
+          "name": "Methanol"
+        },
+        {
+          "id": "04",
+          "name": "Formaldehyd"
+        },
+        {
+          "id": "05",
+          "name": "Chlorwasserstoff"
+        },
+        {
+          "id": "06",
+          "name": "Chlormethan"
+        },
+        {
+          "id": "07",
+          "name": "Methylchlorsilane"
+        },
+        {
+          "id": "08",
+          "name": "Siloxane"
+        },
+        {
+          "id": "09",
+          "name": "Silikonkautschuk"
+        },
+        {
+          "id": "10",
+          "name": "Phosphatvorstufen"
+        },
+        {
+          "id": "11",
+          "name": "Lithium-Eisenphosphat"
+        },
+        {
+          "id": "12",
+          "name": "Lithium-Leitsalz"
+        },
+        {
+          "id": "13",
+          "name": "Carbonatlösungsmittel"
+        },
+        {
+          "id": "14",
+          "name": "Elektrolytgemisch"
+        },
+        {
+          "id": "15",
+          "name": "Polyimidvorstufen"
+        },
+        {
+          "id": "16",
+          "name": "Polyimid"
+        },
+        {
+          "id": "17",
+          "name": "Tetrafluorethylen"
+        },
+        {
+          "id": "18",
+          "name": "PTFE"
+        },
+        {
+          "id": "19",
+          "name": "Gereinigtes Siliziumdioxid"
+        },
+        {
+          "id": "20",
+          "name": "Gereinigtes Aluminiumoxid"
+        },
+        {
+          "id": "21",
+          "name": "Harzsysteme"
+        }
+      ],
+      "source": "Vorheriger Bildentwurf dieses Chats, jetzt im Repository gespeichert",
+      "image": "Bilder/verbindungen-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "03",
+          "04"
+        ],
+        [
+          "01",
+          "05"
+        ],
+        [
+          "05",
+          "06"
+        ],
+        [
+          "06",
+          "07"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "08",
+          "09"
+        ],
+        [
+          "01",
+          "10"
+        ],
+        [
+          "10",
+          "11"
+        ],
+        [
+          "01",
+          "12"
+        ],
+        [
+          "01",
+          "13"
+        ],
+        [
+          "12",
+          "14"
+        ],
+        [
+          "13",
+          "14"
+        ],
+        [
+          "01",
+          "15"
+        ],
+        [
+          "15",
+          "16"
+        ],
+        [
+          "01",
+          "17"
+        ],
+        [
+          "17",
+          "18"
+        ],
+        [
+          "01",
+          "19"
+        ],
+        [
+          "01",
+          "20"
+        ],
+        [
+          "01",
+          "21"
+        ]
+      ]
+    },
+    {
+      "slug": "mira",
+      "title": "Mira",
+      "count": 12,
+      "rows": [
+        [
+          "Forschung",
+          "Forschungsbasis",
+          "Forschungsstufe 2",
+          "Methodenoptimierung"
+        ],
+        [
+          "Rechner",
+          "Rechnerdiagnose",
+          "Rechnerreparatur",
+          "CPU-Erweiterung"
+        ],
+        [
+          "Versorgung",
+          "Leistungsfreigabe",
+          "Erweiterte Kühlung",
+          "Parallelrechnen"
+        ],
+        [
+          "Assistenz",
+          "Archivzugang",
+          "Analyse und Planung",
+          "Routinekoordination"
+        ]
+      ],
+      "requirements": [
+        "CPU-Erweiterung: Chipherstellung + Elektronikmontage",
+        "Parallelrechnen: CPU-Erweiterung + Forschungsstufe 2 + Energie/Kühlung",
+        "Routinekoordination: Drohnen + Logistik + bekannte Verfahren"
+      ],
+      "note": "Forschungsbasis ist Startwissen. Forschungsstufe 2 entsteht durch abgeschlossene Forschung; Schwellen und Methodenbonus offen. Hardwareinstallation durch Helfer. CPU-Neufertigung und parallele Forschung: Chapter-1-Grenze offen. Archive liefern nur tatsächlich vorhandene Daten; Routineaufträge innerhalb freigegebener Regeln.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Forschungsbasis",
+          "lane": "Forschung"
+        },
+        {
+          "id": "02",
+          "name": "Forschungsstufe 2",
+          "lane": "Forschung"
+        },
+        {
+          "id": "03",
+          "name": "Methodenoptimierung",
+          "lane": "Forschung"
+        },
+        {
+          "id": "04",
+          "name": "Rechnerdiagnose",
+          "lane": "Rechner"
+        },
+        {
+          "id": "05",
+          "name": "Rechnerreparatur",
+          "lane": "Rechner"
+        },
+        {
+          "id": "06",
+          "name": "CPU-Erweiterung",
+          "lane": "Rechner"
+        },
+        {
+          "id": "07",
+          "name": "Leistungsfreigabe",
+          "lane": "Versorgung"
+        },
+        {
+          "id": "08",
+          "name": "Erweiterte Kühlung",
+          "lane": "Versorgung"
+        },
+        {
+          "id": "09",
+          "name": "Parallelrechnen",
+          "lane": "Versorgung"
+        },
+        {
+          "id": "10",
+          "name": "Archivzugang",
+          "lane": "Assistenz"
+        },
+        {
+          "id": "11",
+          "name": "Analyse und Planung",
+          "lane": "Assistenz"
+        },
+        {
+          "id": "12",
+          "name": "Routinekoordination",
+          "lane": "Assistenz"
+        }
+      ],
+      "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Mira 0/12\". Node lanes:\nForschung: 01 Forschungsbasis → 02 Forschungsstufe 2 → 03 Methodenoptimierung\nRechner: 04 Rechnerdiagnose → 05 Rechnerreparatur → 06 CPU-Erweiterung\nVersorgung: 07 Leistungsfreigabe → 08 Erweiterte Kühlung → 09 Parallelrechnen\nAssistenz: 10 Archivzugang → 11 Analyse und Planung → 12 Routinekoordination\nDraw only these internal directional links: 01→02, 02→03, 04→05, 05→06, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): CPU-Erweiterung: Chipherstellung + Elektronikmontage; Parallelrechnen: CPU-Erweiterung + Forschungsstufe 2 + Energie/Kühlung; Routinekoordination: Drohnen + Logistik + bekannte Verfahren.\nInformation overlay: \"Forschungsstufe 2\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.",
+      "image": "Bilder/mira-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "04",
+          "05"
+        ],
+        [
+          "05",
+          "06"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "08",
+          "09"
+        ],
+        [
+          "10",
+          "11"
+        ],
+        [
+          "11",
+          "12"
+        ]
+      ]
+    },
+    {
+      "slug": "drohnen",
+      "title": "Drohnen und Robotik",
+      "count": 16,
+      "rows": [
+        [
+          "Abbau",
+          "Abbaugrundlagen",
+          "Werkzeuganpassung",
+          "Frachtraumumbau",
+          "Abbausteuerung"
+        ],
+        [
+          "Bau und Reparatur",
+          "Reparaturrolle",
+          "Schadensdiagnose",
+          "Bauteiltausch",
+          "Montageverfahren"
+        ],
+        [
+          "Erkundung",
+          "Erkundungsrolle",
+          "Oberflächenkartierung",
+          "Probenentnahme",
+          "Livebild"
+        ],
+        [
+          "Interne Helfer",
+          "Helferaktivierung",
+          "Dockumbau",
+          "Innentransport",
+          "Wartungsaufträge"
+        ]
+      ],
+      "requirements": [
+        "Rollenumbau ausführen: Helfer + Dock + passende Teile",
+        "Probenentnahme: bekannte Kontakte + Probenspeicher",
+        "Montageverfahren: Werkstoffe + Fertigung + Energie"
+      ],
+      "note": "Vier Arten, keine fünfte Bergungsdrohne. Abbaugrundlagen sind Startwissen. Livebild erfordert Bildsensoren und Datenverbindung; Probenentnahme erfordert Werkzeuge, daher die gezeichnete Kette als Ausbaureihenfolge, nicht naturgesetzliche Abhängigkeit. Innentransport ergänzt Helferrolle. Rollenwechsel ist realer Umbau; neue technische Generationen benötigen Wiederverwertung/Neubau. Kleine Innen- und große Außenhardware nicht pauschal austauschbar.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Abbaugrundlagen",
+          "lane": "Abbau"
+        },
+        {
+          "id": "02",
+          "name": "Werkzeuganpassung",
+          "lane": "Abbau"
+        },
+        {
+          "id": "03",
+          "name": "Frachtraumumbau",
+          "lane": "Abbau"
+        },
+        {
+          "id": "04",
+          "name": "Abbausteuerung",
+          "lane": "Abbau"
+        },
+        {
+          "id": "05",
+          "name": "Reparaturrolle",
+          "lane": "Bau und Reparatur"
+        },
+        {
+          "id": "06",
+          "name": "Schadensdiagnose",
+          "lane": "Bau und Reparatur"
+        },
+        {
+          "id": "07",
+          "name": "Bauteiltausch",
+          "lane": "Bau und Reparatur"
+        },
+        {
+          "id": "08",
+          "name": "Montageverfahren",
+          "lane": "Bau und Reparatur"
+        },
+        {
+          "id": "09",
+          "name": "Erkundungsrolle",
+          "lane": "Erkundung"
+        },
+        {
+          "id": "10",
+          "name": "Oberflächenkartierung",
+          "lane": "Erkundung"
+        },
+        {
+          "id": "11",
+          "name": "Probenentnahme",
+          "lane": "Erkundung"
+        },
+        {
+          "id": "12",
+          "name": "Livebild",
+          "lane": "Erkundung"
+        },
+        {
+          "id": "13",
+          "name": "Helferaktivierung",
+          "lane": "Interne Helfer"
+        },
+        {
+          "id": "14",
+          "name": "Dockumbau",
+          "lane": "Interne Helfer"
+        },
+        {
+          "id": "15",
+          "name": "Innentransport",
+          "lane": "Interne Helfer"
+        },
+        {
+          "id": "16",
+          "name": "Wartungsaufträge",
+          "lane": "Interne Helfer"
+        }
+      ],
+      "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Drohnen und Robotik 0/16\". Node lanes:\nAbbau: 01 Abbaugrundlagen → 02 Werkzeuganpassung → 03 Frachtraumumbau → 04 Abbausteuerung\nBau und Reparatur: 05 Reparaturrolle → 06 Schadensdiagnose → 07 Bauteiltausch → 08 Montageverfahren\nErkundung: 09 Erkundungsrolle → 10 Oberflächenkartierung → 11 Probenentnahme → 12 Livebild\nInterne Helfer: 13 Helferaktivierung → 14 Dockumbau → 15 Innentransport → 16 Wartungsaufträge\nDraw only these internal directional links: 01→02, 02→03, 03→04, 05→06, 06→07, 07→08, 09→10, 10→11, 11→12, 13→14, 14→15, 15→16.\nExternal cards (condense only if necessary): Rollenumbau ausführen: Helfer + Dock + passende Teile; Probenentnahme: bekannte Kontakte + Probenspeicher; Montageverfahren: Werkstoffe + Fertigung + Energie.\nInformation overlay: \"Werkzeuganpassung\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.",
+      "image": "Bilder/drohnen-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "03",
+          "04"
+        ],
+        [
+          "05",
+          "06"
+        ],
+        [
+          "06",
+          "07"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "09",
+          "10"
+        ],
+        [
+          "10",
+          "11"
+        ],
+        [
+          "11",
+          "12"
+        ],
+        [
+          "13",
+          "14"
+        ],
+        [
+          "14",
+          "15"
+        ],
+        [
+          "15",
+          "16"
+        ]
+      ]
+    },
+    {
+      "slug": "scanner",
+      "title": "Scanner und Erkundung",
+      "count": 12,
+      "rows": [
+        [
+          "Ortung",
+          "Nahbereichsscan",
+          "Signalfilter",
+          "Reichweitenmodul"
+        ],
+        [
+          "Oberfläche",
+          "Kartierungsdaten",
+          "Bildsensorik",
+          "Oberflächenmodell"
+        ],
+        [
+          "Stoffe",
+          "Probenregister",
+          "Spektralanalyse",
+          "Materialabgleich"
+        ],
+        [
+          "Überwachung",
+          "Kontaktverfolgung",
+          "Bewegungsprognose",
+          "Arbeitsfreigabeprüfung"
+        ]
+      ],
+      "requirements": [
+        "Oberflächenmodell: Erkundungsdrohne + bekannte Kontakte",
+        "Materialabgleich: Proben + Materialwissen",
+        "Bewegungsprognose: Messreihen + Mira Stufe 2"
+      ],
+      "note": "Nahbereichsscan ist vorhandene Starttechnik; keine erneute Freischaltung. Kartierung, Bildgebung und Stoffnachweis getrennt von Ortung. Spektralanalyse hängt von geeigneten Messgeräten und Proben ab; nicht jede Substanz aus Ferne bestimmbar. Arbeitsfreigabeprüfung verbessert bereits bestehende Freigaberegeln, erlaubt keine Flüge zu unbekannten Kontakten. Keine Stationsreise durch diesen Baum.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Nahbereichsscan",
+          "lane": "Ortung"
+        },
+        {
+          "id": "02",
+          "name": "Signalfilter",
+          "lane": "Ortung"
+        },
+        {
+          "id": "03",
+          "name": "Reichweitenmodul",
+          "lane": "Ortung"
+        },
+        {
+          "id": "04",
+          "name": "Kartierungsdaten",
+          "lane": "Oberfläche"
+        },
+        {
+          "id": "05",
+          "name": "Bildsensorik",
+          "lane": "Oberfläche"
+        },
+        {
+          "id": "06",
+          "name": "Oberflächenmodell",
+          "lane": "Oberfläche"
+        },
+        {
+          "id": "07",
+          "name": "Probenregister",
+          "lane": "Stoffe"
+        },
+        {
+          "id": "08",
+          "name": "Spektralanalyse",
+          "lane": "Stoffe"
+        },
+        {
+          "id": "09",
+          "name": "Materialabgleich",
+          "lane": "Stoffe"
+        },
+        {
+          "id": "10",
+          "name": "Kontaktverfolgung",
+          "lane": "Überwachung"
+        },
+        {
+          "id": "11",
+          "name": "Bewegungsprognose",
+          "lane": "Überwachung"
+        },
+        {
+          "id": "12",
+          "name": "Arbeitsfreigabeprüfung",
+          "lane": "Überwachung"
+        }
+      ],
+      "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Scanner und Erkundung 0/12\". Node lanes:\nOrtung: 01 Nahbereichsscan → 02 Signalfilter → 03 Reichweitenmodul\nOberfläche: 04 Kartierungsdaten → 05 Bildsensorik → 06 Oberflächenmodell\nStoffe: 07 Probenregister → 08 Spektralanalyse → 09 Materialabgleich\nÜberwachung: 10 Kontaktverfolgung → 11 Bewegungsprognose → 12 Arbeitsfreigabeprüfung\nDraw only these internal directional links: 01→02, 02→03, 04→05, 05→06, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): Oberflächenmodell: Erkundungsdrohne + bekannte Kontakte; Materialabgleich: Proben + Materialwissen; Bewegungsprognose: Messreihen + Mira Stufe 2.\nInformation overlay: \"Signalfilter\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.",
+      "image": "Bilder/scanner-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "04",
+          "05"
+        ],
+        [
+          "05",
+          "06"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "08",
+          "09"
+        ],
+        [
+          "10",
+          "11"
+        ],
+        [
+          "11",
+          "12"
+        ]
+      ]
+    },
+    {
+      "slug": "produktion",
+      "title": "Produktion und Fertigung",
+      "count": 16,
+      "rows": [
+        [
+          "Werkstatt",
+          "Werkstattdiagnose",
+          "Werkstattreparatur",
+          "Präzisionsmontage",
+          "Qualitätsprüfung"
+        ],
+        [
+          "Metalle",
+          "Schmelzverfahren",
+          "Formgebung",
+          "Bearbeitung",
+          "Bauteilfertigung"
+        ],
+        [
+          "Chemie",
+          "Prozessanlage",
+          "Reaktionsführung",
+          "Reinigung und Trennung",
+          "Werkstoffmischungen"
+        ],
+        [
+          "Elektronik",
+          "Elektronikmontage",
+          "Platinenfertigung",
+          "Halbleiterprozesse",
+          "Chipherstellung"
+        ]
+      ],
+      "requirements": [
+        "Bauteilfertigung: geeignete Metalle + Energie/Wärmeabfuhr",
+        "Werkstoffmischungen: Verbindungen + passendes Rezept",
+        "Chipherstellung: hochreine Stoffe + Prozessanlagen + Mira Stufe 2"
+      ],
+      "note": "Grundlagen pro Anlage abhängig von vorhandenem Startbestand. Wiederherstellung kann mit geborgenen Teilen beginnen. Zweige zeigen Ausbaureihenfolgen; Qualitätsprüfung und Werkstatt sind zusätzliche Bedingungen anderer Zweige. Elektronikmontage kann geborgene Chips nutzen. Neue Chips verlangen mehr als Silizium: Prozessstoffe, Reinheit, Ausstattung, Verpackung/Tests; vollständige Halbleiterfertigung in Chapter 1 bleibt ambitioniert und offen. Keine vollständigen Rezepturen mit diesem Entwurf festgelegt.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Werkstattdiagnose",
+          "lane": "Werkstatt"
+        },
+        {
+          "id": "02",
+          "name": "Werkstattreparatur",
+          "lane": "Werkstatt"
+        },
+        {
+          "id": "03",
+          "name": "Präzisionsmontage",
+          "lane": "Werkstatt"
+        },
+        {
+          "id": "04",
+          "name": "Qualitätsprüfung",
+          "lane": "Werkstatt"
+        },
+        {
+          "id": "05",
+          "name": "Schmelzverfahren",
+          "lane": "Metalle"
+        },
+        {
+          "id": "06",
+          "name": "Formgebung",
+          "lane": "Metalle"
+        },
+        {
+          "id": "07",
+          "name": "Bearbeitung",
+          "lane": "Metalle"
+        },
+        {
+          "id": "08",
+          "name": "Bauteilfertigung",
+          "lane": "Metalle"
+        },
+        {
+          "id": "09",
+          "name": "Prozessanlage",
+          "lane": "Chemie"
+        },
+        {
+          "id": "10",
+          "name": "Reaktionsführung",
+          "lane": "Chemie"
+        },
+        {
+          "id": "11",
+          "name": "Reinigung und Trennung",
+          "lane": "Chemie"
+        },
+        {
+          "id": "12",
+          "name": "Werkstoffmischungen",
+          "lane": "Chemie"
+        },
+        {
+          "id": "13",
+          "name": "Elektronikmontage",
+          "lane": "Elektronik"
+        },
+        {
+          "id": "14",
+          "name": "Platinenfertigung",
+          "lane": "Elektronik"
+        },
+        {
+          "id": "15",
+          "name": "Halbleiterprozesse",
+          "lane": "Elektronik"
+        },
+        {
+          "id": "16",
+          "name": "Chipherstellung",
+          "lane": "Elektronik"
+        }
+      ],
+      "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Produktion und Fertigung 0/16\". Node lanes:\nWerkstatt: 01 Werkstattdiagnose → 02 Werkstattreparatur → 03 Präzisionsmontage → 04 Qualitätsprüfung\nMetalle: 05 Schmelzverfahren → 06 Formgebung → 07 Bearbeitung → 08 Bauteilfertigung\nChemie: 09 Prozessanlage → 10 Reaktionsführung → 11 Reinigung und Trennung → 12 Werkstoffmischungen\nElektronik: 13 Elektronikmontage → 14 Platinenfertigung → 15 Halbleiterprozesse → 16 Chipherstellung\nDraw only these internal directional links: 01→02, 02→03, 03→04, 05→06, 06→07, 07→08, 09→10, 10→11, 11→12, 13→14, 14→15, 15→16.\nExternal cards (condense only if necessary): Bauteilfertigung: geeignete Metalle + Energie/Wärmeabfuhr; Werkstoffmischungen: Verbindungen + passendes Rezept; Chipherstellung: hochreine Stoffe + Prozessanlagen + Mira Stufe 2.\nInformation overlay: \"Werkstattreparatur\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.\nElectronics lane is an ambitious manufacturing preview: add small amber label 'Chapter-1-Grenze offen' near Chipherstellung. Keep all16nodes.",
+      "image": "Bilder/produktion-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "03",
+          "04"
+        ],
+        [
+          "05",
+          "06"
+        ],
+        [
+          "06",
+          "07"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "09",
+          "10"
+        ],
+        [
+          "10",
+          "11"
+        ],
+        [
+          "11",
+          "12"
+        ],
+        [
+          "13",
+          "14"
+        ],
+        [
+          "14",
+          "15"
+        ],
+        [
+          "15",
+          "16"
+        ]
+      ]
+    },
+    {
+      "slug": "logistik",
+      "title": "Lagerung und Logistik",
+      "count": 12,
+      "rows": [
+        [
+          "Bestände",
+          "Lagerregister",
+          "Fundquarantäne",
+          "Bestandsanalyse"
+        ],
+        [
+          "Behälter",
+          "Feststoffcontainer",
+          "Flüssigkeitstanks",
+          "Gaslager"
+        ],
+        [
+          "Transport",
+          "Transportaufträge",
+          "Dockkoordination",
+          "Routenprioritäten"
+        ],
+        [
+          "Versorgung",
+          "Materialreservierung",
+          "Nachschubregeln",
+          "Versorgungsplanung"
+        ]
+      ],
+      "requirements": [
+        "Transportaufträge: interne Helfer + zugängliche Wege",
+        "Gaslager: geeignete Werkstoffe + Dichtungen + Drucktechnik",
+        "Versorgungsplanung: Mira Analyse + bekannte Rezepte"
+      ],
+      "note": "Feststoffe, Flüssigkeiten und Gase sind gleichrangige Behälterzweige, keine lineare Freischaltkette. Unbekannte Funde gesondert lagern; keine nutzbare Rohstoffmenge bis zur Identifikation. Transport nur durch geeignete Drohnen, keine Förderbänder. Gaslager verlangt stoff- und zustandsgeeignete Technik; Details offen. Bestandsanalyse benötigt Register; Versorgung nutzt reale Mengen, Reservierungen und Produktionskapazitäten.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Lagerregister",
+          "lane": "Bestände"
+        },
+        {
+          "id": "02",
+          "name": "Fundquarantäne",
+          "lane": "Bestände"
+        },
+        {
+          "id": "03",
+          "name": "Bestandsanalyse",
+          "lane": "Bestände"
+        },
+        {
+          "id": "04",
+          "name": "Feststoffcontainer",
+          "lane": "Behälter"
+        },
+        {
+          "id": "05",
+          "name": "Flüssigkeitstanks",
+          "lane": "Behälter"
+        },
+        {
+          "id": "06",
+          "name": "Gaslager",
+          "lane": "Behälter"
+        },
+        {
+          "id": "07",
+          "name": "Transportaufträge",
+          "lane": "Transport"
+        },
+        {
+          "id": "08",
+          "name": "Dockkoordination",
+          "lane": "Transport"
+        },
+        {
+          "id": "09",
+          "name": "Routenprioritäten",
+          "lane": "Transport"
+        },
+        {
+          "id": "10",
+          "name": "Materialreservierung",
+          "lane": "Versorgung"
+        },
+        {
+          "id": "11",
+          "name": "Nachschubregeln",
+          "lane": "Versorgung"
+        },
+        {
+          "id": "12",
+          "name": "Versorgungsplanung",
+          "lane": "Versorgung"
+        }
+      ],
+      "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Lagerung und Logistik 0/12\". Node lanes:\nBestände: 01 Lagerregister → 02 Fundquarantäne → 03 Bestandsanalyse\nBehälter: 04 Feststoffcontainer | 05 Flüssigkeitstanks | 06 Gaslager\nTransport: 07 Transportaufträge → 08 Dockkoordination → 09 Routenprioritäten\nVersorgung: 10 Materialreservierung → 11 Nachschubregeln → 12 Versorgungsplanung\nDraw only these internal directional links: 01→02, 02→03, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): Transportaufträge: interne Helfer + zugängliche Wege; Gaslager: geeignete Werkstoffe + Dichtungen + Drucktechnik; Versorgungsplanung: Mira Analyse + bekannte Rezepte.\nInformation overlay: \"Fundquarantäne\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nIn Behälter lane the three container technologies are PARALLEL alternatives with NO links between them.\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.",
+      "image": "Bilder/logistik-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "08",
+          "09"
+        ],
+        [
+          "10",
+          "11"
+        ],
+        [
+          "11",
+          "12"
+        ]
+      ]
+    },
+    {
+      "slug": "lebenserhaltung",
+      "title": "Lebenserhaltung und Nahrung",
+      "count": 12,
+      "rows": [
+        [
+          "Wasser",
+          "Wasserqualität",
+          "Wasseraufbereitung",
+          "Wasserkreislauf"
+        ],
+        [
+          "Atmosphäre",
+          "Luftüberwachung",
+          "Sauerstoffversorgung",
+          "CO2-Abscheidung"
+        ],
+        [
+          "Habitat",
+          "Leckdiagnose",
+          "Dichtungstausch",
+          "Temperaturregelung"
+        ],
+        [
+          "Nahrung",
+          "Vorratsprüfung",
+          "Syntheseanlage reparieren",
+          "Nahrungsqualität"
+        ]
+      ],
+      "requirements": [
+        "Sauerstoffversorgung: bekanntes Verfahren + Energie",
+        "Syntheseanlage: geborgene Teile + freigegebenes Verfahren",
+        "Spätere Kapitel: Pflanzen/Algen brauchen Samen; Bioreaktoren brauchen Kulturen"
+      ],
+      "note": "Vorhandene Luft-/Wasserversorgung bleibt Startbestand; Erweiterungen und Prüftechnik ergänzen sie. Wasseraufbereitung aus Materialbaum ist ein gemeinsamer referenzierter Knoten, kein zweiter Kauf. Sauerstoffproduktion ist von Luftmischung/Druckregelung abhängig. Nahrungspfad stellt nur einen möglichen vorhandenen Synthesizer wieder her; dessen Startbestand, sichere vollständige Ernährung und Verfahren bleiben offen. Formaldehyd ist keine Nahrung. Pflanzen-/Algen- und Mikrobenpfade als getrennte spätere Ausblickkarten, nicht Teil der12 Chapter-1-Vorschlagsknoten. Leckdiagnose/Dichtungstausch sind gemeinsam referenzierte Reparaturfähigkeiten.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Wasserqualität",
+          "lane": "Wasser"
+        },
+        {
+          "id": "02",
+          "name": "Wasseraufbereitung",
+          "lane": "Wasser"
+        },
+        {
+          "id": "03",
+          "name": "Wasserkreislauf",
+          "lane": "Wasser"
+        },
+        {
+          "id": "04",
+          "name": "Luftüberwachung",
+          "lane": "Atmosphäre"
+        },
+        {
+          "id": "05",
+          "name": "Sauerstoffversorgung",
+          "lane": "Atmosphäre"
+        },
+        {
+          "id": "06",
+          "name": "CO2-Abscheidung",
+          "lane": "Atmosphäre"
+        },
+        {
+          "id": "07",
+          "name": "Leckdiagnose",
+          "lane": "Habitat"
+        },
+        {
+          "id": "08",
+          "name": "Dichtungstausch",
+          "lane": "Habitat"
+        },
+        {
+          "id": "09",
+          "name": "Temperaturregelung",
+          "lane": "Habitat"
+        },
+        {
+          "id": "10",
+          "name": "Vorratsprüfung",
+          "lane": "Nahrung"
+        },
+        {
+          "id": "11",
+          "name": "Syntheseanlage reparieren",
+          "lane": "Nahrung"
+        },
+        {
+          "id": "12",
+          "name": "Nahrungsqualität",
+          "lane": "Nahrung"
+        }
+      ],
+      "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Lebenserhaltung und Nahrung 0/12\". Node lanes:\nWasser: 01 Wasserqualität → 02 Wasseraufbereitung → 03 Wasserkreislauf\nAtmosphäre: 04 Luftüberwachung → 05 Sauerstoffversorgung → 06 CO2-Abscheidung\nHabitat: 07 Leckdiagnose → 08 Dichtungstausch → 09 Temperaturregelung\nNahrung: 10 Vorratsprüfung → 11 Syntheseanlage reparieren → 12 Nahrungsqualität\nDraw only these internal directional links: 01→02, 02→03, 04→05, 05→06, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): Sauerstoffversorgung: bekanntes Verfahren + Energie; Syntheseanlage: geborgene Teile + freigegebenes Verfahren; Spätere Kapitel: Pflanzen/Algen brauchen Samen; Bioreaktoren brauchen Kulturen.\nInformation overlay: \"Wasseraufbereitung\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nOnly for this life-support image, include TWO small muted future cards clearly labelled \"SPÄTER · Samen\" and \"SPÄTER · Kulturen\", not counted as research nodes.\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.\nIn external card for Syntheseanlage, add exact text 'Startbestand und Rezept offen'. Never imply that formaldehyde is food. Plants and microbes are future preview cards only.",
+      "image": "Bilder/lebenserhaltung-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "04",
+          "05"
+        ],
+        [
+          "05",
+          "06"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "08",
+          "09"
+        ],
+        [
+          "10",
+          "11"
+        ],
+        [
+          "11",
+          "12"
+        ]
+      ]
+    },
+    {
+      "slug": "station",
+      "title": "Stationsbau und Infrastruktur",
+      "count": 12,
+      "rows": [
+        [
+          "Bestand",
+          "Strukturdiagnose",
+          "Hülle reparieren",
+          "Anschlüsse instandsetzen"
+        ],
+        [
+          "Ausbau",
+          "Modulplanung",
+          "Versorgungsanschluss",
+          "Modulmontage"
+        ],
+        [
+          "Habitat",
+          "Druckprüfung",
+          "Wohnbereich erweitern",
+          "Glasdom"
+        ],
+        [
+          "Ausrichtung",
+          "Lagekontrolle",
+          "Panelhalterung reparieren",
+          "Panelsteuerung"
+        ]
+      ],
+      "requirements": [
+        "Modulmontage: Reparaturdrohne + Bauteile + Logistik",
+        "Glasdom: Glas + Tragwerk + Drucktechnik + Lebenserhaltung",
+        "Panelsteuerung: intakte Panels + Stelltechnik + Energie"
+      ],
+      "note": "Strukturdiagnose ergänzt den bekannten Stationsbestand. Bestehender begehbarer Ring/Wohnraum wird nicht erneut freigeschaltet. Modulbau braucht vorausgehende Struktur-/Anschlussprüfung, Versorgung und Druckprüfung als zusätzliche Bedingungen. Glasdom-Neubau versus Reparatur eines vorhandenen Doms offen. Lagekontrolle umfasst Orientierung, keine Reise zu Planeten. Panelsteuerung zunächst manuell; automatische Nachführung späterer optionaler Ausbau außerhalb der12Knoten. Körperrotation und lokale Lagekorrektur versus Chapter-2-Reise weiter abzugrenzen.",
+      "nodes": [
+        {
+          "id": "01",
+          "name": "Strukturdiagnose",
+          "lane": "Bestand"
+        },
+        {
+          "id": "02",
+          "name": "Hülle reparieren",
+          "lane": "Bestand"
+        },
+        {
+          "id": "03",
+          "name": "Anschlüsse instandsetzen",
+          "lane": "Bestand"
+        },
+        {
+          "id": "04",
+          "name": "Modulplanung",
+          "lane": "Ausbau"
+        },
+        {
+          "id": "05",
+          "name": "Versorgungsanschluss",
+          "lane": "Ausbau"
+        },
+        {
+          "id": "06",
+          "name": "Modulmontage",
+          "lane": "Ausbau"
+        },
+        {
+          "id": "07",
+          "name": "Druckprüfung",
+          "lane": "Habitat"
+        },
+        {
+          "id": "08",
+          "name": "Wohnbereich erweitern",
+          "lane": "Habitat"
+        },
+        {
+          "id": "09",
+          "name": "Glasdom",
+          "lane": "Habitat"
+        },
+        {
+          "id": "10",
+          "name": "Lagekontrolle",
+          "lane": "Ausrichtung"
+        },
+        {
+          "id": "11",
+          "name": "Panelhalterung reparieren",
+          "lane": "Ausrichtung"
+        },
+        {
+          "id": "12",
+          "name": "Panelsteuerung",
+          "lane": "Ausrichtung"
+        }
+      ],
+      "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Stationsbau und Infrastruktur 0/12\". Node lanes:\nBestand: 01 Strukturdiagnose → 02 Hülle reparieren → 03 Anschlüsse instandsetzen\nAusbau: 04 Modulplanung → 05 Versorgungsanschluss → 06 Modulmontage\nHabitat: 07 Druckprüfung → 08 Wohnbereich erweitern → 09 Glasdom\nAusrichtung: 10 Lagekontrolle → 11 Panelhalterung reparieren → 12 Panelsteuerung\nDraw only these internal directional links: 01→02, 02→03, 04→05, 05→06, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): Modulmontage: Reparaturdrohne + Bauteile + Logistik; Glasdom: Glas + Tragwerk + Drucktechnik + Lebenserhaltung; Panelsteuerung: intakte Panels + Stelltechnik + Energie.\nInformation overlay: \"Hülle reparieren\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.\nSmall note near Lagekontrolle: 'Ausrichtung · Reisen ab Chapter 2'. Small note near Glasdom: 'Neubau oder Reparatur: offen'. Panelsteuerung is MANUAL initially; avoid implying automatic solar tracking already unlocked.",
+      "image": "Bilder/station-2026-10-08.png",
+      "layoutEdges": [
+        [
+          "01",
+          "02"
+        ],
+        [
+          "02",
+          "03"
+        ],
+        [
+          "04",
+          "05"
+        ],
+        [
+          "05",
+          "06"
+        ],
+        [
+          "07",
+          "08"
+        ],
+        [
+          "08",
+          "09"
+        ],
+        [
+          "10",
+          "11"
+        ],
+        [
+          "11",
+          "12"
+        ]
+      ]
+    }
+  ],
+  "generation": {
+    "tool": "Built-in image_gen.imagegen",
+    "newTreePrompts": [
+      {
+        "slug": "mira",
+        "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Mira 0/12\". Node lanes:\nForschung: 01 Forschungsbasis → 02 Forschungsstufe 2 → 03 Methodenoptimierung\nRechner: 04 Rechnerdiagnose → 05 Rechnerreparatur → 06 CPU-Erweiterung\nVersorgung: 07 Leistungsfreigabe → 08 Erweiterte Kühlung → 09 Parallelrechnen\nAssistenz: 10 Archivzugang → 11 Analyse und Planung → 12 Routinekoordination\nDraw only these internal directional links: 01→02, 02→03, 04→05, 05→06, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): CPU-Erweiterung: Chipherstellung + Elektronikmontage; Parallelrechnen: CPU-Erweiterung + Forschungsstufe 2 + Energie/Kühlung; Routinekoordination: Drohnen + Logistik + bekannte Verfahren.\nInformation overlay: \"Forschungsstufe 2\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed."
+      },
+      {
+        "slug": "drohnen",
+        "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Drohnen und Robotik 0/16\". Node lanes:\nAbbau: 01 Abbaugrundlagen → 02 Werkzeuganpassung → 03 Frachtraumumbau → 04 Abbausteuerung\nBau und Reparatur: 05 Reparaturrolle → 06 Schadensdiagnose → 07 Bauteiltausch → 08 Montageverfahren\nErkundung: 09 Erkundungsrolle → 10 Oberflächenkartierung → 11 Probenentnahme → 12 Livebild\nInterne Helfer: 13 Helferaktivierung → 14 Dockumbau → 15 Innentransport → 16 Wartungsaufträge\nDraw only these internal directional links: 01→02, 02→03, 03→04, 05→06, 06→07, 07→08, 09→10, 10→11, 11→12, 13→14, 14→15, 15→16.\nExternal cards (condense only if necessary): Rollenumbau ausführen: Helfer + Dock + passende Teile; Probenentnahme: bekannte Kontakte + Probenspeicher; Montageverfahren: Werkstoffe + Fertigung + Energie.\nInformation overlay: \"Werkzeuganpassung\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed."
+      },
+      {
+        "slug": "scanner",
+        "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Scanner und Erkundung 0/12\". Node lanes:\nOrtung: 01 Nahbereichsscan → 02 Signalfilter → 03 Reichweitenmodul\nOberfläche: 04 Kartierungsdaten → 05 Bildsensorik → 06 Oberflächenmodell\nStoffe: 07 Probenregister → 08 Spektralanalyse → 09 Materialabgleich\nÜberwachung: 10 Kontaktverfolgung → 11 Bewegungsprognose → 12 Arbeitsfreigabeprüfung\nDraw only these internal directional links: 01→02, 02→03, 04→05, 05→06, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): Oberflächenmodell: Erkundungsdrohne + bekannte Kontakte; Materialabgleich: Proben + Materialwissen; Bewegungsprognose: Messreihen + Mira Stufe 2.\nInformation overlay: \"Signalfilter\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed."
+      },
+      {
+        "slug": "produktion",
+        "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Produktion und Fertigung 0/16\". Node lanes:\nWerkstatt: 01 Werkstattdiagnose → 02 Werkstattreparatur → 03 Präzisionsmontage → 04 Qualitätsprüfung\nMetalle: 05 Schmelzverfahren → 06 Formgebung → 07 Bearbeitung → 08 Bauteilfertigung\nChemie: 09 Prozessanlage → 10 Reaktionsführung → 11 Reinigung und Trennung → 12 Werkstoffmischungen\nElektronik: 13 Elektronikmontage → 14 Platinenfertigung → 15 Halbleiterprozesse → 16 Chipherstellung\nDraw only these internal directional links: 01→02, 02→03, 03→04, 05→06, 06→07, 07→08, 09→10, 10→11, 11→12, 13→14, 14→15, 15→16.\nExternal cards (condense only if necessary): Bauteilfertigung: geeignete Metalle + Energie/Wärmeabfuhr; Werkstoffmischungen: Verbindungen + passendes Rezept; Chipherstellung: hochreine Stoffe + Prozessanlagen + Mira Stufe 2.\nInformation overlay: \"Werkstattreparatur\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.\nElectronics lane is an ambitious manufacturing preview: add small amber label 'Chapter-1-Grenze offen' near Chipherstellung. Keep all16nodes."
+      },
+      {
+        "slug": "logistik",
+        "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Lagerung und Logistik 0/12\". Node lanes:\nBestände: 01 Lagerregister → 02 Fundquarantäne → 03 Bestandsanalyse\nBehälter: 04 Feststoffcontainer | 05 Flüssigkeitstanks | 06 Gaslager\nTransport: 07 Transportaufträge → 08 Dockkoordination → 09 Routenprioritäten\nVersorgung: 10 Materialreservierung → 11 Nachschubregeln → 12 Versorgungsplanung\nDraw only these internal directional links: 01→02, 02→03, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): Transportaufträge: interne Helfer + zugängliche Wege; Gaslager: geeignete Werkstoffe + Dichtungen + Drucktechnik; Versorgungsplanung: Mira Analyse + bekannte Rezepte.\nInformation overlay: \"Fundquarantäne\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nIn Behälter lane the three container technologies are PARALLEL alternatives with NO links between them.\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed."
+      },
+      {
+        "slug": "lebenserhaltung",
+        "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Lebenserhaltung und Nahrung 0/12\". Node lanes:\nWasser: 01 Wasserqualität → 02 Wasseraufbereitung → 03 Wasserkreislauf\nAtmosphäre: 04 Luftüberwachung → 05 Sauerstoffversorgung → 06 CO2-Abscheidung\nHabitat: 07 Leckdiagnose → 08 Dichtungstausch → 09 Temperaturregelung\nNahrung: 10 Vorratsprüfung → 11 Syntheseanlage reparieren → 12 Nahrungsqualität\nDraw only these internal directional links: 01→02, 02→03, 04→05, 05→06, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): Sauerstoffversorgung: bekanntes Verfahren + Energie; Syntheseanlage: geborgene Teile + freigegebenes Verfahren; Spätere Kapitel: Pflanzen/Algen brauchen Samen; Bioreaktoren brauchen Kulturen.\nInformation overlay: \"Wasseraufbereitung\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nOnly for this life-support image, include TWO small muted future cards clearly labelled \"SPÄTER · Samen\" and \"SPÄTER · Kulturen\", not counted as research nodes.\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.\nIn external card for Syntheseanlage, add exact text 'Startbestand und Rezept offen'. Never imply that formaldehyde is food. Plants and microbes are future preview cards only."
+      },
+      {
+        "slug": "station",
+        "prompt": "Use case: ui-mockup / infographic-diagram. Create a polished high-resolution wide landscape 16:9 concept screenshot of SpaceMiner's research tree. German interface, navy almost-black background, precise flat thin cyan orthogonal wiring, restrained amber/gold active highlights, tiny offset square docking terminals at every edge. Consistent Mining Pulse game UI. Generous spacing, clean readable condensed sans-serif. Header contains tree title and progress counter. Square technology icons have illustrative technical line art, small ID digits in a corner, NO permanent name captions beside nodes. Use exactly the numbered nodes specified, grouped into horizontal lanes from left to right. At the bottom, a compact numbered German index gives all node names in lane order, 4 columns if needed. One hover/pinned information card bottom-right explains current level, prerequisites and next bonus, showing an amber partially filled square EXPERIENCE border on one node separate from node unlocked status. Thin cyan lines have distinct offset square input/output terminals; no node overlap, no crossing lines. Branch captions may label lanes. External prerequisites are small dashed amber cards at right margin, visibly linked/associated to applicable lane; NOT counted as nodes. Locked nodes subdued but legible. This is an illustrative proposal, not a final game save. Top subtitle exactly 'CHAPTER 1 · ENTWURF'. Bottom legend exactly 'Cyan: Voraussetzungen · Gelber Rand: Erfahrung'. Footer small 'Zähler: freigeschaltete Knoten · Startwissen bleibt erhalten'. No HUD scene, no decorative background scene, no logo, no watermark. Accurate text and node counts matter.\nTITLE: \"Stationsbau und Infrastruktur 0/12\". Node lanes:\nBestand: 01 Strukturdiagnose → 02 Hülle reparieren → 03 Anschlüsse instandsetzen\nAusbau: 04 Modulplanung → 05 Versorgungsanschluss → 06 Modulmontage\nHabitat: 07 Druckprüfung → 08 Wohnbereich erweitern → 09 Glasdom\nAusrichtung: 10 Lagekontrolle → 11 Panelhalterung reparieren → 12 Panelsteuerung\nDraw only these internal directional links: 01→02, 02→03, 04→05, 05→06, 07→08, 08→09, 10→11, 11→12.\nExternal cards (condense only if necessary): Modulmontage: Reparaturdrohne + Bauteile + Logistik; Glasdom: Glas + Tragwerk + Drucktechnik + Lebenserhaltung; Panelsteuerung: intakte Panels + Stelltechnik + Energie.\nInformation overlay: \"Hülle reparieren\" / \"Erfahrung bis zum nächsten Level\" / \"Bonus und Kosten: offen\".\nShow only THIS tree. Do not depict any unrelated research lanes or containers. Experience is an AMBER PARTIALLY FILLED SQUARE PERIMETER of the node (not a full gold frame with a linear bar). Selection can have a pale-cyan outline. No additional nodes beyond listed IDs. Draw no internal link unless explicitly listed.\nSmall note near Lagekontrolle: 'Ausrichtung · Reisen ab Chapter 2'. Small note near Glasdom: 'Neubau oder Reparatur: offen'. Panelsteuerung is MANUAL initially; avoid implying automatic solar tracking already unlocked."
+      }
+    ],
+    "miraEdit": "Edit this Mira research-tree screenshot precisely. Preserve the twelve technology nodes01 through12, their four research lanes, all proper links, header 'Mira 0/12', external prerequisites and German index. Remove ONLY the entire unrelated middle-bottom strip containing 'Behälter (Logistik)' with T1/T2/T3 icons and 'Lebenserhaltung' future cards. This is solely the Mira tree. Reclaim its space with slightly more generous vertical spacing and enlarge the bottom index/info panel. On node02 replace full gold frame + internal horizontal experience bar with a partially filled amber square perimeter about35%, with the rest of outline cyan; remove that small bar inside icon. Repeat the same partial perimeter appearance in its info-card icon; retain the separate experience text there. Keep all other content and navy/cyan/amber style. No extra nodes or lane.",
+    "overview": "Use case: ui-mockup. Create a polished high-resolution landscape 16:9 concept screenshot for SpaceMiner research entry screen, consistent with navy/black panels, thin cyan square outlines, subtle amber highlights and technical line icons of Mining Pulse settings style. Exact header \"FORSCHUNG\" and subtitle \"CHAPTER 1 · ENTWURF\". A generous clean grid of EXACTLY ELEVEN entry cards, three columns, four rows; last row has two centered cards. Each card has one large technical square icon at left, clear exact German title and large counter text on right, a short subtitle, a small chevron to suggest opening its separate tree, and a thin empty progress track. No research-tree graph within this image. Each card appears clickable. The Mira card is selected with subtle amber accents and a partially filled amber square icon perimeter, alongside its counter0/12: experience is separate from unlocked-count. Everything readable, no clipping. NO permanent extra categories, duplicate cards, random numerals or global total. Exact entries row-by-row: row1 \"Energie 0/12\" subtitle \"Solar · Speicher · Verteilung\"; \"Drohnen 0/16\" subtitle \"Abbau · Reparatur · Erkundung\"; \"Scanner 0/12\" subtitle \"Ortung · Kartierung · Analyse\". row2 \"Materialien 0/24\" subtitle \"Erkennen · Trennen · Aufbereiten\"; \"Verbindungen 0/21\" subtitle \"Chemie · Zwischenprodukte\"; \"Produktion 0/16\" subtitle \"Werkstatt · Fertigung · Chips\". row3 \"Logistik 0/12\" subtitle \"Lager · Transport · Nachschub\"; \"Lebenserhaltung 0/12\" subtitle \"Wasser · Luft · Nahrung\"; \"Stationsbau 0/12\" subtitle \"Reparatur · Module · Ausrichtung\". row4 \"Wiederverwertung 0/10\" subtitle \"Bergen · Zerlegen · Rückgewinnen\"; \"Mira 0/12\" subtitle \"Forschung · CPUs · Planung\". Footer explanation exact: \"0/12 = freigeschaltete Knoten / Vorschlagsumfang\" and \"Gelber Rand = Erfahrung · Startwissen bleibt erhalten\". Small note \"Beispielanzeige · Werte und Kapitelgrenzen offen\". All titles/counters must match precisely. Navy and cyan dominant, no scene background or characters, no watermark, no giant stylized empty decoration.",
+    "overviewEdit": "Edit this research overview with EXACTLY two local changes. 1) Replace the technical icon on the Produktion card (row2 column3) with a clean cyan line-art articulated robot arm assembling a gear on a fixed workbench. No conveyor belt, rollers or moving production belt; SpaceMiner transports material with drones. 2) Remove the tiny invented English slogan at the upper-right \"EXPLORE MINE BUILD A BRIGHTER TOMORROW\", leaving clean navy background. Preserve all eleven cards, all counters and German text exactly, layout, fonts, progress bars, Mira selection and header unchanged.",
+    "energyEdits": [
+      "Edit this earlier energy-tree diagram to correct ONLY the final supply-target prerequisites and clarify optional nodes. Preserve all twelve IDs, all node names, icon visuals, navy/cyan style, branches, external cards and information overlay. Node04 'Solarnachführung' and node09 'Abgestimmte Schnellladung' are OPTIONAL upgrades. Remove their outgoing cyan links into node12. Node12's incoming links must instead come from03 'Solarfläche erweitern',06 'Zusätzliche Speicher',08 'Lastmanagement' and11 'Wärmeabfuhr erweitern'. Add separate small square output/input docking terminals for each connection, route orthogonally with clear spacing and no overlap of nodes. Preserve03→04,08→09 and11→09, but04 and09 remain optional leaf improvements. Add a small amber 'optional' next to04 and09. Near12 add small readable 'Zielwerte offen' to clarify chapter target not fixed. Change no other text and introduce no new research nodes.",
+      "Precise local diagram edit. ERASE cyan connections leaving optional node04 and optional node09. Specifically delete the cyan wire from RIGHT edge of04 that travels right/down to node12; delete the cyan wire from BOTTOM edge of04 that travels down/right to node12; delete the cyan wire from RIGHT edge of09 that travels right/up to node12. These three wires and their three terminals on node12 must disappear completely, leaving clean background. DO NOT add any replacement connections. Keep04 and09 as optional LEAF nodes with inputs from their left. Preserve the two remaining wires to12 from06 (storage) and11 (heat). Do not change any other nodes, numbering, labels or artwork. Do not restore erased connections. This single correction removes optional prerequisites; all final goal conditions will be explained in accompanying text.",
+      "Make exactly one kind of change: remove the remaining outgoing goal wires from nodes06 and11. Erase the entire cyan cable that leaves node06 on the right and reaches node12, including terminal on12. Erase the entire cyan cable that leaves node11 on the right then runs right and turns upward to a dangling endpoint. Preserve all incoming links to06 and11. Node12 is now a STANDALONE milestone/goal preview with NO cables or input terminals. Keep all twelve technology icons, all numbering, all labels, optional annotations and the entire image otherwise unchanged. Beside12 add small readable text 'Anforderungen offen'. No new links."
+    ],
+    "olderPrompts": "Die früheren vollständigen Erstgenerierungsprompts von Energie/Wiederverwertung/Materialien/Verbindungen werden hier nicht rekonstruiert; vorhandene Textstruktur und ausgewählte PNGs übernommen."
+  }
+}

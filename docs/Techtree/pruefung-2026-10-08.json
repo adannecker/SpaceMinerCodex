@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-08",
+  "result": "PASS",
+  "scope": "Documentation, graph structure, local links and PNG files; no Unity build/gameplay tests",
+  "trees": [
+    {
+      "tree": "energie",
+      "nodes": 12,
+      "edges": 10,
+      "dag": true
+    },
+    {
+      "tree": "wiederverwertung",
+      "nodes": 10,
+      "edges": 9,
+      "dag": true
+    },
+    {
+      "tree": "materialien",
+      "nodes": 24,
+      "edges": 23,
+      "dag": true
+    },
+    {
+      "tree": "verbindungen",
+      "nodes": 21,
+      "edges": 21,
+      "dag": true
+    },
+    {
+      "tree": "mira",
+      "nodes": 12,
+      "edges": 8,
+      "dag": true
+    },
+    {
+      "tree": "drohnen",
+      "nodes": 16,
+      "edges": 12,
+      "dag": true
+    },
+    {
+      "tree": "scanner",
+      "nodes": 12,
+      "edges": 8,
+      "dag": true
+    },
+    {
+      "tree": "produktion",
+      "nodes": 16,
+      "edges": 12,
+      "dag": true
+    },
+    {
+      "tree": "logistik",
+      "nodes": 12,
+      "edges": 6,
+      "dag": true
+    },
+    {
+      "tree": "lebenserhaltung",
+      "nodes": 12,
+      "edges": 8,
+      "dag": true
+    },
+    {
+      "tree": "station",
+      "nodes": 12,
+      "edges": 8,
+      "dag": true
+    }
+  ],
+  "pngs": [
+    {
+      "file": "drohnen-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1622911,
+      "sha256": "8befa4782adee3de01c526b88f6dd8dd5087e19a1aee436ce2142a86c9ae3076"
+    },
+    {
+      "file": "energie-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1831321,
+      "sha256": "c09d97c67b0e1334b0003522004194a1bef4f1e4ab6e694bb06b6e1fc71ce898"
+    },
+    {
+      "file": "lebenserhaltung-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1496454,
+      "sha256": "566475fcc28c2c3a8efe757277e62dc233a144baa724e1a5ef9ecb47ca9a696e"
+    },
+    {
+      "file": "logistik-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1493280,
+      "sha256": "f2d93fd1d6c2742adef930d7cd4c533ffc4d2645e1846b3656c8b5005699fb9a"
+    },
+    {
+      "file": "materialien-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1821060,
+      "sha256": "1e59fe6d55fc37456b74c1d282c8c9a7d5246a147097201c87f8d0dde5a80c44"
+    },
+    {
+      "file": "mira-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1561514,
+      "sha256": "126213b26c83a9b945a8e4d9dceda0fde7e269c051e6b73553740df876756193"
+    },
+    {
+      "file": "produktion-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1600530,
+      "sha256": "623de17f5b8b458ee77dfe7adae1d49326a84e2bd76a29bc9406a20e12ca19fd"
+    },
+    {
+      "file": "scanner-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1475315,
+      "sha256": "cf0f3aaf8987e0cab67b1c01586ff42be76f92ef0a2fecd4ce26dcda5c3c554c"
+    },
+    {
+      "file": "station-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1577726,
+      "sha256": "282ebe748a0c1881564f282832c028fffc45d5b51d7d9782bbb43c3e3bcf0e7d"
+    },
+    {
+      "file": "uebersicht-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1587362,
+      "sha256": "acc6ee1a2b433c1cd528eea13bc2cd746e2aaed8de32b5a6737021c0a44853b2"
+    },
+    {
+      "file": "verbindungen-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1843212,
+      "sha256": "23f9895d9131c21ba3a3eb84fedd17b9e5017d635be83bc53cfba636d85f8d43"
+    },
+    {
+      "file": "wiederverwertung-2026-10-08.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1758528,
+      "sha256": "3318b35a259ebb41988cf8201844036dcec404ce46d9fbc74ccd33602035cfdb"
+    }
+  ],
+  "localLinksChecked": 51,
+  "imagesVisuallyReviewed": 12,
+  "limitations": [
+    "Raster deviations documented in README and JSON",
+    "No full cross-tree dependency catalog or physical process/energy/material validation"
+  ]
+}
