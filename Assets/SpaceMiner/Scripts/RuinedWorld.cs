@@ -49,8 +49,9 @@ namespace SpaceMiner
         readonly SpaceMinerUi planetUi=new SpaceMinerUi();
         int selectedPlanet=-1;Vector2 infoScroll;
         public int SelectedPlanet => selectedPlanet;
-        float NavigationY => 120*Mathf.Clamp(Mathf.Min(Screen.height/900f,Screen.width/1440f)*SettingsStore.Current.Interface.Scale,.35f,1.5f);
-        Rect InfoRect => new Rect((Screen.width-Mathf.Min(480,Screen.width-32))*.5f,NavigationY+40,Mathf.Min(480,Screen.width-32),Mathf.Min(370,Screen.height-NavigationY-60));
+        const float NavigationY = 112;
+        Rect NavigationRect => new Rect(UiLayout.Width*.5f-250,NavigationY,500,40);
+        Rect InfoRect => new Rect((UiLayout.Width-480)*.5f,218,480,Mathf.Min(370,UiLayout.Height-238));
         public void SelectPlanet(int index)
         {selectedPlanet=index>=0&&index<orbits.Length?index:-1;infoScroll=Vector2.zero;}
         public bool TrySelectPlanet(Vector3 screenPoint)
@@ -68,10 +69,10 @@ namespace SpaceMiner
         public bool OwnsScreenPoint(Vector3 mouse)
         {
             if(StartMenu.IsOpen||localCamera==null||!localCamera.GetComponent<OrbitCamera>().ShowHud)return false;
-            Vector2 point=new Vector2(mouse.x,Screen.height-mouse.y);
-            if(new Rect(Screen.width*.5f-195,NavigationY,390,28).Contains(point)||(selectedPlanet>=0&&InfoRect.Contains(point)))return true;
+            Vector2 point=UiLayout.Point(mouse);
+            if(NavigationRect.Contains(point)||(selectedPlanet>=0&&InfoRect.Contains(point)))return true;
             if(localCamera.GetComponent<OrbitCamera>().Distance>500000)
-                for(int i=0;i<orbits.Length;i++){Vector3 p=SkyCamera.WorldToScreenPoint(orbits[i].position);if(p.z>0&&new Rect(p.x-8,Screen.height-p.y-12,145,28).Contains(point))return true;}
+                for(int i=0;i<orbits.Length;i++){Vector3 p=SkyCamera.WorldToScreenPoint(orbits[i].position);Vector2 anchor=UiLayout.Point(p);if(p.z>0&&new Rect(anchor.x-8,anchor.y-12,145,28).Contains(point))return true;}
             return false;
         }
         void Start()
@@ -150,11 +151,12 @@ namespace SpaceMiner
             if(StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput || localCamera==null)return;
             if(StationInteriorMode.IsInside)return;
             var orbit=localCamera.GetComponent<OrbitCamera>();if(orbit==null||!orbit.ShowHud)return;
+            using var layout = new UiLayout.Scope(UiLayout.Scale());
             planetUi.Configure(SettingsStore.Current.Accessibility);
             bool telescope=orbit.IsCelestialView;
-            if(GUI.Button(new Rect(Screen.width*.5f-195,NavigationY,190,28),telescope?"Zur Station (R)":"Heimatwelt ansehen",planetUi.Button))
+            if(GUI.Button(new Rect(NavigationRect.x,NavigationY,245,40),telescope?"Zur Station (R)":"Heimatwelt ansehen",planetUi.Button))
             {if(telescope)orbit.ResetView();else orbit.LookAtCelestial(HomePosition-localCamera.transform.position/1000f,12);}
-            if(GUI.Button(new Rect(Screen.width*.5f+5,NavigationY,190,28),"Sonnensystem",planetUi.Button))orbit.SolarOverview(SunPosition,distances[8]+radii[8]);
+            if(GUI.Button(new Rect(NavigationRect.x+255,NavigationY,245,40),"Sonnensystem",planetUi.Button))orbit.SolarOverview(SunPosition,distances[8]+radii[8]);
             if(orbit.Distance>500000&&!orbit.IsCelestialView)
             {
                 LabelBody(SunPosition,"Hauptsonne");LabelBody(CompanionPosition,"Begleitsonne");
@@ -167,7 +169,8 @@ namespace SpaceMiner
             Vector3 p=SkyCamera.WorldToScreenPoint(orbits[index].position);if(p.z<=0||p.x<0||p.x>Screen.width||p.y<0||p.y>Screen.height)return;
             var style=new GUIStyle(GUI.skin.label);style.normal.textColor=index==3?SpaceMinerUi.Amber:SpaceMinerUi.Cyan;
             string name=PlanetLore.All[index].Name+(index==3?" · Heimat":"");
-            if(GUI.Button(new Rect(p.x-8,Screen.height-p.y-12,145,28),"● "+name,style)){SelectPlanet(index);SettingsUiAudio.Activate();}
+            Vector2 anchor=UiLayout.Point(p);
+            if(GUI.Button(new Rect(anchor.x-8,anchor.y-12,145,28),"● "+name,style)){SelectPlanet(index);SettingsUiAudio.Activate();}
         }
         void DrawPlanetInfo(OrbitCamera orbit)
         {
@@ -191,7 +194,7 @@ namespace SpaceMiner
         void LabelBody(Vector3 position,string label)
         {
             Vector3 point=SkyCamera.WorldToScreenPoint(position);if(point.z<=0||point.x<0||point.x>Screen.width||point.y<0||point.y>Screen.height)return;
-            float y=Screen.height-point.y;GUI.Label(new Rect(point.x-4,y-10,14,20),"●");GUI.Label(new Rect(point.x+7,y-9,130,24),label);
+            Vector2 anchor=UiLayout.Point(point);GUI.Label(new Rect(anchor.x-4,anchor.y-10,14,20),"●");GUI.Label(new Rect(anchor.x+7,anchor.y-9,130,24),label);
         }
         void Update()
         {

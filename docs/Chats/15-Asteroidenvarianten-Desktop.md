@@ -1,6 +1,6 @@
 # Asteroidenvarianten
 
-Chat-ID: `01a10dd1-fb99-7451-87bf-2d47afa4be7b`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
+Chat-ID: `01a10dd1-fb99-7451-87bf-2d47afa4be7b`. Exportstand: 2026-10-09T21:42:37.839915+00:00.
 
 Desktop-Fortsetzung: Asteroidenformen, Materialien, Generator und Darstellung; vorhandener Asteroidenchat umbenannt
 
@@ -136,3 +136,21 @@ Dieser Chat führt **Asteroidenvarianten** fort: Formen, Materialien, Generator,
 - Lokaler Stand: `main`, Commit `5cfd179`. Das Projekt verlangt Unity **6000.4.7f1**; lokal sind **6000.3.2f1** und **6000.6.4f1** vorhanden.
 
 Keine Dateien geändert oder neue Builds und Tests ausgeführt. Ich warte auf deinen nächsten Auftrag.
+
+## Assistent · 2026-10-09T18:09:01.335Z
+
+Ich lese das Kontextupdate vom 09.10. und die aktuellen Asteroiden-Fachdateien. Danach bestätige ich kurz den Stand und die offenen Punkte für diesen Chat.
+
+## Assistent · 2026-10-09T18:11:09.830Z
+
+Der aktuelle Projektstand ist eingelesen. Dieser Chat bleibt für **Asteroidenformen, Materialien, Generator, Bibliothek und Rendering** zuständig.
+
+Vorhanden sind drei erweiterbare Asteroidenfamilien mit vier LOD-Stufen; das aktive Feld umfasst 100 Körper.
+
+Offen bleiben insbesondere:
+
+- frei wählbarer Seed für die gesamte Asteroidenwolke samt Speicherung,
+- Oberflächenkartierung und Drohnen-Livebilder,
+- weitere Arten sowie Verbesserungen bei Nahdetails und Fernwirkung.
+
+Bei diesem Kontextabgleich habe ich keine Dateien geändert und keine Tests oder Builds ausgeführt.

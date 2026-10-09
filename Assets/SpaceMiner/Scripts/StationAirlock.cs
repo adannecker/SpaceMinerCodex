@@ -7,6 +7,32 @@ namespace SpaceMiner
     [DefaultExecutionOrder(100)]
     public sealed class StationAirlock : MonoBehaviour
     {
+        [System.Serializable] public sealed class SavedState
+        {
+            public AirlockPhase phase;
+            public bool towardsRing;
+            public float habitatOpen, ringOpen, equalizing;
+        }
+        public SavedState CaptureState() => new SavedState { phase=Phase, towardsRing=TowardsRing,
+            habitatOpen=progress[0], ringOpen=progress[1], equalizing=equalizing };
+        public static bool IsValid(SavedState state) => state != null && System.Enum.IsDefined(typeof(AirlockPhase), state.phase)
+            && state.habitatOpen>=0 && state.habitatOpen<=1 && state.ringOpen>=0 && state.ringOpen<=1
+            && !(state.habitatOpen>0 && state.ringOpen>0) && state.equalizing>=0 && state.equalizing<=1.3f
+            && (state.phase!=AirlockPhase.Idle && state.phase!=AirlockPhase.Equalizing || state.habitatOpen==0 && state.ringOpen==0);
+        public void RestoreState(SavedState state)
+        {
+            Phase=state.phase;TowardsRing=state.towardsRing;
+            progress[0]=state.habitatOpen;progress[1]=state.ringOpen;equalizing=state.equalizing;Apply();
+        }
+        public void RecoverLegacyOccupant(Vector3 feet)
+        {
+            ResetClosed();
+            Vector3 p=habitat.InverseTransformPoint(feet);
+            if(Mathf.Abs(p.x)>1.5f || p.z>HabitatDoorZ+.6f || p.z<RingDoorZ-.6f)return;
+            // Old version-1 saves did not retain doors. Let an occupant leave safely.
+            TowardsRing=true;
+            Phase=Mathf.Abs(p.z-HabitatDoorZ)<.85f ? AirlockPhase.OpeningEntry : AirlockPhase.OpeningExit;
+        }
         public const float HabitatDoorZ = -5.1f, RingDoorZ = -10.6f;
         public AirlockPhase Phase { get; private set; }
         public float HabitatOpen => progress[0];
@@ -82,7 +108,7 @@ namespace SpaceMiner
                     if (progress[Entry] == 0) { equalizing = 0; Phase = AirlockPhase.Equalizing; }
                     break;
                 case AirlockPhase.Equalizing:
-                    equalizing += seconds;
+                    equalizing = Mathf.Min(1.2f, equalizing + seconds);
                     if (equalizing >= 1.2f) Phase = AirlockPhase.OpeningExit;
                     break;
                 case AirlockPhase.OpeningExit:

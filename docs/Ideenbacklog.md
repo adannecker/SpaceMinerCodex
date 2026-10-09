@@ -10,6 +10,8 @@ Eine spätere Ausbaustufe ermöglicht den Austausch der Drohnenbatterie an einer
 
 ### Drohnen für bestimmte Aufgaben
 
+Chapter-1-Abgrenzung vom 08.10.2026: vier Arten, nämlich Abbau, Bau/Reparatur und Erkundung außen sowie eine kleine Helferdrohne innen. Gemeint sind Arten, nicht vier einzelne Fahrzeuge; Anzahl offen. Ein Drohnen-Technologiebaum soll Zweige für jede Art erhalten. Mira erforscht den Rollenumbau mit zusätzlichem Energiebedarf; die aktivierte interne Helferdrohne baut im Dock um. Aktivierung und genaue technische Grenzen der Umbaubarkeit bleiben offen. Weitere Arten, darunter die folgende ältere separate Schrottsammelrolle, sind für spätere Kapitel vorgemerkt. Zielbild: [Spielidee](Spielidee.md#chapter-1-drohnen-mira-forschung-und-ausbauziele-08102026).
+
 Vorhandene Drohnen werden für ihren Einsatzzweck umgebaut:
 
 - Reparaturdrohnen führen Reparaturaufträge aus.
@@ -111,9 +113,9 @@ Vorgemerkt auf Wunsch des Nutzers: Eine später frei wählbare Seed definiert re
 
 ## Nächste Implementierungen: Rückmeldung zum Stationsstart (08.10.2026)
 
-Status: vom Nutzer vorgemerkt, in diesem Schritt nur dokumentiert.
+Status: Alle vier Punkte am 08.10.2026 auf diesem Desktop umgesetzt und technisch geprüft; subjektive Hörfreigabe der neuen Stationssounds und zusätzliche native Regler-Klickprüfung noch offen. Details und Prüfgrenzen: [Scanner und Spielstände](Scanner-und-Spielstaende.md).
 
-1. **Beenden aus dem laufenden Spiel reparieren.** Nutzer meldet, dass Beenden nicht funktioniert. Innenansicht, geöffnetes Pult und VR prüfen; der Beenden-/Speicherablauf muss erreichbar sein und nach der Auswahl tatsächlich abgeschlossen werden. Ursache noch nicht untersucht.
-2. **Innenraumposition zuverlässig speichern und wiederherstellen.** Die Positionsspeicherung ist bereits eingebaut, wird nach der Rückmeldung aber als offene Fehlerprüfung geführt. Manuelles Speichern, Autosave und Laden müssen die zuletzt gespeicherte Position im Wohnmodul, in der Schleuse und im Stationsring erhalten. Kein unbeabsichtigter Rücksprung zum Startpunkt; Blickrichtung beim Wiederherstellen berücksichtigen.
-3. **Unterschiedliche Interaktionssounds.** Eigene hörbare Rückmeldungen unter anderem für Öffnen/Schliessen der Schleusentüren und Aktivieren des VR-HUDs. Weitere Interaktionen bei der Umsetzung ergänzen; vorhandene Effektlautstärke berücksichtigen.
-4. **UI an Auflösung anpassen und UI-Skalierung anbieten.** Bei hoher Auflösung sollen Texte und Bedienelemente relativ zum Bildschirm kleiner erscheinen können, statt automatisch proportional mitzuwachsen. Eine einstellbare UI-Skalierung in der Konfiguration vorsehen. Questanzeige, Mira-Dialog, Pult und HUD gemeinsam berücksichtigen; Text darf nicht abgeschnitten werden. Konkrete Standardwerte und Skalierungsgrenzen noch festlegen.
+1. **Beenden aus dem laufenden Spiel reparieren — umgesetzt.** Menüanbindung an die vorhandene Speicherinstanz korrigiert; aktive Sitzung wird beim Verlassen beendet. Speicherabfrage, Abbrechen und Verlassen aus Innenansicht, Pult und VR geprüft; echte Windows-Bedienung einschließlich Alt+F4 bestanden.
+2. **Innenraumposition zuverlässig speichern und wiederherstellen — umgesetzt.** Manuelle Saves und Autosaves erhalten Position, Blickrichtung und Schleusenphase im Wohnmodul, an beiden bewegten Türen, beim Druckausgleich und im Ring. Laden der Dateien in einem zweiten Player-Prozess sowie Fortsetzung laufender Drohnenaufträge bestanden. Alte v1-Spielstände bleiben lesbar. Lokaler Prüfeditor: 6000.6.4f1; neuer Stand mit Projekteditor 6000.4.7f1 noch ungeprüft.
+3. **Unterschiedliche Interaktionssounds — umgesetzt.** Türmotoren für Öffnen/Schliessen, Dichtungsanschlag, Druckausgleich, Pult, VR und Scanbestätigung plus leise Innenambience. Master/Effects, Live-Mute und Cancel angebunden. Technische Prüfung bestanden, subjektive Hörfreigabe offen. Details: [Audio](Audio.md).
+4. **UI an Auflösung anpassen und UI-Skalierung anbieten — umgesetzt.** Interface-Regler 75–150 Prozent, Standard 100, live mit Apply/Cancel; Quest, Mira, Pult und Menüs/HUD gemeinsam angebunden. Hohe Auflösungen bleiben kompakt, kleine Fenster passen die UI ein. 32 Player-Bilder mit vergrösserter Schrift und skalierte Trefferflächen geprüft; native Zusatzprüfung wegen Windows-Sperre offen. Details: [Settings](Settings.md).

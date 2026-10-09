@@ -1,0 +1,133 @@
+{
+  "date": "2026-10-09",
+  "recordedAt": "2026-10-09T23:18:09.0560813+02:00",
+  "scope": "Replace legacy in-game technology UI in all builds; fixed right details sidebar, dim unavailable nodes, configurable shortcut and shared Mira visor for dialogue, awakening and memory cinematics.",
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "sourceVersionUnchanged": true,
+  "buildProject": "Builds/LocalPreview-6000.6.4f1",
+  "buildMethod": "SpaceMiner.Editor.ResearchSimulationValidation.BuildGameAndDemo",
+  "buildLog": "Logs/unified-ui-build-final-20261009.log",
+  "buildExitCode": 0,
+  "builds": [
+    "Development",
+    "Release",
+    "Dedicated TechTreeDemo"
+  ],
+  "editorValidation": [
+    "159 entries / 11 trees, dependencies and reachability",
+    "Compact viewport geometry, unique atlas crops",
+    "Settings validation and 10-to-11 custom key binding migration",
+    "Mira visor layout and portrait resource"
+  ],
+  "deployment": [
+    {
+      "path": "Builds\\Windows",
+      "backup": "Builds\\Windows-before-visor-20261009-231525",
+      "filesSHA256": 249,
+      "assemblySHA256": "632D396684B7284EB903608B5DA71989DC66DE5E6CEF4CCBFDD537ABAAE1C3F5"
+    },
+    {
+      "path": "Builds\\WindowsRelease",
+      "backup": "Builds\\WindowsRelease-before-visor-20261009-231525",
+      "filesSHA256": 156,
+      "assemblySHA256": "97407436D9EE28B226784B08AD52E06FD70ED85E81B7590EF33FDA82F00ED058"
+    },
+    {
+      "path": "Builds\\TechTreeDemo",
+      "backup": "Builds\\TechTreeDemo-before-visor-20261009-231525",
+      "filesSHA256": 247,
+      "assemblySHA256": "DB137255E2ECC9A2FDEAB27CBEACDA28BED543A7A83E18854ACB28838934DAAA"
+    }
+  ],
+  "playerChecks": [
+    {
+      "name": "Presentation 1600x1000",
+      "log": "Logs/unified-ui-final-presentation-1600.log",
+      "passedMarker": "UNIFIED PRESENTATION CHECK PASSED",
+      "checks": 28,
+      "exitCode": 0
+    },
+    {
+      "name": "Presentation 1280x800",
+      "log": "Logs/unified-ui-final-presentation-1280.log",
+      "passedMarker": "UNIFIED PRESENTATION CHECK PASSED",
+      "checks": 28,
+      "exitCode": 0
+    },
+    {
+      "name": "Techtree menu",
+      "log": "Logs/unified-ui-regression-techTreeCheck.log",
+      "passedMarker": "TECHTREE MENU CHECK PASSED",
+      "checks": 0,
+      "exitCode": 0
+    },
+    {
+      "name": "Research laboratory",
+      "log": "Logs/unified-ui-regression-researchLabCheck.log",
+      "passedMarker": "RESEARCH LABORATORY PLAYER CHECK PASSED",
+      "checks": 0,
+      "exitCode": 0
+    },
+    {
+      "name": "Water mining",
+      "log": "Logs/unified-ui-regression-miningBalanceCheck.log",
+      "passedMarker": "MINING BALANCE CHECK PASSED",
+      "checks": 194,
+      "exitCode": 0
+    },
+    {
+      "name": "Scan and save",
+      "log": "Logs/unified-ui-regression-scanSaveCheck.log",
+      "passedMarker": "SCAN AND SAVE CHECK PASSED",
+      "checks": 39,
+      "exitCode": 0
+    },
+    {
+      "name": "Station UI and audio",
+      "log": "Logs/unified-ui-regression-stationUiAudioCheck.log",
+      "passedMarker": "STATION UI/AUDIO CHECK PASSED",
+      "checks": 97,
+      "exitCode": 0
+    },
+    {
+      "name": "Complete memory cinematic",
+      "log": "Logs/unified-ui-regression-memoryCinematicCheck.log",
+      "passedMarker": "MEMORY CINEMATIC CHECK PASSED",
+      "checks": 0,
+      "exitCode": 0
+    },
+    {
+      "name": "Deployed dedicated demo",
+      "log": "Logs/unified-ui-deployed-demo-check.log",
+      "passedMarker": "TECHTREE GAME PRESENTATION CHECK PASSED",
+      "checks": 0,
+      "exitCode": 0
+    }
+  ],
+  "nodeTests": {
+    "command": "node --test prototypes/techtree-viewer/test/*.test.mjs",
+    "passed": 14,
+    "failed": 0
+  },
+  "visualReview": [
+    "Logs/Presentation-1600x1000/sidebar-water-large.png",
+    "Logs/Presentation-1280x800/sidebar-locked.png",
+    "Logs/Presentation-1600x1000/mira-awakening.png",
+    "Logs/Presentation-1280x800/mira-quest-large.png",
+    "Logs/Presentation-1600x1000/mira-memory.png"
+  ],
+  "repairs": [
+    "Initial build duplicate local variable in SettingsValidation renamed before successful rebuild.",
+    "Initial presentation fixture tried memory replay outside start menu; corrected to the regular menu route and isolated test settings/saves. Both final viewport runs passed."
+  ],
+  "limits": [
+    "Research conditions, costs, hardware and balance remain an independent provisional model; real water mining knowledge remains connected.",
+    "Release compiled successfully; automated presentation checks ran in Development and dedicated demo.",
+    "Physical keyboard input and subjective listening were not reviewed.",
+    "No new audio, story scripts or cinematic art; existing exported video unchanged.",
+    "Builds, backups and screenshots are local and not delivered by Git.",
+    "Source Unity 6000.4.7f1 unavailable here; no migration of the source project.",
+    "Shared MainDev changes preserved; no commit or push in this task."
+  ]
+}

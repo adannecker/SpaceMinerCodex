@@ -17,12 +17,24 @@ namespace SpaceMiner
         public StationAirlock Airlock => Layout != null ? Layout.Airlock : null;
         public bool ConsoleOpen => consoleOpen;
         public bool NearConsole => inside && Layout != null && Vector3.Distance(FeetPosition, Layout.Console.position) <= 2.4f;
-        public void RestoreInterior(Vector3 feet, bool console) { Enter(true); if (!inside) return; walker.enabled=false; walker.transform.position=feet; walker.enabled=true; consoleOpen=console && NearConsole; UpdateCursor(); }
+        public float ViewYaw => yaw;
+        public float ViewPitch => pitch;
+        public void RestoreInterior(Vector3 feet, bool console, float? savedYaw=null, float? savedPitch=null)
+        {
+            Enter(true); if (!inside) return;
+            walker.enabled=false; walker.transform.position=feet; walker.enabled=true;
+            verticalSpeed=0;
+            if(savedYaw.HasValue)yaw=savedYaw.Value;
+            if(savedPitch.HasValue)pitch=Mathf.Clamp(savedPitch.Value,-80,80);
+            consoleOpen=console && NearConsole;
+            ApplyView();UpdateCursor();
+        }
         private OrbitCamera orbit;
         private Camera view;
         private CharacterController walker;
         private bool inside, captureMouse;
         private bool consoleOpen;
+        private bool hasInteriorPose;
         private WaterScenario scenario;
         private AsteroidResource consoleSource;
         private Vector2 consoleScroll;
@@ -31,7 +43,7 @@ namespace SpaceMiner
         private CursorLockMode outsideCursorLock;
         private bool outsideCursorVisible;
         private readonly SpaceMinerUi ui = new SpaceMinerUi();
-        private static Rect SwitchRect => new Rect(Screen.width * .5f - 120, Screen.height - 48, 240, 32);
+        private static Rect SwitchRect => new Rect(UiLayout.Width * .5f - 120, UiLayout.Height - 48, 240, 32);
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void Install()
@@ -46,7 +58,11 @@ namespace SpaceMiner
             if (camera != null && camera.GetComponent<StationInteriorMode>() == null)
                 camera.gameObject.AddComponent<StationInteriorMode>();
         }
-        private void Awake() { Current = this; orbit = GetComponent<OrbitCamera>(); view = GetComponent<Camera>(); }
+        private void Awake()
+        {
+            Current = this; orbit = GetComponent<OrbitCamera>(); view = GetComponent<Camera>();
+            if (GetComponent<StationInteractionAudio>() == null) gameObject.AddComponent<StationInteractionAudio>();
+        }
         private void Start() => BuildRoom();
 
         private void BuildRoom()
@@ -73,18 +89,24 @@ namespace SpaceMiner
             BuildRoom();
             if (Room == null || walker == null) return false;
             outsideFov = view.fieldOfView; outsideCursorLock = Cursor.lockState; outsideCursorVisible = Cursor.visible;
-            walker.transform.position = Room.TransformPoint(new Vector3(0, .05f, -2.5f));
+            if (duringIntro || !hasInteriorPose)
+            {
+                walker.transform.position = Room.TransformPoint(new Vector3(0, .05f, -2.5f));
+                Airlock.ResetClosed();
+                yaw = Room.eulerAngles.y; pitch = 0;
+            }
             walker.enabled = true;
-            Airlock.ResetClosed();
-            yaw = Room.eulerAngles.y; pitch = 0; verticalSpeed = 0;
+            hasInteriorPose = true; verticalSpeed = 0;
             inside = true; captureMouse = true; orbit.enabled = false;
+            if (!duringIntro) StationInteractionAudio.Play(StationSound.VrOff);
             ApplyView(); UpdateCursor();
             return true;
         }
-        public void Exit()
+        public void Exit(bool silent = false)
         {
             if (!inside) return;
-            consoleOpen = false; Airlock.ResetClosed();
+            if (!silent) StationInteractionAudio.Play(StationSound.VrOn);
+            consoleOpen = false;
             inside = false; walker.enabled = false; orbit.enabled = true;
             view.fieldOfView = outsideFov; orbit.RestoreViewPose();
             Cursor.lockState = outsideCursorLock; Cursor.visible = outsideCursorVisible;
@@ -105,16 +127,17 @@ namespace SpaceMiner
         {
             if (!inside || consoleOpen || SettingsMenu.BlocksInput || Vector3.Distance(FeetPosition, Layout.Console.position) > 2.4f) return false;
             consoleOpen = true; consoleScroll = Vector2.zero;
+            StationInteractionAudio.Play(StationSound.ConsoleOpen);
             foreach (var source in scenario.Asteroids) if (source.CanMineWater) { consoleSource = source; break; }
             UpdateCursor(); return true;
         }
-        public void CloseConsole() { consoleOpen = false; UpdateCursor(); }
+        public void CloseConsole() { if (consoleOpen) StationInteractionAudio.Play(StationSound.ConsoleClose); consoleOpen = false; UpdateCursor(); }
         public bool AcceptWaterOrder(AsteroidResource source) => inside && consoleOpen && !SettingsMenu.BlocksInput && scenario.AssignTankOrder(source);
         private bool Near(Transform target, float distance) => target != null && Vector3.Distance(FeetPosition, target.position) < distance;
         private void Update()
         {
             if (StartMenu.IsOpen || MemoryCinematic.IsPlaying)
-            { if (inside) Exit(); return; }
+            { if (inside) Exit(true); return; }
             if (IntroSequence.BlocksGameplay) return;
             if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.V)) { if (inside) Exit(); else Enter(); }
             if (!inside) return;
@@ -155,30 +178,38 @@ namespace SpaceMiner
             if (Cursor.lockState != state) { Cursor.lockState = state; cursorChangedFrame = Time.frameCount; }
             if (Cursor.visible == locked) Cursor.visible = !locked;
         }
-        public static bool OwnsScreenPoint(Vector3 mouse) => !StartMenu.IsOpen && SwitchRect.Contains(new Vector2(mouse.x, Screen.height - mouse.y));
+        public static bool OwnsScreenPoint(Vector3 mouse) => !StartMenu.IsOpen && SwitchRect.Contains(UiLayout.Point(mouse));
         private void OnGUI()
         {
-            if (StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput || MemoryCinematic.IsPlaying) return;
+            if (StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput || MemoryCinematic.IsPlaying || scenario.Scanner.Dialogue != null) return;
+            using var layout = new UiLayout.Scope(UiLayout.Scale());
             ui.Configure(SettingsStore.Current.Accessibility);
             if (GUI.Button(SwitchRect, inside ? "Station verlassen  [V]" : "Station betreten  [V]", ui.Button)) { if (inside) Exit(); else Enter(); }
             if (!inside) return;
-            ui.Panel(new Rect(18, Screen.height - 116, Mathf.Min(600, Screen.width - 36), 56));
-            GUI.Label(new Rect(30, Screen.height - 108, Screen.width - 60, 44), "INNENANSICHT  ·  Wohnmodul / Schleuse / Stationsring\nWASD + Maus  ·  E Interaktion  ·  Tab Maus freigeben  ·  V Außenansicht", ui.Small);
+            const string hints = "INNENANSICHT  ·  Wohnmodul / Schleuse / Stationsring\nWASD + Maus  ·  E Interaktion  ·  Tab Maus freigeben  ·  V Außenansicht";
+            float hintWidth = Mathf.Min(660, UiLayout.Width - 36);
+            float hintHeight = ui.Small.CalcHeight(new GUIContent(hints), hintWidth - 24) + 16;
+            float hintTop = UiLayout.Height - 66 - hintHeight;
+            if (SettingsStore.Current.Gameplay.ShowControlHints)
+            {
+                ui.Panel(new Rect(18, hintTop, hintWidth, hintHeight));
+                GUI.Label(new Rect(30, hintTop + 8, hintWidth - 24, hintHeight - 16), hints, ui.Small);
+            }
             string prompt = Near(Layout.Console, 2.4f) ? "E  Stationspult bedienen"
                 : Airlock.CanRequest(FeetPosition) ? "E  Schleusendurchgang starten"
                 : Near(Layout.RepairDrone, 1.7f) ? "R-01  ·  Reparaturdrohne ausgeschaltet" : "";
             Vector3 local = Room.InverseTransformPoint(FeetPosition);
             if (local.z < -3.1f && local.z > -12.4f && Mathf.Abs(local.x) < 1.5f && Airlock.Phase != AirlockPhase.Idle) prompt = Airlock.Status;
-            if (!string.IsNullOrEmpty(prompt)) GUI.Label(new Rect(Screen.width * .5f - 230, Screen.height - 164, 460, 40), prompt, ui.Text);
-            if (Cursor.lockState == CursorLockMode.Locked) GUI.Label(new Rect(Screen.width / 2f - 5, Screen.height / 2f - 10, 20, 20), "+", ui.Small);
+            if (!string.IsNullOrEmpty(prompt)) GUI.Label(new Rect(UiLayout.Width * .5f - 260, hintTop - 52, 520, 48), prompt, ui.Text);
+            if (Cursor.lockState == CursorLockMode.Locked) GUI.Label(new Rect(UiLayout.Width / 2f - 5, UiLayout.Height / 2f - 10, 20, 20), "+", ui.Small);
             if (consoleOpen) DrawConsole();
         }
         private void DrawConsole()
         {
             int depth = GUI.depth; GUI.depth = -30;
-            float width = Mathf.Min(820, Screen.width - 32), height = Mathf.Min(650, Screen.height - 32);
-            Rect panel = new Rect((Screen.width - width) * .5f, (Screen.height - height) * .5f, width, height);
-            SpaceMinerUi.Fill(new Rect(0, 0, Screen.width, Screen.height), new Color(0, .01f, .02f, .65f)); ui.Panel(panel);
+            float width = Mathf.Min(820, UiLayout.Width - 32), height = Mathf.Min(650, UiLayout.Height - 32);
+            Rect panel = new Rect((UiLayout.Width - width) * .5f, (UiLayout.Height - height) * .5f, width, height);
+            SpaceMinerUi.Fill(new Rect(0, 0, UiLayout.Width, UiLayout.Height), new Color(0, .01f, .02f, .65f)); ui.Panel(panel);
             GUILayout.BeginArea(new Rect(panel.x + 24, panel.y + 20, width - 48, height - 40));
             consoleScroll = GUILayout.BeginScrollView(consoleScroll);
             GUILayout.Label("STATIONSPULT  /  SCANNER & AUFTRÄGE", ui.Heading);
@@ -190,10 +221,8 @@ namespace SpaceMiner
             GUILayout.Label("Stationstank: " + scenario.WaterLiters.ToString("F1") + " / " + scenario.TankCapacityLiters.ToString("F0") + " L\nDrohne 01: " + scenario.Worker.Status, ui.Text);
             GUILayout.Space(12); GUILayout.Label("VERSORGUNGSAUFTRAG: WASSER SICHERN", ui.Text);
             GUILayout.Label(scenario.QuestComplete ? "Auftrag erfüllt: Tank voll." : "Eine bestätigte Eisquelle zuweisen und den Stationstank mit der Bergbaudrohne befüllen.", ui.Small);
-            GUILayout.BeginHorizontal();
             foreach (var source in scenario.Asteroids)
                 if (source.WaterIdentified && GUILayout.Button(source.Info.DisplayName, consoleSource == source ? ui.Primary : ui.Button)) consoleSource = source;
-            GUILayout.EndHorizontal();
             if (consoleSource != null) GUILayout.Label("Quelle: " + consoleSource.Info.DisplayName + "  ·  Wasseranteil " + (consoleSource.WaterFraction * 100).ToString("F0") + "%", ui.Small);
             bool previousEnabled = GUI.enabled;
             GUI.enabled = previousEnabled && consoleSource != null && consoleSource.CanMineWater && scenario.Worker.IsReady && !scenario.QuestComplete;

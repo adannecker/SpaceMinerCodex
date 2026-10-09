@@ -17,7 +17,7 @@ namespace SpaceMiner
         private readonly List<Rect> markers = new List<Rect>();
         private readonly List<AsteroidResource> knownSources = new List<AsteroidResource>();
         private static readonly Color Cyan = new Color(0.35f, 0.85f, 0.95f);
-        private float Scale => Mathf.Clamp(Mathf.Min(Screen.height / 900f, Screen.width / 1440f) * SettingsStore.Current.Interface.Scale, 0.35f, 1.5f);
+        private float Scale => UiLayout.Scale();
         private float Width => Screen.width / Scale;
         private float Height => Screen.height / Scale;
         private Rect LeftTop => new Rect(18, 18, 310, 192);

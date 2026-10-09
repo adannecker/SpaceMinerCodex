@@ -8,7 +8,13 @@
       "rows": 6,
       "column": 0,
       "row": 0,
-      "name": "Vorhandene Technik"
+      "name": "Vorhandene Technik",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 9,
+      "cropY": 16,
+      "cropWidth": 132,
+      "cropHeight": 126
     },
     "energie-02": {
       "file": "assets/realistic-v3-1.png",
@@ -16,7 +22,13 @@
       "rows": 6,
       "column": 1,
       "row": 0,
-      "name": "Solarflächen reparieren"
+      "name": "Solarflächen reparieren",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 166,
+      "cropY": 11,
+      "cropWidth": 123,
+      "cropHeight": 135
     },
     "energie-03": {
       "file": "assets/realistic-v3-1.png",
@@ -24,7 +36,13 @@
       "rows": 6,
       "column": 2,
       "row": 0,
-      "name": "Solarfläche erweitern"
+      "name": "Solarfläche erweitern",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 309,
+      "cropY": 22,
+      "cropWidth": 152,
+      "cropHeight": 125
     },
     "energie-04": {
       "file": "assets/realistic-v3-1.png",
@@ -32,7 +50,13 @@
       "rows": 6,
       "column": 3,
       "row": 0,
-      "name": "Solarnachführung"
+      "name": "Solarnachführung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 492,
+      "cropY": 10,
+      "cropWidth": 101,
+      "cropHeight": 139
     },
     "energie-05": {
       "file": "assets/realistic-v3-1.png",
@@ -40,7 +64,13 @@
       "rows": 6,
       "column": 4,
       "row": 0,
-      "name": "Speicher wiederherstellen"
+      "name": "Speicher wiederherstellen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 624,
+      "cropY": 21,
+      "cropWidth": 134,
+      "cropHeight": 124
     },
     "energie-06": {
       "file": "assets/realistic-v3-1.png",
@@ -48,7 +78,13 @@
       "rows": 6,
       "column": 5,
       "row": 0,
-      "name": "Zusätzliche Speicher"
+      "name": "Zusätzliche Speicher",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 788,
+      "cropY": 12,
+      "cropWidth": 116,
+      "cropHeight": 135
     },
     "energie-07": {
       "file": "assets/realistic-v3-1.png",
@@ -56,7 +92,13 @@
       "rows": 6,
       "column": 6,
       "row": 0,
-      "name": "Stromverteilung reparieren"
+      "name": "Stromverteilung reparieren",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 935,
+      "cropY": 18,
+      "cropWidth": 130,
+      "cropHeight": 126
     },
     "energie-08": {
       "file": "assets/realistic-v3-1.png",
@@ -64,7 +106,13 @@
       "rows": 6,
       "column": 7,
       "row": 0,
-      "name": "Lastmanagement"
+      "name": "Lastmanagement",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1094,
+      "cropY": 23,
+      "cropWidth": 125,
+      "cropHeight": 122
     },
     "energie-09": {
       "file": "assets/realistic-v3-1.png",
@@ -72,7 +120,13 @@
       "rows": 6,
       "column": 8,
       "row": 0,
-      "name": "Abgestimmte Schnellladung"
+      "name": "Abgestimmte Schnellladung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1245,
+      "cropY": 29,
+      "cropWidth": 122,
+      "cropHeight": 113
     },
     "energie-10": {
       "file": "assets/realistic-v3-1.png",
@@ -80,7 +134,13 @@
       "rows": 6,
       "column": 9,
       "row": 0,
-      "name": "Kühlkreislauf reparieren"
+      "name": "Kühlkreislauf reparieren",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1388,
+      "cropY": 12,
+      "cropWidth": 140,
+      "cropHeight": 135
     },
     "energie-11": {
       "file": "assets/realistic-v3-1.png",
@@ -88,7 +148,13 @@
       "rows": 6,
       "column": 0,
       "row": 1,
-      "name": "Wärmeabfuhr erweitern"
+      "name": "Wärmeabfuhr erweitern",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 7,
+      "cropY": 168,
+      "cropWidth": 135,
+      "cropHeight": 134
     },
     "energie-12": {
       "file": "assets/realistic-v3-1.png",
@@ -96,7 +162,13 @@
       "rows": 6,
       "column": 1,
       "row": 1,
-      "name": "Tragfähige Stationsversorgung"
+      "name": "Tragfähige Stationsversorgung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 165,
+      "cropY": 170,
+      "cropWidth": 128,
+      "cropHeight": 136
     },
     "wiederverwertung-01": {
       "file": "assets/realistic-v3-1.png",
@@ -104,7 +176,13 @@
       "rows": 6,
       "column": 2,
       "row": 1,
-      "name": "Trümmerbewertung"
+      "name": "Trümmerbewertung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 307,
+      "cropY": 174,
+      "cropWidth": 149,
+      "cropHeight": 131
     },
     "wiederverwertung-02": {
       "file": "assets/realistic-v3-1.png",
@@ -112,7 +190,13 @@
       "rows": 6,
       "column": 3,
       "row": 1,
-      "name": "Gezielte Bergung"
+      "name": "Gezielte Bergung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 473,
+      "cropY": 166,
+      "cropWidth": 134,
+      "cropHeight": 129
     },
     "wiederverwertung-03": {
       "file": "assets/realistic-v3-1.png",
@@ -120,7 +204,13 @@
       "rows": 6,
       "column": 4,
       "row": 1,
-      "name": "Bauteildiagnose"
+      "name": "Bauteildiagnose",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 630,
+      "cropY": 174,
+      "cropWidth": 127,
+      "cropHeight": 120
     },
     "wiederverwertung-04": {
       "file": "assets/realistic-v3-1.png",
@@ -128,7 +218,13 @@
       "rows": 6,
       "column": 5,
       "row": 1,
-      "name": "Aufarbeitung"
+      "name": "Aufarbeitung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 786,
+      "cropY": 166,
+      "cropWidth": 122,
+      "cropHeight": 139
     },
     "wiederverwertung-05": {
       "file": "assets/realistic-v3-1.png",
@@ -136,7 +232,13 @@
       "rows": 6,
       "column": 6,
       "row": 1,
-      "name": "Wiederverwendung"
+      "name": "Wiederverwendung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 938,
+      "cropY": 165,
+      "cropWidth": 121,
+      "cropHeight": 142
     },
     "wiederverwertung-06": {
       "file": "assets/realistic-v3-1.png",
@@ -144,7 +246,13 @@
       "rows": 6,
       "column": 7,
       "row": 1,
-      "name": "Präzisionsdemontage"
+      "name": "Präzisionsdemontage",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1090,
+      "cropY": 174,
+      "cropWidth": 125,
+      "cropHeight": 128
     },
     "wiederverwertung-07": {
       "file": "assets/realistic-v3-1.png",
@@ -152,7 +260,13 @@
       "rows": 6,
       "column": 8,
       "row": 1,
-      "name": "Einzelteilprüfung"
+      "name": "Einzelteilprüfung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1234,
+      "cropY": 167,
+      "cropWidth": 136,
+      "cropHeight": 139
     },
     "wiederverwertung-08": {
       "file": "assets/realistic-v3-1.png",
@@ -160,7 +274,13 @@
       "rows": 6,
       "column": 9,
       "row": 1,
-      "name": "Materialsortierung"
+      "name": "Materialsortierung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1394,
+      "cropY": 173,
+      "cropWidth": 131,
+      "cropHeight": 136
     },
     "wiederverwertung-09": {
       "file": "assets/realistic-v3-1.png",
@@ -168,7 +288,13 @@
       "rows": 6,
       "column": 0,
       "row": 2,
-      "name": "Stoffgerechte Rückgewinnung"
+      "name": "Stoffgerechte Rückgewinnung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 13,
+      "cropY": 327,
+      "cropWidth": 130,
+      "cropHeight": 140
     },
     "wiederverwertung-10": {
       "file": "assets/realistic-v3-1.png",
@@ -176,7 +302,13 @@
       "rows": 6,
       "column": 1,
       "row": 2,
-      "name": "Qualitätsprüfung"
+      "name": "Qualitätsprüfung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 171,
+      "cropY": 327,
+      "cropWidth": 114,
+      "cropHeight": 143
     },
     "materialien-01": {
       "file": "assets/realistic-v3-1.png",
@@ -184,7 +316,13 @@
       "rows": 6,
       "column": 2,
       "row": 2,
-      "name": "Probenanalyse"
+      "name": "Probenanalyse",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 307,
+      "cropY": 335,
+      "cropWidth": 154,
+      "cropHeight": 135
     },
     "materialien-02": {
       "file": "assets/realistic-v3-1.png",
@@ -192,7 +330,13 @@
       "rows": 6,
       "column": 3,
       "row": 2,
-      "name": "Wasseraufbereitung"
+      "name": "Wasseraufbereitung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 461,
+      "cropY": 337,
+      "cropWidth": 152,
+      "cropHeight": 121
     },
     "materialien-03": {
       "file": "assets/realistic-v3-1.png",
@@ -200,7 +344,13 @@
       "rows": 6,
       "column": 4,
       "row": 2,
-      "name": "Elektrolyse"
+      "name": "Elektrolyse",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 631,
+      "cropY": 321,
+      "cropWidth": 131,
+      "cropHeight": 148
     },
     "materialien-04": {
       "file": "assets/realistic-v3-1.png",
@@ -208,7 +358,13 @@
       "rows": 6,
       "column": 5,
       "row": 2,
-      "name": "Sauerstoff"
+      "name": "Sauerstoff",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 785,
+      "cropY": 328,
+      "cropWidth": 123,
+      "cropHeight": 134
     },
     "materialien-05": {
       "file": "assets/realistic-v3-1.png",
@@ -216,7 +372,13 @@
       "rows": 6,
       "column": 6,
       "row": 2,
-      "name": "Wasserstoff"
+      "name": "Wasserstoff",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 935,
+      "cropY": 328,
+      "cropWidth": 131,
+      "cropHeight": 137
     },
     "materialien-06": {
       "file": "assets/realistic-v3-1.png",
@@ -224,7 +386,13 @@
       "rows": 6,
       "column": 7,
       "row": 2,
-      "name": "Metalltrennung"
+      "name": "Metalltrennung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1087,
+      "cropY": 330,
+      "cropWidth": 133,
+      "cropHeight": 132
     },
     "materialien-07": {
       "file": "assets/realistic-v3-1.png",
@@ -232,7 +400,13 @@
       "rows": 6,
       "column": 8,
       "row": 2,
-      "name": "Eisen / Nickel"
+      "name": "Eisen / Nickel",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1244,
+      "cropY": 329,
+      "cropWidth": 131,
+      "cropHeight": 133
     },
     "materialien-08": {
       "file": "assets/realistic-v3-1.png",
@@ -240,7 +414,13 @@
       "rows": 6,
       "column": 9,
       "row": 2,
-      "name": "Aluminium"
+      "name": "Aluminium",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1391,
+      "cropY": 334,
+      "cropWidth": 133,
+      "cropHeight": 134
     },
     "materialien-09": {
       "file": "assets/realistic-v3-1.png",
@@ -248,7 +428,13 @@
       "rows": 6,
       "column": 0,
       "row": 3,
-      "name": "Kupfer"
+      "name": "Kupfer",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 13,
+      "cropY": 490,
+      "cropWidth": 129,
+      "cropHeight": 138
     },
     "materialien-10": {
       "file": "assets/realistic-v3-1.png",
@@ -256,7 +442,13 @@
       "rows": 6,
       "column": 1,
       "row": 3,
-      "name": "Zinn / Silber"
+      "name": "Zinn / Silber",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 167,
+      "cropY": 485,
+      "cropWidth": 122,
+      "cropHeight": 144
     },
     "materialien-11": {
       "file": "assets/realistic-v3-1.png",
@@ -264,7 +456,13 @@
       "rows": 6,
       "column": 2,
       "row": 3,
-      "name": "Mineralaufbereitung"
+      "name": "Mineralaufbereitung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 314,
+      "cropY": 481,
+      "cropWidth": 133,
+      "cropHeight": 156
     },
     "materialien-12": {
       "file": "assets/realistic-v3-1.png",
@@ -272,7 +470,13 @@
       "rows": 6,
       "column": 3,
       "row": 3,
-      "name": "Glas / Keramik"
+      "name": "Glas / Keramik",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 472,
+      "cropY": 482,
+      "cropWidth": 132,
+      "cropHeight": 153
     },
     "materialien-13": {
       "file": "assets/realistic-v3-1.png",
@@ -280,7 +484,13 @@
       "rows": 6,
       "column": 4,
       "row": 3,
-      "name": "Silizium"
+      "name": "Silizium",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 621,
+      "cropY": 489,
+      "cropWidth": 146,
+      "cropHeight": 140
     },
     "materialien-14": {
       "file": "assets/realistic-v3-1.png",
@@ -288,7 +498,13 @@
       "rows": 6,
       "column": 5,
       "row": 3,
-      "name": "Aluminiumoxid"
+      "name": "Aluminiumoxid",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 774,
+      "cropY": 499,
+      "cropWidth": 145,
+      "cropHeight": 135
     },
     "materialien-15": {
       "file": "assets/realistic-v3-1.png",
@@ -296,7 +512,13 @@
       "rows": 6,
       "column": 6,
       "row": 3,
-      "name": "Kohlenstoffaufbereitung"
+      "name": "Kohlenstoffaufbereitung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 939,
+      "cropY": 483,
+      "cropWidth": 125,
+      "cropHeight": 151
     },
     "materialien-16": {
       "file": "assets/realistic-v3-1.png",
@@ -304,7 +526,13 @@
       "rows": 6,
       "column": 7,
       "row": 3,
-      "name": "Graphit"
+      "name": "Graphit",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1080,
+      "cropY": 488,
+      "cropWidth": 149,
+      "cropHeight": 143
     },
     "materialien-17": {
       "file": "assets/realistic-v3-1.png",
@@ -312,7 +540,13 @@
       "rows": 6,
       "column": 8,
       "row": 3,
-      "name": "Organische Zwischenstoffe"
+      "name": "Organische Zwischenstoffe",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1229,
+      "cropY": 488,
+      "cropWidth": 146,
+      "cropHeight": 146
     },
     "materialien-18": {
       "file": "assets/realistic-v3-1.png",
@@ -320,7 +554,13 @@
       "rows": 6,
       "column": 9,
       "row": 3,
-      "name": "Polymerwerkstoffe"
+      "name": "Polymerwerkstoffe",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1389,
+      "cropY": 482,
+      "cropWidth": 134,
+      "cropHeight": 154
     },
     "materialien-19": {
       "file": "assets/realistic-v3-1.png",
@@ -328,7 +568,13 @@
       "rows": 6,
       "column": 0,
       "row": 4,
-      "name": "Stofftrennung / Reinigung"
+      "name": "Stofftrennung / Reinigung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 14,
+      "cropY": 651,
+      "cropWidth": 128,
+      "cropHeight": 150
     },
     "materialien-20": {
       "file": "assets/realistic-v3-1.png",
@@ -336,7 +582,13 @@
       "rows": 6,
       "column": 1,
       "row": 4,
-      "name": "Lithium"
+      "name": "Lithium",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 167,
+      "cropY": 651,
+      "cropWidth": 126,
+      "cropHeight": 147
     },
     "materialien-21": {
       "file": "assets/realistic-v3-1.png",
@@ -344,7 +596,13 @@
       "rows": 6,
       "column": 2,
       "row": 4,
-      "name": "Phosphate"
+      "name": "Phosphate",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 315,
+      "cropY": 666,
+      "cropWidth": 138,
+      "cropHeight": 129
     },
     "materialien-22": {
       "file": "assets/realistic-v3-1.png",
@@ -352,7 +610,13 @@
       "rows": 6,
       "column": 3,
       "row": 4,
-      "name": "Fluor / Chlor"
+      "name": "Fluor / Chlor",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 473,
+      "cropY": 657,
+      "cropWidth": 127,
+      "cropHeight": 131
     },
     "materialien-23": {
       "file": "assets/realistic-v3-1.png",
@@ -360,7 +624,13 @@
       "rows": 6,
       "column": 4,
       "row": 4,
-      "name": "Stickstoffverbindungen"
+      "name": "Stickstoffverbindungen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 624,
+      "cropY": 651,
+      "cropWidth": 131,
+      "cropHeight": 146
     },
     "materialien-24": {
       "file": "assets/realistic-v3-1.png",
@@ -368,7 +638,13 @@
       "rows": 6,
       "column": 5,
       "row": 4,
-      "name": "Dotierstoffe"
+      "name": "Dotierstoffe",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 775,
+      "cropY": 669,
+      "cropWidth": 140,
+      "cropHeight": 122
     },
     "verbindungen-01": {
       "file": "assets/realistic-v3-1.png",
@@ -376,7 +652,13 @@
       "rows": 6,
       "column": 6,
       "row": 4,
-      "name": "Verbindungsanalyse"
+      "name": "Verbindungsanalyse",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 938,
+      "cropY": 651,
+      "cropWidth": 128,
+      "cropHeight": 152
     },
     "verbindungen-02": {
       "file": "assets/realistic-v3-1.png",
@@ -384,7 +666,13 @@
       "rows": 6,
       "column": 7,
       "row": 4,
-      "name": "Kohlendioxid"
+      "name": "Kohlendioxid",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1091,
+      "cropY": 656,
+      "cropWidth": 127,
+      "cropHeight": 143
     },
     "verbindungen-03": {
       "file": "assets/realistic-v3-1.png",
@@ -392,7 +680,13 @@
       "rows": 6,
       "column": 8,
       "row": 4,
-      "name": "Methanol"
+      "name": "Methanol",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1235,
+      "cropY": 651,
+      "cropWidth": 135,
+      "cropHeight": 152
     },
     "verbindungen-04": {
       "file": "assets/realistic-v3-1.png",
@@ -400,7 +694,13 @@
       "rows": 6,
       "column": 9,
       "row": 4,
-      "name": "Formaldehyd"
+      "name": "Formaldehyd",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1390,
+      "cropY": 654,
+      "cropWidth": 128,
+      "cropHeight": 141
     },
     "verbindungen-05": {
       "file": "assets/realistic-v3-1.png",
@@ -408,7 +708,13 @@
       "rows": 6,
       "column": 0,
       "row": 5,
-      "name": "Chlorwasserstoff"
+      "name": "Chlorwasserstoff",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 16,
+      "cropY": 824,
+      "cropWidth": 126,
+      "cropHeight": 144
     },
     "verbindungen-06": {
       "file": "assets/realistic-v3-1.png",
@@ -416,7 +722,13 @@
       "rows": 6,
       "column": 1,
       "row": 5,
-      "name": "Chlormethan"
+      "name": "Chlormethan",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 160,
+      "cropY": 825,
+      "cropWidth": 132,
+      "cropHeight": 145
     },
     "verbindungen-07": {
       "file": "assets/realistic-v3-1.png",
@@ -424,7 +736,13 @@
       "rows": 6,
       "column": 2,
       "row": 5,
-      "name": "Methylchlorsilane"
+      "name": "Methylchlorsilane",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 313,
+      "cropY": 818,
+      "cropWidth": 135,
+      "cropHeight": 152
     },
     "verbindungen-08": {
       "file": "assets/realistic-v3-1.png",
@@ -432,7 +750,13 @@
       "rows": 6,
       "column": 3,
       "row": 5,
-      "name": "Siloxane"
+      "name": "Siloxane",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 474,
+      "cropY": 831,
+      "cropWidth": 137,
+      "cropHeight": 133
     },
     "verbindungen-09": {
       "file": "assets/realistic-v3-2.png",
@@ -440,7 +764,13 @@
       "rows": 6,
       "column": 0,
       "row": 0,
-      "name": "Silikonkautschuk"
+      "name": "Silikonkautschuk",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 18,
+      "cropY": 5,
+      "cropWidth": 133,
+      "cropHeight": 148
     },
     "verbindungen-10": {
       "file": "assets/realistic-v3-2.png",
@@ -448,7 +778,13 @@
       "rows": 6,
       "column": 1,
       "row": 0,
-      "name": "Phosphatvorstufen"
+      "name": "Phosphatvorstufen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 179,
+      "cropY": 6,
+      "cropWidth": 121,
+      "cropHeight": 145
     },
     "verbindungen-11": {
       "file": "assets/realistic-v3-2.png",
@@ -456,7 +792,13 @@
       "rows": 6,
       "column": 2,
       "row": 0,
-      "name": "Lithium-Eisenphosphat"
+      "name": "Lithium-Eisenphosphat",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 324,
+      "cropY": 6,
+      "cropWidth": 131,
+      "cropHeight": 146
     },
     "verbindungen-12": {
       "file": "assets/realistic-v3-2.png",
@@ -464,7 +806,13 @@
       "rows": 6,
       "column": 3,
       "row": 0,
-      "name": "Lithium-Leitsalz"
+      "name": "Lithium-Leitsalz",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 479,
+      "cropY": 8,
+      "cropWidth": 130,
+      "cropHeight": 142
     },
     "verbindungen-13": {
       "file": "assets/realistic-v3-2.png",
@@ -472,7 +820,13 @@
       "rows": 6,
       "column": 4,
       "row": 0,
-      "name": "Carbonatlösungsmittel"
+      "name": "Carbonatlösungsmittel",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 634,
+      "cropY": 6,
+      "cropWidth": 124,
+      "cropHeight": 146
     },
     "verbindungen-14": {
       "file": "assets/realistic-v3-2.png",
@@ -480,7 +834,13 @@
       "rows": 6,
       "column": 5,
       "row": 0,
-      "name": "Elektrolytgemisch"
+      "name": "Elektrolytgemisch",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 781,
+      "cropY": 5,
+      "cropWidth": 132,
+      "cropHeight": 147
     },
     "verbindungen-15": {
       "file": "assets/realistic-v3-2.png",
@@ -488,7 +848,13 @@
       "rows": 6,
       "column": 6,
       "row": 0,
-      "name": "Polyimidvorstufen"
+      "name": "Polyimidvorstufen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 937,
+      "cropY": 6,
+      "cropWidth": 128,
+      "cropHeight": 146
     },
     "verbindungen-16": {
       "file": "assets/realistic-v3-2.png",
@@ -496,7 +862,13 @@
       "rows": 6,
       "column": 7,
       "row": 0,
-      "name": "Polyimid"
+      "name": "Polyimid",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1088,
+      "cropY": 9,
+      "cropWidth": 129,
+      "cropHeight": 145
     },
     "verbindungen-17": {
       "file": "assets/realistic-v3-2.png",
@@ -504,7 +876,13 @@
       "rows": 6,
       "column": 8,
       "row": 0,
-      "name": "Tetrafluorethylen"
+      "name": "Tetrafluorethylen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1239,
+      "cropY": 20,
+      "cropWidth": 137,
+      "cropHeight": 128
     },
     "verbindungen-18": {
       "file": "assets/realistic-v3-2.png",
@@ -512,7 +890,13 @@
       "rows": 6,
       "column": 9,
       "row": 0,
-      "name": "PTFE"
+      "name": "PTFE",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1398,
+      "cropY": 8,
+      "cropWidth": 116,
+      "cropHeight": 140
     },
     "verbindungen-19": {
       "file": "assets/realistic-v3-2.png",
@@ -520,7 +904,13 @@
       "rows": 6,
       "column": 0,
       "row": 1,
-      "name": "Gereinigtes Siliziumdioxid"
+      "name": "Gereinigtes Siliziumdioxid",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 20,
+      "cropY": 165,
+      "cropWidth": 133,
+      "cropHeight": 138
     },
     "verbindungen-20": {
       "file": "assets/realistic-v3-2.png",
@@ -528,7 +918,13 @@
       "rows": 6,
       "column": 1,
       "row": 1,
-      "name": "Gereinigtes Aluminiumoxid"
+      "name": "Gereinigtes Aluminiumoxid",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 173,
+      "cropY": 159,
+      "cropWidth": 132,
+      "cropHeight": 144
     },
     "verbindungen-21": {
       "file": "assets/realistic-v3-2.png",
@@ -536,7 +932,13 @@
       "rows": 6,
       "column": 2,
       "row": 1,
-      "name": "Harzsysteme"
+      "name": "Harzsysteme",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 329,
+      "cropY": 162,
+      "cropWidth": 124,
+      "cropHeight": 146
     },
     "mira-01": {
       "file": "assets/realistic-v3-2.png",
@@ -544,7 +946,13 @@
       "rows": 6,
       "column": 3,
       "row": 1,
-      "name": "Forschungsbasis"
+      "name": "Forschungsbasis",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 472,
+      "cropY": 161,
+      "cropWidth": 138,
+      "cropHeight": 146
     },
     "mira-02": {
       "file": "assets/realistic-v3-2.png",
@@ -552,7 +960,13 @@
       "rows": 6,
       "column": 4,
       "row": 1,
-      "name": "Forschungsstufe 2"
+      "name": "Forschungsstufe 2",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 628,
+      "cropY": 173,
+      "cropWidth": 139,
+      "cropHeight": 121
     },
     "mira-03": {
       "file": "assets/realistic-v3-2.png",
@@ -560,7 +974,13 @@
       "rows": 6,
       "column": 5,
       "row": 1,
-      "name": "Methodenoptimierung"
+      "name": "Methodenoptimierung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 780,
+      "cropY": 167,
+      "cropWidth": 137,
+      "cropHeight": 132
     },
     "mira-04": {
       "file": "assets/realistic-v3-2.png",
@@ -568,7 +988,13 @@
       "rows": 6,
       "column": 6,
       "row": 1,
-      "name": "Rechnerdiagnose"
+      "name": "Rechnerdiagnose",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 930,
+      "cropY": 173,
+      "cropWidth": 141,
+      "cropHeight": 137
     },
     "mira-05": {
       "file": "assets/realistic-v3-2.png",
@@ -576,7 +1002,13 @@
       "rows": 6,
       "column": 7,
       "row": 1,
-      "name": "Rechnerreparatur"
+      "name": "Rechnerreparatur",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1088,
+      "cropY": 187,
+      "cropWidth": 132,
+      "cropHeight": 111
     },
     "mira-06": {
       "file": "assets/realistic-v3-2.png",
@@ -584,7 +1016,13 @@
       "rows": 6,
       "column": 8,
       "row": 1,
-      "name": "CPU-Erweiterung"
+      "name": "CPU-Erweiterung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1238,
+      "cropY": 162,
+      "cropWidth": 133,
+      "cropHeight": 144
     },
     "mira-07": {
       "file": "assets/realistic-v3-2.png",
@@ -592,7 +1030,13 @@
       "rows": 6,
       "column": 9,
       "row": 1,
-      "name": "Leistungsfreigabe"
+      "name": "Leistungsfreigabe",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1388,
+      "cropY": 168,
+      "cropWidth": 135,
+      "cropHeight": 139
     },
     "mira-08": {
       "file": "assets/realistic-v3-2.png",
@@ -600,7 +1044,13 @@
       "rows": 6,
       "column": 0,
       "row": 2,
-      "name": "Erweiterte Kühlung"
+      "name": "Erweiterte Kühlung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 14,
+      "cropY": 324,
+      "cropWidth": 135,
+      "cropHeight": 140
     },
     "mira-09": {
       "file": "assets/realistic-v3-2.png",
@@ -608,7 +1058,13 @@
       "rows": 6,
       "column": 1,
       "row": 2,
-      "name": "Parallelrechnen"
+      "name": "Parallelrechnen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 168,
+      "cropY": 319,
+      "cropWidth": 137,
+      "cropHeight": 146
     },
     "mira-10": {
       "file": "assets/realistic-v3-2.png",
@@ -616,7 +1072,13 @@
       "rows": 6,
       "column": 2,
       "row": 2,
-      "name": "Archivzugang"
+      "name": "Archivzugang",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 317,
+      "cropY": 321,
+      "cropWidth": 137,
+      "cropHeight": 141
     },
     "mira-11": {
       "file": "assets/realistic-v3-2.png",
@@ -624,7 +1086,13 @@
       "rows": 6,
       "column": 3,
       "row": 2,
-      "name": "Analyse und Planung"
+      "name": "Analyse und Planung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 473,
+      "cropY": 319,
+      "cropWidth": 137,
+      "cropHeight": 145
     },
     "mira-12": {
       "file": "assets/realistic-v3-2.png",
@@ -632,7 +1100,13 @@
       "rows": 6,
       "column": 4,
       "row": 2,
-      "name": "Routinekoordination"
+      "name": "Routinekoordination",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 627,
+      "cropY": 313,
+      "cropWidth": 139,
+      "cropHeight": 150
     },
     "drohnen-01": {
       "file": "assets/realistic-v3-2.png",
@@ -640,7 +1114,13 @@
       "rows": 6,
       "column": 5,
       "row": 2,
-      "name": "Abbaugrundlagen"
+      "name": "Abbaugrundlagen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 777,
+      "cropY": 330,
+      "cropWidth": 143,
+      "cropHeight": 133
     },
     "drohnen-02": {
       "file": "assets/realistic-v3-2.png",
@@ -648,15 +1128,27 @@
       "rows": 6,
       "column": 6,
       "row": 2,
-      "name": "Werkzeuganpassung"
+      "name": "Werkzeuganpassung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 933,
+      "cropY": 334,
+      "cropWidth": 285,
+      "cropHeight": 134
     },
     "drohnen-03": {
-      "file": "assets/realistic-v3-2.png",
-      "columns": 10,
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
       "rows": 6,
-      "column": 7,
-      "row": 2,
-      "name": "Frachtraumumbau"
+      "column": 6,
+      "row": 5,
+      "name": "Frachtraumumbau",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1039,
+      "cropY": 818,
+      "cropWidth": 134,
+      "cropHeight": 158
     },
     "drohnen-04": {
       "file": "assets/realistic-v3-2.png",
@@ -664,7 +1156,13 @@
       "rows": 6,
       "column": 8,
       "row": 2,
-      "name": "Abbausteuerung"
+      "name": "Abbausteuerung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1235,
+      "cropY": 322,
+      "cropWidth": 147,
+      "cropHeight": 140
     },
     "drohnen-05": {
       "file": "assets/realistic-v3-2.png",
@@ -672,7 +1170,13 @@
       "rows": 6,
       "column": 9,
       "row": 2,
-      "name": "Reparaturrolle"
+      "name": "Reparaturrolle",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1382,
+      "cropY": 349,
+      "cropWidth": 142,
+      "cropHeight": 111
     },
     "drohnen-06": {
       "file": "assets/realistic-v3-2.png",
@@ -680,7 +1184,13 @@
       "rows": 6,
       "column": 0,
       "row": 3,
-      "name": "Schadensdiagnose"
+      "name": "Schadensdiagnose",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 14,
+      "cropY": 486,
+      "cropWidth": 135,
+      "cropHeight": 136
     },
     "drohnen-07": {
       "file": "assets/realistic-v3-2.png",
@@ -688,7 +1198,13 @@
       "rows": 6,
       "column": 1,
       "row": 3,
-      "name": "Bauteiltausch"
+      "name": "Bauteiltausch",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 165,
+      "cropY": 481,
+      "cropWidth": 141,
+      "cropHeight": 136
     },
     "drohnen-08": {
       "file": "assets/realistic-v3-2.png",
@@ -696,7 +1212,13 @@
       "rows": 6,
       "column": 2,
       "row": 3,
-      "name": "Montageverfahren"
+      "name": "Montageverfahren",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 319,
+      "cropY": 497,
+      "cropWidth": 140,
+      "cropHeight": 115
     },
     "drohnen-09": {
       "file": "assets/realistic-v3-2.png",
@@ -704,7 +1226,13 @@
       "rows": 6,
       "column": 3,
       "row": 3,
-      "name": "Erkundungsrolle"
+      "name": "Erkundungsrolle",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 468,
+      "cropY": 474,
+      "cropWidth": 142,
+      "cropHeight": 151
     },
     "drohnen-10": {
       "file": "assets/realistic-v3-2.png",
@@ -712,7 +1240,13 @@
       "rows": 6,
       "column": 4,
       "row": 3,
-      "name": "Oberflächenkartierung"
+      "name": "Oberflächenkartierung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 624,
+      "cropY": 494,
+      "cropWidth": 141,
+      "cropHeight": 130
     },
     "drohnen-11": {
       "file": "assets/realistic-v3-2.png",
@@ -720,7 +1254,13 @@
       "rows": 6,
       "column": 5,
       "row": 3,
-      "name": "Probenentnahme"
+      "name": "Probenentnahme",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 782,
+      "cropY": 487,
+      "cropWidth": 129,
+      "cropHeight": 138
     },
     "drohnen-12": {
       "file": "assets/realistic-v3-2.png",
@@ -728,7 +1268,13 @@
       "rows": 6,
       "column": 6,
       "row": 3,
-      "name": "Livebild"
+      "name": "Livebild",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 931,
+      "cropY": 488,
+      "cropWidth": 136,
+      "cropHeight": 137
     },
     "drohnen-13": {
       "file": "assets/realistic-v3-2.png",
@@ -736,7 +1282,13 @@
       "rows": 6,
       "column": 7,
       "row": 3,
-      "name": "Helferaktivierung"
+      "name": "Helferaktivierung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1075,
+      "cropY": 486,
+      "cropWidth": 149,
+      "cropHeight": 134
     },
     "drohnen-14": {
       "file": "assets/realistic-v3-2.png",
@@ -744,7 +1296,13 @@
       "rows": 6,
       "column": 8,
       "row": 3,
-      "name": "Dockumbau"
+      "name": "Dockumbau",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1235,
+      "cropY": 490,
+      "cropWidth": 141,
+      "cropHeight": 128
     },
     "drohnen-15": {
       "file": "assets/realistic-v3-2.png",
@@ -752,7 +1310,13 @@
       "rows": 6,
       "column": 9,
       "row": 3,
-      "name": "Innentransport"
+      "name": "Innentransport",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1386,
+      "cropY": 479,
+      "cropWidth": 136,
+      "cropHeight": 143
     },
     "drohnen-16": {
       "file": "assets/realistic-v3-2.png",
@@ -760,7 +1324,13 @@
       "rows": 6,
       "column": 0,
       "row": 4,
-      "name": "Wartungsaufträge"
+      "name": "Wartungsaufträge",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 16,
+      "cropY": 629,
+      "cropWidth": 130,
+      "cropHeight": 166
     },
     "scanner-01": {
       "file": "assets/realistic-v3-2.png",
@@ -768,7 +1338,13 @@
       "rows": 6,
       "column": 1,
       "row": 4,
-      "name": "Nahbereichsscan"
+      "name": "Nahbereichsscan",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 162,
+      "cropY": 656,
+      "cropWidth": 136,
+      "cropHeight": 129
     },
     "scanner-02": {
       "file": "assets/realistic-v3-2.png",
@@ -776,7 +1352,13 @@
       "rows": 6,
       "column": 2,
       "row": 4,
-      "name": "Signalfilter"
+      "name": "Signalfilter",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 316,
+      "cropY": 645,
+      "cropWidth": 135,
+      "cropHeight": 140
     },
     "scanner-03": {
       "file": "assets/realistic-v3-2.png",
@@ -784,7 +1366,13 @@
       "rows": 6,
       "column": 3,
       "row": 4,
-      "name": "Reichweitenmodul"
+      "name": "Reichweitenmodul",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 471,
+      "cropY": 644,
+      "cropWidth": 140,
+      "cropHeight": 140
     },
     "scanner-04": {
       "file": "assets/realistic-v3-2.png",
@@ -792,7 +1380,13 @@
       "rows": 6,
       "column": 4,
       "row": 4,
-      "name": "Kartierungsdaten"
+      "name": "Kartierungsdaten",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 622,
+      "cropY": 671,
+      "cropWidth": 144,
+      "cropHeight": 104
     },
     "scanner-05": {
       "file": "assets/realistic-v3-2.png",
@@ -800,7 +1394,13 @@
       "rows": 6,
       "column": 5,
       "row": 4,
-      "name": "Bildsensorik"
+      "name": "Bildsensorik",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 777,
+      "cropY": 651,
+      "cropWidth": 142,
+      "cropHeight": 130
     },
     "scanner-06": {
       "file": "assets/realistic-v3-2.png",
@@ -808,7 +1408,13 @@
       "rows": 6,
       "column": 6,
       "row": 4,
-      "name": "Oberflächenmodell"
+      "name": "Oberflächenmodell",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 950,
+      "cropY": 651,
+      "cropWidth": 100,
+      "cropHeight": 138
     },
     "scanner-07": {
       "file": "assets/realistic-v3-2.png",
@@ -816,7 +1422,13 @@
       "rows": 6,
       "column": 7,
       "row": 4,
-      "name": "Probenregister"
+      "name": "Probenregister",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1081,
+      "cropY": 640,
+      "cropWidth": 127,
+      "cropHeight": 150
     },
     "scanner-08": {
       "file": "assets/realistic-v3-2.png",
@@ -824,7 +1436,13 @@
       "rows": 6,
       "column": 8,
       "row": 4,
-      "name": "Spektralanalyse"
+      "name": "Spektralanalyse",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1242,
+      "cropY": 640,
+      "cropWidth": 108,
+      "cropHeight": 155
     },
     "scanner-09": {
       "file": "assets/realistic-v3-2.png",
@@ -832,7 +1450,13 @@
       "rows": 6,
       "column": 9,
       "row": 4,
-      "name": "Materialabgleich"
+      "name": "Materialabgleich",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1382,
+      "cropY": 656,
+      "cropWidth": 139,
+      "cropHeight": 127
     },
     "scanner-10": {
       "file": "assets/realistic-v3-2.png",
@@ -840,7 +1464,13 @@
       "rows": 6,
       "column": 0,
       "row": 5,
-      "name": "Kontaktverfolgung"
+      "name": "Kontaktverfolgung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 24,
+      "cropY": 816,
+      "cropWidth": 115,
+      "cropHeight": 162
     },
     "scanner-11": {
       "file": "assets/realistic-v3-2.png",
@@ -848,7 +1478,13 @@
       "rows": 6,
       "column": 1,
       "row": 5,
-      "name": "Bewegungsprognose"
+      "name": "Bewegungsprognose",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 162,
+      "cropY": 824,
+      "cropWidth": 135,
+      "cropHeight": 146
     },
     "scanner-12": {
       "file": "assets/realistic-v3-2.png",
@@ -856,7 +1492,13 @@
       "rows": 6,
       "column": 2,
       "row": 5,
-      "name": "Arbeitsfreigabeprüfung"
+      "name": "Arbeitsfreigabeprüfung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 314,
+      "cropY": 811,
+      "cropWidth": 147,
+      "cropHeight": 169
     },
     "produktion-01": {
       "file": "assets/realistic-v3-2.png",
@@ -864,7 +1506,13 @@
       "rows": 6,
       "column": 3,
       "row": 5,
-      "name": "Werkstattdiagnose"
+      "name": "Werkstattdiagnose",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 461,
+      "cropY": 819,
+      "cropWidth": 149,
+      "cropHeight": 154
     },
     "produktion-02": {
       "file": "assets/realistic-v3-3.png",
@@ -872,7 +1520,13 @@
       "rows": 6,
       "column": 0,
       "row": 0,
-      "name": "Werkstattreparatur"
+      "name": "Werkstattreparatur",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 9,
+      "cropY": 6,
+      "cropWidth": 145,
+      "cropHeight": 149
     },
     "produktion-03": {
       "file": "assets/realistic-v3-3.png",
@@ -880,7 +1534,13 @@
       "rows": 6,
       "column": 1,
       "row": 0,
-      "name": "Präzisionsmontage"
+      "name": "Präzisionsmontage",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 183,
+      "cropY": 11,
+      "cropWidth": 147,
+      "cropHeight": 146
     },
     "produktion-04": {
       "file": "assets/realistic-v3-3.png",
@@ -888,7 +1548,13 @@
       "rows": 6,
       "column": 2,
       "row": 0,
-      "name": "Qualitätsprüfung"
+      "name": "Qualitätsprüfung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 363,
+      "cropY": 12,
+      "cropWidth": 127,
+      "cropHeight": 146
     },
     "produktion-05": {
       "file": "assets/realistic-v3-3.png",
@@ -896,7 +1562,13 @@
       "rows": 6,
       "column": 3,
       "row": 0,
-      "name": "Schmelzverfahren"
+      "name": "Schmelzverfahren",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 529,
+      "cropY": 5,
+      "cropWidth": 136,
+      "cropHeight": 156
     },
     "produktion-06": {
       "file": "assets/realistic-v3-3.png",
@@ -904,7 +1576,13 @@
       "rows": 6,
       "column": 4,
       "row": 0,
-      "name": "Formgebung"
+      "name": "Formgebung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 706,
+      "cropY": 5,
+      "cropWidth": 120,
+      "cropHeight": 154
     },
     "produktion-07": {
       "file": "assets/realistic-v3-3.png",
@@ -912,7 +1590,13 @@
       "rows": 6,
       "column": 5,
       "row": 0,
-      "name": "Bearbeitung"
+      "name": "Bearbeitung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 864,
+      "cropY": 9,
+      "cropWidth": 138,
+      "cropHeight": 149
     },
     "produktion-08": {
       "file": "assets/realistic-v3-3.png",
@@ -920,7 +1604,13 @@
       "rows": 6,
       "column": 6,
       "row": 0,
-      "name": "Bauteilfertigung"
+      "name": "Bauteilfertigung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1030,
+      "cropY": 14,
+      "cropWidth": 151,
+      "cropHeight": 143
     },
     "produktion-09": {
       "file": "assets/realistic-v3-3.png",
@@ -928,7 +1618,13 @@
       "rows": 6,
       "column": 7,
       "row": 0,
-      "name": "Prozessanlage"
+      "name": "Prozessanlage",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1203,
+      "cropY": 2,
+      "cropWidth": 149,
+      "cropHeight": 160
     },
     "produktion-10": {
       "file": "assets/realistic-v3-3.png",
@@ -936,7 +1632,13 @@
       "rows": 6,
       "column": 8,
       "row": 0,
-      "name": "Reaktionsführung"
+      "name": "Reaktionsführung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1378,
+      "cropY": 4,
+      "cropWidth": 150,
+      "cropHeight": 156
     },
     "produktion-11": {
       "file": "assets/realistic-v3-3.png",
@@ -944,7 +1646,13 @@
       "rows": 6,
       "column": 0,
       "row": 1,
-      "name": "Reinigung und Trennung"
+      "name": "Reinigung und Trennung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 11,
+      "cropY": 172,
+      "cropWidth": 147,
+      "cropHeight": 145
     },
     "produktion-12": {
       "file": "assets/realistic-v3-3.png",
@@ -952,7 +1660,13 @@
       "rows": 6,
       "column": 1,
       "row": 1,
-      "name": "Werkstoffmischungen"
+      "name": "Werkstoffmischungen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 181,
+      "cropY": 168,
+      "cropWidth": 143,
+      "cropHeight": 148
     },
     "produktion-13": {
       "file": "assets/realistic-v3-3.png",
@@ -960,7 +1674,13 @@
       "rows": 6,
       "column": 2,
       "row": 1,
-      "name": "Elektronikmontage"
+      "name": "Elektronikmontage",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 350,
+      "cropY": 170,
+      "cropWidth": 151,
+      "cropHeight": 149
     },
     "produktion-14": {
       "file": "assets/realistic-v3-3.png",
@@ -968,7 +1688,13 @@
       "rows": 6,
       "column": 3,
       "row": 1,
-      "name": "Platinenfertigung"
+      "name": "Platinenfertigung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 520,
+      "cropY": 176,
+      "cropWidth": 154,
+      "cropHeight": 139
     },
     "produktion-15": {
       "file": "assets/realistic-v3-3.png",
@@ -976,7 +1702,13 @@
       "rows": 6,
       "column": 4,
       "row": 1,
-      "name": "Halbleiterprozesse"
+      "name": "Halbleiterprozesse",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 699,
+      "cropY": 178,
+      "cropWidth": 137,
+      "cropHeight": 139
     },
     "produktion-16": {
       "file": "assets/realistic-v3-3.png",
@@ -984,7 +1716,13 @@
       "rows": 6,
       "column": 5,
       "row": 1,
-      "name": "Chipherstellung"
+      "name": "Chipherstellung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 864,
+      "cropY": 177,
+      "cropWidth": 152,
+      "cropHeight": 138
     },
     "logistik-01": {
       "file": "assets/realistic-v3-3.png",
@@ -992,7 +1730,13 @@
       "rows": 6,
       "column": 6,
       "row": 1,
-      "name": "Lagerregister"
+      "name": "Lagerregister",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1039,
+      "cropY": 168,
+      "cropWidth": 148,
+      "cropHeight": 148
     },
     "logistik-02": {
       "file": "assets/realistic-v3-3.png",
@@ -1000,7 +1744,13 @@
       "rows": 6,
       "column": 7,
       "row": 1,
-      "name": "Fundquarantäne"
+      "name": "Fundquarantäne",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1209,
+      "cropY": 174,
+      "cropWidth": 142,
+      "cropHeight": 140
     },
     "logistik-03": {
       "file": "assets/realistic-v3-3.png",
@@ -1008,7 +1758,13 @@
       "rows": 6,
       "column": 8,
       "row": 1,
-      "name": "Bestandsanalyse"
+      "name": "Bestandsanalyse",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1378,
+      "cropY": 171,
+      "cropWidth": 146,
+      "cropHeight": 153
     },
     "logistik-04": {
       "file": "assets/realistic-v3-3.png",
@@ -1016,7 +1772,13 @@
       "rows": 6,
       "column": 0,
       "row": 2,
-      "name": "Feststoffcontainer"
+      "name": "Feststoffcontainer",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 8,
+      "cropY": 330,
+      "cropWidth": 151,
+      "cropHeight": 147
     },
     "logistik-05": {
       "file": "assets/realistic-v3-3.png",
@@ -1024,7 +1786,13 @@
       "rows": 6,
       "column": 1,
       "row": 2,
-      "name": "Flüssigkeitstanks"
+      "name": "Flüssigkeitstanks",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 181,
+      "cropY": 331,
+      "cropWidth": 143,
+      "cropHeight": 149
     },
     "logistik-06": {
       "file": "assets/realistic-v3-3.png",
@@ -1032,7 +1800,13 @@
       "rows": 6,
       "column": 2,
       "row": 2,
-      "name": "Gaslager"
+      "name": "Gaslager",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 350,
+      "cropY": 338,
+      "cropWidth": 146,
+      "cropHeight": 136
     },
     "logistik-07": {
       "file": "assets/realistic-v3-3.png",
@@ -1040,7 +1814,13 @@
       "rows": 6,
       "column": 3,
       "row": 2,
-      "name": "Transportaufträge"
+      "name": "Transportaufträge",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 519,
+      "cropY": 345,
+      "cropWidth": 150,
+      "cropHeight": 127
     },
     "logistik-08": {
       "file": "assets/realistic-v3-3.png",
@@ -1048,7 +1828,13 @@
       "rows": 6,
       "column": 4,
       "row": 2,
-      "name": "Dockkoordination"
+      "name": "Dockkoordination",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 683,
+      "cropY": 335,
+      "cropWidth": 165,
+      "cropHeight": 126
     },
     "logistik-09": {
       "file": "assets/realistic-v3-3.png",
@@ -1056,7 +1842,13 @@
       "rows": 6,
       "column": 5,
       "row": 2,
-      "name": "Routenprioritäten"
+      "name": "Routenprioritäten",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 863,
+      "cropY": 336,
+      "cropWidth": 152,
+      "cropHeight": 144
     },
     "logistik-10": {
       "file": "assets/realistic-v3-3.png",
@@ -1064,7 +1856,13 @@
       "rows": 6,
       "column": 6,
       "row": 2,
-      "name": "Materialreservierung"
+      "name": "Materialreservierung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1030,
+      "cropY": 341,
+      "cropWidth": 156,
+      "cropHeight": 129
     },
     "logistik-11": {
       "file": "assets/realistic-v3-3.png",
@@ -1072,7 +1870,13 @@
       "rows": 6,
       "column": 7,
       "row": 2,
-      "name": "Nachschubregeln"
+      "name": "Nachschubregeln",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1200,
+      "cropY": 342,
+      "cropWidth": 158,
+      "cropHeight": 128
     },
     "logistik-12": {
       "file": "assets/realistic-v3-3.png",
@@ -1080,7 +1884,13 @@
       "rows": 6,
       "column": 8,
       "row": 2,
-      "name": "Versorgungsplanung"
+      "name": "Versorgungsplanung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1376,
+      "cropY": 354,
+      "cropWidth": 153,
+      "cropHeight": 124
     },
     "lebenserhaltung-01": {
       "file": "assets/realistic-v3-3.png",
@@ -1088,7 +1898,13 @@
       "rows": 6,
       "column": 0,
       "row": 3,
-      "name": "Wasserqualität"
+      "name": "Wasserqualität",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 16,
+      "cropY": 498,
+      "cropWidth": 133,
+      "cropHeight": 140
     },
     "lebenserhaltung-02": {
       "file": "assets/realistic-v3-3.png",
@@ -1096,7 +1912,13 @@
       "rows": 6,
       "column": 1,
       "row": 3,
-      "name": "Wasseraufbereitung"
+      "name": "Wasseraufbereitung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 182,
+      "cropY": 494,
+      "cropWidth": 142,
+      "cropHeight": 143
     },
     "lebenserhaltung-03": {
       "file": "assets/realistic-v3-3.png",
@@ -1104,7 +1926,13 @@
       "rows": 6,
       "column": 2,
       "row": 3,
-      "name": "Wasserkreislauf"
+      "name": "Wasserkreislauf",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 356,
+      "cropY": 490,
+      "cropWidth": 145,
+      "cropHeight": 152
     },
     "lebenserhaltung-04": {
       "file": "assets/realistic-v3-3.png",
@@ -1112,7 +1940,13 @@
       "rows": 6,
       "column": 3,
       "row": 3,
-      "name": "Luftüberwachung"
+      "name": "Luftüberwachung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 542,
+      "cropY": 494,
+      "cropWidth": 102,
+      "cropHeight": 151
     },
     "lebenserhaltung-05": {
       "file": "assets/realistic-v3-3.png",
@@ -1120,7 +1954,13 @@
       "rows": 6,
       "column": 4,
       "row": 3,
-      "name": "Sauerstoffversorgung"
+      "name": "Sauerstoffversorgung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 697,
+      "cropY": 491,
+      "cropWidth": 132,
+      "cropHeight": 151
     },
     "lebenserhaltung-06": {
       "file": "assets/realistic-v3-3.png",
@@ -1128,7 +1968,13 @@
       "rows": 6,
       "column": 5,
       "row": 3,
-      "name": "CO2-Abscheidung"
+      "name": "CO2-Abscheidung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 872,
+      "cropY": 489,
+      "cropWidth": 127,
+      "cropHeight": 153
     },
     "lebenserhaltung-07": {
       "file": "assets/realistic-v3-3.png",
@@ -1136,7 +1982,13 @@
       "rows": 6,
       "column": 6,
       "row": 3,
-      "name": "Leckdiagnose"
+      "name": "Leckdiagnose",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1039,
+      "cropY": 487,
+      "cropWidth": 148,
+      "cropHeight": 152
     },
     "lebenserhaltung-08": {
       "file": "assets/realistic-v3-3.png",
@@ -1144,7 +1996,13 @@
       "rows": 6,
       "column": 7,
       "row": 3,
-      "name": "Dichtungstausch"
+      "name": "Dichtungstausch",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1214,
+      "cropY": 501,
+      "cropWidth": 140,
+      "cropHeight": 142
     },
     "lebenserhaltung-09": {
       "file": "assets/realistic-v3-3.png",
@@ -1152,7 +2010,13 @@
       "rows": 6,
       "column": 8,
       "row": 3,
-      "name": "Temperaturregelung"
+      "name": "Temperaturregelung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1381,
+      "cropY": 499,
+      "cropWidth": 146,
+      "cropHeight": 133
     },
     "lebenserhaltung-10": {
       "file": "assets/realistic-v3-3.png",
@@ -1160,7 +2024,13 @@
       "rows": 6,
       "column": 0,
       "row": 4,
-      "name": "Vorratsprüfung"
+      "name": "Vorratsprüfung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 14,
+      "cropY": 649,
+      "cropWidth": 138,
+      "cropHeight": 147
     },
     "lebenserhaltung-11": {
       "file": "assets/realistic-v3-3.png",
@@ -1168,7 +2038,13 @@
       "rows": 6,
       "column": 1,
       "row": 4,
-      "name": "Syntheseanlage reparieren"
+      "name": "Syntheseanlage reparieren",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 176,
+      "cropY": 654,
+      "cropWidth": 153,
+      "cropHeight": 148
     },
     "lebenserhaltung-12": {
       "file": "assets/realistic-v3-3.png",
@@ -1176,7 +2052,13 @@
       "rows": 6,
       "column": 2,
       "row": 4,
-      "name": "Nahrungsqualität"
+      "name": "Nahrungsqualität",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 354,
+      "cropY": 657,
+      "cropWidth": 139,
+      "cropHeight": 147
     },
     "station-01": {
       "file": "assets/realistic-v3-3.png",
@@ -1184,7 +2066,13 @@
       "rows": 6,
       "column": 3,
       "row": 4,
-      "name": "Strukturdiagnose"
+      "name": "Strukturdiagnose",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 514,
+      "cropY": 651,
+      "cropWidth": 160,
+      "cropHeight": 143
     },
     "station-02": {
       "file": "assets/realistic-v3-3.png",
@@ -1192,7 +2080,13 @@
       "rows": 6,
       "column": 4,
       "row": 4,
-      "name": "Hülle reparieren"
+      "name": "Hülle reparieren",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 690,
+      "cropY": 649,
+      "cropWidth": 156,
+      "cropHeight": 146
     },
     "station-03": {
       "file": "assets/realistic-v3-3.png",
@@ -1200,7 +2094,13 @@
       "rows": 6,
       "column": 5,
       "row": 4,
-      "name": "Anschlüsse instandsetzen"
+      "name": "Anschlüsse instandsetzen",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 856,
+      "cropY": 650,
+      "cropWidth": 159,
+      "cropHeight": 156
     },
     "station-04": {
       "file": "assets/realistic-v3-3.png",
@@ -1208,7 +2108,13 @@
       "rows": 6,
       "column": 6,
       "row": 4,
-      "name": "Modulplanung"
+      "name": "Modulplanung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1030,
+      "cropY": 660,
+      "cropWidth": 153,
+      "cropHeight": 143
     },
     "station-05": {
       "file": "assets/realistic-v3-3.png",
@@ -1216,7 +2122,13 @@
       "rows": 6,
       "column": 7,
       "row": 4,
-      "name": "Versorgungsanschluss"
+      "name": "Versorgungsanschluss",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1197,
+      "cropY": 654,
+      "cropWidth": 168,
+      "cropHeight": 150
     },
     "station-06": {
       "file": "assets/realistic-v3-3.png",
@@ -1224,7 +2136,13 @@
       "rows": 6,
       "column": 8,
       "row": 4,
-      "name": "Modulmontage"
+      "name": "Modulmontage",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1372,
+      "cropY": 652,
+      "cropWidth": 160,
+      "cropHeight": 152
     },
     "station-07": {
       "file": "assets/realistic-v3-3.png",
@@ -1232,7 +2150,13 @@
       "rows": 6,
       "column": 0,
       "row": 5,
-      "name": "Druckprüfung"
+      "name": "Druckprüfung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 7,
+      "cropY": 813,
+      "cropWidth": 148,
+      "cropHeight": 162
     },
     "station-08": {
       "file": "assets/realistic-v3-3.png",
@@ -1240,7 +2164,13 @@
       "rows": 6,
       "column": 1,
       "row": 5,
-      "name": "Wohnbereich erweitern"
+      "name": "Wohnbereich erweitern",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 173,
+      "cropY": 825,
+      "cropWidth": 168,
+      "cropHeight": 139
     },
     "station-09": {
       "file": "assets/realistic-v3-3.png",
@@ -1248,7 +2178,13 @@
       "rows": 6,
       "column": 2,
       "row": 5,
-      "name": "Glasdom"
+      "name": "Glasdom",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 341,
+      "cropY": 832,
+      "cropWidth": 160,
+      "cropHeight": 128
     },
     "station-10": {
       "file": "assets/realistic-v3-3.png",
@@ -1256,7 +2192,13 @@
       "rows": 6,
       "column": 3,
       "row": 5,
-      "name": "Lagekontrolle"
+      "name": "Lagekontrolle",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 520,
+      "cropY": 820,
+      "cropWidth": 139,
+      "cropHeight": 148
     },
     "station-11": {
       "file": "assets/realistic-v3-3.png",
@@ -1264,7 +2206,13 @@
       "rows": 6,
       "column": 4,
       "row": 5,
-      "name": "Panelhalterung reparieren"
+      "name": "Panelhalterung reparieren",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 697,
+      "cropY": 815,
+      "cropWidth": 135,
+      "cropHeight": 156
     },
     "station-12": {
       "file": "assets/realistic-v3-3.png",
@@ -1272,7 +2220,13 @@
       "rows": 6,
       "column": 5,
       "row": 5,
-      "name": "Panelsteuerung"
+      "name": "Panelsteuerung",
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 859,
+      "cropY": 827,
+      "cropWidth": 148,
+      "cropHeight": 143
     }
   }
 }

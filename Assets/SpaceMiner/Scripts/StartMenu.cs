@@ -158,7 +158,7 @@ namespace SpaceMiner
         public void StartDemo()
         {
             if (!IsOpen || SettingsMenu.IsOpen || SaveGameMenu.IsOpen) return;
-            var saves = GetComponent<SaveGameMenu>();
+            var saves = FindFirstObjectByType<SaveGameMenu>();
             if (saves != null && !saves.NewSession()) return;
             FindFirstObjectByType<WaterScenario>()?.ResetScenario();
             IsOpen = false;
@@ -173,6 +173,8 @@ namespace SpaceMiner
         }
         public void ReturnToStart()
         {
+            FindFirstObjectByType<SaveGameMenu>()?.EndSession();
+            StationInteriorMode.Current?.Exit(true);
             galleryOpen=false;quitPrompt=false;sceneTime=0;
             ClearScenery();Camera.main.GetComponent<OrbitCamera>()?.ResetView();IsOpen=true;
         }
@@ -186,7 +188,7 @@ namespace SpaceMiner
             {
                 ui.Configure(SettingsStore.Current.Accessibility);
                 GUI.depth = -190;
-                float scale = Mathf.Min(Screen.width / 960f, Screen.height / 720f);
+                float scale = UiLayout.Scale(960, 720);
                 GUI.matrix = Matrix4x4.Scale(Vector3.one * scale);
                 float width = Screen.width / scale, height = Screen.height / scale;
                 if (galleryOpen) { DrawGallery(width, height); return; }
@@ -213,7 +215,7 @@ namespace SpaceMiner
                 else
                 {
                     if (GUI.Button(new Rect(panel.x + 28, panel.y + 212, 344, 48), "Demo starten", ui.Primary)) StartDemo();
-                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 266, 344, 42), "Spielstand laden", ui.Button)) GetComponent<SaveGameMenu>()?.OpenLoad();
+                    if (GUI.Button(new Rect(panel.x + 28, panel.y + 266, 344, 42), "Spielstand laden", ui.Button)) FindFirstObjectByType<SaveGameMenu>()?.OpenLoad();
                     if (GUI.Button(new Rect(panel.x + 28, panel.y + 314, 344, 42), "Cinematics", ui.Button)) { galleryOpen = true; SettingsUiAudio.Activate(); }
                     if (GUI.Button(new Rect(panel.x + 28, panel.y + 362, 344, 42), "Konfiguration", ui.Button)) { GetComponent<SettingsMenu>().Open(); SettingsUiAudio.Activate(); }
                     if (GUI.Button(new Rect(panel.x + 28, panel.y + 410, 344, 42), "Beenden", ui.Button)) { quitPrompt = true; SettingsUiAudio.Activate(); }

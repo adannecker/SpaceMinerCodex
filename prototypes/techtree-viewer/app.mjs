@@ -3,7 +3,15 @@ const $=s=>document.querySelector(s);
 const [{trees},atlas]=await Promise.all([fetch('/catalog.json').then(r=>r.json()),fetch('assets/realistic-v3.json').then(r=>r.json())]);
 let tree,graph,view,zoom=.5,pan=0,panY=0,selected=null,gesture=null;
 const svgNS='http://www.w3.org/2000/svg';
-function sprite(el,id){const a=atlas.mapping[id];el.style.backgroundImage=`url("${a.file}")`;el.style.backgroundSize=`${a.columns/.95*100}% ${a.rows/.84*100}%`;el.style.backgroundPosition=`${(a.column+.025)*100/(a.columns-.95)}% ${(a.row+.04)*100/(a.rows-.84)}%`;}
+function sprite(el,id){
+ const a=atlas.mapping[id],region=document.createElement('div'),size=Math.max(a.cropWidth,a.cropHeight);
+ region.className='sprite-region';
+ region.style.width=`${a.cropWidth/size*100}%`;region.style.height=`${a.cropHeight/size*100}%`;
+ region.style.backgroundImage=`url("${a.file}")`;
+ region.style.backgroundSize=`${a.imageWidth/a.cropWidth*100}% ${a.imageHeight/a.cropHeight*100}%`;
+ region.style.backgroundPosition=`${a.cropX*100/(a.imageWidth-a.cropWidth)}% ${a.cropY*100/(a.imageHeight-a.cropHeight)}%`;
+ el.replaceChildren(region);
+}
 function svg(tag,attributes){const el=document.createElementNS(svgNS,tag);for(const [k,v]of Object.entries(attributes))el.setAttribute(k,v);return el;}
 for(const t of trees){const b=document.createElement('button');b.textContent=t.title;const s=document.createElement('span');s.textContent=t.nodes.length;b.append(s);b.dataset.tree=t.id;b.onclick=()=>show(t);$('#trees').append(b);const o=new Option(t.title,t.id);$('#tree-select').append(o);}
 $('#tree-select').onchange=e=>show(trees.find(t=>t.id===e.target.value));

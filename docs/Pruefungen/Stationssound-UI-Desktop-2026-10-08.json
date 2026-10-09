@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-08",
+  "baseCommit": "ef25edc",
+  "sourceUnity": "6000.4.7f1",
+  "testedUnity": "6000.6.4f1",
+  "scope": "Stationsinteraktionssounds und gemeinsame UI-Skalierung",
+  "preview": "Builds/LocalPreview-6000.6.4f1",
+  "build": {
+    "log": "Logs/station-ui-audio-20261008-final-builds.log",
+    "exitCode": 0,
+    "settingsValidation": "passed",
+    "players": [
+      "SettingsDevelopment",
+      "SettingsRelease"
+    ]
+  },
+  "checks": [
+    {
+      "name": "StationUiAudioCheck",
+      "log": "Logs/station-ui-audio-20261008-final-ui-audio.log",
+      "exitCode": 0,
+      "checks": 79
+    },
+    {
+      "name": "StationHabitatCheck",
+      "log": "Logs/station-ui-audio-20261008-final-habitat.log",
+      "exitCode": 0,
+      "checks": 514
+    },
+    {
+      "name": "SaveSessionCheck",
+      "log": "Logs/station-ui-audio-20261008-final-save-session.log",
+      "exitCode": 0,
+      "checks": 227
+    },
+    {
+      "name": "SaveSession restart",
+      "log": "Logs/station-ui-audio-20261008-final-restart.log",
+      "exitCode": 0,
+      "checks": 104
+    },
+    {
+      "name": "Gameplay water order",
+      "log": "Logs/station-ui-audio-20261008-final-smoke.log",
+      "exitCode": 0,
+      "checks": 825
+    },
+    {
+      "name": "ConfigurationAudioCheck",
+      "log": "Logs/station-ui-audio-20261008-final-configuration-audio.log",
+      "exitCode": 0
+    },
+    {
+      "name": "WorldVisualCheck",
+      "log": "Logs/station-ui-audio-20261008-final-world.log",
+      "exitCode": 0
+    }
+  ],
+  "uiImages": {
+    "folder": "Logs/StationUiAudio",
+    "actualImageSizes": {
+      "1280x800": 8,
+      "1920x1080": 8,
+      "3840x2160": 8,
+      "800x600": 8
+    },
+    "scale": [
+      0.75,
+      1.5
+    ],
+    "textScale": 1.4,
+    "views": [
+      "Mira/quest",
+      "console",
+      "VR",
+      "settings"
+    ],
+    "review": "Representative images visually inspected. Initially clipped navigation corrected and final screenshots reviewed."
+  },
+  "audio": "Original local synthesis, 24 kHz mono; physical sources only inside station, Effects and Master channels; technical playback/level checks, no subjective listening approval.",
+  "nativeUi": "Not passed: Windows desktop locked; optional slider click check stopped and user asked to unlock.",
+  "limits": [
+    "New change not tested with source editor6000.4.7f1",
+    "Personal settings and saves isolated during new check/preview",
+    "No new commit/push",
+    "Logs and builds stay local"
+  ]
+}

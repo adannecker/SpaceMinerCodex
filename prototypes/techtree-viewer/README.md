@@ -25,3 +25,10 @@ Vollständiger Prompt-Satz/Provenienz: `assets/realistic-v3-prompts.json`. Tats�
 ## Kompakte Ansicht (aktuell09.10.2026)
 
 Einheitliche72px-Ausgangsicons über alle Kategorien,25% kleinere Ausgangsgeometrie,1:1-Reset statt automatischer Gesamteinpassung. Grosse Bäume ohne Scrollbalken in beiden Richtungen ziehen. Direkte Endpunktgruppen nutzen einen gemeinsamen Ausgang und eine horizontale Verteilerlinie mit unten andockenden Karten. Aktuelle Regel ersetzt frühere Höhenbegrenzung/Autoeinpassung/nur horizontale Navigation. Unity-Demo nutzt denselben Export. Siehe docs/Forschungslabor.md für Prüfung und Auflösungsskalierung.
+
+
+## Zentrierte Bildausschnitte (09.10.2026)
+
+Aktiv sind gemessene Pixelrechtecke statt gleich hoher Rasterzellen. `measure-atlas-crops.py` liest die unveränderten PNGs mit Pillow und schreibt `assets/realistic-v3-crops.json`; danach `node build-realistic-manifest.mjs` und `node export-unity.mjs`. Knoten und Detailkarten passen die Ausschnitte proportional ein und zentrieren sie. Ein über zwei Zellen generierter Hologrammtisch wird vollständig angezeigt; Frachtraumumbau erhält stattdessen eine bisher ungenutzte Frachtplattform aus Atlas 3. 159 getrennte Zuordnungen bleiben erhalten.
+
+Prüfung: 14 Node-Tests bestanden (inklusive Bildgrenzen, Reihenabstand, überschneidungsfreier Ausschnitte und Übereinstimmung mit Unity-Export). Energie, Mira, Drohnen und Drohnen-Detailkarte im Browser visuell geprüft; keine Browserwarnungen/-fehler. Unity-Quellcode angepasst, in diesem Durchgang kein Unity-Build oder Playercheck. Screenshot: `Logs/techtree-centered-2026-10-09.jpg` (lokal).

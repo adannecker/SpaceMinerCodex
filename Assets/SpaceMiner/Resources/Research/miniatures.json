@@ -6,7 +6,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 9,
+      "cropY": 16,
+      "cropWidth": 132,
+      "cropHeight": 126
     },
     {
       "id": "energie-02",
@@ -14,7 +20,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 166,
+      "cropY": 11,
+      "cropWidth": 123,
+      "cropHeight": 135
     },
     {
       "id": "energie-03",
@@ -22,7 +34,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 309,
+      "cropY": 22,
+      "cropWidth": 152,
+      "cropHeight": 125
     },
     {
       "id": "energie-04",
@@ -30,7 +48,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 492,
+      "cropY": 10,
+      "cropWidth": 101,
+      "cropHeight": 139
     },
     {
       "id": "energie-05",
@@ -38,7 +62,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 624,
+      "cropY": 21,
+      "cropWidth": 134,
+      "cropHeight": 124
     },
     {
       "id": "energie-06",
@@ -46,7 +76,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 788,
+      "cropY": 12,
+      "cropWidth": 116,
+      "cropHeight": 135
     },
     {
       "id": "energie-07",
@@ -54,7 +90,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 935,
+      "cropY": 18,
+      "cropWidth": 130,
+      "cropHeight": 126
     },
     {
       "id": "energie-08",
@@ -62,7 +104,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1094,
+      "cropY": 23,
+      "cropWidth": 125,
+      "cropHeight": 122
     },
     {
       "id": "energie-09",
@@ -70,7 +118,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1245,
+      "cropY": 29,
+      "cropWidth": 122,
+      "cropHeight": 113
     },
     {
       "id": "energie-10",
@@ -78,7 +132,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1388,
+      "cropY": 12,
+      "cropWidth": 140,
+      "cropHeight": 135
     },
     {
       "id": "energie-11",
@@ -86,7 +146,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 7,
+      "cropY": 168,
+      "cropWidth": 135,
+      "cropHeight": 134
     },
     {
       "id": "energie-12",
@@ -94,7 +160,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 165,
+      "cropY": 170,
+      "cropWidth": 128,
+      "cropHeight": 136
     },
     {
       "id": "wiederverwertung-01",
@@ -102,7 +174,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 307,
+      "cropY": 174,
+      "cropWidth": 149,
+      "cropHeight": 131
     },
     {
       "id": "wiederverwertung-02",
@@ -110,7 +188,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 473,
+      "cropY": 166,
+      "cropWidth": 134,
+      "cropHeight": 129
     },
     {
       "id": "wiederverwertung-03",
@@ -118,7 +202,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 630,
+      "cropY": 174,
+      "cropWidth": 127,
+      "cropHeight": 120
     },
     {
       "id": "wiederverwertung-04",
@@ -126,7 +216,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 786,
+      "cropY": 166,
+      "cropWidth": 122,
+      "cropHeight": 139
     },
     {
       "id": "wiederverwertung-05",
@@ -134,7 +230,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 938,
+      "cropY": 165,
+      "cropWidth": 121,
+      "cropHeight": 142
     },
     {
       "id": "wiederverwertung-06",
@@ -142,7 +244,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1090,
+      "cropY": 174,
+      "cropWidth": 125,
+      "cropHeight": 128
     },
     {
       "id": "wiederverwertung-07",
@@ -150,7 +258,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1234,
+      "cropY": 167,
+      "cropWidth": 136,
+      "cropHeight": 139
     },
     {
       "id": "wiederverwertung-08",
@@ -158,7 +272,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1394,
+      "cropY": 173,
+      "cropWidth": 131,
+      "cropHeight": 136
     },
     {
       "id": "wiederverwertung-09",
@@ -166,7 +286,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 13,
+      "cropY": 327,
+      "cropWidth": 130,
+      "cropHeight": 140
     },
     {
       "id": "wiederverwertung-10",
@@ -174,7 +300,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 171,
+      "cropY": 327,
+      "cropWidth": 114,
+      "cropHeight": 143
     },
     {
       "id": "materialien-01",
@@ -182,7 +314,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 307,
+      "cropY": 335,
+      "cropWidth": 154,
+      "cropHeight": 135
     },
     {
       "id": "materialien-02",
@@ -190,7 +328,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 461,
+      "cropY": 337,
+      "cropWidth": 152,
+      "cropHeight": 121
     },
     {
       "id": "materialien-03",
@@ -198,7 +342,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 631,
+      "cropY": 321,
+      "cropWidth": 131,
+      "cropHeight": 148
     },
     {
       "id": "materialien-04",
@@ -206,7 +356,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 785,
+      "cropY": 328,
+      "cropWidth": 123,
+      "cropHeight": 134
     },
     {
       "id": "materialien-05",
@@ -214,7 +370,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 935,
+      "cropY": 328,
+      "cropWidth": 131,
+      "cropHeight": 137
     },
     {
       "id": "materialien-06",
@@ -222,7 +384,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1087,
+      "cropY": 330,
+      "cropWidth": 133,
+      "cropHeight": 132
     },
     {
       "id": "materialien-07",
@@ -230,7 +398,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1244,
+      "cropY": 329,
+      "cropWidth": 131,
+      "cropHeight": 133
     },
     {
       "id": "materialien-08",
@@ -238,7 +412,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1391,
+      "cropY": 334,
+      "cropWidth": 133,
+      "cropHeight": 134
     },
     {
       "id": "materialien-09",
@@ -246,7 +426,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 13,
+      "cropY": 490,
+      "cropWidth": 129,
+      "cropHeight": 138
     },
     {
       "id": "materialien-10",
@@ -254,7 +440,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 167,
+      "cropY": 485,
+      "cropWidth": 122,
+      "cropHeight": 144
     },
     {
       "id": "materialien-11",
@@ -262,7 +454,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 314,
+      "cropY": 481,
+      "cropWidth": 133,
+      "cropHeight": 156
     },
     {
       "id": "materialien-12",
@@ -270,7 +468,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 472,
+      "cropY": 482,
+      "cropWidth": 132,
+      "cropHeight": 153
     },
     {
       "id": "materialien-13",
@@ -278,7 +482,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 621,
+      "cropY": 489,
+      "cropWidth": 146,
+      "cropHeight": 140
     },
     {
       "id": "materialien-14",
@@ -286,7 +496,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 774,
+      "cropY": 499,
+      "cropWidth": 145,
+      "cropHeight": 135
     },
     {
       "id": "materialien-15",
@@ -294,7 +510,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 939,
+      "cropY": 483,
+      "cropWidth": 125,
+      "cropHeight": 151
     },
     {
       "id": "materialien-16",
@@ -302,7 +524,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1080,
+      "cropY": 488,
+      "cropWidth": 149,
+      "cropHeight": 143
     },
     {
       "id": "materialien-17",
@@ -310,7 +538,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1229,
+      "cropY": 488,
+      "cropWidth": 146,
+      "cropHeight": 146
     },
     {
       "id": "materialien-18",
@@ -318,7 +552,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1389,
+      "cropY": 482,
+      "cropWidth": 134,
+      "cropHeight": 154
     },
     {
       "id": "materialien-19",
@@ -326,7 +566,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 14,
+      "cropY": 651,
+      "cropWidth": 128,
+      "cropHeight": 150
     },
     {
       "id": "materialien-20",
@@ -334,7 +580,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 167,
+      "cropY": 651,
+      "cropWidth": 126,
+      "cropHeight": 147
     },
     {
       "id": "materialien-21",
@@ -342,7 +594,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 315,
+      "cropY": 666,
+      "cropWidth": 138,
+      "cropHeight": 129
     },
     {
       "id": "materialien-22",
@@ -350,7 +608,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 473,
+      "cropY": 657,
+      "cropWidth": 127,
+      "cropHeight": 131
     },
     {
       "id": "materialien-23",
@@ -358,7 +622,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 624,
+      "cropY": 651,
+      "cropWidth": 131,
+      "cropHeight": 146
     },
     {
       "id": "materialien-24",
@@ -366,7 +636,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 775,
+      "cropY": 669,
+      "cropWidth": 140,
+      "cropHeight": 122
     },
     {
       "id": "verbindungen-01",
@@ -374,7 +650,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 938,
+      "cropY": 651,
+      "cropWidth": 128,
+      "cropHeight": 152
     },
     {
       "id": "verbindungen-02",
@@ -382,7 +664,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1091,
+      "cropY": 656,
+      "cropWidth": 127,
+      "cropHeight": 143
     },
     {
       "id": "verbindungen-03",
@@ -390,7 +678,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1235,
+      "cropY": 651,
+      "cropWidth": 135,
+      "cropHeight": 152
     },
     {
       "id": "verbindungen-04",
@@ -398,7 +692,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1390,
+      "cropY": 654,
+      "cropWidth": 128,
+      "cropHeight": 141
     },
     {
       "id": "verbindungen-05",
@@ -406,7 +706,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 16,
+      "cropY": 824,
+      "cropWidth": 126,
+      "cropHeight": 144
     },
     {
       "id": "verbindungen-06",
@@ -414,7 +720,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 160,
+      "cropY": 825,
+      "cropWidth": 132,
+      "cropHeight": 145
     },
     {
       "id": "verbindungen-07",
@@ -422,7 +734,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 313,
+      "cropY": 818,
+      "cropWidth": 135,
+      "cropHeight": 152
     },
     {
       "id": "verbindungen-08",
@@ -430,7 +748,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 474,
+      "cropY": 831,
+      "cropWidth": 137,
+      "cropHeight": 133
     },
     {
       "id": "verbindungen-09",
@@ -438,7 +762,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 18,
+      "cropY": 5,
+      "cropWidth": 133,
+      "cropHeight": 148
     },
     {
       "id": "verbindungen-10",
@@ -446,7 +776,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 179,
+      "cropY": 6,
+      "cropWidth": 121,
+      "cropHeight": 145
     },
     {
       "id": "verbindungen-11",
@@ -454,7 +790,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 324,
+      "cropY": 6,
+      "cropWidth": 131,
+      "cropHeight": 146
     },
     {
       "id": "verbindungen-12",
@@ -462,7 +804,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 479,
+      "cropY": 8,
+      "cropWidth": 130,
+      "cropHeight": 142
     },
     {
       "id": "verbindungen-13",
@@ -470,7 +818,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 634,
+      "cropY": 6,
+      "cropWidth": 124,
+      "cropHeight": 146
     },
     {
       "id": "verbindungen-14",
@@ -478,7 +832,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 781,
+      "cropY": 5,
+      "cropWidth": 132,
+      "cropHeight": 147
     },
     {
       "id": "verbindungen-15",
@@ -486,7 +846,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 937,
+      "cropY": 6,
+      "cropWidth": 128,
+      "cropHeight": 146
     },
     {
       "id": "verbindungen-16",
@@ -494,7 +860,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1088,
+      "cropY": 9,
+      "cropWidth": 129,
+      "cropHeight": 145
     },
     {
       "id": "verbindungen-17",
@@ -502,7 +874,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1239,
+      "cropY": 20,
+      "cropWidth": 137,
+      "cropHeight": 128
     },
     {
       "id": "verbindungen-18",
@@ -510,7 +888,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1398,
+      "cropY": 8,
+      "cropWidth": 116,
+      "cropHeight": 140
     },
     {
       "id": "verbindungen-19",
@@ -518,7 +902,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 20,
+      "cropY": 165,
+      "cropWidth": 133,
+      "cropHeight": 138
     },
     {
       "id": "verbindungen-20",
@@ -526,7 +916,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 173,
+      "cropY": 159,
+      "cropWidth": 132,
+      "cropHeight": 144
     },
     {
       "id": "verbindungen-21",
@@ -534,7 +930,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 329,
+      "cropY": 162,
+      "cropWidth": 124,
+      "cropHeight": 146
     },
     {
       "id": "mira-01",
@@ -542,7 +944,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 472,
+      "cropY": 161,
+      "cropWidth": 138,
+      "cropHeight": 146
     },
     {
       "id": "mira-02",
@@ -550,7 +958,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 628,
+      "cropY": 173,
+      "cropWidth": 139,
+      "cropHeight": 121
     },
     {
       "id": "mira-03",
@@ -558,7 +972,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 780,
+      "cropY": 167,
+      "cropWidth": 137,
+      "cropHeight": 132
     },
     {
       "id": "mira-04",
@@ -566,7 +986,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 930,
+      "cropY": 173,
+      "cropWidth": 141,
+      "cropHeight": 137
     },
     {
       "id": "mira-05",
@@ -574,7 +1000,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1088,
+      "cropY": 187,
+      "cropWidth": 132,
+      "cropHeight": 111
     },
     {
       "id": "mira-06",
@@ -582,7 +1014,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1238,
+      "cropY": 162,
+      "cropWidth": 133,
+      "cropHeight": 144
     },
     {
       "id": "mira-07",
@@ -590,7 +1028,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1388,
+      "cropY": 168,
+      "cropWidth": 135,
+      "cropHeight": 139
     },
     {
       "id": "mira-08",
@@ -598,7 +1042,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 14,
+      "cropY": 324,
+      "cropWidth": 135,
+      "cropHeight": 140
     },
     {
       "id": "mira-09",
@@ -606,7 +1056,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 168,
+      "cropY": 319,
+      "cropWidth": 137,
+      "cropHeight": 146
     },
     {
       "id": "mira-10",
@@ -614,7 +1070,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 317,
+      "cropY": 321,
+      "cropWidth": 137,
+      "cropHeight": 141
     },
     {
       "id": "mira-11",
@@ -622,7 +1084,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 473,
+      "cropY": 319,
+      "cropWidth": 137,
+      "cropHeight": 145
     },
     {
       "id": "mira-12",
@@ -630,7 +1098,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 627,
+      "cropY": 313,
+      "cropWidth": 139,
+      "cropHeight": 150
     },
     {
       "id": "drohnen-01",
@@ -638,7 +1112,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 777,
+      "cropY": 330,
+      "cropWidth": 143,
+      "cropHeight": 133
     },
     {
       "id": "drohnen-02",
@@ -646,15 +1126,27 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 933,
+      "cropY": 334,
+      "cropWidth": 285,
+      "cropHeight": 134
     },
     {
       "id": "drohnen-03",
-      "texture": "realistic-v3-2",
-      "columns": 10,
+      "texture": "realistic-v3-3",
+      "columns": 9,
       "rows": 6,
-      "column": 7,
-      "row": 2
+      "column": 6,
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1039,
+      "cropY": 818,
+      "cropWidth": 134,
+      "cropHeight": 158
     },
     {
       "id": "drohnen-04",
@@ -662,7 +1154,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1235,
+      "cropY": 322,
+      "cropWidth": 147,
+      "cropHeight": 140
     },
     {
       "id": "drohnen-05",
@@ -670,7 +1168,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1382,
+      "cropY": 349,
+      "cropWidth": 142,
+      "cropHeight": 111
     },
     {
       "id": "drohnen-06",
@@ -678,7 +1182,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 14,
+      "cropY": 486,
+      "cropWidth": 135,
+      "cropHeight": 136
     },
     {
       "id": "drohnen-07",
@@ -686,7 +1196,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 165,
+      "cropY": 481,
+      "cropWidth": 141,
+      "cropHeight": 136
     },
     {
       "id": "drohnen-08",
@@ -694,7 +1210,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 319,
+      "cropY": 497,
+      "cropWidth": 140,
+      "cropHeight": 115
     },
     {
       "id": "drohnen-09",
@@ -702,7 +1224,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 468,
+      "cropY": 474,
+      "cropWidth": 142,
+      "cropHeight": 151
     },
     {
       "id": "drohnen-10",
@@ -710,7 +1238,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 624,
+      "cropY": 494,
+      "cropWidth": 141,
+      "cropHeight": 130
     },
     {
       "id": "drohnen-11",
@@ -718,7 +1252,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 782,
+      "cropY": 487,
+      "cropWidth": 129,
+      "cropHeight": 138
     },
     {
       "id": "drohnen-12",
@@ -726,7 +1266,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 931,
+      "cropY": 488,
+      "cropWidth": 136,
+      "cropHeight": 137
     },
     {
       "id": "drohnen-13",
@@ -734,7 +1280,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1075,
+      "cropY": 486,
+      "cropWidth": 149,
+      "cropHeight": 134
     },
     {
       "id": "drohnen-14",
@@ -742,7 +1294,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1235,
+      "cropY": 490,
+      "cropWidth": 141,
+      "cropHeight": 128
     },
     {
       "id": "drohnen-15",
@@ -750,7 +1308,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1386,
+      "cropY": 479,
+      "cropWidth": 136,
+      "cropHeight": 143
     },
     {
       "id": "drohnen-16",
@@ -758,7 +1322,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 16,
+      "cropY": 629,
+      "cropWidth": 130,
+      "cropHeight": 166
     },
     {
       "id": "scanner-01",
@@ -766,7 +1336,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 162,
+      "cropY": 656,
+      "cropWidth": 136,
+      "cropHeight": 129
     },
     {
       "id": "scanner-02",
@@ -774,7 +1350,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 316,
+      "cropY": 645,
+      "cropWidth": 135,
+      "cropHeight": 140
     },
     {
       "id": "scanner-03",
@@ -782,7 +1364,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 471,
+      "cropY": 644,
+      "cropWidth": 140,
+      "cropHeight": 140
     },
     {
       "id": "scanner-04",
@@ -790,7 +1378,13 @@
       "columns": 10,
       "rows": 6,
       "column": 4,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 622,
+      "cropY": 671,
+      "cropWidth": 144,
+      "cropHeight": 104
     },
     {
       "id": "scanner-05",
@@ -798,7 +1392,13 @@
       "columns": 10,
       "rows": 6,
       "column": 5,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 777,
+      "cropY": 651,
+      "cropWidth": 142,
+      "cropHeight": 130
     },
     {
       "id": "scanner-06",
@@ -806,7 +1406,13 @@
       "columns": 10,
       "rows": 6,
       "column": 6,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 950,
+      "cropY": 651,
+      "cropWidth": 100,
+      "cropHeight": 138
     },
     {
       "id": "scanner-07",
@@ -814,7 +1420,13 @@
       "columns": 10,
       "rows": 6,
       "column": 7,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1081,
+      "cropY": 640,
+      "cropWidth": 127,
+      "cropHeight": 150
     },
     {
       "id": "scanner-08",
@@ -822,7 +1434,13 @@
       "columns": 10,
       "rows": 6,
       "column": 8,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1242,
+      "cropY": 640,
+      "cropWidth": 108,
+      "cropHeight": 155
     },
     {
       "id": "scanner-09",
@@ -830,7 +1448,13 @@
       "columns": 10,
       "rows": 6,
       "column": 9,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1382,
+      "cropY": 656,
+      "cropWidth": 139,
+      "cropHeight": 127
     },
     {
       "id": "scanner-10",
@@ -838,7 +1462,13 @@
       "columns": 10,
       "rows": 6,
       "column": 0,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 24,
+      "cropY": 816,
+      "cropWidth": 115,
+      "cropHeight": 162
     },
     {
       "id": "scanner-11",
@@ -846,7 +1476,13 @@
       "columns": 10,
       "rows": 6,
       "column": 1,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 162,
+      "cropY": 824,
+      "cropWidth": 135,
+      "cropHeight": 146
     },
     {
       "id": "scanner-12",
@@ -854,7 +1490,13 @@
       "columns": 10,
       "rows": 6,
       "column": 2,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 314,
+      "cropY": 811,
+      "cropWidth": 147,
+      "cropHeight": 169
     },
     {
       "id": "produktion-01",
@@ -862,7 +1504,13 @@
       "columns": 10,
       "rows": 6,
       "column": 3,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 461,
+      "cropY": 819,
+      "cropWidth": 149,
+      "cropHeight": 154
     },
     {
       "id": "produktion-02",
@@ -870,7 +1518,13 @@
       "columns": 9,
       "rows": 6,
       "column": 0,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 9,
+      "cropY": 6,
+      "cropWidth": 145,
+      "cropHeight": 149
     },
     {
       "id": "produktion-03",
@@ -878,7 +1532,13 @@
       "columns": 9,
       "rows": 6,
       "column": 1,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 183,
+      "cropY": 11,
+      "cropWidth": 147,
+      "cropHeight": 146
     },
     {
       "id": "produktion-04",
@@ -886,7 +1546,13 @@
       "columns": 9,
       "rows": 6,
       "column": 2,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 363,
+      "cropY": 12,
+      "cropWidth": 127,
+      "cropHeight": 146
     },
     {
       "id": "produktion-05",
@@ -894,7 +1560,13 @@
       "columns": 9,
       "rows": 6,
       "column": 3,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 529,
+      "cropY": 5,
+      "cropWidth": 136,
+      "cropHeight": 156
     },
     {
       "id": "produktion-06",
@@ -902,7 +1574,13 @@
       "columns": 9,
       "rows": 6,
       "column": 4,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 706,
+      "cropY": 5,
+      "cropWidth": 120,
+      "cropHeight": 154
     },
     {
       "id": "produktion-07",
@@ -910,7 +1588,13 @@
       "columns": 9,
       "rows": 6,
       "column": 5,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 864,
+      "cropY": 9,
+      "cropWidth": 138,
+      "cropHeight": 149
     },
     {
       "id": "produktion-08",
@@ -918,7 +1602,13 @@
       "columns": 9,
       "rows": 6,
       "column": 6,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1030,
+      "cropY": 14,
+      "cropWidth": 151,
+      "cropHeight": 143
     },
     {
       "id": "produktion-09",
@@ -926,7 +1616,13 @@
       "columns": 9,
       "rows": 6,
       "column": 7,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1203,
+      "cropY": 2,
+      "cropWidth": 149,
+      "cropHeight": 160
     },
     {
       "id": "produktion-10",
@@ -934,7 +1630,13 @@
       "columns": 9,
       "rows": 6,
       "column": 8,
-      "row": 0
+      "row": 0,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1378,
+      "cropY": 4,
+      "cropWidth": 150,
+      "cropHeight": 156
     },
     {
       "id": "produktion-11",
@@ -942,7 +1644,13 @@
       "columns": 9,
       "rows": 6,
       "column": 0,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 11,
+      "cropY": 172,
+      "cropWidth": 147,
+      "cropHeight": 145
     },
     {
       "id": "produktion-12",
@@ -950,7 +1658,13 @@
       "columns": 9,
       "rows": 6,
       "column": 1,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 181,
+      "cropY": 168,
+      "cropWidth": 143,
+      "cropHeight": 148
     },
     {
       "id": "produktion-13",
@@ -958,7 +1672,13 @@
       "columns": 9,
       "rows": 6,
       "column": 2,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 350,
+      "cropY": 170,
+      "cropWidth": 151,
+      "cropHeight": 149
     },
     {
       "id": "produktion-14",
@@ -966,7 +1686,13 @@
       "columns": 9,
       "rows": 6,
       "column": 3,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 520,
+      "cropY": 176,
+      "cropWidth": 154,
+      "cropHeight": 139
     },
     {
       "id": "produktion-15",
@@ -974,7 +1700,13 @@
       "columns": 9,
       "rows": 6,
       "column": 4,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 699,
+      "cropY": 178,
+      "cropWidth": 137,
+      "cropHeight": 139
     },
     {
       "id": "produktion-16",
@@ -982,7 +1714,13 @@
       "columns": 9,
       "rows": 6,
       "column": 5,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 864,
+      "cropY": 177,
+      "cropWidth": 152,
+      "cropHeight": 138
     },
     {
       "id": "logistik-01",
@@ -990,7 +1728,13 @@
       "columns": 9,
       "rows": 6,
       "column": 6,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1039,
+      "cropY": 168,
+      "cropWidth": 148,
+      "cropHeight": 148
     },
     {
       "id": "logistik-02",
@@ -998,7 +1742,13 @@
       "columns": 9,
       "rows": 6,
       "column": 7,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1209,
+      "cropY": 174,
+      "cropWidth": 142,
+      "cropHeight": 140
     },
     {
       "id": "logistik-03",
@@ -1006,7 +1756,13 @@
       "columns": 9,
       "rows": 6,
       "column": 8,
-      "row": 1
+      "row": 1,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1378,
+      "cropY": 171,
+      "cropWidth": 146,
+      "cropHeight": 153
     },
     {
       "id": "logistik-04",
@@ -1014,7 +1770,13 @@
       "columns": 9,
       "rows": 6,
       "column": 0,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 8,
+      "cropY": 330,
+      "cropWidth": 151,
+      "cropHeight": 147
     },
     {
       "id": "logistik-05",
@@ -1022,7 +1784,13 @@
       "columns": 9,
       "rows": 6,
       "column": 1,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 181,
+      "cropY": 331,
+      "cropWidth": 143,
+      "cropHeight": 149
     },
     {
       "id": "logistik-06",
@@ -1030,7 +1798,13 @@
       "columns": 9,
       "rows": 6,
       "column": 2,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 350,
+      "cropY": 338,
+      "cropWidth": 146,
+      "cropHeight": 136
     },
     {
       "id": "logistik-07",
@@ -1038,7 +1812,13 @@
       "columns": 9,
       "rows": 6,
       "column": 3,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 519,
+      "cropY": 345,
+      "cropWidth": 150,
+      "cropHeight": 127
     },
     {
       "id": "logistik-08",
@@ -1046,7 +1826,13 @@
       "columns": 9,
       "rows": 6,
       "column": 4,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 683,
+      "cropY": 335,
+      "cropWidth": 165,
+      "cropHeight": 126
     },
     {
       "id": "logistik-09",
@@ -1054,7 +1840,13 @@
       "columns": 9,
       "rows": 6,
       "column": 5,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 863,
+      "cropY": 336,
+      "cropWidth": 152,
+      "cropHeight": 144
     },
     {
       "id": "logistik-10",
@@ -1062,7 +1854,13 @@
       "columns": 9,
       "rows": 6,
       "column": 6,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1030,
+      "cropY": 341,
+      "cropWidth": 156,
+      "cropHeight": 129
     },
     {
       "id": "logistik-11",
@@ -1070,7 +1868,13 @@
       "columns": 9,
       "rows": 6,
       "column": 7,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1200,
+      "cropY": 342,
+      "cropWidth": 158,
+      "cropHeight": 128
     },
     {
       "id": "logistik-12",
@@ -1078,7 +1882,13 @@
       "columns": 9,
       "rows": 6,
       "column": 8,
-      "row": 2
+      "row": 2,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1376,
+      "cropY": 354,
+      "cropWidth": 153,
+      "cropHeight": 124
     },
     {
       "id": "lebenserhaltung-01",
@@ -1086,7 +1896,13 @@
       "columns": 9,
       "rows": 6,
       "column": 0,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 16,
+      "cropY": 498,
+      "cropWidth": 133,
+      "cropHeight": 140
     },
     {
       "id": "lebenserhaltung-02",
@@ -1094,7 +1910,13 @@
       "columns": 9,
       "rows": 6,
       "column": 1,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 182,
+      "cropY": 494,
+      "cropWidth": 142,
+      "cropHeight": 143
     },
     {
       "id": "lebenserhaltung-03",
@@ -1102,7 +1924,13 @@
       "columns": 9,
       "rows": 6,
       "column": 2,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 356,
+      "cropY": 490,
+      "cropWidth": 145,
+      "cropHeight": 152
     },
     {
       "id": "lebenserhaltung-04",
@@ -1110,7 +1938,13 @@
       "columns": 9,
       "rows": 6,
       "column": 3,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 542,
+      "cropY": 494,
+      "cropWidth": 102,
+      "cropHeight": 151
     },
     {
       "id": "lebenserhaltung-05",
@@ -1118,7 +1952,13 @@
       "columns": 9,
       "rows": 6,
       "column": 4,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 697,
+      "cropY": 491,
+      "cropWidth": 132,
+      "cropHeight": 151
     },
     {
       "id": "lebenserhaltung-06",
@@ -1126,7 +1966,13 @@
       "columns": 9,
       "rows": 6,
       "column": 5,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 872,
+      "cropY": 489,
+      "cropWidth": 127,
+      "cropHeight": 153
     },
     {
       "id": "lebenserhaltung-07",
@@ -1134,7 +1980,13 @@
       "columns": 9,
       "rows": 6,
       "column": 6,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1039,
+      "cropY": 487,
+      "cropWidth": 148,
+      "cropHeight": 152
     },
     {
       "id": "lebenserhaltung-08",
@@ -1142,7 +1994,13 @@
       "columns": 9,
       "rows": 6,
       "column": 7,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1214,
+      "cropY": 501,
+      "cropWidth": 140,
+      "cropHeight": 142
     },
     {
       "id": "lebenserhaltung-09",
@@ -1150,7 +2008,13 @@
       "columns": 9,
       "rows": 6,
       "column": 8,
-      "row": 3
+      "row": 3,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1381,
+      "cropY": 499,
+      "cropWidth": 146,
+      "cropHeight": 133
     },
     {
       "id": "lebenserhaltung-10",
@@ -1158,7 +2022,13 @@
       "columns": 9,
       "rows": 6,
       "column": 0,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 14,
+      "cropY": 649,
+      "cropWidth": 138,
+      "cropHeight": 147
     },
     {
       "id": "lebenserhaltung-11",
@@ -1166,7 +2036,13 @@
       "columns": 9,
       "rows": 6,
       "column": 1,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 176,
+      "cropY": 654,
+      "cropWidth": 153,
+      "cropHeight": 148
     },
     {
       "id": "lebenserhaltung-12",
@@ -1174,7 +2050,13 @@
       "columns": 9,
       "rows": 6,
       "column": 2,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 354,
+      "cropY": 657,
+      "cropWidth": 139,
+      "cropHeight": 147
     },
     {
       "id": "station-01",
@@ -1182,7 +2064,13 @@
       "columns": 9,
       "rows": 6,
       "column": 3,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 514,
+      "cropY": 651,
+      "cropWidth": 160,
+      "cropHeight": 143
     },
     {
       "id": "station-02",
@@ -1190,7 +2078,13 @@
       "columns": 9,
       "rows": 6,
       "column": 4,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 690,
+      "cropY": 649,
+      "cropWidth": 156,
+      "cropHeight": 146
     },
     {
       "id": "station-03",
@@ -1198,7 +2092,13 @@
       "columns": 9,
       "rows": 6,
       "column": 5,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 856,
+      "cropY": 650,
+      "cropWidth": 159,
+      "cropHeight": 156
     },
     {
       "id": "station-04",
@@ -1206,7 +2106,13 @@
       "columns": 9,
       "rows": 6,
       "column": 6,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1030,
+      "cropY": 660,
+      "cropWidth": 153,
+      "cropHeight": 143
     },
     {
       "id": "station-05",
@@ -1214,7 +2120,13 @@
       "columns": 9,
       "rows": 6,
       "column": 7,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1197,
+      "cropY": 654,
+      "cropWidth": 168,
+      "cropHeight": 150
     },
     {
       "id": "station-06",
@@ -1222,7 +2134,13 @@
       "columns": 9,
       "rows": 6,
       "column": 8,
-      "row": 4
+      "row": 4,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 1372,
+      "cropY": 652,
+      "cropWidth": 160,
+      "cropHeight": 152
     },
     {
       "id": "station-07",
@@ -1230,7 +2148,13 @@
       "columns": 9,
       "rows": 6,
       "column": 0,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 7,
+      "cropY": 813,
+      "cropWidth": 148,
+      "cropHeight": 162
     },
     {
       "id": "station-08",
@@ -1238,7 +2162,13 @@
       "columns": 9,
       "rows": 6,
       "column": 1,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 173,
+      "cropY": 825,
+      "cropWidth": 168,
+      "cropHeight": 139
     },
     {
       "id": "station-09",
@@ -1246,7 +2176,13 @@
       "columns": 9,
       "rows": 6,
       "column": 2,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 341,
+      "cropY": 832,
+      "cropWidth": 160,
+      "cropHeight": 128
     },
     {
       "id": "station-10",
@@ -1254,7 +2190,13 @@
       "columns": 9,
       "rows": 6,
       "column": 3,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 520,
+      "cropY": 820,
+      "cropWidth": 139,
+      "cropHeight": 148
     },
     {
       "id": "station-11",
@@ -1262,7 +2204,13 @@
       "columns": 9,
       "rows": 6,
       "column": 4,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 697,
+      "cropY": 815,
+      "cropWidth": 135,
+      "cropHeight": 156
     },
     {
       "id": "station-12",
@@ -1270,7 +2218,13 @@
       "columns": 9,
       "rows": 6,
       "column": 5,
-      "row": 5
+      "row": 5,
+      "imageWidth": 1536,
+      "imageHeight": 1024,
+      "cropX": 859,
+      "cropY": 827,
+      "cropWidth": 148,
+      "cropHeight": 143
     }
   ]
 }

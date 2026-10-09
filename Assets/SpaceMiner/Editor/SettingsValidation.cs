@@ -48,6 +48,12 @@ namespace SpaceMiner.Editor
             Require(bindings.TryAssign(CameraAction.Forward, KeyCode.S) && bindings.Get(CameraAction.Backward) == KeyCode.W, "binding conflict swaps");
             Require(!bindings.TryAssign(CameraAction.Forward, KeyCode.F10), "developer shortcut reserved");
             bindings.Keys = null; bindings.Validate(); Require(bindings.Get(CameraAction.Forward) == KeyCode.W, "legacy binding defaults");
+            Require(bindings.Get(CameraAction.Technology)==KeyCode.T,"technology default shortcut");
+            var legacyKeys=new CameraBindings();legacyKeys.TryAssign(CameraAction.Forward,KeyCode.T);
+            legacyKeys.Keys=System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Take(legacyKeys.Keys,10));
+            var oldKeys=(KeyCode[])legacyKeys.Keys.Clone();legacyKeys.Validate();
+            Require(System.Linq.Enumerable.SequenceEqual(oldKeys,System.Linq.Enumerable.Take(legacyKeys.Keys,10)),"legacy custom camera keys preserved");
+            Require(legacyKeys.Keys.Length==11&&legacyKeys.Get(CameraAction.Technology)!=KeyCode.T,"legacy T conflict migrated to unused shortcut");
             var settings = new SpaceMinerPlayerSettings();
             var copy = settings.Copy(); copy.Controls.Sensitivity = 2;
             Require(settings.Controls.Sensitivity == 1, "draft isolation");

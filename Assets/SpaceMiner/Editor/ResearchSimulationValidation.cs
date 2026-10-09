@@ -11,6 +11,14 @@ namespace SpaceMiner.Editor
     {
         public static void Run()
         {
+            SettingsValidation.Run();
+            foreach(var size in new[]{new Vector2(1440,900),new Vector2(1600,1000),new Vector2(2560,1440)}){
+                var bounds=MiraVisorOverlay.Bounds(size.x,size.y);var overlay=MiraVisorOverlay.Arrange(bounds);
+                Require(bounds.x>=0&&bounds.y>=0&&bounds.xMax<=size.x&&bounds.yMax<=size.y,"visor stays on screen");
+                Require(overlay.Portrait.xMax<overlay.Body.x&&overlay.Body.width>0&&overlay.Body.height>0,"portrait left of readable text");
+                Require(bounds.Contains(overlay.Footer.center)&&bounds.Contains(overlay.Portrait.center),"visor content inside frame");
+            }
+            Require(Resources.Load<Texture2D>("Mira/MiraDialoguePortraits")!=null,"shared Mira portrait available");
             ConfigureMiniatures();
             using(var pictures=new ResearchMiniatures())Require(pictures.Count==159,"159 realistic miniatures");
             var catalog=JsonUtility.FromJson<ResearchCatalog>(Resources.Load<TextAsset>("Research/catalog").text);
@@ -120,11 +128,15 @@ namespace SpaceMiner.Editor
         public static void BuildDemo()
         {
             Run();
+            string productName=PlayerSettings.productName;
+            try{
+            PlayerSettings.productName="SpaceMiner TechTree Test";
             var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{
                 scenes=new[]{"Assets/SpaceMiner/Scenes/AsteroidBelt.unity"},locationPathName="Builds/TechTreeDemo/SpaceMiner.exe",
-                target=BuildTarget.StandaloneWindows64,options=BuildOptions.Development});
+                target=BuildTarget.StandaloneWindows64,options=BuildOptions.Development,extraScriptingDefines=new[]{"TECHTREE_DEMO"}});
             if(report.summary.result!=BuildResult.Succeeded)throw new Exception("Techtree demo build failed");
             Debug.Log("REALISTIC TECHTREE DEMO BUILD PASSED");
+            }finally{PlayerSettings.productName=productName;}
         }
         public static void Build()
         {
@@ -138,5 +150,6 @@ namespace SpaceMiner.Editor
             }
             Debug.Log("RESEARCH DEVELOPMENT AND RELEASE BUILDS PASSED");
         }
+        public static void BuildGameAndDemo(){Build();BuildDemo();}
     }
 }

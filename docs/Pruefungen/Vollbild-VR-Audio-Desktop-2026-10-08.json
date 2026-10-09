@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-08",
+  "baseCommit": "ef25edc",
+  "sourceUnity": "6000.4.7f1",
+  "testedUnity": "6000.6.4f1",
+  "scope": "Fullscreen framebuffer, station/VR camera return and continuous noise",
+  "preview": "Builds/LocalPreview-6000.6.4f1",
+  "build": { "log": "Logs/feedback-fixes-20261008-build.log", "unityExitCode": 0, "settingsValidation": "passed", "players": ["SettingsDevelopment", "SettingsRelease"] },
+  "checks": [
+    { "name": "StationUiAudioCheck", "log": "Logs/feedback-fixes-20261008-ui-audio.log", "exitCode": 0, "checks": 97, "screenshots": 34 },
+    { "name": "StationHabitatCheck", "log": "Logs/feedback-fixes-20261008-habitat.log", "exitCode": 0, "checks": 514 },
+    { "name": "SaveSessionCheck", "log": "Logs/feedback-fixes-20261008-save-session.log", "exitCode": 0, "checks": 227 },
+    { "name": "SaveSession restart", "log": "Logs/feedback-fixes-20261008-restart.log", "exitCode": 0, "checks": 104 },
+    { "name": "Gameplay water order", "log": "Logs/feedback-fixes-20261008-smoke.log", "exitCode": 0, "checks": 825 },
+    { "name": "ConfigurationAudioCheck", "log": "Logs/feedback-fixes-20261008-music.log", "exitCode": 0 }
+  ],
+  "fullscreen": { "window": [1280,800], "monitor": [2560,1440], "testedModes": ["ExclusiveFullScreen", "FullScreenWindow"], "capturedFramebuffer": [2560,1440], "windowReturn": "toggle and automatic settings", "visualReview": "native-fullscreen-2.png inspected", "manualKeyboardTest": false },
+  "audio": { "continuousNoiseRemoved": true, "roomTone": "60/120 Hz, RMS after source gain below 0.002", "existingMusicUnchanged": true, "subjectiveListeningApproval": false },
+  "camera": { "sessionRoundtrip": "interior feet/yaw/pitch, airlock state, exterior pan/orbit/zoom and both scanner view buttons", "newDemoReset": "passed", "newExteriorSavePersistence": false },
+  "limits": ["Source editor 6000.4.7f1 not tested on this computer.", "Automated real-player handlers and framebuffer captures; no new manual keyboard test.", "Technical audio tests, no subjective listening approval.", "No commit or push."]
+}

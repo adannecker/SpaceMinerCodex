@@ -26,6 +26,7 @@ namespace SpaceMiner
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)] static void ResetStatic(){IsOpen=false;closedFrame=-1;}
         private void Start(){scenario=FindFirstObjectByType<WaterScenario>();Application.wantsToQuit+=WantsToQuit;}
         public bool NewSession(){if(HasSession && !Save(true))return false;HasSession=true;autosaveSeconds=0;saveName="Meine Station";comment="";return true;}
+        public void EndSession(){HasSession=false;autosaveSeconds=0;}
         public void OpenSave(Action after=null){if(scenario==null)return;loading=false;exitAction=after;status="";IsOpen=true;}
         public void OpenLoad(){loading=true;exitAction=null;status="";scroll=Vector2.zero;Refresh();IsOpen=true;}
         private void Refresh()
@@ -50,6 +51,27 @@ namespace SpaceMiner
         }
         private void Close(){IsOpen=false;closedFrame=Time.frameCount;exitAction=null;}
         public void CancelDialog(){Close();}
+        public bool ConfirmSave()
+        {
+            if (!IsOpen || loading || !Save(false)) return false;
+            var action=exitAction;Close();action?.Invoke();return true;
+        }
+        public void LeaveWithoutManualSave()
+        {
+            if (!IsOpen || loading || exitAction==null) return;
+            var action=exitAction;Close();action();
+        }
+        public bool LoadGame(string path)
+        {
+            try {
+                var entry=SaveGameStore.Read(path);
+                SaveGameStore.Validate(entry,scenario);
+                if(HasSession && !Save(true))return false;
+                FindFirstObjectByType<StartMenu>()?.ResumeSavedGame();
+                SaveGameStore.Apply(entry,scenario);saveName=entry.name;comment=entry.comment;HasSession=true;autosaveSeconds=0;Close();
+                return true;
+            }catch(Exception error){status="Laden fehlgeschlagen: "+error.Message;return false;}
+        }
         public void Leave(Action action){if(HasSession){bool saved=Save(true);string message=status;OpenSave(action);if(!saved)status=message;}else action();}
         private bool WantsToQuit()
         {
@@ -79,10 +101,10 @@ namespace SpaceMiner
         {
             if(!IsOpen)return;
             ui.Configure(SettingsStore.Current.Accessibility);var matrix=GUI.matrix;int depth=GUI.depth;
-            float scale=Mathf.Min(Screen.width/1000f,Screen.height/800f);GUI.matrix=Matrix4x4.Scale(Vector3.one*scale);GUI.depth=-350;
+            float scale=UiLayout.Scale(1000,800);GUI.matrix=Matrix4x4.Scale(Vector3.one*scale);GUI.depth=-350;
             float width=Screen.width/scale,height=Screen.height/scale;
             SpaceMinerUi.Fill(new Rect(0,0,width,height),new Color(.002f,.009f,.02f,.96f));
-            var panel=new Rect((width-900)/2,30,900,height-60);ui.Panel(panel);
+            float panelHeight=Mathf.Min(800,height-60);var panel=new Rect((width-900)/2,(height-panelHeight)/2,900,panelHeight);ui.Panel(panel);
             GUILayout.BeginArea(new Rect(panel.x+28,panel.y+24,panel.width-56,panel.height-48));
             GUILayout.Label(loading?"SPIELSTAND LADEN":exitAction!=null?"VOR DEM VERLASSEN SPEICHERN?":"SPIEL SPEICHERN",ui.Heading);GUILayout.Space(18);
             if(loading)
@@ -92,12 +114,7 @@ namespace SpaceMiner
                     var entry=entries[i];GUILayout.Label((saves[i].EndsWith(".bak")?"Sicherung · ":"")+entry.name+" · "+entry.savedAt,ui.Text);GUILayout.Label(entry.Summary,ui.Small);
                     if(!string.IsNullOrEmpty(entry.comment))GUILayout.Label(entry.comment,ui.Text);
                     if(GUILayout.Button("Diesen Spielstand laden",ui.Button,GUILayout.Height(42))) {
-                        try {
-                            SaveGameStore.Validate(entry,scenario);
-                            if(HasSession && !Save(true))break;
-                            FindFirstObjectByType<StartMenu>()?.ResumeSavedGame();
-                            SaveGameStore.Apply(entry,scenario);saveName=entry.name;comment=entry.comment;HasSession=true;autosaveSeconds=0;Close();
-                        }catch(Exception error){status="Laden fehlgeschlagen: "+error.Message;}
+                        LoadGame(saves[i]);
                     }
                     GUILayout.Space(22);
                 }
@@ -112,8 +129,8 @@ namespace SpaceMiner
                 comment=GUILayout.TextArea(comment,2000,GUILayout.Height(145));GUILayout.Space(18);
                 GUILayout.Label(SaveGameStore.Capture(scenario,saveName,comment).Summary,ui.Text);GUILayout.Space(20);
                 if(GUILayout.Button(exitAction!=null?"Speichern und verlassen":"Speichern",ui.Primary,GUILayout.Height(48)))
-                    if(Save(false)){var action=exitAction;Close();action?.Invoke();}
-                if(exitAction!=null && GUILayout.Button("Ohne zusätzlichen Spielstand verlassen",ui.Button,GUILayout.Height(44))) {var action=exitAction;Close();action();}
+                    ConfirmSave();
+                if(exitAction!=null && GUILayout.Button("Ohne zusätzlichen Spielstand verlassen",ui.Button,GUILayout.Height(44))) LeaveWithoutManualSave();
                 GUILayout.Label("Autosave alle 60 Sekunden und beim Verlassen. Vorheriger Autosave bleibt als .bak erhalten.",ui.Small);
             }
             GUILayout.Label(status,ui.Small);

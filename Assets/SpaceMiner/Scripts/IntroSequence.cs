@@ -43,6 +43,7 @@ namespace SpaceMiner
         private Font introFont;
         private Font hintFont;
         private bool initialized; private bool settingsPausedVoice;
+        private readonly MiraVisorOverlay dialogueOverlay=new MiraVisorOverlay();
 
         private void Awake()
         {
@@ -168,7 +169,7 @@ namespace SpaceMiner
             Color previousColor = GUI.color;
             int previousDepth = GUI.depth;
             GUI.depth = -100;
-            float scale = Mathf.Clamp(Mathf.Min(Screen.height / 900f, Screen.width / 1440f), 0.35f, 2f);
+            float scale = UiLayout.Scale();
             GUI.matrix = Matrix4x4.Scale(Vector3.one * scale);
             float width = Screen.width / scale, height = Screen.height / scale;
             Cue cue = script.Cues[CueIndex];
@@ -186,18 +187,10 @@ namespace SpaceMiner
             introFont.RequestCharactersInTexture("MIRA", 14, FontStyle.Bold);
             hintFont.RequestCharactersInTexture("SPACE MINER  /  ERWACHEN ESC  ·  Intro überspringen  F11  Vollbild Fenster 0123456789/", 13, FontStyle.Normal);
 
-            float textWidth = Mathf.Min(900, width - 100);
-            float left = (width - textWidth) * 0.5f;
-            FindFirstObjectByType<WaterScenario>()?.Scanner?.DrawPortrait(new Rect(30,height*.4f,180,230));
-            GUI.color = new Color(1, 1, 1, fade);
-            GUI.Label(new Rect(left, height * 0.26f, textWidth, 58), cue.Heading, heading);
-            Fill(new Rect(width * 0.5f - 35, height * 0.36f, 70, 2), new Color(0.35f, 0.85f, 0.95f, fade));
-            GUI.Label(new Rect(left, height * 0.40f, textWidth, 28), "MIRA", speaker);
-            if (SettingsStore.Current.Accessibility.Subtitles) GUI.Label(new Rect(left, height * 0.47f, textWidth, height * 0.28f), cue.Text, caption);
+            var mood=CueIndex<=2?MiraAvatar.Mood.Friendly:CueIndex<=6?MiraAvatar.Mood.Concerned:CueIndex>=14?MiraAvatar.Mood.Encouraging:MiraAvatar.Mood.Focused;
+            dialogueOverlay.Draw(MiraVisorOverlay.Bounds(width,height),cue.Heading,cue.Text,mood,"ESC · Intro überspringen   /   "+(CueIndex+1)+" / "+CueCount,showText:SettingsStore.Current.Accessibility.Subtitles,alpha:fade);
             GUI.color = Color.white;
             GUI.Label(new Rect(35, 28, width - 70, 30), "SPACE MINER  /  ERWACHEN", hint);
-            GUI.Label(new Rect(left, height - 71, textWidth, 26), "ESC  ·  Intro überspringen     F11  ·  Vollbild / Fenster", hint);
-            GUI.Label(new Rect(left, height - 39, textWidth, 22), (CueIndex + 1) + " / " + CueCount, hint);
             GUI.depth = previousDepth;
             GUI.color = previousColor;
             GUI.matrix = previousMatrix;
@@ -233,6 +226,7 @@ namespace SpaceMiner
 
         private void OnDestroy()
         {
+            dialogueOverlay.Dispose();
             if (introFont != null) Destroy(introFont);
             if (hintFont != null) Destroy(hintFont);
         }

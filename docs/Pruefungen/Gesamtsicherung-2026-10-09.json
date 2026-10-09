@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-09",
+  "baseCommit": "1aef07abd327c5c9f3ee7a89f4be9df0c97acecc",
+  "jsonFilesParsed": 39,
+  "assetMetadataChecked": 675,
+  "changedCSharpFilesEqualVerifiedBuildCopy": 29,
+  "localDocumentationLinksChecked": 96,
+  "playerPassMarkersVerified": 9,
+  "nodeTestsPassedThisCommitPreparation": 14,
+  "newUnityBuildInCommitPreparation": false,
+  "priorBuildReport": "Techtree-Mira-Visier-2026-10-09.json",
+  "chatExport": {
+    "renewed": 8,
+    "preserved": 10,
+    "unavailable": 1
+  },
+  "limits": [
+    "Unity builds and player checks ran during the immediately preceding implementation; their logs and source identity were verified again.",
+    "Source project Unity version unchanged; binaries and personal game state remain local."
+  ]
+}

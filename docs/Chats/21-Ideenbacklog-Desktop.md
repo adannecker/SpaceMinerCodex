@@ -1,6 +1,6 @@
 # Ideenbacklog prüfen
 
-Chat-ID: `01a112cc-1896-7182-8dae-4f9802fab337`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
+Chat-ID: `01a112cc-1896-7182-8dae-4f9802fab337`. Exportstand: 2026-10-09T21:42:37.839915+00:00.
 
 Entwicklungsideen, Drohnenrollen und Umbauten, Stationsnavigation, Sonne und Planeten, Gefahren, Intro-Cinematic und Steam-Ausbaustufe
 
@@ -120,3 +120,17 @@ Ich ergänze Steam-Integration als späteren Backlogpunkt. Welche Funktionen daz
 **Steam-Integration** ist im [Ideenbacklog](C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/docs/Ideenbacklog.md) ergänzt.
 
 Erfolge, Cloud-Spielstände und Workshop sind als mögliche Optionen festgehalten; Umfang und Zeitpunkt bleiben offen. Spielidee und Projektmemory sind aktualisiert.
+
+## Assistent · 2026-10-09T18:09:28.321Z
+
+Ich lese das Kontextupdate und die aktuellen Projektdokumente für den Ideenbacklog. Der Auftrag bleibt auf Lesen und eine kurze Bestätigung beschränkt.
+
+## Assistent · 2026-10-09T18:10:15.610Z
+
+Kontext zum **09.10.2026** übernommen: GitHub-main `1aef07a` plus lokale Korrekturen; Forschungslabor mit **159 Einträgen in elf Bereichen**. Sonne, Planeten, zerstörte Heimatwelt und zwölfteiliges Cinematic sind bereits dargestellt.
+
+Meine Zuständigkeit bleibt der **Ideenbacklog**: Ideen, Entscheidungen und tatsächliche Umsetzung unterscheiden. Offen bleiben insbesondere Batteriewechsel, praktische Drohnenumbauten, neue Hardwaregenerationen, Solarertrag, Strahlungsschäden, Gefahrenvorhersage, Wolken-Seeds und Steam-Integration. Für Chapter 1 gelten inzwischen vier geplante Drohnenarten.
+
+Die dokumentierten Prüfungen wurden mit Unity **6000.6.4f1** durchgeführt; Projektversion **6000.4.7f1** bleibt lokal ungeprüft. Keine subjektive Hörfreigabe.
+
+Nur gelesen; keine Dateien geändert oder eigenen Tests ausgeführt.

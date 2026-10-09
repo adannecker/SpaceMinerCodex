@@ -19,6 +19,7 @@ namespace SpaceMiner
         float[] starts; float totalTime; bool audioPaused;
         GameObject stage; Camera view; Mesh mesh; Material paper; Texture2D mask;
         int index; float elapsed;
+        private readonly MiraVisorOverlay dialogueOverlay=new MiraVisorOverlay();
         public int SceneIndex => index;
         public bool Play()
         {
@@ -93,7 +94,7 @@ namespace SpaceMiner
             index=scene;elapsed=seconds;paper.mainTexture=pictures[index];voice.Stop();atmosphere.Stop();ApplyVisual(seconds);
         }
         public void Stop(){if(!IsPlaying)return;IsPlaying=false;voice.Stop();atmosphere.Stop();Destroy(stage);Destroy(mesh);Destroy(paper);Destroy(mask);Finished?.Invoke();}
-        void OnDestroy(){Stop();}
+        void OnDestroy(){Stop();dialogueOverlay.Dispose();}
         public string CurrentSubtitle
         {
             get {
@@ -104,13 +105,9 @@ namespace SpaceMiner
         }
         void OnGUI()
         {
-            if(!IsPlaying)return;GUI.depth=-300;
-            GUI.color=new Color(.82f,.79f,.7f);GUI.Label(new Rect(30,20,Screen.width-60,25),"ERINNERUNGEN / "+(index+1)+" - "+names[index]+"                         ESC - Zur\u00fcck");GUI.color=Color.white;
-            if(string.IsNullOrEmpty(CurrentSubtitle))return;
-            var style=new GUIStyle(GUI.skin.label){fontSize=Mathf.RoundToInt(22*SettingsStore.Current.Accessibility.TextScale),alignment=TextAnchor.MiddleCenter,wordWrap=true};style.normal.textColor=new Color(.96f,.93f,.85f);
-            var rect=new Rect(Screen.width*.12f,Screen.height-125,Screen.width*.76f,94);
-            GUI.color=new Color(0,0,0,.82f);GUI.DrawTexture(rect,Texture2D.whiteTexture);GUI.color=Color.white;
-            GUI.Label(new Rect(rect.x+16,rect.y+8,rect.width-32,rect.height-16),CurrentSubtitle,style);
+            if(!IsPlaying||SettingsMenu.IsOpen)return;using var layout=new UiLayout.Scope(UiLayout.Scale());GUI.depth=-300;
+            GUI.color=new Color(.82f,.79f,.7f);GUI.Label(new Rect(30,20,UiLayout.Width-60,25),"ERINNERUNGEN / "+(index+1)+" - "+names[index]+"                         ESC - Zur\u00fcck");GUI.color=Color.white;
+            dialogueOverlay.Draw(MiraVisorOverlay.Bounds(UiLayout.Width,UiLayout.Height),names[index],captions[index],index<5?MiraAvatar.Mood.Friendly:index<10?MiraAvatar.Mood.Concerned:MiraAvatar.Mood.Encouraging,"ERINNERUNGSARCHIV   /   ESC · Zurück",showText:SettingsStore.Current.Accessibility.Subtitles);
         }
     }
 }

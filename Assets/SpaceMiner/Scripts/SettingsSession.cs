@@ -21,17 +21,19 @@ namespace SpaceMiner
         public void RestoreDefaults()
         {
             Draft = new SpaceMinerPlayerSettings();
+            UiLayout.Preview(Draft.Interface.Scale);
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             Developer = developerDefaults?.Copy();
 #endif
         }
         public void PreviewAudio() { if (Draft != null) PlayerAudio.Preview(Draft.Audio); }
-        public void Cancel() { Draft = null; PlayerAudio.EndPreview(); }
+        public void Cancel() { Draft = null; PlayerAudio.EndPreview(); UiLayout.EndPreview(); }
         public bool Apply(out string error)
         {
             if (Draft == null) { error = "Kein aktiver Einstellungsentwurf."; return false; }
             if (!SettingsStore.Save(Draft, out error)) return false;
             PlayerAudio.EndPreview();
+            UiLayout.EndPreview();
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             var scenario = Object.FindFirstObjectByType<WaterScenario>();
             if (Developer != null && scenario != null && scenario.Worker != null) Developer.Apply(scenario);

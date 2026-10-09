@@ -1,6 +1,6 @@
 # MainDev
 
-Chat-ID: `01a10da1-b11d-7472-b6b4-b34be7f814fd`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
+Chat-ID: `01a10da1-b11d-7472-b6b4-b34be7f814fd`. Exportstand: 2026-10-09T18:12:00.786090+00:00.
 
 Desktop-Fortsetzung: Unity-Spielsysteme, Station, Bergbaudrohnen und Integration; vorhandener Hauptchat umbenannt
 
@@ -1098,3 +1098,306 @@ Ok alles einchecken und commiten und pushen
 ## Assistent · 2026-10-07T22:08:07.138Z
 
 Ich prüfe den gesamten Arbeitsstand, sichere die aktuellen Änderungen samt Projektdokumentation in einem Commit und pushe ihn zu GitHub.
+
+## Assistent · 2026-10-07T22:09:06.306Z
+
+GitHub ist auf demselben Ausgangsstand; es gibt keine neuen Änderungen zum Zusammenführen. Die verfügbaren Chatarchive sind aktualisiert, Projektmemory und Übergabe enthalten die neuen Funktionen und Prüfergebnisse. Ich committe jetzt alles und pushe auf `main`.
+
+## Assistent · 2026-10-07T22:09:46.553Z
+
+Alles committed und auf GitHub nach `main` gepusht.
+
+Commit: [ff0ff7b](https://github.com/adannecker/SpaceMinerCodex/commit/ff0ff7bf97275690aa341e004fd010d4f8fa7040)
+
+Spielcode, Projektmemory, Übergabe und verfügbare Chatarchive sind gesichert. Der Arbeitsordner ist sauber und mit GitHub synchron.
+
+Builds und Logs bleiben lokal; am anderen Rechner nach dem Pull neu bauen.
+
+## Nutzer · 2026-10-08T16:45:39.872Z
+
+## My request:
+mach mal ein
+git pull --ff-only origin main
+
+## Assistent · 2026-10-08T16:45:47.812Z
+
+Ich führe den Pull mit `--ff-only` aus und prüfe anschließend den lokalen Stand.
+
+## Assistent · 2026-10-08T16:46:47.749Z
+
+Der Pull wartet noch auf eine Antwort von GitHub. Bisher wurde keine Änderung übernommen.
+
+## Assistent · 2026-10-08T16:47:47.577Z
+
+Der Abruf hängt vor der eigentlichen Datenübertragung. Ich beende diesen Pull-Versuch und wiederhole ihn mit Fortschrittsanzeige und einem Zeitlimit für eine stockende Verbindung. `--ff-only` bleibt aktiv.
+
+## Assistent · 2026-10-08T16:48:52.743Z
+
+Der zweite Versuch überträgt die neuen Dateien jetzt laufend. Sobald der Download abgeschlossen ist, übernimmt Git den Stand per Fast-forward.
+
+## Assistent · 2026-10-08T16:50:08.066Z
+
+Es sind inzwischen rund 120 MB übertragen. Der Download läuft weiter; die Git-Prozentanzeige zählt Objekte und bleibt bei großen Dateien länger stehen.
+
+## Assistent · 2026-10-08T16:50:47.060Z
+
+Pull erfolgreich: Der lokale Stand wurde per Fast-forward auf `ef25edc` aktualisiert.
+
+`main` ist mit GitHub synchron, der Arbeitsordner ist sauber.
+
+## Nutzer · 2026-10-08T16:56:16.852Z
+
+## My request:
+Lies die aktuelle Projektübergabe und das Projektmemory
+
+## Assistent · 2026-10-08T16:56:21.883Z
+
+Ich lese die aktuelle Projektübergabe und das Projektmemory und fasse dir den Stand sowie offene Punkte kurz zusammen.
+
+## Assistent · 2026-10-08T16:57:52.420Z
+
+Ich habe [Projektübergabe](C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/docs/Projektuebergabe.md) und [Projektmemory](C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/docs/Projektmemory.md) gelesen.
+
+Der aktuelle Stand:
+
+- Einstieg im begehbaren Stationsraum mit Pult, Schleuse und Ring.
+- Erster Scanner: **97 % Ladung**, nach zehn Sekunden voll, **10 km Reichweite**, zehn Kontakte inklusive drei Wasserquellen.
+- Virtuelle Außenansicht zeigt bekannte Scandaten; Debugsicht erteilt keine Arbeitsfreigabe.
+- Speichern/Laden und Autosave sind eingebaut.
+- Mira verwendet gezeichnete Porträts; 3D ist vorerst zurückgestellt.
+
+**Erste offene Aufgabe:** Beenden aus dem Spiel reparieren und die gespeicherte Position in Wohnmodul, Schleuse und Ring zuverlässig prüfen. Danach folgen Interaktionssounds und UI-/Auflösungsskalierung.
+
+Ältere Memory-Aussagen zu fehlenden Spielständen sind überholt. Die jüngsten Prüfberichte stammen vom anderen Rechner; den frisch gepullten Stand habe ich hier noch nicht neu gebaut.
+
+## Nutzer · 2026-10-08T17:02:05.505Z
+
+## My request:
+Ok was steht als nächstes an
+
+## Assistent · 2026-10-08T17:02:13.089Z
+
+Als Nächstes sollten wir **Beenden und Spielstände zuverlässig machen**:
+
+1. Den Fehler beim Beenden aus dem Spiel nachvollziehen und beheben.
+2. Prüfen, ob Speichern und Laden deine genaue Position im Wohnmodul, in der Schleuse und im Ring wiederherstellt – auch nach einem Neustart.
+3. Autosave und laufende Drohnenaufträge dabei überprüfen.
+
+Danach kommen **Geräusche für Schleusentüren und VR-Aktivierung** sowie eine **einstellbare UI-Skalierung**, damit die Oberfläche bei hoher Auflösung kleiner dargestellt werden kann.
+
+## Nutzer · 2026-10-08T17:02:37.755Z
+
+## My request:
+Ok gehe das mal an
+
+## Assistent · 2026-10-08T17:02:42.281Z
+
+Ich gehe zuerst den Beenden-Fehler und die Spielstände an. Ich prüfe den Menüablauf sowie Speichern und Laden in Wohnmodul, Schleuse und Ring und baue anschließend eine geprüfte Spielversion.
+
+## Assistent · 2026-10-08T17:04:30.523Z
+
+Ich habe die Ursache des Beenden-Fehlers gefunden: Das Menü sucht die Speicherfunktion am falschen Unity-Objekt. Dadurch reagieren mehrere Menüknöpfe nicht, und beim Demostart wird die Speichersitzung nicht aktiviert. Außerdem fehlen im Spielstand die Blickrichtung und der Schleusenzustand – beim Laden mitten in der Schleuse könnte man dadurch eingeschlossen werden.
+
+## Assistent · 2026-10-08T17:10:06.278Z
+
+Die Menüverknüpfungen sind korrigiert. Neue Spielstände erhalten jetzt auch die Blickrichtung und den laufenden Schleusenzustand. Ich prüfe als Nächstes manuelle Spielstände, Autosaves und das Laden nach einem vollständigen Prozessneustart – einschließlich einer weiterarbeitenden Drohne.
+
+## Assistent · 2026-10-08T17:12:02.613Z
+
+Die neuen Prüfungen bestehen bisher: Menüabläufe, manuelle Spielstände und Autosaves sowie das Laden in einem zweiten Spielprozess. Position, Blickrichtung, Türen und Drohnenauftrag werden dabei wiederhergestellt. Für den sichtbaren Klicktest nutze ich jetzt die Computer-Use-Funktion; die Testspielstände liegen getrennt von deinen normalen Saves.
+
+## Assistent · 2026-10-08T17:16:27.614Z
+
+Auch der sichtbare Ablauf funktioniert: „Beenden“ öffnet die Speicherabfrage, „Speichern und verlassen“ führt zum Startmenü, und dessen Laden-Knopf lädt den Spielstand wieder. F5/F9 und Alt+F4 mit Abbrechen oder Speichern wurden ebenfalls geprüft. Ich halte die Ergebnisse fest und starte dir den korrigierten Stand.
+
+## Assistent · 2026-10-08T17:21:48.988Z
+
+Die Korrektur ist fertig: Speichern und Laden erhalten jetzt auch Blickrichtung und Schleusenzustand. Ein laufender Drohnenauftrag setzt sich nach dem Neustart fort. Die automatischen Prüfungen und die Bedienung der echten Windows-Oberfläche haben bestanden; ich ergänze noch Übergabe und Prüfbericht.
+
+## Assistent · 2026-10-08T17:22:54.424Z
+
+Beenden und Spielstände sind repariert:
+
+- Speicherabfrage, Abbrechen, F5/F9 und Laden im Startmenü funktionieren.
+- Position und Blickrichtung bleiben in Wohnmodul, Schleuse und Ring erhalten.
+- Schleusenbewegungen und Drohnenaufträge laufen nach dem Laden weiter.
+
+Automatische Tests und echte Windows-Bedienung bestanden. Geprüft mit Unity **6000.6.4f1**; Projektversion **6000.4.7f1** blieb unverändert.
+
+Der neue Build liegt in `Builds/Windows`. Memory und Übergabe sind aktualisiert; noch nicht committed. Als Nächstes stehen Interaktionssounds und UI-Skalierung an.
+
+## Nutzer · 2026-10-08T17:54:03.146Z
+
+## My request:
+Was wären die nächsten Schritte?
+
+## Assistent · 2026-10-08T17:54:16.947Z
+
+Ich würde jetzt in dieser Reihenfolge weitermachen:
+
+1. **Interaktionssounds:** Schleusentüren, Druckausgleich, Pult und VR-Aktivierung hörbar machen. Dezente Stationsgeräusche geben dem Innenraum mehr Atmosphäre.
+
+2. **UI-Skalierung:** Schrift und Bedienelemente einstellbar machen und unterschiedliche Auflösungen prüfen — besonders Questanzeige, Mira und Stationspult.
+
+3. **Den ersten Spielablauf gemeinsam durchspielen:** Erwachen → Scanner laden → Wasserquelle finden → Drohne beauftragen → Wasser liefern → speichern und später fortsetzen. Dabei prüfen wir Verständlichkeit und Wartezeiten.
+
+4. **Den nächsten Fortschritt ermöglichen:** Mit dem gesicherten Wasser und ersten Forschungsergebnissen eine zweite Drohne reparieren. Dafür legen wir benötigte Teile, Energie und Wissen fest.
+
+**Als Nächstes würde ich die Sounds angehen**, danach die UI. Dann haben wir eine angenehm bedienbare Grundlage für den eigentlichen Survival-Aufbau.
+
+## Nutzer · 2026-10-08T17:57:44.608Z
+
+## My request:
+Mache mal 1 und 2
+
+## Assistent · 2026-10-08T17:57:48.540Z
+
+Ich baue die Interaktionssounds und eine einstellbare UI-Skalierung ein. Dabei prüfe ich die vorhandene Audio- und Einstellungslogik, damit Lautstärke, Questanzeige, Mira und Stationspult zusammenpassen.
+
+## Assistent · 2026-10-08T17:59:23.849Z
+
+Die vorhandene Skalierung betrifft bisher hauptsächlich das Außen-HUD; Quest, Mira und Pult verwenden unterschiedliche Größenregeln. Ich vereinheitliche das: Die UI bleibt bei hoher Auflösung kompakt, lässt sich von 75 bis 150 Prozent einstellen und passt bei kleinen Fenstern weiterhin auf den Bildschirm.
+
+Für die Sounds ergänze ich unterscheidbare Türmotoren, Druckausgleich, Pult- und VR-Signale sowie einen leisen Stationshintergrund. Sie nutzen den vorhandenen Effektkanal.
+
+## Assistent · 2026-10-08T18:05:53.741Z
+
+Die Sounds sind jetzt an Türbewegungen, Druckausgleich, Pult und VR gekoppelt. Questtexte passen ihre Höhe an den Text an; die Quellenauswahl am Pult kann scrollen.
+
+Als Nächstes prüfe ich Lautstärke und Stummschaltung sowie die UI bei verschiedenen Fenstergrößen, kleiner und großer Skalierung und vergrößerter Schrift.
+
+## Assistent · 2026-10-08T18:10:29.026Z
+
+Die ersten Sound- und Speicherprüfungen haben bestanden. Die Bildkontrolle zeigt noch abgeschnittene Navigationstexte bei großer Schrift im Settings-Menü. Das korrigiere ich gerade; außerdem passe ich die Planeten-Schaltflächen an dieselbe UI-Skalierung an.
+
+## Assistent · 2026-10-08T18:15:00.825Z
+
+Der finale Durchlauf hat 79 Sound-/UI-Prüfungen bestanden; die Settings-Bilder zeigen jetzt vollständige Navigationstexte. Auch Schleuse, Spielstände, Musikübergänge und Planetenansicht funktionieren weiterhin.
+
+Ich prüfe noch den Regler direkt im Windows-Spiel und den vollständigen Wasserauftrag. Danach stelle ich dir die neue Version zum Ausprobieren bereit.
+
+## Assistent · 2026-10-08T18:17:31.202Z
+
+Implementierung und automatische Prüfungen sind abgeschlossen, einschließlich 825 Prüfungen des Wasserauftrags. Die zusätzliche Klickprüfung kann ich gerade nicht durchführen, weil Windows gesperrt ist. Ich dokumentiere inzwischen die Ergebnisse.
+
+Der [Computer-Use-Skill](C:/Users/achim/.codex/plugins/cache/openai-bundled/computer-use/26.930.61225/skills/computer-use/SKILL.md) verlangt dafür: „If the Windows desktop is locked, stop immediately and ask the user to unlock the desktop.“
+
+## Assistent · 2026-10-08T18:21:03.211Z
+
+Die neue Version liegt jetzt in `Builds/Windows`; der vorherige Build ist gesichert. Unter **Konfiguration → Interface** findest du die UI-Skalierung, unter **Audio → Effekte** die Lautstärke der neuen Stationsgeräusche.
+
+Die automatische Prüfung ist vollständig bestanden. Offen bleiben deine Hörbeurteilung und die zusätzliche Klickprüfung am gesperrten Desktop.
+
+## Assistent · 2026-10-08T18:22:06.653Z
+
+Beides ist eingebaut:
+
+- **Sounds:** Türen, Druckausgleich, Pult, VR und Scanbestätigung plus leise Stationsgeräusche. Lautstärke unter **Audio → Effekte**.
+- **UI-Skalierung:** Unter **Interface**, 75–150 %, mit sofortiger Vorschau und Apply/Cancel. Gilt für Quest, Mira, Pult und Menüs/HUD.
+
+Spieltests und 32 UI-Bilder bis 4K geprüft; Development-/Release-Builds mit Unity **6000.6.4f1** erfolgreich. Memory und Übergabe aktualisiert, noch nicht committed.
+
+Aktueller Build: [SpaceMiner.exe](C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/Windows/SpaceMiner.exe).
+
+Die zusätzliche Klickprüfung blieb wegen der Windows-Sperre offen. Der [Computer-Use-Skill](C:/Users/achim/.codex/plugins/cache/openai-bundled/computer-use/26.930.61225/skills/computer-use/SKILL.md) verlangt dabei: „stop immediately and ask the user to unlock the desktop“.
+
+## Nutzer · 2026-10-08T19:43:37.429Z
+
+## My request:
+Kannst du es einmal starten
+
+## Assistent · 2026-10-08T19:43:44.185Z
+
+Ich starte dir die aktuelle Spielversion.
+
+## Assistent · 2026-10-08T19:44:22.112Z
+
+Das Spiel läuft. Die UI-Skalierung findest du unter **Konfiguration → Interface**, die neuen Sounds unter **Audio → Effekte**.
+
+## Nutzer · 2026-10-08T19:46:33.383Z
+
+## My request:
+Also es rauscht unglaublich während des Spiels und das UI ist nicht angepasst und wenn ich in den VR modus gehe dann springe ich immer an die Anfangsposition zurück nicht dort wo ich war
+
+## Assistent · 2026-10-08T19:46:38.923Z
+
+Ich prüfe das starke Rauschen, die UI-Anpassung und den Positionswechsel bei VR. Beim Wechsel zwischen Station und VR sollen deine letzte Position und Blickrichtung erhalten bleiben. Ich schaue mir zuerst die aktuellen Audio-, Layout- und Kameraregeln an.
+
+## Nutzer · 2026-10-08T19:48:27.511Z
+
+## My request:
+Es sieht alles total verpixelt aus sprich wenn man vom windowed mode in vollbild geht wird alles skaliert das wird dann unschafr
+
+## Nutzer · 2026-10-08T19:48:27.532Z
+
+<send_user_message_question_reply>
+[{"questionItemId":"[\"request_user_input_async\",\"call_e14be7d1df534a9bbd88dcba955336db\",0]","question":"Was passt bei der UI noch nicht? Ich prüfe parallel den laufenden Spielstand.","answer":"Es sieht alles total verpixelt aus sprich wenn man vom windowed mode in vollbild geht wird alles skaliert das wird dann unschafr"}]
+</send_user_message_question_reply>
+
+## Assistent · 2026-10-08T19:48:35.460Z
+
+Das erklärt die Unschärfe: Es betrifft offenbar das ganze Bild beim Wechsel ins Vollbild, nicht nur die UI-Größe. Ich prüfe, ob dabei die kleinere Fensterauflösung auf den Monitor gestreckt wird, und korrigiere den Wechsel auf die native Monitorauflösung. Die Rücksprünge zwischen Station und VR behebe ich ebenfalls.
+
+## Assistent · 2026-10-08T19:52:40.105Z
+
+Ich habe zwei konkrete Ursachen gefunden: Beim exklusiven Vollbild blieb die kleinere Fensterauflösung aktiv, und der VR-Wechsel setzte die Kamera ausdrücklich zurück. Außerdem enthielt der neue dauerhafte Stationssound einen Rauschanteil. Ich korrigiere diese Stellen und prüfe anschließend die Wechsel im gebauten Spiel.
+
+## Assistent · 2026-10-08T19:56:22.952Z
+
+Die gezielte Prüfung ist bestanden: Beide Vollbildarten rendern hier mit 2560 × 1440 Pixeln, und der Wechsel zurück stellt die vorherige Fenstergröße wieder her. Auch Position und Blickrichtung bleiben beim Wechsel zwischen Station und VR erhalten. Der dauerhafte Rauschanteil ist entfernt; ich prüfe noch Schleuse und Spielstände und stelle dann die neue Version bereit.
+
+## Assistent · 2026-10-08T19:59:04.943Z
+
+Auch Schleuse, Spielstände, Prozessneustart und Wasserauftrag haben die Prüfungen bestanden. Ich übernehme jetzt den geprüften Build und starte ihn für deinen nächsten Test. Ob der verbleibende leise Grundton angenehm klingt, ist noch offen; die Audio-Prüfung war technisch.
+
+## Assistent · 2026-10-08T20:02:23.723Z
+
+Korrigiert und neu gestartet:
+
+- **Vollbild:** rendert jetzt in Monitorauflösung, statt das kleinere Fensterbild hochzuskalieren.
+- **Station ↔ VR:** Position und Blickrichtung bleiben beim Umschalten erhalten.
+- **Sound:** dauerhaften Rauschanteil entfernt und Grundton deutlich leiser gemacht.
+
+97 gezielte Prüfungen sowie Schleusen-, Speicher- und Spieltests bestanden. Mit **F11** kannst du den Vollbildwechsel direkt ausprobieren. Die Klangqualität braucht noch deinen Hörtest.
+
+## Nutzer · 2026-10-08T20:08:25.064Z
+
+## My request:
+starte mal
+
+## Assistent · 2026-10-08T20:08:29.886Z
+
+Ich starte den aktuellen Spielstand.
+
+## Assistent · 2026-10-08T20:09:03.130Z
+
+Das Spiel läuft mit dem aktuellen Stand.
+
+## Nutzer · 2026-10-09T17:53:27.924Z
+
+## My request:
+Kannst du alles auschecken alles prüfen und auch die docu anschauen und dann alles neu machen und auch alle chats aktualisieren
+
+## Assistent · 2026-10-09T17:53:33.787Z
+
+Ich prüfe zuerst Git-Stand, Projektübergabe, Memory und Chatverzeichnis. Danach hole ich den aktuellen Stand, prüfe und baue das Spiel neu und aktualisiere die verfügbaren Chatarchive. Vorhandene lokale Änderungen bewahre ich.
+
+## Assistent · 2026-10-09T17:55:03.517Z
+
+Die Techtree-Planung von gestern ist bereits eingecheckt. Die Korrekturen an Spielständen, UI, Sound und VR liegen noch als lokale Änderungen vor; ich beziehe sie in den Neubau ein. Außerdem gleiche ich die Chatliste mit dem Register ab und prüfe, welche Archive sich hier tatsächlich aktualisieren lassen.
+
+## Assistent · 2026-10-09T17:57:33.093Z
+
+Auf GitHub gibt es einen neuen Stand mit dem Forschungslabor und elf kompakten Techtrees. Er ist jetzt geholt; zwei Konflikte mit der lokalen UI-Arbeit habe ich zusammengeführt. Das Labor und die bisherigen Korrekturen bleiben erhalten. Ich baue nun die kombinierte Fassung und prüfe besonders diese Schnittstelle.
+
+## Assistent · 2026-10-09T18:01:01.762Z
+
+Development und Release sind gebaut, und die 13 Tests der Techtree-Vorschau bestehen. Forschungslabor, Spielstände und Stationsrundgang bestehen ebenfalls. Beim Vollbildtest hat Windows den exklusiven Modus diesmal abgelehnt; Unity ist auf randloses Vollbild gewechselt. Ich prüfe dessen tatsächliche Renderauflösung und dokumentiere die Einschränkung getrennt.
+
+## Assistent · 2026-10-09T18:06:30.176Z
+
+Die vollständige Prüfrunde ist durchgelaufen. Zwei Prüfläufe brauchten Anpassungen: Der Bergbaucheck startete noch im Hauptmenü, und der Vollbildcheck berücksichtigte den Windows-Fallback nicht. Beide bestehen nach der Korrektur, einschließlich nativer 2560 × 1440 Pixel im randlosen Vollbild. Auch das komplette Cinematic besteht. In der Dokumentation habe ich veraltete Bedienhinweise und bereits erledigte offene Punkte abgeglichen.
+
+## Assistent · 2026-10-09T18:09:11.637Z
+
+Der neue Spielbuild, die Release-Fassung und die Techtree-Demo sind bereit; die Vorgänger sind gesichert. Neun lokale Chatarchive sind aktualisiert. Ich verteile jetzt den gemeinsamen Kontext an die acht anderen Themenchats und warte auf ihre Lesebestätigungen. Archive vom anderen Rechner bleiben erhalten.

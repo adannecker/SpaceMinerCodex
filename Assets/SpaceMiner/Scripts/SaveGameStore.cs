@@ -23,6 +23,9 @@ namespace SpaceMiner
         public bool sourceAssigned, scanned, console;
         public bool hasInteriorState, insideStation;
         public Vector3 interiorFeet;
+        public bool hasInteriorView;
+        public float interiorYaw, interiorPitch;
+        public StationAirlock.SavedState airlock;
         public SavedAsteroid[] asteroids;
         public DroneAgent.SavedState[] drones;
         public string Summary => (scanned ? "Erster Scan abgeschlossen" : "Erster Scan offen") + " · " +
@@ -46,6 +49,10 @@ namespace SpaceMiner
                 scannerEnergy=scenario.Scanner.EnergyKwh, scannerRange=scenario.Scanner.RangeMeters,
                 scanned=scenario.Scanner.FirstScanComplete, console=scenario.Scanner.AtConsole,
                 hasInteriorState=true, insideStation=StationInteriorMode.IsInside, interiorFeet=StationInteriorMode.Current!=null?StationInteriorMode.Current.FeetPosition:Vector3.zero,
+                hasInteriorView=StationInteriorMode.IsInside,
+                interiorYaw=StationInteriorMode.Current!=null?StationInteriorMode.Current.ViewYaw:0,
+                interiorPitch=StationInteriorMode.Current!=null?StationInteriorMode.Current.ViewPitch:0,
+                airlock=StationInteriorMode.IsInside?StationInteriorMode.Current.Airlock.CaptureState():null,
                 asteroids=new SavedAsteroid[scenario.Asteroids.Length], drones=new DroneAgent.SavedState[scenario.Drones.Length]
             };
             for (int i=0;i<state.asteroids.Length;i++) {
@@ -85,6 +92,9 @@ namespace SpaceMiner
         public static void Validate(SavedGame state, WaterScenario scenario)
         {
             Numbers(state);
+            if(state.hasInteriorView && (!state.hasInteriorState || !state.insideStation || Mathf.Abs(state.interiorPitch)>80))
+                throw new IOException("Ungültige Innenansicht.");
+            if(state.airlock!=null && !StationAirlock.IsValid(state.airlock))throw new IOException("Ungültiger Schleusenzustand.");
             if(state.asteroids.Length!=scenario.Asteroids.Length || state.drones.Length!=scenario.Drones.Length)
                 throw new IOException("Dieser Spielstand gehört zu einem anderen Asteroidenfeld.");
             if(state.tankCapacity<=0 || state.water<0 || state.water>state.tankCapacity || state.deliveries<0 || state.delivered<0 ||
@@ -126,9 +136,14 @@ namespace SpaceMiner
             scenario.Mining.TripsPerLevel=state.tripsPerLevel;scenario.Mining.ImprovementPerLevel=state.improvement;
             scenario.RestoreSupply(state.water,state.deliveries,state.delivered,state.sourceAssigned);
             scenario.Mining.Restore(state.trips,state.throughput,state.efficiency,state.researchProgress);scenario.Mining.Focus=state.researchFocus;
-            if (state.hasInteriorState && state.insideStation) StationInteriorMode.Current?.RestoreInterior(state.interiorFeet,state.console);
+            if (state.hasInteriorState && state.insideStation)
+            {
+                var room=StationInteriorMode.Current;
+                room?.RestoreInterior(state.interiorFeet,state.console,state.hasInteriorView?(float?)state.interiorYaw:null,state.hasInteriorView?(float?)state.interiorPitch:null);
+                if(room!=null) { if(state.airlock!=null)room.Airlock.RestoreState(state.airlock);else room.Airlock.RecoverLegacyOccupant(state.interiorFeet); }
+            }
             else if (state.console) StationInteriorMode.Current?.Enter(true);
-            else StationInteriorMode.Current?.Exit();
+            else StationInteriorMode.Current?.Exit(true);
             scenario.Scanner.Restore(state.scannerEnergy,state.scanned,state.console,state.deliveries>0,state.water>=state.tankCapacity-.001f);
             for(int i=0;i<state.drones.Length;i++)scenario.Drones[i].RestoreState(state.drones[i]);
             scenario.SetSimulationRate(Mathf.Clamp(state.simulationRate,0,500));

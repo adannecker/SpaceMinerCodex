@@ -48,7 +48,10 @@ namespace SpaceMiner
             Application.logMessageReceived += OnLog;
             yield return null;
             var scenario = FindFirstObjectByType<WaterScenario>();
+            var startMenu = FindFirstObjectByType<StartMenu>();
+            if (StartMenu.IsOpen) startMenu.StartDemo();
             FindFirstObjectByType<IntroSequence>()?.Skip();
+            yield return null;
             scenario.SetSimulationRate(0);
             CheckProgression();
             scenario.SetSimulationRate(.5f); scenario.TogglePause(); Require(scenario.SimulationRate == 0, "pause");
@@ -162,7 +165,12 @@ namespace SpaceMiner
                 throw new Exception("Mining benchmark stalled: " + drone.Scenario.Message);
         }
         private static void PrepareScan(WaterScenario scenario)
-        { var interior=StationInteriorMode.Current; interior.Enter(true); interior.RestoreInterior(interior.Layout.Console.position+interior.Room.forward*-1.5f,false); scenario.Scanner.OpenConsole(); scenario.Scanner.Advance(10); scenario.Scanner.Scan(); }
+        {
+            var interior=StationInteriorMode.Current; interior.Enter(true);
+            interior.RestoreInterior(interior.Layout.Console.position+interior.Room.forward*-1.5f,false);
+            scenario.Scanner.OpenConsole(); scenario.Scanner.Advance(10);
+            if (!scenario.Scanner.Scan()) throw new Exception("Mining benchmark setup: console scan failed");
+        }
 
         private void Require(bool condition, string message) { if (!condition) throw new Exception("Mining check failed: " + message); report.checks++; }
         private void OnLog(string condition, string stack, LogType type)

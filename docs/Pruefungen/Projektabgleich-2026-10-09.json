@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-09",
+  "baseCommit": "1aef07a",
+  "sourceUnity": "6000.4.7f1",
+  "testedUnity": "6000.6.4f1",
+  "scope": "Remote research laboratory integrated with local saves, UI, sound and VR fixes; current docs and chat refresh",
+  "backup": {
+    "zip": "Logs/Refresh-2026-10-09/local-before-pull-195608.zip",
+    "stash": "Local changes before requested refresh 2026-10-09"
+  },
+  "merge": {
+    "mode": "fast-forward plus restored local changes",
+    "resolvedFiles": [
+      "Assets/SpaceMiner/Scripts/TechTreeMenu.cs",
+      "README.md"
+    ],
+    "preserved": "Research laboratory lifecycle and shared UI scale; both documentation sections"
+  },
+  "builds": [
+    {
+      "log": "Logs/refresh-20261009-build.log",
+      "exitCode": 0,
+      "players": [
+        "ResearchLaboratory",
+        "ResearchRelease"
+      ]
+    },
+    {
+      "log": "Logs/refresh-20261009-final-build.log",
+      "exitCode": 0,
+      "players": [
+        "SettingsDevelopment",
+        "SettingsRelease"
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "name": "ui-audio",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-final-ui-audio.log",
+      "passedMessages": [
+        "STATION UI/AUDIO CHECK PASSED: 97 checks, 34 UI/fullscreen screenshots"
+      ]
+    },
+    {
+      "name": "research-lab",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-final-research-lab.log",
+      "passedMessages": [
+        "RESEARCH LABORATORY PLAYER CHECK PASSED"
+      ]
+    },
+    {
+      "name": "techtree",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-techtree.log",
+      "passedMessages": [
+        "TECHTREE MENU CHECK PASSED"
+      ]
+    },
+    {
+      "name": "scan-save",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-scan-save.log",
+      "passedMessages": [
+        "SCAN AND SAVE CHECK PASSED: 39 checks; range 10000 m"
+      ]
+    },
+    {
+      "name": "save-session",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-save-session.log",
+      "passedMessages": [
+        "SAVE SESSION CHECK PASSED: 227 checks; real menu handlers, exit, manual/autosave, positions, orientation, airlock and running drone"
+      ]
+    },
+    {
+      "name": "restart",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-restart.log",
+      "passedMessages": [
+        "SAVE SESSION CHECK PASSED: 104 checks; new-process restore"
+      ]
+    },
+    {
+      "name": "habitat",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-habitat.log",
+      "passedMessages": [
+        "STATION HABITAT CHECK PASSED: 514 checks; desk, inactive repair drone, interlock, anti-crush, full ring lap and reverse passage"
+      ]
+    },
+    {
+      "name": "interior",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-interior.log",
+      "passedMessages": [
+        "STATION INTERIOR CHECK PASSED: 59 checks; walking, collisions, menu, view restore, drone flight and working simulation"
+      ]
+    },
+    {
+      "name": "lighting",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-lighting.log",
+      "passedMessages": [
+        "LIGHTING VISUAL CHECK PASSED: stable station illumination with real shadow casters at two quality levels; 24 thin-surface depth samples"
+      ]
+    },
+    {
+      "name": "smoke",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-smoke.log",
+      "passedMessages": [
+        "SPACE MINER SMOKE TEST PASSED: 825 checks"
+      ]
+    },
+    {
+      "name": "mining",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-final-mining.log",
+      "passedMessages": [
+        "MINING BALANCE LOGIC CHECK PASSED: 194 checks"
+      ]
+    },
+    {
+      "name": "quit",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-quit.log",
+      "passedMessages": [
+        "QUIT MENU AND SPEED CHECK PASSED: return to start screen"
+      ]
+    },
+    {
+      "name": "music",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-music.log",
+      "passedMessages": [
+        "CONFIGURATION AUDIO CHECK PASSED (no listening verification)"
+      ]
+    },
+    {
+      "name": "splash",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-splash.log",
+      "passedMessages": [
+        "SPLASH AUDIO CHECK PASSED"
+      ]
+    },
+    {
+      "name": "world",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-world.log",
+      "passedMessages": [
+        "SOLAR SYSTEM CHECK PASSED: nine planets, rings, orbit motion, homeworld and moon"
+      ]
+    },
+    {
+      "name": "cinematic",
+      "exitCode": 0,
+      "log": "Logs/refresh-20261009-cinematic.log",
+      "passedMessages": [
+        "MEMORY CINEMATIC CHECK PASSED: twelve scenes, completion, replay, skip and solar system"
+      ]
+    }
+  ],
+  "initialFailures": [
+    {
+      "name": "ui-audio",
+      "exitCode": 1,
+      "log": "Logs/refresh-20261009-ui-audio.log"
+    },
+    {
+      "name": "mining",
+      "exitCode": 1,
+      "log": "Logs/refresh-20261009-mining.log"
+    }
+  ],
+  "rerunReason": "Only development fixtures changed after first combined build: benchmark starts real demo and checks scan; fullscreen test records native borderless fallback separately. Affected tests and laboratory rerun in final build.",
+  "nodeTests": {
+    "passed": 13,
+    "command": "node --test test/*.test.mjs",
+    "cwd": "prototypes/techtree-viewer"
+  },
+  "uiResult": {
+    "passed": true,
+    "checks": 97,
+    "screenshots": 34,
+    "nativeWidth": 2560,
+    "nativeHeight": 1440,
+    "exclusiveFullscreenAvailable": false
+  },
+  "miningChecks": 194,
+  "documentation": {
+    "linksChecked": 170,
+    "brokenLinks": [],
+    "missingMeta": [],
+    "jsonChecked": 22,
+    "invalidJson": [],
+    "conflictMarkers": []
+  },
+  "visualReview": [
+    "Logs/research-laboratory.png",
+    "Logs/research-materials.png"
+  ],
+  "delivered": {
+    "Windows": "5cc2b428793ba50f0b16893a4fbc224e8562545b30008a88b02dc0ce25c679bf",
+    "WindowsRelease": "fae733796bd65d9c9ab7fbf3b7e00b084e15b5f2f68e99c06e073efda507fd5f",
+    "TechTreeDemo": "5cc2b428793ba50f0b16893a4fbc224e8562545b30008a88b02dc0ce25c679bf"
+  },
+  "limits": [
+    "Unity6000.4.7f1 unavailable locally; source version unchanged.",
+    "Windows denied exclusive fullscreen during this run; native2560x1440 borderless fallback verified.",
+    "Technical audio tests only; no subjective listening approval.",
+    "No new manual keyboard/UI input test.",
+    "No commit or push requested or performed."
+  ],
+  "chatArchives": {
+    "exportedAt": "2026-10-09T18:12:00.786090+00:00",
+    "counts": {
+      "preserved": 9,
+      "unavailable": 1,
+      "exported": 9
+    },
+    "cloudSnapshots": 3,
+    "legacyArchivesPreserved": 3
+  },
+  "chatContextUpdate": {
+    "confirmedOtherLocalChats": 8,
+    "callingChat": "MainDev",
+    "receipt": "docs/Chats/kontext-zustellung-2026-10-09.json"
+  }
+}

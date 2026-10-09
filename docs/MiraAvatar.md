@@ -1,6 +1,14 @@
 # Mira: interne Dialog-Vorschau
 
+## Aktuelle Hauptspielintegration (09.10.2026)
+
+Die gezeichnete Mira ist inzwischen im Hauptspiel integriert: `MiraVisorOverlay.cs` zeichnet in IntroSequence, ScannerProgression und MemoryCinematic denselben Helmvisier-Rahmen mit Porträt links und Text daneben. Vier statische Ausdrücke aus MiraDialoguePortraits, scrollbarer Text, persönliche Textgröße und Untertitelschalter. Keine Mundanimation, keine neuen Bilder oder Sprachdateien. Das ältere AvatarLab bleibt ein isolierter historischer Testbereich. Nachfolgende Aussagen zu noch ausstehender Hauptspielintegration beschreiben damalige Stände. Aktuelle Darstellung und Prüfung: [Dialoge](Dialoge/README.md).
+
 Stand: 08.10.2026. Aktuelle Nutzerentscheidung: 3D-Avatar zurückgestellt, gezeichnete Mira mit statischen Ausdrucksvarianten für gesprochene Dialoge. Der freigegebene Sketch bleibt Identitätsvorlage.
+
+## Mira als Stations-KI und Forschungsbegleiterin (08.10.2026)
+
+Neue Nutzerentscheidung zur Spielwelt: Mira soll als KI der Station mit Avatar Forschung vorschlagen und mit zusätzlichem Energiebedarf bearbeiten. Erstes Beispiel ist der Umbau vorhandener Abbaudrohnen zur Bau-/Reparaturrolle. Die interne Helferdrohne führt den erforschten Umbau im Dock aus. Aktuelle gezeichnete Darstellung und bestehende Aoede-Aufnahmen bleiben erhalten; dies ist keine Änderung der Avatartechnik oder Beauftragung einer Online-KI-Anbindung. Forschungsdialoge, Freigaben, Kosten und Abläufe müssen erst gestaltet werden. Zielbild: [Spielidee](Spielidee.md#chapter-1-drohnen-mira-forschung-und-ausbauziele-08102026), Forschung: [Techtree](Techtree.md#chapter-1-forschungsbereiche-und-mira-08102026). Keine neuen Aufnahmen, Avataränderungen oder Laufzeittests für diese Planung.
 
 ## Testbereich
 

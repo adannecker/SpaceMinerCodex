@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-09",
+  "targets": [
+    {
+      "title": "GitHub",
+      "threadId": "01a11264-3942-7ed1-90f4-94bd00b82d06",
+      "confirmed": true,
+      "turnId": "01a121da-6276-7612-9863-356a058d4f92",
+      "reply": "Kontext auf 09.10.2026 aktualisiert. Meine Zuständigkeit bleibt Git, Repository, Sicherung und Rechnerwechsel. HEAD: 1aef07a, dazu erhaltene lokale Speicher-, UI-, Sound- und VR-Korrekturen sowie Forschungslabor mit 159 Einträgen. Laut Prüfbericht: Development/Release mit Unity 6000.6.4f1, 16 Playerprüfungen und 13 Node-Tests erfolgreich. Hier keine Tests erneut ausgeführt. Offen: Änderungen noch uncommittet/ungepusht; Projektversion 6000.4.7f1 lokal nicht installiert. Hörfreigabe und manuelle Eingabeprüfung fehlen. Git überträgt Projektmemory und Archive; persönliche Spielstände, Laborstand und Einstellungen bleiben separat. Keine Dateien geändert, keine Builds, Commits oder Pushes ausgeführt."
+    },
+    {
+      "title": "Asteroidenvarianten",
+      "threadId": "01a10dd1-fb99-7451-87bf-2d47afa4be7b",
+      "confirmed": true,
+      "turnId": "01a121da-7d1b-7331-9ed8-eb096041ceed",
+      "reply": "Der aktuelle Projektstand ist eingelesen. Dieser Chat bleibt für Asteroidenformen, Materialien, Generator, Bibliothek und Rendering zuständig. Vorhanden sind drei erweiterbare Asteroidenfamilien mit vier LOD-Stufen; das aktive Feld umfasst 100 Körper. Offen bleiben insbesondere: frei wählbarer Seed für die gesamte Asteroidenwolke samt Speicherung, Oberflächenkartierung und Drohnen-Livebilder, weitere Arten sowie Verbesserungen bei Nahdetails und Fernwirkung. Bei diesem Kontextabgleich habe ich keine Dateien geändert und keine Tests oder Builds ausgeführt."
+    },
+    {
+      "title": "Story, Dialoge & Bordcomputer",
+      "threadId": "01a10dac-caae-7492-bec8-24aac83ec430",
+      "confirmed": true,
+      "turnId": "01a121da-9047-7a02-99a1-51dbcc500ded",
+      "reply": "Kontext aktualisiert: main 1aef07a plus lokale Korrekturen, neues Forschungslabor mit 159 Einträgen in elf Bereichen. Die dokumentierten Builds und Prüfungen habe ich übernommen; hier keine eigenen Tests ausgeführt. Meine Zuständigkeit bleibt Story, Dialoge, Mira und die erzählerische Kapitelgestaltung, einschließlich unserer Nahrungspfade. Offen bleiben neue Aoede-Aufnahmen für Scan-/Questtexte, Forschungsdialoge sowie konkrete Kapitelziele und Nahrungsprozesse. Laborwerte sind weiterhin Entwurfsannahmen. Keine Dateien geändert, Builds gestartet oder Nachrichten weitergesendet."
+    },
+    {
+      "title": "Settings UI",
+      "threadId": "01a11264-4cc8-7ef3-8382-90ae4253b766",
+      "confirmed": true,
+      "turnId": "01a121da-aaa4-72a3-8b3b-455c204de5ea",
+      "reply": "Kontext auf 09.10.2026 aktualisiert: 1aef07a plus lokale Speicher-, Beenden-, UI-, Sound- und VR-Korrekturen sowie Forschungslabor mit 159 Einträgen in elf Bereichen. Meine Zuständigkeit bleibt Settings UI: Mining Pulse, modulare Bedienelemente, persistente Einstellungen, Rebinding, Anzeige und Barrierefreiheit. Die gemeinsame UI-Skalierung von 75–150 % gilt jetzt auch im Forschungslabor; Speichern/Laden und Autosave sind inzwischen vorhanden. Laut aktuellem Prüfbericht bestanden Development/Release, 16 Playerprüfungen und 13 Node-Tests mit Unity 6000.6.4f1. Offen bleiben die Prüfung mit Projektversion 6000.4.7f1, subjektive Hörfreigabe, Übersetzungen und vollständiges Rebinding. Natives randloses Vollbild ist bestätigt; exklusives Vollbild wurde von Windows abgelehnt. Nur gelesen, nichts geändert oder ausgeführt."
+    },
+    {
+      "title": "Sound und Effekte",
+      "threadId": "01a11264-5c12-7473-99be-5d5931f63656",
+      "confirmed": true,
+      "turnId": "01a121da-c00d-79b3-bcbc-2093374c1fab",
+      "reply": "Kontext vom 09.10.2026 übernommen: 1aef07a plus lokale Korrekturen und Forschungslabor mit 159 Einträgen. Meine Zuständigkeit bleibt Sound und Effekte. Stations-, Schleusen-, Pult-, VR- und Scansounds sind vorhanden; das dauerhafte Stationsrauschen wurde reduziert. Laut Prüfbericht sind Development/Release und die relevanten Audiotests mit Unity 6000.6.4f1 bestanden. Offen bleiben subjektive Hörfreigaben, weitere Maschinen-/Drohnengeräusche und neue Mira-Aufnahmen für Scan-/Questtexte. Projektversion 6000.4.7f1 bleibt unverändert und hier ungeprüft. Nur gelesen; keine Änderungen oder eigenen Tests durchgeführt."
+    },
+    {
+      "title": "TechTree",
+      "threadId": "01a11264-6c41-7131-9f43-3de64ff13f86",
+      "confirmed": true,
+      "turnId": "01a121da-d624-7372-91f5-6032f106a358",
+      "reply": "Kontext aktualisiert. Meine Zuständigkeit bleibt Techtree, Forschungsprogression und bereichsübergreifende Voraussetzungen. Aktueller Stand: main 1aef07a plus lokale Desktop-Korrekturen; Forschungslabor mit 159 Einträgen in elf Bereichen, realistischen Miniaturen, einheitlichen 72×72-Icons, zweiachsigem Ziehen und Klickdetails. Laborwerte und Laborsicherung bleiben von echter Produktion, Hardwareumbauten und regulären Spielständen getrennt. Offen bleiben Kapitelgrenzen, Rezepte, Kosten, Forschungsbalance sowie reale Energie-/CPU-/Kühlungsbedingungen. Die erfolgreichen Prüfungen sind laut aktuellem Bericht mit Unity 6000.6.4f1 dokumentiert; 6000.4.7f1 und die subjektive Hörfreigabe bleiben hier ungeprüft. Nur gelesen; keine Änderungen, Builds, Commits, Pushes oder Nachrichten an andere Chats."
+    },
+    {
+      "title": "Vehicels",
+      "threadId": "01a11264-7f0e-7dc2-abf0-aa313f838f8c",
+      "confirmed": true,
+      "turnId": "01a121da-e9f9-7d41-a153-7d8c2b2eb3f6",
+      "reply": "Kontext auf den Stand vom 09.10.2026 aktualisiert: GitHub-main 1aef07a plus lokale Korrekturen und Forschungslabor mit 159 Einträgen in elf Bereichen. Meine Zuständigkeit bleibt Drohnen, Flug, Abbau, Rückkehrreserve sowie Akku- und Ladeprogression. Vier Drohnenrollen sind geplant; das Labor führt noch keine realen Umbauten oder Produktionsprozesse aus. Offen bleiben die technische Energieauslegung, Umsetzung des 1:2-Ladeziels, konkrete Hardware-Tiers und die Startrolle von Drohne 02. Ältere Angaben zur fehlenden Speicherung sind durch die neuere Spielstandintegration überholt. Die dokumentierten Prüfungen mit Unity 6000.6.4f1 sind übernommen; hier habe ich ausschließlich gelesen und nichts geändert oder neu getestet."
+    },
+    {
+      "title": "Ideenbacklog prüfen",
+      "threadId": "01a112cc-1896-7182-8dae-4f9802fab337",
+      "confirmed": true,
+      "turnId": "01a121db-022c-7e70-a17c-3e5f70e31d1a",
+      "reply": "Kontext zum 09.10.2026 übernommen: GitHub-main 1aef07a plus lokale Korrekturen; Forschungslabor mit 159 Einträgen in elf Bereichen. Sonne, Planeten, zerstörte Heimatwelt und zwölfteiliges Cinematic sind bereits dargestellt. Meine Zuständigkeit bleibt der Ideenbacklog: Ideen, Entscheidungen und tatsächliche Umsetzung unterscheiden. Offen bleiben insbesondere Batteriewechsel, praktische Drohnenumbauten, neue Hardwaregenerationen, Solarertrag, Strahlungsschäden, Gefahrenvorhersage, Wolken-Seeds und Steam-Integration. Für Chapter 1 gelten inzwischen vier geplante Drohnenarten. Die dokumentierten Prüfungen wurden mit Unity 6000.6.4f1 durchgeführt; Projektversion 6000.4.7f1 bleibt lokal ungeprüft. Keine subjektive Hörfreigabe. Nur gelesen; keine Dateien geändert oder eigenen Tests ausgeführt."
+    }
+  ]
+}

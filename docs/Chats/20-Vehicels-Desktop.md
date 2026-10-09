@@ -1,6 +1,6 @@
 # Vehicels
 
-Chat-ID: `01a11264-7f0e-7dc2-abf0-aa313f838f8c`. Exportstand: 2026-10-07T22:08:57.334516+00:00.
+Chat-ID: `01a11264-7f0e-7dc2-abf0-aa313f838f8c`. Exportstand: 2026-10-09T21:42:37.839915+00:00.
 
 Desktop-Fortsetzung: Fahrzeuge und Drohnen, Gestaltung und Abläufe
 
@@ -300,3 +300,21 @@ Dabei entwickeln wir getrennt:
 - **Ladestation:** kürzere Ladezeiten, passend zur verfügbaren Stationsenergie.
 
 Das bleibt getrennt vom Materialwissen beim Abbau. Konkrete Tierwerte sind noch offen; die Entscheidung ist dokumentiert, die Spielbalance bisher unverändert.
+
+## Assistent · 2026-10-09T18:09:24.146Z
+
+Ich lese die aktuelle Übergabe und die Fachdateien zu Drohnen, Abbau und Energieversorgung. Dabei aktualisiere ich nur meinen Kontext und ändere keine Dateien.
+
+## Assistent · 2026-10-09T18:09:56.215Z
+
+Der neue Stand trennt das Forschungslabor weiterhin von der echten Drohnen- und Energieproduktion. Für meinen Bereich bleiben die vier geplanten Drohnenrollen, der physische Umbau und die Akku-/Ladeprogression relevant. Die 1:2-Richtung ist weiterhin ein Auslegungsziel; die bisherigen Testwerte bestätigen noch keine technische Machbarkeit.
+
+## Assistent · 2026-10-09T18:10:12.606Z
+
+Kontext auf den **Stand vom 09.10.2026** aktualisiert: GitHub-main `1aef07a` plus lokale Korrekturen und Forschungslabor mit 159 Einträgen in elf Bereichen.
+
+Meine Zuständigkeit bleibt **Drohnen, Flug, Abbau, Rückkehrreserve sowie Akku- und Ladeprogression**. Vier Drohnenrollen sind geplant; das Labor führt noch keine realen Umbauten oder Produktionsprozesse aus.
+
+Offen bleiben die technische Energieauslegung, Umsetzung des **1:2-Ladeziels**, konkrete Hardware-Tiers und die Startrolle von Drohne 02. Ältere Angaben zur fehlenden Speicherung sind durch die neuere Spielstandintegration überholt.
+
+Die dokumentierten Prüfungen mit Unity 6000.6.4f1 sind übernommen; hier habe ich ausschließlich gelesen und nichts geändert oder neu getestet.

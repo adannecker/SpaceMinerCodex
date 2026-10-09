@@ -55,7 +55,10 @@ namespace SpaceMiner
         }
         public bool Tab(Rect rect, string title, bool selected)
         {
-            bool clicked = GUI.Button(rect, title, selected ? Primary : Button);
+            var style = new GUIStyle(selected ? Primary : Button) { wordWrap = false };
+            var content = new GUIContent(title);
+            while (style.fontSize > 12 && style.CalcSize(content).x > rect.width - 8) style.fontSize--;
+            bool clicked = GUI.Button(rect, content, style);
             SettingsUiAudio.Observe(rect, title); if(clicked) SettingsUiAudio.Activate();
             if (selected) Fill(new Rect(rect.x, rect.y, 4, rect.height), Amber);
             return clicked;

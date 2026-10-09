@@ -11,6 +11,20 @@ namespace SpaceMiner
         public bool CanSwitch => !Application.isEditor && !IsChanging;
         private int windowWidth = 1440;
         private int windowHeight = 900;
+        public static Vector2Int MonitorResolution
+        {
+            get
+            {
+                var display = Screen.mainWindowDisplayInfo;
+                return display.width > 0 && display.height > 0
+                    ? new Vector2Int(display.width, display.height)
+                    : new Vector2Int(Screen.currentResolution.width, Screen.currentResolution.height);
+            }
+        }
+        private void Awake()
+        {
+            if (!Screen.fullScreen) { windowWidth = Screen.width; windowHeight = Screen.height; }
+        }
 
         public static int ModeIndex(FullScreenMode mode) => mode == FullScreenMode.Windowed ? 0 : mode == FullScreenMode.ExclusiveFullScreen ? 2 : 1;
         public static FullScreenMode Mode(int index) => index == 0 ? FullScreenMode.Windowed : index == 2 ? FullScreenMode.ExclusiveFullScreen : FullScreenMode.FullScreenWindow;
@@ -23,13 +37,14 @@ namespace SpaceMiner
         }
         public void ApplySettings(GraphicsSettings settings)
         {
-            if (Application.isEditor) return;
+            if (!CanSwitch) return;
             var mode = settings.DisplayMode < 0 ? Screen.fullScreenMode : Mode(settings.DisplayMode);
-            int width = settings.Width > 0 ? settings.Width : Screen.width, height = settings.Height > 0 ? settings.Height : Screen.height;
-            if (settings.DisplayMode == 1 && settings.Width == 0) { width = Screen.currentResolution.width; height = Screen.currentResolution.height; }
-            if (mode == FullScreenMode.Windowed) { windowWidth = width; windowHeight = height; }
-            if (mode == Screen.fullScreenMode && width == Screen.width && height == Screen.height) return;
-            Screen.SetResolution(width, height, mode);
+            var automatic = mode == FullScreenMode.Windowed
+                ? (Screen.fullScreen ? new Vector2Int(windowWidth, windowHeight) : new Vector2Int(Screen.width, Screen.height))
+                : MonitorResolution;
+            int width = settings.Width > 0 ? settings.Width : automatic.x;
+            int height = settings.Height > 0 ? settings.Height : automatic.y;
+            ChangeResolution(width, height, mode);
         }
         private void Update()
         {
@@ -44,26 +59,27 @@ namespace SpaceMiner
         public void SetFullscreen(bool fullscreen)
         {
             if (!CanSwitch || fullscreen == IsFullscreen) return;
-            if (fullscreen)
-            {
-                windowWidth = Screen.width;
-                windowHeight = Screen.height;
-            }
-            StartCoroutine(ChangeMode(fullscreen));
+            var size = fullscreen ? MonitorResolution : new Vector2Int(windowWidth, windowHeight);
+            ChangeResolution(size.x, size.y, fullscreen ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed);
         }
 
-        private IEnumerator ChangeMode(bool fullscreen)
+        private void ChangeResolution(int width, int height, FullScreenMode mode)
         {
+            if (mode == Screen.fullScreenMode && width == Screen.width && height == Screen.height) return;
+            if (!Screen.fullScreen) { windowWidth = Screen.width; windowHeight = Screen.height; }
+            if (mode == FullScreenMode.Windowed) { windowWidth = width; windowHeight = height; }
             IsChanging = true;
-            FullScreenMode target = fullscreen ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
-            Resolution desktop = Screen.currentResolution;
-            Screen.SetResolution(fullscreen ? desktop.width : windowWidth,
-                fullscreen ? desktop.height : windowHeight, target);
+            StartCoroutine(ChangeMode(width, height, mode));
+        }
+        private IEnumerator ChangeMode(int width, int height, FullScreenMode target)
+        {
+            Screen.SetResolution(width, height, target);
             // Unity applies this at the end of a frame; suppress double requests while it settles.
             yield return new WaitForEndOfFrame();
             yield return null;
             float deadline = Time.realtimeSinceStartup + 3f;
-            while (Screen.fullScreenMode != target && Time.realtimeSinceStartup < deadline) yield return null;
+            while ((Screen.fullScreenMode != target || Screen.width != width || Screen.height != height)
+                && Time.realtimeSinceStartup < deadline) yield return null;
             IsChanging = false;
         }
     }

@@ -17,6 +17,7 @@ namespace SpaceMiner
         public bool FirstScanComplete { get; private set; }
         public bool AtConsole => StationInteriorMode.HasConsoleOpen;
         private MiraAvatar portrait;
+        private readonly MiraVisorOverlay dialogueOverlay=new MiraVisorOverlay();
         public bool DebugVisibility { get; private set; }
         public bool Ready => EnergyKwh >= CapacityKwh - .0000001f;
         public int KnownCount { get; private set; }
@@ -85,7 +86,7 @@ namespace SpaceMiner
             EnergyKwh = CapacityKwh * .97f;
             FirstScanComplete = deliveryReported = completionReported = false;
             StationInteriorMode.Current?.CloseConsole();
-            if(StationInteriorMode.Current?.Layout!=null) { StationInteriorMode.Current.Exit(); StationInteriorMode.Current.Enter(true); }
+            if(StationInteriorMode.Current?.Layout!=null) { StationInteriorMode.Current.Exit(true); StationInteriorMode.Current.Enter(true); }
             DebugVisibility = false;
             KnownCount = 0;
             foreach (var asteroid in scenario.Asteroids) { asteroid.IsScanned = false; asteroid.WaterIdentified = false; }
@@ -124,13 +125,14 @@ namespace SpaceMiner
                 if (asteroid.WaterIdentified) water++;
             }
             FirstScanComplete = true;
+            StationInteractionAudio.Play(StationSound.ScanComplete);
             scenario.Notify("Scan abgeschlossen: " + KnownCount + " Kontakte, " + water + " Wasserquellen. Neuer Auftrag: Wasser sichern.");
             Say("SCAN ABGESCHLOSSEN · WASSER SICHERN", "Der Scan hat " + KnownCount + " Asteroiden erfasst. Bei " + water + " davon ist Wasser bestätigt. Ihre Oberflächen sind noch nicht kartiert. Öffne die virtuelle Aussenansicht, wähle eine Wasserquelle und beauftrage Drohne 01, unseren Stationstank zu füllen.");
             RefreshVisibility();
             return true;
         }
 
-        public void OpenVirtualView() { StationInteriorMode.Current?.Exit(); orbit.ResetView(); RefreshVisibility(); }
+        public void OpenVirtualView() { StationInteriorMode.Current?.Exit(); RefreshVisibility(); }
         public void OpenConsole() { StationInteriorMode.Current?.OpenConsole(); orbit.Select(null); RefreshVisibility(); }
         public void ReturnToStation() { StationInteriorMode.Current?.Enter(); RefreshVisibility(); }
         public void SetDebugVisibility(bool value) { DebugVisibility = value; orbit.Select(null); RefreshVisibility(); }
@@ -175,12 +177,11 @@ namespace SpaceMiner
 
         }
 
-        private float Scale => Mathf.Min(Screen.width / 1440f, Screen.height / 900f);
+        private float Scale => UiLayout.Scale();
         private Rect DialogueRect
         {
             get {
-                float height=ui.Text!=null&&Dialogue!=null?Mathf.Max(245,ui.Text.CalcHeight(new GUIContent(Dialogue),530)+110):245;
-                return new Rect(350,Mathf.Min(475,Screen.height/Scale-height-170),750,height);
+                return MiraVisorOverlay.Bounds(Screen.width/Scale,Screen.height/Scale);
             }
         }
         public bool OwnsScreenPoint(Vector3 point)
@@ -205,19 +206,21 @@ namespace SpaceMiner
             }
             else if (!AtConsole)
             {
-                ui.Panel(new Rect(20,20,310,210));
-                GUI.Label(new Rect(38,36,274,34),FirstScanComplete?"AUFTRAG · WASSER SICHERN":"AUFTRAG · ERSTER SCAN",ui.Small);
-                GUI.Label(new Rect(38,80,274,105),FirstScanComplete?"Öffne am Pult die virtuelle Aussenansicht und beauftrage Drohne 01 mit einer Wasserquelle.":"Gehe zum Stationspult. Öffne es mit E und führe den Nahbereichsscan aus.",ui.Text);
-                GUI.Label(new Rect(38,192,274,30),"Scanner " +(Charge*100).ToString("F1")+" %",ui.Small);
+                string questTitle = FirstScanComplete ? "AUFTRAG · WASSER SICHERN" : "AUFTRAG · ERSTER SCAN";
+                string questText = FirstScanComplete ? "Öffne am Pult die virtuelle Aussenansicht und beauftrage Drohne 01 mit einer Wasserquelle." : "Gehe zum Stationspult. Öffne es mit E und führe den Nahbereichsscan aus.";
+                float titleHeight = ui.Small.CalcHeight(new GUIContent(questTitle), 274);
+                float bodyHeight = ui.Text.CalcHeight(new GUIContent(questText), 274);
+                float bodyTop = 36 + titleHeight + 16;
+                float chargeTop = bodyTop + bodyHeight + 16;
+                ui.Panel(new Rect(20,20,310,chargeTop + 34 - 20));
+                GUI.Label(new Rect(38,36,274,titleHeight),questTitle,ui.Small);
+                GUI.Label(new Rect(38,bodyTop,274,bodyHeight),questText,ui.Text);
+                GUI.Label(new Rect(38,chargeTop,274,30),"Scanner " +(Charge*100).ToString("F1")+" %",ui.Small);
             }
             if (Dialogue != null)
             {
                 GUI.enabled = initialEnabled;
-                var r = DialogueRect; ui.Panel(r);
-                GUI.Label(new Rect(r.x + 20, r.y + 14, r.width - 40, 32), "MIRA · " + DialogueTitle, ui.Small);
-                DrawPortrait(new Rect(r.x+20,r.y+52,150,r.height-104));
-                GUI.Label(new Rect(r.x + 190, r.y + 52, r.width - 210, r.height - 100), Dialogue, ui.Text);
-                if (GUI.Button(new Rect(r.x + 20, r.yMax - 40, r.width - 40, 30), "Verstanden", ui.Button)) DismissDialogue();
+                if(dialogueOverlay.Draw(DialogueRect,DialogueTitle,Dialogue,MiraAvatar.Mood.Focused,"STATIONSKANAL / MIRA","Verstanden"))DismissDialogue();
             }
             GUI.enabled = initialEnabled; GUI.depth = depth; GUI.matrix = previous;
         }
@@ -227,6 +230,6 @@ namespace SpaceMiner
             if(portrait==null) { portrait=gameObject.AddComponent<MiraAvatar>(); portrait.DialoguePortraits=Resources.Load<Texture2D>("Mira/MiraDialoguePortraits"); portrait.Motion=false; }
             portrait.Draw(rect);
         }
-        private void OnDestroy() { ui.Dispose(); if (contactMaterial != null) Destroy(contactMaterial); }
+        private void OnDestroy() { dialogueOverlay.Dispose();ui.Dispose(); if (contactMaterial != null) Destroy(contactMaterial); }
     }
 }

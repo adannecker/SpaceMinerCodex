@@ -64,7 +64,20 @@ namespace SpaceMiner
         public static SpaceMinerPlayerSettings Current => Service.Current;
         public static event Action<SpaceMinerPlayerSettings> Applied;
         public static int DefaultQuality { get; } = QualitySettings.GetQualityLevel();
-        public static string PathName => Path.Combine(Application.persistentDataPath, "player-settings.json");
+        public static string PathName
+        {
+            get
+            {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+                var args = Environment.GetCommandLineArgs();
+                if (Array.IndexOf(args, "-presentationCheck") >= 0)
+                    return Path.GetFullPath("Logs/Presentation-settings/player-settings.json");
+                if (Array.IndexOf(args, "-stationUiAudioCheck") >= 0 || Array.IndexOf(args, "-stationUiAudioPreview") >= 0)
+                    return Path.GetFullPath("Logs/StationUiAudio/player-settings.json");
+#endif
+                return Path.Combine(Application.persistentDataPath, "player-settings.json");
+            }
+        }
         public static void Load()
         {
             if (!Service.Load(out string error)) Debug.LogWarning("Settings load: " + error);

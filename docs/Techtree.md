@@ -1,4 +1,14 @@
-# Tier-I-Techtree
+# Chapter-1-Techtree
+
+## Aktuelle Spielansicht (09.10.2026)
+
+Auf Nutzerwunsch ersetzt die bestätigte kompakte Ansicht jetzt die bisherige Tier-I-Spielübersicht in Editor, Development und Release. Elf Kategorien mit 159 zentrierten Miniaturen und Bereichszählern. **T** beziehungsweise das Forschungssymbol öffnet und schließt; die Taste ist neu belegbar. Nicht verfügbare Technologien samt eingehenden Verbindungen sind grau, bleiben für die Erklärung ihrer Voraussetzungen anklickbar. Alle Informationen stehen in einer festen scrollbaren Seitenleiste ganz rechts. Der Baum bleibt mit ausgewähltem Eintrag bedienbar. Die schwebenden Informationskarten sind abgelöst.
+
+Wasserabbauwissen ist im Drohnen-Baum unter Abbaugrundlagen erreichbar: echter gelber Erfahrungsrand, Level/Fahrten, Förderrate und Energiebedarf sowie beide Lernschwerpunkte. Allgemeine Forschung bleibt ein unabhängiges vorläufiges Modell; neue Rohstoffproduktion und Hardwareverbrauch sind noch nicht angebunden. Debugregler nur im Testlabor für Editor/Development. Bedienung, Quellen und neue Prüfungen: [Forschungslabor](Forschungslabor.md).
+
+## Historische Tier-I-Darstellung und Planung
+
+Die folgenden Abschnitte halten frühere Entwürfe und Umsetzungsstände fest; für die aktuelle Bedienung gilt der Abschnitt oben.
 
 Bildvorschläge für alle elf bisher besprochenen Chapter-1-Bereiche samt gemeinsamer Einstiegsübersicht und Knotenzählern: [Techtree-Galerie und Ausarbeitung vom 08.10.2026](Techtree/README.md). Enthält alle zwölf ausgewählten PNGs und dokumentierte Voraussetzungen; Gestaltungsvorschläge, keine neue Menü-/Gameplayimplementierung.
 

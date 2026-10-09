@@ -8,9 +8,28 @@ Energie, Nahrung und Trinkwasser werden zentrale Bedürfnisse. Neue Sensoren ers
 
 Der Bordcomputer heißt **Mira**. Sie begleitet den Spieler mit einer sanften, warmen und ruhigen weiblichen Stimme und spricht ihn mit „du“ an. Ihre Sprechertexte und die Inszenierung entstehen in [docs/Dialoge](Dialoge/README.md).
 
+Nutzerentscheidung und Umsetzung vom 09.10.2026: Die bestätigte kompakte Techtree-Ansicht ersetzt die bisherige Spielübersicht auch in Release. Nicht verfügbare Technologien sind grau, bleiben zur Erklärung anklickbar. Alle Details stehen ganz rechts in einer festen scrollbaren Seitenleiste. **T** öffnet und schließt den Baum, in der Konfiguration neu belegbar. Alle bestehenden Mira-Dialoge, das Erwachen und die Erinnerungs-Zwischenszenen nutzen denselben Helmvisier-Rahmen: gezeichnete Mira links, Titel und Text daneben, lange Texte scrollbar. Vorhandene Sprecheraufnahmen, Storytexte und Ablauf bleiben erhalten. Modellgrenzen und Prüfung: [Forschungslabor](Forschungslabor.md), [Dialoge](Dialoge/README.md).
+
 Aktuelle Nutzerentscheidung vom 08.10.2026: 3D-Avatar vorerst zurückgestellt. Mira verwendet die freigegebene Zeichnung als Identitätsvorlage und statische Ausdrucksvarianten für ihre gesprochenen Dialoge: freundlich, besorgt, konzentriert und ermutigend, mit weichen Bildüberblendungen. Keine Mundanimation in dieser Fassung. Die bisherigen 3D-Quellen bleiben für später erhalten. Dialogvorschau im isolierten AvatarLab; gezeichnetes Porträt inzwischen im Hauptspiel-Intro und in Questdialogen integriert. Details: [MiraAvatar](MiraAvatar.md), bisherige 3D-Versuche: [Mira3D](Mira3D.md).
 
 Zunächst bleibt das Spiel in einem Asteroidengürtel. Reisen in andere Sternsysteme gehören nicht zum ersten Umfang. Drohnen beginnen bei etwa 2 × 2 Metern, einzelne Asteroiden können 5 Kilometer Durchmesser erreichen.
+
+## Kapitel und Veröffentlichung — Entwurfsrichtung vom 08.10.2026
+
+Der Nutzer möchte die Hauptgeschichte und den Ausbau in aufeinander aufbauende Chapters gliedern und jedes Kapitel als DLC veröffentlichen. Geplanter Preisanker: etwa **5 EUR je Kapitel**, mit einem Ziel von **40 Stunden Spielspaß in der Hauptgeschichte pro Kapitel**. Preis und Spielzeit sind Entwurfsziele, noch kein geprüftes Leistungsversprechen oder bestätigtes wirtschaftliches Modell.
+
+| Kapitel | Vom Nutzer vorgesehener Schwerpunkt |
+| --- | --- |
+| Chapter 1 | Die beschädigte Station innerhalb des Asteroidenfeldes wieder fit bekommen. Schwerpunkt: Planung, Produktion, Sammeln, Reparieren, Erkunden und erste Ansätze von Forschung. |
+| Chapter 2 | Mobilität der Station im Gebiet der näheren Planeten. |
+
+Weitere Kapitel sind vorgesehen, ihre Inhalte noch offen. Der vorhandene erste Entwicklungsumfang bleibt im Asteroidenfeld; die spätere Mobilität erweitert die Reichweite erst in Chapter 2. Die schon vorhandene Planetenkulisse ist kein Nachweis implementierter Reisen oder eines fertigen Kapitels.
+
+Chapter 1 soll nach ausdrücklicher Nutzerentscheidung vor allem Planungsarbeit fördern: komplexe, realitätsnahe Produktionsketten vorbereiten, Ressourcen sammeln, beschädigte Technik reparieren und die Umgebung erkunden. Forschung beginnt mit ersten Ansätzen und unterstützt diesen Aufbau. Abhängigkeiten und begrenzte Ressourcen sollen nachvollziehbare Prioritäten erfordern. Konkrete Quests, Forschungsgrenzen und Produktionsrezepte bleiben auszuarbeiten; Stationsreisen zu den näheren Planeten gehören zum geplanten Chapter 2.
+
+Veröffentlichungsbedingung nach Nutzerbestätigung vom 08.10.2026: erst launchen, wenn einige hundert Tests den vorgesehenen Umfang und die Qualität bestätigen. Für das Ziel von 40 Stunden Spielspaß sind echte Spieldurchläufe und Spielerfeedback erforderlich; bestandene automatische Funktionsprüfungen allein bestätigen weder Spielspaß noch Hauptgeschichtsdauer. Anzahl der Testpersonen, Verteilung der Tests und genaue Freigabekriterien sind noch auszuarbeiten. Vorhandene historische Prüfzahlen sind kein Nachweis für diese Kapitel-Freigabe.
+
+Noch auszuarbeiten: konkrete Kapitelabschlüsse und Hauptquests, sinnvoll gefüllte Spielzeit statt verlängerter Wartezeiten, Übergabe des Stations-/Forschungsfortschritts zwischen Kapiteln, Abgrenzung kleiner Lagekorrekturen/Ausrichtung gegenüber Reisen sowie eine Grundspiel- beziehungsweise Trägerlösung für die Kapitel-DLCs. Keine Kapitel-, DLC-, Kauf- oder Reisemechanik mit diesem Eintrag implementiert; keine Spielzeitmessung.
 
 ## Chapter 1: Drohnen, Mira-Forschung und Ausbauziele (08.10.2026)
 
@@ -110,6 +129,8 @@ Für den ersten Prototyp nutzen Außendrohnen elektrisch erhitztes Wasser als au
 ## Technologische Leitlinien für spätere Entwicklung
 
 Der Technologiebaum soll möglichst realitätsnah sein. Für die spätere Ausarbeitung müssen reale Verfahren und ihre Voraussetzungen recherchiert und mit belastbaren Quellen belegt werden. Die folgenden Punkte sind Entwurfsziele, noch kein wissenschaftlich geprüfter Technologiebaum:
+
+Bestätigung vom 08.10.2026: Der Nutzer möchte komplexe Produktionsketten, deren Zutatenlisten eng an den tatsächlich benötigten Materialien liegen. Ein Solarpanel soll beispielsweise passende Zwischenprodukte, Werkstoffe und Fertigungsschritte voraussetzen. Zeitraffer wird ausdrücklich befürwortet, um längere Abläufe überbrücken zu können. Detailrezepte hängen von der gewählten Technologie ab; Mengen, Fertigungsanlagen, Verluste und Balance bleiben auszuarbeiten. Erste recherchierte Orientierung und Abgrenzung zwischen terrestrischen Modulen und Raumfahrttechnik: [Techtree](Techtree.md#realistische-produktionsketten-und-solartechnik-08102026). Noch keine zusätzliche Produktionsmechanik mit dieser Entscheidung implementiert.
 
 - Wissen, Maschinen, Ressourcen und verfügbare Energie bilden getrennte Voraussetzungen. Ein Wissensfund allein erschafft keine fertige Anlage.
 - Sensoren geben Informationen mit begrenzter Reichweite und Sicherheit; Materialgewinnung und Verarbeitung sind eigene Schritte.

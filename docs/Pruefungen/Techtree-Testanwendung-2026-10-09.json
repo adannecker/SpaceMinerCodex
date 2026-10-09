@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-09",
+  "recordedAt": "2026-10-09T20:45:18.025058+00:00",
+  "scope": "Separate Unity test application with player presentation, centered atlas crops and progress perimeter; existing game UI components, independent research sandbox.",
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "sourceVersionUnchanged": true,
+  "buildProject": "Builds/LocalPreview-6000.6.4f1",
+  "buildMethod": "SpaceMiner.Editor.ResearchSimulationValidation.BuildDemo",
+  "buildLog": "Logs/techtree-game-demo-verified-build-20261009.log",
+  "buildExitCode": 0,
+  "application": {
+    "path": "Builds/TechTreeDemo/SpaceMiner.exe",
+    "productName": "SpaceMiner TechTree Test",
+    "startup": "Direct player presentation via TECHTREE_DEMO build define; -techTreeDemo also supported",
+    "launcher": "Start-TechTree-Test.cmd",
+    "verifiedCopiedFilesSHA256": 247,
+    "assemblyCSharpSHA256": "93C7CB8392AF14C6AE434BA36882608FC31B7AD50BC96343489185880A16AA5F",
+    "previousDemo": "Builds/TechTreeDemo-before-game-view-20261009-224213"
+  },
+  "checks": [
+    {
+      "name": "Spielansicht 1600x1000",
+      "log": "Logs/techtree-game-verified-check-1600.log",
+      "passedMarker": "TECHTREE GAME PRESENTATION CHECK PASSED",
+      "exitCode": 0
+    },
+    {
+      "name": "Spielansicht 1280x800",
+      "log": "Logs/techtree-game-verified-check-1280.log",
+      "passedMarker": "TECHTREE GAME PRESENTATION CHECK PASSED",
+      "exitCode": 0
+    },
+    {
+      "name": "Bisheriges Forschungslabor",
+      "log": "Logs/techtree-game-regression-researchLabCheck.log",
+      "passedMarker": "RESEARCH LABORATORY PLAYER CHECK PASSED",
+      "exitCode": 0
+    },
+    {
+      "name": "Bisheriges Spiel-Techtree-Menue",
+      "log": "Logs/techtree-game-regression-techTreeCheck.log",
+      "passedMarker": "TECHTREE MENU CHECK PASSED",
+      "exitCode": 0
+    }
+  ],
+  "nodeTests": {
+    "command": "node --test prototypes/techtree-viewer/test/*.test.mjs",
+    "passed": 14,
+    "failed": 0
+  },
+  "visualReview": [
+    "Logs/techtree-game-drones-1600.png",
+    "Logs/techtree-game-details-1600.png",
+    "Logs/techtree-game-progress-1600.png",
+    "Logs/techtree-game-drones-1280.png"
+  ],
+  "limits": [
+    "Research balance, samples, hardware and cross-category gates remain sandbox values.",
+    "No real resource consumption, hardware upgrades or regular save integration.",
+    "Standard Release menu unchanged; no Release build or full gameplay regression in this task.",
+    "Builds and screenshots are local, not Git-delivered.",
+    "No manual input or subjective audio approval claimed."
+  ]
+}

@@ -20,6 +20,10 @@ Für den aktuellen Rechnerwechsel und den Kontext aller bekannten Themenchats: [
 
 Alternativ kann das gebaute Spiel unter `Builds/Windows/SpaceMiner.exe` direkt gestartet werden.
 
+**Aktuelle Spieloberfläche (09.10.2026):** Die kompakte Ansicht mit elf Kategorien ersetzt den alten Techtree auch in Release. **T** oder das Techtree-Symbol öffnet ihn; T ist neu belegbar. Gesperrte Knoten sind grau und anklickbar, alle Informationen stehen in der festen scrollbaren Seitenleiste ganz rechts. Mira erscheint in Intro, Questdialogen und Erinnerungs-Cinematic einheitlich links im Helmvisier-Rahmen, mit Text daneben. Forschungsmodell und Balance bleiben vorläufig. Details: [Forschungslabor](docs/Forschungslabor.md), [Dialoge](docs/Dialoge/README.md).
+
+**Techtree-Testanwendung (09.10.2026):** `Start-TechTree-Test.cmd` doppelklicken oder `tools/Start-TechTreeDemo.ps1` starten. Die separate EXE unter `Builds/TechTreeDemo/SpaceMiner.exe` öffnet direkt die Spielansicht mit elf Kategorien, 159 Einträgen, zentrierten Miniaturen, Klickdetails und gelbem Fortschrittsrand. Sie nutzt die Unity-Spielkomponenten; Teststeuerung über **Testlabor**. Eigener Anwendungsname und Speicherordner, weiterhin vorläufiges Forschungsmodell ohne echte Ressourcenanbindung. Bedienung und aktuelle Prüfung: [Forschungslabor](docs/Forschungslabor.md).
+
 Beim Start erscheint das animierte Startmenü mit **Demo starten**, **Cinematics**, **Konfiguration** und **Beenden**. Demo starten beginnt Miras Erwachen mit freigegebener Aoede-Stimme, Untertiteln und Kamerafahrten. Escape überspringt die Cutscene; Simulation und Kamera bleiben währenddessen gesperrt. Die Galerie enthält das sofort verfügbare zwölfteilige Erinnerungs-Cinematic mit durchgehender Enceladus-Narration und Musik. Beenden im Spiel führt nach Rückfrage zum pausierten Startmenü; die Anwendung wird dort geschlossen.
 
 ### Historische Desktop-Vorschauen vom 06.10.2026
@@ -51,6 +55,7 @@ Der spätere Stand vom 06.10.2026 ergänzt Wasserabbau-Erfahrung, Rückkehrreser
 | V | Im Spiel zwischen Kommandanten-Außenansicht und Stations-Innenansicht wechseln |
 | E | Innen in der Nähe das Stationspult bedienen oder die Schleuse starten |
 | Leertaste | Simulation pausieren / mit vorherigem Tempo fortsetzen |
+| T | Techtree öffnen/schließen; unter Konfiguration → Steuerung neu belegbar |
 | F11 oder Alt + Enter | Zwischen Fenster und Vollbild wechseln, auch während des Intros |
 | H | Informationsanzeige ein-/ausblenden |
 | Escape | Im Intro: überspringen. Im Spiel: pausierte Rückfrage; Beenden führt zum Startmenü, Weiterspielen oder erneut Escape bricht ab |
@@ -189,7 +194,7 @@ Der finale MP4-Export und Mix liegen unter outputs/Cinematic und sind versionier
 
 ## Scan-Einstieg und Spielstände (08.10.2026)
 
-Demo starten führt nach Mira an die Stationskonsole. Scanner lädt von 97 auf 100 Prozent in zehn Sekunden bei 1×; Scan entdeckt zehn Kontakte und drei Wasserquellen. Virtuelle Aussenansicht zeigt nur bekannte Kontakte ohne Oberflächentextur; Debug schaltet alle Objekte sichtbar, ohne Arbeitsfreigabe zu geben. F5 Speichern, F9 Laden, Laden auch im Startmenü. Namen, Kommentare, Forschungsübersicht, Autosave und Speicherabfrage beim Verlassen. Details: [Scanner und Spielstände](docs/Scanner-und-Spielstaende.md). Prüflauf: Windows-Player mit -scanSaveCheck; Ergebnis Logs/scan-save-result.json.
+Demo starten führt nach Mira in das Wohnmodul zum Stationspult. Scanner lädt von 97 auf 100 Prozent in zehn Sekunden bei 1×; Scan entdeckt zehn Kontakte und drei Wasserquellen. Virtuelle Aussenansicht zeigt nur bekannte Kontakte ohne Oberflächentextur; Debug schaltet alle Objekte sichtbar, ohne Arbeitsfreigabe zu geben. F5 Speichern, F9 Laden, Laden auch im Startmenü. Namen, Kommentare, Forschungsübersicht, Autosave und Speicherabfrage beim Verlassen. Position, Blickrichtung und laufende Schleuse werden wiederhergestellt. Details: [Scanner und Spielstände](docs/Scanner-und-Spielstaende.md). Prüflauf: Windows-Player mit -scanSaveCheck; Ergebnis Logs/scan-save-result.json. Zusätzlicher Session-/Neustarttest: zuerst `-batchmode -saveSessionCheck`, dann bei gleichem Arbeitsordner `-batchmode -saveSessionCheck -restoreSessionCheck`. Isolierte Dateien und Ergebnisse: `Logs/SaveSession`.
 
 
 ### Vorhandener begehbarer Stationsraum
@@ -212,3 +217,9 @@ Aktueller Einstieg: Intro und Spiel beginnen im Wohnmodul. Zum Stationspult gehe
 Im Editor/Development-Spiel: Techtree-Symbol neben Settings → Forschungslabor [Debug]. Elf Bereiche mit 159 Entwurfseinträgen, auswählbare Forschung und Verbesserungen, Daten-/Arbeitsmittelbedingungen, Pause/1×/5×/30×/120×/600×, ein bis drei parallele Laborplätze und separate Sicherung. Laborfortschritt läuft nur bei geöffnetem Labor; echte Spielressourcen bleiben getrennt. Testwerte, Bedienung und Prüfmethoden: [docs/Forschungslabor.md](docs/Forschungslabor.md).
 
 Unity-Demo der realistischen Techtree-Vorschau: `tools/Start-TechTreeDemo.ps1` startet den separaten lokalen Development-Build direkt im Forschungslabor. Build-/Bedienhinweise: [Forschungslabor](docs/Forschungslabor.md). Enthält alle elf Bäume, Miniaturbilder, Klickdetails und Forschungstemposchalter.
+
+## Stationssounds und UI-Skalierung (08.10.2026)
+
+Schleuse, Druckausgleich, Pult, VR und Scanbestätigung haben eigene lokale Geräusche; leise Innenambience spielt nur in der Station. Alle verwenden Master/Effects einschließlich Live-Vorschau und Mute. Interface → UI-Skalierung gilt jetzt für Quest, Mira, Pult und Menüs/HUD: 75–150 Prozent, Standard 100, Preview/Apply/Cancel. Hohe Auflösungen bleiben kompakt; kleine Fenster skalieren zum Einpassen herunter. Details: [Audio](docs/Audio.md), [Settings](docs/Settings.md).
+
+Development-Player mit `-stationUiAudioCheck` prüft Audioereignisse, Mute/Pause, UI-Persistenz, skalierte Trefferflächen, VR-Kamerarückkehr und native Vollbild-Framebuffer; 32 UI-Bilder in vier Auflösungen plus zwei Vollbildbilder. Windows-Fallback von exklusivem auf randloses Vollbild wird separat im Ergebnis erfasst. `-stationUiAudioPreview` öffnet eine bedienbare Prüfsitzung. Diese beiden Modi speichern Einstellungen und Saves ausschliesslich unter `Logs/StationUiAudio` im Arbeitsordner. Ohne diese Argumente werden die normalen persönlichen Einstellungen/Saves verwendet. Neueste Desktop-Prüfung: [Bericht](docs/Pruefungen/Stationssound-UI-Desktop-2026-10-08.json); Unity6000.6.4f1 Development/Release, Projektquelle bleibt6000.4.7f1.

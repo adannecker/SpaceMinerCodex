@@ -20,6 +20,13 @@ namespace SpaceMiner
         }
         public void Cancel() { IsOpen = false; closedFrame = Time.frameCount; }
         public void ReturnToStart() { Cancel(); FindFirstObjectByType<StartMenu>()?.ReturnToStart(); }
+        public void RequestReturnToStart()
+        {
+            var saves = FindFirstObjectByType<SaveGameMenu>();
+            Cancel();
+            if (saves != null) saves.Leave(ReturnToStart);
+            else ReturnToStart();
+        }
         private void Update()
         {
             if (SaveGameMenu.BlocksInput) return;
@@ -40,7 +47,7 @@ namespace SpaceMiner
             {
                 ui.Configure(SettingsStore.Current.Accessibility);
                 GUI.depth = -300;
-                float scale = Mathf.Min(Screen.width / 960f, Screen.height / 720f);
+                float scale = UiLayout.Scale(960, 720);
                 GUI.matrix = Matrix4x4.Scale(Vector3.one * scale);
                 float width = Screen.width / scale, height = Screen.height / scale;
                 SpaceMinerUi.Fill(new Rect(0, 0, width, height), new Color(0, .01f, .025f, .7f));
@@ -51,7 +58,7 @@ namespace SpaceMiner
                 if (GUI.Button(new Rect(panel.x + 28, panel.y + 212, 212, 54), "Weiterspielen", ui.Primary)) { Cancel(); SettingsUiAudio.Activate(); }
                 if (GUI.Button(new Rect(panel.x + 260, panel.y + 212, 212, 54), "Beenden", ui.Button))
                 {
-                    Cancel(); GetComponent<SaveGameMenu>()?.Leave(ReturnToStart);
+                    RequestReturnToStart();
                 }
             }
             finally { GUI.matrix = matrix; GUI.depth = depth; }

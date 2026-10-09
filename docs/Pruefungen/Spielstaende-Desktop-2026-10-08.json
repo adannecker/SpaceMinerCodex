@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-08",
+  "baseCommit": "ef25edc",
+  "scope": "Beenden, aktive Sitzung, Innenposition/Blickrichtung, Schleusenzustand und Spielstand-Neustart",
+  "sourceUnity": "6000.4.7f1",
+  "testedUnity": "6000.6.4f1",
+  "preview": "Builds/LocalPreview-6000.6.4f1",
+  "builds": [
+    { "log": "savefix-20261008-build.log", "exitCode": 0 },
+    { "log": "savefix-20261008-ui-build.log", "exitCode": 0 }
+  ],
+  "checks": [
+    { "log": "savefix-20261008-session.log", "exitCode": 0, "checks": 227 },
+    { "log": "savefix-20261008-restart.log", "exitCode": 0, "checks": 104, "savedFiles": 14 },
+    { "log": "savefix-20261008-scan.log", "exitCode": 0, "checks": 39 },
+    { "log": "savefix-20261008-habitat.log", "exitCode": 0, "checks": 512 },
+    { "log": "savefix-20261008-smoke.log", "exitCode": 0, "checks": 825 },
+    { "log": "savefix-20261008-quit.log", "exitCode": 0 }
+  ],
+  "nativeWindowsUi": {
+    "log": "savefix-20261008-ui.log",
+    "exitCode": 0,
+    "operations": [
+      "Demo starten und Intro ueberspringen",
+      "Escape/Beenden, Speichern und zurueck zum Startmenue",
+      "Spielstandliste und Laden ueber Startmenue",
+      "F5-Speichern und F9-Laden",
+      "Alt+F4 mit Abbrechen",
+      "Alt+F4 mit Speichern und Anwendung beenden"
+    ]
+  },
+  "saveCases": [
+    "Wohnmodul mit Blickrichtung",
+    "Geoeffnetes Stationspult",
+    "Schleuse beim Druckausgleich",
+    "Bewegte Wohnmodultuer",
+    "Bewegte Ringtuer",
+    "Stationsring",
+    "Virtuelle Aussenansicht",
+    "Fortsetzung laufenden Drohnenauftrags",
+    "Alter JSON-v1-Spielstand ohne neue Schleusenfelder",
+    "Ungueltiger Tuerzustand und gesperrter Speicherpfad"
+  ],
+  "delivery": {
+    "player": "Builds/Windows/SpaceMiner.exe",
+    "previousBuild": "Builds/Windows-before-savefix-20261008",
+    "normalPlayerLog": "Logs/player-savefix-20261008.log",
+    "normalPlayerExitCode": 0
+  },
+  "limitations": [
+    "Build- und Checklognamen relativ zum Logs-Ordner der isolierten Vorschau",
+    "Neue Korrektur nicht mit Unity6000.4.7f1 geprueft; Projektversion und gemeinsame Szene unveraendert",
+    "Pruefsaves isoliert unter Logs/SaveSession; persoenliche Spielstaende nicht veraendert",
+    "Sounds und UI-Skalierung weiter offen; kein neuer Hoertest",
+    "Lokale Aenderungen noch nicht committed oder gepusht; Logs/Builds nicht versioniert"
+  ]
+}

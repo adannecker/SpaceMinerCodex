@@ -12,7 +12,7 @@ namespace SpaceMiner
         private readonly SettingsSession session = new SettingsSession();
         private SpaceMinerPlayerSettings draft => session.Draft;
         private int page; private int bindingCapture = -1;
-        private static Rect EntryButton => new Rect(Screen.width - 52, 18, 34, 30);
+        private static Rect EntryButton => new Rect(UiLayout.Width - 52, 18, 34, 30);
         private readonly TechnologyIcons entryIcons = new TechnologyIcons();
         private Vector2 scroll;
         private string status = "PLAYER PREFERENCES // LOCAL STORAGE";
@@ -85,17 +85,18 @@ namespace SpaceMiner
         }
         public void Open() { var tree = GetComponent<TechTreeMenu>(); if (TechTreeMenu.IsOpen && tree != null) tree.Close(); session.Begin(); scroll = Vector2.zero; IsOpen = true; status = "CORE ONLINE | SYSTEM NOMINAL | BUILD " + Application.version; statusColor = SpaceMinerUi.Cyan; }
         public void Cancel() { bindingCapture = -1; IsOpen = false; closedFrame = Time.frameCount; session.Cancel(); }
+        internal void ShowInterfacePage() { page = 4; scroll = Vector2.zero; }
         public bool Apply()
         {
             if (!session.Apply(out string error)) { status = error; statusColor = SpaceMinerUi.Error; return false; }
             status = "EINSTELLUNGEN GESPEICHERT"; statusColor = SpaceMinerUi.Success; return true;
         }
         private void OnDestroy() { IsOpen = false; session.Cancel(); ui.Dispose(); entryIcons.Dispose(); }
-        public static bool OwnsScreenPoint(Vector3 mouse) => IsOpen || TechTreeMenu.OwnsScreenPoint(mouse) || EntryButton.Contains(new Vector2(mouse.x, Screen.height - mouse.y));
+        public static bool OwnsScreenPoint(Vector3 mouse) => IsOpen || TechTreeMenu.OwnsScreenPoint(mouse) || EntryButton.Contains(UiLayout.Point(mouse));
         private void OnGUI()
         {
             var savedMatrix = GUI.matrix; int savedDepth = GUI.depth;
-            try { DrawMenu(); }
+            try { GUI.matrix = Matrix4x4.Scale(Vector3.one * UiLayout.Scale()); DrawMenu(); }
             finally { GUI.matrix = savedMatrix; GUI.depth = savedDepth; }
         }
         private void DrawMenu()
@@ -111,11 +112,11 @@ namespace SpaceMiner
                 if (GUI.Button(EntryButton, new GUIContent("", "Einstellungen öffnen"), ui.Button)) { Open(); SettingsUiAudio.Activate(); }
                 entryIcons.Draw(new Rect(EntryButton.x + 7, EntryButton.y + 5, 20, 20), "settings", SpaceMinerUi.Cyan);
                 SettingsUiAudio.Observe(EntryButton, "settings-entry");
-                ui.Tooltip(1, Screen.width, Screen.height);
+                ui.Tooltip(1, UiLayout.Width, UiLayout.Height);
                 GUI.depth = previousDepth; return;
             }
             var previous = GUI.matrix;
-            float scale = Mathf.Min(Screen.width / 1100f, Screen.height / 760f);
+            float scale = UiLayout.Scale(1100, 760);
             GUI.matrix = Matrix4x4.Scale(Vector3.one * scale);
             float width = Screen.width / scale, height = Screen.height / scale;
             Fill(new Rect(0, 0, width, height), new Color(.005f, .012f, .03f, .91f));
@@ -148,7 +149,7 @@ namespace SpaceMiner
                     var sizes = DisplayModeController.ResolutionChoices();
                     int resolution = sizes.FindIndex(size => size.x == draft.Graphics.Width && size.y == draft.Graphics.Height);
                     if (resolution < 0) resolution = 0;
-                    var names = sizes.ConvertAll(size => size.x == 0 ? "Aktuelle Auflösung" : size.x + " × " + size.y).ToArray();
+                    var names = sizes.ConvertAll(size => size.x == 0 ? (chosenMode == 0 ? "Fenstergröße beibehalten" : "Native Monitorauflösung") : size.x + " × " + size.y).ToArray();
                     int chosenResolution = ui.Dropdown("Auflösung", resolution, names);
                     if (chosenResolution != resolution) { draft.Graphics.Width = sizes[chosenResolution].x; draft.Graphics.Height = sizes[chosenResolution].y; }
                     GUILayout.Label(Application.isEditor ? "Anzeigemodus und Auflösung werden im Windows-Spiel angewendet." : "Fenster / Vollbild: F11 oder Alt + Enter", small); break;
@@ -167,7 +168,7 @@ namespace SpaceMiner
                     draft.Controls.ZoomSpeed = Slider("Zoomgeschwindigkeit", draft.Controls.ZoomSpeed, .2f, 3);
                     draft.Controls.InvertY = Toggle("Vertikale Kameraachse invertieren", draft.Controls.InvertY);
                     GUILayout.Label("Kamera-Tastenbelegung", heading);
-                    string[] bindingNames = { "Vorwärts", "Rückwärts", "Links", "Rechts", "Aufwärts", "Abwärts", "Schiffsansicht", "Übersicht", "Fokus", "HUD ein/aus" };
+                    string[] bindingNames = { "Vorwärts", "Rückwärts", "Links", "Rechts", "Aufwärts", "Abwärts", "Schiffsansicht", "Übersicht", "Fokus", "HUD ein/aus", "Techtree öffnen/schließen" };
                     for (int index = 0; index < bindingNames.Length; index++)
                     {
                         string key = bindingCapture == index ? "Taste drücken … (Esc bricht ab)" : draft.Controls.Bindings.Keys[index].ToString();
@@ -176,7 +177,9 @@ namespace SpaceMiner
                     GUILayout.Label("Buchstaben, Ziffern und Pfeiltasten. Doppelte Belegungen werden getauscht. Shift, Esc, Tab, Space, F10/F11 bleiben Systemtasten.", small);
                     break;
                 case 4:
-                    draft.Interface.Scale = Slider("HUD-Skalierung", draft.Interface.Scale, .75f, 1.5f);
+                    draft.Interface.Scale = Slider("UI-Skalierung · 75–150 %", draft.Interface.Scale, .75f, 1.5f);
+                    UiLayout.Preview(draft.Interface.Scale);
+                    GUILayout.Label("Quest, Mira, Pult und Menüs · Vorschau sofort, Apply speichert, Cancel verwirft.\nHohe Auflösungen behalten kompakte Pixelgrößen; kleine Fenster passen die UI automatisch ein.", small);
                     draft.Interface.ShowHud = Toggle("HUD anzeigen", draft.Interface.ShowHud); break;
                 case 5:
                     draft.Accessibility.Subtitles = Toggle("Untertitel in Cutscenes und Cinematics", draft.Accessibility.Subtitles);
