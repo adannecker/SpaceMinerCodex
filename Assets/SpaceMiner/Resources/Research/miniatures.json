@@ -1,0 +1,1276 @@
+{
+  "entries": [
+    {
+      "id": "energie-01",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 0
+    },
+    {
+      "id": "energie-02",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 0
+    },
+    {
+      "id": "energie-03",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 0
+    },
+    {
+      "id": "energie-04",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 0
+    },
+    {
+      "id": "energie-05",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 0
+    },
+    {
+      "id": "energie-06",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 0
+    },
+    {
+      "id": "energie-07",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 0
+    },
+    {
+      "id": "energie-08",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 0
+    },
+    {
+      "id": "energie-09",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 0
+    },
+    {
+      "id": "energie-10",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 0
+    },
+    {
+      "id": "energie-11",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 1
+    },
+    {
+      "id": "energie-12",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-01",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-02",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-03",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-04",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-05",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-06",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-07",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-08",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 1
+    },
+    {
+      "id": "wiederverwertung-09",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 2
+    },
+    {
+      "id": "wiederverwertung-10",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 2
+    },
+    {
+      "id": "materialien-01",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 2
+    },
+    {
+      "id": "materialien-02",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 2
+    },
+    {
+      "id": "materialien-03",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 2
+    },
+    {
+      "id": "materialien-04",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 2
+    },
+    {
+      "id": "materialien-05",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 2
+    },
+    {
+      "id": "materialien-06",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 2
+    },
+    {
+      "id": "materialien-07",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 2
+    },
+    {
+      "id": "materialien-08",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 2
+    },
+    {
+      "id": "materialien-09",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 3
+    },
+    {
+      "id": "materialien-10",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 3
+    },
+    {
+      "id": "materialien-11",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 3
+    },
+    {
+      "id": "materialien-12",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 3
+    },
+    {
+      "id": "materialien-13",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 3
+    },
+    {
+      "id": "materialien-14",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 3
+    },
+    {
+      "id": "materialien-15",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 3
+    },
+    {
+      "id": "materialien-16",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 3
+    },
+    {
+      "id": "materialien-17",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 3
+    },
+    {
+      "id": "materialien-18",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 3
+    },
+    {
+      "id": "materialien-19",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 4
+    },
+    {
+      "id": "materialien-20",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 4
+    },
+    {
+      "id": "materialien-21",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 4
+    },
+    {
+      "id": "materialien-22",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 4
+    },
+    {
+      "id": "materialien-23",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 4
+    },
+    {
+      "id": "materialien-24",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 4
+    },
+    {
+      "id": "verbindungen-01",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 4
+    },
+    {
+      "id": "verbindungen-02",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 4
+    },
+    {
+      "id": "verbindungen-03",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 4
+    },
+    {
+      "id": "verbindungen-04",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 4
+    },
+    {
+      "id": "verbindungen-05",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 5
+    },
+    {
+      "id": "verbindungen-06",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 5
+    },
+    {
+      "id": "verbindungen-07",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 5
+    },
+    {
+      "id": "verbindungen-08",
+      "texture": "realistic-v3-1",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 5
+    },
+    {
+      "id": "verbindungen-09",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-10",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-11",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-12",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-13",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-14",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-15",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-16",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-17",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-18",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 0
+    },
+    {
+      "id": "verbindungen-19",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 1
+    },
+    {
+      "id": "verbindungen-20",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 1
+    },
+    {
+      "id": "verbindungen-21",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 1
+    },
+    {
+      "id": "mira-01",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 1
+    },
+    {
+      "id": "mira-02",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 1
+    },
+    {
+      "id": "mira-03",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 1
+    },
+    {
+      "id": "mira-04",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 1
+    },
+    {
+      "id": "mira-05",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 1
+    },
+    {
+      "id": "mira-06",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 1
+    },
+    {
+      "id": "mira-07",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 1
+    },
+    {
+      "id": "mira-08",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 2
+    },
+    {
+      "id": "mira-09",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 2
+    },
+    {
+      "id": "mira-10",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 2
+    },
+    {
+      "id": "mira-11",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 2
+    },
+    {
+      "id": "mira-12",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 2
+    },
+    {
+      "id": "drohnen-01",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 2
+    },
+    {
+      "id": "drohnen-02",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 2
+    },
+    {
+      "id": "drohnen-03",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 2
+    },
+    {
+      "id": "drohnen-04",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 2
+    },
+    {
+      "id": "drohnen-05",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 2
+    },
+    {
+      "id": "drohnen-06",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 3
+    },
+    {
+      "id": "drohnen-07",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 3
+    },
+    {
+      "id": "drohnen-08",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 3
+    },
+    {
+      "id": "drohnen-09",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 3
+    },
+    {
+      "id": "drohnen-10",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 3
+    },
+    {
+      "id": "drohnen-11",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 3
+    },
+    {
+      "id": "drohnen-12",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 3
+    },
+    {
+      "id": "drohnen-13",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 3
+    },
+    {
+      "id": "drohnen-14",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 3
+    },
+    {
+      "id": "drohnen-15",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 3
+    },
+    {
+      "id": "drohnen-16",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 4
+    },
+    {
+      "id": "scanner-01",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 4
+    },
+    {
+      "id": "scanner-02",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 4
+    },
+    {
+      "id": "scanner-03",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 4
+    },
+    {
+      "id": "scanner-04",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 4
+    },
+    {
+      "id": "scanner-05",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 4
+    },
+    {
+      "id": "scanner-06",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 4
+    },
+    {
+      "id": "scanner-07",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 4
+    },
+    {
+      "id": "scanner-08",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 4
+    },
+    {
+      "id": "scanner-09",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 4
+    },
+    {
+      "id": "scanner-10",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 5
+    },
+    {
+      "id": "scanner-11",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 5
+    },
+    {
+      "id": "scanner-12",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 5
+    },
+    {
+      "id": "produktion-01",
+      "texture": "realistic-v3-2",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 5
+    },
+    {
+      "id": "produktion-02",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 0
+    },
+    {
+      "id": "produktion-03",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 0
+    },
+    {
+      "id": "produktion-04",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 0
+    },
+    {
+      "id": "produktion-05",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 0
+    },
+    {
+      "id": "produktion-06",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 0
+    },
+    {
+      "id": "produktion-07",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 0
+    },
+    {
+      "id": "produktion-08",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 0
+    },
+    {
+      "id": "produktion-09",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 0
+    },
+    {
+      "id": "produktion-10",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 0
+    },
+    {
+      "id": "produktion-11",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 1
+    },
+    {
+      "id": "produktion-12",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 1
+    },
+    {
+      "id": "produktion-13",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 1
+    },
+    {
+      "id": "produktion-14",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 1
+    },
+    {
+      "id": "produktion-15",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 1
+    },
+    {
+      "id": "produktion-16",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 1
+    },
+    {
+      "id": "logistik-01",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 1
+    },
+    {
+      "id": "logistik-02",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 1
+    },
+    {
+      "id": "logistik-03",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 1
+    },
+    {
+      "id": "logistik-04",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 2
+    },
+    {
+      "id": "logistik-05",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 2
+    },
+    {
+      "id": "logistik-06",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 2
+    },
+    {
+      "id": "logistik-07",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 2
+    },
+    {
+      "id": "logistik-08",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 2
+    },
+    {
+      "id": "logistik-09",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 2
+    },
+    {
+      "id": "logistik-10",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 2
+    },
+    {
+      "id": "logistik-11",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 2
+    },
+    {
+      "id": "logistik-12",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 2
+    },
+    {
+      "id": "lebenserhaltung-01",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-02",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-03",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-04",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-05",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-06",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-07",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-08",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-09",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 3
+    },
+    {
+      "id": "lebenserhaltung-10",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 4
+    },
+    {
+      "id": "lebenserhaltung-11",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 4
+    },
+    {
+      "id": "lebenserhaltung-12",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 4
+    },
+    {
+      "id": "station-01",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 4
+    },
+    {
+      "id": "station-02",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 4
+    },
+    {
+      "id": "station-03",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 4
+    },
+    {
+      "id": "station-04",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 4
+    },
+    {
+      "id": "station-05",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 4
+    },
+    {
+      "id": "station-06",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 4
+    },
+    {
+      "id": "station-07",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 5
+    },
+    {
+      "id": "station-08",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 5
+    },
+    {
+      "id": "station-09",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 5
+    },
+    {
+      "id": "station-10",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 5
+    },
+    {
+      "id": "station-11",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 5
+    },
+    {
+      "id": "station-12",
+      "texture": "realistic-v3-3",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 5
+    }
+  ]
+}

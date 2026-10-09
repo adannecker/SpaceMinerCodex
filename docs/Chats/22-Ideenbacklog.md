@@ -1,6 +1,6 @@
 # Ideenbacklog
 
-Chat-ID: `01a11a1b-ae77-7c81-95a0-6b1713dd0579`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
+Chat-ID: `01a11a1b-ae77-7c81-95a0-6b1713dd0579`. Exportstand: 2026-10-09T14:39:48.475817+00:00.
 
 Lokale Fortsetzung der dokumentierten Ideen, Entwicklungsideen und offene Ausbaustufen
 
@@ -33,3 +33,21 @@ MEMORY.md:152-153|note=[Gemeinsamer Checkout und rein lesende Initialisierung]
 01a11007-910e-7ff0-a749-82c7af51fde7
 </rollout_ids>
 </oai-mem-citation>
+
+## Assistent · 2026-10-09T05:41:58.649Z
+
+Ich lese das Kontextupdate und die darin genannten Quellen ausschließlich lesend und gleiche den Ideenbacklog damit ab.
+
+## Assistent · 2026-10-09T05:42:24.081Z
+
+Kontextupdate eingelesen; lokaler Gitstand **22b64aa** bestätigt.
+
+Dieser Chat bleibt für das **Ideenbacklog** zuständig: Ideen, Abhängigkeiten und offene Entscheidungen sammeln. Die elf Forschungsbereiche mit zwölf Bildern sind dokumentierte Entwürfe; konkrete Knoten, Rezepte, Kosten und Kapitelgrenzen bleiben offen. Forschungsfreigabe, Bau/Umbau, Versorgung und praktische Erfahrung werden getrennt behandelt; Startwissen bleibt erhalten.
+
+Aktuell besonders relevant:
+
+- Beenden aus dem Spiel und Wiederherstellung der Innenraumposition bleiben ungeklärt.
+- Schleusen-/VR-Interaktionssounds sowie Auflösungsanpassung und UI-Skalierung stehen aus.
+- Batteriewechsel, Drohnenumbauten, Solarsteuerung und Gefahrenvorhersage bleiben Ausbauideen.
+
+Keine Dateien geändert, Builds, Commits, Pushes oder Nachrichten an andere Chats ausgeführt.

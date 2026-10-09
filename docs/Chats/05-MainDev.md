@@ -1,6 +1,6 @@
 # MainDev
 
-Chat-ID: `01a11007-2934-7520-96c3-3991e89ccaf8`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
+Chat-ID: `01a11007-2934-7520-96c3-3991e89ccaf8`. Exportstand: 2026-10-09T14:39:48.475817+00:00.
 
 Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus
 
@@ -1163,3 +1163,105 @@ Die Chatarchive sind aktualisiert: neun lokale Chats exportiert, neun Archive vo
 ## Assistent · 2026-10-08T15:29:09.622Z
 
 Die Übergabe enthält jetzt den aktuellen Spielstand, die offenen Fehler und eine Anleitung zum Aktualisieren und Bauen auf dem anderen Rechner. Alle Unity-Assets haben ihre `.meta`-Dateien. Das Einchecken der umfangreichen Mira-Modelldateien dauert etwas; anschließend führe ich den GitHub-Stand zusammen und pushe alles.
+
+## Assistent · 2026-10-08T15:30:37.759Z
+
+Der lokale Stand ist eingecheckt. Beim Zusammenführen gab es Überschneidungen mit der bereits eingecheckten Station und den Beleuchtungskorrekturen vom anderen Rechner. Ich habe beide Stände erhalten und prüfe den zusammengeführten Build, bevor ich ihn pushe.
+
+## Assistent · 2026-10-08T15:32:14.673Z
+
+Der zusammengeführte Stand ist geprüft: Build erfolgreich, Scanner-/Save-Test mit 39 Prüfungen, Stations-/Schleusentest mit 504 Prüfungen und Beleuchtungsprüfung bestanden. Ich schließe jetzt den Merge-Commit ab und pushe den Stand auf `main`.
+
+## Assistent · 2026-10-08T15:33:53.665Z
+
+Alles dokumentiert, eingecheckt und auf **GitHub `main` gepusht**: Commit **`ef25edc`**. Arbeitsstand sauber, lokal und GitHub identisch. Build, 543 Scanner-/Stationsprüfungen und Beleuchtungsprüfung bestanden.
+
+Am anderen Rechner bei sauberem Arbeitsstand:
+
+```powershell
+git pull --ff-only origin main
+```
+
+Danach den Chats sagen: **„Lies die aktuelle Projektübergabe und das Projektmemory.“** Neue Entscheidungen, offene Aufgaben und Chatarchive sind versioniert. Die [Rechnerwechsel-Anleitung](C:/Users/achim.dannecker/source/repos/SpaceMinerCodex/docs/Rechnerwechsel-Memory.md) enthält die Details.
+
+Eigene Spielstände müssen separat übertragen werden; Builds werden dort neu erstellt.
+
+<oai-mem-citation>
+<citation_entries>
+MEMORY.md:79-79|note=[Projektwissen und Archive fuer Rechnerwechsel versioniert]
+</citation_entries>
+<rollout_ids>
+01a11007-910e-7ff0-a749-82c7af51fde7
+</rollout_ids>
+</oai-mem-citation>
+
+## Nutzer · 2026-10-09T05:36:49.503Z
+
+bitte alles pullen und anschauen
+
+## Assistent · 2026-10-09T05:36:53.795Z
+
+Ich prüfe den lokalen Arbeitsstand, hole die Änderungen von GitHub und schaue mir danach die aktualisierte Dokumentation und den Code an.
+
+## Assistent · 2026-10-09T05:37:36.496Z
+
+Der Pull ist durch: neu ist Commit `22b64aa` mit der Chapter-1-Forschungsplanung. Er enthält elf Techtree-Bereiche, zwölf Übersichtsbilder sowie neue Unterlagen zu Mira, Werkstoffen und Wiederverwertung. Der Spielcode wurde dabei nicht geändert. Ich prüfe noch die Entwürfe, Verknüpfungen und offenen Entscheidungen.
+
+## Assistent · 2026-10-09T05:38:45.709Z
+
+Alles gepullt und angeschaut. Aktuell: **`22b64aa`**, Arbeitsstand sauber und mit GitHub synchron.
+
+Neu sind:
+
+- Elf Chapter-1-Techtrees mit zwölf Entwurfsbildern.
+- Vier Drohnenrollen mit Umbaupfaden.
+- Miras Forschungsentwicklung, CPU-Ausbau und Energiebedarf.
+- Materialverarbeitung, Zwischenprodukte und Wiederverwertung.
+- Erfahrungsfortschritt als gelber Iconrand.
+
+Knotenlisten, Verbindungen, Bilddateien und lokale Links sind geprüft. Die neuen Inhalte sind **Planungsentwürfe, noch keine Spielimplementierung**. Beenden, Positionsspeicherung, Sounds und UI-Skalierung bleiben als nächste Aufgaben offen.
+
+<oai-mem-citation>
+<citation_entries>
+MEMORY.md:45-45|note=[Gitstand und Uebergabe vor Fortsetzung erneut geprueft]
+</citation_entries>
+<rollout_ids>
+01a11002-9eca-70a1-95ec-00cbc84132ee
+</rollout_ids>
+</oai-mem-citation>
+
+## Nutzer · 2026-10-09T05:39:11.558Z
+
+Ja das entspricht voll dem stand kannst du alle chats aktualisieren mit dem Memory
+
+## Assistent · 2026-10-09T05:39:14.451Z
+
+Ich gleiche die Projektchats mit dem Register ab und sende ihnen den aktuellen Übergabestand mit den gemeinsamen Memory-Dateien. Die offenen Aufgaben kennzeichne ich als Kontext, damit dadurch keine parallele Umsetzung startet.
+
+## Assistent · 2026-10-09T05:40:39.566Z
+
+Das Kontextupdate liegt jetzt zentral im Projekt und wird an die acht anderen lokalen Themenchats verteilt. MainDev hat den Stand bereits übernommen. Die Chats auf dem anderen Rechner sind hier nicht direkt erreichbar; sie erhalten den Kontext weiterhin über die gemeinsamen Projektdateien und Archive.
+
+## Assistent · 2026-10-09T05:41:49.828Z
+
+Sieben Themenchats haben das Update erhalten; die Zustellung an Ideenbacklog läuft noch. Ich prüfe anschließend die Bestätigungen. Der Auftrag an alle Chats ist ausdrücklich nur, das Memory zu lesen und ihren Stand zu bestätigen.
+
+## Assistent · 2026-10-09T05:43:00.703Z
+
+Alle **neun lokalen Projektchats** sind jetzt auf dem aktuellen Stand. Die acht anderen Chats haben das Memory gelesen und bestätigt.
+
+Projektmemory und Chatarchive sind aktualisiert. Chats auf dem anderen Rechner sind hier nicht direkt erreichbar; das gemeinsame Kontextupdate liegt für sie im Repository bereit.
+
+Die neuen Dokumentationsänderungen sind lokal gespeichert, noch nicht eingecheckt oder gepusht.
+
+## Nutzer · 2026-10-09T14:38:25.507Z
+
+Bitte alles einchecken und pushen davor auch sauber dokumentieren
+
+## Assistent · 2026-10-09T14:38:30.113Z
+
+Ich prüfe die noch offenen Projektänderungen, dokumentiere die bestätigte Memory-Aktualisierung der Chats und pushe den Stand anschließend auf GitHub. Die Dockingstation-Diagnose gehört nicht in die Spieldokumentation.
+
+## Assistent · 2026-10-09T14:39:00.788Z
+
+Zum offenen Stand gehört inzwischen auch die neue Techtree-Demo mit Forschungssimulation, Miniaturbildern und kompakter Ansicht. Ich nehme sie mit auf, ergänze die Rechnerwechsel-Anleitung und prüfe die Tests vor dem Commit. Die allgemeinen Spielprobleme bleiben dabei ausdrücklich als offen dokumentiert.

@@ -1,0 +1,1278 @@
+{
+  "version": 3,
+  "style": "Realistische technische Miniaturen, entsättigtes Blau mit kleinen gelben Akzenten",
+  "mapping": {
+    "energie-01": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 0,
+      "name": "Vorhandene Technik"
+    },
+    "energie-02": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 0,
+      "name": "Solarflächen reparieren"
+    },
+    "energie-03": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 0,
+      "name": "Solarfläche erweitern"
+    },
+    "energie-04": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 0,
+      "name": "Solarnachführung"
+    },
+    "energie-05": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 0,
+      "name": "Speicher wiederherstellen"
+    },
+    "energie-06": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 0,
+      "name": "Zusätzliche Speicher"
+    },
+    "energie-07": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 0,
+      "name": "Stromverteilung reparieren"
+    },
+    "energie-08": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 0,
+      "name": "Lastmanagement"
+    },
+    "energie-09": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 0,
+      "name": "Abgestimmte Schnellladung"
+    },
+    "energie-10": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 0,
+      "name": "Kühlkreislauf reparieren"
+    },
+    "energie-11": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 1,
+      "name": "Wärmeabfuhr erweitern"
+    },
+    "energie-12": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 1,
+      "name": "Tragfähige Stationsversorgung"
+    },
+    "wiederverwertung-01": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 1,
+      "name": "Trümmerbewertung"
+    },
+    "wiederverwertung-02": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 1,
+      "name": "Gezielte Bergung"
+    },
+    "wiederverwertung-03": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 1,
+      "name": "Bauteildiagnose"
+    },
+    "wiederverwertung-04": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 1,
+      "name": "Aufarbeitung"
+    },
+    "wiederverwertung-05": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 1,
+      "name": "Wiederverwendung"
+    },
+    "wiederverwertung-06": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 1,
+      "name": "Präzisionsdemontage"
+    },
+    "wiederverwertung-07": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 1,
+      "name": "Einzelteilprüfung"
+    },
+    "wiederverwertung-08": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 1,
+      "name": "Materialsortierung"
+    },
+    "wiederverwertung-09": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 2,
+      "name": "Stoffgerechte Rückgewinnung"
+    },
+    "wiederverwertung-10": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 2,
+      "name": "Qualitätsprüfung"
+    },
+    "materialien-01": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 2,
+      "name": "Probenanalyse"
+    },
+    "materialien-02": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 2,
+      "name": "Wasseraufbereitung"
+    },
+    "materialien-03": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 2,
+      "name": "Elektrolyse"
+    },
+    "materialien-04": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 2,
+      "name": "Sauerstoff"
+    },
+    "materialien-05": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 2,
+      "name": "Wasserstoff"
+    },
+    "materialien-06": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 2,
+      "name": "Metalltrennung"
+    },
+    "materialien-07": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 2,
+      "name": "Eisen / Nickel"
+    },
+    "materialien-08": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 2,
+      "name": "Aluminium"
+    },
+    "materialien-09": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 3,
+      "name": "Kupfer"
+    },
+    "materialien-10": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 3,
+      "name": "Zinn / Silber"
+    },
+    "materialien-11": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 3,
+      "name": "Mineralaufbereitung"
+    },
+    "materialien-12": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 3,
+      "name": "Glas / Keramik"
+    },
+    "materialien-13": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 3,
+      "name": "Silizium"
+    },
+    "materialien-14": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 3,
+      "name": "Aluminiumoxid"
+    },
+    "materialien-15": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 3,
+      "name": "Kohlenstoffaufbereitung"
+    },
+    "materialien-16": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 3,
+      "name": "Graphit"
+    },
+    "materialien-17": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 3,
+      "name": "Organische Zwischenstoffe"
+    },
+    "materialien-18": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 3,
+      "name": "Polymerwerkstoffe"
+    },
+    "materialien-19": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 4,
+      "name": "Stofftrennung / Reinigung"
+    },
+    "materialien-20": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 4,
+      "name": "Lithium"
+    },
+    "materialien-21": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 4,
+      "name": "Phosphate"
+    },
+    "materialien-22": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 4,
+      "name": "Fluor / Chlor"
+    },
+    "materialien-23": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 4,
+      "name": "Stickstoffverbindungen"
+    },
+    "materialien-24": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 4,
+      "name": "Dotierstoffe"
+    },
+    "verbindungen-01": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 4,
+      "name": "Verbindungsanalyse"
+    },
+    "verbindungen-02": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 4,
+      "name": "Kohlendioxid"
+    },
+    "verbindungen-03": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 4,
+      "name": "Methanol"
+    },
+    "verbindungen-04": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 4,
+      "name": "Formaldehyd"
+    },
+    "verbindungen-05": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 5,
+      "name": "Chlorwasserstoff"
+    },
+    "verbindungen-06": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 5,
+      "name": "Chlormethan"
+    },
+    "verbindungen-07": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 5,
+      "name": "Methylchlorsilane"
+    },
+    "verbindungen-08": {
+      "file": "assets/realistic-v3-1.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 5,
+      "name": "Siloxane"
+    },
+    "verbindungen-09": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 0,
+      "name": "Silikonkautschuk"
+    },
+    "verbindungen-10": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 0,
+      "name": "Phosphatvorstufen"
+    },
+    "verbindungen-11": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 0,
+      "name": "Lithium-Eisenphosphat"
+    },
+    "verbindungen-12": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 0,
+      "name": "Lithium-Leitsalz"
+    },
+    "verbindungen-13": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 0,
+      "name": "Carbonatlösungsmittel"
+    },
+    "verbindungen-14": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 0,
+      "name": "Elektrolytgemisch"
+    },
+    "verbindungen-15": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 0,
+      "name": "Polyimidvorstufen"
+    },
+    "verbindungen-16": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 0,
+      "name": "Polyimid"
+    },
+    "verbindungen-17": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 0,
+      "name": "Tetrafluorethylen"
+    },
+    "verbindungen-18": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 0,
+      "name": "PTFE"
+    },
+    "verbindungen-19": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 1,
+      "name": "Gereinigtes Siliziumdioxid"
+    },
+    "verbindungen-20": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 1,
+      "name": "Gereinigtes Aluminiumoxid"
+    },
+    "verbindungen-21": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 1,
+      "name": "Harzsysteme"
+    },
+    "mira-01": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 1,
+      "name": "Forschungsbasis"
+    },
+    "mira-02": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 1,
+      "name": "Forschungsstufe 2"
+    },
+    "mira-03": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 1,
+      "name": "Methodenoptimierung"
+    },
+    "mira-04": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 1,
+      "name": "Rechnerdiagnose"
+    },
+    "mira-05": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 1,
+      "name": "Rechnerreparatur"
+    },
+    "mira-06": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 1,
+      "name": "CPU-Erweiterung"
+    },
+    "mira-07": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 1,
+      "name": "Leistungsfreigabe"
+    },
+    "mira-08": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 2,
+      "name": "Erweiterte Kühlung"
+    },
+    "mira-09": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 2,
+      "name": "Parallelrechnen"
+    },
+    "mira-10": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 2,
+      "name": "Archivzugang"
+    },
+    "mira-11": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 2,
+      "name": "Analyse und Planung"
+    },
+    "mira-12": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 2,
+      "name": "Routinekoordination"
+    },
+    "drohnen-01": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 2,
+      "name": "Abbaugrundlagen"
+    },
+    "drohnen-02": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 2,
+      "name": "Werkzeuganpassung"
+    },
+    "drohnen-03": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 2,
+      "name": "Frachtraumumbau"
+    },
+    "drohnen-04": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 2,
+      "name": "Abbausteuerung"
+    },
+    "drohnen-05": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 2,
+      "name": "Reparaturrolle"
+    },
+    "drohnen-06": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 3,
+      "name": "Schadensdiagnose"
+    },
+    "drohnen-07": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 3,
+      "name": "Bauteiltausch"
+    },
+    "drohnen-08": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 3,
+      "name": "Montageverfahren"
+    },
+    "drohnen-09": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 3,
+      "name": "Erkundungsrolle"
+    },
+    "drohnen-10": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 3,
+      "name": "Oberflächenkartierung"
+    },
+    "drohnen-11": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 3,
+      "name": "Probenentnahme"
+    },
+    "drohnen-12": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 3,
+      "name": "Livebild"
+    },
+    "drohnen-13": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 3,
+      "name": "Helferaktivierung"
+    },
+    "drohnen-14": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 3,
+      "name": "Dockumbau"
+    },
+    "drohnen-15": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 3,
+      "name": "Innentransport"
+    },
+    "drohnen-16": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 4,
+      "name": "Wartungsaufträge"
+    },
+    "scanner-01": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 4,
+      "name": "Nahbereichsscan"
+    },
+    "scanner-02": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 4,
+      "name": "Signalfilter"
+    },
+    "scanner-03": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 4,
+      "name": "Reichweitenmodul"
+    },
+    "scanner-04": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 4,
+      "row": 4,
+      "name": "Kartierungsdaten"
+    },
+    "scanner-05": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 5,
+      "row": 4,
+      "name": "Bildsensorik"
+    },
+    "scanner-06": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 6,
+      "row": 4,
+      "name": "Oberflächenmodell"
+    },
+    "scanner-07": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 7,
+      "row": 4,
+      "name": "Probenregister"
+    },
+    "scanner-08": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 8,
+      "row": 4,
+      "name": "Spektralanalyse"
+    },
+    "scanner-09": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 9,
+      "row": 4,
+      "name": "Materialabgleich"
+    },
+    "scanner-10": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 0,
+      "row": 5,
+      "name": "Kontaktverfolgung"
+    },
+    "scanner-11": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 1,
+      "row": 5,
+      "name": "Bewegungsprognose"
+    },
+    "scanner-12": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 2,
+      "row": 5,
+      "name": "Arbeitsfreigabeprüfung"
+    },
+    "produktion-01": {
+      "file": "assets/realistic-v3-2.png",
+      "columns": 10,
+      "rows": 6,
+      "column": 3,
+      "row": 5,
+      "name": "Werkstattdiagnose"
+    },
+    "produktion-02": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 0,
+      "name": "Werkstattreparatur"
+    },
+    "produktion-03": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 0,
+      "name": "Präzisionsmontage"
+    },
+    "produktion-04": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 0,
+      "name": "Qualitätsprüfung"
+    },
+    "produktion-05": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 0,
+      "name": "Schmelzverfahren"
+    },
+    "produktion-06": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 0,
+      "name": "Formgebung"
+    },
+    "produktion-07": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 0,
+      "name": "Bearbeitung"
+    },
+    "produktion-08": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 0,
+      "name": "Bauteilfertigung"
+    },
+    "produktion-09": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 0,
+      "name": "Prozessanlage"
+    },
+    "produktion-10": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 0,
+      "name": "Reaktionsführung"
+    },
+    "produktion-11": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 1,
+      "name": "Reinigung und Trennung"
+    },
+    "produktion-12": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 1,
+      "name": "Werkstoffmischungen"
+    },
+    "produktion-13": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 1,
+      "name": "Elektronikmontage"
+    },
+    "produktion-14": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 1,
+      "name": "Platinenfertigung"
+    },
+    "produktion-15": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 1,
+      "name": "Halbleiterprozesse"
+    },
+    "produktion-16": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 1,
+      "name": "Chipherstellung"
+    },
+    "logistik-01": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 1,
+      "name": "Lagerregister"
+    },
+    "logistik-02": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 1,
+      "name": "Fundquarantäne"
+    },
+    "logistik-03": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 1,
+      "name": "Bestandsanalyse"
+    },
+    "logistik-04": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 2,
+      "name": "Feststoffcontainer"
+    },
+    "logistik-05": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 2,
+      "name": "Flüssigkeitstanks"
+    },
+    "logistik-06": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 2,
+      "name": "Gaslager"
+    },
+    "logistik-07": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 2,
+      "name": "Transportaufträge"
+    },
+    "logistik-08": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 2,
+      "name": "Dockkoordination"
+    },
+    "logistik-09": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 2,
+      "name": "Routenprioritäten"
+    },
+    "logistik-10": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 2,
+      "name": "Materialreservierung"
+    },
+    "logistik-11": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 2,
+      "name": "Nachschubregeln"
+    },
+    "logistik-12": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 2,
+      "name": "Versorgungsplanung"
+    },
+    "lebenserhaltung-01": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 3,
+      "name": "Wasserqualität"
+    },
+    "lebenserhaltung-02": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 3,
+      "name": "Wasseraufbereitung"
+    },
+    "lebenserhaltung-03": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 3,
+      "name": "Wasserkreislauf"
+    },
+    "lebenserhaltung-04": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 3,
+      "name": "Luftüberwachung"
+    },
+    "lebenserhaltung-05": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 3,
+      "name": "Sauerstoffversorgung"
+    },
+    "lebenserhaltung-06": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 3,
+      "name": "CO2-Abscheidung"
+    },
+    "lebenserhaltung-07": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 3,
+      "name": "Leckdiagnose"
+    },
+    "lebenserhaltung-08": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 3,
+      "name": "Dichtungstausch"
+    },
+    "lebenserhaltung-09": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 3,
+      "name": "Temperaturregelung"
+    },
+    "lebenserhaltung-10": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 4,
+      "name": "Vorratsprüfung"
+    },
+    "lebenserhaltung-11": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 4,
+      "name": "Syntheseanlage reparieren"
+    },
+    "lebenserhaltung-12": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 4,
+      "name": "Nahrungsqualität"
+    },
+    "station-01": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 4,
+      "name": "Strukturdiagnose"
+    },
+    "station-02": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 4,
+      "name": "Hülle reparieren"
+    },
+    "station-03": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 4,
+      "name": "Anschlüsse instandsetzen"
+    },
+    "station-04": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 6,
+      "row": 4,
+      "name": "Modulplanung"
+    },
+    "station-05": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 7,
+      "row": 4,
+      "name": "Versorgungsanschluss"
+    },
+    "station-06": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 8,
+      "row": 4,
+      "name": "Modulmontage"
+    },
+    "station-07": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 0,
+      "row": 5,
+      "name": "Druckprüfung"
+    },
+    "station-08": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 1,
+      "row": 5,
+      "name": "Wohnbereich erweitern"
+    },
+    "station-09": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 2,
+      "row": 5,
+      "name": "Glasdom"
+    },
+    "station-10": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 3,
+      "row": 5,
+      "name": "Lagekontrolle"
+    },
+    "station-11": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 4,
+      "row": 5,
+      "name": "Panelhalterung reparieren"
+    },
+    "station-12": {
+      "file": "assets/realistic-v3-3.png",
+      "columns": 9,
+      "rows": 6,
+      "column": 5,
+      "row": 5,
+      "name": "Panelsteuerung"
+    }
+  }
+}

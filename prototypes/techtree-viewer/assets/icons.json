@@ -1,0 +1,966 @@
+{
+  "version": 2,
+  "palette": [
+    "#0a1b2c",
+    "#163b59",
+    "#31779e",
+    "#80c6e8",
+    "#f4c567"
+  ],
+  "mapping": {
+    "energie-01": {
+      "file": "assets/icons/energie-01.svg",
+      "motif": "station",
+      "operation": "process",
+      "name": "Vorhandene Technik"
+    },
+    "energie-02": {
+      "file": "assets/icons/energie-02.svg",
+      "motif": "solar",
+      "operation": "repair",
+      "name": "Solarflächen reparieren"
+    },
+    "energie-03": {
+      "file": "assets/icons/energie-03.svg",
+      "motif": "solar",
+      "operation": "expand",
+      "name": "Solarfläche erweitern"
+    },
+    "energie-04": {
+      "file": "assets/icons/energie-04.svg",
+      "motif": "solartrack",
+      "operation": "process",
+      "name": "Solarnachführung"
+    },
+    "energie-05": {
+      "file": "assets/icons/energie-05.svg",
+      "motif": "battery",
+      "operation": "repair",
+      "name": "Speicher wiederherstellen"
+    },
+    "energie-06": {
+      "file": "assets/icons/energie-06.svg",
+      "motif": "batteries",
+      "operation": "expand",
+      "name": "Zusätzliche Speicher"
+    },
+    "energie-07": {
+      "file": "assets/icons/energie-07.svg",
+      "motif": "distribution",
+      "operation": "repair",
+      "name": "Stromverteilung reparieren"
+    },
+    "energie-08": {
+      "file": "assets/icons/energie-08.svg",
+      "motif": "distribution",
+      "operation": "upgrade",
+      "name": "Lastmanagement"
+    },
+    "energie-09": {
+      "file": "assets/icons/energie-09.svg",
+      "motif": "fastcharge",
+      "operation": "process",
+      "name": "Abgestimmte Schnellladung"
+    },
+    "energie-10": {
+      "file": "assets/icons/energie-10.svg",
+      "motif": "fan",
+      "operation": "repair",
+      "name": "Kühlkreislauf reparieren"
+    },
+    "energie-11": {
+      "file": "assets/icons/energie-11.svg",
+      "motif": "radiator",
+      "operation": "expand",
+      "name": "Wärmeabfuhr erweitern"
+    },
+    "energie-12": {
+      "file": "assets/icons/energie-12.svg",
+      "motif": "station",
+      "operation": "process",
+      "name": "Tragfähige Stationsversorgung"
+    },
+    "wiederverwertung-01": {
+      "file": "assets/icons/wiederverwertung-01.svg",
+      "motif": "wreck",
+      "operation": "process",
+      "name": "Trümmerbewertung"
+    },
+    "wiederverwertung-02": {
+      "file": "assets/icons/wiederverwertung-02.svg",
+      "motif": "salvage",
+      "operation": "process",
+      "name": "Gezielte Bergung"
+    },
+    "wiederverwertung-03": {
+      "file": "assets/icons/wiederverwertung-03.svg",
+      "motif": "monitor",
+      "operation": "analyze",
+      "name": "Bauteildiagnose"
+    },
+    "wiederverwertung-04": {
+      "file": "assets/icons/wiederverwertung-04.svg",
+      "motif": "wrench",
+      "operation": "process",
+      "name": "Aufarbeitung"
+    },
+    "wiederverwertung-05": {
+      "file": "assets/icons/wiederverwertung-05.svg",
+      "motif": "recycle",
+      "operation": "process",
+      "name": "Wiederverwendung"
+    },
+    "wiederverwertung-06": {
+      "file": "assets/icons/wiederverwertung-06.svg",
+      "motif": "disassemble",
+      "operation": "process",
+      "name": "Präzisionsdemontage"
+    },
+    "wiederverwertung-07": {
+      "file": "assets/icons/wiederverwertung-07.svg",
+      "motif": "analysis",
+      "operation": "repair",
+      "name": "Einzelteilprüfung"
+    },
+    "wiederverwertung-08": {
+      "file": "assets/icons/wiederverwertung-08.svg",
+      "motif": "sorting",
+      "operation": "process",
+      "name": "Materialsortierung"
+    },
+    "wiederverwertung-09": {
+      "file": "assets/icons/wiederverwertung-09.svg",
+      "motif": "reactor",
+      "operation": "process",
+      "name": "Stoffgerechte Rückgewinnung"
+    },
+    "wiederverwertung-10": {
+      "file": "assets/icons/wiederverwertung-10.svg",
+      "motif": "analysis",
+      "operation": "repair",
+      "name": "Qualitätsprüfung"
+    },
+    "materialien-01": {
+      "file": "assets/icons/materialien-01.svg",
+      "motif": "microscope",
+      "operation": "analyze",
+      "name": "Probenanalyse"
+    },
+    "materialien-02": {
+      "file": "assets/icons/materialien-02.svg",
+      "motif": "filter",
+      "operation": "process",
+      "name": "Wasseraufbereitung"
+    },
+    "materialien-03": {
+      "file": "assets/icons/materialien-03.svg",
+      "motif": "electrolysis",
+      "operation": "process",
+      "name": "Elektrolyse"
+    },
+    "materialien-04": {
+      "file": "assets/icons/materialien-04.svg",
+      "motif": "gastank",
+      "operation": "process",
+      "name": "Sauerstoff"
+    },
+    "materialien-05": {
+      "file": "assets/icons/materialien-05.svg",
+      "motif": "gastank",
+      "operation": "process",
+      "name": "Wasserstoff"
+    },
+    "materialien-06": {
+      "file": "assets/icons/materialien-06.svg",
+      "motif": "sorting",
+      "operation": "process",
+      "name": "Metalltrennung"
+    },
+    "materialien-07": {
+      "file": "assets/icons/materialien-07.svg",
+      "motif": "ingot",
+      "operation": "process",
+      "name": "Eisen / Nickel"
+    },
+    "materialien-08": {
+      "file": "assets/icons/materialien-08.svg",
+      "motif": "ingot",
+      "operation": "process",
+      "name": "Aluminium"
+    },
+    "materialien-09": {
+      "file": "assets/icons/materialien-09.svg",
+      "motif": "coil",
+      "operation": "process",
+      "name": "Kupfer"
+    },
+    "materialien-10": {
+      "file": "assets/icons/materialien-10.svg",
+      "motif": "ingot",
+      "operation": "process",
+      "name": "Zinn / Silber"
+    },
+    "materialien-11": {
+      "file": "assets/icons/materialien-11.svg",
+      "motif": "gem",
+      "operation": "process",
+      "name": "Mineralaufbereitung"
+    },
+    "materialien-12": {
+      "file": "assets/icons/materialien-12.svg",
+      "motif": "glass",
+      "operation": "process",
+      "name": "Glas / Keramik"
+    },
+    "materialien-13": {
+      "file": "assets/icons/materialien-13.svg",
+      "motif": "wafer",
+      "operation": "process",
+      "name": "Silizium"
+    },
+    "materialien-14": {
+      "file": "assets/icons/materialien-14.svg",
+      "motif": "powder",
+      "operation": "process",
+      "name": "Aluminiumoxid"
+    },
+    "materialien-15": {
+      "file": "assets/icons/materialien-15.svg",
+      "motif": "filter",
+      "operation": "process",
+      "name": "Kohlenstoffaufbereitung"
+    },
+    "materialien-16": {
+      "file": "assets/icons/materialien-16.svg",
+      "motif": "graphite",
+      "operation": "process",
+      "name": "Graphit"
+    },
+    "materialien-17": {
+      "file": "assets/icons/materialien-17.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Organische Zwischenstoffe"
+    },
+    "materialien-18": {
+      "file": "assets/icons/materialien-18.svg",
+      "motif": "polymer",
+      "operation": "process",
+      "name": "Polymerwerkstoffe"
+    },
+    "materialien-19": {
+      "file": "assets/icons/materialien-19.svg",
+      "motif": "filter",
+      "operation": "process",
+      "name": "Stofftrennung / Reinigung"
+    },
+    "materialien-20": {
+      "file": "assets/icons/materialien-20.svg",
+      "motif": "battery",
+      "operation": "process",
+      "name": "Lithium"
+    },
+    "materialien-21": {
+      "file": "assets/icons/materialien-21.svg",
+      "motif": "powder",
+      "operation": "process",
+      "name": "Phosphate"
+    },
+    "materialien-22": {
+      "file": "assets/icons/materialien-22.svg",
+      "motif": "gastank",
+      "operation": "process",
+      "name": "Fluor / Chlor"
+    },
+    "materialien-23": {
+      "file": "assets/icons/materialien-23.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Stickstoffverbindungen"
+    },
+    "materialien-24": {
+      "file": "assets/icons/materialien-24.svg",
+      "motif": "wafer",
+      "operation": "process",
+      "name": "Dotierstoffe"
+    },
+    "verbindungen-01": {
+      "file": "assets/icons/verbindungen-01.svg",
+      "motif": "microscope",
+      "operation": "analyze",
+      "name": "Verbindungsanalyse"
+    },
+    "verbindungen-02": {
+      "file": "assets/icons/verbindungen-02.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Kohlendioxid"
+    },
+    "verbindungen-03": {
+      "file": "assets/icons/verbindungen-03.svg",
+      "motif": "flask",
+      "operation": "process",
+      "name": "Methanol"
+    },
+    "verbindungen-04": {
+      "file": "assets/icons/verbindungen-04.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Formaldehyd"
+    },
+    "verbindungen-05": {
+      "file": "assets/icons/verbindungen-05.svg",
+      "motif": "gastank",
+      "operation": "process",
+      "name": "Chlorwasserstoff"
+    },
+    "verbindungen-06": {
+      "file": "assets/icons/verbindungen-06.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Chlormethan"
+    },
+    "verbindungen-07": {
+      "file": "assets/icons/verbindungen-07.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Methylchlorsilane"
+    },
+    "verbindungen-08": {
+      "file": "assets/icons/verbindungen-08.svg",
+      "motif": "polymer",
+      "operation": "process",
+      "name": "Siloxane"
+    },
+    "verbindungen-09": {
+      "file": "assets/icons/verbindungen-09.svg",
+      "motif": "seal",
+      "operation": "process",
+      "name": "Silikonkautschuk"
+    },
+    "verbindungen-10": {
+      "file": "assets/icons/verbindungen-10.svg",
+      "motif": "powder",
+      "operation": "process",
+      "name": "Phosphatvorstufen"
+    },
+    "verbindungen-11": {
+      "file": "assets/icons/verbindungen-11.svg",
+      "motif": "battery",
+      "operation": "process",
+      "name": "Lithium-Eisenphosphat"
+    },
+    "verbindungen-12": {
+      "file": "assets/icons/verbindungen-12.svg",
+      "motif": "powder",
+      "operation": "process",
+      "name": "Lithium-Leitsalz"
+    },
+    "verbindungen-13": {
+      "file": "assets/icons/verbindungen-13.svg",
+      "motif": "flask",
+      "operation": "process",
+      "name": "Carbonatlösungsmittel"
+    },
+    "verbindungen-14": {
+      "file": "assets/icons/verbindungen-14.svg",
+      "motif": "electrolyte",
+      "operation": "process",
+      "name": "Elektrolytgemisch"
+    },
+    "verbindungen-15": {
+      "file": "assets/icons/verbindungen-15.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Polyimidvorstufen"
+    },
+    "verbindungen-16": {
+      "file": "assets/icons/verbindungen-16.svg",
+      "motif": "polymer",
+      "operation": "process",
+      "name": "Polyimid"
+    },
+    "verbindungen-17": {
+      "file": "assets/icons/verbindungen-17.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Tetrafluorethylen"
+    },
+    "verbindungen-18": {
+      "file": "assets/icons/verbindungen-18.svg",
+      "motif": "polymer",
+      "operation": "process",
+      "name": "PTFE"
+    },
+    "verbindungen-19": {
+      "file": "assets/icons/verbindungen-19.svg",
+      "motif": "glass",
+      "operation": "process",
+      "name": "Gereinigtes Siliziumdioxid"
+    },
+    "verbindungen-20": {
+      "file": "assets/icons/verbindungen-20.svg",
+      "motif": "powder",
+      "operation": "process",
+      "name": "Gereinigtes Aluminiumoxid"
+    },
+    "verbindungen-21": {
+      "file": "assets/icons/verbindungen-21.svg",
+      "motif": "resin",
+      "operation": "process",
+      "name": "Harzsysteme"
+    },
+    "mira-01": {
+      "file": "assets/icons/mira-01.svg",
+      "motif": "laboratory",
+      "operation": "process",
+      "name": "Forschungsbasis"
+    },
+    "mira-02": {
+      "file": "assets/icons/mira-02.svg",
+      "motif": "chart",
+      "operation": "process",
+      "name": "Forschungsstufe 2"
+    },
+    "mira-03": {
+      "file": "assets/icons/mira-03.svg",
+      "motif": "optimization",
+      "operation": "upgrade",
+      "name": "Methodenoptimierung"
+    },
+    "mira-04": {
+      "file": "assets/icons/mira-04.svg",
+      "motif": "monitor",
+      "operation": "analyze",
+      "name": "Rechnerdiagnose"
+    },
+    "mira-05": {
+      "file": "assets/icons/mira-05.svg",
+      "motif": "wrench",
+      "operation": "repair",
+      "name": "Rechnerreparatur"
+    },
+    "mira-06": {
+      "file": "assets/icons/mira-06.svg",
+      "motif": "cpu",
+      "operation": "expand",
+      "name": "CPU-Erweiterung"
+    },
+    "mira-07": {
+      "file": "assets/icons/mira-07.svg",
+      "motif": "battery",
+      "operation": "process",
+      "name": "Leistungsfreigabe"
+    },
+    "mira-08": {
+      "file": "assets/icons/mira-08.svg",
+      "motif": "fan",
+      "operation": "expand",
+      "name": "Erweiterte Kühlung"
+    },
+    "mira-09": {
+      "file": "assets/icons/mira-09.svg",
+      "motif": "server",
+      "operation": "process",
+      "name": "Parallelrechnen"
+    },
+    "mira-10": {
+      "file": "assets/icons/mira-10.svg",
+      "motif": "database",
+      "operation": "process",
+      "name": "Archivzugang"
+    },
+    "mira-11": {
+      "file": "assets/icons/mira-11.svg",
+      "motif": "analysis",
+      "operation": "analyze",
+      "name": "Analyse und Planung"
+    },
+    "mira-12": {
+      "file": "assets/icons/mira-12.svg",
+      "motif": "quadcopter",
+      "operation": "upgrade",
+      "name": "Routinekoordination"
+    },
+    "drohnen-01": {
+      "file": "assets/icons/drohnen-01.svg",
+      "motif": "miningdrone",
+      "operation": "process",
+      "name": "Abbaugrundlagen"
+    },
+    "drohnen-02": {
+      "file": "assets/icons/drohnen-02.svg",
+      "motif": "pickaxe",
+      "operation": "process",
+      "name": "Werkzeuganpassung"
+    },
+    "drohnen-03": {
+      "file": "assets/icons/drohnen-03.svg",
+      "motif": "cargo",
+      "operation": "process",
+      "name": "Frachtraumumbau"
+    },
+    "drohnen-04": {
+      "file": "assets/icons/drohnen-04.svg",
+      "motif": "monitor",
+      "operation": "upgrade",
+      "name": "Abbausteuerung"
+    },
+    "drohnen-05": {
+      "file": "assets/icons/drohnen-05.svg",
+      "motif": "repairdrone",
+      "operation": "repair",
+      "name": "Reparaturrolle"
+    },
+    "drohnen-06": {
+      "file": "assets/icons/drohnen-06.svg",
+      "motif": "monitor",
+      "operation": "analyze",
+      "name": "Schadensdiagnose"
+    },
+    "drohnen-07": {
+      "file": "assets/icons/drohnen-07.svg",
+      "motif": "wrench",
+      "operation": "process",
+      "name": "Bauteiltausch"
+    },
+    "drohnen-08": {
+      "file": "assets/icons/drohnen-08.svg",
+      "motif": "assembly",
+      "operation": "process",
+      "name": "Montageverfahren"
+    },
+    "drohnen-09": {
+      "file": "assets/icons/drohnen-09.svg",
+      "motif": "quadcopter",
+      "operation": "process",
+      "name": "Erkundungsrolle"
+    },
+    "drohnen-10": {
+      "file": "assets/icons/drohnen-10.svg",
+      "motif": "map",
+      "operation": "process",
+      "name": "Oberflächenkartierung"
+    },
+    "drohnen-11": {
+      "file": "assets/icons/drohnen-11.svg",
+      "motif": "sample",
+      "operation": "analyze",
+      "name": "Probenentnahme"
+    },
+    "drohnen-12": {
+      "file": "assets/icons/drohnen-12.svg",
+      "motif": "camera",
+      "operation": "process",
+      "name": "Livebild"
+    },
+    "drohnen-13": {
+      "file": "assets/icons/drohnen-13.svg",
+      "motif": "robot",
+      "operation": "process",
+      "name": "Helferaktivierung"
+    },
+    "drohnen-14": {
+      "file": "assets/icons/drohnen-14.svg",
+      "motif": "dock",
+      "operation": "process",
+      "name": "Dockumbau"
+    },
+    "drohnen-15": {
+      "file": "assets/icons/drohnen-15.svg",
+      "motif": "cart",
+      "operation": "process",
+      "name": "Innentransport"
+    },
+    "drohnen-16": {
+      "file": "assets/icons/drohnen-16.svg",
+      "motif": "tasks",
+      "operation": "repair",
+      "name": "Wartungsaufträge"
+    },
+    "scanner-01": {
+      "file": "assets/icons/scanner-01.svg",
+      "motif": "radar",
+      "operation": "analyze",
+      "name": "Nahbereichsscan"
+    },
+    "scanner-02": {
+      "file": "assets/icons/scanner-02.svg",
+      "motif": "filter",
+      "operation": "upgrade",
+      "name": "Signalfilter"
+    },
+    "scanner-03": {
+      "file": "assets/icons/scanner-03.svg",
+      "motif": "antenna",
+      "operation": "upgrade",
+      "name": "Reichweitenmodul"
+    },
+    "scanner-04": {
+      "file": "assets/icons/scanner-04.svg",
+      "motif": "map",
+      "operation": "process",
+      "name": "Kartierungsdaten"
+    },
+    "scanner-05": {
+      "file": "assets/icons/scanner-05.svg",
+      "motif": "camera",
+      "operation": "process",
+      "name": "Bildsensorik"
+    },
+    "scanner-06": {
+      "file": "assets/icons/scanner-06.svg",
+      "motif": "terrain",
+      "operation": "process",
+      "name": "Oberflächenmodell"
+    },
+    "scanner-07": {
+      "file": "assets/icons/scanner-07.svg",
+      "motif": "sample",
+      "operation": "analyze",
+      "name": "Probenregister"
+    },
+    "scanner-08": {
+      "file": "assets/icons/scanner-08.svg",
+      "motif": "spectrum",
+      "operation": "analyze",
+      "name": "Spektralanalyse"
+    },
+    "scanner-09": {
+      "file": "assets/icons/scanner-09.svg",
+      "motif": "microscope",
+      "operation": "process",
+      "name": "Materialabgleich"
+    },
+    "scanner-10": {
+      "file": "assets/icons/scanner-10.svg",
+      "motif": "radar",
+      "operation": "process",
+      "name": "Kontaktverfolgung"
+    },
+    "scanner-11": {
+      "file": "assets/icons/scanner-11.svg",
+      "motif": "route",
+      "operation": "process",
+      "name": "Bewegungsprognose"
+    },
+    "scanner-12": {
+      "file": "assets/icons/scanner-12.svg",
+      "motif": "tasks",
+      "operation": "repair",
+      "name": "Arbeitsfreigabeprüfung"
+    },
+    "produktion-01": {
+      "file": "assets/icons/produktion-01.svg",
+      "motif": "monitor",
+      "operation": "analyze",
+      "name": "Werkstattdiagnose"
+    },
+    "produktion-02": {
+      "file": "assets/icons/produktion-02.svg",
+      "motif": "wrench",
+      "operation": "repair",
+      "name": "Werkstattreparatur"
+    },
+    "produktion-03": {
+      "file": "assets/icons/produktion-03.svg",
+      "motif": "assembly",
+      "operation": "process",
+      "name": "Präzisionsmontage"
+    },
+    "produktion-04": {
+      "file": "assets/icons/produktion-04.svg",
+      "motif": "analysis",
+      "operation": "repair",
+      "name": "Qualitätsprüfung"
+    },
+    "produktion-05": {
+      "file": "assets/icons/produktion-05.svg",
+      "motif": "furnace",
+      "operation": "process",
+      "name": "Schmelzverfahren"
+    },
+    "produktion-06": {
+      "file": "assets/icons/produktion-06.svg",
+      "motif": "press",
+      "operation": "process",
+      "name": "Formgebung"
+    },
+    "produktion-07": {
+      "file": "assets/icons/produktion-07.svg",
+      "motif": "drill",
+      "operation": "process",
+      "name": "Bearbeitung"
+    },
+    "produktion-08": {
+      "file": "assets/icons/produktion-08.svg",
+      "motif": "assembly",
+      "operation": "process",
+      "name": "Bauteilfertigung"
+    },
+    "produktion-09": {
+      "file": "assets/icons/produktion-09.svg",
+      "motif": "reactor",
+      "operation": "process",
+      "name": "Prozessanlage"
+    },
+    "produktion-10": {
+      "file": "assets/icons/produktion-10.svg",
+      "motif": "molecule",
+      "operation": "process",
+      "name": "Reaktionsführung"
+    },
+    "produktion-11": {
+      "file": "assets/icons/produktion-11.svg",
+      "motif": "filter",
+      "operation": "process",
+      "name": "Reinigung und Trennung"
+    },
+    "produktion-12": {
+      "file": "assets/icons/produktion-12.svg",
+      "motif": "flask",
+      "operation": "process",
+      "name": "Werkstoffmischungen"
+    },
+    "produktion-13": {
+      "file": "assets/icons/produktion-13.svg",
+      "motif": "circuit",
+      "operation": "process",
+      "name": "Elektronikmontage"
+    },
+    "produktion-14": {
+      "file": "assets/icons/produktion-14.svg",
+      "motif": "circuit",
+      "operation": "process",
+      "name": "Platinenfertigung"
+    },
+    "produktion-15": {
+      "file": "assets/icons/produktion-15.svg",
+      "motif": "wafer",
+      "operation": "process",
+      "name": "Halbleiterprozesse"
+    },
+    "produktion-16": {
+      "file": "assets/icons/produktion-16.svg",
+      "motif": "cpu",
+      "operation": "process",
+      "name": "Chipherstellung"
+    },
+    "logistik-01": {
+      "file": "assets/icons/logistik-01.svg",
+      "motif": "database",
+      "operation": "expand",
+      "name": "Lagerregister"
+    },
+    "logistik-02": {
+      "file": "assets/icons/logistik-02.svg",
+      "motif": "quarantine",
+      "operation": "process",
+      "name": "Fundquarantäne"
+    },
+    "logistik-03": {
+      "file": "assets/icons/logistik-03.svg",
+      "motif": "analysis",
+      "operation": "analyze",
+      "name": "Bestandsanalyse"
+    },
+    "logistik-04": {
+      "file": "assets/icons/logistik-04.svg",
+      "motif": "cargo",
+      "operation": "process",
+      "name": "Feststoffcontainer"
+    },
+    "logistik-05": {
+      "file": "assets/icons/logistik-05.svg",
+      "motif": "tank",
+      "operation": "process",
+      "name": "Flüssigkeitstanks"
+    },
+    "logistik-06": {
+      "file": "assets/icons/logistik-06.svg",
+      "motif": "gastank",
+      "operation": "expand",
+      "name": "Gaslager"
+    },
+    "logistik-07": {
+      "file": "assets/icons/logistik-07.svg",
+      "motif": "cart",
+      "operation": "process",
+      "name": "Transportaufträge"
+    },
+    "logistik-08": {
+      "file": "assets/icons/logistik-08.svg",
+      "motif": "dock",
+      "operation": "upgrade",
+      "name": "Dockkoordination"
+    },
+    "logistik-09": {
+      "file": "assets/icons/logistik-09.svg",
+      "motif": "route",
+      "operation": "upgrade",
+      "name": "Routenprioritäten"
+    },
+    "logistik-10": {
+      "file": "assets/icons/logistik-10.svg",
+      "motif": "tasks",
+      "operation": "process",
+      "name": "Materialreservierung"
+    },
+    "logistik-11": {
+      "file": "assets/icons/logistik-11.svg",
+      "motif": "cart",
+      "operation": "process",
+      "name": "Nachschubregeln"
+    },
+    "logistik-12": {
+      "file": "assets/icons/logistik-12.svg",
+      "motif": "route",
+      "operation": "upgrade",
+      "name": "Versorgungsplanung"
+    },
+    "lebenserhaltung-01": {
+      "file": "assets/icons/lebenserhaltung-01.svg",
+      "motif": "sample",
+      "operation": "process",
+      "name": "Wasserqualität"
+    },
+    "lebenserhaltung-02": {
+      "file": "assets/icons/lebenserhaltung-02.svg",
+      "motif": "filter",
+      "operation": "process",
+      "name": "Wasseraufbereitung"
+    },
+    "lebenserhaltung-03": {
+      "file": "assets/icons/lebenserhaltung-03.svg",
+      "motif": "watercycle",
+      "operation": "process",
+      "name": "Wasserkreislauf"
+    },
+    "lebenserhaltung-04": {
+      "file": "assets/icons/lebenserhaltung-04.svg",
+      "motif": "spectrum",
+      "operation": "process",
+      "name": "Luftüberwachung"
+    },
+    "lebenserhaltung-05": {
+      "file": "assets/icons/lebenserhaltung-05.svg",
+      "motif": "gastank",
+      "operation": "process",
+      "name": "Sauerstoffversorgung"
+    },
+    "lebenserhaltung-06": {
+      "file": "assets/icons/lebenserhaltung-06.svg",
+      "motif": "filter",
+      "operation": "process",
+      "name": "CO2-Abscheidung"
+    },
+    "lebenserhaltung-07": {
+      "file": "assets/icons/lebenserhaltung-07.svg",
+      "motif": "monitor",
+      "operation": "analyze",
+      "name": "Leckdiagnose"
+    },
+    "lebenserhaltung-08": {
+      "file": "assets/icons/lebenserhaltung-08.svg",
+      "motif": "seal",
+      "operation": "process",
+      "name": "Dichtungstausch"
+    },
+    "lebenserhaltung-09": {
+      "file": "assets/icons/lebenserhaltung-09.svg",
+      "motif": "thermometer",
+      "operation": "process",
+      "name": "Temperaturregelung"
+    },
+    "lebenserhaltung-10": {
+      "file": "assets/icons/lebenserhaltung-10.svg",
+      "motif": "cargo",
+      "operation": "repair",
+      "name": "Vorratsprüfung"
+    },
+    "lebenserhaltung-11": {
+      "file": "assets/icons/lebenserhaltung-11.svg",
+      "motif": "reactor",
+      "operation": "repair",
+      "name": "Syntheseanlage reparieren"
+    },
+    "lebenserhaltung-12": {
+      "file": "assets/icons/lebenserhaltung-12.svg",
+      "motif": "food",
+      "operation": "process",
+      "name": "Nahrungsqualität"
+    },
+    "station-01": {
+      "file": "assets/icons/station-01.svg",
+      "motif": "monitor",
+      "operation": "analyze",
+      "name": "Strukturdiagnose"
+    },
+    "station-02": {
+      "file": "assets/icons/station-02.svg",
+      "motif": "wrench",
+      "operation": "repair",
+      "name": "Hülle reparieren"
+    },
+    "station-03": {
+      "file": "assets/icons/station-03.svg",
+      "motif": "dock",
+      "operation": "process",
+      "name": "Anschlüsse instandsetzen"
+    },
+    "station-04": {
+      "file": "assets/icons/station-04.svg",
+      "motif": "blueprint",
+      "operation": "upgrade",
+      "name": "Modulplanung"
+    },
+    "station-05": {
+      "file": "assets/icons/station-05.svg",
+      "motif": "distribution",
+      "operation": "process",
+      "name": "Versorgungsanschluss"
+    },
+    "station-06": {
+      "file": "assets/icons/station-06.svg",
+      "motif": "assembly",
+      "operation": "process",
+      "name": "Modulmontage"
+    },
+    "station-07": {
+      "file": "assets/icons/station-07.svg",
+      "motif": "gauge",
+      "operation": "repair",
+      "name": "Druckprüfung"
+    },
+    "station-08": {
+      "file": "assets/icons/station-08.svg",
+      "motif": "habitat",
+      "operation": "expand",
+      "name": "Wohnbereich erweitern"
+    },
+    "station-09": {
+      "file": "assets/icons/station-09.svg",
+      "motif": "dome",
+      "operation": "process",
+      "name": "Glasdom"
+    },
+    "station-10": {
+      "file": "assets/icons/station-10.svg",
+      "motif": "compass",
+      "operation": "process",
+      "name": "Lagekontrolle"
+    },
+    "station-11": {
+      "file": "assets/icons/station-11.svg",
+      "motif": "wrench",
+      "operation": "repair",
+      "name": "Panelhalterung reparieren"
+    },
+    "station-12": {
+      "file": "assets/icons/station-12.svg",
+      "motif": "solartrack",
+      "operation": "upgrade",
+      "name": "Panelsteuerung"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Projektchats und gemeinsames Chatmemory
 
-Exportstand: 2026-10-08T15:29:49.366675+00:00.
+Exportstand: 2026-10-09T14:39:48.475817+00:00.
 
 Lesbare Momentaufnahmen, kein importierbares Codex-Sitzungsformat. Exportiert werden ausschließlich Nutzer- und Assistententexte der ausdrücklich registrierten Projektchats. Systemanweisungen, interne Überlegungen, Werkzeugprotokolle und Umgebungskontext werden ausgelassen. Anhänge werden nicht rekonstruiert; übernommene Assets liegen im Projekt.
 
@@ -16,14 +16,14 @@ Startaufträge für die neun aktuellen Themenchats: [Chats am anderen Rechner an
 
 ## Registrierte Archive und Exportverfügbarkeit
 
-- [GitHub](04-GitHub.md) — 55 Textnachrichten. Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung.
-- [MainDev](05-MainDev.md) — 198 Textnachrichten. Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus.
-- [Asteroidenvarianten](06-Asteroidenvarianten.md) — 7 Textnachrichten. Asteroidenformen, Materialien und Generator.
-- [Story, Dialoge & Bordcomputer](07-Story-und-Mira.md) — 389 Textnachrichten. Mira, Intro und Sprechertexte; Abgleich der Drohnenzahl offen.
-- [Settings UI](08-Settings-UI.md) — 64 Textnachrichten. Mining-Pulse-Stil, Player-Settings, modulare UI und Audiokanäle.
-- [Sound und Effekte](09-Sound-und-Effekte.md) — 36 Textnachrichten. Configuration- und Gameplay-Musik, Loop-Dateien und Audioübergänge.
-- [TechTree](10-TechTree.md) — 35 Textnachrichten. Tier-I-Entwurf und integriertes Techtree-Menü; Forschungsmechanik offen.
-- [Vehicels](11-Vehicels.md) — 25 Textnachrichten. Separater Themenchat für Fahrzeuge; bisher überwiegend übernommener Kontext.
+- [GitHub](04-GitHub.md) — 57 Textnachrichten. Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung.
+- [MainDev](05-MainDev.md) — 230 Textnachrichten. Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus.
+- [Asteroidenvarianten](06-Asteroidenvarianten.md) — 9 Textnachrichten. Asteroidenformen, Materialien und Generator.
+- [Story, Dialoge & Bordcomputer](07-Story-und-Mira.md) — 391 Textnachrichten. Mira, Intro und Sprechertexte; Abgleich der Drohnenzahl offen.
+- [Settings UI](08-Settings-UI.md) — 66 Textnachrichten. Mining-Pulse-Stil, Player-Settings, modulare UI und Audiokanäle.
+- [Sound und Effekte](09-Sound-und-Effekte.md) — 38 Textnachrichten. Configuration- und Gameplay-Musik, Loop-Dateien und Audioübergänge.
+- [TechTree](10-TechTree.md) — 96 Textnachrichten. Tier-I-Entwurf und integriertes Techtree-Menü; Forschungsmechanik offen.
+- [Vehicels](11-Vehicels.md) — 27 Textnachrichten. Separater Themenchat für Fahrzeuge; bisher überwiegend übernommener Kontext.
 - **SpaceMinerCodex – lokaler Arbeitschat** (`01a110eb-3487-7061-8a24-86afe58bdc1f`): weder lokaler Sitzungsexport noch bestehendes Textarchiv verfügbar. Früher angelegt; derzeit nicht in aktiver Chatliste oder lokalem Sitzungsbestand bestätigt.
 - [01a110d3-f191-75ae-85c3-acc44489105f](13-Cloud-Sound-und-Effekte.md) — historische Cloud-Textmomentaufnahme vom 2026-10-07; Anhänge nicht enthalten. Historischer Cloud-Kontext zu Sound und Effekten; lokale Integration später erfolgt.
 - [01a110cb-9fe2-7122-bfd7-66cc4cd92075](14-Cloud-Techtree.md) — historische Cloud-Textmomentaufnahme vom 2026-10-07; Anhänge nicht enthalten. Historischer Cloud-Kontext zu Techtree und Progression; Konzepte von Umsetzung unterscheiden.
@@ -36,7 +36,7 @@ Startaufträge für die neun aktuellen Themenchats: [Chats am anderen Rechner an
 - [TechTree](19-TechTree-Desktop.md) — vorhandener Export bewahrt; Ursprungssitzung auf diesem Rechner nicht eindeutig verfügbar. Desktop-Fortsetzung: Tier-I-Techtree, Forschungsdarstellung und spätere Forschungsmechanik.
 - [Vehicels](20-Vehicels-Desktop.md) — vorhandener Export bewahrt; Ursprungssitzung auf diesem Rechner nicht eindeutig verfügbar. Desktop-Fortsetzung: Fahrzeuge und Drohnen, Gestaltung und Abläufe.
 - [Ideenbacklog prüfen](21-Ideenbacklog-Desktop.md) — vorhandener Export bewahrt; Ursprungssitzung auf diesem Rechner nicht eindeutig verfügbar. Entwicklungsideen, Drohnenrollen und Umbauten, Stationsnavigation, Sonne und Planeten, Gefahren, Intro-Cinematic und Steam-Ausbaustufe.
-- [Ideenbacklog](22-Ideenbacklog.md) — 2 Textnachrichten. Lokale Fortsetzung der dokumentierten Ideen, Entwicklungsideen und offene Ausbaustufen.
+- [Ideenbacklog](22-Ideenbacklog.md) — 4 Textnachrichten. Lokale Fortsetzung der dokumentierten Ideen, Entwicklungsideen und offene Ausbaustufen.
 - [Intro Cinematic Entwurf](23-Intro-Cinematic-Entwurf.md) — historische Cloud-Textmomentaufnahme vom 2026-10-08; Anhänge nicht enthalten. Historischer ChatGPT-Storyentwurf mit zwölf Abschnitten; heutige Umsetzung separat dokumentiert.
 
 ## Aktualisieren

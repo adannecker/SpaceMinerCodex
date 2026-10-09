@@ -206,3 +206,9 @@ Zusätzliche Development-Prüfung: `-stationHabitatCheck` prüft Pultauftrag, in
 
 
 Aktueller Einstieg: Intro und Spiel beginnen im Wohnmodul. Zum Stationspult gehen und E drücken; Scanner startet bei 97 %, nach zehn Spielsekunden bei 1× bereit. V öffnet die VR; ungescannte Asteroiden sind dort unsichtbar. Debugsicht nur in der VR. Mira zeigt das gezeichnete Porträt, die Quest steht links. Neuer Prüfbuild: Builds/StationEntry/SpaceMiner.exe.
+
+## Debug-Forschungslabor
+
+Im Editor/Development-Spiel: Techtree-Symbol neben Settings → Forschungslabor [Debug]. Elf Bereiche mit 159 Entwurfseinträgen, auswählbare Forschung und Verbesserungen, Daten-/Arbeitsmittelbedingungen, Pause/1×/5×/30×/120×/600×, ein bis drei parallele Laborplätze und separate Sicherung. Laborfortschritt läuft nur bei geöffnetem Labor; echte Spielressourcen bleiben getrennt. Testwerte, Bedienung und Prüfmethoden: [docs/Forschungslabor.md](docs/Forschungslabor.md).
+
+Unity-Demo der realistischen Techtree-Vorschau: `tools/Start-TechTreeDemo.ps1` startet den separaten lokalen Development-Build direkt im Forschungslabor. Build-/Bedienhinweise: [Forschungslabor](docs/Forschungslabor.md). Enthält alle elf Bäume, Miniaturbilder, Klickdetails und Forschungstemposchalter.

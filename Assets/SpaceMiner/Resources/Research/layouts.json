@@ -1,0 +1,3363 @@
+{
+  "trees": [
+    {
+      "id": "energie",
+      "width": 664.5,
+      "height": 501,
+      "nodes": [
+        {
+          "id": "energie-01",
+          "x": 28.5,
+          "y": 168,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-04",
+          "x": 564,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-05",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-06",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-07",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-08",
+          "x": 385.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-09",
+          "x": 564,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-10",
+          "x": 207,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-11",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "energie-12",
+          "x": 28.5,
+          "y": 400.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "energie-01",
+          "target": "energie-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 189.60000000000002
+            },
+            {
+              "x": 120,
+              "y": 189.60000000000002
+            },
+            {
+              "x": 120,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "energie-02",
+          "target": "energie-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "energie-03",
+          "target": "energie-04",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 64.5
+            },
+            {
+              "x": 564,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "energie-01",
+          "target": "energie-05",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 199.20000000000002
+            },
+            {
+              "x": 132.75,
+              "y": 199.20000000000002
+            },
+            {
+              "x": 132.75,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "energie-05",
+          "target": "energie-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "energie-01",
+          "target": "energie-07",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 208.79999999999998
+            },
+            {
+              "x": 132.75,
+              "y": 208.79999999999998
+            },
+            {
+              "x": 132.75,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "energie-07",
+          "target": "energie-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 385.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "energie-08",
+          "target": "energie-09",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 250.5
+            },
+            {
+              "x": 564,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "energie-01",
+          "target": "energie-10",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 218.39999999999998
+            },
+            {
+              "x": 120,
+              "y": 218.39999999999998
+            },
+            {
+              "x": 120,
+              "y": 343.5
+            },
+            {
+              "x": 207,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "energie-10",
+          "target": "energie-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 343.5
+            },
+            {
+              "x": 385.5,
+              "y": 343.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wiederverwertung",
+      "width": 1021.5,
+      "height": 315,
+      "nodes": [
+        {
+          "id": "wiederverwertung-01",
+          "x": 28.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-02",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-03",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-04",
+          "x": 564,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-05",
+          "x": 742.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-06",
+          "x": 564,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-07",
+          "x": 742.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-08",
+          "x": 564,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-09",
+          "x": 742.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "wiederverwertung-10",
+          "x": 921,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "wiederverwertung-01",
+          "target": "wiederverwertung-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "wiederverwertung-02",
+          "target": "wiederverwertung-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "wiederverwertung-03",
+          "target": "wiederverwertung-04",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 145.5
+            },
+            {
+              "x": 477,
+              "y": 145.5
+            },
+            {
+              "x": 477,
+              "y": 64.5
+            },
+            {
+              "x": 564,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "wiederverwertung-04",
+          "target": "wiederverwertung-05",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 636,
+              "y": 64.5
+            },
+            {
+              "x": 742.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "wiederverwertung-03",
+          "target": "wiederverwertung-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 157.5
+            },
+            {
+              "x": 564,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "wiederverwertung-06",
+          "target": "wiederverwertung-07",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 636,
+              "y": 157.5
+            },
+            {
+              "x": 742.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "wiederverwertung-03",
+          "target": "wiederverwertung-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 169.5
+            },
+            {
+              "x": 477,
+              "y": 169.5
+            },
+            {
+              "x": 477,
+              "y": 250.5
+            },
+            {
+              "x": 564,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "wiederverwertung-08",
+          "target": "wiederverwertung-09",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 636,
+              "y": 250.5
+            },
+            {
+              "x": 742.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "wiederverwertung-09",
+          "target": "wiederverwertung-10",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 814.5,
+              "y": 250.5
+            },
+            {
+              "x": 921,
+              "y": 250.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "materialien",
+      "width": 894,
+      "height": 966,
+      "nodes": [
+        {
+          "id": "materialien-01",
+          "x": 28.5,
+          "y": 423.75,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-02",
+          "x": 207,
+          "y": 75,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-03",
+          "x": 385.5,
+          "y": 75,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-04",
+          "x": 564,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-05",
+          "x": 564,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-06",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-07",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-08",
+          "x": 487.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-09",
+          "x": 589.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-10",
+          "x": 691.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-11",
+          "x": 207,
+          "y": 400.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-12",
+          "x": 385.5,
+          "y": 493.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-13",
+          "x": 487.5,
+          "y": 493.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-14",
+          "x": 589.5,
+          "y": 493.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-15",
+          "x": 207,
+          "y": 633,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-16",
+          "x": 385.5,
+          "y": 586.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-17",
+          "x": 385.5,
+          "y": 679.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-18",
+          "x": 564,
+          "y": 679.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-19",
+          "x": 207,
+          "y": 772.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-20",
+          "x": 385.5,
+          "y": 865.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-21",
+          "x": 487.5,
+          "y": 865.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-22",
+          "x": 589.5,
+          "y": 865.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-23",
+          "x": 691.5,
+          "y": 865.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "materialien-24",
+          "x": 793.5,
+          "y": 865.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "materialien-01",
+          "target": "materialien-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 443.75
+            },
+            {
+              "x": 120,
+              "y": 443.75
+            },
+            {
+              "x": 120,
+              "y": 111
+            },
+            {
+              "x": 207,
+              "y": 111
+            }
+          ]
+        },
+        {
+          "source": "materialien-02",
+          "target": "materialien-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 111
+            },
+            {
+              "x": 385.5,
+              "y": 111
+            }
+          ]
+        },
+        {
+          "source": "materialien-03",
+          "target": "materialien-04",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 103
+            },
+            {
+              "x": 477,
+              "y": 103
+            },
+            {
+              "x": 477,
+              "y": 64.5
+            },
+            {
+              "x": 564,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-03",
+          "target": "materialien-05",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 119
+            },
+            {
+              "x": 477,
+              "y": 119
+            },
+            {
+              "x": 477,
+              "y": 157.5
+            },
+            {
+              "x": 564,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-01",
+          "target": "materialien-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 451.75
+            },
+            {
+              "x": 132.75,
+              "y": 451.75
+            },
+            {
+              "x": 132.75,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-06",
+          "target": "materialien-07",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 421.5,
+              "y": 250.5
+            },
+            {
+              "x": 421.5,
+              "y": 307.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-06",
+          "target": "materialien-08",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 523.5,
+              "y": 250.5
+            },
+            {
+              "x": 523.5,
+              "y": 307.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-06",
+          "target": "materialien-09",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 625.5,
+              "y": 250.5
+            },
+            {
+              "x": 625.5,
+              "y": 307.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-06",
+          "target": "materialien-10",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 727.5,
+              "y": 250.5
+            },
+            {
+              "x": 727.5,
+              "y": 307.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-01",
+          "target": "materialien-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 459.75
+            },
+            {
+              "x": 145.5,
+              "y": 459.75
+            },
+            {
+              "x": 145.5,
+              "y": 436.5
+            },
+            {
+              "x": 207,
+              "y": 436.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-11",
+          "target": "materialien-12",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 436.5
+            },
+            {
+              "x": 421.5,
+              "y": 436.5
+            },
+            {
+              "x": 421.5,
+              "y": 493.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-11",
+          "target": "materialien-13",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 436.5
+            },
+            {
+              "x": 523.5,
+              "y": 436.5
+            },
+            {
+              "x": 523.5,
+              "y": 493.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-11",
+          "target": "materialien-14",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 436.5
+            },
+            {
+              "x": 625.5,
+              "y": 436.5
+            },
+            {
+              "x": 625.5,
+              "y": 493.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-01",
+          "target": "materialien-15",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 467.75
+            },
+            {
+              "x": 132.75,
+              "y": 467.75
+            },
+            {
+              "x": 132.75,
+              "y": 669
+            },
+            {
+              "x": 207,
+              "y": 669
+            }
+          ]
+        },
+        {
+          "source": "materialien-15",
+          "target": "materialien-16",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 661
+            },
+            {
+              "x": 298.5,
+              "y": 661
+            },
+            {
+              "x": 298.5,
+              "y": 622.5
+            },
+            {
+              "x": 385.5,
+              "y": 622.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-15",
+          "target": "materialien-17",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 677
+            },
+            {
+              "x": 298.5,
+              "y": 677
+            },
+            {
+              "x": 298.5,
+              "y": 715.5
+            },
+            {
+              "x": 385.5,
+              "y": 715.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-17",
+          "target": "materialien-18",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 715.5
+            },
+            {
+              "x": 564,
+              "y": 715.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-01",
+          "target": "materialien-19",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 475.75
+            },
+            {
+              "x": 120,
+              "y": 475.75
+            },
+            {
+              "x": 120,
+              "y": 808.5
+            },
+            {
+              "x": 207,
+              "y": 808.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-19",
+          "target": "materialien-20",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 808.5
+            },
+            {
+              "x": 421.5,
+              "y": 808.5
+            },
+            {
+              "x": 421.5,
+              "y": 865.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-19",
+          "target": "materialien-21",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 808.5
+            },
+            {
+              "x": 523.5,
+              "y": 808.5
+            },
+            {
+              "x": 523.5,
+              "y": 865.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-19",
+          "target": "materialien-22",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 808.5
+            },
+            {
+              "x": 625.5,
+              "y": 808.5
+            },
+            {
+              "x": 625.5,
+              "y": 865.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-19",
+          "target": "materialien-23",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 808.5
+            },
+            {
+              "x": 727.5,
+              "y": 808.5
+            },
+            {
+              "x": 727.5,
+              "y": 865.5
+            }
+          ]
+        },
+        {
+          "source": "materialien-19",
+          "target": "materialien-24",
+          "sharedBus": true,
+          "points": [
+            {
+              "x": 279,
+              "y": 808.5
+            },
+            {
+              "x": 829.5,
+              "y": 808.5
+            },
+            {
+              "x": 829.5,
+              "y": 865.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "verbindungen",
+      "width": 1021.5,
+      "height": 966,
+      "nodes": [
+        {
+          "id": "verbindungen-01",
+          "x": 28.5,
+          "y": 447,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-04",
+          "x": 564,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-05",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-06",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-07",
+          "x": 564,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-08",
+          "x": 742.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-09",
+          "x": 921,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-10",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-11",
+          "x": 385.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-12",
+          "x": 207,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-13",
+          "x": 207,
+          "y": 400.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-14",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-15",
+          "x": 207,
+          "y": 493.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-16",
+          "x": 385.5,
+          "y": 493.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-17",
+          "x": 207,
+          "y": 586.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-18",
+          "x": 385.5,
+          "y": 586.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-19",
+          "x": 207,
+          "y": 679.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-20",
+          "x": 207,
+          "y": 772.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "verbindungen-21",
+          "x": 207,
+          "y": 865.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 463.3636363636364
+            },
+            {
+              "x": 120,
+              "y": 463.3636363636364
+            },
+            {
+              "x": 120,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-02",
+          "target": "verbindungen-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-03",
+          "target": "verbindungen-04",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 64.5
+            },
+            {
+              "x": 564,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-05",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 467.72727272727275
+            },
+            {
+              "x": 132.75,
+              "y": 467.72727272727275
+            },
+            {
+              "x": 132.75,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-05",
+          "target": "verbindungen-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-06",
+          "target": "verbindungen-07",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 157.5
+            },
+            {
+              "x": 564,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-07",
+          "target": "verbindungen-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 636,
+              "y": 157.5
+            },
+            {
+              "x": 742.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-08",
+          "target": "verbindungen-09",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 814.5,
+              "y": 157.5
+            },
+            {
+              "x": 921,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-10",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 472.0909090909091
+            },
+            {
+              "x": 145.5,
+              "y": 472.0909090909091
+            },
+            {
+              "x": 145.5,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-10",
+          "target": "verbindungen-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 385.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-12",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 476.45454545454544
+            },
+            {
+              "x": 158.25,
+              "y": 476.45454545454544
+            },
+            {
+              "x": 158.25,
+              "y": 343.5
+            },
+            {
+              "x": 207,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-13",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 480.81818181818187
+            },
+            {
+              "x": 171,
+              "y": 480.81818181818187
+            },
+            {
+              "x": 171,
+              "y": 436.5
+            },
+            {
+              "x": 207,
+              "y": 436.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-12",
+          "target": "verbindungen-14",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 343.5
+            },
+            {
+              "x": 298.5,
+              "y": 343.5
+            },
+            {
+              "x": 298.5,
+              "y": 335.5
+            },
+            {
+              "x": 385.5,
+              "y": 335.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-13",
+          "target": "verbindungen-14",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 436.5
+            },
+            {
+              "x": 288,
+              "y": 436.5
+            },
+            {
+              "x": 288,
+              "y": 432
+            },
+            {
+              "x": 376.5,
+              "y": 432
+            },
+            {
+              "x": 376.5,
+              "y": 351.5
+            },
+            {
+              "x": 385.5,
+              "y": 351.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-15",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 485.18181818181813
+            },
+            {
+              "x": 171,
+              "y": 485.18181818181813
+            },
+            {
+              "x": 171,
+              "y": 529.5
+            },
+            {
+              "x": 207,
+              "y": 529.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-15",
+          "target": "verbindungen-16",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 529.5
+            },
+            {
+              "x": 385.5,
+              "y": 529.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-17",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 489.54545454545456
+            },
+            {
+              "x": 158.25,
+              "y": 489.54545454545456
+            },
+            {
+              "x": 158.25,
+              "y": 622.5
+            },
+            {
+              "x": 207,
+              "y": 622.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-17",
+          "target": "verbindungen-18",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 622.5
+            },
+            {
+              "x": 385.5,
+              "y": 622.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-19",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 493.9090909090909
+            },
+            {
+              "x": 145.5,
+              "y": 493.9090909090909
+            },
+            {
+              "x": 145.5,
+              "y": 715.5
+            },
+            {
+              "x": 207,
+              "y": 715.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-20",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 498.27272727272725
+            },
+            {
+              "x": 132.75,
+              "y": 498.27272727272725
+            },
+            {
+              "x": 132.75,
+              "y": 808.5
+            },
+            {
+              "x": 207,
+              "y": 808.5
+            }
+          ]
+        },
+        {
+          "source": "verbindungen-01",
+          "target": "verbindungen-21",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 502.6363636363636
+            },
+            {
+              "x": 120,
+              "y": 502.6363636363636
+            },
+            {
+              "x": 120,
+              "y": 901.5
+            },
+            {
+              "x": 207,
+              "y": 901.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mira",
+      "width": 486,
+      "height": 408,
+      "nodes": [
+        {
+          "id": "mira-01",
+          "x": 28.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-04",
+          "x": 28.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-05",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-06",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-07",
+          "x": 28.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-08",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-09",
+          "x": 385.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-10",
+          "x": 28.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-11",
+          "x": 207,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "mira-12",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "mira-01",
+          "target": "mira-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "mira-02",
+          "target": "mira-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "mira-04",
+          "target": "mira-05",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "mira-05",
+          "target": "mira-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "mira-07",
+          "target": "mira-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "mira-08",
+          "target": "mira-09",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 385.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "mira-10",
+          "target": "mira-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 343.5
+            },
+            {
+              "x": 207,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "mira-11",
+          "target": "mira-12",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 343.5
+            },
+            {
+              "x": 385.5,
+              "y": 343.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "drohnen",
+      "width": 664.5,
+      "height": 408,
+      "nodes": [
+        {
+          "id": "drohnen-01",
+          "x": 28.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-04",
+          "x": 564,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-05",
+          "x": 28.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-06",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-07",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-08",
+          "x": 564,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-09",
+          "x": 28.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-10",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-11",
+          "x": 385.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-12",
+          "x": 564,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-13",
+          "x": 28.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-14",
+          "x": 207,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-15",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "drohnen-16",
+          "x": 564,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "drohnen-01",
+          "target": "drohnen-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-02",
+          "target": "drohnen-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-03",
+          "target": "drohnen-04",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 64.5
+            },
+            {
+              "x": 564,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-05",
+          "target": "drohnen-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-06",
+          "target": "drohnen-07",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-07",
+          "target": "drohnen-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 157.5
+            },
+            {
+              "x": 564,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-09",
+          "target": "drohnen-10",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-10",
+          "target": "drohnen-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 385.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-11",
+          "target": "drohnen-12",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 250.5
+            },
+            {
+              "x": 564,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-13",
+          "target": "drohnen-14",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 343.5
+            },
+            {
+              "x": 207,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-14",
+          "target": "drohnen-15",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 343.5
+            },
+            {
+              "x": 385.5,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "drohnen-15",
+          "target": "drohnen-16",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 343.5
+            },
+            {
+              "x": 564,
+              "y": 343.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scanner",
+      "width": 486,
+      "height": 408,
+      "nodes": [
+        {
+          "id": "scanner-01",
+          "x": 28.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-04",
+          "x": 28.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-05",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-06",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-07",
+          "x": 28.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-08",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-09",
+          "x": 385.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-10",
+          "x": 28.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-11",
+          "x": 207,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "scanner-12",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "scanner-01",
+          "target": "scanner-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "scanner-02",
+          "target": "scanner-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "scanner-04",
+          "target": "scanner-05",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "scanner-05",
+          "target": "scanner-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "scanner-07",
+          "target": "scanner-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "scanner-08",
+          "target": "scanner-09",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 385.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "scanner-10",
+          "target": "scanner-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 343.5
+            },
+            {
+              "x": 207,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "scanner-11",
+          "target": "scanner-12",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 343.5
+            },
+            {
+              "x": 385.5,
+              "y": 343.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "produktion",
+      "width": 664.5,
+      "height": 408,
+      "nodes": [
+        {
+          "id": "produktion-01",
+          "x": 28.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-04",
+          "x": 564,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-05",
+          "x": 28.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-06",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-07",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-08",
+          "x": 564,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-09",
+          "x": 28.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-10",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-11",
+          "x": 385.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-12",
+          "x": 564,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-13",
+          "x": 28.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-14",
+          "x": 207,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-15",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "produktion-16",
+          "x": 564,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "produktion-01",
+          "target": "produktion-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-02",
+          "target": "produktion-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-03",
+          "target": "produktion-04",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 64.5
+            },
+            {
+              "x": 564,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-05",
+          "target": "produktion-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-06",
+          "target": "produktion-07",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-07",
+          "target": "produktion-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 157.5
+            },
+            {
+              "x": 564,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-09",
+          "target": "produktion-10",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-10",
+          "target": "produktion-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 385.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-11",
+          "target": "produktion-12",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 250.5
+            },
+            {
+              "x": 564,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-13",
+          "target": "produktion-14",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 343.5
+            },
+            {
+              "x": 207,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-14",
+          "target": "produktion-15",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 343.5
+            },
+            {
+              "x": 385.5,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "produktion-15",
+          "target": "produktion-16",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 457.5,
+              "y": 343.5
+            },
+            {
+              "x": 564,
+              "y": 343.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logistik",
+      "width": 486,
+      "height": 594,
+      "nodes": [
+        {
+          "id": "logistik-01",
+          "x": 28.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-04",
+          "x": 28.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-05",
+          "x": 28.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-06",
+          "x": 28.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-07",
+          "x": 28.5,
+          "y": 400.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-08",
+          "x": 207,
+          "y": 400.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-09",
+          "x": 385.5,
+          "y": 400.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-10",
+          "x": 28.5,
+          "y": 493.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-11",
+          "x": 207,
+          "y": 493.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "logistik-12",
+          "x": 385.5,
+          "y": 493.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "logistik-01",
+          "target": "logistik-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "logistik-02",
+          "target": "logistik-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "logistik-07",
+          "target": "logistik-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 436.5
+            },
+            {
+              "x": 207,
+              "y": 436.5
+            }
+          ]
+        },
+        {
+          "source": "logistik-08",
+          "target": "logistik-09",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 436.5
+            },
+            {
+              "x": 385.5,
+              "y": 436.5
+            }
+          ]
+        },
+        {
+          "source": "logistik-10",
+          "target": "logistik-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 529.5
+            },
+            {
+              "x": 207,
+              "y": 529.5
+            }
+          ]
+        },
+        {
+          "source": "logistik-11",
+          "target": "logistik-12",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 529.5
+            },
+            {
+              "x": 385.5,
+              "y": 529.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lebenserhaltung",
+      "width": 486,
+      "height": 408,
+      "nodes": [
+        {
+          "id": "lebenserhaltung-01",
+          "x": 28.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-04",
+          "x": 28.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-05",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-06",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-07",
+          "x": 28.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-08",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-09",
+          "x": 385.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-10",
+          "x": 28.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-11",
+          "x": 207,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "lebenserhaltung-12",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "lebenserhaltung-01",
+          "target": "lebenserhaltung-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "lebenserhaltung-02",
+          "target": "lebenserhaltung-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "lebenserhaltung-04",
+          "target": "lebenserhaltung-05",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "lebenserhaltung-05",
+          "target": "lebenserhaltung-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "lebenserhaltung-07",
+          "target": "lebenserhaltung-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "lebenserhaltung-08",
+          "target": "lebenserhaltung-09",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 385.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "lebenserhaltung-10",
+          "target": "lebenserhaltung-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 343.5
+            },
+            {
+              "x": 207,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "lebenserhaltung-11",
+          "target": "lebenserhaltung-12",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 343.5
+            },
+            {
+              "x": 385.5,
+              "y": 343.5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "station",
+      "width": 486,
+      "height": 408,
+      "nodes": [
+        {
+          "id": "station-01",
+          "x": 28.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-02",
+          "x": 207,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-03",
+          "x": 385.5,
+          "y": 28.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-04",
+          "x": 28.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-05",
+          "x": 207,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-06",
+          "x": 385.5,
+          "y": 121.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-07",
+          "x": 28.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-08",
+          "x": 207,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-09",
+          "x": 385.5,
+          "y": 214.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-10",
+          "x": 28.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-11",
+          "x": 207,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "id": "station-12",
+          "x": 385.5,
+          "y": 307.5,
+          "width": 72,
+          "height": 72
+        }
+      ],
+      "edges": [
+        {
+          "source": "station-01",
+          "target": "station-02",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 64.5
+            },
+            {
+              "x": 207,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "station-02",
+          "target": "station-03",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 64.5
+            },
+            {
+              "x": 385.5,
+              "y": 64.5
+            }
+          ]
+        },
+        {
+          "source": "station-04",
+          "target": "station-05",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 157.5
+            },
+            {
+              "x": 207,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "station-05",
+          "target": "station-06",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 157.5
+            },
+            {
+              "x": 385.5,
+              "y": 157.5
+            }
+          ]
+        },
+        {
+          "source": "station-07",
+          "target": "station-08",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 250.5
+            },
+            {
+              "x": 207,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "station-08",
+          "target": "station-09",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 250.5
+            },
+            {
+              "x": 385.5,
+              "y": 250.5
+            }
+          ]
+        },
+        {
+          "source": "station-10",
+          "target": "station-11",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 100.5,
+              "y": 343.5
+            },
+            {
+              "x": 207,
+              "y": 343.5
+            }
+          ]
+        },
+        {
+          "source": "station-11",
+          "target": "station-12",
+          "sharedBus": false,
+          "points": [
+            {
+              "x": 279,
+              "y": 343.5
+            },
+            {
+              "x": 385.5,
+              "y": 343.5
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

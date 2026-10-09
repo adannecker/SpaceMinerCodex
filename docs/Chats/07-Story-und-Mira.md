@@ -1,6 +1,6 @@
 # Story, Dialoge & Bordcomputer
 
-Chat-ID: `01a11007-910e-7ff0-a749-82c7af51fde7`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
+Chat-ID: `01a11007-910e-7ff0-a749-82c7af51fde7`. Exportstand: 2026-10-09T14:39:48.475817+00:00.
 
 Mira, Intro und Sprechertexte; Abgleich der Drohnenzahl offen
 
@@ -2537,3 +2537,17 @@ Ja genau
 ## Assistent · 2026-10-08T14:34:21.994Z
 
 Alles klar, dabei bleiben wir.
+
+## Assistent · 2026-10-09T05:41:48.044Z
+
+Ich lese das gemeinsame Kontextupdate und die für Story und Mira relevanten Dateien. Dabei ändere ich nichts am Projekt.
+
+## Assistent · 2026-10-09T05:42:32.542Z
+
+Kontext aktualisiert; lokaler Gitstand **22b64aa** bestätigt.
+
+Meine Zuständigkeit bleibt **Story, Mira, Dialoge und Cinematics**. Miras gezeichnete Darstellung ist inzwischen im Intro und in Questdialogen integriert; 3D bleibt zurückgestellt.
+
+Offen sind passende Aoede-Aufnahmen für zwei geänderte Scannertexte und ergänzte Questdialoge. Miras Forschungsentwicklung ist geplant; konkrete Knoten, Kosten und Kapitelgrenzen bleiben Entwürfe.
+
+Keine Dateien geändert, keine Builds oder anderen Aktionen ausgeführt.

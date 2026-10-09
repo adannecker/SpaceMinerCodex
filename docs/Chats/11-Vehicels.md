@@ -1,6 +1,6 @@
 # Vehicels
 
-Chat-ID: `01a11127-1368-7990-b23f-38b3524b44ca`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
+Chat-ID: `01a11127-1368-7990-b23f-38b3524b44ca`. Exportstand: 2026-10-09T14:39:48.475817+00:00.
 
 Separater Themenchat für Fahrzeuge; bisher überwiegend übernommener Kontext
 
@@ -126,3 +126,17 @@ Sieht schon sehr cool aus
 ## Assistent · 2026-10-06T12:50:14.626Z
 
 Ja, damit wirkt die Drohne schon wie eine kleine arbeitende Maschine 🙂 Besonders das Einsammeln und Entladen gibt dem Ablauf Leben.
+
+## Assistent · 2026-10-09T05:41:14.412Z
+
+Ich lese das gemeinsame Kontextupdate und die darin genannten Dateien und fasse den Stand für diesen Chat kurz zusammen.
+
+## Assistent · 2026-10-09T05:41:43.856Z
+
+Kontext für diesen Chat aktualisiert: gemeinsamer Checkout **SpaceMinerCodex**, bestätigter Stand **22b64aa**.
+
+Meine Zuständigkeit bleibt die Gestaltung und Umsetzung von Station, Drohnen und ihren Arbeitsabläufen. Aktuell berücksichtigt: Innenraum/Schleuse, Scanner und VR, Tankkupplung sowie vier geplante Drohnenarten mit Umbauten.
+
+Offen sind insbesondere Beenden und Wiederherstellung der Innenraumposition, Interaktionssounds und UI-Skalierung. Neue Techtree-Knoten, Kosten und Kapitelgrenzen bleiben Entwürfe; Forschung, Bau/Umbau, Versorgung und Erfahrung werden getrennt behandelt.
+
+Nur gelesen; keine Änderungen oder Builds ausgeführt.

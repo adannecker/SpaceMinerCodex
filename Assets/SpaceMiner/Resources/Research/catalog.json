@@ -1,0 +1,1624 @@
+{
+  "trees": [
+    {
+      "icon": "power",
+      "note": "04 und09 optionale Verbesserungen.12 ist ein Zielplatzhalter mit offenen Anforderungen, keine feste Kapitelabschlussbedingung. Im korrigierten Raster fehlt die kurze Verbindung08→09; die Voraussetzung steht im Overlay/Text. 11→09 ist ebenfalls zusätzliche Textbedingung. Bestehender kleiner Kernreaktor bleibt Startbestand; kein neu erfundener Reaktorpfad.",
+      "requirements": "09: Lastmanagement + geeignete Akku-Ladeleistung + Wärmeabfuhr\\n12: Versorgung anhand noch auszulegender Bedarfs-/Reservewerte prüfen",
+      "title": "Energieversorgung",
+      "id": "energie",
+      "nodes": [
+        {
+          "known": true,
+          "name": "Vorhandene Technik",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "energie-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Solarflächen reparieren",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "energie-02",
+          "parents": [
+            "energie-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Solarfläche erweitern",
+          "upgrade": false,
+          "minutes": 7.5,
+          "id": "energie-03",
+          "parents": [
+            "energie-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Solarnachführung",
+          "upgrade": false,
+          "minutes": 9.0,
+          "id": "energie-04",
+          "parents": [
+            "energie-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Speicher wiederherstellen",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "energie-05",
+          "parents": [
+            "energie-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Zusätzliche Speicher",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "energie-06",
+          "parents": [
+            "energie-05"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Stromverteilung reparieren",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "energie-07",
+          "parents": [
+            "energie-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Lastmanagement",
+          "upgrade": true,
+          "minutes": 15.0,
+          "id": "energie-08",
+          "parents": [
+            "energie-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Abgestimmte Schnellladung",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "energie-09",
+          "parents": [
+            "energie-08"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Kühlkreislauf reparieren",
+          "upgrade": true,
+          "minutes": 18.0,
+          "id": "energie-10",
+          "parents": [
+            "energie-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Wärmeabfuhr erweitern",
+          "upgrade": true,
+          "minutes": 19.5,
+          "id": "energie-11",
+          "parents": [
+            "energie-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Tragfähige Stationsversorgung",
+          "upgrade": false,
+          "minutes": 21.0,
+          "id": "energie-12",
+          "parents": []
+        }
+      ]
+    },
+    {
+      "icon": "filter",
+      "note": "Ganze Module, Einzelteile und Rohstoffe sind alternative Verwendungen desselben Fundes; keine doppelte Ausgabe. Zielstoffkenntnis für gezielte Rohstoffrückgewinnung, nicht die vollständige Elementherstellung für Wiederverwendung eines geprüften Moduls.",
+      "requirements": "02: geeignete vorhandene Drohnen mit Bergungswerkzeugen\\n09: Zielstoff erforscht + passendes Trennverfahren + Anlage + Versorgung/Lager",
+      "title": "Wiederverwertung",
+      "id": "wiederverwertung",
+      "nodes": [
+        {
+          "known": false,
+          "name": "Trümmerbewertung",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "wiederverwertung-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Gezielte Bergung",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "wiederverwertung-02",
+          "parents": [
+            "wiederverwertung-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Bauteildiagnose",
+          "upgrade": false,
+          "minutes": 7.5,
+          "id": "wiederverwertung-03",
+          "parents": [
+            "wiederverwertung-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Aufarbeitung",
+          "upgrade": false,
+          "minutes": 9.0,
+          "id": "wiederverwertung-04",
+          "parents": [
+            "wiederverwertung-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Wiederverwendung",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "wiederverwertung-05",
+          "parents": [
+            "wiederverwertung-04"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Präzisionsdemontage",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "wiederverwertung-06",
+          "parents": [
+            "wiederverwertung-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Einzelteilprüfung",
+          "upgrade": true,
+          "minutes": 13.5,
+          "id": "wiederverwertung-07",
+          "parents": [
+            "wiederverwertung-06"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Materialsortierung",
+          "upgrade": false,
+          "minutes": 15.0,
+          "id": "wiederverwertung-08",
+          "parents": [
+            "wiederverwertung-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Stoffgerechte Rückgewinnung",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "wiederverwertung-09",
+          "parents": [
+            "wiederverwertung-08"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Qualitätsprüfung",
+          "upgrade": true,
+          "minutes": 18.0,
+          "id": "wiederverwertung-10",
+          "parents": [
+            "wiederverwertung-09"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "gem",
+      "note": "Stoffkandidaten, keine vollständige bestätigte Kapitelstückliste und keine zugesagten Lagerstätten. Graphit und organische Zwischenstoffe parallel. Existierendes Materialwissen bleibt bekannt. Rohstoffwissen liefert keine hergestellten Chips oder Akkus.",
+      "requirements": "Proben aus erreichbarem Abbau/Bergung\\n18: geeignete Verbindungen + Chemieanlage + Prüfung",
+      "title": "Materialkunde und Aufbereitung",
+      "id": "materialien",
+      "nodes": [
+        {
+          "known": false,
+          "name": "Probenanalyse",
+          "upgrade": true,
+          "minutes": 4.5,
+          "id": "materialien-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Wasseraufbereitung",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "materialien-02",
+          "parents": [
+            "materialien-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Elektrolyse",
+          "upgrade": false,
+          "minutes": 7.5,
+          "id": "materialien-03",
+          "parents": [
+            "materialien-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Sauerstoff",
+          "upgrade": false,
+          "minutes": 9.0,
+          "id": "materialien-04",
+          "parents": [
+            "materialien-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Wasserstoff",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "materialien-05",
+          "parents": [
+            "materialien-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Metalltrennung",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "materialien-06",
+          "parents": [
+            "materialien-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Eisen / Nickel",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "materialien-07",
+          "parents": [
+            "materialien-06"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Aluminium",
+          "upgrade": false,
+          "minutes": 15.0,
+          "id": "materialien-08",
+          "parents": [
+            "materialien-06"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Kupfer",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "materialien-09",
+          "parents": [
+            "materialien-06"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Zinn / Silber",
+          "upgrade": false,
+          "minutes": 18.0,
+          "id": "materialien-10",
+          "parents": [
+            "materialien-06"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Mineralaufbereitung",
+          "upgrade": false,
+          "minutes": 19.5,
+          "id": "materialien-11",
+          "parents": [
+            "materialien-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Glas / Keramik",
+          "upgrade": false,
+          "minutes": 21.0,
+          "id": "materialien-12",
+          "parents": [
+            "materialien-11"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Silizium",
+          "upgrade": false,
+          "minutes": 22.5,
+          "id": "materialien-13",
+          "parents": [
+            "materialien-11"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Aluminiumoxid",
+          "upgrade": false,
+          "minutes": 24.0,
+          "id": "materialien-14",
+          "parents": [
+            "materialien-11"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Kohlenstoffaufbereitung",
+          "upgrade": false,
+          "minutes": 25.5,
+          "id": "materialien-15",
+          "parents": [
+            "materialien-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Graphit",
+          "upgrade": false,
+          "minutes": 27.0,
+          "id": "materialien-16",
+          "parents": [
+            "materialien-15"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Organische Zwischenstoffe",
+          "upgrade": false,
+          "minutes": 28.5,
+          "id": "materialien-17",
+          "parents": [
+            "materialien-15"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Polymerwerkstoffe",
+          "upgrade": false,
+          "minutes": 30.0,
+          "id": "materialien-18",
+          "parents": [
+            "materialien-17"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Stofftrennung / Reinigung",
+          "upgrade": false,
+          "minutes": 31.5,
+          "id": "materialien-19",
+          "parents": [
+            "materialien-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Lithium",
+          "upgrade": false,
+          "minutes": 33.0,
+          "id": "materialien-20",
+          "parents": [
+            "materialien-19"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Phosphate",
+          "upgrade": false,
+          "minutes": 34.5,
+          "id": "materialien-21",
+          "parents": [
+            "materialien-19"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Fluor / Chlor",
+          "upgrade": false,
+          "minutes": 36.0,
+          "id": "materialien-22",
+          "parents": [
+            "materialien-19"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Stickstoffverbindungen",
+          "upgrade": false,
+          "minutes": 37.5,
+          "id": "materialien-23",
+          "parents": [
+            "materialien-19"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Dotierstoffe",
+          "upgrade": false,
+          "minutes": 39.0,
+          "id": "materialien-24",
+          "parents": [
+            "materialien-19"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "flask",
+      "note": "Ausgewählte Bauartbeispiele, keine vollständigen Rezepte. Kathoden- und Elektrolytpfad getrennt. Oxide parallel. Formaldehyd ist kein Lebensmittel. Dekorative doppelte17 im PTFE-Rastericon ist ein Bildfehler; Zielknoten ist18 entsprechend dem Index.",
+      "requirements": "Materialwissen + Ausgangsstoffe + passende Verfahren/Anlagen\\n09: Siloxane + Füllstoffe + Vernetzung + Prüfung\\n14: Leitsalz UND Lösungsmittel + Formulierung/Qualität",
+      "title": "Verbindungen und Zwischenprodukte",
+      "id": "verbindungen",
+      "nodes": [
+        {
+          "known": false,
+          "name": "Verbindungsanalyse",
+          "upgrade": true,
+          "minutes": 4.5,
+          "id": "verbindungen-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Kohlendioxid",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "verbindungen-02",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Methanol",
+          "upgrade": false,
+          "minutes": 7.5,
+          "id": "verbindungen-03",
+          "parents": [
+            "verbindungen-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Formaldehyd",
+          "upgrade": false,
+          "minutes": 9.0,
+          "id": "verbindungen-04",
+          "parents": [
+            "verbindungen-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Chlorwasserstoff",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "verbindungen-05",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Chlormethan",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "verbindungen-06",
+          "parents": [
+            "verbindungen-05"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Methylchlorsilane",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "verbindungen-07",
+          "parents": [
+            "verbindungen-06"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Siloxane",
+          "upgrade": false,
+          "minutes": 15.0,
+          "id": "verbindungen-08",
+          "parents": [
+            "verbindungen-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Silikonkautschuk",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "verbindungen-09",
+          "parents": [
+            "verbindungen-08"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Phosphatvorstufen",
+          "upgrade": false,
+          "minutes": 18.0,
+          "id": "verbindungen-10",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Lithium-Eisenphosphat",
+          "upgrade": false,
+          "minutes": 19.5,
+          "id": "verbindungen-11",
+          "parents": [
+            "verbindungen-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Lithium-Leitsalz",
+          "upgrade": false,
+          "minutes": 21.0,
+          "id": "verbindungen-12",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Carbonatlösungsmittel",
+          "upgrade": false,
+          "minutes": 22.5,
+          "id": "verbindungen-13",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Elektrolytgemisch",
+          "upgrade": false,
+          "minutes": 24.0,
+          "id": "verbindungen-14",
+          "parents": [
+            "verbindungen-12",
+            "verbindungen-13"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Polyimidvorstufen",
+          "upgrade": false,
+          "minutes": 25.5,
+          "id": "verbindungen-15",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Polyimid",
+          "upgrade": false,
+          "minutes": 27.0,
+          "id": "verbindungen-16",
+          "parents": [
+            "verbindungen-15"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Tetrafluorethylen",
+          "upgrade": false,
+          "minutes": 28.5,
+          "id": "verbindungen-17",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "PTFE",
+          "upgrade": false,
+          "minutes": 30.0,
+          "id": "verbindungen-18",
+          "parents": [
+            "verbindungen-17"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Gereinigtes Siliziumdioxid",
+          "upgrade": false,
+          "minutes": 31.5,
+          "id": "verbindungen-19",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Gereinigtes Aluminiumoxid",
+          "upgrade": false,
+          "minutes": 33.0,
+          "id": "verbindungen-20",
+          "parents": [
+            "verbindungen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Harzsysteme",
+          "upgrade": false,
+          "minutes": 34.5,
+          "id": "verbindungen-21",
+          "parents": [
+            "verbindungen-01"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "research",
+      "note": "Forschungsbasis ist Startwissen. Forschungsstufe 2 entsteht durch abgeschlossene Forschung; Schwellen und Methodenbonus offen. Hardwareinstallation durch Helfer. CPU-Neufertigung und parallele Forschung: Chapter-1-Grenze offen. Archive liefern nur tatsächlich vorhandene Daten; Routineaufträge innerhalb freigegebener Regeln.",
+      "requirements": "CPU-Erweiterung: Chipherstellung + Elektronikmontage\\nParallelrechnen: CPU-Erweiterung + Forschungsstufe 2 + Energie/Kühlung\\nRoutinekoordination: Drohnen + Logistik + bekannte Verfahren",
+      "title": "Mira",
+      "id": "mira",
+      "nodes": [
+        {
+          "known": true,
+          "name": "Forschungsbasis",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "mira-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Forschungsstufe 2",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "mira-02",
+          "parents": [
+            "mira-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Methodenoptimierung",
+          "upgrade": true,
+          "minutes": 7.5,
+          "id": "mira-03",
+          "parents": [
+            "mira-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Rechnerdiagnose",
+          "upgrade": false,
+          "minutes": 9.0,
+          "id": "mira-04",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Rechnerreparatur",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "mira-05",
+          "parents": [
+            "mira-04"
+          ]
+        },
+        {
+          "known": false,
+          "name": "CPU-Erweiterung",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "mira-06",
+          "parents": [
+            "mira-05"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Leistungsfreigabe",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "mira-07",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Erweiterte Kühlung",
+          "upgrade": true,
+          "minutes": 15.0,
+          "id": "mira-08",
+          "parents": [
+            "mira-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Parallelrechnen",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "mira-09",
+          "parents": [
+            "mira-08"
+          ]
+        },
+        {
+          "known": true,
+          "name": "Archivzugang",
+          "upgrade": false,
+          "minutes": 18.0,
+          "id": "mira-10",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Analyse und Planung",
+          "upgrade": true,
+          "minutes": 19.5,
+          "id": "mira-11",
+          "parents": [
+            "mira-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Routinekoordination",
+          "upgrade": true,
+          "minutes": 21.0,
+          "id": "mira-12",
+          "parents": [
+            "mira-11"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "robot",
+      "note": "Vier Arten, keine fünfte Bergungsdrohne. Abbaugrundlagen sind Startwissen. Livebild erfordert Bildsensoren und Datenverbindung; Probenentnahme erfordert Werkzeuge, daher die gezeichnete Kette als Ausbaureihenfolge, nicht naturgesetzliche Abhängigkeit. Innentransport ergänzt Helferrolle. Rollenwechsel ist realer Umbau; neue technische Generationen benötigen Wiederverwertung/Neubau. Kleine Innen- und große Außenhardware nicht pauschal austauschbar.",
+      "requirements": "Rollenumbau ausführen: Helfer + Dock + passende Teile\\nProbenentnahme: bekannte Kontakte + Probenspeicher\\nMontageverfahren: Werkstoffe + Fertigung + Energie",
+      "title": "Drohnen und Robotik",
+      "id": "drohnen",
+      "nodes": [
+        {
+          "known": true,
+          "name": "Abbaugrundlagen",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "drohnen-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Werkzeuganpassung",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "drohnen-02",
+          "parents": [
+            "drohnen-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Frachtraumumbau",
+          "upgrade": false,
+          "minutes": 7.5,
+          "id": "drohnen-03",
+          "parents": [
+            "drohnen-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Abbausteuerung",
+          "upgrade": true,
+          "minutes": 9.0,
+          "id": "drohnen-04",
+          "parents": [
+            "drohnen-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Reparaturrolle",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "drohnen-05",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Schadensdiagnose",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "drohnen-06",
+          "parents": [
+            "drohnen-05"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Bauteiltausch",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "drohnen-07",
+          "parents": [
+            "drohnen-06"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Montageverfahren",
+          "upgrade": false,
+          "minutes": 15.0,
+          "id": "drohnen-08",
+          "parents": [
+            "drohnen-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Erkundungsrolle",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "drohnen-09",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Oberflächenkartierung",
+          "upgrade": false,
+          "minutes": 18.0,
+          "id": "drohnen-10",
+          "parents": [
+            "drohnen-09"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Probenentnahme",
+          "upgrade": false,
+          "minutes": 19.5,
+          "id": "drohnen-11",
+          "parents": [
+            "drohnen-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Livebild",
+          "upgrade": false,
+          "minutes": 21.0,
+          "id": "drohnen-12",
+          "parents": [
+            "drohnen-11"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Helferaktivierung",
+          "upgrade": false,
+          "minutes": 22.5,
+          "id": "drohnen-13",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Dockumbau",
+          "upgrade": false,
+          "minutes": 24.0,
+          "id": "drohnen-14",
+          "parents": [
+            "drohnen-13"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Innentransport",
+          "upgrade": false,
+          "minutes": 25.5,
+          "id": "drohnen-15",
+          "parents": [
+            "drohnen-14"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Wartungsaufträge",
+          "upgrade": false,
+          "minutes": 27.0,
+          "id": "drohnen-16",
+          "parents": [
+            "drohnen-15"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "radar",
+      "note": "Nahbereichsscan ist vorhandene Starttechnik; keine erneute Freischaltung. Kartierung, Bildgebung und Stoffnachweis getrennt von Ortung. Spektralanalyse hängt von geeigneten Messgeräten und Proben ab; nicht jede Substanz aus Ferne bestimmbar. Arbeitsfreigabeprüfung verbessert bereits bestehende Freigaberegeln, erlaubt keine Flüge zu unbekannten Kontakten. Keine Stationsreise durch diesen Baum.",
+      "requirements": "Oberflächenmodell: Erkundungsdrohne + bekannte Kontakte\\nMaterialabgleich: Proben + Materialwissen\\nBewegungsprognose: Messreihen + Mira Stufe 2",
+      "title": "Scanner und Erkundung",
+      "id": "scanner",
+      "nodes": [
+        {
+          "known": true,
+          "name": "Nahbereichsscan",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "scanner-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Signalfilter",
+          "upgrade": true,
+          "minutes": 6.0,
+          "id": "scanner-02",
+          "parents": [
+            "scanner-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Reichweitenmodul",
+          "upgrade": true,
+          "minutes": 7.5,
+          "id": "scanner-03",
+          "parents": [
+            "scanner-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Kartierungsdaten",
+          "upgrade": false,
+          "minutes": 9.0,
+          "id": "scanner-04",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Bildsensorik",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "scanner-05",
+          "parents": [
+            "scanner-04"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Oberflächenmodell",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "scanner-06",
+          "parents": [
+            "scanner-05"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Probenregister",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "scanner-07",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Spektralanalyse",
+          "upgrade": true,
+          "minutes": 15.0,
+          "id": "scanner-08",
+          "parents": [
+            "scanner-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Materialabgleich",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "scanner-09",
+          "parents": [
+            "scanner-08"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Kontaktverfolgung",
+          "upgrade": false,
+          "minutes": 18.0,
+          "id": "scanner-10",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Bewegungsprognose",
+          "upgrade": false,
+          "minutes": 19.5,
+          "id": "scanner-11",
+          "parents": [
+            "scanner-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Arbeitsfreigabeprüfung",
+          "upgrade": true,
+          "minutes": 21.0,
+          "id": "scanner-12",
+          "parents": [
+            "scanner-11"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "settings",
+      "note": "Grundlagen pro Anlage abhängig von vorhandenem Startbestand. Wiederherstellung kann mit geborgenen Teilen beginnen. Zweige zeigen Ausbaureihenfolgen; Qualitätsprüfung und Werkstatt sind zusätzliche Bedingungen anderer Zweige. Elektronikmontage kann geborgene Chips nutzen. Neue Chips verlangen mehr als Silizium: Prozessstoffe, Reinheit, Ausstattung, Verpackung/Tests; vollständige Halbleiterfertigung in Chapter 1 bleibt ambitioniert und offen. Keine vollständigen Rezepturen mit diesem Entwurf festgelegt.",
+      "requirements": "Bauteilfertigung: geeignete Metalle + Energie/Wärmeabfuhr\\nWerkstoffmischungen: Verbindungen + passendes Rezept\\nChipherstellung: hochreine Stoffe + Prozessanlagen + Mira Stufe 2",
+      "title": "Produktion und Fertigung",
+      "id": "produktion",
+      "nodes": [
+        {
+          "known": false,
+          "name": "Werkstattdiagnose",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "produktion-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Werkstattreparatur",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "produktion-02",
+          "parents": [
+            "produktion-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Präzisionsmontage",
+          "upgrade": false,
+          "minutes": 7.5,
+          "id": "produktion-03",
+          "parents": [
+            "produktion-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Qualitätsprüfung",
+          "upgrade": true,
+          "minutes": 9.0,
+          "id": "produktion-04",
+          "parents": [
+            "produktion-03"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Schmelzverfahren",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "produktion-05",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Formgebung",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "produktion-06",
+          "parents": [
+            "produktion-05"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Bearbeitung",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "produktion-07",
+          "parents": [
+            "produktion-06"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Bauteilfertigung",
+          "upgrade": false,
+          "minutes": 15.0,
+          "id": "produktion-08",
+          "parents": [
+            "produktion-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Prozessanlage",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "produktion-09",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Reaktionsführung",
+          "upgrade": false,
+          "minutes": 18.0,
+          "id": "produktion-10",
+          "parents": [
+            "produktion-09"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Reinigung und Trennung",
+          "upgrade": false,
+          "minutes": 19.5,
+          "id": "produktion-11",
+          "parents": [
+            "produktion-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Werkstoffmischungen",
+          "upgrade": false,
+          "minutes": 21.0,
+          "id": "produktion-12",
+          "parents": [
+            "produktion-11"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Elektronikmontage",
+          "upgrade": false,
+          "minutes": 22.5,
+          "id": "produktion-13",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Platinenfertigung",
+          "upgrade": false,
+          "minutes": 24.0,
+          "id": "produktion-14",
+          "parents": [
+            "produktion-13"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Halbleiterprozesse",
+          "upgrade": false,
+          "minutes": 25.5,
+          "id": "produktion-15",
+          "parents": [
+            "produktion-14"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Chipherstellung",
+          "upgrade": false,
+          "minutes": 27.0,
+          "id": "produktion-16",
+          "parents": [
+            "produktion-15"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "cargo",
+      "note": "Feststoffe, Flüssigkeiten und Gase sind gleichrangige Behälterzweige, keine lineare Freischaltkette. Unbekannte Funde gesondert lagern; keine nutzbare Rohstoffmenge bis zur Identifikation. Transport nur durch geeignete Drohnen, keine Förderbänder. Gaslager verlangt stoff- und zustandsgeeignete Technik; Details offen. Bestandsanalyse benötigt Register; Versorgung nutzt reale Mengen, Reservierungen und Produktionskapazitäten.",
+      "requirements": "Transportaufträge: interne Helfer + zugängliche Wege\\nGaslager: geeignete Werkstoffe + Dichtungen + Drucktechnik\\nVersorgungsplanung: Mira Analyse + bekannte Rezepte",
+      "title": "Lagerung und Logistik",
+      "id": "logistik",
+      "nodes": [
+        {
+          "known": true,
+          "name": "Lagerregister",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "logistik-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Fundquarantäne",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "logistik-02",
+          "parents": [
+            "logistik-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Bestandsanalyse",
+          "upgrade": true,
+          "minutes": 7.5,
+          "id": "logistik-03",
+          "parents": [
+            "logistik-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Feststoffcontainer",
+          "upgrade": false,
+          "minutes": 9.0,
+          "id": "logistik-04",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Flüssigkeitstanks",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "logistik-05",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Gaslager",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "logistik-06",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Transportaufträge",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "logistik-07",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Dockkoordination",
+          "upgrade": true,
+          "minutes": 15.0,
+          "id": "logistik-08",
+          "parents": [
+            "logistik-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Routenprioritäten",
+          "upgrade": true,
+          "minutes": 16.5,
+          "id": "logistik-09",
+          "parents": [
+            "logistik-08"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Materialreservierung",
+          "upgrade": false,
+          "minutes": 18.0,
+          "id": "logistik-10",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Nachschubregeln",
+          "upgrade": false,
+          "minutes": 19.5,
+          "id": "logistik-11",
+          "parents": [
+            "logistik-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Versorgungsplanung",
+          "upgrade": true,
+          "minutes": 21.0,
+          "id": "logistik-12",
+          "parents": [
+            "logistik-11"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "water",
+      "note": "Vorhandene Luft-/Wasserversorgung bleibt Startbestand; Erweiterungen und Prüftechnik ergänzen sie. Wasseraufbereitung aus Materialbaum ist ein gemeinsamer referenzierter Knoten, kein zweiter Kauf. Sauerstoffproduktion ist von Luftmischung/Druckregelung abhängig. Nahrungspfad stellt nur einen möglichen vorhandenen Synthesizer wieder her; dessen Startbestand, sichere vollständige Ernährung und Verfahren bleiben offen. Formaldehyd ist keine Nahrung. Pflanzen-/Algen- und Mikrobenpfade als getrennte spätere Ausblickkarten, nicht Teil der12 Chapter-1-Vorschlagsknoten. Leckdiagnose/Dichtungstausch sind gemeinsam referenzierte Reparaturfähigkeiten.",
+      "requirements": "Sauerstoffversorgung: bekanntes Verfahren + Energie\\nSyntheseanlage: geborgene Teile + freigegebenes Verfahren\\nSpätere Kapitel: Pflanzen/Algen brauchen Samen; Bioreaktoren brauchen Kulturen",
+      "title": "Lebenserhaltung und Nahrung",
+      "id": "lebenserhaltung",
+      "nodes": [
+        {
+          "known": false,
+          "name": "Wasserqualität",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "lebenserhaltung-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Wasseraufbereitung",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "lebenserhaltung-02",
+          "parents": [
+            "lebenserhaltung-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Wasserkreislauf",
+          "upgrade": false,
+          "minutes": 7.5,
+          "id": "lebenserhaltung-03",
+          "parents": [
+            "lebenserhaltung-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Luftüberwachung",
+          "upgrade": false,
+          "minutes": 9.0,
+          "id": "lebenserhaltung-04",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Sauerstoffversorgung",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "lebenserhaltung-05",
+          "parents": [
+            "lebenserhaltung-04"
+          ]
+        },
+        {
+          "known": false,
+          "name": "CO2-Abscheidung",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "lebenserhaltung-06",
+          "parents": [
+            "lebenserhaltung-05"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Leckdiagnose",
+          "upgrade": false,
+          "minutes": 13.5,
+          "id": "lebenserhaltung-07",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Dichtungstausch",
+          "upgrade": false,
+          "minutes": 15.0,
+          "id": "lebenserhaltung-08",
+          "parents": [
+            "lebenserhaltung-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Temperaturregelung",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "lebenserhaltung-09",
+          "parents": [
+            "lebenserhaltung-08"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Vorratsprüfung",
+          "upgrade": true,
+          "minutes": 18.0,
+          "id": "lebenserhaltung-10",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Syntheseanlage reparieren",
+          "upgrade": false,
+          "minutes": 19.5,
+          "id": "lebenserhaltung-11",
+          "parents": [
+            "lebenserhaltung-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Nahrungsqualität",
+          "upgrade": false,
+          "minutes": 21.0,
+          "id": "lebenserhaltung-12",
+          "parents": [
+            "lebenserhaltung-11"
+          ]
+        }
+      ]
+    },
+    {
+      "icon": "station",
+      "note": "Strukturdiagnose ergänzt den bekannten Stationsbestand. Bestehender begehbarer Ring/Wohnraum wird nicht erneut freigeschaltet. Modulbau braucht vorausgehende Struktur-/Anschlussprüfung, Versorgung und Druckprüfung als zusätzliche Bedingungen. Glasdom-Neubau versus Reparatur eines vorhandenen Doms offen. Lagekontrolle umfasst Orientierung, keine Reise zu Planeten. Panelsteuerung zunächst manuell; automatische Nachführung späterer optionaler Ausbau außerhalb der12Knoten. Körperrotation und lokale Lagekorrektur versus Chapter-2-Reise weiter abzugrenzen.",
+      "requirements": "Modulmontage: Reparaturdrohne + Bauteile + Logistik\\nGlasdom: Glas + Tragwerk + Drucktechnik + Lebenserhaltung\\nPanelsteuerung: intakte Panels + Stelltechnik + Energie",
+      "title": "Stationsbau und Infrastruktur",
+      "id": "station",
+      "nodes": [
+        {
+          "known": false,
+          "name": "Strukturdiagnose",
+          "upgrade": false,
+          "minutes": 4.5,
+          "id": "station-01",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Hülle reparieren",
+          "upgrade": false,
+          "minutes": 6.0,
+          "id": "station-02",
+          "parents": [
+            "station-01"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Anschlüsse instandsetzen",
+          "upgrade": false,
+          "minutes": 7.5,
+          "id": "station-03",
+          "parents": [
+            "station-02"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Modulplanung",
+          "upgrade": true,
+          "minutes": 9.0,
+          "id": "station-04",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Versorgungsanschluss",
+          "upgrade": false,
+          "minutes": 10.5,
+          "id": "station-05",
+          "parents": [
+            "station-04"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Modulmontage",
+          "upgrade": false,
+          "minutes": 12.0,
+          "id": "station-06",
+          "parents": [
+            "station-05"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Druckprüfung",
+          "upgrade": true,
+          "minutes": 13.5,
+          "id": "station-07",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Wohnbereich erweitern",
+          "upgrade": false,
+          "minutes": 15.0,
+          "id": "station-08",
+          "parents": [
+            "station-07"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Glasdom",
+          "upgrade": false,
+          "minutes": 16.5,
+          "id": "station-09",
+          "parents": [
+            "station-08"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Lagekontrolle",
+          "upgrade": false,
+          "minutes": 18.0,
+          "id": "station-10",
+          "parents": []
+        },
+        {
+          "known": false,
+          "name": "Panelhalterung reparieren",
+          "upgrade": false,
+          "minutes": 19.5,
+          "id": "station-11",
+          "parents": [
+            "station-10"
+          ]
+        },
+        {
+          "known": false,
+          "name": "Panelsteuerung",
+          "upgrade": true,
+          "minutes": 21.0,
+          "id": "station-12",
+          "parents": [
+            "station-11"
+          ]
+        }
+      ]
+    }
+  ]
+}

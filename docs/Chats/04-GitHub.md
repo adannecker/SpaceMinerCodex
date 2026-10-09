@@ -1,6 +1,6 @@
 # GitHub
 
-Chat-ID: `01a11002-9eca-70a1-95ec-00cbc84132ee`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
+Chat-ID: `01a11002-9eca-70a1-95ec-00cbc84132ee`. Exportstand: 2026-10-09T14:39:48.475817+00:00.
 
 Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung
 
@@ -427,3 +427,19 @@ War ein guter Fortschritt heute
 ## Assistent · 2026-10-06T13:19:36.891Z
 
 Ja 🙂 Von der Grundversion zur Raumstation mit sichtbarem Bergbau, Settings, Musik und Techtree – und der ganze Stand ist jetzt samt Projektgedächtnis für heute Abend gesichert.
+
+## Assistent · 2026-10-09T05:40:43.811Z
+
+Ich lese das Kontextupdate und die zugehörigen Projektdateien und bestätige anschließend meinen Stand für GitHub und Rechnerwechsel.
+
+## Assistent · 2026-10-09T05:41:08.083Z
+
+Kontext auf **`main`, Commit `22b64aa`** aktualisiert.
+
+Meine Zuständigkeit bleibt **GitHub, Git-Sicherung, Chatarchive, gemeinsames Projektmemory und Rechnerwechsel**.
+
+Berücksichtigt sind Stationsinnenraum, Scanner/VR, Mira-Porträt und Spielstände. Die elf Forschungsbereiche mit zwölf Bildern sind weiterhin **Entwürfe**, keine zusätzliche Gameplayimplementierung.
+
+Offen bleiben besonders Beenden aus dem Spiel, zuverlässige Wiederherstellung der Innenraumposition, Interaktionssounds und UI-Skalierung.
+
+Nur gelesen; keine Dateien geändert, Builds ausgeführt oder Nachrichten weitergeleitet.

@@ -6,7 +6,7 @@ Bildvorschläge für alle elf bisher besprochenen Chapter-1-Bereiche samt gemein
 
 Das Verzweigungs-Symbol rechts oben, unmittelbar links neben dem Settings-Zahnrad, öffnet den Forschungsbaum. Beide Einstiege zeigen nur ein Symbol und besitzen einen Tooltip; sie bleiben auch bei verborgenem HUD verfügbar.
 
-Tier I läuft von links nach rechts. Die Icons tragen keine dauerhaften Textbeschriftungen. Hover zeigt Namen, Status, Voraussetzungen und praktische Nutzung; Klick heftet die Information an. Vorausgehende Verbindungen werden hervorgehoben. Das × in der Information löst die Auswahl, das × oben rechts oder Escape schliesst das Menü.
+Tier I läuft von links nach rechts. Die Icons tragen keine dauerhaften Textbeschriftungen. Seit 09.10.2026 öffnet ausschliesslich ein Klick Namen, Status, Voraussetzungen und praktische Nutzung als Overlay. Hover öffnet keine Information. Vorausgehende Verbindungen werden hervorgehoben. Das × in der Information löst die Auswahl, das × oben rechts oder Escape schliesst das Menü.
 
 Jede Verbindung besitzt eigene kleine quadratische Eingangs- und Ausgangsanschlüsse. Mehrfachanschlüsse sind versetzt. Kanten sind rechtwinklig; Verbindungen auf gleicher Höhe laufen direkt waagrecht und benötigen keine mittigen Anschlüsse. Navy-Flächen, Amber-Akzente, Cyan-Systemkanten und UI-Töne verwenden den vorhandenen Settings-Stil.
 
@@ -106,3 +106,7 @@ Bei geschlossenem Unity-Editor `SpaceMiner.Editor.TechTreeValidation.Build` im B
 Unity 6000.4.7f1: finale Development- und Release-Builds erfolgreich; Daten-/Routingprüfung mit 17 Knoten und 22 Kanten bestanden. Menütest einschliesslich aktiver Drohnenpause, Ressourcenbilanz, Settings-Wechsel und Schliessframe mit Exit 0 bestanden. Die bestehende Spielintegration bestand 789 Prüfungen; anschliessend wurde nur der Overlay-Eingabeschutz geändert, erneut gebaut und menügeprüft. Einstieg, Baum, Overlay und 140%-Schrift mit High Contrast anhand der Screenshots visuell kontrolliert. Protokolle: `Logs/techtree-complete-build.log`, `Logs/techtree-complete-check.log`, `Logs/techtree-smoke.log`. Eine rein subjektive Hörprüfung wurde in dieser Sitzung nicht vorgenommen.
 
 Lokale Erweiterung Wasserabbau: Development-/Release-Builds und Routingprüfung mit Unity 6000.6.4f1 in separater Vorschaukopie bestanden; 191 Balanceprüfungen und 821 Spielprüfungen bestanden. Neues Wissensoverlay und Schwerpunktknöpfe bei normaler und 140-%-Schrift/High Contrast visuell geprüft. Letzte Änderung nur am Overlaylayout; erneut gebaut und Balance-/Bildprüfung bestanden. Lokale Logs: `Builds/LocalPreview-6000.6.4f1/Logs/mining-*`. Projektversion 6000.4.7f1 blieb unverändert und wurde hier nicht geprüft.
+
+## Debug-Forschungslabor (09.10.2026)
+
+Die elf neuen Entwurfsbereiche sind im Editor/Development-Player als separate Forschungssimulation erreichbar: Techtree → Forschungslabor [Debug]. Alle 159 Kategorieeinträge, Startwissen, Wissensbedingungen, Warteschlange, Pause/Tempo, Verbesserungen und getrennte Laborsicherung. Bedienung, Modellgrenzen und Prüfung: [Forschungslabor](Forschungslabor.md). Die ursprüngliche Spielübersicht und echte Wasserabbau-Erfahrung bleiben erhalten; vollständige Hardwareproduktion ist weiter offen.

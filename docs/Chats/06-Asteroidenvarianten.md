@@ -1,6 +1,6 @@
 # Asteroidenvarianten
 
-Chat-ID: `01a11007-53fc-7d60-af57-f15ed3399d0d`. Exportstand: 2026-10-08T15:29:49.366675+00:00.
+Chat-ID: `01a11007-53fc-7d60-af57-f15ed3399d0d`. Exportstand: 2026-10-09T14:39:48.475817+00:00.
 
 Asteroidenformen, Materialien und Generator
 
@@ -51,3 +51,17 @@ Ich prüfe die Anweisungen am neuen Projektort und übernehme den neuen Pfad.
 Bestätigt: Ab sofort verwende ich ausschliesslich `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex`.
 
 `AGENTS.md` am neuen Ort ist gelesen. Keine Projektänderungen vorgenommen.
+
+## Assistent · 2026-10-09T05:41:43.450Z
+
+Ich lese das Kontextupdate und die darin genannten Projektdateien am aktuellen Repository-Ort. Es bleibt bei einer lesenden Aktualisierung dieses Chats.
+
+## Assistent · 2026-10-09T05:42:07.895Z
+
+Kontextupdate übernommen. Ich verwende ausschliesslich `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex`, bestätigter Stand **22b64aa**.
+
+Meine Zuständigkeit bleibt **Asteroidenformen, Materialien, Generator und Darstellung**. Relevant sind die Trennung von Ortung, Materialnachweis, Aufbereitung und nutzbaren Ressourcen sowie bekannte Kontakte als Voraussetzung für Arbeitsaufträge.
+
+Techtree-Knoten, Rezepte, Kosten und Kapitelgrenzen bleiben Entwürfe. Projektweit offen sind Beenden, Wiederherstellung der Innenraumposition, Interaktionssounds und UI-Skalierung.
+
+Keine Änderungen, Builds oder Nachrichten an andere Chats ausgeführt.

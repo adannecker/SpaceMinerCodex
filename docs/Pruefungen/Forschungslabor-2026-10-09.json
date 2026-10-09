@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-09",
+  "scope": "Sicherung Forschungslabor, kompakte Techtrees und Rechnerwechsel-Kontext",
+  "webTests": { "command": "node --test test/*.test.mjs", "passed": 13, "failed": 0 },
+  "unity": {
+    "version": "6000.4.7f1",
+    "method": "SpaceMiner.Editor.ResearchSimulationValidation.Build",
+    "exitCode": 0,
+    "results": ["11 kompakte Baeume mit 72px Icons und Viewport-Pruefungen", "159 Eintraege: Erreichbarkeit, Bedingungen, Pause, Speichern, Upgrades und Zeit", "Development- und Release-Build erfolgreich"],
+    "localLog": "Logs/handoff-research-20261009-build.log"
+  },
+  "player": {
+    "build": "Builds/ResearchLaboratory/SpaceMiner.exe",
+    "argument": "-researchLabCheck",
+    "resolution": "1600x900",
+    "exitCode": 0,
+    "result": "RESEARCH LABORATORY PLAYER CHECK PASSED",
+    "visualReview": "Screenshot Logs/research-laboratory.png geprueft: kompakte Baumansicht, Miniaturen und Forschungsdetail sichtbar.",
+    "localLog": "Logs/handoff-research-20261009-player.log"
+  },
+  "limits": ["Laborzustand bleibt getrennt vom echten Spielstand.", "Allgemeines Beenden, Innenraumposition, Interaktionssounds und globale UI-Skalierung bleiben offene Spielaufgaben.", "Builds und lokale Logs werden nicht mit Git uebertragen."]
+}

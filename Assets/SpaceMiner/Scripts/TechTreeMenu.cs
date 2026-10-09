@@ -19,19 +19,42 @@ namespace SpaceMiner
         private int previewHover=-1;
         private AccessibilitySettings previewTheme;
         private Rect lastInfoRect;
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        private ResearchLaboratory laboratory;
+        private bool showLaboratory;
+#endif
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void ResetState(){IsOpen=false;closedFrame=-1;}
-        private void Update(){if(IsOpen&&Input.GetKeyDown(KeyCode.Escape))Close();}
+        private void Update(){
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if(IsOpen&&showLaboratory)laboratory?.Tick(Time.unscaledDeltaTime);
+#endif
+            if(IsOpen&&Input.GetKeyDown(KeyCode.Escape)){
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+                if(showLaboratory&&laboratory!=null&&laboratory.DismissOverlay())return;
+#endif
+                Close();
+            }
+        }
         public void Open()
         {
             var settings=GetComponent<SettingsMenu>();if(SettingsMenu.IsOpen&&settings!=null)settings.Cancel();
             pinned=-1;IsOpen=true;
         }
-        public void Close(){IsOpen=false;closedFrame=Time.frameCount;pinned=-1;previewHover=-1;lastInfoRect=default;}
+        public void Close(){
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            laboratory?.OnClosed();
+#endif
+            IsOpen=false;closedFrame=Time.frameCount;pinned=-1;previewHover=-1;lastInfoRect=default;}
         public static bool OwnsScreenPoint(Vector3 point)=>IsOpen||EntryButton.Contains(new Vector2(point.x,Screen.height-point.y));
         private void OnDisable(){if(IsOpen)Close();}
-        private void OnDestroy(){ui.Dispose();icons.Dispose();}
+        private void OnDestroy(){
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            laboratory?.Dispose();
+#endif
+            ui.Dispose();icons.Dispose();
+        }
         private void OnGUI()
         {
             var matrix=GUI.matrix;int depth=GUI.depth;Color color=GUI.color;
@@ -48,11 +71,30 @@ namespace SpaceMiner
                 SettingsUiAudio.Observe(EntryButton,"techtree-entry");ui.Tooltip(1,Screen.width,Screen.height);return;
             }
             float scale=Mathf.Min(Screen.width/1280f,Screen.height/720f);
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if(showLaboratory)scale=Mathf.Clamp(Mathf.Min(Screen.width/1600f,Screen.height/1000f),.6f,1.5f);
+#endif
             GUI.matrix=Matrix4x4.Scale(Vector3.one*scale);
             float width=Screen.width/scale,height=Screen.height/scale;
             SpaceMinerUi.Fill(new Rect(0,0,width,height),new Color(.005f,.012f,.03f,.94f));
-            Rect panel=new Rect((width-1250)/2,(height-680)/2,1250,680);ui.Panel(panel);
-            GUI.Label(new Rect(panel.x+30,panel.y+20,1100,38),"SPACE MINER // TECHNOLOGY RESEARCH",ui.Heading);
+            Rect panel=new Rect((width-1250)/2,(height-680)/2,1250,680);
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if(showLaboratory)panel=new Rect(15,20,width-30,height-40);
+#endif
+            ui.Panel(panel);
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            Rect mode=new Rect(panel.xMax-350,panel.y+20,275,34);
+            if(showLaboratory) {
+                laboratory??=new ResearchLaboratory();
+                laboratory.Draw(panel);
+                if(GUI.Button(mode,"Zur Spielübersicht",ui.Button))showLaboratory=false;
+                Rect exit=new Rect(panel.xMax-57,panel.y+20,34,34);
+                if(GUI.Button(exit,"×",ui.Button))Close();
+                return;
+            }
+            if(GUI.Button(mode,"Forschungslabor [Debug]",ui.Button)){laboratory??=new ResearchLaboratory();showLaboratory=true;}
+#endif
+            GUI.Label(new Rect(panel.x+30,panel.y+20,850,38),"SPACE MINER // TECHNOLOGY RESEARCH",ui.Heading);
             GUI.Label(new Rect(panel.x+30,panel.y+67,1110,28),"MINING PULSE     /     OPERATOR CONSOLE     /     TIER I - PIONEER AGE",ui.Small);
             Rect closeRect=new Rect(panel.xMax-57,panel.y+21,34,34);
             if(GUI.Button(closeRect,new GUIContent("","Technologiebaum schliessen"),ui.Button)){Close();SettingsUiAudio.Activate();}
@@ -60,7 +102,7 @@ namespace SpaceMiner
             SpaceMinerUi.Fill(new Rect(panel.x+24,panel.y+105,panel.width-48,1),SpaceMinerUi.Cyan*.55f);
             Legend(new Rect(panel.x+30,panel.y+119,220,26),"Vorhandene Technik",SpaceMinerUi.Success);
             Legend(new Rect(panel.x+275,panel.y+119,330,26),"Geplantes Forschungsfeld",SpaceMinerUi.Disabled);
-            GUI.Label(new Rect(panel.x+660,panel.y+119,550,26),"Hover: Info     |     Klick: anheften     |     Esc: schliessen",ui.Small);
+            GUI.Label(new Rect(panel.x+660,panel.y+119,550,26),"Klick: Details öffnen     |     Esc: schliessen",ui.Small);
             string[] stages={"START","GRUNDLAGEN","FORSCHUNG","KOMBINATION","VERSORGUNG"};
             Rect field=new Rect(panel.x+36,panel.y+205,panel.width-72,350);
             float[] positions={.035f,.245f,.475f,.735f,.965f};
@@ -70,7 +112,7 @@ namespace SpaceMiner
             int hover=previewHover;
             bool overPinnedInfo=pinned>=0&&lastInfoRect.Contains(Event.current.mousePosition);
             if(hover<0&&!overPinnedInfo)for(int i=0;i<nodeRects.Length;i++)if(nodeRects[i].Contains(Event.current.mousePosition)){hover=i;break;}
-            int shown=hover>=0?hover:pinned;
+            int shown=pinned;
             var highlighted=new HashSet<int>();if(shown>=0)Ancestors(shown,highlighted);
             // Draw subdued edges first so highlighted routes remain visible through junction areas.
             foreach(bool active in new[]{false,true})foreach(var edge in edges) {
@@ -92,7 +134,7 @@ namespace SpaceMiner
             foreach(var edge in edges){Color tint=highlighted.Contains(edge.Source)&&highlighted.Contains(edge.Target)?SpaceMinerUi.Amber:SpaceMinerUi.Cyan;Port(edge.Points[0],tint);Port(edge.Points[edge.Points.Length-1],tint);}
             SpaceMinerUi.Fill(new Rect(panel.x+24,panel.y+594,panel.width-48,1),new Color(.15f,.7f,.9f,.6f));
             GUI.Label(new Rect(panel.x+30,panel.y+613,1150,26),"RESEARCH CORE ONLINE  |  Wasserabbau: Erfahrung und Schwerpunkt aktiv  |  Weitere Forschungsfelder im Entwurf",ui.Small);
-            if(shown>=0)DrawInfo(shown,hover<0,panel);else lastInfoRect=default;
+            if(shown>=0)DrawInfo(shown,true,panel);else lastInfoRect=default;
         }
         private void DrawInfo(int index,bool isPinned,Rect panel)
         {
@@ -148,6 +190,40 @@ namespace SpaceMiner
         }
         private System.Collections.IEnumerator Start()
         {
+            if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-researchLab")>=0) {
+                yield return null;GetComponent<StartMenu>().StartDemo();
+                var introLab=FindFirstObjectByType<IntroSequence>();if(introLab!=null)introLab.Skip();
+                Open();showLaboratory=true;laboratory=new ResearchLaboratory();yield break;
+            }
+            if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-researchLabCheck")>=0) {
+                yield return null;
+                GetComponent<StartMenu>().StartDemo();
+                var opening=FindFirstObjectByType<IntroSequence>();if(opening!=null)opening.Skip();
+                yield return new WaitForSecondsRealtime(.5f);
+                Open();showLaboratory=true;laboratory=new ResearchLaboratory();
+                laboratory.Preview(4,"mira-04");
+                yield return new WaitForSecondsRealtime(.5f);
+                ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(System.Environment.CurrentDirectory,"Logs/research-laboratory.png"));
+                yield return new WaitForSecondsRealtime(.5f);
+                Check(IsOpen&&SettingsMenu.BlocksInput,"laboratory modal");
+                laboratory.PreviewOverview(2);
+                yield return new WaitForSecondsRealtime(.3f);
+                ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(System.Environment.CurrentDirectory,"Logs/research-materials-overview.png"));
+                yield return new WaitForSecondsRealtime(.3f);
+                laboratory.PreviewOverview(3,true);
+                yield return new WaitForSecondsRealtime(.3f);
+                ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(System.Environment.CurrentDirectory,"Logs/research-connections-zoom.png"));
+                yield return new WaitForSecondsRealtime(.3f);
+                laboratory.Preview(2,"materialien-02");
+                yield return new WaitForSecondsRealtime(.5f);
+                ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(System.Environment.CurrentDirectory,"Logs/research-materials.png"));
+                yield return new WaitForSecondsRealtime(.5f);
+                var preferences=GetComponent<SettingsMenu>();preferences.Open();
+                Check(SettingsMenu.IsOpen&&!IsOpen,"settings replaces laboratory");
+                Open();Check(IsOpen&&!SettingsMenu.IsOpen,"laboratory replaces settings");
+                Close();Check(BlocksInput,"laboratory close consumes frame");
+                Debug.Log("RESEARCH LABORATORY PLAYER CHECK PASSED");Application.Quit();yield break;
+            }
             if(System.Array.IndexOf(System.Environment.GetCommandLineArgs(),"-techTreeCheck")<0)yield break;
             yield return null;
             var intro=FindFirstObjectByType<IntroSequence>();if(intro!=null)intro.Skip();
@@ -156,6 +232,13 @@ namespace SpaceMiner
             ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(folder,"techtree-entry.png"));
             yield return new WaitForSecondsRealtime(.4f);
             var scenario=FindFirstObjectByType<WaterScenario>();
+            if(StartMenu.IsOpen)GetComponent<StartMenu>().StartDemo();
+            if(intro!=null)intro.Skip();
+            var interior=StationInteriorMode.Current;
+            interior.RestoreInterior(interior.Layout.Console.position-interior.Room.forward*1.5f,false);
+            scenario.Scanner.OpenConsole();scenario.Scanner.Advance(10);
+            Check(scenario.Scanner.Scan(),"first scan before water order");
+            scenario.Scanner.OpenVirtualView();scenario.Scanner.DismissDialogue();
             bool assigned=false;foreach(var source in scenario.Asteroids)if(source.CanMineWater&&scenario.AssignTankOrder(source)){assigned=true;break;}
             Check(assigned,"active water order for menu pause check");
             Open();yield return new WaitForSecondsRealtime(.3f);
@@ -166,7 +249,7 @@ namespace SpaceMiner
             yield return new WaitForSecondsRealtime(.4f);
             Check(Mathf.Approximately(water,scenario.WaterLiters),"view does not mutate resources");
             if(SettingsStore.Current.Gameplay.PauseInMenu)Check(Vector3.Distance(workerPosition,scenario.Worker.transform.position)<.001f,"active drone pauses in tree");
-            previewHover=TechnologyCatalog.IndexOf("processing");
+            pinned=TechnologyCatalog.IndexOf("processing");
             yield return new WaitForSecondsRealtime(.2f);
             ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(folder,"techtree-info.png"));
             yield return new WaitForSecondsRealtime(.3f);previewHover=-1;

@@ -1,5 +1,13 @@
 # SpaceMiner: Übergabe auf den anderen Rechner
 
+## Aktuelle Ergänzung vom 09.10.2026: Forschungslabor und Chatmemory
+
+Neu hinzugekommen sind eine eigenständige Webvorschau unter prototypes/techtree-viewer und ein Debug-Forschungslabor in Unity. Elf Bereiche mit159 Einträgen, realistische entsättigte Miniaturbilder, einheitliche72×72-Ausgangsicons, um25% reduzierte Abstände, gemeinsamer Verteiler für passende Endpunktgruppen und zweiachsiges Ziehen ohne Scrollbalken. Die kompakte1:1-Ansicht ersetzt frühere automatische Vollbaum-Einpassung. Quellen/Bedienung/Grenzen: [Forschungslabor](Forschungslabor.md). Modellwerte, Voraussetzungen und Kapitelgrenzen bleiben Laborannahmen; keine echte Material-/Energieproduktion, keine Übernahme des Laborstands in die regulären Spielstände. Allgemeines Beendenproblem und Innenraumpositionsprüfung bleiben offen.
+
+Alle neun lokalen Themenchats haben den Kontext22b64aa übernommen; acht andere Chats bestätigten reine Lektüre. [Gemeinsames Kontextupdate](Chats/Kontextupdate-2026-10-09.md) und exportierte Archive halten die Übergabe fest. Später hinzugekommene Laborentwicklung ist über die aktuellen Projektdateien bekannt, keine erneute Zustellbestätigung dafür behauptet. Nicht erreichbare fremde Rechnerchats sind über die Archive abgedeckt.
+
+Auf dem Zielrechner: sauberen Checkout mit git pull --ff-only origin main aktualisieren; diese Übergabe, Projektmemory und Forschungslabor lesen. Webvorschau: im Ordner prototypes/techtree-viewer npm start; Tests: node --test test/*.test.mjs. Bei geschlossenem Editor baut SpaceMiner.Editor.ResearchSimulationValidation.Build Development und Release nach Builds/ResearchLaboratory beziehungsweise Builds/ResearchRelease; BuildDemo erzeugt Builds/TechTreeDemo für tools/Start-TechTreeDemo.ps1. Builds und Labor-/Spielstände bleiben lokal.
+
 Chapter-1-Techtree-Planung vom 08.10.2026: [Bildgalerie mit elf Bereichen und gemeinsamer Einstiegsübersicht](Techtree/README.md), zwölf gespeicherte PNGs, Knoten-/Voraussetzungs-/Zählerdokumentation und [Strukturprüfung](Techtree/pruefung-2026-10-08.json). Diskussionsentwürfe mit offenen Kapitelgrenzen; keine zusätzliche Unity-Menü-/Gameplayimplementierung. Git-Sicherung dieser Planung trennt offene Code-/UI-/Audio-/Save-Arbeit anderer Themenchats.
 
 Stand: 08.10.2026, Übergabe mit begehbarer Station, erstem Scan, VR-Scanwissen, Mira-Porträt und Spielständen. Einstieg für neue oder fortgesetzte lokale Codex-Chats. Entscheidungen: [Spielidee](Spielidee.md). Kompakter Kontext: [Projektmemory](Projektmemory.md). [Rechnerwechsel-Memory](Rechnerwechsel-Memory.md) enthält kopierbare Startaufträge für alle neun Themenchats.
