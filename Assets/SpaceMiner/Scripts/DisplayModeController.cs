@@ -48,10 +48,16 @@ namespace SpaceMiner
         }
         private void Update()
         {
-            if (SettingsMenu.BlocksInput) return;
             bool altEnter = Input.GetKeyDown(KeyCode.Return)
                 && (Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt));
-            if (Input.GetKeyDown(KeyCode.F11) || altEnter) Toggle();
+            HandleShortcut(Input.GetKeyDown(KeyCode.F11), altEnter);
+        }
+
+        internal bool HandleShortcut(bool f11, bool altEnter)
+        {
+            // Modal gameplay overlays also pause the campaign; display shortcuts remain usable there.
+            if ((!f11 && !altEnter) || SettingsMenu.IsOpen || SaveGameMenu.IsOpen || QuitMenu.BlocksInput || !CanSwitch) return false;
+            Toggle(); return true;
         }
 
         public void Toggle() => SetFullscreen(!IsFullscreen);

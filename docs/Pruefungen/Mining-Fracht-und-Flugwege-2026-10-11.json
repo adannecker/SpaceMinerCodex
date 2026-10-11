@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-11",
+  "request": "Reduce flickering, attach cargo and anchors to hull, load only actual gripper deposits from larger drill rocks, rear sliding unloading gate and collision-aware flight with clean dock entry/exit",
+  "build": {
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "development": true,
+    "exitCode": 0,
+    "log": "Mining-Fracht-und-Flugwege-2026-10-11/tripo-cargo-path-build-ninth-20261011.log",
+    "deployment": "Builds/TripoMining",
+    "sha256VerifiedBuildFiles": 247,
+    "verifiedSourcesAndMetas": 12,
+    "sourceSha256": {
+      "DroneFlightPlanner.cs": "12d53538b7163c4c600f25267788b2ebd34b0643ce970e4b8d27fad19eddbca4",
+      "DroneAgent.cs": "2e3deb3a0c847b58f4e7cb43d293bd8344d7f9740160db84029d0664b7df1516",
+      "DroneToolMount.cs": "cbd708f5af9fd2b467b7b1342065e98e0c3df5f4ac1ba2b67e036aaab3257bba",
+      "MaintenanceLaserVisual.cs": "dd2cba291d53a7879f1a135d7c00be39aa3918ef561bba9ff338240ffc7edb1f",
+      "TripoMiningDroneVisual.cs": "aa8842e69fc5c8e156445c9a60311efe1b9cb7cd81c989092af00d064c806b42",
+      "TripoMiningShowcase.cs": "f242ea1111475e959d61e4faed6887340b70bf3e0a6c6961c4f4cfa8dbd15ca2"
+    }
+  },
+  "mining": {
+    "pass": true,
+    "checks": 53,
+    "minedKg": 12.0,
+    "deliveredLiters": 9.6,
+    "collectedSizes": 3,
+    "depositedSamples": 3,
+    "armGeometrySamples": 2370,
+    "minimumRimClearanceMeters": 0.187,
+    "savedCampaignModified": false,
+    "log": "Mining-Fracht-und-Flugwege-2026-10-11/tripo-cargo-path-check-ninth-20261011.log",
+    "resolution": [
+      1600,
+      1000
+    ],
+    "flag": "-tripoMiningCheck",
+    "exitCode": 0
+  },
+  "navigation": {
+    "plannedRoutes": 5,
+    "routesWithDetours": 3,
+    "poseSamples": 5940,
+    "dockVertexSamples": 110610,
+    "launchLiftMeters": 1.1,
+    "straightDockExitMeters": 6,
+    "holdHeightMeters": 12,
+    "stepSeconds": 0.25,
+    "algorithm": "Obstacle-driven A* with 3.05m sphere sweeps; separate directed dock maneuvers and oriented component box checks. Sampled mesh-point parity test at concave charging cradle; runtime blockage restores previous clear pose and pauses.",
+    "scope": "Optional imported Mining showcase; existing drone defaults preserved. Parked drones represented by obstacle boxes; not general dynamic multi-drone traffic."
+  },
+  "cargo": {
+    "sampleSizesMeters": [
+      0.3,
+      0.42,
+      0.56
+    ],
+    "freeChipSizesMeters": [
+      0.15,
+      0.22,
+      0.29,
+      0.36
+    ],
+    "hullMounts": 4,
+    "sameObjectsPickedDepositedUnloaded": 3,
+    "automaticPercentFill": false,
+    "rearWallSlidesUp": true,
+    "opensOnlyDocked": true,
+    "closesBeforeUndocking": true,
+    "realStorageWallAperture": true,
+    "topLidHingesAtFront": true,
+    "resourceBalanceChanged": false
+  },
+  "regressions": [
+    {
+      "flag": "-maintenanceShowcaseCheck",
+      "exitCode": 0,
+      "checks": 168,
+      "log": "Mining-Fracht-und-Flugwege-2026-10-11/tripo-cargo-path-maintenance-20261011.log",
+      "result": "Mining-Fracht-und-Flugwege-2026-10-11/maintenance-regression.json"
+    },
+    {
+      "flag": "-startStationCheck",
+      "exitCode": 0,
+      "checks": 121,
+      "log": "Mining-Fracht-und-Flugwege-2026-10-11/tripo-cargo-path-startstation-20261011.log"
+    },
+    {
+      "flag": "-miningBalanceCheck",
+      "exitCode": 0,
+      "checks": 195,
+      "log": "Mining-Fracht-und-Flugwege-2026-10-11/tripo-cargo-path-balance-20261011.log",
+      "result": "Mining-Fracht-und-Flugwege-2026-10-11/balance-regression.json"
+    }
+  ],
+  "totalNumberedChecks": 537,
+  "flicker": {
+    "changes": [
+      "Deactivate overlapping old berth",
+      "Use single transparent planes instead of overlapping glass cubes",
+      "Keep detailed working asteroid LOD",
+      "MSAA 8x, stable shadows, camera near clip 0.12m",
+      "Trilinear and anisotropic maps, softer paint normal strength"
+    ],
+    "staticComparison": {
+      "images": [
+        "19-static-material-a.png",
+        "20-static-material-b.png"
+      ],
+      "crop": [
+        280,
+        160,
+        990,
+        920
+      ],
+      "meanChannelDifference": [
+        0,
+        0,
+        0
+      ],
+      "changedBounds": null,
+      "scope": "Only the resting model crop; does not prove all motion is flicker-free."
+    }
+  },
+  "visual": {
+    "folder": "Mining-Fracht-und-Flugwege-2026-10-11",
+    "screenshots": 18,
+    "inspected": [
+      "01-dock.png",
+      "12-large-chunk.png",
+      "17-sliding-gate-open.png",
+      "18-rocks-in-receiver.png"
+    ]
+  },
+  "limits": [
+    "Sampled cradle mesh vertices and conservative component boxes, not exact triangle collision",
+    "No general dynamic multi-drone avoidance or physical gripper/anchor forces",
+    "No Release run, performance benchmark or physical mouse/keyboard acceptance test",
+    "12kg remains showcase capacity; imported FBX geometry unchanged"
+  ],
+  "savedCampaignModified": false,
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 67232,
+    "respondingVerified": true,
+    "windowTitle": "Space Miner - Prototyp 01",
+    "log": "Logs/tripo-cargo-path-preview.log"
+  }
+}

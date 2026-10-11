@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-11",
+  "request": "Opposite collecting arm, larger transparent roof cargo box, anchoring hooks along box, collect differently sized pieces",
+  "build": {
+    "log": "Logs/tripo-gripper-camera-build-20261011.log",
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "development": true,
+    "exitCode": 0,
+    "deployment": "Builds/TripoMining",
+    "sha256VerifiedFiles": 247,
+    "sourceHashMatchesBuildCopy": true
+  },
+  "miningMission": {
+    "log": "Logs/tripo-gripper-camera-check-20261011.log",
+    "flag": "-tripoMiningCheck",
+    "exitCode": 0,
+    "resolution": [
+      1600,
+      1000
+    ],
+    "result": {
+      "pass": true,
+      "checks": 29,
+      "minedKg": 12.0,
+      "deliveredLiters": 9.6,
+      "collectedSizes": 3,
+      "depositedSamples": 3,
+      "armGeometrySamples": 2393,
+      "minimumRimClearanceMeters": 0.25,
+      "savedCampaignModified": false
+    },
+    "evidence": "Mining-Greifarm-2026-10-11/result.json",
+    "source": "A-01",
+    "sourceRawKgBefore": 10000,
+    "sourceRawKgAfter": 9988,
+    "stationWaterLitersBefore": 20,
+    "stationWaterLitersAfter": 29.6
+  },
+  "regression": {
+    "log": "Logs/tripo-gripper-final-maintenance-20261011.log",
+    "flag": "-maintenanceShowcaseCheck",
+    "checks": 168,
+    "exitCode": 0,
+    "resolution": [
+      1280,
+      800
+    ],
+    "sameFinalBinary": true,
+    "result": "Mining-Greifarm-2026-10-11/maintenance-regression.json"
+  },
+  "totalChecks": 197,
+  "visual": {
+    "folder": "Mining-Greifarm-2026-10-11",
+    "screenshots": 12,
+    "inspected": [
+      "01-dock.png",
+      "08-delivered-dock.png",
+      "09-gripper-pickup.png",
+      "10-gripper-transfer.png",
+      "11-gripper-deposit.png",
+      "12-large-chunk.png"
+    ]
+  },
+  "implementation": [
+    "Large 1.20 x 1.45 x 0.78 m transparent roof cargo box; open top, framed inspection glass and bolted roof saddles",
+    "Opposite-side articulated arm with two 1.15 m links, shoulder motor, wrist, opening jaws, fasteners and shared hard-surface PBR finish",
+    "18 / 30 / 44 cm sample proxies; surface pickup, grip, lift outside box, transfer above rim, release through open top and fold after mining",
+    "Two 1.48 m long cargo-side anchor housings with nested hollow sleeves and curved hooks; actual asteroid raycast contact",
+    "Collection camera, pause/reset integration and exterior dock camera presets",
+    "Same actual DroneAgent extraction, energy, delivery and experience; 12 kg preview cargo limit preserved"
+  ],
+  "checks": [
+    "Actual carried chunk follows articulated jaw centre; pause freezes hand and sample",
+    "Three different sample sizes collected, three complete deposit cycles",
+    "2393 mining frames sample actual collecting mesh vertices against conservative enlarged cargo volume without penetration",
+    "Minimum actual chunk-vertex clearance over top rim: 0.250 m",
+    "Arm folds for return, no held phantom chunk at berth",
+    "Complete actual 12 kg mining trip and 9.6 L water delivery, reserves, tank balance, exact berth and experience preserved",
+    "Existing maintenance mission passes 168 checks with final binary"
+  ],
+  "limits": [
+    "Sample animation illustrates actual cargo, not separate per-fragment resource or rigid-body simulation",
+    "Vertex containment sampling is not an exhaustive triangle collision/traffic solver",
+    "Physical anchoring/gripping constraints, asteroid deformation and optimized original meshes remain open",
+    "No Release test, manual input acceptance or performance benchmark"
+  ],
+  "savedCampaignModified": false,
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 40452,
+    "respondingVerified": true,
+    "log": "Logs/tripo-gripper-preview.log"
+  }
+}

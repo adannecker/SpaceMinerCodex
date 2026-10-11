@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-10",
+  "sourceCommit": "824ff8d",
+  "assumptions": [
+    "Fresh research model, all samples and hardware available immediately, continuous power, no player idle time.",
+    "1x time, tree kept open continuously; current research only ticks while the menu is open.",
+    "Dependencies and shared water treatment honored, Mira level 2 is automatic after 10 completions.",
+    "Available projects queued in catalog order (or shortest first for sensitivity comparison); no optimal scheduling claim.",
+    "New discoveries preferred when filling the queue; previously queued upgrades retain their place.",
+    "Parallel slots assumed available from the start, currently only a debug setting."
+  ],
+  "categoryBaseDurations": [
+    {
+      "category": "Energieversorgung",
+      "newCategoryReferences": 11,
+      "paidUniqueProjects": 11,
+      "baseMinutes": 148.5
+    },
+    {
+      "category": "Wiederverwertung",
+      "newCategoryReferences": 10,
+      "paidUniqueProjects": 10,
+      "baseMinutes": 112.5
+    },
+    {
+      "category": "Materialkunde und Aufbereitung",
+      "newCategoryReferences": 24,
+      "paidUniqueProjects": 24,
+      "baseMinutes": 522.0
+    },
+    {
+      "category": "Verbindungen und Zwischenprodukte",
+      "newCategoryReferences": 21,
+      "paidUniqueProjects": 21,
+      "baseMinutes": 409.5
+    },
+    {
+      "category": "Mira",
+      "newCategoryReferences": 10,
+      "paidUniqueProjects": 9,
+      "baseMinutes": 124.5
+    },
+    {
+      "category": "Drohnen und Robotik",
+      "newCategoryReferences": 15,
+      "paidUniqueProjects": 15,
+      "baseMinutes": 247.5
+    },
+    {
+      "category": "Scanner und Erkundung",
+      "newCategoryReferences": 11,
+      "paidUniqueProjects": 11,
+      "baseMinutes": 148.5
+    },
+    {
+      "category": "Produktion und Fertigung",
+      "newCategoryReferences": 16,
+      "paidUniqueProjects": 16,
+      "baseMinutes": 252.0
+    },
+    {
+      "category": "Lagerung und Logistik",
+      "newCategoryReferences": 11,
+      "paidUniqueProjects": 11,
+      "baseMinutes": 148.5
+    },
+    {
+      "category": "Lebenserhaltung und Nahrung",
+      "newCategoryReferences": 12,
+      "paidUniqueProjects": 11,
+      "baseMinutes": 147.0
+    },
+    {
+      "category": "Stationsbau und Infrastruktur",
+      "newCategoryReferences": 12,
+      "paidUniqueProjects": 12,
+      "baseMinutes": 153.0
+    }
+  ],
+  "categoryReferences": 159,
+  "uniqueTechnologies": 158,
+  "knownUniqueTechnologies": 6,
+  "upgradableTechnologies": 25,
+  "baseMinutesWithoutAcceleration": 2413.5,
+  "scenarios": [
+    {
+      "slots": 1,
+      "upgradesTo5": false,
+      "order": "catalog",
+      "hours": 29.89365872279404,
+      "projects": 151,
+      "finalMiraLevel": 16,
+      "lastProject": {
+        "id": "mira-09",
+        "level": 1,
+        "atHours": 29.89365872279404
+      }
+    },
+    {
+      "slots": 1,
+      "upgradesTo5": false,
+      "order": "shortest",
+      "hours": 29.72242609144814,
+      "projects": 151,
+      "finalMiraLevel": 16,
+      "lastProject": {
+        "id": "mira-09",
+        "level": 1,
+        "atHours": 29.72242609144814
+      }
+    },
+    {
+      "slots": 2,
+      "upgradesTo5": false,
+      "order": "catalog",
+      "hours": 15.0280409928415,
+      "projects": 151,
+      "finalMiraLevel": 16,
+      "lastProject": {
+        "id": "mira-09",
+        "level": 1,
+        "atHours": 15.0280409928415
+      }
+    },
+    {
+      "slots": 2,
+      "upgradesTo5": false,
+      "order": "shortest",
+      "hours": 14.871582461119097,
+      "projects": 151,
+      "finalMiraLevel": 16,
+      "lastProject": {
+        "id": "mira-09",
+        "level": 1,
+        "atHours": 14.871582461119097
+      }
+    },
+    {
+      "slots": 3,
+      "upgradesTo5": false,
+      "order": "catalog",
+      "hours": 10.060142911268144,
+      "projects": 151,
+      "finalMiraLevel": 16,
+      "lastProject": {
+        "id": "mira-09",
+        "level": 1,
+        "atHours": 10.060142911268144
+      }
+    },
+    {
+      "slots": 3,
+      "upgradesTo5": false,
+      "order": "shortest",
+      "hours": 10.081482138701162,
+      "projects": 151,
+      "finalMiraLevel": 16,
+      "lastProject": {
+        "id": "mira-09",
+        "level": 1,
+        "atHours": 10.081482138701162
+      }
+    },
+    {
+      "slots": 1,
+      "upgradesTo5": true,
+      "order": "catalog",
+      "hours": 78.19098185081374,
+      "projects": 251,
+      "finalMiraLevel": 26,
+      "lastProject": {
+        "id": "wiederverwertung-10",
+        "level": 5,
+        "atHours": 78.19098185081374
+      }
+    },
+    {
+      "slots": 1,
+      "upgradesTo5": true,
+      "order": "shortest",
+      "hours": 77.65448323963226,
+      "projects": 251,
+      "finalMiraLevel": 26,
+      "lastProject": {
+        "id": "wiederverwertung-10",
+        "level": 5,
+        "atHours": 77.65448323963226
+      }
+    },
+    {
+      "slots": 2,
+      "upgradesTo5": true,
+      "order": "catalog",
+      "hours": 39.72969598128616,
+      "projects": 251,
+      "finalMiraLevel": 26,
+      "lastProject": {
+        "id": "wiederverwertung-10",
+        "level": 5,
+        "atHours": 39.72969598128616
+      }
+    },
+    {
+      "slots": 2,
+      "upgradesTo5": true,
+      "order": "shortest",
+      "hours": 39.45085758990987,
+      "projects": 251,
+      "finalMiraLevel": 26,
+      "lastProject": {
+        "id": "wiederverwertung-10",
+        "level": 5,
+        "atHours": 39.45085758990987
+      }
+    },
+    {
+      "slots": 3,
+      "upgradesTo5": true,
+      "order": "catalog",
+      "hours": 26.79336954437175,
+      "projects": 251,
+      "finalMiraLevel": 26,
+      "lastProject": {
+        "id": "wiederverwertung-10",
+        "level": 5,
+        "atHours": 26.79336954437175
+      }
+    },
+    {
+      "slots": 3,
+      "upgradesTo5": true,
+      "order": "shortest",
+      "hours": 26.629758711533736,
+      "projects": 251,
+      "finalMiraLevel": 26,
+      "lastProject": {
+        "id": "wiederverwertung-10",
+        "level": 5,
+        "atHours": 26.629758711533736
+      }
+    }
+  ],
+  "method": "Independent event-based calculation from the current catalog and ResearchSimulation rules, using double precision; no new Unity runtime test or balance change.",
+  "currentGameplayLimit": "All unknown nodes initially lack evidence and hardware flags. The current player view cannot supply them; the calculation assumes these requirements supplied externally, currently via the debug laboratory.",
+  "rawHoursIncludingAllUpgradesWithoutAcceleration": 133.81562968749998
+}

@@ -17,7 +17,10 @@ namespace SpaceMiner
         {
             if (StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             IsOpen = true;
+            ReleasePointer();
         }
+        private static void ReleasePointer() { Cursor.lockState = CursorLockMode.None; Cursor.visible = true; }
+        private void LateUpdate() { if (IsOpen) ReleasePointer(); }
         public void Cancel() { IsOpen = false; closedFrame = Time.frameCount; }
         public void ReturnToStart() { Cancel(); FindFirstObjectByType<StartMenu>()?.ReturnToStart(); }
         public void RequestReturnToStart()
@@ -43,8 +46,10 @@ namespace SpaceMiner
             if (!IsOpen || SaveGameMenu.IsOpen) return;
             var matrix = GUI.matrix;
             int depth = GUI.depth;
+            bool enabled = GUI.enabled;
             try
             {
+                GUI.enabled = true;
                 ui.Configure(SettingsStore.Current.Accessibility);
                 GUI.depth = -300;
                 float scale = UiLayout.Scale(960, 720);
@@ -61,7 +66,7 @@ namespace SpaceMiner
                     RequestReturnToStart();
                 }
             }
-            finally { GUI.matrix = matrix; GUI.depth = depth; }
+            finally { GUI.matrix = matrix; GUI.depth = depth; GUI.enabled = enabled; }
         }
         private void OnDestroy() { IsOpen = false; ui.Dispose(); }
 

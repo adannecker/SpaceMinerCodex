@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-11",
+  "purpose": "Verify both user-provided Tripo archives and show the real models together in the campaign scene for size review",
+  "archives": "Tripo-Archive-2026-10-11.json",
+  "import": "Tripo-Unityimport-2026-10-11.json",
+  "unity": "6000.6.4f1 in separate build copy; source project version 6000.4.7f1 retained",
+  "build": {
+    "type": "Development",
+    "path": "Builds/TripoModels/SpaceMiner.exe",
+    "result": "succeeded",
+    "exitCode": 0,
+    "log": "Logs/tripo-build-delivery-20261011.log"
+  },
+  "runtime": {
+    "flag": "-tripoModelCheck",
+    "resolution": [
+      1600,
+      1000
+    ],
+    "exitCode": 0,
+    "log": "Logs/tripo-model-check-delivery-20261011.log",
+    "verified": [
+      "Both actual user-supplied models load with PBR materials",
+      "Uniform normalization to cradle width 2.65 m and drone width 2 m including arms",
+      "FBX axis conversion retained: cradle height below 1 m and depth above 3 m",
+      "Central platform mesh raycast and floor height below 0.4 m",
+      "Initial drone outer footprint contained within cradle outer footprint",
+      "Uniform drone enlargement to 130% gives width 2.6 m",
+      "Combined, top, separate, enlarged and walking views captured",
+      "Own preview settings path"
+    ],
+    "measurements": "Tripo-Modelle-2026-10-11/measurements.json"
+  },
+  "normalGameRegression": {
+    "flag": "-startStationCheck",
+    "resolution": [
+      1280,
+      800
+    ],
+    "checks": 121,
+    "exitCode": 0,
+    "log": "Logs/tripo-normal-game-regression-20261011.log"
+  },
+  "visual": {
+    "screenshots": 5,
+    "folder": "Tripo-Modelle-2026-10-11",
+    "inspected": [
+      "01-parked.png",
+      "03-side-by-side.png",
+      "05-walking.png"
+    ],
+    "corrections": [
+      "Preserved Blender root rotation under a normalization wrapper",
+      "Camera positions moved between workshop front and upper dock row",
+      "Comparison HUD hides the normal orbit HUD; walking mode restores it",
+      "Source 4K maps retained; preview import resolution 2K; Standard metallic/smoothness packed"
+    ]
+  },
+  "deployment": {
+    "filesVerifiedSHA256": 247,
+    "startScript": "Start-Tripo-Groessenprobe.cmd",
+    "interactivePreview": {
+      "opened": true,
+      "pid": 24148,
+      "respondingVerified": true,
+      "windowTitle": "Space Miner - Prototyp 01",
+      "log": "Logs/tripo-preview-player.log"
+    }
+  },
+  "limits": [
+    "No Release build or editor 6000.4.7f1 execution",
+    "No manual OS input acceptance or performance benchmark",
+    "Static size probe with paused game simulation, not replacement of gameplay drones",
+    "Each model is one mesh of about 500k triangles; no animation or decimation",
+    "Outer bounding box containment does not establish rail, connector or approach clearance",
+    "Model colliders only used temporarily for central platform raycast, then removed"
+  ],
+  "sandbox": "First sandboxed Unity import crashed in internal HTTP service/licensing initialization; subsequent import and builds outside sandbox succeeded"
+}

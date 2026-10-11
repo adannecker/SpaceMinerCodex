@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-11",
+  "scope": "First maintenance drone hull-repair showcase using imported Tripo body and interchangeable procedural tools",
+  "projectVersion": "6000.4.7f1",
+  "buildEditor": "6000.6.4f1",
+  "sourceProjectMigrated": false,
+  "build": {
+    "path": "Builds/MaintenanceShowcase/SpaceMiner.exe",
+    "type": "Development",
+    "method": "SpaceMiner.Editor.TripoModelBuild.BuildMaintenanceShowcase",
+    "log": "Logs/maintenance-build-delivery-20261011.log",
+    "exitCode": 0
+  },
+  "runtime": {
+    "exitCode": 0,
+    "evidence": "Wartungsdrohne-2026-10-11/result.json",
+    "checks": 99,
+    "completeJobs": 1,
+    "checksInclude": [
+      "Actual hull raycast",
+      "82 conservative hull box route samples",
+      "Full timed flight, scan, weld, inspect, return and dock sequence",
+      "Contact line and reachable arc",
+      "Contact light and spark particles",
+      "Pause freezes job and clears effects",
+      "Exact dock pose and battery recharge",
+      "Separate interchangeable welding and rotating mining tools"
+    ],
+    "flag": "-maintenanceShowcaseCheck",
+    "log": "Logs/maintenance-check-delivery-20261011.log",
+    "resolution": [
+      1600,
+      1000
+    ]
+  },
+  "regressions": [
+    {
+      "flag": "-startStationCheck",
+      "log": "Logs/maintenance-normal-game-20261011.log",
+      "exitCode": 0,
+      "resolution": [
+        1280,
+        800
+      ],
+      "checks": 121
+    },
+    {
+      "flag": "-tripoModelCheck",
+      "log": "Logs/maintenance-size-probe-regression-20261011.log",
+      "resolution": [
+        1280,
+        800
+      ],
+      "exitCode": 0
+    }
+  ],
+  "visual": {
+    "correction": "Camera moved out of existing dock column; maintenance sidebar and exterior scanner HUD cleaned up",
+    "inspected": [
+      "04-welding.png",
+      "07-mining-tool.png"
+    ],
+    "folder": "Wartungsdrohne-2026-10-11",
+    "screenshots": 7
+  },
+  "isolation": {
+    "campaignResourcesChanged": false,
+    "regularDeployedBuildsReplaced": false,
+    "campaignSimulationPaused": true,
+    "separateSaves": "Logs/MaintenanceShowcase/Saves",
+    "separateSettings": "Logs/MaintenanceShowcase-settings/player-settings.json",
+    "cinematicPreferencePrefix": "SpaceMiner.MaintenanceShowcase.",
+    "tripoCreditsSpent": 0
+  },
+  "deployment": {
+    "starter": "Start-Wartungsdrohne-Showcase.cmd",
+    "sha256FilesVerified": 247,
+    "interactivePreview": {
+      "opened": true,
+      "pid": 71108,
+      "respondingVerified": true,
+      "title": "Space Miner - Prototyp 01",
+      "log": "Logs/maintenance-showcase-player.log"
+    }
+  },
+  "limitations": [
+    "Cosmetic repair and isolated battery, no actual hull-damage economy or XP",
+    "Imported FBX remains a single unoptimized approximately 500k-triangle mesh; only added procedural tools move",
+    "Mining tool preview only; no new-body asteroid mining or cargo transfer",
+    "Conservative route check against station layer, not general avoidance or exact rail/tool/contact clearance",
+    "No permanent physical colliders on imported body or added tools",
+    "No Release test, manual input acceptance or performance benchmark"
+  ]
+}

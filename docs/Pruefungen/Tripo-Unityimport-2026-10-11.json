@@ -1,0 +1,40 @@
+{
+    "models": [
+        {
+            "name": "MaintenanceDrone",
+            "source": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbx",
+            "prefab": "Assets/SpaceMiner/Resources/Tripo/MaintenanceDrone.prefab",
+            "boundsSize": {
+                "x": 0.9087220430374146,
+                "y": 0.7677004337310791,
+                "z": 0.9999698400497437
+            },
+            "boundsCentre": {
+                "x": -0.00001519918441772461,
+                "y": 0.3838501572608948,
+                "z": 0.000015227931726258248
+            },
+            "meshes": 1,
+            "triangles": 501518,
+            "vertices": 323070
+        },
+        {
+            "name": "ChargingCradle",
+            "source": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbx",
+            "prefab": "Assets/SpaceMiner/Resources/Tripo/ChargingCradle.prefab",
+            "boundsSize": {
+                "x": 0.7954102754592896,
+                "y": 0.2181016504764557,
+                "z": 0.9999697208404541
+            },
+            "boundsCentre": {
+                "x": -5.960464477539063e-8,
+                "y": 0.10905076563358307,
+                "z": 0.000015201085261651315
+            },
+            "meshes": 1,
+            "triangles": 502036,
+            "vertices": 399857
+        }
+    ]
+}

@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-11",
+  "request": "Release mouse for ESC quit menu and replace flat blue attachments with textured worn hull-blue surfaces",
+  "build": {
+    "log": "Logs/tripo-pointer-texture-build-20261011.log",
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "development": true,
+    "exitCode": 0,
+    "deployment": "Builds/TripoMining",
+    "sha256VerifiedFiles": 247,
+    "verifiedSourceFiles": [
+      "QuitMenu.cs",
+      "TripoMiningShowcase.cs",
+      "MaintenanceLaserVisual.cs",
+      "TripoMiningDroneVisual.cs"
+    ]
+  },
+  "mining": {
+    "log": "Logs/tripo-pointer-texture-check-20261011.log",
+    "flag": "-tripoMiningCheck",
+    "resolution": [
+      1600,
+      1000
+    ],
+    "exitCode": 0,
+    "checks": 45,
+    "result": "Mining-Maus-und-Texturen-2026-10-11/result.json",
+    "minedKg": 12,
+    "deliveredLiters": 9.6,
+    "armGeometrySamples": 2324,
+    "minimumRimClearanceMeters": 0.25
+  },
+  "regressions": [
+    {
+      "log": "Logs/tripo-pointer-maintenance-regression-20261011.log",
+      "flag": "-maintenanceShowcaseCheck",
+      "exitCode": 0,
+      "checks": 168,
+      "result": "Mining-Maus-und-Texturen-2026-10-11/maintenance-regression.json"
+    },
+    {
+      "log": "Logs/tripo-pointer-menu-regression-20261011.log",
+      "flag": "-quitMenuCheck",
+      "exitCode": 0,
+      "passedMarker": "QUIT MENU AND SPEED CHECK PASSED: return to start screen"
+    }
+  ],
+  "totalNumberedChecks": 213,
+  "checkedMenuLifecycle": [
+    "Same HandleEscape entry point as physical ESC opens quit menu and blocks showcase",
+    "Previously captured and hidden cursor is immediately released and visible",
+    "LateUpdate preserves free visible pointer while quit menu remains open",
+    "Quit menu freezes actual drone position, simulation time and battery",
+    "Closing ESC consumes its frame; next frame resumes previous simulation",
+    "Manual showcase pause survives opening and cancelling quit menu",
+    "Quit action opens save-before-leaving dialog; cancelling preserves showcase state",
+    "Leaving without manual save reaches start menu; normal quit-menu/speed regression passes"
+  ],
+  "surfaces": {
+    "originalTripoAtlasModified": false,
+    "newAttachmentMaps": "512 x 512 albedo, metallic/smoothness and normal; generated per attachment",
+    "appearance": "Muted uneven blue enamel, recessed panel lines, dirt, broken scratches and small exposed-metal edge chips",
+    "matching": "Separate procedural panel maps using a matching blue palette; not a copy of original hull UV atlas"
+  },
+  "visual": {
+    "folder": "Mining-Maus-und-Texturen-2026-10-11",
+    "screenshots": 16,
+    "inspected": [
+      "01-dock.png",
+      "10-gripper-transfer.png",
+      "13-escape-menu.png",
+      "14-before-leaving.png"
+    ]
+  },
+  "limits": [
+    "Automated menu lifecycle and cursor-state checks; no physical mouse click or keyboard acceptance test",
+    "No Release run or performance benchmark",
+    "Existing kinematic gripping and collision limitations unchanged; 12 kg remains short showcase capacity"
+  ],
+  "savedCampaignModified": false,
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 32712,
+    "respondingVerified": true,
+    "log": "Logs/tripo-pointer-texture-preview.log"
+  }
+}

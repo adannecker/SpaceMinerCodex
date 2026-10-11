@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-11",
+  "scope": "Larger walkable ring and discrete lifts between interior rooms",
+  "sourceUnityVersion": "6000.4.7f1",
+  "testedUnityVersion": "6000.6.4f1",
+  "interpretation": "Former outer circulation edge / first storage stage start becomes new inner circulation edge; radial depth per expansion stage doubles",
+  "dimensions": {
+    "previous": {
+      "innerRadius": 20,
+      "largeInteriorDepth": 10,
+      "waitingBayDepth": 5,
+      "stageDepth": 8,
+      "outerRadius": 29
+    },
+    "current": {
+      "deckSeparation": 8,
+      "housingDepth": 16,
+      "commandCentreDepth": 48,
+      "circulationWidth": 9,
+      "stageDepth": 16,
+      "largeInteriorDepth": 20,
+      "radialStageBoundaries": [
+        38,
+        54,
+        70,
+        86
+      ],
+      "innerRadius": 29,
+      "dockDepth": 32,
+      "waitingBayDepth": 10,
+      "outerRadius": 38
+    },
+    "units": "metres",
+    "humanDroneFurnitureScaleChanged": false
+  },
+  "lifts": {
+    "clearWidth": 2.8,
+    "platformWidth": 2.6,
+    "shaftWidth": 3.2,
+    "location": "Inner service gaps with separate portals from circulation ring; no complete inner sector occupied",
+    "platformDepth": 4.2,
+    "betweenSectors": [
+      "S5/S6",
+      "S9/S10"
+    ],
+    "anglesDegrees": [
+      135,
+      255
+    ],
+    "levels": 2,
+    "shaftCount": 2,
+    "shaftDepth": 4.8
+  },
+  "build": {
+    "sourceProjectMigrated": false,
+    "sceneRegenerated": false,
+    "log": "Logs/ring-dimensions-build-delivery-20261011.log",
+    "targets": [
+      "RingSimulator demo development",
+      "RingSimulatorGame development",
+      "RingSimulatorRelease release"
+    ],
+    "success": true
+  },
+  "playerChecks": [
+    {
+      "flag": "-ringWalkthroughCheck",
+      "checks": 129,
+      "log": "Logs/ring-dimensions-demo-delivery-20261011.log",
+      "resolution": "1600x1000",
+      "target": "demo",
+      "exitCode": 0
+    },
+    {
+      "flag": "-ringWalkthroughCheck",
+      "checks": 129,
+      "log": "Logs/ring-dimensions-game-delivery-20261011.log",
+      "resolution": "1280x800",
+      "target": "development",
+      "exitCode": 0
+    },
+    {
+      "flag": "-ringSimulatorCheck",
+      "checks": 101,
+      "log": "Logs/ring-dimensions-planner-delivery-20261011.log",
+      "resolution": "1280x800",
+      "target": "development",
+      "exitCode": 0
+    }
+  ],
+  "totalChecks": 359,
+  "checkedBehavior": [
+    "Measured generated ring mesh radii at 29 and 38 metres",
+    "Measured three-stage storage floor from radius 38 to 86 metres",
+    "Measured interior workshop floor from radius 9 to 29 metres",
+    "24 outside and 24 inside module entries reached using actual CharacterController",
+    "Deep interior routes alongside machinery on both levels",
+    "Three-stage command centre and warehouse routes",
+    "Both boundary lifts entered from both levels through separate ring portals, ridden, and exited onto other ring",
+    "Flush floor joins and wall collision",
+    "Larger map extrema remain visible outside header and footer overlays at both window sizes",
+    "Existing sprint, stable cursor ownership, Tab capture, native fullscreen and original window restoration",
+    "Construction planning 101-check regression"
+  ],
+  "changedSource": [
+    "Assets/SpaceMiner/Scripts/RingWalkthrough.cs",
+    "Assets/SpaceMiner/Scripts/RingWalkthroughCheck.cs"
+  ],
+  "sourceAndMetaHashesMatchBuildCopy": true,
+  "deployment": [
+    {
+      "filesVerified": 247,
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\RingSimulator-before-ring-dimensions-20261011-141732",
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\RingSimulator"
+    },
+    {
+      "filesVerified": 247,
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\Windows-before-ring-dimensions-20261011-141732",
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\Windows"
+    },
+    {
+      "filesVerified": 156,
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\WindowsRelease-before-ring-dimensions-20261011-141732",
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\WindowsRelease"
+    }
+  ],
+  "screenshots": [
+    "Ringdimensionen-2026-10-11/grundriss-1600x1000.png",
+    "Ringdimensionen-2026-10-11/grundriss-1280x800.png",
+    "Ringdimensionen-2026-10-11/innenwerkstatt-1280x800.png",
+    "Ringdimensionen-2026-10-11/aufzugsnische-1600x1000.png"
+  ],
+  "visualReview": "Maps at both sizes, lift niche and interior workshop inspected; long rear-wall sign shortened and final image rechecked",
+  "limits": [
+    "Walkthrough blockout updated; separate older 16-segment economy simulator and campaign station retain their dimensions and storage rules",
+    "Automated production-handler inputs and physical collision checks; no manual OS keyboard acceptance",
+    "Release built, no separate release gameplay run",
+    "Source Unity 6000.4.7f1 not installed; separate 6000.6.4f1 build copy used",
+    "No commit or push"
+  ],
+  "exceptionsInFinalLogs": false
+}

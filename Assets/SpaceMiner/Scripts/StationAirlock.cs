@@ -21,12 +21,14 @@ namespace SpaceMiner
             && (state.phase!=AirlockPhase.Idle && state.phase!=AirlockPhase.Equalizing || state.habitatOpen==0 && state.ringOpen==0);
         public void RestoreState(SavedState state)
         {
+            if (PermanentlyOpen) { ResetClosed(); return; }
             Phase=state.phase;TowardsRing=state.towardsRing;
             progress[0]=state.habitatOpen;progress[1]=state.ringOpen;equalizing=state.equalizing;Apply();
         }
         public void RecoverLegacyOccupant(Vector3 feet)
         {
             ResetClosed();
+            if (PermanentlyOpen) return;
             Vector3 p=habitat.InverseTransformPoint(feet);
             if(Mathf.Abs(p.x)>1.5f || p.z>HabitatDoorZ+.6f || p.z<RingDoorZ-.6f)return;
             // Old version-1 saves did not retain doors. Let an occupant leave safely.
@@ -35,10 +37,15 @@ namespace SpaceMiner
         }
         public const float HabitatDoorZ = -5.1f, RingDoorZ = -10.6f;
         public AirlockPhase Phase { get; private set; }
+        public bool PermanentlyOpen { get; private set; }
+        public void ConfigureOpen(Transform room)
+        {
+            habitat = room; PermanentlyOpen = true; ResetClosed();
+        }
         public float HabitatOpen => progress[0];
         public float RingOpen => progress[1];
         public bool TowardsRing { get; private set; }
-        public string Status => Phase == AirlockPhase.Idle ? "Schleuse bereit"
+        public string Status => PermanentlyOpen ? "Zugänge offen" : Phase == AirlockPhase.Idle ? "Schleuse bereit"
             : Phase == AirlockPhase.Equalizing ? "Druckausgleich …"
             : Phase == AirlockPhase.AwaitingEntry ? "Bitte in die Schleuse treten"
             : Phase == AirlockPhase.AwaitingExit ? (TowardsRing ? "Zum Stationsring gehen" : "Zum Wohnmodul gehen")
@@ -61,7 +68,7 @@ namespace SpaceMiner
         }
         public bool CanRequest(Vector3 feet)
         {
-            if (habitat == null || Phase != AirlockPhase.Idle) return false;
+            if (PermanentlyOpen || habitat == null || Phase != AirlockPhase.Idle) return false;
             Vector3 p = habitat.InverseTransformPoint(feet);
             return Mathf.Abs(p.x) < 1.35f && Mathf.Abs(p.y) < .4f
                 && ((p.z > HabitatDoorZ && p.z - HabitatDoorZ < 1.9f)

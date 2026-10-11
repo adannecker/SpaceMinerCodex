@@ -1,0 +1,136 @@
+{
+  "date": "2026-10-11",
+  "archiveCheckPassed": true,
+  "models": [
+    {
+      "name": "MaintenanceDrone",
+      "sourceArchive": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Imports\\Tripo\\industrial+maintenance+drone+3d+model.zip",
+      "archiveBytes": 22941835,
+      "sha256": "e80915b01850a9744db3d01744a19a182a56b720a5f0149f9fb7036a3b945958",
+      "entries": [
+        {
+          "path": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbx",
+          "bytes": 15144908,
+          "sha256": "369d754d6afea261af8d5a9cb3b76147f599b3a9ab4b1836a520716909bc88c6",
+          "fbxVersion": 7400
+        },
+        {
+          "path": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_basecolor.JPEG",
+          "bytes": 1840814,
+          "sha256": "311942219064d57e1a94a0d026090103ce6ec614b721adca39ae6aa40885d102",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_metallic.JPEG",
+          "bytes": 1743238,
+          "sha256": "dcc0f010b0c1d9dc34ce89f4cded148023e9df7749a95425ee7ce3db30b1247d",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_normal.PNG",
+          "bytes": 1732245,
+          "sha256": "338cff9b2a35f9c5c1f8885c41258514d0bc62a9c5620e05e3f3c27fd6674272",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_roughness.JPEG",
+          "bytes": 1604808,
+          "sha256": "71f9ea1e3795c62818a5cdda6b377291b8d271b6cb8c68a767dcadf491991832",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_rm.JPEG",
+          "bytes": 1777505,
+          "sha256": "2b80c3c2d917b3486d689447a35d3655f55390f76764166a499ddb010ef40fad",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "assetDirectory": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone"
+    },
+    {
+      "name": "ChargingCradle",
+      "sourceArchive": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Imports\\Tripo\\drone+charging+cradle+3d+model.zip",
+      "archiveBytes": 23519179,
+      "sha256": "0bb03fc908db4cd1af91ad01932d32950604e0819c5d873fb01044718e108975",
+      "entries": [
+        {
+          "path": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbx",
+          "bytes": 17125148,
+          "sha256": "ad5a6a1550ce43729d01e0e094c97588bc8e053de912f16501326581148d2627",
+          "fbxVersion": 7400
+        },
+        {
+          "path": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_normal.PNG",
+          "bytes": 1125607,
+          "sha256": "3251ee85b41511af47d0124aebb6ae1ea6be276c2288e9fef533c5f8da6ad3a9",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_basecolor.JPEG",
+          "bytes": 1508367,
+          "sha256": "0ca88d912050af236cbf4655d880fb01e20be9a281d031bdb0749698817a4c99",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_roughness.JPEG",
+          "bytes": 1490825,
+          "sha256": "35e461d90f6b6daa811ea41cb39dea4e6d568c46a25589cafab190489b98373c",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_metallic.JPEG",
+          "bytes": 1611752,
+          "sha256": "e5236d439a8256ebe6589ccd366eff23dc3d582d752fc53c68eb1e9cf1b6cff0",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "L"
+        },
+        {
+          "path": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_rm.JPEG",
+          "bytes": 1586710,
+          "sha256": "e7784754b05dc57c15a70067f3730eeff6eff1d95452ebc53962b2b7232aa78f",
+          "dimensions": [
+            4096,
+            4096
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "assetDirectory": "Assets/SpaceMiner/Art/Tripo/ChargingCradle"
+    }
+  ]
+}

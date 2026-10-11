@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-11",
+  "request": "Replace plain yellow mount with a hull-style cassette containing the retracting arm; prevent stowed laser clipping",
+  "changedScripts": [
+    "Assets/SpaceMiner/Scripts/MaintenanceLaserVisual.cs",
+    "Assets/SpaceMiner/Scripts/MaintenanceDroneShowcase.cs",
+    "Assets/SpaceMiner/Scripts/TripoDockPreview.cs"
+  ],
+  "build": {
+    "log": "Logs/maintenance-cassette-final-build-20261011.log",
+    "development": true,
+    "exitCode": 0,
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "deployment": "Builds/MaintenanceShowcase",
+    "sha256VerifiedFiles": 247,
+    "sourceHashMatchesBuildCopy": true
+  },
+  "runtime": {
+    "log": "Logs/maintenance-cassette-final-check-20261011.log",
+    "flag": "-maintenanceShowcaseCheck",
+    "resolution": [1600, 1000],
+    "checks": 168,
+    "exitCode": 0,
+    "completedJobs": 1,
+    "result": "Wartungsmodul-2026-10-11/result.json",
+    "checked": [
+      "Rendered laser-head vertices stay beyond the original hull's conservative triangle envelope in 11 extension poses",
+      "Rendered laser rear remains outside cassette mouth in all 11 poses",
+      "Stowed head and cassette fit the cradle outer footprint",
+      "Actual moving sleeve vertices are housed, except the short coupling tip",
+      "123 conservative body and fully extended tool envelope samples during departure, approach, turn and landing",
+      "Complete scan, welding, inspection, return, exact parking rotation/position, charging and interchangeable mining-head flow",
+      "Welding aperture orientation, hull contact, effects and pause behavior"
+    ]
+  },
+  "geometry": {
+    "toolAxisMetres": [0.7551889, 1.3],
+    "originalHullEnvelopeRightMetres": 0.5051889,
+    "sampledHullSaddleRightMetres": [0.4638545, 0.4666248],
+    "stowedHeadZMetres": 1.09,
+    "extendedHeadZMetres": 1.72,
+    "mount": "Two bolted saddles, isolator pads and structural stand-offs; visible upper/lower fasteners",
+    "housing": "Separate bevelled blue-grey armour panels, service hatch, vents, small safety mark, recessed indicator and open guide bore",
+    "arm": "Fixed actuator barrel, hollow moving outer sleeve and polished inner piston"
+  },
+  "visual": {
+    "folder": "Wartungsmodul-2026-10-11",
+    "screenshots": 9,
+    "inspected": ["09-stowed-cassette.png", "08-laser-detail.png", "04-welding.png"]
+  },
+  "limitations": [
+    "Isolated cosmetic showcase; campaign resources, damage, XP and saves unchanged",
+    "Conservative station and hull envelopes; no general drone traffic avoidance or exact cradle-rail/contact validation",
+    "Original Tripo mesh unchanged and still unoptimized",
+    "No Release test, manual input acceptance or performance benchmark"
+  ],
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 15856,
+    "respondingVerified": true,
+    "log": "Logs/maintenance-cassette-preview.log"
+  }
+}

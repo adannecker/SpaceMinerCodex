@@ -7,8 +7,8 @@ namespace SpaceMiner
     {
         public static bool IsOpen { get; private set; }
         private static int closedFrame = -1;
-        public static bool BlocksInput => SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || IsOpen || closedFrame == Time.frameCount || TechTreeMenu.BlocksInput;
-        public static bool PausesSimulation => SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || (BlocksInput && SettingsStore.Current.Gameplay.PauseInMenu);
+        public static bool BlocksInput => SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || IsOpen || closedFrame == Time.frameCount || TechTreeMenu.BlocksInput || RingConstructionSimulator.BlocksInput;
+        public static bool PausesSimulation => RingConstructionSimulator.BlocksInput || SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || (BlocksInput && SettingsStore.Current.Gameplay.PauseInMenu);
         private readonly SettingsSession session = new SettingsSession();
         private SpaceMinerPlayerSettings draft => session.Draft;
         private int page; private int bindingCapture = -1;
@@ -38,7 +38,7 @@ namespace SpaceMiner
             if (FindFirstObjectByType<SettingsMenu>() == null && FindFirstObjectByType<OrbitCamera>() != null)
                 new GameObject("SpaceMiner Settings").AddComponent<SettingsMenu>();
         }
-        private void Awake() { SettingsStore.Load(); gameObject.AddComponent<SettingsUiAudio>(); gameObject.AddComponent<TechTreeMenu>(); gameObject.AddComponent<StartMenu>(); gameObject.AddComponent<QuitMenu>(); }
+        private void Awake() { SettingsStore.Load(); gameObject.AddComponent<SettingsUiAudio>(); gameObject.AddComponent<TechTreeMenu>(); gameObject.AddComponent<RingConstructionSimulator>(); gameObject.AddComponent<StartMenu>(); gameObject.AddComponent<QuitMenu>(); }
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         private System.Collections.IEnumerator Start()
         {
@@ -83,7 +83,7 @@ namespace SpaceMiner
 #endif
             if (IsOpen && Input.GetKeyDown(KeyCode.Escape)) { if (bindingCapture >= 0) bindingCapture = -1; else Cancel(); }
         }
-        public void Open() { var tree = GetComponent<TechTreeMenu>(); if (TechTreeMenu.IsOpen && tree != null) tree.Close(); session.Begin(); scroll = Vector2.zero; IsOpen = true; status = "CORE ONLINE | SYSTEM NOMINAL | BUILD " + Application.version; statusColor = SpaceMinerUi.Cyan; }
+        public void Open() { if (RingConstructionSimulator.IsOpen) GetComponent<RingConstructionSimulator>()?.Close(); var tree = GetComponent<TechTreeMenu>(); if (TechTreeMenu.IsOpen && tree != null) tree.Close(); session.Begin(); scroll = Vector2.zero; IsOpen = true; status = "CORE ONLINE | SYSTEM NOMINAL | BUILD " + Application.version; statusColor = SpaceMinerUi.Cyan; }
         public void Cancel() { bindingCapture = -1; IsOpen = false; closedFrame = Time.frameCount; session.Cancel(); }
         internal void ShowInterfacePage() { page = 4; scroll = Vector2.zero; }
         public bool Apply()
@@ -92,7 +92,7 @@ namespace SpaceMiner
             status = "EINSTELLUNGEN GESPEICHERT"; statusColor = SpaceMinerUi.Success; return true;
         }
         private void OnDestroy() { IsOpen = false; session.Cancel(); ui.Dispose(); entryIcons.Dispose(); }
-        public static bool OwnsScreenPoint(Vector3 mouse) => IsOpen || TechTreeMenu.OwnsScreenPoint(mouse) || EntryButton.Contains(UiLayout.Point(mouse));
+        public static bool OwnsScreenPoint(Vector3 mouse) => IsOpen || RingConstructionSimulator.IsOpen || RingConstructionSimulator.EntryButton.Contains(UiLayout.Point(mouse)) || TechTreeMenu.OwnsScreenPoint(mouse) || EntryButton.Contains(UiLayout.Point(mouse));
         private void OnGUI()
         {
             var savedMatrix = GUI.matrix; int savedDepth = GUI.depth;
@@ -108,7 +108,7 @@ namespace SpaceMiner
             ui.Configure(themeOverride ?? SettingsStore.Current.Accessibility); int previousDepth = GUI.depth; GUI.depth = -200;
             if (!IsOpen)
             {
-                if (StartMenu.IsOpen || TechTreeMenu.IsOpen) return;
+                if (StartMenu.IsOpen || TechTreeMenu.IsOpen || RingConstructionSimulator.IsOpen) return;
                 if (GUI.Button(EntryButton, new GUIContent("", "Einstellungen öffnen"), ui.Button)) { Open(); SettingsUiAudio.Activate(); }
                 entryIcons.Draw(new Rect(EntryButton.x + 7, EntryButton.y + 5, 20, 20), "settings", SpaceMinerUi.Cyan);
                 SettingsUiAudio.Observe(EntryButton, "settings-entry");

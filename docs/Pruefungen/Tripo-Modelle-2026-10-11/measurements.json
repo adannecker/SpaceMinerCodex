@@ -1,0 +1,20 @@
+{
+    "cradleMetres": {
+        "x": 2.6499950885772705,
+        "y": 0.7266286611557007,
+        "z": 3.3315067291259766
+    },
+    "droneMetres": {
+        "x": 2.000000476837158,
+        "y": 1.6896255016326904,
+        "z": 2.2008230686187744
+    },
+    "droneRelativeScale": 1.0,
+    "centreDeckHeight": 0.13047359883785248,
+    "lateralOuterMargin": 0.32499730587005615,
+    "longitudinalOuterMargin": 0.5653418302536011,
+    "archiveModelsLoaded": true,
+    "uniformScale": true,
+    "outerFootprintContained": true,
+    "limitation": "Outer bounding boxes only: rails, arms, charging connector and entry clearance require visual/mesh inspection."
+}

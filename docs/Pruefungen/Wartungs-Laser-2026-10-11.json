@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-11",
+  "scope": "Detailed independent maintenance laser and matching visual effects",
+  "sourceProjectVersion": "6000.4.7f1",
+  "buildEditor": "6000.6.4f1",
+  "projectMigrated": false,
+  "build": {
+    "type": "Development",
+    "deployedPath": "Builds/MaintenanceShowcase/SpaceMiner.exe",
+    "exitCode": 0,
+    "method": "SpaceMiner.Editor.TripoModelBuild.BuildMaintenanceShowcase",
+    "log": "Logs/maintenance-laser-build-delivery-20261011.log",
+    "sha256VerifiedFiles": 247
+  },
+  "runtime": {
+    "flag": "-maintenanceShowcaseCheck",
+    "checks": 99,
+    "exitCode": 0,
+    "completeJobs": 1,
+    "log": "Logs/maintenance-laser-check-delivery-20261011.log",
+    "resolution": [
+      1600,
+      1000
+    ]
+  },
+  "regression": {
+    "flag": "-tripoModelCheck",
+    "resolution": [
+      1280,
+      800
+    ],
+    "exitCode": 0,
+    "log": "Logs/maintenance-laser-size-regression-20261011.log"
+  },
+  "model": {
+    "triangles": 16880,
+    "features": [
+      "Chamfered casing",
+      "Separate service covers and cooling slots",
+      "Seven cooling fins",
+      "Knurled focus collar",
+      "Tapered nozzle with inset aperture",
+      "Hex fasteners",
+      "Coolant tubes and power return",
+      "Accessory rail"
+    ],
+    "finishes": [
+      "Navy enamel",
+      "Machined steel",
+      "Graphite ceramic",
+      "Copper fittings",
+      "Amber safety marks",
+      "Recessed cyan optics"
+    ],
+    "physicsCollidersAdded": false,
+    "textures": "Procedurally generated brushed base finish, micro normals and separate metallic/smoothness maps",
+    "script": "Assets/SpaceMiner/Scripts/MaintenanceLaserVisual.cs",
+    "tripoCreditsSpent": 0,
+    "proceduralMeshes": true,
+    "separateFromOriginalFBX": true
+  },
+  "effects": {
+    "sparkTexture": "32x32 radial alpha falloff",
+    "beamCoreDiameterMetres": 0.0045,
+    "coronaDiameterMetres": 0.014,
+    "beamOrigin": "Actual nozzle aperture",
+    "particleRendering": "Stretched soft sparks"
+  },
+  "visual": {
+    "closeupButton": "Laser im Detail ansehen",
+    "screenshots": 8,
+    "followsMovingTool": true,
+    "folder": "Wartungs-Laser-2026-10-11",
+    "inspected": [
+      "08-laser-detail.png",
+      "04-welding.png"
+    ]
+  },
+  "limits": [
+    "Cosmetic isolated showcase; no campaign repair economy or actual mining implementation",
+    "Original imported mesh unchanged and unoptimized",
+    "No Release test, manual input acceptance or performance benchmark",
+    "Route checks remain conservative body checks, not exact tool collision"
+  ],
+  "interactivePreview": {
+    "opened": true,
+    "pid": 27604,
+    "respondingVerified": true,
+    "log": "Logs/maintenance-laser-preview.log"
+  }
+}

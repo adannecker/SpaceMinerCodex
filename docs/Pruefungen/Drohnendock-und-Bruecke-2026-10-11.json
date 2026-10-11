@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-11",
+  "change": "Drei Außenschleusen an Werkstatthalle, offenes Drohnendock mit zwei Reihen, Brückenfenster und erstes Stationspult",
+  "unity": "6000.6.4f1, separate Buildkopie bei geschlossenem Editor; Quellprojektversion 6000.4.7f1 unverändert",
+  "builds": {
+    "demoDevelopment": "succeeded",
+    "gameDevelopment": "succeeded",
+    "gameRelease": "succeeded",
+    "log": "Logs/dock-bridge-build-validated-20261011.log",
+    "sourceComparison": "Sechs betroffene C#-Quellen per SHA256 mit Buildkopie verglichen"
+  },
+  "runtimeChecks": [
+    {"flag": "-startStationCheck", "checks": 121, "exitCode": 0, "log": "Logs/dock-bridge-startStationCheck-20261011.log"},
+    {"flag": "-ringWalkthroughCheck", "checks": 132, "exitCode": 0, "log": "Logs/dock-bridge-ringWalkthroughCheck-20261011.log"},
+    {"flag": "-playerVitalsCheck", "checks": 29, "exitCode": 0, "log": "Logs/dock-bridge-playerVitalsCheck-20261011.log"}
+  ],
+  "evidence": [
+    "Drei Außenschleusen mit Kampagnen-CharacterController durchlaufen; je drei auf beiden Demo-Ringen geprüft",
+    "Zehn reale Dockplätze, zwei Höhenreihen, freie Auspark- und Steigflugwege mit 0,6-m-SphereCasts gegen Stationsgeometrie geprüft",
+    "Echte Konsole, Scan, Wasserauftrag, Tankentladung, Rückkehr und vollständige Versorgung der Drohne bestanden",
+    "Layoutrevision3: gültige Revision2-Spielerpose/Blick erhalten, Pose in neuer Hallenwand sicher zum Pult umgesetzt; Drohnenposition mit unveränderter Batterie migriert",
+    "Vorhandene Ring-/Raumrouten, Stamina und Spielstände geprüft; Dev-Sprint10,4/Release5,2 m/s in kompilierten Assemblies bestätigt",
+    "Build- und Laufzeitlogs ohne CS-/Shaderfehler oder Ausnahmen"
+  ],
+  "visualReview": {
+    "folder": "Drohnendock-und-Bruecke-2026-10-11",
+    "screenshots": 11,
+    "inspected": ["08-halle-drei-aussenschleusen.png", "10-stationspult-fenster.png", "11-aussendock-uebersicht.png"],
+    "iteration": "Zunächst undurchsichtige Standard-Shader-Fenster durch vorhandenen CargoGlass-Shader ersetzt; Pultbeschriftung verkleinert und Dockschild an Hallenfront platziert"
+  },
+  "deployment": {
+    "targets": ["Builds/RingSimulator", "Builds/Windows", "Builds/WindowsRelease"],
+    "filesVerifiedSHA256": [247, 247, 156],
+    "backupSuffix": "before-dock-bridge-20261011-174711",
+    "manifest": "Logs/dock-bridge-deployment-20261011.json",
+    "preview": "Development-Startstation sichtbar geöffnet, laufend/antwortend und ohne protokollierte Ausnahmen bestätigt"
+  },
+  "limits": "Geometrie-/Bedienprototyp ohne automatische Torblätter, Druckzyklen oder Reparaturaufträge. Monitore/Tasten am3D-Pult sind Darstellung, E bedient bestehende Oberfläche. Kein vollständiger Kapitel-/Release-Durchlauf, keine manuelle OS-Eingabeabnahme, kein Editor6000.4.7f1-Lauf oder vollständiger Verkehrstest."
+}

@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-11",
+  "scope": "Ring-Demo: Maussteuerung, Sprinttempo, Mausfreigabe und Vollbild",
+  "sourceUnityVersion": "6000.4.7f1",
+  "testedUnityVersion": "6000.6.4f1",
+  "build": {
+    "success": true,
+    "log": "Logs/ring-controls-build-delivery-20261011.log",
+    "targets": [
+      "RingSimulator demo development",
+      "RingSimulatorGame development",
+      "RingSimulatorRelease release"
+    ],
+    "sourceProjectMigrated": false,
+    "sceneRegenerated": false
+  },
+  "playerChecks": [
+    {
+      "resolution": "1600x1000",
+      "log": "Logs/ring-controls-demo-delivery-20261011.log",
+      "checks": 96,
+      "flag": "-ringWalkthroughCheck",
+      "target": "demo",
+      "exitCode": 0
+    },
+    {
+      "resolution": "1280x800",
+      "log": "Logs/ring-controls-game-delivery-20261011.log",
+      "checks": 96,
+      "flag": "-ringWalkthroughCheck",
+      "target": "development",
+      "exitCode": 0
+    },
+    {
+      "resolution": "1280x800",
+      "log": "Logs/ring-controls-planner-delivery-20261011.log",
+      "checks": 101,
+      "flag": "-ringSimulatorCheck",
+      "target": "development",
+      "exitCode": 0
+    },
+    {
+      "resolution": "1280x800",
+      "log": "Logs/ring-controls-interior-delivery-20261011.log",
+      "checks": 59,
+      "flag": "-stationInteriorCheck",
+      "target": "development",
+      "exitCode": 0
+    }
+  ],
+  "totalChecks": 352,
+  "checkedBehavior": [
+    "Cursor stays locked over six rendered frames while normal habitat controller remains active",
+    "Mouse yaw and pitch through the same ProcessMovement handler used by live Input",
+    "Walk 2.2 m/s; sprint 4 m/s and stamina consumption through live movement handler",
+    "Tab releases cursor and suspends movement, then restores mouse look",
+    "F11 and Alt Enter handler permitted while ring overlay pauses campaign",
+    "Native fullscreen, original window dimensions restored, camera texture matches framebuffer",
+    "Fullscreen GUI buttons resolve the actual camera DisplayModeController",
+    "Construction planning fullscreen and existing 101-check expansion regression",
+    "Normal habitat 59-check movement, collision, menu, camera and drone-flight regression"
+  ],
+  "controls": {
+    "look": "mouse",
+    "lift": "E",
+    "backToPlanning": "Escape",
+    "sprint": "left or right Shift",
+    "fullscreen": "F11 or Alt Enter, or top-right button",
+    "map": "M",
+    "releaseMouse": "Tab",
+    "close": "F6",
+    "walk": "configured WASD bindings"
+  },
+  "changedScripts": [
+    "DisplayModeController.cs",
+    "StationInteriorMode.cs",
+    "RingConstructionSimulator.cs",
+    "RingWalkthrough.cs",
+    "RingWalkthroughCheck.cs"
+  ],
+  "changedScriptHashesMatchBuildCopy": true,
+  "deployment": [
+    {
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\RingSimulator",
+      "filesVerified": 247,
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\RingSimulator-before-ring-controls-20261011-135456"
+    },
+    {
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\Windows",
+      "filesVerified": 247,
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\Windows-before-ring-controls-20261011-135456"
+    },
+    {
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\WindowsRelease",
+      "filesVerified": 156,
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\WindowsRelease-before-ring-controls-20261011-135456"
+    }
+  ],
+  "screenshots": [
+    "Ringsteuerung-2026-10-11/fenster-1280x800.png",
+    "Ringsteuerung-2026-10-11/vollbild.png"
+  ],
+  "visualReview": "Both saved images inspected: controls and fullscreen button visible, labels fit with large font settings",
+  "limits": [
+    "Automated production-handler input; no manual OS keyboard or mouse acceptance test",
+    "Release built, no separate release gameplay run",
+    "Source Unity 6000.4.7f1 is not installed here; validated in separate 6000.6.4f1 copy",
+    "No commit or push"
+  ],
+  "exceptionsInFinalLogs": false
+}

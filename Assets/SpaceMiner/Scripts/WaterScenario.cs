@@ -100,6 +100,7 @@ namespace SpaceMiner
 
         public void ResetScenario()
         {
+            StationInteriorMode.Current?.Vitals.Reset();
             WaterLiters = StartingWaterLiters;
             Deliveries = 0;
             DeliveredLiters = 0f;

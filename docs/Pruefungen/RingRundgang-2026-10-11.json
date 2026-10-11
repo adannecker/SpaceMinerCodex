@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-11",
+  "scope": "Begehbarer isolierter Stationsentwurf mit offenen Bereichen zur Groessenprobe",
+  "sourceUnityVersion": "6000.4.7f1",
+  "testedUnityVersion": "6000.6.4f1",
+  "buildCopy": "Builds/LocalPreview-6000.6.4f1",
+  "build": {
+    "result": "success",
+    "log": "Logs/ring-walkthrough-build-delivery-20261011.log",
+    "targets": ["RingSimulator demo development", "RingSimulatorGame development", "RingSimulatorRelease release"],
+    "sceneRegenerated": false,
+    "sourceProjectMigrated": false
+  },
+  "playerChecks": [
+    {"target": "demo", "resolution": "1600x1000", "flag": "-ringWalkthroughCheck", "checks": 76, "exitCode": 0, "log": "Logs/ring-walkthrough-1600-delivery-20261011.log"},
+    {"target": "game development", "resolution": "1280x800", "flag": "-ringWalkthroughCheck", "checks": 76, "exitCode": 0, "log": "Logs/ring-walkthrough-1280-delivery-20261011.log"},
+    {"target": "game development", "resolution": "1280x800", "flag": "-ringSimulatorCheck", "checks": 101, "exitCode": 0, "log": "Logs/ring-construction-regression-delivery-20261011.log"}
+  ],
+  "checkedBehavior": [
+    "Twelve ring floor segments and flush connection joints per level",
+    "Actual CharacterController enters all twelve outer and all twelve inner areas on both levels",
+    "Crossing a segment joint without falling; walls block departure away from doors",
+    "Command centre and storage third radial stage reachable around furniture",
+    "All three outer workshop portals open for size review",
+    "Two inner lift shafts carry player up and down; upper landing supports exit",
+    "Sprint consumes isolated stamina and map mode freezes walking",
+    "Settings replaces walkthrough; return to planner, reopen and close release input",
+    "Campaign water, worker and habitat pose unchanged",
+    "No Exception or Shader error markers in final player logs including shutdown"
+  ],
+  "visualReview": {
+    "interfaceScale": 1.5,
+    "textScale": 1.4,
+    "capturedScreenshots": 18,
+    "retainedScreenshots": 12,
+    "folder": "RingRundgang-2026-10-11",
+    "reviewed": ["traffic ring at both resolutions", "command centre", "drone deck", "lift", "floor plan"],
+    "corrections": ["Depth-tested text stops labels showing through walls", "Readable map toggle", "Wide value column for health 100 at large text"]
+  },
+  "geometry": {"rings": 2, "sectorsPerRing": 12, "innerRadiusMeters": 20, "outerRadiusMeters": 29, "walkwayWidthMeters": 9, "deckDistanceMeters": 8, "radialStageDepthMeters": 8, "ceilingHeightMeters": 5.5},
+  "delivery": {
+    "allFilesSha256Verified": true,
+    "RingSimulator": 247,
+    "WindowsDevelopment": 247,
+    "WindowsRelease": 156,
+    "oldPlayersBackedUp": true,
+    "localManifest": "Logs/ring-walkthrough-deployment-20261011.json",
+    "eightSourceAndMetaFilesMatchBuildCopy": true
+  },
+  "earlierFailuresResolved": [
+    "Some inner room closing walls remained due to name lookup; references now used directly",
+    "Command-centre test path originally hit side console; route corrected around furniture",
+    "World text originally rendered through geometry; dedicated depth-tested shader added",
+    "Shutdown destroyed root before owner cleanup; null-safe cleanup verified"
+  ],
+  "limits": [
+    "Blockout is independent of existing construction simulation and campaign station",
+    "Moving scale-demo drones stop for player but have no physical pushing collision or full traffic planner",
+    "Parked upper/lower drones are docking racks, not walkable galleries",
+    "Later twelve-place drone capacity is a displayed plan, not an implemented expansion interaction",
+    "No pressurisation, functioning repair/manufacturing, lift queue or automatic cargo delivery",
+    "No new manual keyboard acceptance or separate release playthrough; automated checks in development players",
+    "No Tripo generation, credits spent, external models imported, commit or push"
+  ]
+}

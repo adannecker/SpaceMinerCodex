@@ -45,14 +45,28 @@ namespace SpaceMiner
         public float PhaseElapsed => phaseSeconds;
         public Vector3 SurfacePoint { get; private set; }
         public Vector3 SurfaceNormal { get; private set; }
-        public Vector3 CargoOutletPoint => transform.TransformPoint(CargoOutletOffset);
+        private Vector3 miningAxisOffset;
+        private float miningStandOff = 2.4f;
+        private Vector3 cargoPortOffset = CargoOutletOffset;
+        private DroneFlightPlanner navigator;
+        private Vector3[] route;
+        private int routeIndex;
+        private float launchDistance=1.8f,launchLift,holdHeight=8f;
+        private float unloadStart=25f,unloadEnd=215f;
+        internal void ConfigureUnloading(float start,float end) { unloadStart=start; unloadEnd=end; }
+        internal void ConfigureNavigation(DroneFlightPlanner planner) { navigator=planner; launchDistance=6; launchLift=1.1f; holdHeight=12; }
+        internal Vector3 HomeHoldPoint=>HomeApproachPoint+Vector3.up*holdHeight;
+        // Presentation geometry varies by hull. Defaults preserve existing drones and save behavior.
+        internal void ConfigureToolGeometry(Vector3 axisOffset, float standOff, Vector3 outlet)
+        { miningAxisOffset=axisOffset; miningStandOff=standOff; cargoPortOffset=outlet; }
+        public Vector3 CargoOutletPoint => transform.TransformPoint(cargoPortOffset);
         private Transform Socket => Scenario != null ? Scenario.GetComponent<StationVisual>()?.TankSocket : null;
         public Vector3 TankOutward => Socket != null ? Socket.forward : Vector3.back;
         public Quaternion TankDockRotation => Facing(TankOutward);
-        public Vector3 TankDockPoint => TankInlet - TankDockRotation * CargoOutletOffset;
+        public Vector3 TankDockPoint => TankInlet - TankDockRotation * cargoPortOffset;
         public Vector3 TankApproachPoint => TankDockPoint + TankOutward * 4f + Vector3.up * 0.6f;
-        public Vector3 HomeApproachPoint => HomePosition + HomeRotation * Vector3.forward * 1.8f;
-        public float UnloadProgress => Phase == DronePhase.Unloading ? Mathf.Clamp01((phaseSeconds-25f)/190f) : 0f;
+        public Vector3 HomeApproachPoint => HomePosition + HomeRotation * Vector3.forward * launchDistance+Vector3.up*launchLift;
+        public float UnloadProgress => Phase == DronePhase.Unloading ? Mathf.Clamp01((phaseSeconds-unloadStart)/Mathf.Max(1f,unloadEnd-unloadStart)) : 0f;
         public Vector3 TankInlet
         {
             get
@@ -135,7 +149,7 @@ namespace SpaceMiner
         {
             if (source == null || !source.CanMineWater) { reason = "Kein abbaubares Wasservorkommen."; return false; }
             Vector3 approach = ApproachPoint(source);
-            Vector3 above = HomeApproachPoint + Vector3.up * 8f;
+            Vector3 above = HomeHoldPoint;
             Budget outbound = FlightBudget(CargoCapacityKg, 240f, HomeApproachPoint, above, approach);
             Budget returning = ReturnBudget(CargoCapacityKg);
             float minimumKg = Mathf.Min(1f, source.RemainingRawKg);
@@ -166,6 +180,8 @@ namespace SpaceMiner
             public float fuel, battery, cargo, speed, burnedWater, legDistance, phaseSeconds, cargoGoal, cargoWaterFraction, finalRawGoal;
             public bool tankOrder, parkingAbove, outboundAbove, productiveTrip, cancelledTrip;
             public bool operational, needsInitialCharge;
+            public Vector3[] route;
+            public int routeIndex;
             public float[] hardware;
         }
         public SavedState CaptureState() => new SavedState {
@@ -176,7 +192,7 @@ namespace SpaceMiner
             maneuverStart=maneuverStart, maneuverRotation=maneuverRotation, parkingAbove=parkingAbove, outboundAbove=outboundAbove,
             productiveTrip=productiveTrip, cancelledTrip=cancelledTrip, returnReason=ReturnReason,
             hardware=new[]{DryMassKg,FuelCapacityLiters,BatteryCapacityKwh,CargoCapacityKg,CruiseSpeed,ThrustNewtons,ExhaustSpeed,HeatingKwhPerLiter,MiningRateKgPerSecond,MiningPowerKw,OnboardPowerKw,ReserveFraction},
-            operational=IsOperational,needsInitialCharge=NeedsInitialCharge
+            operational=IsOperational,needsInitialCharge=NeedsInitialCharge,route=route,routeIndex=routeIndex
         };
         public void RestoreState(SavedState state)
         {
@@ -194,7 +210,34 @@ namespace SpaceMiner
             SurfacePoint=state.surfacePoint;SurfaceNormal=state.surfaceNormal;maneuverStart=state.maneuverStart;
             maneuverRotation=state.maneuverRotation;parkingAbove=state.parkingAbove;outboundAbove=state.outboundAbove;
             productiveTrip=state.productiveTrip;cancelledTrip=state.cancelledTrip;
+            route=state.route;routeIndex=state.routeIndex;
             if(Target!=null && (Phase==DronePhase.Launching || Phase==DronePhase.Outbound || Phase==DronePhase.Docking || Phase==DronePhase.Mining || Phase==DronePhase.Undocking)) UseWorkingSurface();
+            GetComponent<MiningDroneVisual>()?.RefreshPose();
+        }
+
+        internal void RebindHome(Transform berth)
+        {
+            HomePosition = berth.position; HomeRotation = berth.rotation;
+            MigrateStationPose();
+        }
+        internal void MigrateStationPose()
+        {
+            // Preserve supplies, cargo, orders and service progress when upgrading a legacy save.
+            if (Phase == DronePhase.Ready || Phase == DronePhase.Disabled || Phase == DronePhase.WaitingForPower || Phase == DronePhase.Servicing)
+                transform.SetPositionAndRotation(HomePosition, HomeRotation);
+            else if (Phase == DronePhase.Parking)
+                BeginFlight(parkingAbove?HomeHoldPoint:HomeApproachPoint, DronePhase.Parking);
+            else if (Phase == DronePhase.Berthing || Phase == DronePhase.Launching)
+            {
+                transform.SetPositionAndRotation(HomeApproachPoint, HomeRotation);
+                BeginManeuver(Phase);
+            }
+            else if (Phase == DronePhase.Returning) BeginFlight(TankApproachPoint, DronePhase.Returning);
+            else if (Phase == DronePhase.TankDocking || Phase == DronePhase.TankUndocking || Phase == DronePhase.Unloading)
+            {
+                transform.SetPositionAndRotation(TankDockPoint, TankDockRotation);
+                maneuverStart = TankDockPoint; maneuverRotation = TankDockRotation;
+            }
             GetComponent<MiningDroneVisual>()?.RefreshPose();
         }
 
@@ -211,6 +254,7 @@ namespace SpaceMiner
             Target = null;
             productiveTrip = cancelledTrip = false;
             ReturnReason = "";
+            route=null;routeIndex=0;
         }
 
         private Vector3 ApproachPoint(AsteroidResource source)
@@ -274,6 +318,13 @@ namespace SpaceMiner
 
         private void BeginFlight(Vector3 point, DronePhase phase)
         {
+            bool vertical=(point-HomeHoldPoint).sqrMagnitude<.01f && (transform.position-HomeApproachPoint).sqrMagnitude<.01f
+                || (point-HomeApproachPoint).sqrMagnitude<.01f && (transform.position-HomeHoldPoint).sqrMagnitude<.01f;
+            route=navigator!=null && !vertical?navigator.Plan(transform.position,point):new[]{point}; routeIndex=0;
+            StartLeg(route[0],phase);
+        }
+        private void StartLeg(Vector3 point,DronePhase phase)
+        {
             destination = point;
             legDistance = Vector3.Distance(transform.position, point);
             Speed = 0f;
@@ -295,8 +346,9 @@ namespace SpaceMiner
                 case DronePhase.Launching:
                     phaseSeconds += seconds;
                     transform.rotation = HomeRotation;
-                    transform.position = Vector3.Lerp(maneuverStart, HomeApproachPoint, Mathf.SmoothStep(0,1,phaseSeconds/120f));
-                    if (phaseSeconds >= 120f) { outboundAbove = true; BeginFlight(HomeApproachPoint + Vector3.up * 8f, DronePhase.Outbound); }
+                    transform.position=launchLift>0?(phaseSeconds<35?Vector3.Lerp(maneuverStart,HomePosition+Vector3.up*launchLift,Mathf.SmoothStep(0,1,phaseSeconds/35)):
+                        Vector3.Lerp(HomePosition+Vector3.up*launchLift,HomeApproachPoint,Mathf.SmoothStep(0,1,(phaseSeconds-35)/85))):Vector3.Lerp(maneuverStart,HomeApproachPoint,Mathf.SmoothStep(0,1,phaseSeconds/120));
+                    if (phaseSeconds >= 120f) { outboundAbove = true; BeginFlight(HomeHoldPoint, DronePhase.Outbound); }
                     break;
                 case DronePhase.TankDocking:
                     phaseSeconds += seconds;
@@ -307,12 +359,13 @@ namespace SpaceMiner
                 case DronePhase.TankUndocking:
                     phaseSeconds += seconds;
                     transform.position = Vector3.Lerp(maneuverStart,TankApproachPoint,Mathf.SmoothStep(0,1,Mathf.Clamp01((phaseSeconds-30f)/90f)));
-                    if (phaseSeconds >= 120f) { parkingAbove = true; BeginFlight(HomeApproachPoint + Vector3.up * 8f, DronePhase.Parking); }
+                    if (phaseSeconds >= 120f) { parkingAbove = true; BeginFlight(HomeHoldPoint, DronePhase.Parking); }
                     break;
                 case DronePhase.Berthing:
                     phaseSeconds += seconds;
                     transform.rotation = Quaternion.Slerp(maneuverRotation,HomeRotation,Mathf.SmoothStep(0,1,phaseSeconds/45f));
-                    transform.position = Vector3.Lerp(maneuverStart,HomePosition,Mathf.SmoothStep(0,1,Mathf.Clamp01((phaseSeconds-45f)/75f)));
+                    transform.position=launchLift>0?(phaseSeconds<100?Vector3.Lerp(maneuverStart,HomePosition+Vector3.up*launchLift,Mathf.SmoothStep(0,1,Mathf.Clamp01((phaseSeconds-45)/55))):
+                        Vector3.Lerp(HomePosition+Vector3.up*launchLift,HomePosition,Mathf.SmoothStep(0,1,(phaseSeconds-100)/20))):Vector3.Lerp(maneuverStart,HomePosition,Mathf.SmoothStep(0,1,Mathf.Clamp01((phaseSeconds-45)/75)));
                     if (phaseSeconds >= 120f) {
                         transform.rotation = HomeRotation;
                         if (productiveTrip && !cancelledTrip) Scenario.Mining.CompleteTrip();
@@ -323,7 +376,8 @@ namespace SpaceMiner
                 case DronePhase.Docking:
                     phaseSeconds += seconds;
                     float docking = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(phaseSeconds / 60f));
-                    transform.position = Vector3.Lerp(maneuverStart, SurfacePoint + SurfaceNormal * 2.4f, docking);
+                    transform.position = Vector3.Lerp(maneuverStart, SurfacePoint + SurfaceNormal * miningStandOff
+                        - Facing(-SurfaceNormal) * miningAxisOffset, docking);
                     transform.rotation = Quaternion.Slerp(maneuverRotation, Facing(-SurfaceNormal), docking);
                     if (phaseSeconds >= 120f) BeginManeuver(DronePhase.Mining);
                     break;
@@ -390,17 +444,22 @@ namespace SpaceMiner
             float acceleration = Mathf.Max(.0001f, ThrustNewtons / mass);
             float deltaV = 0f, duration = maneuverSeconds;
             for (int i = 1; i < points.Length; i++) {
-                float distance = Vector3.Distance(points[i - 1], points[i]);
-                float peak = Mathf.Min(CruiseSpeed, Mathf.Sqrt(acceleration * distance));
-                deltaV += 2f * peak;
-                duration += 2f * peak / acceleration + Mathf.Max(0f, distance - peak * peak / acceleration) / Mathf.Max(.001f, peak);
+                bool vertical=(points[i]-points[i-1]).sqrMagnitude>0 && Vector3.ProjectOnPlane(points[i]-points[i-1],Vector3.up).sqrMagnitude<.01f;
+                var path=navigator!=null && !vertical?navigator.Plan(points[i-1],points[i]):new[]{points[i]};
+                Vector3 from=points[i-1];
+                foreach(var point in path) {
+                    float distance = Vector3.Distance(from,point);
+                    float peak = Mathf.Min(CruiseSpeed, Mathf.Sqrt(acceleration * distance));
+                    deltaV += 2f * peak;
+                    duration += 2f * peak / acceleration + Mathf.Max(0f, distance - peak * peak / acceleration) / Mathf.Max(.001f, peak); from=point;
+                }
             }
             float fuel = mass * (1f - Mathf.Exp(-deltaV / ExhaustSpeed)) * 1.15f;
             return new Budget { Fuel = fuel, Energy = fuel * HeatingKwhPerLiter + duration * OnboardPowerKw / 3600f };
         }
 
-        private Budget ReturnBudget(float cargo) => FlightBudget(cargo, 840f,
-            SurfacePoint + SurfaceNormal * 5f, TankApproachPoint, HomeApproachPoint + Vector3.up * 8f, HomeApproachPoint);
+        private Budget ReturnBudget(float cargo) => FlightBudget(cargo, navigator!=null?930f:840f,
+            SurfacePoint + SurfaceNormal * 5f, TankApproachPoint, HomeHoldPoint, HomeApproachPoint);
 
         private void MineWithinBudget(float seconds)
         {
@@ -431,6 +490,9 @@ namespace SpaceMiner
 
         private void Fly(float seconds)
         {
+            bool dockVertical=navigator!=null && (Phase==DronePhase.Outbound && outboundAbove || Phase==DronePhase.Parking && !parkingAbove);
+            if(dockVertical && Quaternion.Angle(transform.rotation,HomeRotation)>.1f)
+            { transform.rotation=Quaternion.RotateTowards(transform.rotation,HomeRotation,seconds*2); return; }
             Vector3 offset = destination - transform.position;
             float remaining = offset.magnitude;
             float acceleration = ThrustNewtons / (DryMassKg + FuelLiters + CargoKg);
@@ -441,14 +503,15 @@ namespace SpaceMiner
             float deltaV = Mathf.Abs(nextSpeed - Speed) + (arrived ? nextSpeed : 0f);
             if (!Burn(deltaV)) { Strand(); return; }
             Speed = nextSpeed;
-            if (offset.sqrMagnitude > 0.0001f)
-                transform.rotation = Quaternion.RotateTowards(transform.rotation, Facing(offset), seconds * 2f);
+            if(dockVertical) transform.rotation=HomeRotation;
+            else if (offset.sqrMagnitude > 0.0001f) transform.rotation = Quaternion.RotateTowards(transform.rotation, Facing(offset), seconds * 2f);
             transform.position += remaining > 0.0001f ? offset.normalized * Mathf.Min(travel, remaining) : Vector3.zero;
             if (arrived)
             {
                 transform.position = destination;
                 Speed = 0f;
                 phaseSeconds = 0f;
+                if(route!=null && routeIndex+1<route.Length) { StartLeg(route[++routeIndex],Phase); return; }
                 if (Phase == DronePhase.Outbound) {
                     if (outboundAbove) { outboundAbove = false; BeginFlight(ApproachPoint(Target),DronePhase.Outbound); }
                     else BeginManeuver(DronePhase.Docking);

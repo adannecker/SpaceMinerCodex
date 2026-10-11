@@ -70,6 +70,20 @@ namespace SpaceMiner
             {
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
                 var args = Environment.GetCommandLineArgs();
+                if (Array.IndexOf(args, "-tripoMiningShowcase") >= 0 || Array.IndexOf(args, "-tripoMiningCheck") >= 0)
+                    return Path.GetFullPath("Logs/TripoMining-settings/player-settings.json");
+                if (Array.IndexOf(args, "-maintenanceShowcase") >= 0 || Array.IndexOf(args, "-maintenanceShowcaseCheck") >= 0)
+                    return Path.GetFullPath("Logs/MaintenanceShowcase-settings/player-settings.json");
+                if (Array.IndexOf(args, "-tripoModelPreview") >= 0 || Array.IndexOf(args, "-tripoModelCheck") >= 0)
+                    return Path.GetFullPath("Logs/TripoModels-settings/player-settings.json");
+                if (Array.IndexOf(args, "-startStationCheck") >= 0)
+                    return Path.GetFullPath("Logs/Startstation-settings/player-settings.json");
+                if (Array.IndexOf(args, "-ringWalkthroughCheck") >= 0)
+                    return Path.GetFullPath("Logs/RingWalkthrough-settings/player-settings.json");
+                if (Array.IndexOf(args, "-playerVitalsCheck") >= 0)
+                    return Path.GetFullPath("Logs/PlayerVitals/player-settings.json");
+                if (Array.IndexOf(args, "-ringSimulatorCheck") >= 0)
+                    return Path.GetFullPath("Logs/RingSimulator-settings/player-settings.json");
                 if (Array.IndexOf(args, "-presentationCheck") >= 0)
                     return Path.GetFullPath("Logs/Presentation-settings/player-settings.json");
                 if (Array.IndexOf(args, "-stationUiAudioCheck") >= 0 || Array.IndexOf(args, "-stationUiAudioPreview") >= 0)

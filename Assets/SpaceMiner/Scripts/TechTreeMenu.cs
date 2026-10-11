@@ -29,6 +29,7 @@ namespace SpaceMiner
         }
         public void Open()
         {
+            if(RingConstructionSimulator.IsOpen)GetComponent<RingConstructionSimulator>()?.Close();
             var settings=GetComponent<SettingsMenu>();if(SettingsMenu.IsOpen&&settings!=null)settings.Cancel();
             laboratory??=new ResearchLaboratory();IsOpen=true;
         }
@@ -47,7 +48,7 @@ namespace SpaceMiner
             if(QuitMenu.BlocksInput||SaveGameMenu.IsOpen)return;
             ui.Configure(SettingsStore.Current.Accessibility);GUI.depth=-210;
             if(!IsOpen){
-                if(StartMenu.IsOpen||SettingsMenu.IsOpen||IntroSequence.BlocksGameplay||MemoryCinematic.IsPlaying)return;
+                if(StartMenu.IsOpen||SettingsMenu.IsOpen||RingConstructionSimulator.IsOpen||IntroSequence.BlocksGameplay||MemoryCinematic.IsPlaying)return;
                 string shortcut=SettingsStore.Current.Controls.Bindings.Get(CameraAction.Technology).ToString();
                 if(GUI.Button(EntryButton,new GUIContent("","Technologiebaum öffnen ("+shortcut+")"),ui.Button)){Open();SettingsUiAudio.Activate();}
                 icons.Draw(new Rect(EntryButton.x+7,EntryButton.y+5,20,20),"research",SpaceMinerUi.Cyan);

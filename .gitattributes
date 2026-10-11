@@ -1,0 +1,7 @@
+# Preserve original diagnostic evidence byte-for-byte, including Unity line endings.
+docs/Pruefungen/**/*.log -text -diff
+
+# Unity serializes empty YAML values with a trailing space; retain its output.
+*.meta whitespace=-blank-at-eol
+*.mat whitespace=-blank-at-eol
+*.prefab whitespace=-blank-at-eol

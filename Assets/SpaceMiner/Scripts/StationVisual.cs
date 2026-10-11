@@ -12,6 +12,47 @@ namespace SpaceMiner
         public Transform Berth(int index) { Build(); return berths[index]; }
         private void Awake() => Build();
 
+        internal void InstallStartLayout(StationInteriorLayout layout)
+        {
+            Build();
+            var old = transform.Find("Station Geometry");
+            var hull = old.Find("Water Ice Tank").GetComponent<Renderer>().sharedMaterial;
+            var dark = old.Find("Tank cap").GetComponent<Renderer>().sharedMaterial;
+            var cyan = old.Find("Tank blue band").GetComponent<Renderer>().sharedMaterial;
+            // Retain the damaged solar cells, but attach them to their built access modules.
+            for (int i = 0; i < 2; i++)
+            {
+                var wing = old.Find(i == 0 ? "Solar Wing Left" : "Solar Wing Right");
+                wing.SetParent(layout.transform, false);
+                wing.localPosition = RingWalkthrough.At(60, i == 0 ? 270 : 90, 1.8f);
+            }
+            var tank = new GameObject("Campaign water storage / Stage 1").transform;
+            tank.SetParent(layout.transform, false);
+            tank.localPosition = RingWalkthrough.At(50, 210);
+            tank.localRotation = Quaternion.Euler(0, 210, 0);
+            Part(PrimitiveType.Cylinder, "Water Ice Tank", tank, new Vector3(0, 2, 0), new Vector3(4, 2, 4), hull);
+            Part(PrimitiveType.Cylinder, "Tank cap", tank, new Vector3(0, 4.1f, 0), new Vector3(4.15f, .1f, 4.15f), dark);
+            Part(PrimitiveType.Cube, "Tank status", tank, new Vector3(0, 2, -2.05f), new Vector3(1.4f, .5f, .1f), cyan);
+            TankSocket.SetParent(tank, false);
+            TankSocket.localPosition = new Vector3(0, 3.3f, 4.6f); TankSocket.localRotation = Quaternion.identity;
+            Part(PrimitiveType.Cube, "Transfer pipe", tank, new Vector3(0, 3.3f, 3.1f), new Vector3(.35f, .35f, 3), dark);
+            DroneDock = new GameObject("Campaign Drone Dock").transform;
+            DroneDock.SetParent(layout.transform, false);
+            DroneDock.localPosition = RingWalkthrough.At(64.75f, 30);
+            DroneDock.localRotation = Quaternion.Euler(0, 30, 0);
+            var scenario = GetComponent<WaterScenario>();
+            for (int i = 0; i < berths.Length; i++)
+            {
+                berths[i] = layout.Geometry.CampaignBerths[i];
+                if (scenario != null && scenario.Drones != null) scenario.Drones[i].RebindHome(berths[i]);
+            }
+            foreach (Transform child in old)
+                if (!child.name.StartsWith("Reactor") && child.name != "Shielded Reactor") child.gameObject.SetActive(false);
+            var info = GetComponent<SpaceObject>();
+            info.DiameterMeters = 172;
+            info.Description = "Startstation / zwölf Ringsegmente, Kommandozentrale, Wohnen, Drohnendeck, Versorgung, Werkstatt und Wasserlager";
+        }
+
         private Material Surface(string name, Color color, float metal, bool glow = false)
         {
             var material = new Material(Shader.Find("Standard")) { name = name, color = color };

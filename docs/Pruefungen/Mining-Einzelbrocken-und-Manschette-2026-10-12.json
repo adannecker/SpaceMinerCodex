@@ -1,0 +1,120 @@
+{
+  "date": "2026-10-12",
+  "request": "Only one rock at a time from productive drilling until container full; suction collar seats before hatch opens",
+  "build": {
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "development": true,
+    "exitCode": 0,
+    "log": "Mining-Einzelbrocken-und-Manschette-2026-10-12/tripo-single-block-collar-build-first-20261012.log",
+    "deployment": "Builds/TripoMining",
+    "sha256VerifiedBuildFiles": 247,
+    "verifiedSourceAndMetaFiles": 8,
+    "sourceSha256": {
+      "DroneAgent.cs": "B871E52DACEFE1B57AC26C737AA299305C82F05070C0F553CB6E9821315EA2B7",
+      "DroneAgent.cs.meta": "AB314F5BF0E7279EDBF941D83A9E9B9E86AB98392151DA6C13B628E11472EAC5",
+      "MaintenanceLaserVisual.cs": "2BA32A2262BAB899B06D71FF5BA35CC2518ADD40B960E3788BA6E19FFC83162B",
+      "MaintenanceLaserVisual.cs.meta": "E25F01337E2A07568CC2CB173F9665C2BB49FE5565BCBEABEFC1B83FF317091B",
+      "TripoMiningDroneVisual.cs": "5E34C8EF6E740CA405114C5F7919854393442A92D8A8985EA4A05FF377E8950B",
+      "TripoMiningDroneVisual.cs.meta": "7FD0E5CFDFAEF10C6ED03743E7F08602AC4ED323DF253DE367DDE8F29A160AB4",
+      "TripoMiningShowcase.cs": "C3A6021C1982CFFA8374F5E7AE648BCC43084F6AEE8550F12C93E62E823E3927",
+      "TripoMiningShowcase.cs.meta": "5A0FA385D042FEE5D8C0A5368A4E99633DA1DC3DF0974C97DCEE4E5209585EC7"
+    }
+  },
+  "mining": {
+    "pass": true,
+    "checks": 69,
+    "minedKg": 12.0,
+    "deliveredLiters": 9.6,
+    "collectedSizes": 3,
+    "depositedSamples": 12,
+    "armGeometrySamples": 9709,
+    "minimumRimClearanceMeters": 0.292,
+    "savedCampaignModified": false,
+    "exitCode": 0,
+    "flag": "-tripoMiningCheck",
+    "log": "Mining-Einzelbrocken-und-Manschette-2026-10-12/tripo-single-block-collar-check-first-20261012.log"
+  },
+  "balance": {
+    "passed": true,
+    "checks": 195,
+    "exitCode": 0,
+    "sameBinary": true,
+    "flag": "-miningBalanceCheck",
+    "log": "Mining-Einzelbrocken-und-Manschette-2026-10-12/tripo-single-block-collar-balance-20261012.log"
+  },
+  "collection": {
+    "emitted": 12,
+    "deposited": 12,
+    "unloaded": 12,
+    "emissionsWithoutCutting": 0,
+    "maximumLooseRocks": 1,
+    "packedWithinCartridge": true,
+    "slots": 12,
+    "layers": 2,
+    "maximumEmissionTipDistanceMeters": 0.4320026,
+    "extraDrillingFragmentsRemoved": true,
+    "sizing": "Three irregular size classes uniformly fitted to actual slot geometry",
+    "tiedToActualMinedCargo": true
+  },
+  "collar": {
+    "bellowsFolds": 7,
+    "contactToleranceMeters": 0.005,
+    "hatchOnlyAfterSeal": true,
+    "gateMaximumOpening": 0.9,
+    "phasesGameSeconds": {
+      "approach": "0-12",
+      "sealedBeforeOpening": "12-20",
+      "gateOpens": "20-40",
+      "unload": "40-200",
+      "gateCloses": "200-220",
+      "sealedAfterClosing": "220-228",
+      "retract": "228-240"
+    },
+    "dischargeVertexProbes": 150,
+    "minimumGateAndCollarClearanceMeters": 0.01693526,
+    "closedBeforeRelease": true,
+    "retractedAtEnd": true
+  },
+  "navigation": {
+    "plannedRoutes": 5,
+    "routesWithDetours": 3,
+    "poseSamples": 6002,
+    "dockVertexSamples": 107132
+  },
+  "timeLapse": {
+    "mining": 2,
+    "unloading": 20,
+    "flightAndManeuver": 80
+  },
+  "visual": {
+    "folder": "Mining-Einzelbrocken-und-Manschette-2026-10-12",
+    "screenshots": 23,
+    "inspected": [
+      "22-single-drill-rock.png",
+      "23-filled-cartridge.png",
+      "24-collar-sealed-hatch-closed.png",
+      "25-collar-approach.png",
+      "17-sliding-gate-open.png",
+      "18-rocks-in-receiver.png"
+    ]
+  },
+  "scopeAndLimits": [
+    "Kinematic collar and pressure seal state, no physical suction or gripper forces",
+    "Twelve kg remains preview capacity; visible rocks represent the existing resource balance",
+    "Static navigation only, no general moving multi-drone traffic",
+    "No additional maintenance or start-station regression for this binary; prior reports refer to their own binaries",
+    "No Release run, manual keyboard/mouse acceptance or performance benchmark"
+  ],
+  "savedCampaignModified": false,
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 62304,
+    "respondingVerified": true,
+    "windowTitle": "Space Miner - Prototyp 01",
+    "log": "Logs/tripo-single-block-collar-preview-20261012.log"
+  }
+}

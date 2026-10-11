@@ -1,0 +1,116 @@
+{
+    "passed": true,
+    "checks": 195,
+    "unityVersion": "6000.6.4f1",
+    "assumptions": "A-01, 80% water, one drone; level 1 initially, 20 productive parked sorties/level; +15% rate or -15% mining power per learned level, compounded. Tank: 20->200 L. Level benchmarks: 100000 L storage to allow continued deliveries, unchanged source/start water/charge/flight; no intro, user delays or menu pauses. Real time = simulation time / speed. Gameplay knowledge resets with a new world; no hardware generation upgrades.",
+    "stepSeconds": 0.25,
+    "startingWaterLiters": 20.0,
+    "normalTankLiters": 200.0,
+    "tripsPerLevel": 20,
+    "levelGain": 0.15000000596046448,
+    "miningPowerKw": 80.0,
+    "driveEnergyKwhPerLiter": 0.20000000298023224,
+    "reserveFraction": 0.10000000149011612,
+    "runs": [
+        {
+            "mode": "tank",
+            "source": "A-01",
+            "seconds": 135634.0,
+            "firstLevelSeconds": 0.0,
+            "flightSeconds": 7106.25,
+            "miningSeconds": 2675.5,
+            "servicingSeconds": 115292.25,
+            "maneuverAndUnloadSeconds": 10560.0,
+            "deliveries": 10,
+            "completedTrips": 9,
+            "level": 1,
+            "firstCargoKg": 28.493736267089844,
+            "deliveredLiters": 213.96434020996094,
+            "fuelBurnedLiters": 36.77345657348633,
+            "minimumEnergyAtHome": 0.8845447897911072,
+            "minimumFuelAtHome": 6.226175785064697,
+            "flightEnergyKwh": 7.45166015625,
+            "miningEnergyKwh": 59.46481704711914,
+            "otherEnergyKwh": 0.14459609985351563
+        },
+        {
+            "mode": "level5-throughput",
+            "source": "A-01",
+            "seconds": 1179195.75,
+            "firstLevelSeconds": 285274.75,
+            "flightSeconds": 58660.0,
+            "miningSeconds": 22770.0,
+            "servicingSeconds": 1011365.75,
+            "maneuverAndUnloadSeconds": 86400.0,
+            "deliveries": 80,
+            "completedTrips": 80,
+            "level": 5,
+            "firstCargoKg": 28.493736267089844,
+            "deliveredLiters": 2272.844482421875,
+            "fuelBurnedLiters": 303.5856628417969,
+            "minimumEnergyAtHome": 0.8845447897911072,
+            "minimumFuelAtHome": 6.185117244720459,
+            "flightEnergyKwh": 61.42387771606445,
+            "miningEnergyKwh": 505.8428955078125,
+            "otherEnergyKwh": 1.18560791015625
+        },
+        {
+            "mode": "level5-efficiency",
+            "source": "A-01",
+            "seconds": 1185968.25,
+            "firstLevelSeconds": 285274.75,
+            "flightSeconds": 58725.0,
+            "miningSeconds": 29515.0,
+            "servicingSeconds": 1011328.25,
+            "maneuverAndUnloadSeconds": 86400.0,
+            "deliveries": 80,
+            "completedTrips": 80,
+            "level": 5,
+            "firstCargoKg": 28.493736267089844,
+            "deliveredLiters": 2360.635498046875,
+            "fuelBurnedLiters": 304.0352783203125,
+            "minimumEnergyAtHome": 0.8845447897911072,
+            "minimumFuelAtHome": 6.175008296966553,
+            "flightEnergyKwh": 61.536827087402344,
+            "miningEnergyKwh": 506.6004638671875,
+            "otherEnergyKwh": 1.18560791015625
+        }
+    ],
+    "timings": [
+        {
+            "speed": 0.5,
+            "tankSeconds": 271268.0,
+            "firstLevelSeconds": 570549.5,
+            "level5ThroughputSeconds": 2358391.5,
+            "level5EfficiencySeconds": 2371936.5
+        },
+        {
+            "speed": 1.0,
+            "tankSeconds": 135634.0,
+            "firstLevelSeconds": 285274.75,
+            "level5ThroughputSeconds": 1179195.75,
+            "level5EfficiencySeconds": 1185968.25
+        },
+        {
+            "speed": 2.0,
+            "tankSeconds": 67817.0,
+            "firstLevelSeconds": 142637.375,
+            "level5ThroughputSeconds": 589597.875,
+            "level5EfficiencySeconds": 592984.125
+        },
+        {
+            "speed": 3.0,
+            "tankSeconds": 45211.333333333336,
+            "firstLevelSeconds": 95091.58333333333,
+            "level5ThroughputSeconds": 393065.25,
+            "level5EfficiencySeconds": 395322.75
+        },
+        {
+            "speed": 5.0,
+            "tankSeconds": 27126.8,
+            "firstLevelSeconds": 57054.95,
+            "level5ThroughputSeconds": 235839.15,
+            "level5EfficiencySeconds": 237193.65
+        }
+    ]
+}

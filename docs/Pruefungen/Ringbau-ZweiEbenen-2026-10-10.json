@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-10",
+  "request": "Nutzerkorrektur: Lager je einzelnem Produkt und zwei Ringe übereinander",
+  "supersedes": "Räumliche Auslegung und universelle Lager des ersten Ringbau-Simulators",
+  "layout": {
+    "radiusEach": 16,
+    "dimensionsProvisional": true,
+    "segmentsEach": 16,
+    "connections": 4,
+    "rings": 2,
+    "heights": [
+      0,
+      12
+    ]
+  },
+  "storage": {
+    "factoryWaitsForMissingStorage": true,
+    "testProducts": [
+      "Erz",
+      "Metall",
+      "Bauteile"
+    ],
+    "capacitySharedAcrossProducts": false,
+    "perContainerCapacity": 25,
+    "inventoryPooledByProductAcrossLevels": true,
+    "singleProductPerContainer": true
+  },
+  "unity": {
+    "isolatedBuildCopy": true,
+    "tested": "6000.6.4f1",
+    "source": "6000.4.7f1"
+  },
+  "builds": {
+    "development": "PASSED",
+    "log": "Logs/ring-stacked-build-20261010.log",
+    "release": "PASSED",
+    "demo": "PASSED"
+  },
+  "checks": [
+    {
+      "player": "demo",
+      "exceptions": 0,
+      "log": "Logs/ring-stacked-check-1600.log",
+      "exitCode": 0,
+      "count": 101,
+      "viewport": "1600x1000"
+    },
+    {
+      "player": "normal Development game",
+      "exceptions": 0,
+      "log": "Logs/ring-stacked-check-1280.log",
+      "exitCode": 0,
+      "count": 101,
+      "viewport": "1280x800"
+    }
+  ],
+  "coverage": [
+    "Product-specific capacity and no capacity leakage",
+    "Missing output warehouse and full output warehouse stop factories",
+    "Identical XY footprints permitted on separated levels",
+    "Geometry collision rejected at same height",
+    "Active-level camera ray selection before and after expansion",
+    "Separate and combined level views",
+    "Campaign pause/resources and menu mutual exclusion"
+  ],
+  "screenshots": {
+    "folders": [
+      "Logs/RingSimulator-Stacked-1600x1000",
+      "Logs/RingSimulator-Stacked-1280x800"
+    ],
+    "count": 10,
+    "retained": "docs/Pruefungen/Ringbau-ZweiEbenen-2026-10-10",
+    "representativeVisualReview": true
+  },
+  "deployment": {
+    "assemblyHashesVerified": true,
+    "previousBuildsPreserved": true,
+    "directories": [
+      "Builds/RingSimulator",
+      "Builds/Windows",
+      "Builds/WindowsRelease"
+    ]
+  },
+  "sourceHashes": {
+    "Assets/SpaceMiner/Scripts/RingConstructionSimulator.cs": "CE497443B1EC939B5E78F9A76224B199E6E4D8BFB4657F55DB9E0DF17C8B54C4",
+    "Assets/SpaceMiner/Scripts/RingConstructionView.cs": "0A2B2C7D0F0F53A6E7B0C355FA132E9406FCFCF53E1640E98058039CF6A6E467",
+    "Assets/SpaceMiner/Scripts/RingConstructionCheck.cs": "8BA1C1FA67C1CF38ACD468A6DF5CBF1943424EAB2BAE89374AA15EBBC7A6AF11",
+    "Assets/SpaceMiner/Scripts/RingConstructionModel.cs": "299F34ED3F5AB2B9D47DCC2350BE7357E9A0DA4EBF5DFC13B5323F06230B6209"
+  },
+  "limits": [
+    "Prototype with three test products; no completed Chapter-1 substance list",
+    "Schematic transport; inventory not assigned to individual containers",
+    "No walkable vertical connections, physics traffic, dock refit or campaign save integration",
+    "Release compiled but no separate release playthrough",
+    "No manual native click acceptance; source Unity6000.4.7f1 editor not tested"
+  ],
+  "committed": false,
+  "pushed": false
+}

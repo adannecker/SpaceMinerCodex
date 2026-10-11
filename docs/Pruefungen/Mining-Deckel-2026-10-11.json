@@ -1,0 +1,94 @@
+{
+  "date": "2026-10-11",
+  "request": "Larger transparent cargo box, opening lid, drone-blue attachment housings and mounting boxes; higher future payload deferred",
+  "build": {
+    "log": "Logs/tripo-lid-final-build-20261011.log",
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "development": true,
+    "exitCode": 0,
+    "deployment": "Builds/TripoMining",
+    "sha256VerifiedFiles": 247,
+    "sourceHashMatchesBuildCopy": true
+  },
+  "miningMission": {
+    "log": "Logs/tripo-lid-final-check-20261011.log",
+    "flag": "-tripoMiningCheck",
+    "exitCode": 0,
+    "resolution": [
+      1600,
+      1000
+    ],
+    "result": {
+      "pass": true,
+      "checks": 35,
+      "minedKg": 12.0,
+      "deliveredLiters": 9.6,
+      "collectedSizes": 3,
+      "depositedSamples": 3,
+      "armGeometrySamples": 2290,
+      "minimumRimClearanceMeters": 0.25,
+      "savedCampaignModified": false
+    },
+    "evidence": "Mining-Deckel-2026-10-11/result.json"
+  },
+  "regression": {
+    "log": "Logs/tripo-lid-maintenance-regression-20261011.log",
+    "flag": "-maintenanceShowcaseCheck",
+    "checks": 168,
+    "exitCode": 0,
+    "resolution": [
+      1280,
+      800
+    ],
+    "sameFinalBinary": true,
+    "result": "Mining-Deckel-2026-10-11/maintenance-regression.json"
+  },
+  "totalChecks": 203,
+  "visual": {
+    "folder": "Mining-Deckel-2026-10-11",
+    "screenshots": 12,
+    "inspected": [
+      "01-dock.png",
+      "10-gripper-transfer.png",
+      "11-gripper-deposit.png",
+      "06-loaded-return.png",
+      "08-delivered-dock.png"
+    ]
+  },
+  "implementation": [
+    "Cargo box enlarged from 1.20 x 1.45 x 0.78 m to 1.32 x 1.64 x 0.90 m, about 44 percent more exterior volume",
+    "Armoured blue rear-hinged lid with service panel, reinforcement ribs, handle, captive screws, hinge axles and front latches; opens 110 degrees",
+    "Opens late during asteroid docking, fully open before deposit; waits for folded collector before closing for return",
+    "Original transparent side walls retained; original Tripo hull and textures unchanged",
+    "Attachments and mounting casings painted hull blue; broad housing panels now use paint, bevels use metal; paint has reduced metallic reflection",
+    "Collecting links lengthened to 1.30 m, lift path raised and widened for enlarged box",
+    "Overview and collecting camera frame complete open lid",
+    "Preview cargo capacity remains 12 kg; user wants greater future payload, exact capacity and balance deferred"
+  ],
+  "checked": [
+    "Lid closed at start and outbound flight; fully open before actual sample deposit",
+    "Pause freezes collecting joints, held chunk and lid angle",
+    "Loaded return and final berth have closed lid and folded collecting arm",
+    "Actual collecting vertices checked against lid volume throughout mission",
+    "2290 mining samples check actual collecting vertices against enlarged box; all transferred sample sizes clear rim by 0.250 m",
+    "Three sample sizes and complete deposit cycles; actual 12 kg extraction and 9.6 L single water delivery remain correct",
+    "Existing maintenance mission regression 168 checks with final binary"
+  ],
+  "limits": [
+    "Visible fragments and lid are kinematic presentation; no physical gripping or anchor constraints",
+    "Vertex containment sampling does not constitute exhaustive triangle collision or traffic avoidance",
+    "12 kg remains a short showcase test value; future useful payload and balance not yet decided",
+    "Original imported meshes remain unoptimized; no Release test, manual input acceptance or performance benchmark"
+  ],
+  "savedCampaignModified": false,
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 16848,
+    "respondingVerified": true,
+    "log": "Logs/tripo-lid-preview.log"
+  }
+}

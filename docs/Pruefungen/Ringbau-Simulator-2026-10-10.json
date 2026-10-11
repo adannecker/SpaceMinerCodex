@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-10",
+  "request": "Interaktiver Ingame-Ringbau-Simulator: größere Ringe, Lager außen, Produktion innen",
+  "unity": {
+    "sourceVersion": "6000.4.7f1",
+    "sourceSceneUnchanged": true,
+    "isolatedProject": "Builds/LocalPreview-6000.6.4f1",
+    "testedVersion": "6000.6.4f1"
+  },
+  "builds": {
+    "result": "PASSED",
+    "development": "Builds/Windows/SpaceMiner.exe",
+    "demo": "Builds/RingSimulator/SpaceMiner.exe",
+    "release": "Builds/WindowsRelease/SpaceMiner.exe",
+    "log": "Logs/ring-simulator-build-verified-20261010.log"
+  },
+  "checks": [
+    {
+      "player": "demo",
+      "log": "Logs/ring-simulator-verified-1600.log",
+      "viewport": "1600x1000",
+      "exceptions": 0,
+      "count": 96,
+      "exitCode": 0
+    },
+    {
+      "player": "normal Development game",
+      "log": "Logs/ring-simulator-verified-1280.log",
+      "viewport": "1280x800",
+      "exceptions": 0,
+      "count": 96,
+      "exitCode": 0
+    },
+    {
+      "count": 28,
+      "log": "Logs/ring-simulator-presentation-regression.log",
+      "exitCode": 0,
+      "kind": "techtree and Mira regression",
+      "exceptions": 0
+    }
+  ],
+  "screenshots": {
+    "count": 8,
+    "folders": [
+      "Logs/RingSimulator-1600x1000",
+      "Logs/RingSimulator-1280x800"
+    ],
+    "retainedInDocs": "docs/Pruefungen/Ringbau-2026-10-10",
+    "representativeVisualReview": true
+  },
+  "coverage": [
+    "Construction costs and queued footprints",
+    "Oriented rectangle overlap and reserved corridors",
+    "Sequential segment construction and capacity growth",
+    "Input consumption and full output storage",
+    "Camera ray-to-slot selection",
+    "Menu mutual exclusion and closing frame",
+    "Campaign pause even without normal menu pause",
+    "Campaign water and worker position unchanged"
+  ],
+  "limits": [
+    "Prototype dimensions and economy; no campaign station rebuilding or simulator save data",
+    "Drone routes schematic; no physical traffic control or per-item delivery simulation",
+    "Dock upgrade, walking and magnetic boots not implemented",
+    "Release compiled but no separate interactive release playthrough",
+    "No manual native mouse/keyboard acceptance",
+    "Source Unity6000.4.7f1 editor not tested"
+  ],
+  "fixedDuringVerification": "NullReferenceException on destroyed camera during shutdown; guarded cleanup, both final exits clean",
+  "sourceHashes": {
+    "Assets/SpaceMiner/Scripts/RingConstructionSimulator.cs": "7AA47BD00E619F885590356D84B0D9A512F7AC197F59BE69B8D73D1C3D924AEC",
+    "Assets/SpaceMiner/Scripts/RingConstructionModel.cs": "CEC5FBAF2087CD28E476089513197BB51BED77660F43A39B427A3E6C28D46226",
+    "Assets/SpaceMiner/Scripts/SettingsMenu.cs": "9BB012960D1E48BC569143B66AC906F80818AEB04C00DF7F4F9164B98FB3E5CD",
+    "Assets/SpaceMiner/Scripts/PlayerSettings.cs": "66BEF9C9D7A361D060349C818D613891FC36F259CF1120F39A09A7DF493F4FD4",
+    "Assets/SpaceMiner/Scripts/TechTreeMenu.cs": "0BAF26BFC2AD36620A59A8F8FFD0DBDEFCCB1D29CA3903706D9F0C027691E3C1",
+    "Assets/SpaceMiner/Scripts/RingConstructionView.cs": "4EF99BD152CC69CD3BEF473D63C5E752C1D4ABEFE61692D0C7AD9889E03E5159",
+    "Assets/SpaceMiner/Editor/RingSimulatorBuild.cs": "68FEB24371FA2FE35B185C52EF5D8793E648ECFDFE0E902034A9CC60202FF088",
+    "Assets/SpaceMiner/Scripts/RingConstructionCheck.cs": "C3FA84182C719AFCB309E2EF8BAAFBE3D8A827C89E26C9DA303A42236DDF1BD2"
+  },
+  "git": {
+    "committed": false,
+    "previousUncommittedDocumentationPreserved": true,
+    "pushed": false
+  }
+}

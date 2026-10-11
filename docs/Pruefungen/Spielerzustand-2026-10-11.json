@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-11",
+  "scope": "Habitat sprint stamina and five lower-left player status bars",
+  "sourceUnity": "6000.4.7f1",
+  "testedUnity": "6000.6.4f1",
+  "buildCopy": "Builds/LocalPreview-6000.6.4f1",
+  "buildLog": "Logs/player-vitals-build-20261011.log",
+  "buildExit": 0,
+  "built": ["RingSimulator", "RingSimulatorGame", "RingSimulatorRelease"],
+  "playerChecks": [
+    {"name": "PlayerVitalsCheck", "checks": 29, "exit": 0, "log": "Logs/player-vitals-check-final-20261011.log"},
+    {"name": "StationHabitatCheck", "checks": 514, "exit": 0, "log": "Logs/vitals-regression-stationHabitatCheck-20261011.log"},
+    {"name": "StationInteriorCheck", "checks": 59, "exit": 0, "log": "Logs/vitals-regression-stationInteriorCheck-20261011.log"},
+    {"name": "SaveSessionCheck", "checks": 227, "exit": 0, "log": "Logs/vitals-regression-saveSessionCheck-20261011.log"},
+    {"name": "SaveSessionCheck new-process restore", "checks": 104, "exit": 0, "log": "Logs/vitals-regression-restoreSessionCheck-20261011.log"}
+  ],
+  "screenshots": [
+    "Spielerzustand-2026-10-11/1600x1000-large-text.png",
+    "Spielerzustand-2026-10-11/1280x800-large-text.png"
+  ],
+  "visualInspection": "Both final screenshots inspected with large text/UI. First hidden-start 1600 capture was black; repeated with an initial resolution change and confirmed correct.",
+  "deploymentSha256FileCounts": {"Builds/Windows": 247, "Builds/WindowsRelease": 156, "Builds/RingSimulator": 247},
+  "previousBuildsPreserved": true,
+  "limitations": [
+    "Only stamina currently changes automatically; fatigue, hunger, thirst and health are stored foundation values.",
+    "No food, drinking, sleep, damage or survival penalties added.",
+    "No new manual keyboard acceptance or separate release playthrough.",
+    "Source Unity 6000.4.7f1 is unchanged and not tested locally in this task.",
+    "Ring container concept and proposed 8 m spacing are not implemented in Unity.",
+    "No commit or push in this task."
+  ]
+}

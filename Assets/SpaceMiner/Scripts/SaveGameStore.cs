@@ -23,9 +23,11 @@ namespace SpaceMiner
         public bool sourceAssigned, scanned, console;
         public bool hasInteriorState, insideStation;
         public Vector3 interiorFeet;
+        public int interiorLayout;
         public bool hasInteriorView;
         public float interiorYaw, interiorPitch;
         public StationAirlock.SavedState airlock;
+        public PlayerVitals playerVitals;
         public SavedAsteroid[] asteroids;
         public DroneAgent.SavedState[] drones;
         public string Summary => (scanned ? "Erster Scan abgeschlossen" : "Erster Scan offen") + " · " +
@@ -49,10 +51,12 @@ namespace SpaceMiner
                 scannerEnergy=scenario.Scanner.EnergyKwh, scannerRange=scenario.Scanner.RangeMeters,
                 scanned=scenario.Scanner.FirstScanComplete, console=scenario.Scanner.AtConsole,
                 hasInteriorState=true, insideStation=StationInteriorMode.IsInside, interiorFeet=StationInteriorMode.Current!=null?StationInteriorMode.Current.FeetPosition:Vector3.zero,
+                interiorLayout=StationInteriorLayout.Revision,
                 hasInteriorView=StationInteriorMode.IsInside,
                 interiorYaw=StationInteriorMode.Current!=null?StationInteriorMode.Current.ViewYaw:0,
                 interiorPitch=StationInteriorMode.Current!=null?StationInteriorMode.Current.ViewPitch:0,
                 airlock=StationInteriorMode.IsInside?StationInteriorMode.Current.Airlock.CaptureState():null,
+                playerVitals=StationInteriorMode.Current?.Vitals.Copy(),
                 asteroids=new SavedAsteroid[scenario.Asteroids.Length], drones=new DroneAgent.SavedState[scenario.Drones.Length]
             };
             for (int i=0;i<state.asteroids.Length;i++) {
@@ -92,6 +96,8 @@ namespace SpaceMiner
         public static void Validate(SavedGame state, WaterScenario scenario)
         {
             Numbers(state);
+            if (state.interiorLayout < 0 || state.interiorLayout > StationInteriorLayout.Revision) throw new IOException("Unbekanntes Stationslayout.");
+            if(state.playerVitals!=null && !state.playerVitals.IsValid)throw new IOException("Ungültiger Körperzustand.");
             if(state.hasInteriorView && (!state.hasInteriorState || !state.insideStation || Mathf.Abs(state.interiorPitch)>80))
                 throw new IOException("Ungültige Innenansicht.");
             if(state.airlock!=null && !StationAirlock.IsValid(state.airlock))throw new IOException("Ungültiger Schleusenzustand.");
@@ -127,6 +133,7 @@ namespace SpaceMiner
         public static void Apply(SavedGame state, WaterScenario scenario)
         {
             Validate(state,scenario);
+            StationInteriorMode.Current?.RestoreVitals(state.playerVitals);
             foreach(var asteroid in state.asteroids) {
                 var source=Array.Find(scenario.Asteroids,a=>a.name==asteroid.id);
                 source.IsScanned=asteroid.scanned;source.WaterIdentified=asteroid.waterIdentified;source.RestoreDeposit(asteroid.remainingKg);
@@ -139,13 +146,25 @@ namespace SpaceMiner
             if (state.hasInteriorState && state.insideStation)
             {
                 var room=StationInteriorMode.Current;
-                room?.RestoreInterior(state.interiorFeet,state.console,state.hasInteriorView?(float?)state.interiorYaw:null,state.hasInteriorView?(float?)state.interiorPitch:null);
-                if(room!=null) { if(state.airlock!=null)room.Airlock.RestoreState(state.airlock);else room.Airlock.RecoverLegacyOccupant(state.interiorFeet); }
+                if (room != null)
+                {
+                    // Keep previous ring poses unless a new hall wall now occupies the standing space.
+                    bool currentLayout = state.interiorLayout >= 2 && (state.interiorLayout >= StationInteriorLayout.Revision || room.Layout.HasStandingClearance(state.interiorFeet));
+                    room.RestoreInterior(currentLayout ? state.interiorFeet : room.Layout.SpawnPosition, state.console,
+                        currentLayout && state.hasInteriorView ? (float?)state.interiorYaw : room.Layout.SpawnYaw,
+                        currentLayout && state.hasInteriorView ? (float?)state.interiorPitch : 0);
+                    // Old airlock cycles belong to the retired habitat. Start-station doors stay open.
+                    if (!room.Airlock.PermanentlyOpen && currentLayout && state.airlock != null) room.Airlock.RestoreState(state.airlock);
+                }
             }
             else if (state.console) StationInteriorMode.Current?.Enter(true);
             else StationInteriorMode.Current?.Exit(true);
             scenario.Scanner.Restore(state.scannerEnergy,state.scanned,state.console,state.deliveries>0,state.water>=state.tankCapacity-.001f);
-            for(int i=0;i<state.drones.Length;i++)scenario.Drones[i].RestoreState(state.drones[i]);
+            for(int i=0;i<state.drones.Length;i++)
+            {
+                scenario.Drones[i].RestoreState(state.drones[i]);
+                if (state.interiorLayout != StationInteriorLayout.Revision) scenario.Drones[i].MigrateStationPose();
+            }
             scenario.SetSimulationRate(Mathf.Clamp(state.simulationRate,0,500));
             scenario.Notify("Spielstand geladen: "+state.name);
         }

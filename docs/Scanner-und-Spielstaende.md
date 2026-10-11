@@ -1,6 +1,32 @@
 # Stationskonsole, VR-Scan und Spielstände
 
+Aktualisierung11.10.2026: Erstes neues3D-Stationspult mit drei geneigten Monitoren; **E** bedient weiterhin echte Scan-/Auftragsoberfläche. Brücke mit Front-/Seitenfenstern. Layoutrevision3 für Außenschleusen und versetzte Außendockplätze: bisherige Ringposition/Blick aus Revision2 bleiben erhalten, wenn der Stehbereich frei ist. Positionen in neuen Hallenwänden werden zum Pult umgesetzt; alte Drohnenposen werden mit unveränderten Vorräten/Versorgungsständen auf neue Bezugspunkte migriert. Saveformat1 bleibt bestehen. Fachstand/Prüfung: `Ringstation-Ausbau.md`.
+
 Stand 08.10.2026. ScannerProgression, SaveGameStore und SaveGameMenu ergänzen das bestehende Hauptspiel.
+
+## Neue Startstation und Layoutmigration (11.10.2026)
+
+Das tatsächliche Scanpult steht jetzt in der großen Kommandozentrale des vergrößerten Rings. Einstieg direkt davor, E öffnet es; Scan und Wasseraufträge verwenden weiterhin die Kampagnensimulation. Vorhandene Raumzugänge bleiben vorläufig offen. Siehe [Startstationsumfang](Ringstation-Ausbau.md#startstation-im-hauptspiel-11102026).
+
+Optionales Feld `interiorLayout=2` in Version1 kennzeichnet neue Innenraumkoordinaten. Fehlendes Feld/0: Spieler zum neuen Pult versetzen, Versorgung/Forschung/Scan behalten, alte parkende Drohnen an neue Home-Positionen setzen; Rückkehr-/Tankphasen erhalten neue Bezugspunkte. Neue Positionen werden nur auf tatsächlich gebautem Boden akzeptiert, sonst sicherer Einstieg. Frühere gespeicherte Schleusenzustände werden bei offenen Startzugängen verworfen. `StartStationCheck` prüft das aktuelle Layout; ältere `StationInteriorCheck`/`StationHabitatCheck` enthalten Maße des entfernten kleinen Habitats und gelten dafür nicht mehr als aktuelle Abnahme.
+
+## Spielerzustand: Sprinten und Habitat-HUD (11.10.2026)
+
+Neuere Nutzerkorrektur vom selben Tag: Sprinttempo von4 auf **5,2 m/s** erhöht (+30 %); Gehen bleibt2,2 m/s. `PlayerVitals.WalkSpeed`/`SprintSpeed` werden von Kampagnen- und Rundgangsteuerung geteilt. Stamina-Verbrauch, Erholung und Erschöpfung unverändert; voller Sprintvorrat weiterhin etwa5,6 s, nun rund28,9 m theoretischer Sprintweg ohne Hindernis. Nachfolgende Beschreibung des4-m/s-Tempos ist der ältere Erststand. Aktuelle Abnahme: [Modulhüllen und Sprint](Pruefungen/Modulhuellen-und-Sprint-2026-10-11.json).
+
+Nutzerauftrag: Sprinten im Habitat und unten links Balken für Stamina, Müdigkeit, Hunger, Durst und Gesundheit. Shift links/rechts beim Gehen sprintet weiterhin mit4 statt2,2 m/s, jetzt durch Ausdauer begrenzt. Stamina startet bei100 %, verliert18 Prozentpunkte je Sprintsekunde und erholt sich nach1,5 s ohne Sprint mit12 Prozentpunkten/s. Ein voller Vorrat reicht damit etwa5,6 s. Nach Erschöpfung normales Gehtempo; für erneuten Sprint Shift loslassen und mindestens20 % erreichen. Shift ohne Bewegungsrichtung verbraucht nichts. Diagonales Gehen bleibt normalisiert. Diese Werte sind erste Spielwerte, keine bestätigte Balance.
+
+PlayerVitals hält den Körperzustand getrennt von Wasser-/Drohnenversorgung. Stamina läuft mit der unskalierten Bewegungszeit, nicht mit dem Produktionszeitraffer. Konsole, gesperrte Menüs, Intro, Cinematic, Außenansicht oder freigegebene Maus lösen keinen Bewegungs-/Ausdauer-Zeitschritt aus. Umschalten erhält den Vorrat, eine neue Demo setzt ihn zurück. Noch keine tatsächliche Wegstrecken-/Aufwandsauswertung gegen eine Wand.
+
+Die Balken stehen links unten mit Namen und Prozenten. Bei Stamina und Gesundheit bedeutet100 % volle Reserve; bei Müdigkeit, Hunger und Durst bedeutet0 % kein Bedarf. Hoher Bedarf beziehungsweise niedrige Reserve wird rot. Die bisherigen Innenhinweise stehen daneben und enthalten Shift. Gemeinsame UI-/Textskalierung sowie HUD-Sichtbarkeit gelten; die konfigurierte HUD-Taste, standardmäßigH, funktioniert nun auch bei aktivem Innencontroller.
+
+**Nur Stamina besitzt derzeit eine laufende Mechanik.** Müdigkeit/Hunger/Durst starten bei0 %, Gesundheit bei100 %. Keine automatische Alterung, Schäden, Essen, Trinken, Schlafen oder Folgen aus diesen vier Basiswerten implementiert. Diese Systeme brauchen eigene bestätigte Regeln und Interaktionen; Testbilder zeigen künstlich gesetzte Werte, keine echte Verletzung oder Versorgungssimulation.
+
+Saveformat bleibt Version1 mit optionalem playerVitals-Feld: alle fünf Werte, Erschöpfungssperre und Restwartezeit werden als unabhängige Kopie gespeichert. Alte Spielstände ohne das Feld erhalten gesunde Startwerte; ungültige Prozent-/Zeitwerte werden vor Zustandsänderung zurückgewiesen. Persönliche Einstellungen bleiben getrennt.
+
+Dateien: PlayerVitals.cs, PlayerVitalsCheck.cs samt.meta; StationInteriorMode.cs, SaveGameStore.cs, WaterScenario.cs und isolierter Prüfeinstieg in PlayerSettings.cs. Opt-in-Prüfung: Development-Player mit `-playerVitalsCheck`, Arbeitsverzeichnis Projektordner; Einstellungen und Saves ausschließlich unter Logs/PlayerVitals.
+
+Tatsächlich geprüft: Unity6000.6.4f1 in vorhandener Buildkopie; Demo, Development und Release gebaut, Quellprojekt weiterhin6000.4.7f1. Neue Prüfung29 Checks; bestehende Habitat514, Innenraum/Flug59, Speichersitzung227 und Prozessneustart104, jeweils Exit0. HUD bei1600×1000/1280×800 mit großer Schrift/UI visuell geprüft; die erste verdeckte1600er Aufnahme war schwarz, deshalb mit Größenwechsel wiederholt, finale Aufnahmen korrekt. Keine neue manuelle Shift-/H-Tastenabnahme, kein separater Release-Durchlauf. Buildbereitstellung nach Windows/WindowsRelease/RingSimulator durch247/156/247 SHA256-Dateivergleiche bestätigt, Vorgänger erhalten. [Bericht](Pruefungen/Spielerzustand-2026-10-11.json).
 
 ## Einstieg und erste Aufgaben
 

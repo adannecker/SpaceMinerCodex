@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-11",
+  "title": "Wartungs- und Transportdrohne – Tripo-Konzept",
+  "modelId": "0532b2bc-c766-4c29-82fa-0b5784bbb02b",
+  "url": "https://studio.tripo3d.ai/workspace/generate/0532b2bc-c766-4c29-82fa-0b5784bbb02b",
+  "generator": "Tripo Studio H2.5 – Legacy",
+  "mode": "Geometry & Texture",
+  "creditsSpent": 40,
+  "creditsRemainingObserved": 120,
+  "trianglesObserved": 501554,
+  "verticesObserved": 270905,
+  "promptFile": "Wartungs-Transportdrohne-Tripo-2026-10-11.txt",
+  "screenshotFile": "Wartungs-Transportdrohne-Tripo-2026-10-11.png",
+  "targetDimensionsMetres": {
+    "width": 2,
+    "length": 2,
+    "heightParked": 1.2
+  },
+  "dimensionsVerified": false,
+  "matchingCradleModelId": "2183ed5b-fe13-44ac-89a8-60d99b3b5e4f",
+  "generated": true,
+  "downloaded": true,
+  "unityImported": true,
+  "visualReview": [
+    "Geschlossener Frachtrumpf, seitliche Triebwerkskörper, untere Kufen-/Rahmenstruktur und Greifer sichtbar.",
+    "Arme seitlich ausgestellt; kompakte Parkstellung noch nicht erfüllt."
+  ],
+  "pending": [
+    "Freie Schienen-, Kontakt- und Anflugpassung prüfen",
+    "Hinteren Ladeanschluss prüfen",
+    "Mesh vereinfachen",
+    "Bewegliche Teile trennen und animierbar machen",
+    "Kollisionskörper erstellen"
+  ],
+  "validation": "Archive CRC/FBX/4K textures checked; Unity Development size probe and 121-check normal station regression passed on 2026-10-11; see docs/Pruefungen/Tripo-Groessenprobe-2026-10-11.json.",
+  "sourceArchive": "industrial+maintenance+drone+3d+model.zip",
+  "sizeProbeIntegrated": true,
+  "actualNormalizedBoundsMetres": {
+    "width": 2,
+    "depth": 2.200823,
+    "height": 1.689626
+  },
+  "actualBoundingDimensionsMeasured": true,
+  "unityImportedTriangles": 501518,
+  "unityImportedVertices": 323070
+}

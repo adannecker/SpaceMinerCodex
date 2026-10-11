@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-11",
+  "task": "Sprint 30 percent faster and distinct station modules outside/inside",
+  "projectUnity": "6000.4.7f1 unchanged",
+  "buildUnity": "6000.6.4f1",
+  "buildCopy": "Builds/LocalPreview-6000.6.4f1",
+  "buildLog": "Logs/module-shells-build-final-20261011.log",
+  "builds": [
+    "RingSimulator development demo",
+    "Windows development game",
+    "WindowsRelease release game"
+  ],
+  "changes": [
+    "Shared walk speed 2.2 m/s and sprint 5.2 m/s; stamina unchanged",
+    "Twelve segmented ring hulls with recessed dark couplings about 2.6 metres long",
+    "Eleven start room stages with individual contrasting hulls and 2.2-metre lower connection sections",
+    "Exterior roof collars, end plates, lit thresholds and open interior portal frames",
+    "Continuous structural floors, existing start module sizes, real drone berths and save revision retained"
+  ],
+  "runs": [
+    {
+      "checks": 79,
+      "exitCode": 0,
+      "flag": "-startStationCheck",
+      "log": "Logs/module-shells-integration-final-20261011.log",
+      "size": "1600x1000"
+    },
+    {
+      "checks": 129,
+      "exitCode": 0,
+      "flag": "-ringWalkthroughCheck",
+      "log": "Logs/module-shells-walkthrough-final-20261011.log",
+      "size": "1600x1000"
+    },
+    {
+      "checks": 29,
+      "exitCode": 0,
+      "flag": "-playerVitalsCheck",
+      "log": "Logs/module-shells-vitals-final-20261011.log",
+      "size": "1280x800"
+    }
+  ],
+  "totalChecks": 237,
+  "checksInclude": [
+    "Campaign CharacterController crosses twelve ring joints and all existing room entrances",
+    "Traverses command stages 1-2, 2-3 and workshop-to-landing-deck couplings",
+    "Measured 5.2 m/s campaign sprint; stamina exhaustion/recovery and save persistence",
+    "Real scan, water mining, moved tank delivery and drone return/service",
+    "Separate two-ring walkthrough, compact lifts, maps, cursor/fullscreen handlers"
+  ],
+  "screenshotsDirectory": "docs/Pruefungen/Modulhuellen-und-Sprint-2026-10-11",
+  "screenshotsSaved": 7,
+  "finalVisuallyInspected": [
+    "07-modulhuellen-aussen.png",
+    "06-moduluebergang-zentrale.png"
+  ],
+  "iteration": "First visual pass prompted wider connections and greater hull contrast; all listed final runs used the corrected final build",
+  "sourceFilesMatchedToBuildCopy": [
+    "PlayerVitals.cs",
+    "StationInteriorMode.cs",
+    "RingWalkthrough.cs",
+    "StartStationCheck.cs",
+    "RingWalkthroughCheck.cs",
+    "PlayerVitalsCheck.cs"
+  ],
+  "deployment": [
+    {
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\RingSimulator-before-module-shells-20261011-152621",
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\RingSimulator",
+      "filesVerified": 247
+    },
+    {
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\Windows-before-module-shells-20261011-152621",
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\Windows",
+      "filesVerified": 247
+    },
+    {
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\WindowsRelease-before-module-shells-20261011-152621",
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\WindowsRelease",
+      "filesVerified": 156
+    }
+  ],
+  "limitations": [
+    "No complete chapter or release gameplay playthrough",
+    "No manual OS mouse/keyboard acceptance",
+    "No testing in Unity 6000.4.7f1 editor",
+    "No pressure simulation or traffic avoidance added"
+  ],
+  "releaseStartup": {
+    "flag": "-startStationPreview",
+    "hostVerifiedResponding": true,
+    "pid": 58468,
+    "log": "Logs/module-shells-player.log",
+    "exceptionsFound": 0
+  }
+}

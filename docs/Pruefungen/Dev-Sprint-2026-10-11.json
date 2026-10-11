@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-11",
+  "change": "Sprinttempo ausschließlich im Unity-Editor und Development-Build verdoppelt",
+  "unity": "6000.6.4f1, separate Buildkopie; Quellprojektversion 6000.4.7f1 unverändert",
+  "speedsMetersPerSecond": {
+    "walkAllBuilds": 2.2,
+    "sprintDevelopmentAndEditor": 10.4,
+    "sprintRelease": 5.2
+  },
+  "builds": {
+    "demoDevelopment": "succeeded",
+    "gameDevelopment": "succeeded",
+    "gameRelease": "succeeded",
+    "log": "Logs/dev-sprint-build-20261011.log",
+    "compiledConstants": "SprintSpeed und WalkSpeed in allen drei gebauten Assembly-CSharp.dll mit Unity.Cecil gelesen und gegen feste Sollwerte geprüft"
+  },
+  "runtimeChecks": [
+    {"flag": "-startStationCheck", "checks": 79, "exitCode": 0, "log": "Logs/dev-sprint-startStationCheck-20261011.log"},
+    {"flag": "-ringWalkthroughCheck", "checks": 129, "exitCode": 0, "log": "Logs/dev-sprint-ringWalkthroughCheck-20261011.log"},
+    {"flag": "-playerVitalsCheck", "checks": 29, "exitCode": 0, "log": "Logs/dev-sprint-playerVitalsCheck-20261011.log"}
+  ],
+  "evidence": [
+    "Kampagnen-CharacterController: 2,08 m Sprintstrecke in 0,2 s, Stamina 96,4 %",
+    "Habitat und Ring-Rundgang: 5,2 m Sprintstrecke in 0,5 s, Stamina 91 %; Gehen 1,1 m in 0,5 s",
+    "Erschöpfung, Erholung, Menüpause und Spielstandprüfung bestanden",
+    "Build- und Laufzeitlogs ohne CS-/Shaderfehler oder Ausnahmen; vier geänderte C#-Quellen per SHA256 mit Buildkopie verglichen"
+  ],
+  "deployment": {
+    "targets": ["Builds/RingSimulator", "Builds/Windows", "Builds/WindowsRelease"],
+    "filesVerifiedSHA256": [247, 247, 156],
+    "backupSuffix": "before-dev-sprint-20261011-155401",
+    "manifest": "Logs/dev-sprint-deployment-20261011.json"
+  },
+  "limits": "Kein vollständiger Kapitel-/Release-Durchlauf, keine manuelle Tastaturabnahme oder Laufzeitprüfung im Editor 6000.4.7f1. Release-Geschwindigkeit im kompilierten Assembly geprüft."
+}

@@ -15,6 +15,7 @@ UserSettings/
 *.booproj
 *.unitypackage
 *.log
+!/docs/Pruefungen/**/*.log
 MemoryCaptures/
 Recordings/
 .DS_Store
@@ -32,3 +33,6 @@ Recordings/
 
 *.blend1
 *.blend2
+
+# Local backups; verified Tripo FBX/textures are versioned under Assets.
+/Imports/Tripo/*.zip

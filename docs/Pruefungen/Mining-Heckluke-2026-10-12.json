@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-12",
+  "request": "Close rear hatch against cargo box, remove overhead frame, retain only left and right rails, open rear wall only about 90 percent",
+  "build": {
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "development": true,
+    "exitCode": 0,
+    "log": "Mining-Heckluke-2026-10-12/tripo-compact-gate-build-third-20261012.log",
+    "deployment": "Builds/TripoMining",
+    "sha256VerifiedBuildFiles": 247,
+    "verifiedSourceAndMetaFiles": 6,
+    "sourceSha256": {
+      "MaintenanceLaserVisual.cs": "827e8fbe701230fcbb5cc60a29c868b4291c913086ceb9cf8ee0b488d8ddc613",
+      "TripoMiningDroneVisual.cs": "6850f79e815643fc08b9c01fe82d7d8bb7bbe72333a6587c8c8e61c23c79bf85",
+      "TripoMiningShowcase.cs": "8f80b6622080ace9d705620dc4ccff5d837b84959c3a61ccdbf7a3c45d9dfd5a"
+    }
+  },
+  "mining": {
+    "pass": true,
+    "checks": 58,
+    "minedKg": 12.0,
+    "deliveredLiters": 9.6,
+    "collectedSizes": 3,
+    "depositedSamples": 3,
+    "armGeometrySamples": 2380,
+    "minimumRimClearanceMeters": 0.187,
+    "savedCampaignModified": false,
+    "exitCode": 0,
+    "resolution": [
+      1600,
+      1000
+    ],
+    "flag": "-tripoMiningCheck",
+    "log": "Mining-Heckluke-2026-10-12/tripo-compact-gate-check-third-20261012.log"
+  },
+  "hatch": {
+    "overheadFrameRemoved": true,
+    "shortSideGuides": 2,
+    "guideHeightMeters": 0.945,
+    "panelWidthMeters": 1.295,
+    "panelHeightMeters": 0.9,
+    "stationaryCompressionSeal": true,
+    "sealGapAtCartridgeEdgeMeters": 0.002,
+    "dockingPlaneShiftTowardCargoMeters": 0.06,
+    "maximumOpening": 0.9,
+    "verticalTravelMeters": 0.81,
+    "nominalRetainedPanelOverlapMeters": 0.09,
+    "topLidAndLatchIntersectionCheck": "Checked conservatively with component bounds throughout opening and closing",
+    "cargoCenteredBeforePassingGate": true,
+    "dischargeSamples": 54,
+    "minimumUpperAndLateralClearanceMeters": 0.1965408,
+    "dischargeGeometry": "Actual transformed rock vertices, measured while crossing gate; initial rotated local mesh boxes overestimated extent",
+    "samePiecesUnloaded": 3,
+    "closesBeforeUndockingAndAtFinalBerth": true
+  },
+  "navigation": {
+    "plannedRoutes": 5,
+    "routesWithDetours": 3,
+    "poseSamples": 6150,
+    "dockVertexSamples": 105634
+  },
+  "visual": {
+    "folder": "Mining-Heckluke-2026-10-12",
+    "screenshots": 19,
+    "inspected": [
+      "01-dock.png",
+      "21-compact-closed-rear-wall.png",
+      "17-sliding-gate-open.png"
+    ]
+  },
+  "scopeAndLimits": [
+    "Kinematic showcase geometry; no physical pressure seal, gripper forces or general moving multi-drone traffic",
+    "No additional maintenance, start station or balance regression for this binary; prior-day reports refer to their own binaries",
+    "No Release run, manual keyboard/mouse acceptance test or performance benchmark"
+  ],
+  "savedCampaignModified": false,
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 39060,
+    "respondingVerified": true,
+    "windowTitle": "Space Miner - Prototyp 01",
+    "log": "Logs/tripo-compact-gate-preview-20261012.log"
+  }
+}

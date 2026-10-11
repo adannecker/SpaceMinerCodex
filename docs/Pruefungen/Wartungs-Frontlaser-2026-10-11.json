@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-11",
+  "request": "Laser at front beside gripper and sensors, repair flight orientation corrected, showcase reopened",
+  "changedScript": "Assets/SpaceMiner/Scripts/MaintenanceDroneShowcase.cs",
+  "build": {
+    "log": "Logs/maintenance-front-laser-build-20261011.log",
+    "development": true,
+    "separateBuildCopy": true,
+    "deployment": "Builds/MaintenanceShowcase",
+    "sourceHashMatchesBuildCopy": true,
+    "exitCode": 0,
+    "sha256VerifiedFiles": 247,
+    "sourceProjectVersion": "6000.4.7f1",
+    "editor": "6000.6.4f1"
+  },
+  "runtime": {
+    "log": "Logs/maintenance-front-laser-check-20261011.log",
+    "checked": [
+      "Clear conservative body box with actual heading at takeoff, airborne turn, front-first approach, dock turn and landing",
+      "Front with gripper and sensors faces hull while welding",
+      "Laser on front-right side",
+      "Actual aperture points in drone forward direction",
+      "Original dock position and rotation restored",
+      "Complete scan/weld/inspect/return/charging and tool-swap flow"
+    ],
+    "resolution": [
+      1600,
+      1000
+    ],
+    "checks": 144,
+    "result": "Wartungs-Frontlaser-2026-10-11/result.json",
+    "exitCode": 0,
+    "completedJobs": 1,
+    "routeSamples": 123,
+    "flag": "-maintenanceShowcaseCheck"
+  },
+  "visual": {
+    "folder": "Wartungs-Frontlaser-2026-10-11",
+    "screenshots": 8,
+    "inspected": [
+      "04-welding.png",
+      "08-laser-detail.png",
+      "01-dock.png"
+    ]
+  },
+  "movement": {
+    "modelFront": "+Z in normalized model wrapper",
+    "mount": "Front-right beside gripper and sensors",
+    "pivot": "Normalized bottom centre of model; off-centre FBX pivot compensated",
+    "departure": "Reverse out to clear dock hover point",
+    "approach": "Front first towards hull",
+    "landing": "Turn to original parking heading at altitude, then descend",
+    "turnAtLiftBaseHeightMetres": 2.65,
+    "turnDuringTakeoffDegrees": 180
+  },
+  "limitations": [
+    "Cosmetic isolated showcase, no campaign repair economy",
+    "Conservative station body checks, not exact tool or general traffic collision avoidance",
+    "Original source mesh and detailed laser geometry unchanged",
+    "No Release build/test, manual input acceptance or performance benchmark"
+  ],
+  "tripoCreditsSpent": 0,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 35872,
+    "respondingVerified": true,
+    "log": "Logs/maintenance-front-laser-preview.log"
+  }
+}

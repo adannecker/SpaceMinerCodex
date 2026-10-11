@@ -1,0 +1,105 @@
+{
+  "date": "2026-10-11",
+  "task": "Enlarged start station integrated into the main game with built room access open",
+  "projectUnity": "6000.4.7f1 unchanged",
+  "buildUnity": "6000.6.4f1",
+  "buildCopy": "Builds/LocalPreview-6000.6.4f1",
+  "buildLog": "Logs/startstation-build-delivery-20261011.log",
+  "builds": [
+    "RingSimulator development demo",
+    "Windows development game",
+    "WindowsRelease release game"
+  ],
+  "runs": [
+    {
+      "log": "Logs/startstation-check-delivery-20261011.log",
+      "size": "1600x1000",
+      "flag": "-startStationCheck",
+      "checks": 75,
+      "exitCode": 0
+    },
+    {
+      "log": "Logs/startstation-check-1280-20261011.log",
+      "size": "1280x800",
+      "flag": "-startStationCheck",
+      "checks": 75,
+      "exitCode": 0
+    },
+    {
+      "log": "Logs/startstation-walkthrough-regression-20261011.log",
+      "size": "1600x1000",
+      "flag": "-ringWalkthroughCheck",
+      "checks": 129,
+      "exitCode": 0
+    }
+  ],
+  "totalChecks": 279,
+  "checked": [
+    "One campaign ring with twelve joins, correct start stage depths, no second level/future storage",
+    "Campaign CharacterController crosses twelve joins and six exterior/two interior entrances",
+    "Unbuilt port collision, existing airlocks open, sprint and stamina",
+    "Real scan and command console at campaign spawn",
+    "New layout disk save/restore with pose and stamina",
+    "Legacy interior spawn and parked drone relocation with energy, resources and scan retained",
+    "Real water transport unloads at new tank and returns with service to enlarged deck",
+    "Separate complete two-ring walkthrough remains operational"
+  ],
+  "screenshotsDirectory": "docs/Pruefungen/Startstation-2026-10-11",
+  "screenshotsSaved": 8,
+  "visuallyInspected": [
+    "1600x1000/01-kommandozentrale.png",
+    "1600x1000/02-ring-zum-drohnendeck.png",
+    "1600x1000/03-drohnendeck.png",
+    "1600x1000/04-startstation-aussen.png",
+    "1280x800/02-ring-zum-drohnendeck.png"
+  ],
+  "sourcesMatchedToBuildCopy": [
+    "StationInteriorLayout.cs",
+    "StationInteriorMode.cs",
+    "StationAirlock.cs",
+    "StationVisual.cs",
+    "DroneAgent.cs",
+    "SaveGameStore.cs",
+    "RingWalkthrough.cs",
+    "StartStationCheck.cs",
+    "PlayerSettings.cs"
+  ],
+  "deployment": [
+    {
+      "filesVerified": 247,
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\RingSimulator",
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\RingSimulator-before-startstation-20261011-145238"
+    },
+    {
+      "filesVerified": 247,
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\Windows",
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\Windows-before-startstation-20261011-145238"
+    },
+    {
+      "filesVerified": 156,
+      "destination": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\WindowsRelease",
+      "backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\WindowsRelease-before-startstation-20261011-145238"
+    }
+  ],
+  "releaseStartup": {
+    "log": "Logs/startstation-player-held.log",
+    "pid": 64088,
+    "exceptionsFound": 0,
+    "commandLine": "-startStationPreview -screen-fullscreen 0 -screen-width 1600 -screen-height 1000",
+    "hostProcessVerifiedResponding": true,
+    "notes": "Existing exclusive-fullscreen preference falls back to borderless fullscreen; player remains responding. Duplicate preview processes closed."
+  },
+  "assumptions": [
+    "First water module at sector 8 is provisional initial placement",
+    "Existing room access open including damaged facilities; unbuilt ports structurally capped",
+    "Outer landing deck open above for existing launch/return maneuvers"
+  ],
+  "limitations": [
+    "No complete chapter playthrough or manual OS input verification",
+    "No complete release gameplay run; release startup only",
+    "Legacy in-flight phases adjusted in code, not exhaustively tested individually",
+    "Old compact habitat geometry checks are obsolete for this layout",
+    "No traffic avoidance, pressure simulation, production or active lifts added to campaign",
+    "No test in Unity 6000.4.7f1 editor"
+  ]
+}

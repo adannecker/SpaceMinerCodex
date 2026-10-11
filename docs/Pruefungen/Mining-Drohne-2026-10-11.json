@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-11",
+  "request": "Build the first mining variant of the imported maintenance drone and let it actually mine",
+  "build": {
+    "log": "Logs/tripo-mining-final-build-20261011.log",
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "development": true,
+    "exitCode": 0,
+    "deployment": "Builds/TripoMining",
+    "sha256VerifiedFiles": 247,
+    "sourceHashMatchesBuildCopy": true
+  },
+  "miningMission": {
+    "log": "Logs/tripo-mining-final-check-20261011.log",
+    "flag": "-tripoMiningCheck",
+    "exitCode": 0,
+    "checks": 20,
+    "resolution": [1600, 1000],
+    "source": "A-01",
+    "iceFraction": 0.8,
+    "minedRawKg": 12,
+    "deliveredWaterLiters": 9.6,
+    "initialSourceRawKg": 10000,
+    "remainingSourceRawKg": 9988,
+    "initialStationWaterLiters": 20,
+    "finalStationWaterLitersBeforeRefuelling": 29.6,
+    "productiveCompletedTrips": 1,
+    "result": "Mining-Drohne-2026-10-11/result.json",
+    "checked": [
+      "Isolated settings and an empty operational drone at its real station berth",
+      "Detailed independent auger mesh and productive extraction filling visible cargo",
+      "Both support shoes hit the actual asteroid collider",
+      "Actual auger contact tip reaches the mining surface within 0.025 m",
+      "Extracted source mass equals actual carried cargo",
+      "Actual battery consumption and protected return energy/fuel",
+      "Pause freezes extraction, cargo, battery, flight and cutting effects",
+      "Rear cargo port meets the existing station tank socket within 0.025 m",
+      "Full extraction, loaded return, unload and exact charging-berth position/rotation",
+      "12 kg extracted/unloaded once and 9.6 L water recorded using the actual ice fraction",
+      "Tank balance, earned material experience, remaining reserves and empty parked cargo display"
+    ]
+  },
+  "regressions": [
+    { "flag": "-maintenanceShowcaseCheck", "checks": 168, "exitCode": 0, "resolution": [1280, 800], "log": "Logs/tripo-mining-regression-maintenanceShowcaseCheck-20261011.log", "result": "Mining-Drohne-2026-10-11/maintenance-regression.json" },
+    { "flag": "-startStationCheck", "checks": 121, "exitCode": 0, "resolution": [1280, 800], "log": "Logs/tripo-mining-regression-startStationCheck-20261011.log" },
+    { "flag": "-miningBalanceCheck -batchmode -nographics", "checks": 195, "exitCode": 0, "log": "Logs/tripo-mining-regression-miningBalanceCheck-20261011.log", "result": "Mining-Drohne-2026-10-11/mining-balance-regression.json" }
+  ],
+  "totalChecks": 504,
+  "visual": {
+    "folder": "Mining-Drohne-2026-10-11",
+    "screenshots": 8,
+    "inspected": ["02-tool-stowed.png", "04-mining.png", "05-drill-contact.png", "06-loaded-return.png"]
+  },
+  "implementation": [
+    "TripoMiningDroneVisual and TripoMiningShowcase plus metadata; Start-Mining-Drohne.cmd",
+    "MaintenanceLaserVisual builds removable helical auger, carbide cutters, detailed cargo cartridge and transfer port",
+    "DroneToolMount shares original-hull surface sizing with the maintenance module",
+    "DroneAgent accepts hull-specific mining axis, working distance and cargo port; existing default geometry preserved",
+    "Existing AsteroidResource, DroneAgent, WaterScenario and MiningResearch perform all extraction, supply, delivery and experience accounting",
+    "12 kg cargo limit only in this preview; unchanged default mining rate, energy and fuel parameters",
+    "Visible 8x mining and 80x travel/manoeuvre time acceleration; pauses at berth before recharge",
+    "Independent settings, save directory and cinematic preference prefix"
+  ],
+  "limits": [
+    "First ice-mining preview; normal campaign build still uses existing drones",
+    "Resource mass decreases; visible asteroid surface is not deformed",
+    "Chips are visual proxies, not additional resource objects",
+    "Supports and collecting are simplified animations, not physical reaction-force or gripper constraints",
+    "No complete drone traffic avoidance or exact hull/cradle collision validation",
+    "Original imported hull/cradle remain unoptimized",
+    "No Release test, manual input acceptance, saved-variant migration test or performance benchmark"
+  ],
+  "savedCampaignModified": false,
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 60964,
+    "respondingVerified": true,
+    "log": "Logs/tripo-mining-preview.log"
+  }
+}

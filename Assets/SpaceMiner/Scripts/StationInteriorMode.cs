@@ -19,10 +19,15 @@ namespace SpaceMiner
         public bool NearConsole => inside && Layout != null && Vector3.Distance(FeetPosition, Layout.Console.position) <= 2.4f;
         public float ViewYaw => yaw;
         public float ViewPitch => pitch;
+        public PlayerVitals Vitals { get; private set; } = new PlayerVitals();
+        internal Rect VitalsHudRect => new Rect(18, UiLayout.Height - VitalsHudHeight - 18, 280, VitalsHudHeight);
+        private float VitalRowHeight => Mathf.Max(30, 14 * SettingsStore.Current.Accessibility.TextScale * 1.3f + 13);
+        private float VitalsHudHeight => 42 + VitalRowHeight * 5;
+        public void RestoreVitals(PlayerVitals saved) => Vitals = saved != null && saved.IsValid ? saved.Copy() : new PlayerVitals();
         public void RestoreInterior(Vector3 feet, bool console, float? savedYaw=null, float? savedPitch=null)
         {
             Enter(true); if (!inside) return;
-            walker.enabled=false; walker.transform.position=feet; walker.enabled=true;
+            walker.enabled=false; walker.transform.position=Layout.ContainsPosition(feet) ? feet : Layout.SpawnPosition; walker.enabled=true;
             verticalSpeed=0;
             if(savedYaw.HasValue)yaw=savedYaw.Value;
             if(savedPitch.HasValue)pitch=Mathf.Clamp(savedPitch.Value,-80,80);
@@ -31,6 +36,7 @@ namespace SpaceMiner
         }
         private OrbitCamera orbit;
         private Camera view;
+        private Light helmetLight;
         private CharacterController walker;
         private bool inside, captureMouse;
         private bool consoleOpen;
@@ -81,6 +87,10 @@ namespace SpaceMiner
             walker.height = 1.8f; walker.radius = .3f; walker.center = new Vector3(0, .9f, 0);
             walker.skinWidth = .025f; walker.stepOffset = .2f; walker.minMoveDistance = 0;
             walker.enabled = false;
+            var lamp = new GameObject("Helmet work light"); lamp.transform.SetParent(view.transform, false);
+            helmetLight = lamp.AddComponent<Light>(); helmetLight.type = LightType.Point;
+            helmetLight.color = new Color(.78f, .88f, 1); helmetLight.intensity = 2.5f;
+            helmetLight.range = 28; helmetLight.cullingMask = (1 << 25) | 1; helmetLight.enabled = false;
             Physics.SyncTransforms();
         }
         public bool Enter(bool duringIntro = false)
@@ -91,13 +101,14 @@ namespace SpaceMiner
             outsideFov = view.fieldOfView; outsideCursorLock = Cursor.lockState; outsideCursorVisible = Cursor.visible;
             if (duringIntro || !hasInteriorPose)
             {
-                walker.transform.position = Room.TransformPoint(new Vector3(0, .05f, -2.5f));
+                walker.transform.position = Layout.SpawnPosition;
                 Airlock.ResetClosed();
-                yaw = Room.eulerAngles.y; pitch = 0;
+                yaw = Layout.SpawnYaw; pitch = 0;
             }
             walker.enabled = true;
             hasInteriorPose = true; verticalSpeed = 0;
             inside = true; captureMouse = true; orbit.enabled = false;
+            helmetLight.enabled = true;
             if (!duringIntro) StationInteractionAudio.Play(StationSound.VrOff);
             ApplyView(); UpdateCursor();
             return true;
@@ -107,17 +118,21 @@ namespace SpaceMiner
             if (!inside) return;
             if (!silent) StationInteractionAudio.Play(StationSound.VrOn);
             consoleOpen = false;
+            Vitals.IsSprinting = false;
             inside = false; walker.enabled = false; orbit.enabled = true;
+            helmetLight.enabled = false;
             view.fieldOfView = outsideFov; orbit.RestoreViewPose();
             Cursor.lockState = outsideCursorLock; Cursor.visible = outsideCursorVisible;
         }
         public void Walk(Vector2 input, float seconds, bool fast = false)
         {
-            if (!inside || consoleOpen || SettingsMenu.BlocksInput || seconds <= 0) return;
+            if (!inside || consoleOpen || SettingsMenu.BlocksInput || IntroSequence.BlocksGameplay || StartMenu.IsOpen || MemoryCinematic.IsPlaying || seconds <= 0 || float.IsNaN(seconds) || float.IsInfinity(seconds)) return;
             Vector3 direction = Quaternion.Euler(0, yaw, 0) * new Vector3(input.x, 0, input.y);
+            float sprintSeconds = Vitals.Advance(seconds, fast, input.sqrMagnitude > .001f);
             if (walker.isGrounded) verticalSpeed = -2;
             else verticalSpeed = Mathf.Max(-10, verticalSpeed - 9.81f * seconds);
-            walker.Move((Vector3.ClampMagnitude(direction, 1) * (fast ? 4f : 2.2f) + Vector3.up * verticalSpeed) * seconds);
+            float distance = PlayerVitals.WalkSpeed * seconds + (PlayerVitals.SprintSpeed - PlayerVitals.WalkSpeed) * sprintSeconds;
+            walker.Move(Vector3.ClampMagnitude(direction, 1) * distance + Vector3.up * verticalSpeed * seconds);
         }
         public void Look(Vector2 degrees)
         {
@@ -127,6 +142,7 @@ namespace SpaceMiner
         {
             if (!inside || consoleOpen || SettingsMenu.BlocksInput || Vector3.Distance(FeetPosition, Layout.Console.position) > 2.4f) return false;
             consoleOpen = true; consoleScroll = Vector2.zero;
+            Vitals.IsSprinting = false;
             StationInteractionAudio.Play(StationSound.ConsoleOpen);
             foreach (var source in scenario.Asteroids) if (source.CanMineWater) { consoleSource = source; break; }
             UpdateCursor(); return true;
@@ -136,6 +152,7 @@ namespace SpaceMiner
         private bool Near(Transform target, float distance) => target != null && Vector3.Distance(FeetPosition, target.position) < distance;
         private void Update()
         {
+            Vitals.IsSprinting = false;
             if (StartMenu.IsOpen || MemoryCinematic.IsPlaying)
             { if (inside) Exit(true); return; }
             if (IntroSequence.BlocksGameplay) return;
@@ -143,6 +160,7 @@ namespace SpaceMiner
             if (!inside) return;
             UpdateCursor();
             if (SettingsMenu.BlocksInput) return;
+            if (PlayerInput.Pressed(CameraAction.ToggleHud)) orbit.ShowHud = !orbit.ShowHud;
             if (consoleOpen)
             {
                 if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)) CloseConsole();
@@ -173,6 +191,8 @@ namespace SpaceMiner
         }
         private void UpdateCursor()
         {
+            // The isolated ring demo owns the cursor while its overlay is open.
+            if (RingConstructionSimulator.IsOpen) return;
             bool locked = inside && captureMouse && !consoleOpen && (scenario.Scanner.Dialogue == null || IntroSequence.IsPlaying) && !SettingsMenu.BlocksInput && Application.isFocused;
             var state = locked ? CursorLockMode.Locked : CursorLockMode.None;
             if (Cursor.lockState != state) { Cursor.lockState = state; cursorChangedFrame = Time.frameCount; }
@@ -186,15 +206,17 @@ namespace SpaceMiner
             ui.Configure(SettingsStore.Current.Accessibility);
             if (GUI.Button(SwitchRect, inside ? "Station verlassen  [V]" : "Station betreten  [V]", ui.Button)) { if (inside) Exit(); else Enter(); }
             if (!inside) return;
-            const string hints = "INNENANSICHT  ·  Wohnmodul / Schleuse / Stationsring\nWASD + Maus  ·  E Interaktion  ·  Tab Maus freigeben  ·  V Außenansicht";
-            float hintWidth = Mathf.Min(660, UiLayout.Width - 36);
+            const string hints = "STARTSTATION  ·  Ring / Wohnen / Zentrale / Drohnendeck\nWASD + Maus  ·  Shift Sprinten  ·  E Stationspult\nTab Maus freigeben  ·  V Außenansicht  ·  Türen offen";
+            float hintLeft = orbit.ShowHud ? VitalsHudRect.xMax + 18 : 18;
+            float hintWidth = Mathf.Min(660, UiLayout.Width - hintLeft - 18);
             float hintHeight = ui.Small.CalcHeight(new GUIContent(hints), hintWidth - 24) + 16;
             float hintTop = UiLayout.Height - 66 - hintHeight;
             if (SettingsStore.Current.Gameplay.ShowControlHints)
             {
-                ui.Panel(new Rect(18, hintTop, hintWidth, hintHeight));
-                GUI.Label(new Rect(30, hintTop + 8, hintWidth - 24, hintHeight - 16), hints, ui.Small);
+                ui.Panel(new Rect(hintLeft, hintTop, hintWidth, hintHeight));
+                GUI.Label(new Rect(hintLeft + 12, hintTop + 8, hintWidth - 24, hintHeight - 16), hints, ui.Small);
             }
+            if (orbit.ShowHud) DrawVitals();
             string prompt = Near(Layout.Console, 2.4f) ? "E  Stationspult bedienen"
                 : Airlock.CanRequest(FeetPosition) ? "E  Schleusendurchgang starten"
                 : Near(Layout.RepairDrone, 1.7f) ? "R-01  ·  Reparaturdrohne ausgeschaltet" : "";
@@ -203,6 +225,30 @@ namespace SpaceMiner
             if (!string.IsNullOrEmpty(prompt)) GUI.Label(new Rect(UiLayout.Width * .5f - 260, hintTop - 52, 520, 48), prompt, ui.Text);
             if (Cursor.lockState == CursorLockMode.Locked) GUI.Label(new Rect(UiLayout.Width / 2f - 5, UiLayout.Height / 2f - 10, 20, 20), "+", ui.Small);
             if (consoleOpen) DrawConsole();
+        }
+        private void DrawVitals()
+        {
+            Rect panel = VitalsHudRect;
+            ui.Panel(panel);
+            string title = Vitals.Exhausted ? "STAMINA · ERSCHÖPFT" : Vitals.IsSprinting ? "STAMINA · SPRINT" : "KÖRPERSTATUS";
+            GUI.Label(new Rect(panel.x + 12, panel.y + 10, panel.width - 24, 24), title, ui.Small);
+            VitalBar(panel, 0, "Stamina", Vitals.Stamina, false, SpaceMinerUi.Cyan);
+            VitalBar(panel, 1, "Müdigkeit", Vitals.Fatigue, true, SpaceMinerUi.Amber);
+            VitalBar(panel, 2, "Hunger", Vitals.Hunger, true, SpaceMinerUi.Amber);
+            VitalBar(panel, 3, "Durst", Vitals.Thirst, true, SpaceMinerUi.Cyan);
+            VitalBar(panel, 4, "Gesundheit", Vitals.Health, false, SpaceMinerUi.Success);
+        }
+        private void VitalBar(Rect panel, int row, string label, float value, bool need, Color color)
+        {
+            float top = panel.y + 36 + row * VitalRowHeight;
+            float textHeight = VitalRowHeight - 12;
+            GUI.Label(new Rect(panel.x + 12, top, 186, textHeight), label, ui.Small);
+            var right = new GUIStyle(ui.Small) { alignment = TextAnchor.UpperRight };
+            GUI.Label(new Rect(panel.xMax - 76, top, 64, textHeight), value.ToString("F0") + " %", right);
+            Rect track = new Rect(panel.x + 12, top + textHeight + 1, panel.width - 24, 6);
+            SpaceMinerUi.Fill(track, new Color(.08f, .17f, .22f, .95f));
+            bool warning = need ? value >= 75 : value <= 25;
+            SpaceMinerUi.Fill(new Rect(track.x, track.y, track.width * Mathf.Clamp01(value / 100), track.height), warning ? SpaceMinerUi.Error : color);
         }
         private void DrawConsole()
         {
