@@ -1,0 +1,727 @@
+VBCSCompilerPreWarmer: watching VBCSCompiler (PID 39012)
+VBCSCompilerPreWarmer: pre-warm launched (dotnet PID 8808)
+VBCSCompiler prewarm took 23.83 ms
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.6/staging' branch; Version is '6000.6.4f1 (12bfff696524) revision 1228799'; Using compiler version '194234433'; Build Type 'Release'
+[Licensing::IpcConnector] Channel LicenseClient-achim doesn't exist
+OS: 'Windows 11  (10.0.26300) Professional' Language: 'de' Physical Memory: 32704 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+System  architecture: x64
+Process architecture: x64
+Date: 2026-10-18T21:46:17Z
+[Licensing::Module] Successfully launched the LicensingClient (PId: 59428)
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\6000.6.4f1\Editor\Unity.exe
+-batchmode
+-quit
+-projectPath
+C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1
+-executeMethod
+SpaceMiner.Editor.MiraTripoDemoBuild.Inspect
+-logFile
+C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Logs\mira-tripo-face-inspect-fifth-20261018.log
+Successfully changed project path to: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1
+C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gfx=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-main-allocator-mimalloc-enabled=1"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+Logging is directed to a specific file, skipping project log.
+Player connection [36812]  Target information:
+
+Player connection [36812]  * "[IP] 192.168.178.28 [Port] 55504 [Flags] 2 [Guid] 2762579994 [EditorId] 2762579994 [Version] 1048832 [Id] WindowsEditor(7,HellCompi) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [36812]  * "[IP] 10.223.241.242 [Port] 55504 [Flags] 2 [Guid] 2762579994 [EditorId] 2762579994 [Version] 1048832 [Id] WindowsEditor(7,HellCompi) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [36812]  * "[IP] 192.168.96.1 [Port] 55504 [Flags] 2 [Guid] 2762579994 [EditorId] 2762579994 [Version] 1048832 [Id] WindowsEditor(7,HellCompi) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [36812] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [36812] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-achim" at "2026-10-18T21:46:18.2747211Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 59428, path: "C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.3+d7ffd15
+  Session Id:              10af240f0f264eb6a5a40703db3066ec
+  Correlation Id:          c539cd4f51cbf14221a5059699292aa9
+  External correlation Id: 3898425918675639780
+  Machine Id:              BiHZzO4qqk3qqZUkddNMWlXi02w=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-achim" (connect: 0.56s, validation: 0.10s, handshake: 0.10s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-achim-notifications" at "2026-10-18T21:46:18.4762171Z"
+[Licensing::Module] Connected to LicensingClient (PId: 59428, launch time: 0.01, total connection time: 0.77s)
+[Licensing::Module] Error: Access token is unavailable; failed to update
+[Package Manager] Connected to IPC stream "Upm-11860" after 0.5 seconds.
+[Licensing::Module] Licensing is not yet initialized.
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 9071264614279-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+[Licensing::Client] Successfully updated license, isAsync: True, time: 0.01
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] Licensing Background thread has ended after 0.83s
+[Licensing::Module] Licensing is initialized (took 0.02s).
+[Licensing::Client] Successfully resolved entitlement details
+Library Redirect Path: Library/
+Launching Unity Data Store - C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/Tools/Unity.DataStore.exe 
+Unity Data Store artifact dir = Library/DataStore, working dir = C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1Unity Data Store running and initialised
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Initialize engine version: 6000.6.4f1 (12bfff696524)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        AMD Radeon RX 9070 XT (ID=0x7550)
+    Vendor:          ATI
+    VRAM:            16188 MB
+    App VRAM Budget: 15416 MB
+    Driver:          32.0.31041.1004
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/BCLExtensions/runtime/netstandard2.1'
+Mono path[2] = 'C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56860
+CodeReloadManager initialized
+ImportWorker Server TCP listen port: 0
+AcceleratorClientConnectionCallback - disconnected - :0
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.6.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004153 seconds.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:False
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.881 seconds
+Domain Reload Profiling: 1607ms
+	BeginReloadAssembly (200ms)
+		CreateAndSetChildDomain (19ms)
+	RebuildCommonClasses (5ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (99ms)
+	LoadAllAssembliesAndSetupDomain (399ms)
+		LoadAssemblies (172ms)
+		TypeCache.Refresh (269ms)
+			TypeCache.ScanAssembly (253ms)
+		AnalyzeDomain (3ms)
+	FinalizeReload (882ms)
+		SetupLoadedEditorAssemblies (0ms)
+			BeforeProcessingInitializeOnLoad (130ms)
+			ProcessInitializeOnLoadAttributes (146ms)
+			ProcessInitializeOnLoadMethodAttributes (283ms)
+[Licensing::Client] Successfully resolved entitlement details
+Application.AssetDatabase Initial Refresh Start
+[Package Manager] Restoring resolved packages state from cache
+[Licensing::Client] Successfully resolved entitlement details
+[Package Manager] Registered 10 packages:
+  Packages from [https://packages.unity.com]:
+    com.unity.ide.visualstudio@2.0.28 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.ide.visualstudio@b5edea5f33f4)
+  Built-in packages:
+    com.unity.modules.audio@1.0.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.modules.audio)
+    com.unity.modules.imageconversion@1.0.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.modules.imageconversion)
+    com.unity.modules.imgui@1.0.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.modules.imgui)
+    com.unity.modules.physics@1.0.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.modules.physics)
+    com.unity.modules.particlesystem@1.0.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.modules.particlesystem)
+    com.unity.modules.screencapture@1.0.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.modules.screencapture)
+    com.unity.test-framework@1.8.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.test-framework@80f691d4262b)
+    com.unity.ext.nunit@2.1.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.ext.nunit@0198eae3b53e)
+    com.unity.modules.jsonserialize@1.0.0 (location: C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Library\PackageCache\com.unity.modules.jsonserialize)
+[Subsystems] No new subsystems found in resolved package list.
+[Package Manager] Done registering packages in 0.02 seconds
+[ScriptCompilation] Requested script compilation because: AssetDatabase observed changes in script compilation related files
+Starting: C:\Program Files\Unity\Hub\Editor\6000.6.4f1\Editor\Data\Tools\BuildPipeline\bee_backend.exe --ipc --defer-dag-verification --dagfile="Library/Bee/1900b0aE.dag" --continue-on-failure --profile="Library/Bee/backend1.traceevents" ScriptAssemblies
+WorkingDir: C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1
+DisplayProgressbar: Compiling Scripts
+ExitCode: 0 Duration: 1s152ms
+[198/212    0s] ILPP-Configuration Library/ilpp-configuration.nevergeneratedoutput
+[208/212    0s] Csc Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll (+2 others)
+[209/212    0s] ILPostProcess Library/Bee/artifacts/1900b0aE.dag/post-processed/Assembly-CSharp-Editor.dll (+pdb)
+Processing assembly Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp-Editor.dll, with 146 defines and 300 references
+
+processors: zzzUnity.Burst.CodeGen.BurstILPostProcessor
+
+1 processor(s) skipped this assembly
+[210/212    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.pdb
+[211/212    0s] CopyFiles Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+*** Tundra build success (1.11 seconds), 5 items updated, 212 evaluated
+Total cache size 3179368
+Total cache size after purge 3179368, took 00:00:00.0323184
+AssetDatabase: script compilation time: 1.854062s
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+ScheduleIndexationOnStartup MainProcess:True IndexOnStartup:True
+Scripting: successfully reloaded assembly
+- Finished resetting the current domain, in  0.575 seconds
+Domain Reload Profiling: 1377ms
+	BeginReloadAssembly (324ms)
+		DisableScriptedObjects (31ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (11ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (88ms)
+	LoadAllAssembliesAndSetupDomain (358ms)
+		LoadAssemblies (317ms)
+		TypeCache.Refresh (18ms)
+			TypeCache.ScanAssembly (11ms)
+		AnalyzeDomain (11ms)
+			BuildScriptInfoCaches (7ms)
+	FinalizeReload (577ms)
+		SetupLoadedEditorAssemblies (0ms)
+			LogAssemblyErrors (3ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			BeforeProcessingInitializeOnLoad (134ms)
+			ProcessInitializeOnLoadAttributes (85ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (20ms)
+		AwakeInstancesAfterBackupRestoration (37ms)
+Starting new worker id: 0 with log in C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Logs/AssetImportWorkerHW0.log
+
+Asset Pipeline Refresh (id=56e03802d30ed5044a5918832ac1823e): Total: 3.706 seconds - Initiated by InitialRefreshV2(ForceSynchronousImport)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=0 (actual=0, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=841 ms
+		Asset DB Callback time: managed=89 ms, native=21 ms
+		Scripting: domain reloads=1, domain reload time=870 ms, compile time=1858 ms, other=24 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=1, moved=0, deleted=0
+		Scan Filter Count: 0
+	InvokePackagesCallback: 21.047ms
+	ApplyChangesToAssetFolders: 0.680ms
+	Scan: 86.237ms
+	Collect global state as custom dependencies: 14.017ms
+	OnSourceAssetsModified: 0.761ms
+	CategorizeScriptCompilationAssets: 3.291ms
+	ProcessAssetsWithTransientArtifactChanges: 9.209ms
+	CategorizeAssets: 3.885ms
+	CompileScripts: 1857.774ms
+	ImportOutOfDateAssets: 588.620ms (577.450ms without children)
+		UnloadImportedAssets: 0.094ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.125ms
+		ImportSchedulerStart: 10.947ms
+	PostProcessAllAssets: 90.737ms
+		VCAutoAddAssetPostprocess 1.062ms
+		MonoPostProcessAllAssets: 89.005ms
+			AssetPostprocessor.OnPostprocessAllAssets 31.881ms
+			StyleCatalogPostProcessor.OnPostprocessAllAssets 12.805ms
+			WindowAssetPostprocessingWatcher.OnPostprocessAllAssets 12.331ms
+			BuilderAssetPostprocessor.OnPostprocessAllAssets 9.294ms
+			SyncVS.PostprocessSyncProject 3.783ms
+			AssetChangedListener.OnPostprocessAllAssets 1.934ms
+			RetainedModeAssetPostprocessor.OnPostprocessAllAssets 1.494ms
+			EditModeScopePostprocessor.OnPostprocessAllAssets 0.933ms
+			SpeedTree9Postprocessor.OnPostprocessAllAssets 0.785ms
+			ReferencedClipsPostProcessor.OnPostprocessAllAssets 0.607ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 0.590ms
+			ArtifactBrowserPostProcessor.OnPostprocessAllAssets 0.569ms
+			AssetEvents.OnPostprocessAllAssets 0.436ms
+			AudioMixerPostprocessor.OnPostprocessAllAssets 0.330ms
+			AssetDatabaseCallbacks.OnPostprocessAllAssets 0.292ms
+			ScenarioDriftAssetsTracker.OnPostprocessAllAssets 0.245ms
+			TerrainToolbarOverlayPostProcessor.OnPostprocessAllAssets 0.208ms
+			ConfigAssetsTracker.OnPostprocessAllAssets 0.186ms
+			SpeedTreePostProcessor.OnPostprocessAllAssets 0.153ms
+			ThemePostprocessor.OnPostprocessAllAssets 0.152ms
+			RenderPipelineGlobalSettingsPostprocessor.OnPostprocessAllAssets 0.098ms
+			AudioContainerPostProcessor.OnPostprocessAllAssets 0.084ms
+	PostAssetChangesProfiler: 1.719ms
+	UnloadStreamsBegin: 2.019ms
+	Untracked: 994.439ms
+
+Application.AssetDatabase Initial Refresh End
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Scanning for USB devices : 7.035ms
+Initializing Unity extensions:
+[MODES] ModeService[none].Initialize
+[MODES] ModeService[none].LoadModes
+[MODES] Loading mode Default (0) for mode-current-id-Space Miner - Prototyp 01
+Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 572 unused Assets / (2.9 MB). Loaded Objects now: 1292.
+Memory consumption went from 231.0 MB to 228.2 MB.
+Total: 6.830900 ms (FindLiveObjects: 0.228400 ms CreateObjectMapping: 0.023400 ms MarkObjects: 5.344700 ms  DeleteObjects: 1.099300 ms)
+
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 0 unused Assets / (Unknown). Loaded Objects now: 1294.
+Memory consumption went from 228.2 MB to 228.2 MB.
+Total: 9.578700 ms (FindLiveObjects: 0.157500 ms CreateObjectMapping: 0.010900 ms MarkObjects: 9.263100 ms  DeleteObjects: 0.006100 ms)
+
+Asset Pipeline Refresh (id=0ba855c1f4922294486e56313f85b618): Total: 0.038 seconds - Initiated by RefreshV2(NoUpdateAssetOptions)
+Importing 'GUID: 86599b1e4f49db64fafd0ce9b0773447 - Path: Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx' with importer (FBXImporter)
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+A polygon of Mesh 'tripo_node_7f6fd40b' in Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx is self-intersecting and has been discarded.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.AssetDatabase:ImportAsset (string,UnityEditor.ImportAssetOptions)
+UnityEditor.AssetDatabase:ImportAsset (string)
+UnityEditor.AssetImporter:SaveAndReimport ()
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:67)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+[Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs line 67]
+
+Imported 'GUID: 86599b1e4f49db64fafd0ce9b0773447' -> (Import Result ID: 'ccc6232adee8e086ae6afbefcbeecd21') in 0.313 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6b54e1631e1ebafc3041abd6ccebcb54 DependenciesID=685da04526eb01872317a604b0567dda StaticDependenciesID=b49c4506909afe63a397325622b02ca2 
+
+Asset Pipeline Refresh (id=5bc373da84b4f80458e9ef630e2c5881): Total: 0.331 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=3 ms, native=324 ms
+		Asset DB Callback time: managed=3 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	Scan: 10.969ms
+	Collect global state as custom dependencies: 0.460ms
+	CategorizeAssets: 0.235ms
+	ImportOutOfDateAssets: 314.696ms (0.057ms without children)
+		ImportManagerImport: 313.953ms (0.793ms without children)
+		UnloadImportedAssets: 0.204ms
+		ReloadImportedAssets: 0.136ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.066ms
+		ImportSchedulerStart: 0.410ms
+	PostProcessAllAssets: 3.919ms
+		MonoPostProcessAllAssets: 3.671ms
+			AssetPostprocessor.OnPostprocessAllAssets 3.138ms
+			SyncVS.PostprocessSyncProject 0.363ms
+	PostAssetChangesProfiler: 0.063ms
+	Untracked: 0.814ms
+
+Importing 'GUID: e68ccd9cc4fe507488d954019fc4975f - Path: Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png' with importer (TextureImporter)
+Imported 'GUID: e68ccd9cc4fe507488d954019fc4975f' -> (Import Result ID: '36cc453cafafe4761d699383d0d8c10d') in 0.526 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b3e1d97bd01901e32103b38ad44f180b DependenciesID=b5b3f65b56090d1a1e5a9452d0369e15 StaticDependenciesID=4c83649de8ee42cca3f1c6d619ca98a8 
+
+Asset Pipeline Refresh (id=760e47b441231944fbb4d554072c9a71): Total: 0.545 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=540 ms
+		Asset DB Callback time: managed=2 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	Scan: 11.702ms
+	Collect global state as custom dependencies: 0.461ms
+	CategorizeAssets: 0.221ms
+	ImportOutOfDateAssets: 527.670ms (0.069ms without children)
+		ImportManagerImport: 527.144ms (0.150ms without children)
+		UnloadImportedAssets: 0.193ms
+		ReloadImportedAssets: 0.153ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.085ms
+		ImportSchedulerStart: 0.174ms
+	PostProcessAllAssets: 3.215ms
+		MonoPostProcessAllAssets: 2.903ms
+			TextAssetPostProcessor.OnPostprocessAllAssets 2.107ms
+			SyncVS.PostprocessSyncProject 0.446ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.076ms
+	PostAssetChangesProfiler: 0.064ms
+	Untracked: 1.111ms
+
+Importing 'GUID: 23a7385a59ed86544960076b48cb960b - Path: Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg' with importer (TextureImporter)
+Imported 'GUID: 23a7385a59ed86544960076b48cb960b' -> (Import Result ID: '6401fe6605a6dccf09c22e62d2117907') in 0.407 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=22f61c0e29ee7f4f57cccfd80389d2f5 DependenciesID=da32abc6e88e2028af6977217007a76a StaticDependenciesID=1973dddb195c76c9e235c39ae23fc0b8 
+
+Asset Pipeline Refresh (id=bb43a1017e05df143a95550fa1e09286): Total: 0.425 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=423 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	Scan: 13.371ms
+	Collect global state as custom dependencies: 0.520ms
+	CategorizeAssets: 0.253ms
+	ImportOutOfDateAssets: 408.440ms (0.081ms without children)
+		ImportManagerImport: 407.874ms (0.115ms without children)
+		UnloadImportedAssets: 0.201ms
+		ReloadImportedAssets: 0.132ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.105ms
+		ImportSchedulerStart: 0.173ms
+	PostProcessAllAssets: 1.181ms
+		MonoPostProcessAllAssets: 0.922ms
+			SyncVS.PostprocessSyncProject 0.419ms
+			AssetChangedListener.OnPostprocessAllAssets 0.252ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.066ms
+	PostAssetChangesProfiler: 0.063ms
+	Untracked: 1.157ms
+
+Importing 'GUID: 787f527e79fbc4b4188bcfd725cc2a97 - Path: Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG' with importer (TextureImporter)
+Imported 'GUID: 787f527e79fbc4b4188bcfd725cc2a97' -> (Import Result ID: 'b8c76b6c13489b3eaf44e6247ee3399a') in 0.590 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=877d993ba7258bfed0f7fdd4c4ee3baf DependenciesID=1033843527cb95b0db36b535437972b9 StaticDependenciesID=16e6ec934b8450cf49e2c34d3be9046c 
+
+Asset Pipeline Refresh (id=f590f39391d41be45866785f7dd90530): Total: 0.605 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=604 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	Scan: 11.127ms
+	Collect global state as custom dependencies: 0.446ms
+	CategorizeAssets: 0.238ms
+	ImportOutOfDateAssets: 591.262ms (0.068ms without children)
+		ImportManagerImport: 590.760ms (0.128ms without children)
+		UnloadImportedAssets: 0.199ms
+		ReloadImportedAssets: 0.143ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.080ms
+		ImportSchedulerStart: 0.149ms
+	PostProcessAllAssets: 0.894ms
+		MonoPostProcessAllAssets: 0.644ms
+			SyncVS.PostprocessSyncProject 0.357ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.066ms
+	Untracked: 1.082ms
+
+Importing 'GUID: e3a3c921d1429034caafc26810e77a80 - Path: Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG' with importer (TextureImporter)
+Imported 'GUID: e3a3c921d1429034caafc26810e77a80' -> (Import Result ID: '17bfaec216c1999d6b7c284e31dc2143') in 0.613 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=677c6a7fc578b0a6c94a46732d20ae51 DependenciesID=f2daa91bf96b2ccfd625435fa58bfc33 StaticDependenciesID=4f80cfebb48f76ecc1222df5762cb1a1 
+
+Asset Pipeline Refresh (id=9eab2a12dc0e6e843a8cf157caecc42c): Total: 0.628 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=627 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	Scan: 11.585ms
+	Collect global state as custom dependencies: 0.446ms
+	CategorizeAssets: 0.231ms
+	ImportOutOfDateAssets: 613.867ms (0.057ms without children)
+		ImportManagerImport: 613.430ms (0.101ms without children)
+		UnloadImportedAssets: 0.155ms
+		ReloadImportedAssets: 0.103ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.068ms
+		ImportSchedulerStart: 0.150ms
+	PostProcessAllAssets: 0.704ms
+		MonoPostProcessAllAssets: 0.503ms
+			SyncVS.PostprocessSyncProject 0.296ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.053ms
+	PostAssetChangesProfiler: 0.068ms
+	Untracked: 1.028ms
+
+Importing 'GUID: 2d8ddce48a7136b469e72b0a444f15ca - Path: Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png' with importer (TextureImporter)
+Imported 'GUID: 2d8ddce48a7136b469e72b0a444f15ca' -> (Import Result ID: 'fe3b7b46d5b8fbd6f899f78a1496c08e') in 0.710 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=59c0019103229a17dfdf3511efa03781 DependenciesID=608163854b520c4906f7d4c7e13aa160 StaticDependenciesID=92d522ffda567512343035ae2469c87d 
+
+Asset Pipeline Refresh (id=91d29e79ea76ee04fa5234b54c8f4df6): Total: 0.725 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=724 ms
+		Asset DB Callback time: managed=0 ms, native=0 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 6
+	Scan: 11.727ms
+	Collect global state as custom dependencies: 0.458ms
+	CategorizeAssets: 0.253ms
+	ImportOutOfDateAssets: 710.534ms (0.058ms without children)
+		ImportManagerImport: 710.055ms (0.104ms without children)
+		UnloadImportedAssets: 0.200ms
+		ReloadImportedAssets: 0.108ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.072ms
+		ImportSchedulerStart: 0.144ms
+	PostProcessAllAssets: 1.094ms
+		MonoPostProcessAllAssets: 0.744ms
+			SyncVS.PostprocessSyncProject 0.480ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.055ms
+	PostAssetChangesProfiler: 0.055ms
+	Untracked: 1.053ms
+
+Worker ready: AssetImportWorkerHW0 0
+MIRA TRIPO SPEECH SHAPE: affected=2034 maximumMeters=0,008062258
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SpaceMiner.Editor.MiraTripoDemoBuild:AddSpeechShape (UnityEngine.Mesh) (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:129)
+SpaceMiner.Editor.MiraTripoDemoBuild:Prepare () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:92)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:19)
+
+(Filename: Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs Line: 129)
+
+Importing 'GUID: 21e9e078bd4df804a9d9cd5801c1e863 - Path: Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset' with importer (NativeFormatImporter)
+Imported 'GUID: 21e9e078bd4df804a9d9cd5801c1e863' -> (Import Result ID: 'adffd615d38c92ac803c710bd738a438') in 0.045 seconds [static dependencies only]. Details - ImportResultOutputID=72cfe2e57076dd631fb32ca8246a3be3 DependenciesID=00038312f0ce80d56a4d03ba70c597b4 StaticDependenciesID=3a9001a86e858da3efa532552dd52bc1 
+Asset Pipeline Refresh (id=4c7feee8e05af4d4089f2ed295c953bd): Total: 0.071 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+Importing 'GUID: e68ccd9cc4fe507488d954019fc4975f - Path: Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png' with importer (TextureImporter)
+Imported 'GUID: e68ccd9cc4fe507488d954019fc4975f' -> (Import Result ID: '36cc453cafafe4761d699383d0d8c10d') in 0.536 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b3e1d97bd01901e32103b38ad44f180b DependenciesID=b5b3f65b56090d1a1e5a9452d0369e15 StaticDependenciesID=4c83649de8ee42cca3f1c6d619ca98a8 
+
+Asset Pipeline Refresh (id=06464b45dcce99f46b0155ae0a9b7e13): Total: 0.559 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=555 ms
+		Asset DB Callback time: managed=0 ms, native=2 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	Scan: 17.504ms
+	Collect global state as custom dependencies: 0.458ms
+	CategorizeAssets: 0.229ms
+	ImportOutOfDateAssets: 536.481ms (0.061ms without children)
+		ImportManagerImport: 535.996ms (0.099ms without children)
+		UnloadImportedAssets: 0.198ms
+		ReloadImportedAssets: 0.098ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.067ms
+		ImportSchedulerStart: 0.144ms
+	PostProcessAllAssets: 0.849ms
+		MonoPostProcessAllAssets: 0.594ms
+			SyncVS.PostprocessSyncProject 0.321ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.061ms
+			AssetChangedListener.OnPostprocessAllAssets 0.057ms
+	PostAssetChangesProfiler: 2.584ms
+	Untracked: 0.778ms
+
+Importing 'GUID: e68ccd9cc4fe507488d954019fc4975f - Path: Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png' with importer (TextureImporter)
+Imported 'GUID: e68ccd9cc4fe507488d954019fc4975f' -> (Import Result ID: '36cc453cafafe4761d699383d0d8c10d') in 0.497 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b3e1d97bd01901e32103b38ad44f180b DependenciesID=b5b3f65b56090d1a1e5a9452d0369e15 StaticDependenciesID=4c83649de8ee42cca3f1c6d619ca98a8 
+
+Asset Pipeline Refresh (id=b9ec8085195ef29489b4f90d1cc8e9a1): Total: 0.513 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+	(Values over 0.05ms)
+	Summary:
+		Imports: total=1 (actual=1, local cache=0, cache server=0)
+		Asset DB Process Time: managed=0 ms, native=510 ms
+		Asset DB Callback time: managed=0 ms, native=1 ms
+		Scripting: domain reloads=0, domain reload time=0 ms, compile time=0 ms, other=0 ms
+		Project Asset Count: scripts=127, non-scripts=648
+		Asset File Changes: new=0, changed=0, moved=0, deleted=0
+		Scan Filter Count: 5
+	Scan: 10.953ms
+	Collect global state as custom dependencies: 0.440ms
+	CategorizeAssets: 0.219ms
+	ImportOutOfDateAssets: 498.056ms (0.067ms without children)
+		ImportManagerImport: 497.620ms (0.150ms without children)
+		UnloadImportedAssets: 0.138ms
+		ReloadImportedAssets: 0.170ms
+		EnsureUptoDateAssetsAreRegisteredWithGuidPM: 0.076ms
+		ImportSchedulerStart: 0.147ms
+	PostProcessAllAssets: 1.212ms
+		MonoPostProcessAllAssets: 0.848ms
+			SyncVS.PostprocessSyncProject 0.531ms
+			AssetPostprocessor.OnPostprocessAllAssets 0.075ms
+	PostAssetChangesProfiler: 1.339ms
+	Untracked: 1.003ms
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 19 unused Assets / (6.4 MB). Loaded Objects now: 1299.
+Memory consumption went from 280.1 MB to 273.6 MB.
+Total: 5.735800 ms (FindLiveObjects: 0.171900 ms CreateObjectMapping: 0.015600 ms MarkObjects: 5.357500 ms  DeleteObjects: 0.060000 ms)
+
+MIRA TRIPO INSPECT: vertices=116465 bounds=Center: (0.00, 0.31, 0.00), Extents: (0.30, 0.31, 0.20)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+SpaceMiner.Editor.MiraTripoDemoBuild:Inspect () (at Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs:46)
+
+(Filename: Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs Line: 46)
+
+Batchmode quit successfully invoked - shutting down!
+Curl error 42: Callback aborted
+Importing 'GUID: b237ba4ef103f664c814873443871dd9 - Path: Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPortrait.renderTexture' with importer (NativeFormatImporter)
+Imported 'GUID: b237ba4ef103f664c814873443871dd9' -> (Import Result ID: 'aea0e8a0517fc339d9466363794e56ba') in 0.010 seconds [static dependencies only]. Details - ImportResultOutputID=29fd969dc6ad82e758ee6fd7742e617b DependenciesID=9d13ae28e0a3f44c24f6ddf50cd78cb8 StaticDependenciesID=ba90698fb712d75ac9b2b609ac81f2d0 
+Importing 'GUID: ab28831f931c4c44b9b34acd430723c1 - Path: Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPBR.mat' with importer (NativeFormatImporter)
+Imported 'GUID: ab28831f931c4c44b9b34acd430723c1' -> (Import Result ID: '887f783a8f8bb34e3092c9edfc3554df') in 0.002 seconds [static dependencies only]. Details - ImportResultOutputID=932be5ed4e8b3494e45d4a12f45b6921 DependenciesID=02266a652cc706b7ad3dca5482a83105 StaticDependenciesID=9d0915b22d678f93db86ad2dcece5eff 
+Asset Pipeline Refresh (id=573c9bf1696b3524eab65800b2262e66): Total: 0.028 seconds - Initiated by StopAssetImportingV2(NoUpdateAssetOptions)
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+[Licensing::IpcConnector] LicenseClient-achim-notifications channel disconnected successfully.
+[Licensing::IpcConnector] LicenseClient-achim channel disconnected successfully.
+Lingering sessions upon destruction of worker manager
+Unity Data Store service was successfully shut down
+UDS shutting down local client system
+AcceleratorClientConnectionCallback - disconnected - :0
+Cleanup mono
+CodeReloadManager destroyed
+Exiting batchmode successfully now!
+[ExitDontLaunchBugReporter] Exiting without the bug reporter. Application will exit with return code 0

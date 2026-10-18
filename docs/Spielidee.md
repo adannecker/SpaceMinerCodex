@@ -1,5 +1,9 @@
 # Space Miner — Spielidee und erster Meilenstein
 
+Mira-Auftrag18.10.2026: Den zuvor zurückgestellten3D-Avatar erneut als Tripo-Modell anhand des freigegebenen Mira-Bildes versuchen. Zunächst Kopf und Schultern, möglichst gleiche Gesichtszüge/Frisur/KI-Konturen; Mundbewegungen zum Sprechen und natürliche Zähne als Qualitätsziele. Die gezeichnete Dialogdarstellung bleibt bis zur gesonderten Modell-/Animationsfreigabe im Hauptspiel. [Modellstand](Mira3D.md).
+
+Fortsetzung18.10.2026: Der erste3D-Gesprächsversuch gefällt als Grundlage; Nutzer möchte dezente Kopf- und Augenbewegungen, Mimik und bessere Mundbewegungen recherchieren und ausprobieren. Als separate Vorschau mit kleinen Bewegungen und lautabhängigen Sprachformen weiterentwickeln; perfekte Anatomie oder finale Gestaltungsfreigabe damit nicht vorwegnehmen. [Umsetzung und Grenzen](Mira3D.md#kopf-augen-mimik-und-sprachformen-18102026).
+
 Nutzerpräzisierung12.10.2026: Nur beim Bohren jeweils einen Brocken erzeugen und einsammeln, bis die Box voll ist. Am Lageranschluss soll zuerst eine Manschette ansaugen, dann geht die Heckluke hoch. Im Mining-Showcase mit zwölf einzeln abgelegten Stücken in zwei Lagen umgesetzt; Ansaugung als Zustandsanimation mit Kontaktprüfung. Erst Luke schließen, dann Manschette lösen. Größenklassen passend in die Box eingepasst; zwölfkg weiterhin Testwert. [Aktueller Ablauf und Abnahme](Mining-Drohne-Tripo.md).
 
 Nutzerkorrektur12.10.2026: Die Heckluke der Mining-Box muss geschlossen die Rückseite abdecken. Den hohen Querrahmen durch zwei kurze Seitenschienen ersetzen; maximal90% nach oben öffnen und einen Rest in den Führungen belassen. Mit feststehender Dichtung und freiem Abstand zu Deckel/Verschlüssen umgesetzt; Brocken zum Entladen zur Kanalmitte führen. [Aktueller Modellstand und Abnahme](Mining-Drohne-Tripo.md).

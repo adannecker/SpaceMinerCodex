@@ -1,0 +1,59 @@
+{
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "recognizer": "phonetic",
+  "source": "Intro/mira_14",
+  "audioSha256": "fbfe40402d0e2bcf9adef295534b87b26f5061b38e885683de2aa03243fce55e",
+  "duration": 2.4100226757369616,
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.56,
+      "value": "X"
+    },
+    {
+      "start": 0.56,
+      "end": 0.84,
+      "value": "B"
+    },
+    {
+      "start": 0.84,
+      "end": 0.98,
+      "value": "F"
+    },
+    {
+      "start": 0.98,
+      "end": 1.33,
+      "value": "B"
+    },
+    {
+      "start": 1.33,
+      "end": 1.41,
+      "value": "A"
+    },
+    {
+      "start": 1.41,
+      "end": 1.54,
+      "value": "D"
+    },
+    {
+      "start": 1.54,
+      "end": 1.61,
+      "value": "C"
+    },
+    {
+      "start": 1.61,
+      "end": 1.68,
+      "value": "D"
+    },
+    {
+      "start": 1.68,
+      "end": 2.03,
+      "value": "B"
+    },
+    {
+      "start": 2.03,
+      "end": 2.41,
+      "value": "X"
+    }
+  ]
+}

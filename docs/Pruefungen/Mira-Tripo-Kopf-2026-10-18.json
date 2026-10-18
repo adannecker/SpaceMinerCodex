@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-18",
+  "request": "Create a faithful Mira 3D head and shoulders in Tripo with a natural mouth and teeth suitable for later speech animation",
+  "sourceImage": "Assets/SpaceMiner/AvatarLab/MiraSketch.png",
+  "sourceSha256": "A5A6AC42A25D093AFE1CE9250970484B11BFB9BD9CFEE4EAE56A7B763AA1CCF9",
+  "originalPreserved": true,
+  "reference": {
+    "tool": "Tripo Studio Edit Image",
+    "model": "Nano Banana",
+    "prompt": "Art/Mira3D/Tripo-Mira-2026-10-18-Prompt.txt",
+    "image": "Art/Mira3D/Tripo-Mira-2026-10-18-Referenz.png",
+    "sha256": "8E4C457F93CBC624BBAA86A0101A934764E4EA3D1251D4C0396D2182201C8C79",
+    "credits": 10,
+    "visuallyInspected": true
+  },
+  "model": {
+    "status": "completed and visibly inspected in Tripo",
+    "id": "0add4eb7-94ba-4147-9bb1-06b2e47eb0ac",
+    "url": "https://studio.tripo3d.ai/workspace/generate/0add4eb7-94ba-4147-9bb1-06b2e47eb0ac",
+    "displayedName": "futuristic character 3d model",
+    "generator": "HD Model H3.1",
+    "ultraMeshQuality": true,
+    "topology": "Quad",
+    "requestedPolycount": 50000,
+    "displayedFaces": 46009,
+    "displayedVertices": 46105,
+    "textureSetting": "4K",
+    "pbr": true,
+    "removeLighting": true,
+    "aiComplete": false,
+    "generateInParts": false,
+    "eightK": false,
+    "unchangedPrivacy": "Public",
+    "credits": 60
+  },
+  "creditBalance": {
+    "before": 120,
+    "afterReference": 110,
+    "afterModel": 50,
+    "totalSpent": 70,
+    "topUpOrSubscription": false
+  },
+  "visual": {
+    "inspected": [
+      "Front and three-quarter model view",
+      "Side profile with mouth, ear and hair silhouette",
+      "Slightly parted lips and visible tooth appearance"
+    ],
+    "screenshots": [
+      "Art/Mira3D/Tripo-Mira-2026-10-18-Vorschau.jpg",
+      "Art/Mira3D/Tripo-Mira-2026-10-18-Seite.jpg",
+      "Art/Mira3D/Tripo-Mira-2026-10-18-Schraeg.jpg"
+    ]
+  },
+  "export": {
+    "attempted": true,
+    "format": "FBX",
+    "target": "Blender",
+    "textures": "4K Current",
+    "requestedFileName": "Mira_Head_Shoulders_V1",
+    "downloaded": false,
+    "blocker": "Tripo displayed Upgrade to export ready-to-use 3D assets in multiple formats",
+    "subscriptionNotPurchased": true
+  },
+  "confirmedAnimationReady": false,
+  "mouthCavityAndSeparateTeethVerified": false,
+  "facialRigOrVisemesCreated": false,
+  "unityImportOrBuild": false,
+  "mainGamePortraitReplaced": false,
+  "limits": [
+    "Visual prototype only; similarity remains subject to user review",
+    "Quad topology does not prove appropriate facial edge loops",
+    "Teeth and mouth interior have not been inspected as exported geometry",
+    "Export requires account upgrade according to the observed Tripo prompt; no bypass attempted",
+    "No lip-sync, facial rig, Unity or performance test"
+  ]
+}

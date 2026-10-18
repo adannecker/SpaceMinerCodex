@@ -1,0 +1,209 @@
+{
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "recognizer": "phonetic",
+  "source": "Intro/mira_06",
+  "audioSha256": "5b83dfa9e2d61c6e53d43fe043adeb90215885ee51dee781ef8cef5694b9ff7d",
+  "duration": 6.610022675736961,
+  "mouthCues": [
+    {
+      "start": 0.0,
+      "end": 0.68,
+      "value": "X"
+    },
+    {
+      "start": 0.68,
+      "end": 1.07,
+      "value": "B"
+    },
+    {
+      "start": 1.07,
+      "end": 1.15,
+      "value": "A"
+    },
+    {
+      "start": 1.15,
+      "end": 1.22,
+      "value": "B"
+    },
+    {
+      "start": 1.22,
+      "end": 1.5,
+      "value": "C"
+    },
+    {
+      "start": 1.5,
+      "end": 1.64,
+      "value": "F"
+    },
+    {
+      "start": 1.64,
+      "end": 1.72,
+      "value": "A"
+    },
+    {
+      "start": 1.72,
+      "end": 1.83,
+      "value": "C"
+    },
+    {
+      "start": 1.83,
+      "end": 1.91,
+      "value": "A"
+    },
+    {
+      "start": 1.91,
+      "end": 1.98,
+      "value": "C"
+    },
+    {
+      "start": 1.98,
+      "end": 2.25,
+      "value": "B"
+    },
+    {
+      "start": 2.25,
+      "end": 2.39,
+      "value": "D"
+    },
+    {
+      "start": 2.39,
+      "end": 2.53,
+      "value": "B"
+    },
+    {
+      "start": 2.53,
+      "end": 2.81,
+      "value": "C"
+    },
+    {
+      "start": 2.81,
+      "end": 3.22,
+      "value": "X"
+    },
+    {
+      "start": 3.22,
+      "end": 3.26,
+      "value": "B"
+    },
+    {
+      "start": 3.26,
+      "end": 3.3,
+      "value": "C"
+    },
+    {
+      "start": 3.3,
+      "end": 3.4,
+      "value": "A"
+    },
+    {
+      "start": 3.4,
+      "end": 3.51,
+      "value": "B"
+    },
+    {
+      "start": 3.51,
+      "end": 3.58,
+      "value": "D"
+    },
+    {
+      "start": 3.58,
+      "end": 3.66,
+      "value": "A"
+    },
+    {
+      "start": 3.66,
+      "end": 3.73,
+      "value": "B"
+    },
+    {
+      "start": 3.73,
+      "end": 3.79,
+      "value": "C"
+    },
+    {
+      "start": 3.79,
+      "end": 3.86,
+      "value": "F"
+    },
+    {
+      "start": 3.86,
+      "end": 4.0,
+      "value": "G"
+    },
+    {
+      "start": 4.0,
+      "end": 4.07,
+      "value": "F"
+    },
+    {
+      "start": 4.07,
+      "end": 4.21,
+      "value": "B"
+    },
+    {
+      "start": 4.21,
+      "end": 4.28,
+      "value": "C"
+    },
+    {
+      "start": 4.28,
+      "end": 4.42,
+      "value": "B"
+    },
+    {
+      "start": 4.42,
+      "end": 4.48,
+      "value": "A"
+    },
+    {
+      "start": 4.48,
+      "end": 4.54,
+      "value": "B"
+    },
+    {
+      "start": 4.54,
+      "end": 4.62,
+      "value": "A"
+    },
+    {
+      "start": 4.62,
+      "end": 5.0,
+      "value": "B"
+    },
+    {
+      "start": 5.0,
+      "end": 5.07,
+      "value": "C"
+    },
+    {
+      "start": 5.07,
+      "end": 5.21,
+      "value": "B"
+    },
+    {
+      "start": 5.21,
+      "end": 5.29,
+      "value": "A"
+    },
+    {
+      "start": 5.29,
+      "end": 5.34,
+      "value": "D"
+    },
+    {
+      "start": 5.34,
+      "end": 5.52,
+      "value": "C"
+    },
+    {
+      "start": 5.52,
+      "end": 5.87,
+      "value": "B"
+    },
+    {
+      "start": 5.87,
+      "end": 6.61,
+      "value": "X"
+    }
+  ]
+}

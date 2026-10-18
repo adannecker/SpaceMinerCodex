@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-18",
+  "generator": "Tripo Studio H2.5 Legacy",
+  "modelId": "8773b4ce-9c36-4961-b105-2115aca8ec31",
+  "modelUrl": "https://studio.tripo3d.ai/workspace/generate/8773b4ce-9c36-4961-b105-2115aca8ec31",
+  "reference": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Referenz.png",
+  "referenceSha256": "8e4c457f93cbc624bbaa86a0101a934764e4ea3d1251d4c0396d2182201c8c79",
+  "referenceReusedWithoutEditing": true,
+  "creditsBefore": 50,
+  "creditsSpent": 45,
+  "creditsAfter": 5,
+  "exportAllowanceBefore": 13,
+  "exportAllowanceAfter": 12,
+  "settings": {
+    "topology": "Quad",
+    "requestedPolycount": 50000,
+    "texture": "4K",
+    "pbr": true,
+    "removeLighting": true,
+    "aiComplete": false,
+    "generateInParts": false,
+    "eightK": false
+  },
+  "displayedModel": {
+    "faces": 66846,
+    "vertices": 69339,
+    "topology": "Quad"
+  },
+  "export": {
+    "downloaded": true,
+    "format": "FBX",
+    "target": "Blender",
+    "texture": "4K Current",
+    "archive": "U:\\Downloads\\Mira_Head_Shoulders_H25_V1.zip",
+    "localBackup": "Imports/Tripo/Mira_Head_Shoulders_H25_V1.zip",
+    "archiveBytes": 6978879,
+    "archiveSha256": "f0dc66a534b20cfd45b35afbf0d50b69af0bdaf7d69c6f71c548eb345b362f3f",
+    "crcPassed": true,
+    "fbxVersion": 7400,
+    "fourKTexturesVerified": 4,
+    "files": [
+      {
+        "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+        "bytes": 4099852,
+        "sha256": "586de1c65e42cf8e9358b99867ecc0f37c3c76441ce795779b61f124bd5830b4",
+        "fbxVersion": 7400
+      },
+      {
+        "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG",
+        "bytes": 527630,
+        "sha256": "acf4c55db81e096c6616c0ed4cc5a61c5ae85ac89710ed40008224b4a17a6702",
+        "dimensions": [
+          4096,
+          4096
+        ]
+      },
+      {
+        "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG",
+        "bytes": 463436,
+        "sha256": "dbc2ca881cef6341940934580c0cf1fde10c120ea04077cc247027878d111151",
+        "dimensions": [
+          4096,
+          4096
+        ]
+      },
+      {
+        "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg",
+        "bytes": 835686,
+        "sha256": "c57d447111a55dd6910225c5ec0fbe9379cd34cf28606eebe4cb4ff00f6bc3b1",
+        "dimensions": [
+          4096,
+          4096
+        ]
+      },
+      {
+        "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png",
+        "bytes": 1366279,
+        "sha256": "0d889b8656bc04f97cf63eacf57ec4841a713b0587caf81ddcd9a4746fa1ba3e",
+        "dimensions": [
+          4096,
+          4096
+        ]
+      }
+    ]
+  },
+  "fbxInventory": {
+    "counts": {
+      "Geometry": 1,
+      "Model": 1,
+      "Material": 1,
+      "Texture": 4,
+      "Video": 4
+    },
+    "objects": [
+      {
+        "kind": "Geometry",
+        "name": "tripo_mesh_7f6fd40b / Geometry",
+        "subtype": "Mesh"
+      },
+      {
+        "kind": "Model",
+        "name": "tripo_node_7f6fd40b / Model",
+        "subtype": "Mesh"
+      },
+      {
+        "kind": "Material",
+        "name": "tripo_mat_7f6fd40b / Material",
+        "subtype": ""
+      },
+      {
+        "kind": "Texture",
+        "name": "base_color_texture / Texture",
+        "subtype": ""
+      },
+      {
+        "kind": "Texture",
+        "name": "normalmap_texture / Texture",
+        "subtype": ""
+      },
+      {
+        "kind": "Texture",
+        "name": "roughness_texture / Texture",
+        "subtype": ""
+      },
+      {
+        "kind": "Texture",
+        "name": "metallic_texture / Texture",
+        "subtype": ""
+      },
+      {
+        "kind": "Video",
+        "name": "tripo_image_7f6fd40b_0 / Video",
+        "subtype": "Clip"
+      },
+      {
+        "kind": "Video",
+        "name": "tripo_image_7f6fd40b_3 / Video",
+        "subtype": "Clip"
+      },
+      {
+        "kind": "Video",
+        "name": "Mira_Head_Shoulders_H25_V1_roughness / Video",
+        "subtype": "Clip"
+      },
+      {
+        "kind": "Video",
+        "name": "Mira_Head_Shoulders_H25_V1_metallic / Video",
+        "subtype": "Clip"
+      }
+    ]
+  },
+  "facialRigVerified": false,
+  "lipSyncTested": false,
+  "innerMouthAndToothAnatomyVerified": false,
+  "unityImported": false,
+  "originalH31ModelPreserved": true,
+  "limitations": [
+    "Visual resemblance requires user review",
+    "Quad target was 50000; UI reports 66846 faces",
+    "FBX structural inventory does not prove facial edge-loop quality or natural mouth interior",
+    "No Blender/Unity import or animation acceptance test in this task"
+  ]
+}

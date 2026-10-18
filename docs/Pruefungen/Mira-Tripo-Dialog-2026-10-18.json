@@ -1,0 +1,132 @@
+{
+  "date": "2026-10-18",
+  "request": "Try the exported Tripo Mira in the first conversation",
+  "build": {
+    "editor": "6000.6.4f1",
+    "sourceProjectVersion": "6000.4.7f1",
+    "separateBuildCopy": true,
+    "exitCode": 0,
+    "development": true,
+    "method": "SpaceMiner.Editor.MiraTripoDemoBuild.Build",
+    "log": "Mira-Tripo-Dialog-2026-10-18/mira-tripo-build-third-20261018.log",
+    "deployment": "Builds/MiraTripoDemo",
+    "verifiedBuildFiles": 247,
+    "sourceHashes": {
+      "Assets/SpaceMiner/AvatarLab/MiraAvatar3D.cs": "21C97EC81231CEA89D3E206D931EEB402024DACCD2DD4C841659201EE84DCD3D",
+      "Assets/SpaceMiner/AvatarLab/MiraAvatar3D.cs.meta": "32D47F7BB083DCA783CBC0382A7ED5D432E611FAEAA89D5198D67F1F291E9179",
+      "Assets/SpaceMiner/AvatarLab/MiraDialoguePreview.cs": "6C319FC0D7F6DEDEF7F2D394B2402E29E96FACE810E31DB938D85E977074B13D",
+      "Assets/SpaceMiner/AvatarLab/MiraDialoguePreview.cs.meta": "65AFD9C10C2EFC689361D6C3966A649C7E602376A3C767AB8EB1097214F88828",
+      "Assets/SpaceMiner/AvatarLab/MiraTripoDialogueCheck.cs": "861126F3BF742C2EC35605D14E5F87ED00E344B5CEF5B3D00BAEAB74E0CE39BB",
+      "Assets/SpaceMiner/AvatarLab/MiraTripoDialogueCheck.cs.meta": "9F25BBAA65D7198E9C862D62BEA9E15EC0B7647E8D09837A6D11E750ED123775",
+      "Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs": "026AE375F782DA936F4337931C326702CB0CA5586C8B74BE12C7002DC10714C5",
+      "Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs.meta": "C5BA933A2F85D37ECE233A510E301D2E582C37B172924922A1F15704ACD94467"
+    },
+    "assetAndSceneHashes": {
+      "Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png": "D9D71DD4F5631AE525BD36A0569535C3D9D92B4F0DF613BCA818256883A2FE84",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png.meta": "57A266DB4EF2EC0BEDBC0FD6042ECE0DC07E7A6D3B0826809B103F12052AF5B3",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset": "F1B0225E04DAA42C79FCF4639F496D12A8AB21B4908DD6E5F2994F018845C17A",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset.meta": "DEA0288042FEC77DD6173EB47CC8662ADC579971FF1D4A15BCF6C0A4BA67516A",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPBR.mat": "701E01F36F20362E707A0906A2F7E7FCEC633364979ECBE70A81677C18BFD58E",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPBR.mat.meta": "1890904D2347F9EC60AA8D40AD316C8D7B46CCFE96E9B4146680771815890860",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPortrait.renderTexture": "90461A11E21C908A7559E9BE503EB2EF738340DDCA018C95D27E8B2569796FB6",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPortrait.renderTexture.meta": "BEE8CC8C8F3CADC687D5903FBA72F52F702F6CA5179E079F7808E4F96ACA2C81",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm.meta": "59CE1CC6FC8C1B8679C783D4199899DF89EB32C6AB0E578567BDAC5703AF297E",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx": "586DE1C65E42CF8E9358B99867ECC0F37C3C76441CE795779B61F124BD5830B4",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx.meta": "696C99FC1A089F8844E9D3EE302EFCF4F9747E28B701315DE10CB0D00989568E",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg": "C57D447111A55DD6910225C5EC0FBE9379CD34CF28606EEBE4CB4FF00F6BC3B1",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg.meta": "DC04BCFA964E4441903466FB9D0A8EA1C6FFEEC6308A23441BEEEC7F29845CC7",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG": "DBC2CA881CEF6341940934580C0CF1FDE10C120EA04077CC247027878D111151",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG.meta": "A1F9585A6AA3264F0AF595257825159189A151AD489B1D70EB28D388585F8541",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG": "ACF4C55DB81E096C6616C0ED4CC5A61C5AE85AC89710ED40008224B4A17A6702",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG.meta": "DF4A501B32063C3F7EB9D9D32268F4AA5FA7C08126195D2CD6A2DFEF19745A6C",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png": "0D889B8656BC04F97CF63EACF57EC4841A713B0587CAF81DDCD9A4746FA1BA3E",
+      "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png.meta": "EC9DE4F50A2BBC4C07BA5D794E1F80BD11A6C894CBB85CB3C89CEF80A9688D31",
+      "Assets/SpaceMiner/AvatarLab/TripoH25.meta": "B8A1134A4821C2C20F82CCE629FEB805259AB7BA4CF33CFFB7CD725590F86096",
+      "Assets/SpaceMiner/AvatarLab/MiraTripoDemo.unity": "06287D8BB36CFB58989C503D46FD50E6B5B152D3338D98F2EB20CDD5DADCB2B3",
+      "Assets/SpaceMiner/AvatarLab/MiraTripoDemo.unity.meta": "6126CCF9F0CAB86F0A2E9D947B5E382322A9AFA90867464E8F80E60DB41B1AC1"
+    }
+  },
+  "dialogue": {
+    "passed": true,
+    "checks": 67,
+    "dialogueCues": 16,
+    "spokenCues": 14,
+    "textOnlyCues": 2,
+    "audioFrames": 12061,
+    "shapeFrames": 8734,
+    "vertices": 106641,
+    "affectedVertices": 211,
+    "maximumShapeDeltaMeters": 0.008062258,
+    "maximumMouth": 0.9999756,
+    "maximumWeight": 99.99756,
+    "isolatedScene": true,
+    "phoneticLipSync": false
+  },
+  "dialogueExitCode": 0,
+  "dialogueTestFlag": "-miraTripoCheck",
+  "genericAvatarRegression": {
+    "passed": true,
+    "exitCode": 0,
+    "sameBinary": true,
+    "flag": "-miraAvatarCheck",
+    "scope": "General avatar checks on the new 3D scene; old 2D build not rerun"
+  },
+  "sourceModel": {
+    "id": "8773b4ce-9c36-4961-b105-2115aca8ec31",
+    "originalFilesPreservedByteForByte": 5,
+    "sourceTextureResolution": 4096,
+    "previewImportMaximum": 2048,
+    "normalizedHeightMeters": 0.62,
+    "importedVertices": 106641,
+    "candidateSpeechVertices": 212,
+    "speech": "Smoothed AudioSource output RMS drives conservative lower-face JawOpen shape",
+    "completeMouthAnatomy": false,
+    "separateNewTeeth": false,
+    "facialBlinkShapes": false
+  },
+  "conversation": {
+    "textCues": 16,
+    "linkedAoedeClips": 14,
+    "intentionallyUnvoicedCueIndices": [
+      12,
+      13
+    ],
+    "unvoicedTextHoldSeconds": "clamp(textLength / 14, 3, 15)",
+    "audioAndTextSourcesUnchanged": true,
+    "audioListeners": 1
+  },
+  "visual": {
+    "folder": "Mira-Tripo-Dialog-2026-10-18",
+    "screenshots": 9,
+    "inspected": [
+      "inspect-0.png",
+      "inspect-90.png",
+      "inspect-180.png",
+      "01-speaking.png",
+      "02-paused.png",
+      "03-resting.png",
+      "04-text-only-instruction.png"
+    ]
+  },
+  "earlierAttempts": [
+    "First run failed because the current intro intentionally has no linked audio for cues 12 and 13; added reading pauses and corrected the sixteen-voices assumption. Missing scene audio listener also fixed.",
+    "Second run reached the text passage but its reading-duration check was too close to the deadline after screenshot capture. Check now observes earlier in the reading interval and ignores external input only during automated checks."
+  ],
+  "scopeAndLimits": [
+    "Separate avatar test scene; existing campaign portrait preserved",
+    "Surface deformation is a prototype, not phonetic lip sync, articulated dental anatomy or a complete facial rig",
+    "Hair quality inherited from the H2.5 source; identity and appearance remain subject to user feedback",
+    "No new TTS or Tripo generation; no Release run, manual mouse/keyboard or subjective hearing acceptance, or performance benchmark",
+    "Existing 2D avatar build and full campaign not rerun"
+  ],
+  "tripoCreditsSpent": 0,
+  "commitOrPush": false,
+  "interactivePreview": {
+    "opened": true,
+    "pid": 31804,
+    "respondingVerified": true,
+    "windowTitle": "Space Miner - Prototyp 01",
+    "log": "Logs/mira-tripo-dialog-preview-20261018.log",
+    "starter": "Start-Mira-Tripo-Gespraech.cmd"
+  }
+}

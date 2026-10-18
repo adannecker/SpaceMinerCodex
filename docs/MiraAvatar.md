@@ -1,5 +1,11 @@
 # Mira: interne Dialog-Vorschau
 
+Neue Tripo-Dialogprobe18.10.2026: `Start-Mira-Tripo-Gespraech.cmd`, eigene Szene `MiraTripoDemo.unity` und Anwendung `Builds/MiraTripoDemo`. Jetzt mit eigenem Kopf-/Halsrig, Blinzeln, kleinen Blickwechseln, sanfter Dialogmimik und425 offline analysierten Mundintervallen für14 Aoede-Aufnahmen; zwei überarbeitete Textanweisungen weiterhin mit Lesepause. Kopf, Augen und Mimik einzeln abschaltbar. Erste lautabhängige Oberflächenanimation, noch kein anatomisch fertiges Gesicht. [Aktueller Aufbau/Bedienung/Grenzen](Mira3D.md#kopf-augen-mimik-und-sprachformen-18102026). Die nachfolgenden Aussagen zum fehlenden Unity-Import zeigen den vorherigen Exportstand.
+
+Neuer Auftrag18.10.2026: Tripo-Kopf/Schultern anhand des Originalporträts, mit hoher Ähnlichkeit und Schwerpunkt natürliche Zähne/spätere Sprechbewegungen. Dieser Modellversuch ersetzt die laufende2D-Integration noch nicht. [Tripo-Versuch und Modellstand](Mira3D.md).
+
+Fortsetzung: H2.5-Modell aus der vorbereiteten Referenz für45 Credits erzeugt und als FBX/Blender mit vier4K-Texturen erfolgreich heruntergeladen/archivgeprüft.5 Credits und12 H2.5-Exporte verbleiben. Statisches Mesh ohne Gesichtsrig/Blendshapes; kein neuer Unity-Import oder Sprechtest. Quelldateien/Bericht und beide Modellfassungen siehe [Mira3D](Mira3D.md#tripo-versuch-vom18102026).
+
 ## Aktuelle Hauptspielintegration (09.10.2026)
 
 Die gezeichnete Mira ist inzwischen im Hauptspiel integriert: `MiraVisorOverlay.cs` zeichnet in IntroSequence, ScannerProgression und MemoryCinematic denselben Helmvisier-Rahmen mit Porträt links und Text daneben. Vier statische Ausdrücke aus MiraDialoguePortraits, scrollbarer Text, persönliche Textgröße und Untertitelschalter. Keine Mundanimation, keine neuen Bilder oder Sprachdateien. Das ältere AvatarLab bleibt ein isolierter historischer Testbereich. Nachfolgende Aussagen zu noch ausstehender Hauptspielintegration beschreiben damalige Stände. Aktuelle Darstellung und Prüfung: [Dialoge](Dialoge/README.md).

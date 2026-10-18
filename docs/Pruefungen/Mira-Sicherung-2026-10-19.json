@@ -1,0 +1,759 @@
+{
+  "date": "2026-10-19",
+  "purpose": "Verify complete Mira sources/assets/documentation immediately before the requested commit and push",
+  "parentCommit": "13fc4885d1d0574e45d1fc9b940615aae60ce60b",
+  "snapshotFilesExcludingThisReport": 121,
+  "snapshotBytes": 55796800,
+  "verification": {
+    "indexMatchesWorkingFiles": true,
+    "latestAcceptanceHashesMatched": 64,
+    "newUnityMetaGuidsUnique": 31,
+    "sceneAndMaterialGuidReferencesResolved": 13,
+    "assignedRecordings": 14,
+    "timedMouthIntervals": 425,
+    "originalExportFilesUnchanged": 5,
+    "stagedWhitespaceCheckPassed": true
+  },
+  "runtimeEvidence": {
+    "date": "2026-10-18",
+    "report": "Mira-Tripo-Animation-2026-10-18.json",
+    "dialogueChecks": 542,
+    "passed": true,
+    "avatarRegressionPassed": true,
+    "newBuildOrPlayerRunOnBackupDate": false
+  },
+  "notes": [
+    "Git blob IDs are the portable inventory; local SHA256 values may differ after checkout because of configured text line endings.",
+    "This report excludes itself to avoid a circular hash. Verify committed tree and origin/main after pushing.",
+    "Local Builds, Library, tool installations and redundant source ZIP stay ignored; unpacked originals and all required assets are included.",
+    "Chat archives were not re-exported."
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "gitBlob": "420553bf333c49a95ae40d01a15c738039cb3330",
+      "localBytes": 365,
+      "localSha256": "d529b9bdd53febba5a7a845590d31dc64a2c9625619cbd195c4f26281fd875a5"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraAvatar3D.cs",
+      "gitBlob": "8c3ad3cfacbd77843f702e41fc2a7e716b67f18a",
+      "localBytes": 2730,
+      "localSha256": "142394e83af1094c7985bb649793eeddefa338ae84ab2c9d71e74aed19e11f7e"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraDialoguePreview.cs",
+      "gitBlob": "d89c8902f343beeb87924689159338017a43ff8f",
+      "localBytes": 10377,
+      "localSha256": "5c7bde5dd9c67180e0473d7267da5d84788b7c143e12e0d04ceed405f08cced0"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs",
+      "gitBlob": "ec8ace696b372ffe904f741e7928801a66251460",
+      "localBytes": 7388,
+      "localSha256": "a7f05b66d8bc37d961a9c59aca9d23ad70c64ec3205fd0dfebb73c4bf75d9a26"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs.meta",
+      "gitBlob": "575ecad1ac3f09abf6a40a874df5d3d817dc7aa6",
+      "localBytes": 61,
+      "localSha256": "66d3dfab896703ce3035d26826f00e8eca4774431331a0b77f51c6c6eb093571"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraTripoDemo.unity",
+      "gitBlob": "891ee200b12609b9662bd2ea742d8c4a9183afe8",
+      "localBytes": 25095,
+      "localSha256": "34648cc14ceff49c6d994985abe2d6b3932f84efffa9e48bdb10bafb59f87ed2"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraTripoDemo.unity.meta",
+      "gitBlob": "41096ba1f8b6a03c2bdb99a2956757d922c7e984",
+      "localBytes": 155,
+      "localSha256": "6126ccf9f0cab86f0a2e9d947b5e382322a9afa90867464e8f80e60db41b1ac1"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraTripoDialogueCheck.cs",
+      "gitBlob": "c1866df6ccc9e58250ff294c70aff62a971c9323",
+      "localBytes": 14145,
+      "localSha256": "2ad2bcda223df05ffce0e8830ebd400dcd3c4dfd166007dd9677b27caa652cdc"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraTripoDialogueCheck.cs.meta",
+      "gitBlob": "28e7c8dffd94b4002b74d902552ec719cdac20e2",
+      "localBytes": 60,
+      "localSha256": "9f25bbaa65d7198e9c862d62bea9e15ec0b7647e8d09837a6d11e750ed123775"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25.meta",
+      "gitBlob": "dcaf1b2584d87d426664f3d7b01edbd5358853de",
+      "localBytes": 172,
+      "localSha256": "b8a1134a4821c2c20f82cce629feb805259ab7ba4cf33cffb7cd725590f86096"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png",
+      "gitBlob": "4af40f243cf1da8a5d9e6d3a2523fc61d4f3ac97",
+      "localBytes": 3303162,
+      "localSha256": "d9d71dd4f5631ae525bd36a0569535c3d9d92b4f0df613bca818256883a2fe84"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png.meta",
+      "gitBlob": "136d5d3cffcb0381b08f87619bbec2593e891512",
+      "localBytes": 2714,
+      "localSha256": "57a266db4ef2ec0bedbc0fd6042ece0dc07e7a6d3b0826809b103f12052af5b3"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset",
+      "gitBlob": "0a9a0619273bae219acee066502ba395fe2c1010",
+      "localBytes": 24621723,
+      "localSha256": "b241c20857605993ab565904021277520a455019e207ef869df756dfb9647285"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset.meta",
+      "gitBlob": "3f590668fb585377bf5aa62a16ce028e1aa845f5",
+      "localBytes": 188,
+      "localSha256": "dea0288042fec77dd6173eb47cc8662adc579971ff1d4a15bcf6c0a4ba67516a"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPBR.mat",
+      "gitBlob": "ff0941c98f08ac58f64d723528fa629791ee3473",
+      "localBytes": 2411,
+      "localSha256": "701e01f36f20362e707a0906a2f7e7fcec633364979ecbe70a81677c18bfd58e"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPBR.mat.meta",
+      "gitBlob": "28f1a62028d6c7e07017f2b4a221a1755cd872c2",
+      "localBytes": 188,
+      "localSha256": "1890904d2347f9ec60aa8d40ad316c8d7b46ccfe96e9b4146680771815890860"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPortrait.renderTexture",
+      "gitBlob": "258cf4e9e76eda45a824cf419b39fa30e56b662a",
+      "localBytes": 864,
+      "localSha256": "90461a11e21c908a7559e9be503eb2ef738340ddca018c95d27e8b2569796fb6"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPortrait.renderTexture.meta",
+      "gitBlob": "2b7171e2061448d5a409bfe384b26bcf9cbe0cb9",
+      "localBytes": 188,
+      "localSha256": "bee8cc8c8f3cadc687d5903fba72f52f702f6ca5179e079f7808e4f96aca2c81"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm.meta",
+      "gitBlob": "b924e8720605efa1d316d519123e8661ad8644c3",
+      "localBytes": 172,
+      "localSha256": "59ce1cc6fc8c1b8679c783d4199899df89eb32c6ab0e578567bdac5703af297e"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg",
+      "gitBlob": "d3d09c1b266a064f359dbb4383f61feeaf60159b",
+      "localBytes": 835686,
+      "localSha256": "c57d447111a55dd6910225c5ec0fbe9379cd34cf28606eebe4cb4ff00f6bc3b1"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg.meta",
+      "gitBlob": "ab89df9465331904b6a03ce9992c9ac7ff3ad23c",
+      "localBytes": 2714,
+      "localSha256": "dc04bcfa964e4441903466fb9d0a8ea1c6ffeec6308a23441beeec7f29845cc7"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG",
+      "gitBlob": "7a15012b47f1f4a533b70643a2c941bd3928805c",
+      "localBytes": 463436,
+      "localSha256": "dbc2ca881cef6341940934580c0cf1fde10c120ea04077cc247027878d111151"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG.meta",
+      "gitBlob": "752ab6509adbaf177f7dbf6d4358a7fbd560ba06",
+      "localBytes": 2714,
+      "localSha256": "a1f9585a6aa3264f0af595257825159189a151ad489b1d70eb28d388585f8541"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG",
+      "gitBlob": "95c19cda378b81eb3def43243bfe6c5c2085a1c7",
+      "localBytes": 527630,
+      "localSha256": "acf4c55db81e096c6616c0ed4cc5a61c5ae85ac89710ed40008224b4a17a6702"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG.meta",
+      "gitBlob": "2752de497620829bb2a67897a63e52dcedbc0bda",
+      "localBytes": 2714,
+      "localSha256": "df4a501b32063c3f7eb9d9d32268f4aa5fa7c08126195d2cd6a2dfef19745a6c"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png",
+      "gitBlob": "65a7db67bc1a94e8602b65461892122e0b4e745a",
+      "localBytes": 1366279,
+      "localSha256": "0d889b8656bc04f97cf63eacf57ec4841a713b0587caf81ddcd9a4746fa1ba3e"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png.meta",
+      "gitBlob": "2192336f4aa220f193c79c2a8840ea33fa19f74a",
+      "localBytes": 2714,
+      "localSha256": "ec9de4f50a2bbc4c07ba5d794e1f80bd11a6c894cbb85cb3c89cef80a9688d31"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+      "gitBlob": "4fbd129b8a6d28c356011317f3a294c78acd5341",
+      "localBytes": 4099852,
+      "localSha256": "586de1c65e42cf8e9358b99867ecc0f37c3c76441ce795779b61f124bd5830b4"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx.meta",
+      "gitBlob": "c2bc9e5230b4094fba3eaf84bdcf845bdf44a1aa",
+      "localBytes": 3063,
+      "localSha256": "696c99fc1a089f8844e9d3ee302efcf4f9747e28b701315de10cb0d00989568e"
+    },
+    {
+      "path": "Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs",
+      "gitBlob": "4947ecf18632b8b4c28b40ef77c05c727a62bb75",
+      "localBytes": 14464,
+      "localSha256": "9c20b15069e80583219d47679e53f48c304a93b70e4df38d059c22dc85ecec0a"
+    },
+    {
+      "path": "Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs.meta",
+      "gitBlob": "b8259a8d6d2fb9de01cc1794a2c54e9cfa8db1fa",
+      "localBytes": 60,
+      "localSha256": "c5ba933a2f85d37ece233a510e301d2e582c37b172924922a1f15704acd94467"
+    },
+    {
+      "path": "Assets/SpaceMiner/Editor/MiraTripoFaceShapes.cs",
+      "gitBlob": "c8f7ee732ceadc478ccec48fb9a50a30f3684cb2",
+      "localBytes": 7767,
+      "localSha256": "fed783de54081b2e473933e9f82aad923f6b61681b326868efc7ded377d08af4"
+    },
+    {
+      "path": "Assets/SpaceMiner/Editor/MiraTripoFaceShapes.cs.meta",
+      "gitBlob": "209d09a88583531202091f17440de323f9707835",
+      "localBytes": 61,
+      "localSha256": "2b364744fc70401972f233794a9e7aa7fcb08b161c37f1b0ae916f18ea2695ba"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes.meta",
+      "gitBlob": "1ffc8904c554233908d4591d44e7ca5ceca13136",
+      "localBytes": 62,
+      "localSha256": "077ed4ab973fb3c2fa79d3feba5955d82e66137aab4441a632a70f0708a243ae"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_00.json",
+      "gitBlob": "89d0063cab65e2db41f71baf020e9257b07f8516",
+      "localBytes": 1259,
+      "localSha256": "881c78a51a6871153cc2331cd7496ef77eb137ad228090ca34f69b3f7b532c4d"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_00.json.meta",
+      "gitBlob": "74b77e7d5765a1774265755aab7a2d778460e3a7",
+      "localBytes": 62,
+      "localSha256": "9e32a4d1088563bbb0b5723b1512d74a4cbcc7c118d9d91e88c94e86f74ac49c"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_01.json",
+      "gitBlob": "731d497d471d5abcb332d6a8fa016991f2fa6dee",
+      "localBytes": 1796,
+      "localSha256": "865cfedc4d5d32d4fb6d7e869e3a35f90e070927898c92995045429b88600d09"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_01.json.meta",
+      "gitBlob": "597992e69102ab4cff9055a9fc039812c32e373f",
+      "localBytes": 62,
+      "localSha256": "837aae429a211b938bebd27a8f58e32546da62efe3192ed6d234064d5ba6f46a"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_02.json",
+      "gitBlob": "542ac3acaffc94a12438d22f3b22210b6f343276",
+      "localBytes": 1640,
+      "localSha256": "0a8a4d5391bcc25653c60df9aa5ea5c93804a7f3e099c5bb012f8c37aa0a8583"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_02.json.meta",
+      "gitBlob": "120a18ce1263d1d7967c8e19a7774a48cfde6c4e",
+      "localBytes": 62,
+      "localSha256": "88a8f5abe45b0b05a6d2d9a985c4909716a1d5cd9e0f209d0200ecc614e0df32"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_03.json",
+      "gitBlob": "d4943a5ab5a53dc23516d93a6271951989278bcc",
+      "localBytes": 1943,
+      "localSha256": "11c1ad4f2d42f1e8ba96271e93d7e254183c9a07086b906e312551698ccda351"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_03.json.meta",
+      "gitBlob": "396b7127b13ffae2e3518f47bad9e2bf67a7b1f1",
+      "localBytes": 62,
+      "localSha256": "acb3abc4a3256b3fc675e219acfa5c26856cf6aa61a4bbcfe846401d1f0abaef"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_04.json",
+      "gitBlob": "e33165addfcc6250625a8359a7a401c288f73a4a",
+      "localBytes": 2700,
+      "localSha256": "b7405a3d8078a212f46c81566568aabf8e81340e22a3103043872563d9eca614"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_04.json.meta",
+      "gitBlob": "f38b9739f3570c10fc7dc8db7394ae27de39103e",
+      "localBytes": 62,
+      "localSha256": "186f4dc073784fa817f881a77a663e93e0caa36f4c7aaca0acad8b1d03c0524e"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_05.json",
+      "gitBlob": "675d7d54ec28d295f0e74b72d89e4c6c57582827",
+      "localBytes": 3411,
+      "localSha256": "eafb7f1058daff03ef8ff293dde75af5864bec99cfba6297ba5c450f1140c043"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_05.json.meta",
+      "gitBlob": "44f0331a75fc05939b573afad73159f131e924e7",
+      "localBytes": 62,
+      "localSha256": "0eb7f41c31c93f959e5bf9cd7125e19bbbd7200ec0d8cb33a09b3a38613c63d6"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_06.json",
+      "gitBlob": "6b8b3378d4cdc2e03ccace6fd3a12fb3e8aeab99",
+      "localBytes": 3327,
+      "localSha256": "878869a21e377c84111db701cc3b35cf04be7598cb543e9ef7e7420f4eaac8ad"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_06.json.meta",
+      "gitBlob": "9fc645c8e42e37689e0c89188e0c2695e699b9e7",
+      "localBytes": 62,
+      "localSha256": "7d2a16013efa2ee44ce4ab3f831988d54d2bad0ce4050498fa917f47d9d91519"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_07.json",
+      "gitBlob": "48a1fdf577a0565e1cb868d6a0e8c2bd28064896",
+      "localBytes": 1794,
+      "localSha256": "3aeeb34dc750eb2df58099633da90d17ae4a2d58a30109f172c2ea96086f9417"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_07.json.meta",
+      "gitBlob": "b9e7dbb544c3b465f4ae4ef3805fdffcb3b57a4c",
+      "localBytes": 62,
+      "localSha256": "6ceb9258df92f626a9811f3f69ed2af259703b6411def49f7b9d24711f914053"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_08.json",
+      "gitBlob": "8854c23705d8a842fce07be5a0cce6db232bfd81",
+      "localBytes": 4084,
+      "localSha256": "5a23d18e64934e3e0942d3e8c83c8a86292ef6935f145f26b027d86663a5d187"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_08.json.meta",
+      "gitBlob": "45d5c31d118aba129fc0c4287bdd79321a5832fe",
+      "localBytes": 62,
+      "localSha256": "bcda1211d170c898a5ab540ff80412a8a3e49369829d1ea7bbbc1c8b62e33ac8"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_09.json",
+      "gitBlob": "d515787c28be93c866a1dfcd49effb8b5e17518f",
+      "localBytes": 3472,
+      "localSha256": "c73356aa3ff36724e9552a736373e6ff5e1beb6160b7ee000092a5adc8f458ad"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_09.json.meta",
+      "gitBlob": "ca5a73a2967356ac52a3512e8d0219ed357977ce",
+      "localBytes": 62,
+      "localSha256": "1e4cacf42f270439fa71e6f628c9871f4b4bd73bac34f11465b70933c1584573"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_10.json",
+      "gitBlob": "8143d81fdf01429d30ca07f5cc03f9df6da3ba97",
+      "localBytes": 2623,
+      "localSha256": "d9400ceca4508e99c7fc7a448c411355339c876331fa5f7bcac0b9a2e7d55dbe"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_10.json.meta",
+      "gitBlob": "2102bca618267e9839adcac9c03b5189dfca1601",
+      "localBytes": 62,
+      "localSha256": "e66567414db0cdac8f12ea8bdbcc17f059973f61b2db32cabae18b13899f84f3"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_11.json",
+      "gitBlob": "9b50f4607883d298831d6df68c9b2ad1fa08780f",
+      "localBytes": 6106,
+      "localSha256": "b53255542a12fd946d082173b1ca25a69175e29029728bf70be56721dcc9bfed"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_11.json.meta",
+      "gitBlob": "aaa8230ff0891533051b0832958a4928fbc81c74",
+      "localBytes": 62,
+      "localSha256": "6e9f5782addb8a1bb4f693b0ba0edae050ad6635ab693dad99b8c03d8e9ef746"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_14.json",
+      "gitBlob": "5661a030742829aa13d98df45c1a3cf555afb2d5",
+      "localBytes": 1028,
+      "localSha256": "15704dedef594d346d1fdd3887f7addd9435054ca87ccfd41dbd2af8b03c2d13"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_14.json.meta",
+      "gitBlob": "123ae7d07a4f901cd2e55bb07b290e2a871156c0",
+      "localBytes": 62,
+      "localSha256": "27611c4904d38a72ecfda52ae368a104e41779385ffb819234e1c142cd4a59da"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_15.json",
+      "gitBlob": "34857a9b091274422db912b87481510436059136",
+      "localBytes": 1025,
+      "localSha256": "44549b346b8844f09beec76aa142641bac1311b2460bb8e5f38a3a7de5c02f68"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraVisemes/mira_15.json.meta",
+      "gitBlob": "0bfb05a81abb8c4999d53d2df1631d0231b2bc59",
+      "localBytes": 62,
+      "localSha256": "31d7d7459d5de576d253785461933732b7dcfe2822dabe8339ab4fee404cba62"
+    },
+    {
+      "path": "README.md",
+      "gitBlob": "334642ae1701ced28e37ba873f03e8ed954e6103",
+      "localBytes": 45745,
+      "localSha256": "b850f34ed1d283cfdf85adeb8d591762359f45fa6927629504326d45253f512b"
+    },
+    {
+      "path": "Start-Mira-Tripo-Gespraech.cmd",
+      "gitBlob": "94dd7e80d12f2a8d2d9c9feced6c116406aa98ab",
+      "localBytes": 343,
+      "localSha256": "062a0b81cf137fe9da5677085672ef08515b8841908369bb3d954cc41dc95eb9"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg",
+      "gitBlob": "d3d09c1b266a064f359dbb4383f61feeaf60159b",
+      "localBytes": 835686,
+      "localSha256": "c57d447111a55dd6910225c5ec0fbe9379cd34cf28606eebe4cb4ff00f6bc3b1"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG",
+      "gitBlob": "7a15012b47f1f4a533b70643a2c941bd3928805c",
+      "localBytes": 463436,
+      "localSha256": "dbc2ca881cef6341940934580c0cf1fde10c120ea04077cc247027878d111151"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG",
+      "gitBlob": "95c19cda378b81eb3def43243bfe6c5c2085a1c7",
+      "localBytes": 527630,
+      "localSha256": "acf4c55db81e096c6616c0ed4cc5a61c5ae85ac89710ed40008224b4a17a6702"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png",
+      "gitBlob": "65a7db67bc1a94e8602b65461892122e0b4e745a",
+      "localBytes": 1366279,
+      "localSha256": "0d889b8656bc04f97cf63eacf57ec4841a713b0587caf81ddcd9a4746fa1ba3e"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+      "gitBlob": "4fbd129b8a6d28c356011317f3a294c78acd5341",
+      "localBytes": 4099852,
+      "localSha256": "586de1c65e42cf8e9358b99867ecc0f37c3c76441ce795779b61f124bd5830b4"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Prompt.txt",
+      "gitBlob": "d66f239b7aa48ff31f60914ab07cb3fa2869aa18",
+      "localBytes": 1931,
+      "localSha256": "717d23b3612fc46f45f86a3fb16d41d9e5afd422f50a5e2726984a3fab13979a"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Referenz.png",
+      "gitBlob": "d970b382aaf52c658b81e7ae5d757799f06b3831",
+      "localBytes": 1244320,
+      "localSha256": "8e4c457f93cbc624bbaa86a0101a934764e4ea3d1251d4c0396d2182201c8c79"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Schraeg.jpg",
+      "gitBlob": "e8be14fd9f68da198b329555fa2b57251ff7ff95",
+      "localBytes": 153517,
+      "localSha256": "d76fce576f7dd8142c757a206d5d446bb6f7ba7d3c6492a91d9e37b631d69f3a"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Seite.jpg",
+      "gitBlob": "deb5275010ba53f3a9576b95ae55909bf2d91549",
+      "localBytes": 155080,
+      "localSha256": "4b8f21092e46adead32334a6e743f32d4836a115cae5f75e4c424bfa283e9637"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Vorschau.jpg",
+      "gitBlob": "4d1594b08f79c03755253ac0b88666775458be99",
+      "localBytes": 146541,
+      "localSha256": "7dd0bbd2b584c9a559f4857595dba342a79bc2796796b8fe1a97d0231197297b"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-H25-2026-10-18-Export.jpg",
+      "gitBlob": "79e9cfaa1b51ed4cb93e0ffa31dc94edbae35680",
+      "localBytes": 149098,
+      "localSha256": "23f8c92cb1f4ec4fe1b95c1d58e53f28ab6154e37cd30d2510002d92e2b8607c"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-H25-2026-10-18-Vorschau.jpg",
+      "gitBlob": "285bc553b26153933e7c9f0699f0ede52a990f94",
+      "localBytes": 144944,
+      "localSha256": "0030d57f75e17231225e205fdff2a7ee7131aaf93006b8e111b798900b439232"
+    },
+    {
+      "path": "docs/Entwicklungsstand-2026-10-19.md",
+      "gitBlob": "441ffdfdced6b48e2deaf3fdbcf4acf999442f2e",
+      "localBytes": 6979,
+      "localSha256": "47c28ae2a6841607029b87b076cc1bb091b24c64416cc2a1475063d4be5c9d35"
+    },
+    {
+      "path": "docs/Mira3D.md",
+      "gitBlob": "62436fa332f736318ec317c825a7a83dd46afa84",
+      "localBytes": 38619,
+      "localSha256": "eb46af4a795c289e8d13e1892de952d6944363c2e69b8a03c62fd43fae5a6fb2"
+    },
+    {
+      "path": "docs/MiraAvatar.md",
+      "gitBlob": "8f242e812a38123d58266c3f29ce231545f03893",
+      "localBytes": 8512,
+      "localSha256": "28345c07e798627c119fa430dab8fbc2b093801dcdf3fac02362e405a8ce4762"
+    },
+    {
+      "path": "docs/Projektmemory.md",
+      "gitBlob": "6f2f46298212c42d8fd92f2a39458bf64974ba29",
+      "localBytes": 204384,
+      "localSha256": "68dd67a49eddebab1c1ec7073e2db68b83ef8ed2203391d7641434bbb35d0948"
+    },
+    {
+      "path": "docs/Projektuebergabe.md",
+      "gitBlob": "ba120f77f82742a803360c2069c8510ad2d1a424",
+      "localBytes": 55002,
+      "localSha256": "f519a42becac8fe6ce11ddffe937fee61106721e0563ebeec403699cf80c4be9"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18.json",
+      "gitBlob": "892574e2c359ca84ad009e714a57f031c78a39fc",
+      "localBytes": 14175,
+      "localSha256": "34fd3e73c7846a0520666de2fae6eecbc82344f27c7c607d4c796007c4048912"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/01-speaking.png",
+      "gitBlob": "1f388654927c9a8674b54bee567aa5cce0ea1c2e",
+      "localBytes": 323146,
+      "localSha256": "1280934d21f3dfcf7e870e06767346bc2b67815f091fa70b3e3e1aa0331c436d"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/02-paused.png",
+      "gitBlob": "8cc306992b62aaec0424cf985fb81d147cde38fc",
+      "localBytes": 322136,
+      "localSha256": "8f470185d013480913a4ae9379c4586a1d3d86bccc3adea57eb4d5cadef7b15b"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/03-resting.png",
+      "gitBlob": "119fd670b3161d72aa539d2bae3d407158c5def6",
+      "localBytes": 324179,
+      "localSha256": "f958d37e1db94e76e4e914544aa711d829793be1904eb4e83f844b70df021265"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/04-text-only-instruction.png",
+      "gitBlob": "c56c7e1b9223872bde1d0bdda1fe33808fc8640a",
+      "localBytes": 346830,
+      "localSha256": "cf4374696828b53bd4af5c210cecbc3b5f72560d2b2ac48c6e743880df616adf"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/05-blinking.png",
+      "gitBlob": "ea598b599a694107726ec42184c3ebad11ce2ce8",
+      "localBytes": 323980,
+      "localSha256": "6b94808733fbb3deae764fe8b4aef8ad0744a2d47667d4b0d454c4077ed910bc"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/06-avatar-regression.png",
+      "gitBlob": "30bbb767e5989efb36428a2b410e23827f622eea",
+      "localBytes": 322606,
+      "localSha256": "de96fab45d28dcb7fdc2e5da798814396c3e09e580f4285cf954b69c449459d3"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/mira-tripo-face-inspect-fifth-20261018.log",
+      "gitBlob": "9b2d196e61cadcb306ec34faab42388959974a0b",
+      "localBytes": 46138,
+      "localSha256": "d75e1538a960d023d5a01095e5bb7a11d2ea730dd706ea784e5430cfbf475840"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/mira-tripo-motion-avatar-inputfix2-20261018.log",
+      "gitBlob": "84248b23450148151ea0c27f3f5c5ff9c2dbb479",
+      "localBytes": 5413,
+      "localSha256": "5f9fe4c6801c3eb74c87f0863fddb985c0c9d43612459ad9df55546a6cb8ea81"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/mira-tripo-motion-build-inputfix2-20261018.log",
+      "gitBlob": "ac9019f3dea957c940d1a07a4838a602c22d80ad",
+      "localBytes": 543993,
+      "localSha256": "962aee65b1cd6bd8d8f3c2bf54d96257188dbc35fdd38e567840158d091761a9"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/mira-tripo-motion-check-inputfix2-20261018.log",
+      "gitBlob": "7af3a09f5f7ee40211698551d3592de3fa21ee20",
+      "localBytes": 25107,
+      "localSha256": "a876599d14dcf2e0dd0661c57cacac24578e2c6750b0a9f316e365ec0a229278"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/mira-visemes-generation-20261018.log",
+      "gitBlob": "13bd6cf2b61ef738f2d7da020936ca514841b96c",
+      "localBytes": 1716,
+      "localSha256": "e53af3ee26c250a1a90e05d4fd8eb69eac7daececcb49039690c8aa655c53b2a"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/pose-BlinkLeft.png",
+      "gitBlob": "043f5eadcd425843d2b37a8e35d7c92a35006313",
+      "localBytes": 549239,
+      "localSha256": "6315d12d9c63fb2e55b85dec74af8b56d9f806fb4b1bcd5a1b527e8c059ea7c4"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/pose-BlinkRight.png",
+      "gitBlob": "56451e9a8b16f90c0018ce77c70f56cdce73e475",
+      "localBytes": 548776,
+      "localSha256": "ad6b7830315473344250cc11110998cd0221f8bbb2bb136118d9d0bee141f2c5"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/pose-BrowConcern.png",
+      "gitBlob": "01e61245414366d9d361bebb8229601fa899d6c4",
+      "localBytes": 551231,
+      "localSha256": "b08b6301fd3325b6e59b63f717e24be7ca9a1035b4f7a836fff222c6041689c2"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/pose-LipClose.png",
+      "gitBlob": "c38877999b0a0c22660f4d7b20b7b16e13d2305e",
+      "localBytes": 549469,
+      "localSha256": "c3e7f17e2b5123025e4ef2277ba6dc26ec1ffe50492a7cf3bad9b98cdbc7b815"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/pose-LookLeft.png",
+      "gitBlob": "e27251f5195c769a1f798cf0380ee2643e863c14",
+      "localBytes": 550491,
+      "localSha256": "134cf64e891d87782d482bbabfe01c86c21f503cce6b6cfdc3c18b1ceb18d601"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/pose-Smile.png",
+      "gitBlob": "919185b7e8e4d8a9420034ad319e093490f13521",
+      "localBytes": 550844,
+      "localSha256": "28821c374462393820612bfcb91ab8775b6b1ca5333a47a9debf5c5cc5fa8e9d"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Animation-2026-10-18/pose-head.png",
+      "gitBlob": "6bd82edcacc9c85d8e1b85411702a431f8dc725b",
+      "localBytes": 539444,
+      "localSha256": "ad7cdc742fcb498589b02e75ab84929754f1f67ed3753458f3031364b7d12c94"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18.json",
+      "gitBlob": "380d3d5e737a645da85b6bb52e39e2648c1c9837",
+      "localBytes": 8296,
+      "localSha256": "4cc2e081fc1d22f9512a538f85fce3dc6c244a57bd7d74135635ab6c455678b5"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/01-speaking.png",
+      "gitBlob": "62971e4491279c12caf22f578bf9e4d1af2274b3",
+      "localBytes": 324338,
+      "localSha256": "8d9c9f1cc70909fd60924f1ba42687997979c2929647e49d47d23afdece7a8e3"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/02-paused.png",
+      "gitBlob": "3880dc82296f7fe35772b1c5b3ab41c0fa886b1c",
+      "localBytes": 323439,
+      "localSha256": "8e3260f228be3858128ea8ef5c6fcf80a2ea7d9d3ff97f844ad2a4a6addaed02"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/03-resting.png",
+      "gitBlob": "f5cf41694d30779b0b5447416b9942199db11566",
+      "localBytes": 325294,
+      "localSha256": "0d6c92d5280182a8fa2286f881436ad7a6ac2d1511697b9cf086307e4c916fa1"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/04-text-only-instruction.png",
+      "gitBlob": "a1f3119c557a4457eb5c4e7193710f86251cfdac",
+      "localBytes": 347241,
+      "localSha256": "11a7e8543718af1b4e9b038db3ef732fc6eeac637a95180405a6d96866a3a3d0"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/inspect-0.png",
+      "gitBlob": "2e735f112a19d5e798e3dedc10bce245c46365a9",
+      "localBytes": 551213,
+      "localSha256": "e1eec414e7a698e5956013c0ad35af511ea7c96d2db83a45031c4a27faa286de"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/inspect-180.png",
+      "gitBlob": "fb39ad6b5c69ee026fa5049c03fcd979f3dcecb7",
+      "localBytes": 436730,
+      "localSha256": "aa087fb052bcf4d8a3975334c3db2dfb603e81b6536985f1cfeb02a99fef5c38"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/inspect-270.png",
+      "gitBlob": "2477b52b05cdf66f61372a4b4e9ae00e821d8406",
+      "localBytes": 473691,
+      "localSha256": "451214f6e3ac4866817fd41e17668dea8f5e853ce0287258eebab18eae3a8af3"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/inspect-90.png",
+      "gitBlob": "5905269790dc7c0d4931f5a16bcc30401757daff",
+      "localBytes": 504036,
+      "localSha256": "17fd699a7317e1379ed6cd4248c9b6f2da6d693c2c78491c464d4d1a0eaa5484"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/mira-avatar-preview.png",
+      "gitBlob": "da877442eeb7642ea9f2f3b73f3fd22f159f7828",
+      "localBytes": 323535,
+      "localSha256": "4d7dc4d5e62a53833cd67871efbe5cc24fc75b2d6962704852292b7027c4b9b5"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/mira-tripo-avatar-regression-20261018.log",
+      "gitBlob": "8c35b2e1a0279ff54f989f63356d314bb2630ea8",
+      "localBytes": 5418,
+      "localSha256": "d760800f31d8609025b99ebe2e68f06889ef508c86d6ca75fc614f051e2346c6"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/mira-tripo-build-third-20261018.log",
+      "gitBlob": "665cad663294acd8e31905701aef341180673c5e",
+      "localBytes": 543425,
+      "localSha256": "ed65adb81f0b51200ee18b46700c0770fab0d4bb21a734457d3420383cc5e0ea"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/mira-tripo-check-first-20261018.log",
+      "gitBlob": "d22e318d68ee360fed7f9feb1ae49e595e42e540",
+      "localBytes": 23528,
+      "localSha256": "b7ecfcbb6a2b4dadb3a8f066b5606119c15f1ddfc0f31984428fb177ce6033f7"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/mira-tripo-check-second-20261018.log",
+      "gitBlob": "a5c1fdf00c9b7450a9851db6b9f90365f6c5d363",
+      "localBytes": 23547,
+      "localSha256": "3d37f004cb68f48ad8143a5e8e12a3a0c9df253f50e815b7b56d3a98e0dfdd92"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/mira-tripo-check-third-20261018.log",
+      "gitBlob": "7a0e302ee2c7d1820b75af02642e91b05f1fa8c3",
+      "localBytes": 24670,
+      "localSha256": "20c8c345fd34e77ad60dc785ee788b2f943b704e56e3a820243b12be6697024a"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/mira-tripo-inspect-20261018.log",
+      "gitBlob": "5213d2aa72900f45b72a86dea17708b582ad578a",
+      "localBytes": 48918,
+      "localSha256": "b5912ccea9c58c2b16c720ca8545769224760ff774a6c86ce3e69254bd694843"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18/result.json",
+      "gitBlob": "9f2d8a6a66396f3613cd341a23f668492641d35f",
+      "localBytes": 291,
+      "localSha256": "0382c541fce44eb8edc954c20594966f8ab912a132249404bd3595b4890eda91"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-H25-Export-2026-10-18.json",
+      "gitBlob": "87b947428718b7b28400b81cdf2e369b4a5a59ea",
+      "localBytes": 5006,
+      "localSha256": "0c282ecb56d0ce14e51cf85bbeed8e3dac83327a7041e7cc135cd7ec6b84c7e5"
+    },
+    {
+      "path": "docs/Pruefungen/Mira-Tripo-Kopf-2026-10-18.json",
+      "gitBlob": "ebe42253fc6c9975ae30d3a2bb34e21eecf3b458",
+      "localBytes": 2868,
+      "localSha256": "07bcc3a5c761ec8d8ebc5eeab5bcc61027d194d063a8c3b4cd871ec96276687c"
+    },
+    {
+      "path": "docs/Spielidee.md",
+      "gitBlob": "35a5f9029a9f384fa848c4449fec18c068ff2807",
+      "localBytes": 53105,
+      "localSha256": "a0a80496cbb30e58e0ef6829b14b6a8a998c9f99acd89acc785600169a45b4a0"
+    },
+    {
+      "path": "tools/GenerateMiraVisemes.py",
+      "gitBlob": "acb134080e710fdd8f990cfcbecff4685711e3d7",
+      "localBytes": 2950,
+      "localSha256": "ff2d13f1595ec8dd902ee556373b49f6b669e6fcc8d2d29bb8724f053c7e9142"
+    }
+  ]
+}

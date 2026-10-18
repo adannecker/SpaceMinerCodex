@@ -1,0 +1,89 @@
+mira_00 13 mouth cues
+mira_01 20 mouth cues
+mira_02 18 mouth cues
+mira_03 22 mouth cues
+mira_04 32 mouth cues
+mira_05 41 mouth cues
+mira_06 40 mouth cues
+mira_07 20 mouth cues
+mira_08 50 mouth cues
+mira_09 42 mouth cues
+mira_10 31 mouth cues
+mira_11 76 mouth cues
+mira_14 10 mouth cues
+mira_15 10 mouth cues
+{
+  "generator": "Rhubarb Lip Sync version 1.14.0",
+  "recordings": [
+    {
+      "clip": "mira_00",
+      "cues": 13,
+      "duration": 3.8899773242630387
+    },
+    {
+      "clip": "mira_01",
+      "cues": 20,
+      "duration": 3.2700226757369615
+    },
+    {
+      "clip": "mira_02",
+      "cues": 18,
+      "duration": 4.3100226757369615
+    },
+    {
+      "clip": "mira_03",
+      "cues": 22,
+      "duration": 3.579954648526077
+    },
+    {
+      "clip": "mira_04",
+      "cues": 32,
+      "duration": 5.78
+    },
+    {
+      "clip": "mira_05",
+      "cues": 41,
+      "duration": 7.3100226757369615
+    },
+    {
+      "clip": "mira_06",
+      "cues": 40,
+      "duration": 6.610022675736961
+    },
+    {
+      "clip": "mira_07",
+      "cues": 20,
+      "duration": 3.7899773242630386
+    },
+    {
+      "clip": "mira_08",
+      "cues": 50,
+      "duration": 7.76
+    },
+    {
+      "clip": "mira_09",
+      "cues": 42,
+      "duration": 6.68
+    },
+    {
+      "clip": "mira_10",
+      "cues": 31,
+      "duration": 4.66
+    },
+    {
+      "clip": "mira_11",
+      "cues": 76,
+      "duration": 11.609977324263038
+    },
+    {
+      "clip": "mira_14",
+      "cues": 10,
+      "duration": 2.4100226757369616
+    },
+    {
+      "clip": "mira_15",
+      "cues": 10,
+      "duration": 1.5002721088435373
+    }
+  ]
+}

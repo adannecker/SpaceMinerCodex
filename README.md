@@ -6,6 +6,12 @@ Für den aktuellen Rechnerwechsel und den Kontext aller bekannten Themenchats: [
 
 ## Entwicklungsumgebung
 
+Mira-Sicherung19.10.2026: [Vollständiger Umfang mit Assets, Bedienung und Wiederaufbau](docs/Entwicklungsstand-2026-10-19.md). Alle notwendigen Unity-Quellen und Metadaten enthalten; lokale EXE-Builds am Zielrechner neu erstellen.
+
+Mira-Tripo-Dialogprobe18.10.2026: `Start-Mira-Tripo-Gespraech.cmd` öffnet das Erwachen mit beweglichem3D-Kopf, Blinzeln, kleinen Blickwechseln, Dialogmimik und lautabhängigen Mundformen aus den vorhandenen Aoede-Aufnahmen.16 Abschnitte, davon14 vertont; zwei überarbeitete Scannertexte mit Lesepause. Kopf/Augen/Mimik einzeln abschaltbar. Eigene Szene/Anwendung, bisherige Kampagnen-Mira erhalten. Bauen über `SpaceMiner.Editor.MiraTripoDemoBuild.Build`. [Bedienung, Modellstand, Recherche und Grenzen](docs/Mira3D.md#kopf-augen-mimik-und-sprachformen-18102026).
+
+Aktuelle animierte Fassung: vollständiger Gesprächslauf mit542 Prüfungen und allgemeiner Avatarcheck derselben Binärdatei/Exit0. [Prüfbericht mit Bildern](docs/Pruefungen/Mira-Tripo-Animation-2026-10-18.json). Frühere RMS-Fassung:67 Prüfungen, [historischer Prüfbericht](docs/Pruefungen/Mira-Tripo-Dialog-2026-10-18.json).
+
 Gesamter Sicherungsstand12.10.2026: [Änderungsübersicht mit Bedienung, Build-Einstiegen und Prüfgrenzen](docs/Entwicklungsstand-2026-10-12.md) für Ringstation, Spielerzustand, Tripo-Importe, Wartung und Mining.
 
 Mining-Einzelbrocken/Manschette (12.10.2026): Nur beim Bohren jeweils ein Brocken, Greifer füllt zwölf Plätze in zwei Lagen. Am Lager erst Manschette anlegen/ansaugen, dann Heckluke öffnen; nach Entladung zuerst schließen, dann lösen. Zeitraffung2×/20×/80× für Abbau/Entladung/Flug. Mining69 und Balance195 Prüfungen/Exit0 derselben Binärdatei,23 Bilder. Vorschau über `Start-Mining-Drohne.cmd`. [Aktuelle Prüfung und Grenzen](docs/Pruefungen/Mining-Einzelbrocken-und-Manschette-2026-10-12.json). Folgende Abnahmen beschreiben vorherige Fassungen.
