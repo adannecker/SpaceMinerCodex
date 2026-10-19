@@ -6,6 +6,10 @@ Für den aktuellen Rechnerwechsel und den Kontext aller bekannten Themenchats: [
 
 ## Entwicklungsumgebung
 
+Stationsintegration19.10.2026: **`Start-Drohnenhalle-Station.cmd`** öffnet den normalen Development-Spielbuild direkt im Ring vor der ausgearbeiteten Drohnenhalle S02. Vom Ring hineinlaufen, hinten weiter zum vorhandenen Außendock; alle drei Tore zunächst offen, E bedient sie. Bestehende Kamera/Bewegung und zehn Dockplätze bleiben angebunden. Layoutrevision4 berücksichtigt neues Mobiliar beim Laden älterer Positionen. Build `SpaceMiner.Editor.HallExperimentBuild.BuildStation`;137 Stationsprüfungen/Exit0. [Bedienung und Aufbau](docs/Hallenexperiment.md#in-der-station-vom-ring-aus-betreten), [Prüfbericht](docs/Pruefungen/Drohnenhalle-Station-2026-10-19.json).
+
+Hallenexperiment19.10.2026: `Start-Hallenexperiment.cmd` öffnet eine begehbare, in Blender modellierte Drohnenwerkstatt mit PBR-Oberflächen, drei Schiebetoren und vorhandener Drohne als Größenreferenz. Tab/WASD/Maus, Shift, E am Tor, T für Materialvergleich, L für drei Lichtstimmungen, F11. Eigene Szene/Anwendung; Kampagne unverändert. Build über `SpaceMiner.Editor.HallExperimentBuild.Build`. [Bedienung, Quellen und Wiederaufbau](docs/Hallenexperiment.md), [36 Laufzeitprüfungen/Exit0 und Bilder](docs/Pruefungen/Hallenexperiment-2026-10-19.json).
+
 Mira-Sicherung19.10.2026: [Vollständiger Umfang mit Assets, Bedienung und Wiederaufbau](docs/Entwicklungsstand-2026-10-19.md). Alle notwendigen Unity-Quellen und Metadaten enthalten; lokale EXE-Builds am Zielrechner neu erstellen.
 
 Mira-Tripo-Dialogprobe18.10.2026: `Start-Mira-Tripo-Gespraech.cmd` öffnet das Erwachen mit beweglichem3D-Kopf, Blinzeln, kleinen Blickwechseln, Dialogmimik und lautabhängigen Mundformen aus den vorhandenen Aoede-Aufnahmen.16 Abschnitte, davon14 vertont; zwei überarbeitete Scannertexte mit Lesepause. Kopf/Augen/Mimik einzeln abschaltbar. Eigene Szene/Anwendung, bisherige Kampagnen-Mira erhalten. Bauen über `SpaceMiner.Editor.MiraTripoDemoBuild.Build`. [Bedienung, Modellstand, Recherche und Grenzen](docs/Mira3D.md#kopf-augen-mimik-und-sprachformen-18102026).

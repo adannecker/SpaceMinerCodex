@@ -1,0 +1,21 @@
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Warning: No mesh data to join
+Info: Packed 1 file(s)
+Info: Saved as "Station-Hall-Experiment-v01.blend"
+
+FBX export starting... 'C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Assets\\SpaceMiner\\Art\\HallExperiment\\StationHall-v01.fbx'
+export finished in 0.2482 sec.
+HALL MODEL GENERATED {"blender": "4.5.14 LTS", "units": "metres", "innerRadius": 38, "outerRadius": 54, "halfAngleDegrees": 13.5, "height": 5.5, "doorWidth": 3.2, "doorHeight": 3.4, "doors": 3, "originalObjects": 709, "exportedMeshObjects": 180, "vertices": 64392, "materials": ["Paint_Ivory", "Paint_Navy", "Steel_Dark", "Steel_Brush", "Rubber", "Safety_Yellow", "Light_Warm", "Signal_Cyan", "Signal_Amber", "Screen", "Label", "Glass", "Collision"], "aiAlbedo": "Textures/PaintedAlloy_Albedo.png", "campaignChanged": false}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+
+Blender quit

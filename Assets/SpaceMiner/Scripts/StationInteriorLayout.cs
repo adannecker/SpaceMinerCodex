@@ -5,7 +5,7 @@ namespace SpaceMiner
     // Campaign facade over the same metre-scale geometry used by the ring walkthrough.
     public sealed class StationInteriorLayout : MonoBehaviour
     {
-        public const int Revision = 3;
+        public const int Revision = 4;
         public Transform Habitat { get; private set; }
         public Transform Ring { get; private set; }
         public Transform Console { get; private set; }

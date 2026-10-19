@@ -18,6 +18,7 @@ namespace SpaceMiner
         internal readonly List<Transform> CampaignBerths = new List<Transform>();
         internal readonly List<Transform> WorkshopPortals = new List<Transform>();
         internal Transform CommandConsole { get; private set; }
+        internal StationDroneHall DetailedHall { get; private set; }
         internal int CommandWindowCount { get; private set; }
         private readonly GameObject root;
         private readonly Transform[] levels = new Transform[2];
@@ -199,7 +200,7 @@ namespace SpaceMiner
                     bool opening = r == OuterRadius ? OuterStages(s) > 0 : HasInnerArea(s);
                     if (opening)
                     {
-                        float door = s == 1 && r == OuterRadius ? 10 : 6;
+                        float door = s == 1 && r == OuterRadius ? (startStation ? 5 : 10) : 6;
                         // Lift portals straddle a segment boundary, separate from the room doors.
                         float wallBegin = begin + (r == InnerRadius && LiftBoundary(begin) ? 3.5f : RingJointHalfAngle);
                         float wallEnd = end - (r == InnerRadius && LiftBoundary(end) ? 3.5f : RingJointHalfAngle);
@@ -237,11 +238,30 @@ namespace SpaceMiner
         private static string InnerName(int s) => s == 1 ? "INTERNE DROHNENWERKSTATT" : s == 11 ? "VERSORGUNG" : s==0||s==6 ? "PRODUKTION / TRENNUNG" : s==3||s==9 ? "FERTIGUNG" : "WARTEBUCHT";
         private Transform Room(Transform parent, string name, float inside, float outside, float angle, float half, Material surface)
         {
-            Solid(name + " Boden", parent, inside, outside, angle - half, angle + half, -.35f, 0, surface);
+            bool detailedHall=startStation && name==Names[1];
+            Solid(name + " Boden", parent, detailedHall?inside+StageDepth:inside, outside, angle - half, angle + half, -.35f, 0, surface);
             bool inner = outside <= InnerRadius + .01f;
             int stages = inner ? 1 : Mathf.RoundToInt((outside - inside) / StageDepth);
             for (int stage = 0; stage < stages; stage++)
             {
+                if(detailedHall && stage==0)
+                {
+                    var prefab=Resources.Load<GameObject>("Station/DetailedDroneHall");
+                    if(prefab==null)throw new InvalidOperationException("Detailed drone hall prefab missing; run HallExperimentBuild.PrepareStationPrefab");
+                    var hall=Object.Instantiate(prefab,parent,false);hall.name="Drohnenhalle / ausgearbeitet";
+                    hall.transform.localPosition=At(OuterRadius,angle);hall.transform.localRotation=Quaternion.Euler(0,angle,0);
+                    DetailedHall=hall.GetComponent<StationDroneHall>();
+                    DetailedHall.Visitor=()=>StationInteriorMode.IsInside && StationInteriorMode.Current.Layout!=null
+                        && StationInteriorMode.Current.Layout.Geometry==this?(Vector3?)StationInteriorMode.Current.FeetPosition:null;
+                    foreach(var portal in DetailedHall.Portals)
+                    {
+                        var marker=Child("Aussenschleuse / "+portal.name,parent);
+                        // Markers retain the established radial docking coordinates at r=54 m.
+                        Vector3 local=parent.InverseTransformPoint(portal.position);float heading=Mathf.Atan2(local.x,local.z)*Mathf.Rad2Deg;
+                        marker.localPosition=At(54,heading);marker.localRotation=Quaternion.Euler(0,heading,0);WorkshopPortals.Add(marker);
+                    }
+                    ModuleCount++;ModuleJoinCount++;continue;
+                }
                 float from = inner ? inside : inside + stage * StageDepth;
                 float to = inner ? outside : inside + (stage + 1) * StageDepth;
                 float bodyFrom = from + (!inner || stage > 0 ? ModuleJointHalfLength : 0);
@@ -266,7 +286,8 @@ namespace SpaceMiner
                         Box(name + " Seitenwand / Modul " + (stage + 1), parent, At((bodyFrom + bodyTo) / 2, side, exteriorDock ? .5f : 2.75f), new Vector3(.3f, exteriorDock ? 1 : 5.5f, bodyTo - bodyFrom), shell, side);
                 }
                 ModuleCount++;
-                if (exteriorDock) BuildWorkshopFront(parent, from, angle, half);
+                if (exteriorDock && detailedHall)ModuleJoinCount++;
+                else if (exteriorDock) BuildWorkshopFront(parent, from, angle, half);
                 else if (!inner)
                     BuildModuleJoin(parent, name, from, angle, half, stage == 0 ? (name == Names[1] ? 10 : 6) : Mathf.Asin(6 / from) * Mathf.Rad2Deg, stage == 0 ? 3.1f : 4.3f);
                 else BuildModuleJoin(parent, name, to, angle, half, 6, 3.1f);
@@ -379,7 +400,7 @@ namespace SpaceMiner
         private void BuildDock(Transform parent, float angle)
         {
             // Keep a central walk-through lane across the repair area.
-            for (int side = -1; side <= 1; side += 2)
+            for (int side = -1; !startStation && side <= 1; side += 2)
                 Box("Reparaturbank", parent, At(OuterRadius + StageDepth * .625f, angle, .7f) + Quaternion.Euler(0, angle, 0) * Vector3.right * side * 5, new Vector3(2, 1.4f, 3), frame, angle);
             for (int row = 0; row < 2; row++)
                 for (int i = -2; i <= 2; i++)

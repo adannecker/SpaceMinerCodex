@@ -62,7 +62,13 @@ namespace SpaceMiner
             yield return null; yield return null;
             var mode = StationInteriorMode.Current; var scenario = FindFirstObjectByType<WaterScenario>();
             scenario.Scanner.DismissDialogue();
-            if (!test) { if (!StationInteriorMode.IsInside) mode.Enter(); yield break; }
+            if (!test)
+            {
+                if (!StationInteriorMode.IsInside) mode.Enter();
+                if(Array.IndexOf(Environment.GetCommandLineArgs(),"-droneHallPreview")>=0)
+                    mode.RestoreInterior(mode.Layout.transform.TransformPoint(RingWalkthrough.At(33.5f,30,.04f)),false,30,0);
+                yield break;
+            }
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             scenario.SetSimulationRate(0);
             var layout = mode.Layout; var model = layout.Geometry; var orbit = FindFirstObjectByType<OrbitCamera>();
@@ -161,6 +167,12 @@ namespace SpaceMiner
                 SaveGameStore.Apply(SaveGameStore.Read(file), scenario);
                 Require(Vector3.Distance(mode.FeetPosition, saved.interiorFeet) < .01f && Mathf.Abs(mode.ViewYaw - saved.interiorYaw) < .01f, "new layout save position and view round trip");
                 Require(Mathf.Abs(mode.Vitals.Stamina - saved.playerVitals.Stamina) < .01f, "saved stamina retained");
+                Vector3 originalSavedFeet=saved.interiorFeet;
+                saved.interiorLayout=3;
+                saved.interiorFeet=model.DetailedHall.transform.TransformPoint(new Vector3(8,.04f,13.8f));
+                SaveGameStore.Apply(saved,scenario);
+                Require(Vector3.Distance(mode.FeetPosition,layout.SpawnPosition)<.01f,"old layout pose inside new service cabinet relocates safely");
+                saved.interiorFeet=originalSavedFeet;
                 saved.interiorLayout = 2; saved.drones[0].position = layout.transform.TransformPoint(RingWalkthrough.At(63.6f, 30, 1));
                 SaveGameStore.Apply(saved, scenario);
                 Require(Vector3.Distance(mode.FeetPosition, saved.interiorFeet) < .01f && Mathf.Abs(mode.ViewYaw - saved.interiorYaw) < .01f, "previous ring layout retains player position and view");
@@ -177,6 +189,56 @@ namespace SpaceMiner
                 mode.RestoreInterior(layout.transform.TransformPoint(RingWalkthrough.At(33.5f, 30, .04f)), false, 30, 0);
             })) yield break;
             yield return Capture("02-ring-zum-drohnendeck");
+            // Walk the real campaign capsule from the ring into the imported hall and back.
+            if(!Guard(()=>{
+                var hall=model.DetailedHall;
+                Require(hall!=null && hall.Portals.Length==3,"detailed hall installed at real station");
+                Require(hall.GetComponentInChildren<HallExperimentView>()==null
+                    && hall.GetComponentsInChildren<Camera>().Length==0,"module has no experiment UI or second camera");
+                Require(hall.GetComponentsInChildren<Transform>().Length>100,"imported modular geometry present");
+                Require(Array.TrueForAll(hall.GetComponentsInChildren<Transform>(true),t=>t.gameObject.layer==25),"complete module uses station geometry layer");
+                Require(Array.TrueForAll(hall.GetComponentsInChildren<Transform>(true),t=>!t.name.StartsWith("Connector") && !t.name.StartsWith("COL_Connector") && !t.name.StartsWith("Apron") && !t.name.StartsWith("COL_Apron")),"standalone connector and apron removed");
+                Require(model.Root.Find("Ring 1/DROHNENDECK Decke / Modul 1")==null
+                    && model.Root.Find("Ring 1/Reparaturbank")==null,"old workshop shell and furniture replaced");
+                mode.RestoreInterior(layout.transform.TransformPoint(RingWalkthrough.At(33.5f,30,.04f)),false,30,0);
+                for(int n=0;n<100;n++)mode.Walk(Vector2.up,.05f);
+                var local=layout.transform.InverseTransformPoint(mode.FeetPosition);
+                Require(new Vector2(local.x,local.z).magnitude>44 && Mathf.Abs(local.y)<.12f,"physical ring to detailed hall entry");
+                mode.Look(new Vector2(180,0));for(int n=0;n<100;n++)mode.Walk(Vector2.up,.05f);
+                local=layout.transform.InverseTransformPoint(mode.FeetPosition);
+                Require(new Vector2(local.x,local.z).magnitude<34 && Mathf.Abs(local.y)<.12f,"physical detailed hall back to ring");
+            }))yield break;
+            yield return Capture("12-halle-zum-ring");
+            mode.RestoreInterior(layout.transform.TransformPoint(RingWalkthrough.At(33.5f,30,.04f)),false,30,0);
+            yield return Capture("13-ring-eingang-detailhalle");
+            mode.RestoreInterior(layout.transform.TransformPoint(RingWalkthrough.At(43,30,.04f)),false,5,-2);
+            yield return Capture("14-detailhalle-arbeitsplatz");
+            var detailed=model.DetailedHall;
+            Vector3 gate=layout.transform.InverseTransformPoint(detailed.Portals[1].position);gate.y=.04f;
+            float gateHeading=Mathf.Atan2(gate.x,gate.z)*Mathf.Rad2Deg;
+            mode.RestoreInterior(layout.transform.TransformPoint(RingWalkthrough.At(50,gateHeading,.04f)),false,gateHeading,0);
+            Vector3 initiallyOpen=detailed.LeftLeaves[1].position;
+            if(!Guard(()=>Require(detailed.Request(1,false),"unoccupied hall gate accepts closing")))yield break;
+            float doorDeadline=Time.realtimeSinceStartup+6;
+            while(detailed.Amount(1)>.001f && Time.realtimeSinceStartup<doorDeadline)yield return null;
+            if(!Guard(()=>{
+                Require(detailed.Amount(1)<.001f && Vector3.Distance(initiallyOpen,detailed.LeftLeaves[1].position)>1.6f,"station hall gate closes with metre scale travel");
+                for(int n=0;n<100;n++)mode.Walk(Vector2.up,.05f);
+                var local=layout.transform.InverseTransformPoint(mode.FeetPosition);
+                Require(new Vector2(local.x,local.z).magnitude<53.6f,"closed hall gate blocks real campaign capsule");
+                Require(detailed.Nearest(mode.FeetPosition)==1 && detailed.Interact(mode.FeetPosition),"same station interaction reaches gate");
+            }))yield break;
+            doorDeadline=Time.realtimeSinceStartup+6;
+            while(detailed.Amount(1)<.999f && Time.realtimeSinceStartup<doorDeadline)yield return null;
+            if(!Guard(()=>{
+                Require(detailed.Amount(1)>.999f && Vector3.Distance(initiallyOpen,detailed.LeftLeaves[1].position)<.005f,"station gate reopens to exact initial pose");
+                mode.RestoreInterior(layout.transform.TransformPoint(RingWalkthrough.At(53.65f,gateHeading,.04f)),false,gateHeading,0);
+                Require(!detailed.Request(1,false) && detailed.Target(1),"campaign visitor prevents closing in doorway");
+                for(int n=0;n<50;n++)mode.Walk(Vector2.up,.05f);
+                var local=layout.transform.InverseTransformPoint(mode.FeetPosition);
+                Require(new Vector2(local.x,local.z).magnitude>58 && Mathf.Abs(local.y)<.12f,"physical hall gate passage to existing exterior dock");
+            }))yield break;
+            yield return Capture("15-detailhalle-aussendock");
             mode.RestoreInterior(layout.transform.TransformPoint(RingWalkthrough.At(57, 30, .04f)), false, 30, 0);
             yield return Capture("03-drohnendeck");
             mode.RestoreInterior(layout.transform.TransformPoint(RingWalkthrough.At(42, 30, .04f)), false, 30, 0);

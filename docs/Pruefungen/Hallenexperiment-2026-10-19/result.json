@@ -1,0 +1,9 @@
+{
+    "passed": true,
+    "isolatedFromCampaign": true,
+    "checks": 36,
+    "meshObjects": 180,
+    "vertices": 182101,
+    "renderers": 156,
+    "doors": 3
+}

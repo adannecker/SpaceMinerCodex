@@ -1,5 +1,13 @@
 # Ringstation: Produktion, Lager und Ausbau
 
+## Detaillierte Drohnenhalle in der Startstation (19.10.2026)
+
+Nach positivem Nutzerfeedback ist der erste äußere Werkstattbereich durch die ausgearbeitete Halle ersetzt. Direkter Übergang aus dem Ring bei S02/30°, hinten drei bedienbare Tore und das bestehende Außendock mit zehn Plätzen. Standalone-Testkulisse und alte Doppelwände/-möbel entfernt; Schrankpositionen für freie Torwege angepasst. `StationDroneHall` nutzt Besucher/Kamera/Bewegung der Station. Layoutrevision4 prüft ältere Standorte gegen neue Kollisionsvolumen. Einstieg `Start-Drohnenhalle-Station.cmd`, Build `HallExperimentBuild.BuildStation`. Aktuelle Stationsprüfung137 Checks/Exit0 einschließlich Ring→Halle→Ring, aller drei Außenportale, geschlossenem Tor, Belegungsschutz, Saves und echtem Wasserflug. [Bedienung und Grenzen](Hallenexperiment.md#in-der-station-vom-ring-aus-betreten), [Belege](Pruefungen/Drohnenhalle-Station-2026-10-19.json). Die folgende isolierte Probe ist die vorherige Gestaltungsabnahme.
+
+## Eigenständiges Hallenexperiment (19.10.2026)
+
+Auf Nutzerwunsch Raumgestaltung, Materialien und Texturen als großen Versuch erproben. Erster gebogener Drohnenhallen-Ausschnitt in den vorhandenen Maßen38–54m/16m Tiefe/5,5m Höhe, aus eigener Blender-Quelle mit modularen Kassetten, Wandpaneelen, Leitungen, Werkbänken und drei beweglichen Toren. PBR-Lackmetall, vorhandene Drohne als Größenreferenz, Material-/Detailvergleich und drei Lichtstimmungen. `Start-Hallenexperiment.cmd`, eigenes `HallLab`, keine Übernahme in die Kampagnenstation vor dem Gestaltungsfeedback. Build/36 Laufzeitprüfungen Exit0, sieben Bilder repräsentativ visuell geprüft. [Bedienung, Quellen, Wiederaufbau und Grenzen](Hallenexperiment.md), [Prüfbericht](Pruefungen/Hallenexperiment-2026-10-19.json).
+
 ## Wartungsdrohne an der Hülle (11.10.2026)
 
 Die importierte Tripo-Drohne besitzt jetzt einen separaten fliegenden Wartungs-Showcase am Außendock: Abheben, echte Hüllenwand anfliegen, bewegliches Schweißwerkzeug mit Lichtbogen/Funken, Nahtkontrolle und Rückkehr zum Laden. Ein austauschbarer rotierender Bohrerkopf demonstriert die spätere Mining-Variante. `Start-Wartungsdrohne-Showcase.cmd`, Pause/Neustart/Werkzeugwechsel rechts, F8-Begehen. Eigener Development-Build mit pausierter Kampagne, kosmetischer Reparatur und Showcaseakku; noch keine Reparaturökonomie oder Miningintegration des neuen Rumpfs. [Ablauf und technische Grenzen](Wartungsdrohnen-Showcase.md), [Prüfbericht](Pruefungen/Wartungsdrohne-2026-10-11.json). Finale Wartungsprüfung99 und normale Startstation121 Checks sowie alte Größenprobe jeweils Exit0; sieben neue Bilder, repräsentative visuelle Prüfung. Normale bereitgestellte Spielbuilds unverändert.

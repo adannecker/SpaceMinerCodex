@@ -169,6 +169,7 @@ namespace SpaceMiner
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (Near(Layout.Console, 2.4f)) OpenConsole();
+                else if (Layout.Geometry.DetailedHall!=null && Layout.Geometry.DetailedHall.Interact(FeetPosition)) { }
                 else if (Airlock.CanRequest(FeetPosition)) Airlock.Request(FeetPosition);
             }
             if (Input.GetKeyDown(KeyCode.Tab)) { captureMouse = !captureMouse; UpdateCursor(); }
@@ -206,7 +207,7 @@ namespace SpaceMiner
             ui.Configure(SettingsStore.Current.Accessibility);
             if (GUI.Button(SwitchRect, inside ? "Station verlassen  [V]" : "Station betreten  [V]", ui.Button)) { if (inside) Exit(); else Enter(); }
             if (!inside) return;
-            const string hints = "STARTSTATION  ·  Ring / Wohnen / Zentrale / Drohnendeck\nWASD + Maus  ·  Shift Sprinten  ·  E Stationspult\nTab Maus freigeben  ·  V Außenansicht  ·  Türen offen";
+            const string hints = "STARTSTATION  ·  Ring / Wohnen / Zentrale / Drohnenhalle\nWASD + Maus  ·  Shift Sprinten  ·  E Pult / Drohnentor\nTab Maus freigeben  ·  V Außenansicht";
             float hintLeft = orbit.ShowHud ? VitalsHudRect.xMax + 18 : 18;
             float hintWidth = Mathf.Min(660, UiLayout.Width - hintLeft - 18);
             float hintHeight = ui.Small.CalcHeight(new GUIContent(hints), hintWidth - 24) + 16;
@@ -218,6 +219,7 @@ namespace SpaceMiner
             }
             if (orbit.ShowHud) DrawVitals();
             string prompt = Near(Layout.Console, 2.4f) ? "E  Stationspult bedienen"
+                : Layout.Geometry.DetailedHall!=null && Layout.Geometry.DetailedHall.Nearest(FeetPosition)>=0 ? Layout.Geometry.DetailedHall.Prompt(FeetPosition)
                 : Airlock.CanRequest(FeetPosition) ? "E  Schleusendurchgang starten"
                 : Near(Layout.RepairDrone, 1.7f) ? "R-01  ·  Reparaturdrohne ausgeschaltet" : "";
             Vector3 local = Room.InverseTransformPoint(FeetPosition);

@@ -1,0 +1,31 @@
+{
+  "blender": "4.5.14 LTS",
+  "units": "metres",
+  "innerRadius": 38,
+  "outerRadius": 54,
+  "halfAngleDegrees": 13.5,
+  "height": 5.5,
+  "doorWidth": 3.2,
+  "doorHeight": 3.4,
+  "doors": 3,
+  "originalObjects": 709,
+  "exportedMeshObjects": 181,
+  "vertices": 64392,
+  "materials": [
+    "Paint_Ivory",
+    "Paint_Navy",
+    "Steel_Dark",
+    "Steel_Brush",
+    "Rubber",
+    "Safety_Yellow",
+    "Light_Warm",
+    "Signal_Cyan",
+    "Signal_Amber",
+    "Screen",
+    "Label",
+    "Glass",
+    "Collision"
+  ],
+  "aiAlbedo": "Textures/PaintedAlloy_Albedo.png",
+  "campaignChanged": false
+}

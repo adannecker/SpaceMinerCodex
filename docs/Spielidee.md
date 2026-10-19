@@ -1,5 +1,9 @@
 # Space Miner — Spielidee und erster Meilenstein
 
+Freigabe19.10.2026: Die detaillierte Drohnenhallenprobe gefällt; Nutzer beauftragt Integration in die Station mit direktem Zugang vom Ring. Erster äußerer Werkstattabschnitt jetzt durch das ausgearbeitete Modell ersetzt, bestehendes Außendock erhalten. Keine zusätzliche Kamera/Testoberfläche in der Station. Alle drei äußeren Tore zunächst offen und per E bedienbar. Weitere Räume/Stationstexturen werden dadurch noch nicht umgestaltet. [Integration](Hallenexperiment.md#in-der-station-vom-ring-aus-betreten). Der folgende Absatz beschreibt den vorangegangenen Versuch.
+
+Gestaltungsversuch19.10.2026: Nutzer möchte die allgemeine Raumstation mit detaillierteren Hallen, Materialien und Texturen als großes Experiment ausprobieren. Zunächst eigene begehbare Drohnenhallenprobe mit modularer Blender-Geometrie, PBR-Lackmetall, Materialvergleich und verschiedenen Lichtstimmungen. Größen folgen dem bestehenden Ringentwurf. Noch keine finale Material-/Stilfreigabe oder Änderung der Hauptstation. [Versuch und Bedienung](Hallenexperiment.md).
+
 Mira-Auftrag18.10.2026: Den zuvor zurückgestellten3D-Avatar erneut als Tripo-Modell anhand des freigegebenen Mira-Bildes versuchen. Zunächst Kopf und Schultern, möglichst gleiche Gesichtszüge/Frisur/KI-Konturen; Mundbewegungen zum Sprechen und natürliche Zähne als Qualitätsziele. Die gezeichnete Dialogdarstellung bleibt bis zur gesonderten Modell-/Animationsfreigabe im Hauptspiel. [Modellstand](Mira3D.md).
 
 Fortsetzung18.10.2026: Der erste3D-Gesprächsversuch gefällt als Grundlage; Nutzer möchte dezente Kopf- und Augenbewegungen, Mimik und bessere Mundbewegungen recherchieren und ausprobieren. Als separate Vorschau mit kleinen Bewegungen und lautabhängigen Sprachformen weiterentwickeln; perfekte Anatomie oder finale Gestaltungsfreigabe damit nicht vorwegnehmen. [Umsetzung und Grenzen](Mira3D.md#kopf-augen-mimik-und-sprachformen-18102026).
