@@ -1,0 +1,26 @@
+[
+  {
+    "Path": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Assets\\SpaceMiner\\Scripts\\PowerConsoleView.cs",
+    "Hash": "1467A2160F5084369D0407A9D67A2271F66C581B9AF14965326271F170771B12"
+  },
+  {
+    "Path": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Assets\\SpaceMiner\\Scripts\\ConsoleStudio.cs",
+    "Hash": "CD16820383CE76F0C598D9D2CDA95789AEC2BA52251C39514150340EB09B3342"
+  },
+  {
+    "Path": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Assets\\SpaceMiner\\Scripts\\StationOperations.PowerConsole.cs",
+    "Hash": "A926A5A70B3CE25C74940EA822608C6905A21D8D7E477C6117AF7A21AA616930"
+  },
+  {
+    "Path": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Assets\\SpaceMiner\\Editor\\ConsoleStudioBuild.cs",
+    "Hash": "C6DEB6B8E412E2A26312350C656F7C94DCDEFBF00D382EAE7102B29823BFE6C2"
+  },
+  {
+    "Path": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio\\ConsoleStudio_Data\\Managed\\Assembly-CSharp.dll",
+    "Hash": "9C5C36AEC6FDF2C292613A9DC790765F313B621FC0A4D088E3734A4E72E0BBDE"
+  },
+  {
+    "Path": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudioGameCheck\\SpaceMiner_Data\\Managed\\Assembly-CSharp.dll",
+    "Hash": "9C5C36AEC6FDF2C292613A9DC790765F313B621FC0A4D088E3734A4E72E0BBDE"
+  }
+]

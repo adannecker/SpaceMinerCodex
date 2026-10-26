@@ -60,8 +60,9 @@ namespace SpaceMiner
         private bool ForeignModal=>CommandRoomPlanner.BlocksInput||StartMenu.IsOpen||IntroSequence.BlocksGameplay||MemoryCinematic.IsPlaying||SettingsMenu.IsOpen||SaveGameMenu.IsOpen||QuitMenu.BlocksInput||TechTreeMenu.IsOpen;
         private void Update()
         {
-            if(!Live||Scenario==null)return;UpdateInteriorLighting();if(ForeignModal)return;
+            if(!Live||Scenario==null)return;UpdateInteriorLighting();
             lightClock-=Time.unscaledDeltaTime;if(lightClock<=0){lightClock=.25f;UpdateLights();}
+            if(ForeignModal)return;
             if(Scenario.Scanner.Dialogue!=null)return;
             if(panel.HasValue){if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.E)&&!DroneConsoleTextInputActive)ClosePanel();return;}
             if(StationInteriorMode.IsInside&&Input.GetKeyDown(KeyCode.E))

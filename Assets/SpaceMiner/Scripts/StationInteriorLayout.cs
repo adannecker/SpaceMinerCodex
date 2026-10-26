@@ -45,11 +45,16 @@ namespace SpaceMiner
             Console = new GameObject("Command console interaction").transform;
             Console.SetParent(transform, false); Console.localPosition = new Vector3(0, 0, RingWalkthrough.StartConsoleRadius - 2);
             Airlock = Geometry.BayAirlock;
-            var model=station.GetComponent<WaterScenario>().Worker.transform.Find("Mining Drone Geometry");
-            RepairDrone = Object.Instantiate(model.gameObject).transform;
+            var prefab=Resources.Load<GameObject>("IndoorDroneI75/I75Traffic");
+            if(prefab==null)throw new System.InvalidOperationException("R03-Innendrohnenmodell fehlt; IndoorDroneTrafficBuild vorbereiten.");
+            RepairDrone = new GameObject("Internal helper R-01").transform;
             RepairDrone.name = "Repair drone R-01 - offline"; RepairDrone.gameObject.layer = 25;
             RepairDrone.SetParent(Habitat, false); RepairDrone.localPosition = new Vector3(-3, .6f, 0);
-            RepairDrone.localScale = Vector3.one*.32f;
+            var helperVisual=Object.Instantiate(prefab,RepairDrone,false);
+            // Existing work paths use a body-centre pivot; traffic uses a floor pivot.
+            helperVisual.transform.localPosition=Vector3.down*IndoorDroneVisual.Height*.5f;
+            helperVisual.GetComponent<IndoorDroneVisual>().SetOperational(false);
+            foreach(var node in RepairDrone.GetComponentsInChildren<Transform>())node.gameObject.layer=25;
             foreach(var collider in RepairDrone.GetComponentsInChildren<Collider>())collider.enabled=false;
             foreach(var renderer in RepairDrone.GetComponentsInChildren<Renderer>())
                 if(renderer.sharedMaterial!=null && renderer.sharedMaterial.name=="Drone status")

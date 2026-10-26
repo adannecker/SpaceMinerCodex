@@ -1,0 +1,4 @@
+Unity6000.6.5f1; existing scenes; final build04 exit0
+INTERFACE BUILD SUCCESS: Builds/InterfaceDevelopment/SpaceMiner.exe
+INTERFACE BUILD SUCCESS: Builds/InterfaceRelease/SpaceMiner.exe
+INTERFACE BUILD SUCCESS: Builds/InterfaceStudio/ConsoleStudio.exe

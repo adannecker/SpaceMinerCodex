@@ -1,0 +1,742 @@
+{
+  "date": "2026-10-26",
+  "task": "I75 screenshots: remove point pattern, crisp labels, close underside/rear/side through-views, magnetic front tool interface",
+  "passed": true,
+  "blender": "4.5.14 LTS",
+  "buildExit": 0,
+  "roundtripExit": 0,
+  "surfaceReport": "Design/Models/IndoorDroneI75/Surface-R03-2026-10-26/surface-report.json",
+  "sourceR02Unchanged": true,
+  "unityAssetsUnchanged": true,
+  "geometry": {
+    "date": "2026-10-26",
+    "source": "Design\\Models\\IndoorDroneI75\\Surface-R02-2026-10-26\\I75_V02_Surface_R02.blend",
+    "sourceSha256": "aeeadba2aac1fef2edae3ef956b46d767177decd3916475d9f83d335507bde3c",
+    "sourceUnchanged": true,
+    "sourceTopology": {
+      "vertices": 10846,
+      "faces": 10983,
+      "boundaryEdges": 2648,
+      "nonManifoldEdges": 2774
+    },
+    "smallPlanarCapsAdded": 123,
+    "panelTopologyAfter": {
+      "vertices": 21692,
+      "faces": 23499,
+      "boundaryEdges": 69,
+      "nonManifoldEdges": 350
+    },
+    "counts": {
+      "triangles": 87564,
+      "objects": 60
+    },
+    "chassisTopology": {
+      "vertices": 56,
+      "faces": 54,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    "bellyTopology": {
+      "vertices": 56,
+      "faces": 54,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    "rearCoverTopology": {
+      "vertices": 56,
+      "faces": 54,
+      "boundaryEdges": 0,
+      "nonManifoldEdges": 0
+    },
+    "closedChassisRayChecks": [
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          -0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          -0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          -0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          0,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          0,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          0,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": -1,
+        "offset": [
+          0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          -0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          -0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          -0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          0,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          0,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          0,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 0,
+        "side": 1,
+        "offset": [
+          0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          -0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          -0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          -0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          0,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          0,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          0,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": -1,
+        "offset": [
+          0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          -0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          -0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          -0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          0,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          0,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          0,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 1,
+        "side": 1,
+        "offset": [
+          0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          -0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          -0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          -0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          0,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          0,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          0,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": -1,
+        "offset": [
+          0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          -0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          -0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          -0.06,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          0,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          0,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          0,
+          0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          0.06,
+          -0.06
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          0.06,
+          0
+        ],
+        "hit": true
+      },
+      {
+        "axis": 2,
+        "side": 1,
+        "offset": [
+          0.06,
+          0.06
+        ],
+        "hit": true
+      }
+    ],
+    "labels": [
+      {
+        "side": -1,
+        "surfaceX": 0.215254008769989,
+        "plateX": -0.21725400876998902,
+        "textGeometry": true
+      },
+      {
+        "side": 1,
+        "surfaceX": 0.2170860767364502,
+        "plateX": 0.2190860767364502,
+        "textGeometry": true
+      }
+    ],
+    "roofPlaqueZ": 0.39953299951553345,
+    "labelRendering": "Geometric lettering on separate service plaques; no bitmap labels or stochastic wear maps",
+    "toolCoupler": "Blind magnetic face, six visible poles, central register and keyed alignment; geometry only, no physics/workflow",
+    "materialCount": 9,
+    "renders": [
+      "docs\\Art\\Drohnen\\I75-Textur-R03-2026-10-26\\01-hero.png",
+      "docs\\Art\\Drohnen\\I75-Textur-R03-2026-10-26\\02-front-tool-mount.png",
+      "docs\\Art\\Drohnen\\I75-Textur-R03-2026-10-26\\03-right-side.png",
+      "docs\\Art\\Drohnen\\I75-Textur-R03-2026-10-26\\04-left-side.png",
+      "docs\\Art\\Drohnen\\I75-Textur-R03-2026-10-26\\05-roof.png",
+      "docs\\Art\\Drohnen\\I75-Textur-R03-2026-10-26\\06-belly.png",
+      "docs\\Art\\Drohnen\\I75-Textur-R03-2026-10-26\\07-rear.png",
+      "docs\\Art\\Drohnen\\I75-Textur-R03-2026-10-26\\08-rear-oblique.png"
+    ],
+    "elapsedSeconds": 537.0057661533356,
+    "unityAssignmentChanged": false,
+    "limits": [
+      "Outer imported panel skin retains non-manifold intersections where present; closed independent chassis blocks through-body views.",
+      "No magnetic force simulation, working tool attachment, rig, mass/strength certification, LOD or Unity acceptance."
+    ]
+  },
+  "exportRoundtrips": {
+    "glbMaterialData": {
+      "materials": 9,
+      "imageTextures": 0,
+      "legacyTextureMaps": false
+    },
+    "glb": {
+      "passed": true,
+      "meshes": 60,
+      "dimensionsMetres": [
+        0.4820000231266022,
+        0.7829999923706055,
+        0.4371030628681183
+      ],
+      "closedStructuralParts": [
+        {
+          "part": "sealed structural chassis",
+          "weldedBoundaryEdges": 0,
+          "weldedNonManifoldEdges": 0
+        },
+        {
+          "part": "closed removable belly",
+          "weldedBoundaryEdges": 0,
+          "weldedNonManifoldEdges": 0
+        },
+        {
+          "part": "sealed rear equipment cover",
+          "weldedBoundaryEdges": 0,
+          "weldedNonManifoldEdges": 0
+        }
+      ],
+      "toolPoles": 6,
+      "sideDesignations": 2
+    },
+    "fbx": {
+      "passed": true,
+      "meshes": 60,
+      "dimensionsMetres": [
+        0.4820000231266022,
+        0.7829999923706055,
+        0.437103000742308
+      ],
+      "closedStructuralParts": [
+        {
+          "part": "sealed structural chassis",
+          "weldedBoundaryEdges": 0,
+          "weldedNonManifoldEdges": 0
+        },
+        {
+          "part": "closed removable belly",
+          "weldedBoundaryEdges": 0,
+          "weldedNonManifoldEdges": 0
+        },
+        {
+          "part": "sealed rear equipment cover",
+          "weldedBoundaryEdges": 0,
+          "weldedNonManifoldEdges": 0
+        }
+      ],
+      "toolPoles": 6,
+      "sideDesignations": 2
+    }
+  },
+  "manifest": [
+    {
+      "file": "Design/Models/IndoorDroneI75/Surface-R03-2026-10-26/I75_V02_Surface_R03.blend",
+      "bytes": 15983616,
+      "sha256": "b3fe4c05084c901d144b3846b1bb634e9fd5b5d798815fef5d7d35040e112b6f"
+    },
+    {
+      "file": "Design/Models/IndoorDroneI75/Surface-R03-2026-10-26/I75_V02_Surface_R03.blend1",
+      "bytes": 15983616,
+      "sha256": "3b088777dbd4e570460a173ff5967d56ecb142ecc688b0ae7a30684947dbfae2"
+    },
+    {
+      "file": "Design/Models/IndoorDroneI75/Surface-R03-2026-10-26/I75_V02_Surface_R03.fbx",
+      "bytes": 2480716,
+      "sha256": "c666659586cdf9b258badaf3ee29d5b9a428be19e3f910c0cdf0c2be96c7d9a0"
+    },
+    {
+      "file": "Design/Models/IndoorDroneI75/Surface-R03-2026-10-26/I75_V02_Surface_R03.glb",
+      "bytes": 3920316,
+      "sha256": "00f2897429faec0e6948474dc466e5d498e836b1dbfb16c95bee62b96394c00d"
+    },
+    {
+      "file": "Design/Models/IndoorDroneI75/Surface-R03-2026-10-26/README.md",
+      "bytes": 893,
+      "sha256": "672dc0dd0ac68adc4909e3013218dd62d7a94a4692d77b8078ee0c2d37889fad"
+    },
+    {
+      "file": "Design/Models/IndoorDroneI75/Surface-R03-2026-10-26/surface-report.json",
+      "bytes": 9422,
+      "sha256": "e6779decb29af0030ff6aa9339265266633f4a1ab42cfbfee3fd9883103a7723"
+    },
+    {
+      "file": "docs/Art/Drohnen/I75-Textur-R03-2026-10-26/01-hero.png",
+      "bytes": 1957384,
+      "sha256": "e1fae4cc7bbcc874138f73cb42205e1cf2a1f63d8de0f7fc953dafce1d6c0cb3"
+    },
+    {
+      "file": "docs/Art/Drohnen/I75-Textur-R03-2026-10-26/02-front-tool-mount.png",
+      "bytes": 1948828,
+      "sha256": "602657f070300329279e25571c83ca95c9d24cdc70e5674eeffba770385905b4"
+    },
+    {
+      "file": "docs/Art/Drohnen/I75-Textur-R03-2026-10-26/03-right-side.png",
+      "bytes": 1811999,
+      "sha256": "423146a426dfff43d1f347c877c2a8eb071ffb9c6715e8d662c288438160fabe"
+    },
+    {
+      "file": "docs/Art/Drohnen/I75-Textur-R03-2026-10-26/04-left-side.png",
+      "bytes": 1803151,
+      "sha256": "ada01941564a48fb906966b062d35e3256224f70eb88ed544a6990320dc9501a"
+    },
+    {
+      "file": "docs/Art/Drohnen/I75-Textur-R03-2026-10-26/05-roof.png",
+      "bytes": 2116680,
+      "sha256": "e6481965bf58982ff877a2417357b4a79f6d614fc5ee26f5263986b1441b65ec"
+    },
+    {
+      "file": "docs/Art/Drohnen/I75-Textur-R03-2026-10-26/06-belly.png",
+      "bytes": 2118726,
+      "sha256": "b88b8075bcf963f168c44ec217ef093d1c18c6720ff9a7af2e1572876ed08882"
+    },
+    {
+      "file": "docs/Art/Drohnen/I75-Textur-R03-2026-10-26/07-rear.png",
+      "bytes": 1835521,
+      "sha256": "165099e3aeecc06f80d7ec726afa859ea80c4fa4b4354d54659ca3a25cdb87e1"
+    },
+    {
+      "file": "docs/Art/Drohnen/I75-Textur-R03-2026-10-26/08-rear-oblique.png",
+      "bytes": 1915873,
+      "sha256": "dffc7f1a0bb39fd3b3977791378ae46ae2c2ffc63780000c7b733b9256323512"
+    },
+    {
+      "file": "tools/RepairIndoorDroneI75R03.py",
+      "bytes": 17427,
+      "sha256": "17834181c9180609ca5e82a00cf525bd3a7517c397e602ab87da94834353e92a"
+    }
+  ],
+  "visualReview": {
+    "browser": [
+      "hero",
+      "underside",
+      "rear",
+      "right side"
+    ],
+    "blenderImages": [
+      "01-hero.png",
+      "02-front-tool-mount.png",
+      "04-left-side.png",
+      "06-belly.png"
+    ],
+    "allEightRendersGenerated": true,
+    "browserVariant": "R03",
+    "userApprovalPending": true
+  },
+  "viewerChanges": [
+    "R03 default, R02/R01 comparison retained",
+    "Bottom-view button",
+    "Length measured from actual bounding box (R03 78.3cm including coupler)"
+  ],
+  "limits": [
+    "Outer imported panel skin retains non-manifold intersections where present; closed independent chassis blocks through-body views.",
+    "No magnetic force simulation, working tool attachment, rig, mass/strength certification, LOD or Unity acceptance.",
+    "No Unity import, prefab replacement, player build or FPS test. SP-01 remains open pending review and game integration.",
+    "No commit or push."
+  ]
+}

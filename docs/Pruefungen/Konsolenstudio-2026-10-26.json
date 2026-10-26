@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-26",
+  "unity": "6000.6.5f1",
+  "studioBuild": "Builds/ConsoleStudio/ConsoleStudio.exe",
+  "regressionBuild": "Builds/ConsoleStudioGameCheck/SpaceMiner.exe",
+  "studio": {
+    "exitCode": 0,
+    "sizes": [
+      "1600x1000",
+      "1280x720"
+    ],
+    "fixtures": 4,
+    "captures": 28,
+    "passed": true,
+    "inspected": [
+      "01-normalbetrieb.png",
+      "02-lange-texte-140-prozent.png",
+      "04-solar-inspektor.png"
+    ],
+    "textScale": [
+      1,
+      1.4
+    ]
+  },
+  "gamePowerCheck": {
+    "checks": 477,
+    "passed": true,
+    "captures": 14
+  },
+  "roomPlansPreserved": 3,
+  "buildLog": "Logs/ConsoleStudio/build-final2.log",
+  "studioLog": "Logs/ConsoleStudio/player-final2-check.log",
+  "gameLog": "Logs/ConsoleStudio/game-final2-check.log",
+  "changes": [
+    "PowerConsoleView shared renderer/data contract",
+    "StationOperations.PowerConsole game adapter",
+    "ConsoleStudio isolated scene and test fixtures",
+    "ConsoleStudioBuild standalone and regression outputs",
+    "Start-Konsolenstudio.cmd"
+  ],
+  "limits": [
+    "Only power console in studio",
+    "Studio uses labelled schematic, no actual station/detail meshes",
+    "No manual OS-input/comfort, Release or FPS acceptance",
+    "No deployment to Builds/Windows; no commit/push"
+  ],
+  "earlierAttempts": [
+    "Hidden player did not render; result-hidden-first.json retained locally",
+    "Nested GUI group/scale line drawing found by image review; final uses axis-aligned strips"
+  ]
+}

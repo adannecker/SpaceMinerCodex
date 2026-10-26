@@ -548,3 +548,26 @@ Umgesetzt und die Demo wieder geöffnet:
 - Grosse Bäume bleiben unverkürzt und sind in beide Richtungen verschiebbar.
 
 Build, Playerprüfung und 13 Tests bestanden.
+
+<!-- reviewed-project-continuation -->
+
+# Geprüfte Projektfortsetzung
+
+Exportstand: 2026-10-26T16:02:45.759077+00:00. Geprüfter Zeitraum: nach 2026-10-26T06:00:00+00:00 bis 2026-10-26T07:47:14+00:00.
+
+Der vorhandene bereinigte Projektteil bleibt oben unverändert. Frühere Rohtexte werden bewusst nicht erneut importiert.
+
+## Assistent · 2026-10-26T07:46:08.850Z
+
+Ich gleiche den TechTree-Kontext lesend mit den aktuellen Projektdateien ab. Frühere Builds und Tests behandle ich als historische Nachweise.
+
+## Assistent · 2026-10-26T07:47:13.519Z
+
+TechTree-Kontext lesend abgeglichen.
+
+- Zuständig für Forschungsbäume, Wissens-, Hardware- und Ressourcenbedingungen sowie die Trennung von Labor und Kampagne.
+- Aktuell: elf Bereiche, 159 Einträge, kompakte 72×72-Ausgangsicons und feste rechte Informationsleiste. Frühere schwebende Overlays sind abgelöst.
+- Laborökonomie und echte Kampagnenforschung bleiben getrennt; vollständige Baumökonomie und 40-Stunden-Balance sind offen.
+- Verifiziert: Gitstand `659b514`, lokale Projektversion `6000.6.5f1`. Der kombinierte Stand ist hier noch nicht gebaut; ältere Prüfberichte bleiben historisch.
+
+SP-01…SP-10 bleibt der nächste Umfang. Keine Dateien geändert, Builds oder Umsetzung gestartet.

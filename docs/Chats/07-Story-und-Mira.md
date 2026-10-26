@@ -2551,3 +2551,307 @@ Meine Zuständigkeit bleibt **Story, Mira, Dialoge und Cinematics**. Miras gezei
 Offen sind passende Aoede-Aufnahmen für zwei geänderte Scannertexte und ergänzte Questdialoge. Miras Forschungsentwicklung ist geplant; konkrete Knoten, Kosten und Kapitelgrenzen bleiben Entwürfe.
 
 Keine Dateien geändert, keine Builds oder anderen Aktionen ausgeführt.
+
+<!-- reviewed-project-continuation -->
+
+# Geprüfte Projektfortsetzung
+
+Exportstand: 2026-10-26T16:02:45.759077+00:00. Geprüfter Zeitraum: nach 2026-10-26T06:00:00+00:00 bis 2026-10-26T13:28:50.669Z.
+
+Der vorhandene bereinigte Projektteil bleibt oben unverändert. Frühere Rohtexte werden bewusst nicht erneut importiert.
+
+## Assistent · 2026-10-26T07:46:42.156Z
+
+Ich lese den aktuellen Projektabgleich und die relevanten Story-/Mira-Unterlagen im gemeinsamen Checkout. Es bleibt bei einem reinen Kontextupdate ohne Änderungen oder Builds.
+
+## Assistent · 2026-10-26T07:47:11.875Z
+
+Kontext aktualisiert: **Gitstand 659b514**, lokale Unity-Version **6000.6.5f1**. Der kombinierte Stand ist hier noch nicht neu gebaut.
+
+Meine Zuständigkeit: **Mira, Quests, Sprechertexte, Sprachaufnahmen, Acting und Cinematics**. Die 22 Quest-WAVs und beide ergänzten Introzeilen sind vorhanden.
+
+High-Mira ist im Studio und Questspiel integriert; der reguläre Hauptspielabgleich bleibt **SP-09**, gemeinsam mit MainDev und Modellchat.
+
+Nur gelesen, nichts verändert oder gestartet.
+
+## Nutzer · 2026-10-26T10:55:30.378Z
+
+Zeige mir mal das Bild zu den Bedienpanelen an
+
+## Assistent · 2026-10-26T10:57:04.682Z
+
+Ich suche das aktuelle Bild der Bedienpanele heraus.
+
+## Assistent · 2026-10-26T10:57:25.277Z
+
+Hier ist das **Konzept der einheitlichen Touch-Bedienpanele**:
+
+![Touch-Bedienpanele](C:/Users/achim.dannecker/source/repos/SpaceMinerCodex/docs/Art/Station/Steuerpult-Touch-2026-10-26-v2.png)
+
+Und die daraus erstellte **Blender-Modellvorschau** mit beispielhafter Displayanzeige:
+
+![Blender-Modell des Bedienpults](C:/Users/achim.dannecker/source/repos/SpaceMinerCodex/Design/Models/TouchConsole/Renders/04-demo-screen-fixture-not-gameplay.png)
+
+## Nutzer · 2026-10-26T10:57:48.969Z
+
+Kannst du die Unterschiede Sehen?
+
+## Assistent · 2026-10-26T10:58:25.644Z
+
+Ja, deutlich. Das Blender-Modell übernimmt die Grundform, erreicht aber die Gestaltung des Konzepts noch nicht:
+
+- **Gehäuse:** Im Konzept stärker abgeschrägt und aus mehreren markanten Bauteilen aufgebaut. Das Modell wirkt geradliniger und kastenförmiger.
+- **Metallrahmen:** Im Konzept kantige Übergänge, Verschraubungen und kräftige Fußstücke; im Modell eher glatte, durchgehende Leisten.
+- **Materialien:** Das Konzept zeigt gebürstetes Metall, Gebrauchsspuren und mehr Oberflächendetails. Das Modell wirkt sauberer und gleichmäßiger.
+- **Display:** Im Konzept plastische Gerätesymbole, klar abgegrenzte Karten und dichtere Informationen. Die Modellvorschau zeigt überwiegend einfache Linien, Balken und Text.
+- **Beschriftung:** Im Konzept eine kompakte Frontplakette mit separater Gerätekennung; im Modell ein längeres Schild.
+
+**Die bisherige Aussage „möglichst getreu umgesetzt“ ist dafür zu großzügig.** Besonders Rahmen, Füße, Materialstruktur und Displaygestaltung weichen sichtbar ab.
+
+## Nutzer · 2026-10-26T10:59:15.992Z
+
+Ok verbessere mal das Blendermodell massiv und zeige es mir dann über unseren 3D viewer rechts an
+
+## Assistent · 2026-10-26T10:59:29.942Z
+
+Ich überarbeite das Modell deutlich näher am Konzept: markantere Metallwangen und Füße, bessere Gehäusedetails und glaubwürdigere Materialien. Anschließend öffne ich es im vorhandenen 3D-Viewer rechts.
+
+## Assistent · 2026-10-26T11:04:05.857Z
+
+Die neue Fassung hat jetzt segmentierte, kantigere Metallwangen, kräftigere Fußstücke, zusätzliche Wartungsdetails und ein kompakteres Frontschild. Ich habe außerdem einen Fehler in der Rauheitszuweisung gefunden und korrigiert, der die Materialien zu gleichmäßig wirken ließ. Die ursprüngliche Modellfassung bleibt erhalten.
+
+## Assistent · 2026-10-26T11:06:07.445Z
+
+Der erste Render zeigt die neue Gehäuseform. Bei der Bildkontrolle war die Frontbeschriftung verdeckt; das habe ich im Export korrigiert. Der Viewer ist rechts zum Öffnen angefordert. Die browserseitige Sichtprüfung ist hier noch nicht bestätigt.
+
+## Assistent · 2026-10-26T11:09:22.169Z
+
+Das überarbeitete Touchpult ist jetzt rechts im 3D-Viewer sichtbar. Drehen und Zoomen sind verfügbar; Frontbeschriftung und Beispielanzeige werden korrekt dargestellt. Die Fassung ist kantiger und detaillierter als zuvor, bleibt aber eine Modellvorschau – der Einbau ins Spiel folgt separat.
+
+## Assistent · 2026-10-26T11:10:12.796Z
+
+Das überarbeitete Modell ist **rechts im 3D-Viewer geöffnet** – drehbar und zoombar.
+
+Neu sind kantigere Metallwangen, kräftigere Füße, Wartungsdetails, verbesserte Materialien und die kompaktere Frontbeschriftung. Originalmodell erhalten; noch kein Einbau ins Spiel.
+
+## Nutzer · 2026-10-26T11:22:57.088Z
+
+## My request:
+Schon besser nimm mal die Masse vom Konzept das ist vorne ggf. tiefer dann an der Seite der Rahmen hejnickt aber das Display dann gerade wenn aber vorne WTiefer dann auch länger
+
+## Assistent · 2026-10-26T11:23:21.586Z
+
+Ich verstehe dich so: Die vordere Bedienkante soll niedriger werden, der Seitenrahmen vorne einen deutlichen Knick bekommen und das Display als eine durchgehend ebene Fläche nach hinten ansteigen. Dadurch wird die Bedienfläche auch länger. Ich gleiche das mit den Maßangaben im Konzept ab und passe die Vorschau entsprechend an.
+
+## Nutzer · 2026-10-26T11:26:20.989Z
+
+## My request:
+sehr gut
+
+## Assistent · 2026-10-26T11:26:33.635Z
+
+Dann halte ich diese Proportionen als freigegebene Richtung fest: niedrigere Front, geknickter Seitenrahmen und eine längere, durchgehend ebene Displayfläche.
+
+## Assistent · 2026-10-26T11:27:19.237Z
+
+Die Proportionen sind angepasst und rechts sichtbar: vorne etwa **90 cm**, hinten **110 cm**, mit längerer ebener Displayfläche und geknicktem Seitenrahmen. Diese Richtung behalten wir bei.
+
+## Nutzer · 2026-10-26T11:31:21.805Z
+
+[Anhänge im Ursprungschat; nicht rekonstruiert.]
+
+Das sind die Masse
+
+[Bildanhang im Ursprungschat; nicht rekonstruiert.]
+
+## Assistent · 2026-10-26T11:31:40.021Z
+
+Ja, diese Vorlage ist maßgeblich: **1,00 m Gesamttiefe, 1,14 m Gesamthöhe und etwa 12° Displayneigung**.
+
+Die **0,90 m vorne und 1,10 m hinten** verstehe ich als Höhen über dem Boden. Die horizontalen Maßpfeile im Bild sind dafür falsch eingezeichnet. Meine bisherige Anpassung war nur ungefähr danach ausgerichtet.
+
+## Nutzer · 2026-10-26T11:40:04.787Z
+
+## My request:
+Lass die Vordere Kante auf soweit runter kommen wie wenn es einen 20% Neigung geben würde und baue an der Seite den Knick ein mir gefällt das ganze Objekt aus dem Konzept sehr gut
+
+## Assistent · 2026-10-26T11:40:22.738Z
+
+Meinst du **20° Neigung**? Damit kommt die Vorderkante deutlich tiefer. **20 % Gefälle entsprechen nur etwa 11,3°**, also fast der bisherigen Neigung.
+
+Den seitlichen Knick und die Gehäuseform übernehme ich enger aus dem Konzept; das Display bleibt durchgehend eben.
+
+## Nutzer · 2026-10-26T11:41:26.407Z
+
+## My request:
+Ja 20% runter dann kommen wir vorne bei ca. 60 cm raus
+
+## Assistent · 2026-10-26T11:41:54.317Z
+
+Dann nehme ich die **etwa 60 cm an der Vorderkante** als Ziel und lasse die hintere Bedienkante bei etwa 1,10 m. Das ergibt eine deutlich steilere Fläche als 20 % Gefälle. Ich passe das Gehäuse daran an und arbeite den seitlichen Knick stärker nach dem Konzept aus.
+
+## Assistent · 2026-10-26T11:44:58.681Z
+
+Jetzt rechts sichtbar: vorne **60 cm**, hinten **111 cm**, mit entsprechend steilerem, ebenem Display und angepasst geknicktem Seitenrahmen. Die vorherigen Varianten bleiben erhalten.
+
+## Nutzer · 2026-10-26T11:48:41.828Z
+
+## My request:
+Ist das R04
+
+## Assistent · 2026-10-26T11:48:54.929Z
+
+Ja, die neueste Fassung ist **R04**. Dein aktueller Tab zeigt laut Adresse noch die ältere Ansicht auf Port 8770.
+
+Hier ist [R04 im 3D-Viewer](http://127.0.0.1:8772/). Unten muss **„R04 · Konzeptüberarbeitung“** stehen.
+
+## Nutzer · 2026-10-26T11:49:34.134Z
+
+## My request:
+Kannst Du R01 02 03 auch auswählbar machen damit man sie vergleichen kann
+
+## Assistent · 2026-10-26T11:49:44.833Z
+
+Ich ergänze die Auswahl für R01 bis R04 im selben Viewer, damit du die Varianten direkt vergleichen kannst.
+
+## Assistent · 2026-10-26T11:51:48.037Z
+
+Die Auswahl enthält jetzt R01 bis R04. Ich prüfe noch die Modellwechsel und lasse anschließend R04 geöffnet.
+
+## Assistent · 2026-10-26T11:53:57.180Z
+
+Ja, **R01 bis R04 sind jetzt unten im Auswahlmenü verfügbar**. Alle Modellwechsel geprüft, R04 ist vorausgewählt.
+
+[Variantenvergleich öffnen](http://127.0.0.1:8773/)
+
+## Nutzer · 2026-10-26T11:54:46.010Z
+
+## My request:
+Man kann die modelle gerade nicht laden
+
+## Assistent · 2026-10-26T11:54:58.501Z
+
+Ich prüfe den Viewer und die Modellpfade und repariere die Ansicht, damit die Auswahl wieder lädt.
+
+## Assistent · 2026-10-26T11:56:32.810Z
+
+Die Ursache ist gefunden: Dein bisheriger Tab auf Port 8770 zeigt die neue Auswahl, aber dahinter lief noch der alte Server ohne die neuen Modellpfade. Ich aktualisiere genau diesen Server, damit dein vorhandener Tab wieder funktioniert.
+
+## Assistent · 2026-10-26T11:59:15.526Z
+
+Repariert. Auf deinem bisherigen Tab lief noch der alte Server.
+
+**R01–R04 laden jetzt unter [derselben Adresse](http://127.0.0.1:8770/)**. R04 und den Wechsel zu R01 habe ich geprüft.
+
+## Nutzer · 2026-10-26T12:03:51.706Z
+
+## My request:
+Ok R04 gefällt mir sehr
+
+## Assistent · 2026-10-26T12:04:04.305Z
+
+Ich halte R04 als freigegebene Modellfassung für die Bedienpulte fest.
+
+## Assistent · 2026-10-26T12:04:29.731Z
+
+**R04 ist als Gestaltung für die Bedienpulte freigegeben und dokumentiert.** Die älteren Varianten bleiben zum Vergleich erhalten.
+
+## Nutzer · 2026-10-26T12:18:41.940Z
+
+## My request:
+Kannst du mal alle Pulte so umsetzen und das Hauptpult dann einfach breiter machen
+
+## Assistent · 2026-10-26T12:18:59.005Z
+
+Ich übernehme R04 für die Bedienpulte im Spiel und gestalte das Hauptpult als breitere Variante. Dabei prüfe ich die vorhandenen Pultfunktionen und Raumpläne, damit Anzeigen, Bedienpunkte und gespeicherte Platzierungen erhalten bleiben.
+
+## Assistent · 2026-10-26T12:21:32.052Z
+
+Die vorhandenen Pulte sind noch Planungsboxen. Ich ersetze ihre sichtbaren Gehäuse durch R04 und baue für das Hauptpult eine breitere Fassung, bei der die seitlichen Metallrahmen ihre Stärke behalten. Die bestehenden Funktionen bleiben über dieselben Pultkennungen erreichbar.
+
+## Assistent · 2026-10-26T12:28:05.115Z
+
+R04 ist jetzt an die fünf Funktionspulte und das breitere Hauptpult angebunden. Die Gehäuse tragen ihre jeweiligen Beschriftungen; auf den Displays stehen echte Zustandsdaten statt der Zahlen aus der Modellvorschau. Als Nächstes prüfe ich Darstellung, Kollisionen und das Öffnen der vorhandenen Pultoberflächen im Spiel.
+
+## Assistent · 2026-10-26T12:31:55.576Z
+
+Die erste Funktionsprüfung ist durchgelaufen. Bei der Bildkontrolle waren die neuen Displaytexte allerdings viel zu groß, und die Prüfkameras blickten zu weit nach oben. Ich korrigiere beides und prüfe danach erneut, bevor ich den Spielbuild austausche.
+
+## Assistent · 2026-10-26T12:37:58.046Z
+
+Die korrigierten Spielansichten sehen jetzt stimmig aus: fünf normale R04-Pulte und ein 4,4 Meter breites Hauptpult. Beschriftungen und Zustandsanzeigen sind lesbar. Die abschließende Prüfung der Bedienpunkte läuft; zusätzlich prüfe ich das Strompult mit den vorhandenen Speicher- und Versorgungsfunktionen.
+
+## Assistent · 2026-10-26T12:39:30.387Z
+
+Alle sechs Pulte und ihre Bedienpunkte sind geprüft. Auch die bestehende Strompultprüfung ist mit 477 Prüfungen durchgelaufen. Ich prüfe noch den Raumplaner, weil die neuen Gehäuse beim Verschieben und Drehen korrekt mitgehen müssen. Danach übernehme ich den Build als normale Spielversion.
+
+## Assistent · 2026-10-26T12:42:02.284Z
+
+Auch der Raumplaner ist durchgelaufen. Insgesamt sind 1.237 Prüfungen bestanden. Der neue Build liegt jetzt als normale Spielversion bereit; die vorherige Version ist separat gesichert. Ich dokumentiere noch die Änderungen und den tatsächlichen Prüfstand.
+
+## Assistent · 2026-10-26T12:43:43.439Z
+
+Umgesetzt: **fünf R04-Bedienpulte** und ein **4,4 m breites Hauptpult**. Die bestehenden Funktionen bleiben erhalten.
+
+Normaler Spielbuild aktualisiert, Vorgänger gesichert. **1.237 Prüfungen bestanden.**
+
+![R04-Hauptpult im Spiel](C:/Users/achim.dannecker/source/repos/SpaceMinerCodex/docs/Pruefungen/Touchpulte-R04-Spielintegration-2026-10-26/main.png)
+
+## Nutzer · 2026-10-26T12:51:06.949Z
+
+## My request:
+Ok kannst du das Spiel starten ich möchte die Sachen positionieren und dann anschauen
+
+## Assistent · 2026-10-26T12:51:20.889Z
+
+Ich starte die aktuelle Spielversion, damit du die Pulte positionieren und anschauen kannst.
+
+## Assistent · 2026-10-26T12:51:45.193Z
+
+Das Spiel ist gestartet. Mit **F7** öffnest du den Raumplaner zum Positionieren der Pulte.
+
+## Nutzer · 2026-10-26T12:56:22.312Z
+
+## My request:
+Sehr gut mache mal die Beleuchtung besser und Adaptiv, d.h. mache sie erst an wenn ich in einen Raum gehe ansonsten eher gedämmt wir mössen JA strom sparen....
+
+## Assistent · 2026-10-26T12:56:38.164Z
+
+Ich passe die Innenbeleuchtung so an, dass unbesuchte Räume gedimmt bleiben und beim Betreten sanft auf Arbeitslicht wechseln. Dabei prüfe ich auch, wie sich der Lichtbedarf in der bestehenden Strombilanz berücksichtigen lässt.
+
+## Assistent · 2026-10-26T13:00:57.351Z
+
+Das bisherige Licht richtet sich vor allem nach der Kameranähe. Ich stelle es auf Aufenthaltsbereiche um: besuchte Räume bekommen warmes Arbeitslicht, leere Räume nur schwaches Orientierungslicht – mit weichem Nachdimmen beim Verlassen.
+
+Für die Strombilanz teile ich den bisherigen pauschalen Stationssystembedarf vorläufig in System- und Lichtbedarf auf. Das ist ein dokumentierter Spielwert, keine technisch ausgelegte Lampenleistung. Dein laufendes Spiel bleibt während der Arbeiten geöffnet, damit du deine Platzierungen speichern kannst.
+
+## Nutzer · 2026-10-26T13:01:24.878Z
+
+Frage: Kann ich dein laufendes Spiel nach dem Bau der Beleuchtungsversion schließen und neu starten? Bitte speichere vorher deine Raumplatzierungen im F7-Raumplaner.
+Antwort: Ja, Platzierungen sind gespeichert
+
+## Assistent · 2026-10-26T13:07:43.762Z
+
+Die Beleuchtung ist eingebaut. Beim ersten Test hat eine bestehende Schutzregel den neuen Prüfmodus vom aktiven Stationsbetrieb ausgeschlossen. Ich ergänze diese Freigabe und prüfe dann Raumwechsel, Dimmen und die Stromanzeige im tatsächlich laufenden Versorgungssystem.
+
+## Assistent · 2026-10-26T13:12:11.788Z
+
+Die Raumumschaltung und die Stromabrechnung funktionieren: Im Test fordert die leere Station weniger Lichtleistung an, und beim Betreten der Werkstatt bleibt die Zentrale gedimmt. Das Arbeitslicht wirkt auf den Spielbildern noch etwas zu dunkel. Ich helle die besuchten Räume gezielt auf; danach starte ich die neue Version mit deinen gespeicherten Platzierungen.
+
+## Assistent · 2026-10-26T13:20:34.981Z
+
+Die Strom- und Speicherprüfung ist bestanden. Beim gezielten Abschalten eines Raums war die sichtbare Lichtaktualisierung noch verzögert. Ich kopple sie direkt an den Stromschalter, damit getrennte Räume sofort dunkel werden.
+
+## Assistent · 2026-10-26T13:26:25.295Z
+
+Die Endfassung ist geprüft: 16 Beleuchtungsprüfungen und 477 Strom-/Speicherprüfungen sind bestanden. Besuchte Räume werden sanft heller, leere Räume dimmen zurück, und getrennte Stromkreise schalten das Licht sofort ab. Ich übernehme die Version jetzt und starte das Spiel neu.
+
+## Assistent · 2026-10-26T13:28:50.669Z
+
+Das Spiel ist mit der neuen Beleuchtung neu gestartet.
+
+- Besuchte Räume werden sanft heller.
+- Leere Räume dimmen auf 12 % zurück.
+- Der Lichtbedarf zählt zur Strombilanz.
+
+**493 Prüfungen bestanden. Deine gespeicherten Platzierungen sind unverändert.**

@@ -70,6 +70,8 @@ namespace SpaceMiner
             {
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
                 var args = Environment.GetCommandLineArgs();
+                if(Array.IndexOf(args,"-adaptiveLightingCheck")>=0)return Path.GetFullPath("Logs/AdaptiveLighting/settings/player-settings.json");
+                if(Array.IndexOf(args,"-touchConsoleCheck")>=0)return Path.GetFullPath("Logs/TouchConsole/settings/player-settings.json");
                 if (Array.IndexOf(args, "-miraQuestPreview") >= 0)
                     return Path.GetFullPath("Logs/MiraQuestPreview/settings/player-settings.json");
                 if (Array.IndexOf(args, "-miraDialogueIntegrationCheck") >= 0 || Array.IndexOf(args, "-miraDialogueCheck") >= 0 || Array.IndexOf(args, "-miraModelsCheck") >= 0

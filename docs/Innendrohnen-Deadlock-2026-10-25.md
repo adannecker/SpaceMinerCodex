@@ -1,5 +1,8 @@
 # Innendrohnen: Blockaden an Wechselzonen
 
+**Ergänzung26.10.2026:** Der I75-R03-Integrationstest fand eine weitere Blockade beim Übergang von freier Navigation zur Spurführung: Ein ohne Zulassung bereits innerhalb der Zone stehender Akteur darf zuerst räumen, bevor FIFO fortgesetzt wird. Neuer Build und vollständiger Mehr-Runden-Lauf erfolgreich. [Spielintegration und Prüfgrenzen](Innendrohne-I75-R03-Spielintegration-2026-10-26.md). Die folgenden905 Checks/Build16 beschreiben den damaligen Stand.
+
+
 Nutzermeldung vom 25.10.2026: mehrere I75 stehen im Ringgang, eine Drohne quer im Fahrweg. [Originalbild](Art/Station/Innendrohnen-Deadlock-Nutzermeldung-2026-10-25.png). Build14 hatte lokale Abstands-/Ausweichregeln ohne zentrale Vergabe der Konfliktbereiche. Sein bestandener Ein-Runden-Lauf war kein ausreichender Nachweis für dauerhaften Verkehrsfluss. Das genaue zeitliche Entstehen der abgebildeten Situation wurde nicht aufgezeichnet.
 
 ## Korrektur und Regeln

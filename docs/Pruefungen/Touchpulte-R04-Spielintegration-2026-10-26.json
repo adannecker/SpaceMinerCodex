@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-26",
+  "unity": "6000.6.5f1",
+  "build": "Development, existing AsteroidBelt scene, no Setup",
+  "buildLog": "Logs/console-r04-game-acceptance-build.log",
+  "buildExit": 0,
+  "tests": {
+    "consoles": {
+      "checks": 37,
+      "passed": true
+    },
+    "power": {
+      "checks": 477,
+      "passed": true
+    },
+    "planner": {
+      "checks": 723,
+      "passed": true
+    }
+  },
+  "totalChecks": 1237,
+  "playerFilesVerified": 247,
+  "deployment": "Builds/Windows",
+  "previousPlayer": "Builds/Windows-before-touch-console-r04-20261026",
+  "model": "R04 clean housing, 23772 triangles, 3 mesh/material groups",
+  "widthM": {
+    "standard": 1.5,
+    "main": 4.4
+  },
+  "limitations": [
+    "No Release/headset/FPS or natural full campaign acceptance",
+    "World screens show compact genuine summaries, not complete duplicated interactive UI",
+    "Old plan reservation sizes retained; physical hardware dimensions fixed",
+    "Early technically passing screenshot run had giant text; corrected and rebuilt before final acceptance"
+  ],
+  "picturesVisuallyChecked": [
+    "main.png",
+    "Power.png"
+  ],
+  "noCommitPush": true
+}

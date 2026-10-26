@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-26",
+  "status": "complete_verified",
+  "source": "C:\\temp\\SpaceMinerCodex",
+  "target": "C:\\temp\\SpaceMinerCodex",
+  "blocker": null,
+  "original_manifest_files_hashed": 7039,
+  "head": "659b514f79878df772dbc73a1bea130b1594ea7c",
+  "root_still_original_physical_directory": false,
+  "target_not_created": false,
+  "files_not_deleted": true,
+  "external_launcher": "C:\\temp\\SpaceMiner-Projekt-umziehen.cmd",
+  "helper_copies_sha256_identical": true,
+  "helpers": {
+    "MoveProjectRoot.ps1": "7B81256C01EACED1AE29EC0AFFA1C2FDD91E379E68DD70A1EDD31942BBE435A7",
+    "NativeMove.ps1": "4B605F436FE80C2218EC72C8DF3C93519DD23041D7F35A201DEBB762552E4270",
+    "VerifyProjectRootMove.py": "942B4BBFC229DF3C6F948E77FE2E9CD888441E0BDE82AD6F490A5654EC2124AD"
+  },
+  "checks": [
+    "PowerShell parser passed",
+    "Python helper syntax passed",
+    "External CheckOnly completed: source exists, target absent, app still running",
+    "All422 UI source/meta and UI proof artifact hashes remain verified"
+  ],
+  "not_run": "No new Unity build or graphical test in this publication turn; earlier test artifacts revalidated separately.",
+  "viewers": "Six local model-viewer services restarted at original revision/ports after attempts; no chat processes or handles forcibly closed.",
+  "noCommitPush": true,
+  "physicalRoot": "C:\\temp\\SpaceMinerCodex",
+  "compatibilityJunction": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex",
+  "filesSha256Identical": 7044,
+  "workingTreePreserved": true,
+  "gitConnectivityPassed": true,
+  "actual_receipt": "Projektordner-Umzug-2026-10-26/after.json"
+}

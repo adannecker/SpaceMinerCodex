@@ -1,0 +1,23 @@
+[
+  {
+    "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\InterfaceDevelopment",
+    "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\Windows",
+    "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\Windows-before-ui-chrome-20261026-161938",
+    "files": 247,
+    "allSha256Identical": true
+  },
+  {
+    "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\InterfaceRelease",
+    "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\WindowsRelease",
+    "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\WindowsRelease-before-ui-chrome-20261026-161938",
+    "files": 156,
+    "allSha256Identical": true
+  },
+  {
+    "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\InterfaceStudio",
+    "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio",
+    "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio-before-ui-chrome-20261026-161938",
+    "files": 247,
+    "allSha256Identical": true
+  }
+]

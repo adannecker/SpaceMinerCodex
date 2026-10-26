@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "physicalRoot": "C:\\temp\\SpaceMinerCodex",
+  "filesSha256Identical": 7044,
+  "head": "659b514f79878df772dbc73a1bea130b1594ea7c",
+  "branch": "main",
+  "workingTreePreserved": true,
+  "gitConnectivityPassed": true,
+  "scope": "Before subsequent explicit root documentation updates; ignored folders included in directory rename."
+}

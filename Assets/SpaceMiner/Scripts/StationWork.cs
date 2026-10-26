@@ -62,6 +62,7 @@ namespace SpaceMiner
     {
         public float capacityKwh=24,storedKwh=12;
         [NonSerialized] public float GenerationKw,ConsumptionKw,ChargeAllocationKw;
+        [NonSerialized] public float StorageFlowKw,CurtailedKw;
         public bool JobPowered {get;private set;}
         public bool LifePowered {get;private set;}
         public void Advance(float seconds,float generation,float essentials,float work,float charging)
@@ -74,7 +75,13 @@ namespace SpaceMiner
             if(!JobPowered){available+=allocatedWork;allocatedWork=0;}
             ChargeAllocationKw=Math.Min(available,charging);
             ConsumptionKw=basic+allocatedWork+ChargeAllocationKw;
-            storedKwh=Math.Max(0,Math.Min(capacityKwh,storedKwh+(GenerationKw-ConsumptionKw)*seconds/3600));
+            float surplus=GenerationKw-ConsumptionKw;
+            // A finite battery cannot absorb an arbitrarily large aligned PV array.
+            // 0.5C charge limit; retain the existing8kW discharge limit above.
+            float space=seconds>0?(capacityKwh-storedKwh)*3600/seconds:storedKwh<capacityKwh?float.MaxValue:0;
+            StorageFlowKw=surplus>0?Math.Min(surplus,Math.Min(capacityKwh*.5f,space)):surplus;
+            CurtailedKw=Math.Max(0,surplus-StorageFlowKw);
+            storedKwh=Math.Max(0,Math.Min(capacityKwh,storedKwh+StorageFlowKw*seconds/3600));
         }
         public bool Valid=>ResourceContainer.Finite(capacityKwh)&&capacityKwh>0&&ResourceContainer.Finite(storedKwh)&&storedKwh>=0&&storedKwh<=capacityKwh;
     }

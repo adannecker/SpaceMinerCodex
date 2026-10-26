@@ -1,0 +1,147 @@
+{
+  "date": "2026-10-26",
+  "scope": "Laptop scoped context refresh; prior export-verification-2026-10-26.json belongs to the other computer and is retained",
+  "archives": [
+    {
+      "file": "01-Unity-Spiel.md",
+      "sha256": "184d6ee768328fee9d44f9bf15dd64e019c37881ffb035e3ba87437055684ac7",
+      "visible_messages": 88
+    },
+    {
+      "file": "02-Asteroiden.md",
+      "sha256": "9e586bb37ca0acc5708a7e2280c2d9ecbdc790dad70d73689a0cafd361cd8346",
+      "visible_messages": 18
+    },
+    {
+      "file": "03-Story-und-Mira.md",
+      "sha256": "f3738a0311997c9106780342e0c8d06443194dc3d0c30c79380fc9e8fbfe726a",
+      "visible_messages": 37
+    },
+    {
+      "file": "04-GitHub.md",
+      "sha256": "4ab7538027734f30230a6620b1556266fd4e64dc89ad1b4976462975c1e119e5",
+      "visible_messages": 59
+    },
+    {
+      "file": "05-MainDev.md",
+      "sha256": "186c29accf9f60e228f34c9dde162fa561d7b832599ab73417c49f6d8a1ebfbf",
+      "visible_messages": 220
+    },
+    {
+      "file": "06-Asteroidenvarianten.md",
+      "sha256": "d2526be4244a796d06ffc9d3de7ab9e8133d51d49e36a62a1512535de2d72662",
+      "visible_messages": 11
+    },
+    {
+      "file": "07-Story-und-Mira.md",
+      "sha256": "e7d725c5637f9d5d6f4e6069d0e40b7bc34c8b118bc51a4dd1b2fbbc0e6a246d",
+      "visible_messages": 393
+    },
+    {
+      "file": "08-Settings-UI.md",
+      "sha256": "e50d875802acb6d5fb0bfcf77e1e46e2303eb7dbb8ded915ec1cb9110e939b83",
+      "visible_messages": 68
+    },
+    {
+      "file": "09-Sound-und-Effekte.md",
+      "sha256": "090ff27166fa5cb717b3ec4bce2a2464a2184b483dd045f1d7741e4a1e02c2ce",
+      "visible_messages": 40
+    },
+    {
+      "file": "10-TechTree.md",
+      "sha256": "7315f97539a15ea0f87982895d7836048f12ab9befbfac78c8d63751721317b3",
+      "visible_messages": 98
+    },
+    {
+      "file": "11-Vehicels.md",
+      "sha256": "08e15acd0296864ea7526cb0c04abd119a8c2f5ebf2d5618117ab916ac9767b6",
+      "visible_messages": 29
+    },
+    {
+      "file": "13-Cloud-Sound-und-Effekte.md",
+      "sha256": "c169aaa4c4fc6065da6c66231121ab911caed22db9cf2ef459d291b3336b5433",
+      "visible_messages": 23
+    },
+    {
+      "file": "13-MainDev-Desktop.md",
+      "sha256": "7d212668aaf1726fe571dee9fe027518fc52b6b888c8e6ad24902c2e65b3c27e",
+      "visible_messages": 596
+    },
+    {
+      "file": "14-Cloud-Techtree.md",
+      "sha256": "053caa0990440da6e417cf2b5cb1ab8ab26d4dc6698c9ca803ef2b13c33d59e9",
+      "visible_messages": 8
+    },
+    {
+      "file": "14-GitHub-Desktop.md",
+      "sha256": "0a8050ee22ffb2f3cc5444aad42bb39078777d3384a740b46f912c92a65fbc83",
+      "visible_messages": 13
+    },
+    {
+      "file": "15-Asteroidenvarianten-Desktop.md",
+      "sha256": "ce8e919ed2c5aed40cd1f72f8db60cbc1c8f706a2460729667afd0cc34128b8e",
+      "visible_messages": 22
+    },
+    {
+      "file": "16-Story-und-Mira-Desktop.md",
+      "sha256": "b5f03fd71eada2188a86686dbd89ed71dc8fc69044578c21327b92789eb2210e",
+      "visible_messages": 210
+    },
+    {
+      "file": "17-Settings-UI-Desktop.md",
+      "sha256": "12e7ebb4a9109ad4cdb99585954099afa6b765c5908ddebe24bc5c4a846e2a12",
+      "visible_messages": 24
+    },
+    {
+      "file": "18-Sound-und-Effekte-Desktop.md",
+      "sha256": "a22469a810ccf76c1d3f119cb7e2f03b233c045c9ae7d4b883bff46d1dc57dab",
+      "visible_messages": 9
+    },
+    {
+      "file": "19-TechTree-Desktop.md",
+      "sha256": "0765b0b5fb652dc4705b08e41a1765dc92427a6cccb869fafcfbb31a2f3e704e",
+      "visible_messages": 447
+    },
+    {
+      "file": "20-Vehicels-Desktop.md",
+      "sha256": "518bbef4b92615f9b5e1df7c5493ba8baf49247f38333bd21ca65c66ace2bc84",
+      "visible_messages": 204
+    },
+    {
+      "file": "21-Ideenbacklog-Desktop.md",
+      "sha256": "ce5b2d9df83e6f9c7ca67a23bcf8aafea5656aa7632a6a34935b1ef5b15f2c26",
+      "visible_messages": 19
+    },
+    {
+      "file": "22-Ideenbacklog.md",
+      "sha256": "312176bec3eb0fab8bd5de81f133e417234f013dffe6bd9a7b2931e810848f4e",
+      "visible_messages": 6
+    },
+    {
+      "file": "23-Intro-Cinematic-Entwurf.md",
+      "sha256": "6e88bf527a85e509dfa3be35792b88ef133563b3a1cc5239ee8f8998d3163463",
+      "visible_messages": 10
+    },
+    {
+      "file": "24-Station-und-Ausbau.md",
+      "sha256": "1d0168338d1a5fbe567d6a648ed0694609b353f5ea54b6c1a37be9059487a7dc",
+      "visible_messages": 3
+    },
+    {
+      "file": "25-Energie-und-Versorgung.md",
+      "sha256": "a2ce0b5bbb658d5a43de894f2ba4f74456aa346cba637c832be34449600f2d02",
+      "visible_messages": 3
+    },
+    {
+      "file": "26-3D-Modelle-und-Texturen.md",
+      "sha256": "8e1bb5cdbf2ebc7f84cd4449ee9559ab643900a6756120f18677f5aed0075a1b",
+      "visible_messages": 2
+    }
+  ],
+  "preserved_prefix_count": 21,
+  "changed_prefixes": [],
+  "cloud_refetched": false,
+  "raw_sessions_committed": false,
+  "unreachable_source_count": 1,
+  "review_boundaries_in_register": true
+}

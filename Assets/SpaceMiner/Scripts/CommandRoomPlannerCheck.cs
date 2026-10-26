@@ -83,12 +83,15 @@ namespace SpaceMiner
                 var solids = root.GetComponentsInChildren<BoxCollider>().Where(c => c.enabled && !c.isTrigger).ToArray();
                 Require(solids.Length == 1, "one simple solid block collider / " + item.id);
                 var solid = solids[0];
-                Require(Close(Vector3.Scale(solid.size, solid.transform.lossyScale), item.size),
+                var console=root.GetComponentInChildren<TouchConsoleVisual>();
+                var expectedSize=console!=null?new Vector3(console.Width,TouchConsoleVisual.Height,TouchConsoleVisual.Depth):item.size;
+                Require(Close(Vector3.Scale(solid.size, solid.transform.lossyScale), expectedSize),
                     "actual collider follows all three planned dimensions / " + item.id);
-                Require(Close(solid.bounds.center, World(item.position + Vector3.up * item.size.y * .5f)),
+                var expectedCentre=console!=null?console.transform.TransformPoint(Vector3.up*TouchConsoleVisual.Height*.5f):World(item.position + Vector3.up * item.size.y * .5f);
+                Require(Close(solid.bounds.center, expectedCentre),
                     "solid block remains supported by floor / " + item.id);
                 var body = solid.GetComponent<MeshRenderer>();
-                Require(body != null && body.enabled, "movable block remains individually rendered / " + item.id);
+                Require(body != null && (console!=null?console.GetComponentsInChildren<MeshRenderer>().Any(r=>r.enabled):body.enabled), "movable block remains individually rendered / " + item.id);
                 var displays = root.GetComponentsInChildren<StationDisplay>();
                 Require(displays.Length == 1 && displays[0].Caption == item.label, "front display names the element / " + item.id);
                 var display = displays[0];

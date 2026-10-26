@@ -1,0 +1,12 @@
+{
+  "source": "Design\\Models\\OperatorArm\\Revision-R03\\OperatorArm-R03.blend",
+  "sourceGLBSha256": "d7a26abd9cb272e190f8776159b83cc0a514aa371f537986427039b2ddb01c52",
+  "originalVertices": 956639,
+  "originalTriangles": 1876704,
+  "addedObjects": 15,
+  "rigged": false,
+  "method": "Additive surface-conforming plates; original vertices, topology, UVs and material retained.",
+  "export": "OperatorArm-R04-Preview.glb",
+  "exportedTriangles": 1878724,
+  "sourceHashVerified": true
+}

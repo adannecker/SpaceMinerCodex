@@ -1,0 +1,63 @@
+{
+    "gpu": "NVIDIA RTX A500 Laptop GPU",
+    "cpu": "Intel(R) Core(TM) Ultra 7 155H",
+    "width": 1600,
+    "height": 1000,
+    "conditions": "Synchronous offscreen render + one-pixel GPU readback; fixed camera; simulation paused. Comparison of rendering cost, NOT playable FPS or isolated GPU time.",
+    "samples": [
+        {
+            "view": "command",
+            "original": true,
+            "medianMs": 27.713499069213867,
+            "p95Ms": 30.438199996948242,
+            "batches": 0,
+            "triangles": 8740963,
+            "setPasses": 10145
+        },
+        {
+            "view": "command",
+            "original": false,
+            "medianMs": 27.034799575805664,
+            "p95Ms": 30.831199645996094,
+            "batches": 0,
+            "triangles": 10536389,
+            "setPasses": 4539
+        },
+        {
+            "view": "drone_bay",
+            "original": true,
+            "medianMs": 85.62129974365234,
+            "p95Ms": 126.60639953613281,
+            "batches": 0,
+            "triangles": 61216840,
+            "setPasses": 23908
+        },
+        {
+            "view": "drone_bay",
+            "original": false,
+            "medianMs": 86.7114028930664,
+            "p95Ms": 91.91380310058594,
+            "batches": 0,
+            "triangles": 68141602,
+            "setPasses": 10169
+        },
+        {
+            "view": "overview",
+            "original": true,
+            "medianMs": 127.64119720458984,
+            "p95Ms": 275.30010986328125,
+            "batches": 0,
+            "triangles": 84430098,
+            "setPasses": 27139
+        },
+        {
+            "view": "overview",
+            "original": false,
+            "medianMs": 64.98770141601563,
+            "p95Ms": 68.45829772949219,
+            "batches": 0,
+            "triangles": 60156679,
+            "setPasses": 11619
+        }
+    ]
+}

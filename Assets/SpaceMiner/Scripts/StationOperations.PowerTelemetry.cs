@@ -12,16 +12,19 @@ namespace SpaceMiner
         private void ObservePower(float seconds, float loss, float work, float charging)
         {
             if (telemetryState != State) { telemetryState = State; PowerHistory.Reset(); }
+            // Available generation is the plotted source metric; accepted storage
+            // flow and curtailed surplus are shown separately by the console.
             PowerHistory.Observe(seconds, State.power.GenerationKw, State.power.ConsumptionKw);
             powerConsumers.Clear();
             float scanner = Scenario.Scanner.Ready ? 0 : Scenario.Scanner.ChargePowerKw;
-            float basic = .53f + loss + scanner;
+            float basic = .35f + NonLightingSystemsKw + LightingDemandKw + loss + scanner;
             // Mirror the existing priority allocation; never charge energy a second time.
             float jobs = State.power.JobPowered ? work : 0;
             float basicActual = Mathf.Max(0, State.power.ConsumptionKw - jobs - State.power.ChargeAllocationKw);
             float ratio = basic > 0 ? Mathf.Clamp01(basicActual / basic) : 0;
             powerConsumers.Add(new StationPowerConsumer("life", "Lebenserhaltung", .35f, .35f * ratio));
-            powerConsumers.Add(new StationPowerConsumer("systems", "Stationssysteme", .18f, .18f * ratio));
+            powerConsumers.Add(new StationPowerConsumer("systems", "Stationssysteme", NonLightingSystemsKw, NonLightingSystemsKw * ratio));
+            powerConsumers.Add(new StationPowerConsumer("lighting", "Adaptive Innenbeleuchtung", LightingDemandKw, LightingDemandKw * ratio));
             if (loss > 0) powerConsumers.Add(new StationPowerConsumer("loss", "Havarieverluste", loss, loss * ratio));
             powerConsumers.Add(new StationPowerConsumer("scanner", "Scannerladung", scanner, scanner * ratio));
             powerConsumers.Add(new StationPowerConsumer("ice", "Eisannahme / Wasser", preparedIcePowerKw,

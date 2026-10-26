@@ -1,0 +1,851 @@
+I75 R03: Original boundary edges 2648; small planar caps 123; skin after thickness {'vertices': 21692, 'faces': 23499, 'boundaryEdges': 69, 'nonManifoldEdges': 350}
+I75 R03: EXPORT {"triangles": 87564, "objects": 60}
+INFO Draco mesh compression is available, use library at C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\work\AvatarTools\blender-4.5.14-windows-x64\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+11:53:51 | INFO: Starting glTF 2.0 export
+11:53:51 | INFO: Extracting primitive: Tool mount identification
+11:53:51 | INFO: Primitives created: 1
+11:53:51 | INFO: Extracting primitive: Side I75 -1
+11:53:51 | INFO: Primitives created: 1
+11:53:51 | INFO: Extracting primitive: Side systems -1
+11:53:51 | INFO: Primitives created: 1
+11:53:51 | INFO: Extracting primitive: Side utility -1
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Side service -1
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Side I75 1
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Side systems 1
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Side utility 1
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Side service 1
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Roof identification
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Roof unit
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: I75_V02_OriginalGeometry_WithUV
+11:53:52 | INFO: Primitives created: 5
+11:53:52 | INFO: Extracting primitive: Cube
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.001
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.002
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.003
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.001
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.004
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.002
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.003
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.005
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.006
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.007
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.008
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.009
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.004
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.005
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.006
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.007
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.010
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.008
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.009
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.010
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.011
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.011
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.012
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.013
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.014
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.015
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.016
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.012
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.013
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.014
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.017
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.018
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.015
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.016
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.017
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.018
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.019
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cylinder.020
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.019
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.020
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.021
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.022
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.023
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.024
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.025
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Extracting primitive: Cube.026
+11:53:52 | INFO: Primitives created: 1
+11:53:52 | INFO: Finished glTF 2.0 export in 0.621392011642456 s
+
+
+FBX export starting... 'C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Design\\Models\\IndoorDroneI75\\Surface-R03-2026-10-26\\I75_V02_Surface_R03.fbx'
+export finished in 0.3269 sec.
+I75 R03: RENDER 01-hero
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Read blend: "C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\Design\Models\IndoorDroneI75\Surface-R02-2026-10-26\I75_V02_Surface_R02.blend"
+Fra:1 Mem:47.43M (Peak 47.43M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_R03_OuterPanels
+Fra:1 Mem:47.44M (Peak 47.44M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing -1
+Fra:1 Mem:47.49M (Peak 47.49M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 underside
+Fra:1 Mem:47.54M (Peak 47.54M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.001
+Fra:1 Mem:47.55M (Peak 47.55M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing 1
+Fra:1 Mem:47.56M (Peak 47.56M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.002
+Fra:1 Mem:47.56M (Peak 47.56M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.003
+Fra:1 Mem:47.57M (Peak 47.57M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 rear
+Fra:1 Mem:47.63M (Peak 47.63M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 sealed rear equipment cover
+Fra:1 Mem:47.80M (Peak 47.80M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.001
+Fra:1 Mem:47.80M (Peak 47.80M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 fill
+Fra:1 Mem:48.32M (Peak 48.32M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.002
+Fra:1 Mem:48.33M (Peak 48.33M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener
+Fra:1 Mem:48.33M (Peak 48.33M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.002
+Fra:1 Mem:48.33M (Peak 48.33M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.003
+Fra:1 Mem:48.34M (Peak 48.34M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 key
+Fra:1 Mem:48.35M (Peak 48.35M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 front coupler mounting plate
+Fra:1 Mem:48.54M (Peak 48.54M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount octagonal frame
+Fra:1 Mem:52.46M (Peak 52.46M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Blind magnetic mating face
+Fra:1 Mem:52.80M (Peak 52.80M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Central locating register
+Fra:1 Mem:52.88M (Peak 52.88M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification
+Fra:1 Mem:52.93M (Peak 52.93M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 00
+Fra:1 Mem:53.00M (Peak 53.00M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 04
+Fra:1 Mem:53.00M (Peak 53.00M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 05
+Fra:1 Mem:53.01M (Peak 53.01M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 00
+Fra:1 Mem:53.74M (Peak 53.74M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 01
+Fra:1 Mem:53.74M (Peak 53.74M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount keyed alignment stop
+Fra:1 Mem:53.75M (Peak 53.75M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar
+Fra:1 Mem:53.83M (Peak 53.83M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility 1
+Fra:1 Mem:55.07M (Peak 55.07M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre
+Fra:1 Mem:55.37M (Peak 55.37M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass.001
+Fra:1 Mem:55.43M (Peak 55.43M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems 1
+Fra:1 Mem:55.64M (Peak 55.64M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule -1
+Fra:1 Mem:55.76M (Peak 55.76M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof plaque rule
+Fra:1 Mem:55.77M (Peak 55.77M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount identification
+Fra:1 Mem:55.66M (Peak 55.77M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 1
+Fra:1 Mem:55.69M (Peak 55.77M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 -1
+Fra:1 Mem:55.70M (Peak 55.77M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems -1
+Fra:1 Mem:55.80M (Peak 55.80M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility -1
+Fra:1 Mem:55.94M (Peak 55.94M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service -1
+Fra:1 Mem:54.04M (Peak 58.14M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:51.52M (Peak 58.14M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:51.52M (Peak 58.14M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:51.52M (Peak 58.14M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:51.52M (Peak 58.14M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.07 | Mem:0.03M, Peak:0.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.07 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.07 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.07 | Mem:3.79M, Peak:3.79M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.08 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.09 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.09 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.09 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.09 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.09 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.09 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.09 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.10 | Mem:10.21M, Peak:10.29M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.10 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.10 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.10 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.10 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:01.29 | Remaining:00:27.30 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:04.69 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:04.69 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R03-2026-10-26\01-hero.png'
+Time: 01:05.74 (Saving: 00:01.01)
+
+I75 R03: RENDER 02-front-tool-mount
+Fra:1 Mem:48.25M (Peak 48.25M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_R03_OuterPanels
+Fra:1 Mem:48.26M (Peak 48.26M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing -1
+Fra:1 Mem:48.34M (Peak 48.34M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 underside
+Fra:1 Mem:48.37M (Peak 48.37M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.001
+Fra:1 Mem:48.37M (Peak 48.37M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 rear
+Fra:1 Mem:48.38M (Peak 48.38M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing 1
+Fra:1 Mem:48.38M (Peak 48.38M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.002
+Fra:1 Mem:48.38M (Peak 48.38M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.003
+Fra:1 Mem:48.60M (Peak 48.60M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 fill
+Fra:1 Mem:48.60M (Peak 48.60M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 closed rear lower apron
+Fra:1 Mem:49.11M (Peak 49.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 key
+Fra:1 Mem:49.13M (Peak 49.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof unit
+Fra:1 Mem:49.13M (Peak 49.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.001
+Fra:1 Mem:49.37M (Peak 49.37M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification
+Fra:1 Mem:49.37M (Peak 49.37M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener
+Fra:1 Mem:49.39M (Peak 49.39M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.003
+Fra:1 Mem:49.41M (Peak 49.41M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 front coupler mounting plate
+Fra:1 Mem:49.42M (Peak 49.42M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount octagonal frame
+Fra:1 Mem:53.19M (Peak 53.19M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount isolator
+Fra:1 Mem:53.29M (Peak 53.29M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Blind magnetic mating face
+Fra:1 Mem:53.31M (Peak 53.31M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Central locating register
+Fra:1 Mem:53.32M (Peak 53.32M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 02
+Fra:1 Mem:53.80M (Peak 53.80M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 04
+Fra:1 Mem:53.81M (Peak 53.81M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 01
+Fra:1 Mem:53.81M (Peak 53.81M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 02
+Fra:1 Mem:53.81M (Peak 53.81M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount keyed alignment stop
+Fra:1 Mem:53.81M (Peak 53.81M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Front optical assembly
+Fra:1 Mem:55.02M (Peak 55.02M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar
+Fra:1 Mem:55.06M (Peak 55.06M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar.001
+Fra:1 Mem:55.28M (Peak 55.28M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass.001
+Fra:1 Mem:54.93M (Peak 55.28M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre.001
+Fra:1 Mem:55.36M (Peak 55.36M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility 1
+Fra:1 Mem:55.71M (Peak 55.71M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp
+Fra:1 Mem:55.87M (Peak 55.87M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp.001
+Fra:1 Mem:55.92M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate -1
+Fra:1 Mem:55.92M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule -1
+Fra:1 Mem:53.31M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate 1
+Fra:1 Mem:53.32M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule 1
+Fra:1 Mem:53.32M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification plaque
+Fra:1 Mem:53.33M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof plaque rule
+Fra:1 Mem:53.55M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 -1
+Fra:1 Mem:53.83M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 1
+Fra:1 Mem:54.54M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service -1
+Fra:1 Mem:54.54M (Peak 55.92M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility -1
+Fra:1 Mem:54.04M (Peak 57.59M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.06 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.06 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.06 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.06 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.06 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.06 | Mem:0.03M, Peak:0.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.07 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.07 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.07 | Mem:3.79M, Peak:3.79M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.08 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.08 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.08 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.08 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.08 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.08 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.08 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.09 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.09 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.09 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.09 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.09 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.09 | Mem:10.21M, Peak:10.29M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.09 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.09 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.09 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.09 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:01.92 | Remaining:00:42.19 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:34.46 | Remaining:00:14.15 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 17/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:22.13 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:22.13 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R03-2026-10-26\02-front-tool-mount.png'
+Time: 01:22.89 (Saving: 00:00.73)
+
+I75 R03: RENDER 03-right-side
+Fra:1 Mem:48.25M (Peak 48.25M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_R03_OuterPanels
+Fra:1 Mem:48.57M (Peak 48.57M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 closed removable belly pan
+Fra:1 Mem:48.57M (Peak 48.57M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing -1
+Fra:1 Mem:48.57M (Peak 48.57M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw
+Fra:1 Mem:48.58M (Peak 48.58M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.001
+Fra:1 Mem:49.09M (Peak 49.09M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 rear
+Fra:1 Mem:52.84M (Peak 52.84M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 fill
+Fra:1 Mem:52.87M (Peak 52.87M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 key
+Fra:1 Mem:52.94M (Peak 52.94M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof unit
+Fra:1 Mem:54.54M (Peak 54.54M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.002
+Fra:1 Mem:54.78M (Peak 54.78M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification
+Fra:1 Mem:54.80M (Peak 54.80M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.003
+Fra:1 Mem:54.80M (Peak 54.80M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 closed rear lower apron
+Fra:1 Mem:54.81M (Peak 54.81M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel
+Fra:1 Mem:54.81M (Peak 54.81M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.001
+Fra:1 Mem:54.82M (Peak 54.82M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener
+Fra:1 Mem:54.83M (Peak 54.83M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.001
+Fra:1 Mem:54.68M (Peak 54.83M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.002
+Fra:1 Mem:54.79M (Peak 54.83M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 front coupler mounting plate
+Fra:1 Mem:55.26M (Peak 55.26M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount octagonal frame
+Fra:1 Mem:55.28M (Peak 55.28M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount isolator
+Fra:1 Mem:51.16M (Peak 55.28M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Blind magnetic mating face
+Fra:1 Mem:51.16M (Peak 55.28M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Central locating register
+Fra:1 Mem:51.18M (Peak 55.28M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 00
+Fra:1 Mem:51.21M (Peak 55.28M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service 1
+Fra:1 Mem:51.22M (Peak 55.28M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 01
+Fra:1 Mem:51.24M (Peak 55.28M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 02
+Fra:1 Mem:51.26M (Peak 55.28M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 04
+Fra:1 Mem:51.27M (Peak 55.28M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 05
+Fra:1 Mem:51.27M (Peak 55.28M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 00
+Fra:1 Mem:51.28M (Peak 55.28M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 01
+Fra:1 Mem:52.57M (Peak 55.28M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 02
+Fra:1 Mem:52.89M (Peak 55.28M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility 1
+Fra:1 Mem:53.10M (Peak 55.28M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount keyed alignment stop
+Fra:1 Mem:53.66M (Peak 55.28M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Front optical assembly
+Fra:1 Mem:53.67M (Peak 55.28M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar
+Fra:1 Mem:53.69M (Peak 55.28M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass
+Fra:1 Mem:53.49M (Peak 55.28M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar.001
+Fra:1 Mem:53.81M (Peak 55.28M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass.001
+Fra:1 Mem:53.82M (Peak 55.28M) | Time:00:00.10 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems 1
+Fra:1 Mem:53.84M (Peak 55.28M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp
+Fra:1 Mem:53.86M (Peak 55.28M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp.001
+Fra:1 Mem:54.07M (Peak 55.28M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate -1
+Fra:1 Mem:54.15M (Peak 55.28M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule -1
+Fra:1 Mem:54.15M (Peak 55.28M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate 1
+Fra:1 Mem:54.16M (Peak 55.28M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule 1
+Fra:1 Mem:54.16M (Peak 55.28M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification plaque
+Fra:1 Mem:54.16M (Peak 55.28M) | Time:00:00.11 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof plaque rule
+Fra:1 Mem:54.17M (Peak 55.28M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount identification
+Fra:1 Mem:54.21M (Peak 55.28M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service -1
+Fra:1 Mem:54.45M (Peak 55.28M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 -1
+Fra:1 Mem:54.65M (Peak 55.28M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility -1
+Fra:1 Mem:54.65M (Peak 55.28M) | Time:00:00.12 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems -1
+Fra:1 Mem:54.04M (Peak 57.59M) | Time:00:00.14 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.15 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.15 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.16 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.16 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.16 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.16 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.17 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.17 | Mem:0.03M, Peak:0.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.17 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.17 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.17 | Mem:3.79M, Peak:3.79M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.20 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.20 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.21 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.21 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.21 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.21 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.21 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.21 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.21 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.22 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.22 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.22 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.22 | Mem:10.21M, Peak:10.29M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.22 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.22 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.22 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.22 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:01.97 | Remaining:00:40.25 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:28.53 | Remaining:00:11.65 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 17/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:03.15 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:03.15 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R03-2026-10-26\03-right-side.png'
+Time: 01:03.66 (Saving: 00:00.49)
+
+I75 R03: RENDER 04-left-side
+Fra:1 Mem:48.25M (Peak 48.25M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_R03_OuterPanels
+Fra:1 Mem:48.26M (Peak 48.26M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing -1
+Fra:1 Mem:48.33M (Peak 48.33M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 underside
+Fra:1 Mem:48.57M (Peak 48.57M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw
+Fra:1 Mem:48.58M (Peak 48.58M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing 1
+Fra:1 Mem:49.10M (Peak 49.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 rear
+Fra:1 Mem:49.10M (Peak 49.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 fill
+Fra:1 Mem:49.10M (Peak 49.10M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 key
+Fra:1 Mem:49.11M (Peak 49.11M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 sealed rear equipment cover
+Fra:1 Mem:49.12M (Peak 49.12M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel
+Fra:1 Mem:49.12M (Peak 49.12M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.001
+Fra:1 Mem:49.13M (Peak 49.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.002
+Fra:1 Mem:49.38M (Peak 49.38M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification
+Fra:1 Mem:49.39M (Peak 49.39M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.002
+Fra:1 Mem:49.39M (Peak 49.39M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.003
+Fra:1 Mem:49.39M (Peak 49.39M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 front coupler mounting plate
+Fra:1 Mem:49.40M (Peak 49.40M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount octagonal frame
+Fra:1 Mem:49.44M (Peak 49.44M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service 1
+Fra:1 Mem:53.23M (Peak 53.23M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Blind magnetic mating face
+Fra:1 Mem:53.61M (Peak 53.61M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility 1
+Fra:1 Mem:53.90M (Peak 53.90M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Central locating register
+Fra:1 Mem:53.93M (Peak 53.93M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems 1
+Fra:1 Mem:53.93M (Peak 53.93M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 03
+Fra:1 Mem:54.24M (Peak 54.24M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 1
+Fra:1 Mem:54.32M (Peak 54.32M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 04
+Fra:1 Mem:54.67M (Peak 54.67M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 05
+Fra:1 Mem:54.67M (Peak 54.67M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 01
+Fra:1 Mem:54.67M (Peak 54.67M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 02
+Fra:1 Mem:54.72M (Peak 54.72M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount keyed alignment stop
+Fra:1 Mem:54.72M (Peak 54.72M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Front optical assembly
+Fra:1 Mem:54.73M (Peak 54.73M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar
+Fra:1 Mem:54.76M (Peak 54.76M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass
+Fra:1 Mem:54.99M (Peak 54.99M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre
+Fra:1 Mem:55.07M (Peak 55.07M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar.001
+Fra:1 Mem:55.12M (Peak 55.12M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass.001
+Fra:1 Mem:55.15M (Peak 55.15M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp
+Fra:1 Mem:55.15M (Peak 55.15M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp.001
+Fra:1 Mem:55.85M (Peak 55.85M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems -1
+Fra:1 Mem:56.63M (Peak 56.63M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate -1
+Fra:1 Mem:56.63M (Peak 56.63M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule -1
+Fra:1 Mem:56.64M (Peak 56.64M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate 1
+Fra:1 Mem:56.64M (Peak 56.64M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification plaque
+Fra:1 Mem:56.92M (Peak 56.92M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 -1
+Fra:1 Mem:56.92M (Peak 56.92M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof plaque rule
+Fra:1 Mem:56.93M (Peak 56.93M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount identification
+Fra:1 Mem:54.04M (Peak 58.14M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:51.52M (Peak 58.14M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:51.52M (Peak 58.14M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:51.52M (Peak 58.14M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:51.52M (Peak 58.14M) | Time:00:00.09 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.09 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.09 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.09 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.09 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.09 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:51.61M (Peak 58.14M) | Time:00:00.10 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.10 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.10 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.10 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.10 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:51.62M (Peak 58.14M) | Time:00:00.10 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.10 | Mem:0.03M, Peak:0.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.10 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.11 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.11 | Mem:3.79M, Peak:3.79M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.12 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:52.72M (Peak 58.14M) | Time:00:00.12 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:56.23M (Peak 58.14M) | Time:00:00.13 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.13 | Mem:10.21M, Peak:10.29M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.13 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.13 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.13 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:56.24M (Peak 58.14M) | Time:00:00.13 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:01.67 | Remaining:00:35.29 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:23.89 | Remaining:00:09.78 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 17/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:00.52 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:00.52 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R03-2026-10-26\04-left-side.png'
+Time: 01:01.02 (Saving: 00:00.48)
+
+I75 R03: RENDER 05-roof
+Fra:1 Mem:48.25M (Peak 48.25M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_R03_OuterPanels
+Fra:1 Mem:48.27M (Peak 48.27M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing -1
+Fra:1 Mem:48.39M (Peak 48.39M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 underside
+Fra:1 Mem:48.39M (Peak 48.39M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.001
+Fra:1 Mem:48.40M (Peak 48.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing 1
+Fra:1 Mem:48.40M (Peak 48.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.002
+Fra:1 Mem:48.40M (Peak 48.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.003
+Fra:1 Mem:48.40M (Peak 48.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 rear
+Fra:1 Mem:48.61M (Peak 48.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 closed rear lower apron
+Fra:1 Mem:48.62M (Peak 48.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.002
+Fra:1 Mem:48.62M (Peak 48.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener
+Fra:1 Mem:49.14M (Peak 49.14M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 fill
+Fra:1 Mem:49.14M (Peak 49.14M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.001
+Fra:1 Mem:49.14M (Peak 49.14M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 key
+Fra:1 Mem:52.89M (Peak 52.89M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.002
+Fra:1 Mem:52.91M (Peak 52.91M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 front coupler mounting plate
+Fra:1 Mem:52.93M (Peak 52.93M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof unit
+Fra:1 Mem:52.98M (Peak 52.98M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount isolator
+Fra:1 Mem:53.29M (Peak 53.29M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification
+Fra:1 Mem:53.30M (Peak 53.30M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 02
+Fra:1 Mem:53.36M (Peak 53.36M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service 1
+Fra:1 Mem:53.37M (Peak 53.37M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 03
+Fra:1 Mem:53.48M (Peak 53.48M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 04
+Fra:1 Mem:53.48M (Peak 53.48M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 01
+Fra:1 Mem:54.15M (Peak 54.15M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 02
+Fra:1 Mem:54.15M (Peak 54.15M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility 1
+Fra:1 Mem:54.17M (Peak 54.17M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass
+Fra:1 Mem:54.17M (Peak 54.17M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre
+Fra:1 Mem:55.35M (Peak 55.35M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar.001
+Fra:1 Mem:55.42M (Peak 55.42M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass.001
+Fra:1 Mem:55.57M (Peak 55.57M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp
+Fra:1 Mem:55.70M (Peak 55.70M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems 1
+Fra:1 Mem:55.73M (Peak 55.73M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule -1
+Fra:1 Mem:55.74M (Peak 55.74M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate 1
+Fra:1 Mem:55.75M (Peak 55.75M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule 1
+Fra:1 Mem:55.87M (Peak 55.87M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 1
+Fra:1 Mem:55.88M (Peak 55.88M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof plaque rule
+Fra:1 Mem:55.98M (Peak 55.98M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount identification
+Fra:1 Mem:56.33M (Peak 56.33M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 -1
+Fra:1 Mem:57.16M (Peak 57.16M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems -1
+Fra:1 Mem:56.47M (Peak 57.16M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service -1
+Fra:1 Mem:52.89M (Peak 57.16M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility -1
+Fra:1 Mem:54.04M (Peak 57.59M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:51.52M (Peak 57.59M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.08 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.08 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.08 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.08 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.08 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:51.61M (Peak 57.59M) | Time:00:00.08 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:51.62M (Peak 57.59M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.08 | Mem:0.03M, Peak:0.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.08 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.08 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.08 | Mem:3.79M, Peak:3.79M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.10 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:52.72M (Peak 57.59M) | Time:00:00.10 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:56.23M (Peak 57.59M) | Time:00:00.11 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.11 | Mem:10.21M, Peak:10.29M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.11 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.11 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.11 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:56.24M (Peak 57.59M) | Time:00:00.11 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:02.17 | Remaining:00:47.24 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:25.42 | Remaining:00:10.42 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 17/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:00:58.06 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:00:58.06 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R03-2026-10-26\05-roof.png'
+Time: 00:58.71 (Saving: 00:00.63)
+
+I75 R03: RENDER 06-belly
+Fra:1 Mem:48.25M (Peak 48.25M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_R03_OuterPanels
+Fra:1 Mem:48.27M (Peak 48.27M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 underside
+Fra:1 Mem:48.41M (Peak 48.41M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw
+Fra:1 Mem:48.59M (Peak 48.59M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.001
+Fra:1 Mem:48.59M (Peak 48.59M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.003
+Fra:1 Mem:48.59M (Peak 48.59M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 rear
+Fra:1 Mem:48.59M (Peak 48.59M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 closed rear lower apron
+Fra:1 Mem:48.60M (Peak 48.60M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 sealed rear equipment cover
+Fra:1 Mem:48.60M (Peak 48.60M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel
+Fra:1 Mem:49.13M (Peak 49.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 fill
+Fra:1 Mem:49.13M (Peak 49.13M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 key
+Fra:1 Mem:52.88M (Peak 52.88M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.002
+Fra:1 Mem:52.92M (Peak 52.92M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof unit
+Fra:1 Mem:53.19M (Peak 53.19M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener
+Fra:1 Mem:53.21M (Peak 53.21M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification
+Fra:1 Mem:53.26M (Peak 53.26M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.001
+Fra:1 Mem:53.28M (Peak 53.28M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.003
+Fra:1 Mem:53.30M (Peak 53.30M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 front coupler mounting plate
+Fra:1 Mem:53.46M (Peak 53.46M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Blind magnetic mating face
+Fra:1 Mem:53.62M (Peak 53.62M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility 1
+Fra:1 Mem:53.62M (Peak 53.62M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Central locating register
+Fra:1 Mem:53.63M (Peak 53.63M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 00
+Fra:1 Mem:53.64M (Peak 53.64M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 01
+Fra:1 Mem:54.38M (Peak 54.38M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 02
+Fra:1 Mem:54.39M (Peak 54.39M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems 1
+Fra:1 Mem:54.39M (Peak 54.39M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 01
+Fra:1 Mem:55.57M (Peak 55.57M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 02
+Fra:1 Mem:55.81M (Peak 55.81M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount keyed alignment stop
+Fra:1 Mem:55.88M (Peak 55.88M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre
+Fra:1 Mem:55.88M (Peak 55.88M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar.001
+Fra:1 Mem:55.93M (Peak 55.93M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service -1
+Fra:1 Mem:55.93M (Peak 55.93M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass.001
+Fra:1 Mem:56.02M (Peak 56.02M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre.001
+Fra:1 Mem:56.18M (Peak 56.18M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate -1
+Fra:1 Mem:56.35M (Peak 56.35M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility -1
+Fra:1 Mem:56.38M (Peak 56.38M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule -1
+Fra:1 Mem:56.22M (Peak 56.38M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate 1
+Fra:1 Mem:56.33M (Peak 56.38M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule 1
+Fra:1 Mem:56.67M (Peak 56.67M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification plaque
+Fra:1 Mem:57.68M (Peak 57.68M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems -1
+Fra:1 Mem:57.02M (Peak 57.68M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof plaque rule
+Fra:1 Mem:52.94M (Peak 57.68M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount identification
+Fra:1 Mem:54.23M (Peak 57.68M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 -1
+Fra:1 Mem:54.04M (Peak 57.68M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:51.52M (Peak 57.68M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:51.52M (Peak 57.68M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:51.52M (Peak 57.68M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:51.52M (Peak 57.68M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:51.61M (Peak 57.68M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:51.61M (Peak 57.68M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:51.61M (Peak 57.68M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:51.61M (Peak 57.68M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:51.61M (Peak 57.68M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:51.61M (Peak 57.68M) | Time:00:00.06 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:51.62M (Peak 57.68M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:51.62M (Peak 57.68M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:51.62M (Peak 57.68M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:51.62M (Peak 57.68M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:51.62M (Peak 57.68M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:52.72M (Peak 57.68M) | Time:00:00.07 | Mem:0.03M, Peak:0.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:52.72M (Peak 57.68M) | Time:00:00.07 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:52.72M (Peak 57.68M) | Time:00:00.07 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:52.72M (Peak 57.68M) | Time:00:00.07 | Mem:3.79M, Peak:3.79M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:52.72M (Peak 57.68M) | Time:00:00.09 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:52.72M (Peak 57.68M) | Time:00:00.09 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:56.23M (Peak 57.68M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:56.24M (Peak 57.68M) | Time:00:00.10 | Mem:10.21M, Peak:10.29M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.24M (Peak 57.68M) | Time:00:00.10 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:56.24M (Peak 57.68M) | Time:00:00.10 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:56.24M (Peak 57.68M) | Time:00:00.10 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:56.24M (Peak 57.68M) | Time:00:00.10 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:01.82 | Remaining:00:39.44 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:28.42 | Remaining:00:11.65 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 17/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:10.26 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:10.26 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R03-2026-10-26\06-belly.png'
+Time: 01:10.80 (Saving: 00:00.52)
+
+I75 R03: RENDER 07-rear
+Fra:1 Mem:48.25M (Peak 48.25M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_R03_OuterPanels
+Fra:1 Mem:48.26M (Peak 48.26M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 belly service hatch
+Fra:1 Mem:48.36M (Peak 48.36M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 continuous side backing -1
+Fra:1 Mem:48.39M (Peak 48.39M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.001
+Fra:1 Mem:48.40M (Peak 48.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 underside
+Fra:1 Mem:48.40M (Peak 48.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.002
+Fra:1 Mem:48.40M (Peak 48.40M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.003
+Fra:1 Mem:48.60M (Peak 48.60M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 closed rear lower apron
+Fra:1 Mem:48.61M (Peak 48.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 sealed rear equipment cover
+Fra:1 Mem:48.61M (Peak 48.61M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel
+Fra:1 Mem:48.62M (Peak 48.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.002
+Fra:1 Mem:48.62M (Peak 48.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener
+Fra:1 Mem:48.62M (Peak 48.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 rear
+Fra:1 Mem:48.63M (Peak 48.63M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.001
+Fra:1 Mem:49.16M (Peak 49.16M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.002
+Fra:1 Mem:49.16M (Peak 49.16M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 front coupler mounting plate
+Fra:1 Mem:49.16M (Peak 49.16M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount octagonal frame
+Fra:1 Mem:49.17M (Peak 49.17M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Blind magnetic mating face
+Fra:1 Mem:49.17M (Peak 49.17M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 key
+Fra:1 Mem:49.18M (Peak 49.18M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Central locating register
+Fra:1 Mem:49.24M (Peak 49.24M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 00
+Fra:1 Mem:49.24M (Peak 49.24M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 03
+Fra:1 Mem:49.24M (Peak 49.24M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 04
+Fra:1 Mem:49.24M (Peak 49.24M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 05
+Fra:1 Mem:49.48M (Peak 49.48M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification
+Fra:1 Mem:49.50M (Peak 49.50M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 00
+Fra:1 Mem:53.26M (Peak 53.26M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 01
+Fra:1 Mem:53.37M (Peak 53.37M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service 1
+Fra:1 Mem:53.42M (Peak 53.42M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount keyed alignment stop
+Fra:1 Mem:53.75M (Peak 53.75M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility 1
+Fra:1 Mem:53.75M (Peak 53.75M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre
+Fra:1 Mem:53.75M (Peak 53.75M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar.001
+Fra:1 Mem:54.09M (Peak 54.09M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems 1
+Fra:1 Mem:54.45M (Peak 54.45M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass.001
+Fra:1 Mem:55.67M (Peak 55.67M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre.001
+Fra:1 Mem:55.67M (Peak 55.67M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp
+Fra:1 Mem:55.70M (Peak 55.70M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp.001
+Fra:1 Mem:55.99M (Peak 55.99M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 1
+Fra:1 Mem:56.00M (Peak 56.00M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule -1
+Fra:1 Mem:56.00M (Peak 56.00M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate 1
+Fra:1 Mem:56.03M (Peak 56.03M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side plaque amber rule 1
+Fra:1 Mem:55.91M (Peak 56.03M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service -1
+Fra:1 Mem:55.93M (Peak 56.03M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof plaque rule
+Fra:1 Mem:56.03M (Peak 56.03M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount identification
+Fra:1 Mem:56.73M (Peak 56.73M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 -1
+Fra:1 Mem:56.81M (Peak 56.81M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility -1
+Fra:1 Mem:56.82M (Peak 56.82M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems -1
+Fra:1 Mem:54.04M (Peak 58.42M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:51.52M (Peak 58.42M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:51.52M (Peak 58.42M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:51.52M (Peak 58.42M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:51.52M (Peak 58.42M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.07 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.07 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.08 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.08 | Mem:0.03M, Peak:0.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.08 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.08 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.08 | Mem:3.79M, Peak:3.79M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.09 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.09 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.10 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.10 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.10 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.11 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.11 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.11 | Mem:10.21M, Peak:10.29M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.11 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.11 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.11 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.11 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:01.82 | Remaining:00:39.40 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:26.29 | Remaining:00:10.77 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 17/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:04.61 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:04.61 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R03-2026-10-26\07-rear.png'
+Time: 01:05.16 (Saving: 00:00.53)
+
+I75 R03: RENDER 08-rear-oblique
+Fra:1 Mem:48.25M (Peak 48.25M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_R03_OuterPanels
+Fra:1 Mem:48.27M (Peak 48.27M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 underside
+Fra:1 Mem:48.36M (Peak 48.36M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw
+Fra:1 Mem:48.58M (Peak 48.58M) | Time:00:00.03 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.001
+Fra:1 Mem:48.59M (Peak 48.59M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 rear
+Fra:1 Mem:48.59M (Peak 48.59M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Belly captive screw.003
+Fra:1 Mem:49.11M (Peak 49.11M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 closed rear lower apron
+Fra:1 Mem:49.11M (Peak 49.11M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 sealed rear equipment cover
+Fra:1 Mem:49.12M (Peak 49.12M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | R03 key
+Fra:1 Mem:49.12M (Peak 49.12M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear blind cooling channel.002
+Fra:1 Mem:49.14M (Peak 49.14M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener
+Fra:1 Mem:49.14M (Peak 49.14M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.001
+Fra:1 Mem:49.14M (Peak 49.14M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof unit
+Fra:1 Mem:49.15M (Peak 49.15M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.002
+Fra:1 Mem:49.15M (Peak 49.15M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Rear cover fastener.003
+Fra:1 Mem:49.16M (Peak 49.16M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount octagonal frame
+Fra:1 Mem:49.16M (Peak 49.16M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount isolator
+Fra:1 Mem:49.41M (Peak 49.41M) | Time:00:00.04 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification
+Fra:1 Mem:49.25M (Peak 49.41M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Blind magnetic mating face
+Fra:1 Mem:53.28M (Peak 53.28M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service 1
+Fra:1 Mem:53.35M (Peak 53.35M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Central locating register
+Fra:1 Mem:53.69M (Peak 53.69M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 00
+Fra:1 Mem:53.83M (Peak 53.83M) | Time:00:00.05 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 02
+Fra:1 Mem:53.96M (Peak 53.96M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 04
+Fra:1 Mem:53.96M (Peak 53.96M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Magnetic pole 05
+Fra:1 Mem:53.97M (Peak 53.97M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 00
+Fra:1 Mem:54.05M (Peak 54.05M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 01
+Fra:1 Mem:54.68M (Peak 54.68M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 1
+Fra:1 Mem:55.14M (Peak 55.14M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Captive tool flange screw 02
+Fra:1 Mem:55.50M (Peak 55.50M) | Time:00:00.06 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service -1
+Fra:1 Mem:55.91M (Peak 55.91M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Front optical assembly
+Fra:1 Mem:56.16M (Peak 56.16M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Camera protective collar
+Fra:1 Mem:56.26M (Peak 56.26M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side utility -1
+Fra:1 Mem:56.26M (Peak 56.26M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Recessed camera glass.001
+Fra:1 Mem:56.35M (Peak 56.35M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side systems -1
+Fra:1 Mem:56.50M (Peak 56.50M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small lens centre.001
+Fra:1 Mem:56.50M (Peak 56.50M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Small cyan status lamp.001
+Fra:1 Mem:56.69M (Peak 56.69M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate -1
+Fra:1 Mem:56.86M (Peak 56.86M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side I75 -1
+Fra:1 Mem:56.86M (Peak 56.86M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Side service plate 1
+Fra:1 Mem:56.86M (Peak 56.86M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof identification plaque
+Fra:1 Mem:56.86M (Peak 56.86M) | Time:00:00.07 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Roof plaque rule
+Fra:1 Mem:57.25M (Peak 57.25M) | Time:00:00.08 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Tool mount identification
+Fra:1 Mem:54.04M (Peak 58.42M) | Time:00:00.14 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:51.52M (Peak 58.42M) | Time:00:00.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:51.52M (Peak 58.42M) | Time:00:00.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:51.52M (Peak 58.42M) | Time:00:00.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:51.52M (Peak 58.42M) | Time:00:00.15 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.15 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.15 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.15 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.15 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.15 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:51.61M (Peak 58.42M) | Time:00:00.15 | Mem:0.01M, Peak:0.01M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:51.62M (Peak 58.42M) | Time:00:00.16 | Mem:0.02M, Peak:0.02M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.16 | Mem:0.03M, Peak:0.03M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.16 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.16 | Mem:1.11M, Peak:1.11M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.16 | Mem:3.79M, Peak:3.79M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.19 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:52.72M (Peak 58.42M) | Time:00:00.19 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.20 | Mem:6.70M, Peak:9.37M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.20 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.20 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.20 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.20 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.20 | Mem:10.21M, Peak:10.21M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.20 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.21 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.21 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:56.23M (Peak 58.42M) | Time:00:00.21 | Mem:10.29M, Peak:10.29M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.21 | Mem:10.21M, Peak:10.29M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.21 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.21 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.21 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:56.24M (Peak 58.42M) | Time:00:00.21 | Mem:10.30M, Peak:10.30M | Scene, ViewLayer | Sample 0/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:01.62 | Remaining:00:32.48 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 1/24
+Fra:1 Mem:181.33M (Peak 181.33M) | Time:00:22.38 | Remaining:00:09.13 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 17/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:03.53 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Sample 24/24
+Fra:1 Mem:233.97M (Peak 312.94M) | Time:01:03.53 | Mem:135.32M, Peak:135.32M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R03-2026-10-26\08-rear-oblique.png'
+Time: 01:04.18 (Saving: 00:00.61)
+
+Info: Saved as "I75_V02_Surface_R03.blend"
+I75 R03: FINISHED {"triangles": 87564, "rays": 54, "renders": 8}
+
+Blender quit

@@ -1,0 +1,6 @@
+Initialize engine version: 6000.6.5f1 (3ff58d469c8a)
+I75 R03 LOD0=87556 triangles / 2 renderers
+I75 R03 LOD1=19869 triangles / 2 renderers
+I75 R03 LOD2=10424 triangles / 2 renderers
+Build Finished, Result: Success.
+Build Finished, Result: Success.

@@ -28,6 +28,7 @@ namespace SpaceMiner
             var label=StationDisplay.Create(item.label,root,Vector3.zero,Quaternion.identity,
                 .055f,signageFont,signageMaterial,graphite,cyan,25,3.2f);
             RoomPlan.Register(id,root,body,label.transform);
+            if(id!="printer"&&id!="food")TouchConsoleVisual.Install(root,false).Bind(label,body,item.size);
             return root;
         }
 
@@ -36,13 +37,20 @@ namespace SpaceMiner
             if(RoomPlan==null)return;
             var main=RoomPlan.Get("main-console");
             if(Layout.Console!=null)Layout.Console.localPosition=new Vector3(0,0,-main.size.z*.5f-.35f);
+            RefreshTouchConsole("main-console");
             foreach(var terminal in terminals)
             {
                 var block=terminal.GetComponentInParent<CommandRoomBlock>();
                 if(block==null)continue;
                 var item=RoomPlan.Get(block.id);
                 terminal.transform.localPosition=new Vector3(0,0,-item.size.z*.5f-.12f);
+                RefreshTouchConsole(block.id);
             }
+        }
+        private void RefreshTouchConsole(string id)
+        {
+            var root=RoomPlan.BoundRoot(id);var visual=root!=null?root.GetComponentInChildren<TouchConsoleVisual>():null;
+            if(visual!=null)visual.Bind(root.GetComponentInChildren<StationDisplay>(),root.Find("Blockoutbody"),RoomPlan.Get(id).size);
         }
 
         private Vector3 CommandServicePoint(string id)

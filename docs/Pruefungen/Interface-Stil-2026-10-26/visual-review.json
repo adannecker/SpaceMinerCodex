@@ -1,0 +1,34 @@
+[
+  {
+    "path": "Final/Power/Logs/StationPowerConsole/03-stromuebersicht-1600x1000.png",
+    "observed": "Rounded frame/cards/buttons and clean slim 50/90% bars; no seam lines."
+  },
+  {
+    "path": "Final/Power/Logs/StationPowerConsole/09-large-sun-companion-bottom.png",
+    "observed": "1280x720 enlarged text, scroll endpoint and footer remain accessible."
+  },
+  {
+    "path": "Final/GeneralUI/Logs/StationOperationsUI/01-hud-und-e-hinweis.png",
+    "observed": "Shared HUD resource/task/selection cards, controls and terminal prompt."
+  },
+  {
+    "path": "Final/GeneralUI/Logs/StationOperationsUI/03-drohnenverwaltung.png",
+    "observed": "Rounded drone console cards, selected tabs, hover state and slim battery/fuel/cargo bars."
+  },
+  {
+    "path": "Final/Settings/Logs/settings-accessibility-large.png",
+    "observed": "Large white text and high-contrast preview, rounded actions, clean slim slider."
+  },
+  {
+    "path": "Final/Studio/Logs/ConsoleStudio/3-sun-companion.png",
+    "observed": "Same rounded dashboard in standalone studio with enlarged long-text fixture."
+  },
+  {
+    "path": "Final/Start/start-menu.png",
+    "observed": "Rounded start panel and actions with existing station backdrop."
+  },
+  {
+    "path": "Final/GeneralUI/Logs/StationOperationsUI/06-grosse-schrift-1280.png",
+    "observed": "Rounded HUD at enlarged text; resource/task separation. Legacy small construction shortcut remains cramped at this scale; no shortcut/layout changes in this visual pass."
+  }
+]

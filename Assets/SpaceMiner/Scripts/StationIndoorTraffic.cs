@@ -40,7 +40,7 @@ namespace SpaceMiner
         public string Failure { get; private set; }
         public IReadOnlyList<Vehicle> Vehicles => vehicles;
         public int NavigationSourceCount => sources.Count;
-        public const float ModelLength = .75f;
+        public const float ModelLength = IndoorDroneVisual.OverallLength;
 
         internal static void Install(WaterScenario scenario, StationInteriorLayout layout)
         {

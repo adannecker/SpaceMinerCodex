@@ -91,6 +91,13 @@ namespace SpaceMiner
                     if(first==null||v.crossingTicket<first.crossingTicket)first=v;
                 }
                 if(occupied||first==null)continue;
+                // Native avoidance / the free-path-to-guide handover can leave
+                // an unadmitted actor just inside the zone. Holding it there
+                // while waiting for an empty zone would block every ticket.
+                // Drain that existing occupant first; FIFO applies once empty.
+                foreach(var v in vehicles)
+                    if(v.Junction==junction&&InCrossing(Local(v),junction)
+                        &&(!InCrossing(Local(first),junction)||v.crossingTicket<first.crossingTicket))first=v;
                 bool clear=true;
                 foreach(var other in vehicles)
                     if(other!=first&&InCrossing(Local(other),junction)){clear=false;break;}

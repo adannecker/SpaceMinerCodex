@@ -1,0 +1,8 @@
+{
+  "frontHeightM": 0.6008232831954956,
+  "rearHeightM": 1.105934500694275,
+  "screenSlopeApproxDegrees": 28.78250362935593,
+  "userTargetFrontM": 0.6,
+  "interpretation": "Height endpoint takes priority over ambiguous 20 percent phrase",
+  "unityIntegration": false
+}

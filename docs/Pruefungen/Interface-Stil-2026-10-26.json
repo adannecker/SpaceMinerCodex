@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "scope": "Shared rounded IMGUI chrome in game menus/HUD/consoles and console studio; visual-only rendering changes.",
+  "unity": "6000.6.5f1 (3ff58d469c8a)",
+  "builds": [
+    "INTERFACE BUILD SUCCESS: Builds/InterfaceDevelopment/SpaceMiner.exe",
+    "INTERFACE BUILD SUCCESS: Builds/InterfaceRelease/SpaceMiner.exe",
+    "INTERFACE BUILD SUCCESS: Builds/InterfaceStudio/ConsoleStudio.exe"
+  ],
+  "final_build_log": "Logs/UiChrome-20261026/build04.log",
+  "source_files_and_metas_verified": 422,
+  "changed_existing_sources": [
+    "Assets/SpaceMiner/Scripts/StationOperations.DroneConsole.cs",
+    "Assets/SpaceMiner/Scripts/SpaceMinerUi.cs",
+    "Assets/SpaceMiner/Scripts/StationOperations.PowerConsole.cs",
+    "Assets/SpaceMiner/Scripts/WaterScenarioHud.cs",
+    "Assets/SpaceMiner/Scripts/ConsoleStudio.cs",
+    "Assets/SpaceMiner/Scripts/PowerConsoleView.cs"
+  ],
+  "new_sources": [
+    "Assets/SpaceMiner/Scripts/UiChrome.cs",
+    "Assets/SpaceMiner/Editor/InterfaceBuild.cs"
+  ],
+  "power": {
+    "passed": true,
+    "checks": 507,
+    "layout": 15,
+    "frustumWarnings": 0,
+    "pictures": [
+      "01-gegenueber-zentrale-echte-50-prozent.png",
+      "02-strompult-in-zentrale-e-hinweis.png",
+      "03-stromuebersicht-1600x1000.png",
+      "detail-reactor.png",
+      "detail-solar-a.png",
+      "detail-solar-b.png",
+      "detail-battery-bay-1.png",
+      "detail-battery-bay-2.png",
+      "detail-consumer-life.png",
+      "detail-sun-primary.png",
+      "detail-sun-companion.png",
+      "detail-bankbilanz.png",
+      "04-explizite-97-prozent-anzeigefixture.png",
+      "05-stromuebersicht-1280x720.png",
+      "06-stromuebersicht-grosse-schrift-oben.png",
+      "07-stromuebersicht-grosse-schrift-unten.png",
+      "08-large-sun-primary.png",
+      "09-large-sun-primary-bottom.png",
+      "08-large-sun-companion.png",
+      "09-large-sun-companion-bottom.png"
+    ],
+    "scope": "Physical battery placement and four authored cassette meshes per installed bank, physical command-room power terminal, read-only live power dashboard and existing shared energy store. Explicit load, state-of-charge, panel-normal, damage and network fixtures are restored. Genuine R-01 battery repair uses a declared helper/repair-technology/three-parts fixture with original energy; actual trajectory sampled every0.25s, collision/support and damaged-sector avoidance checked, then original campaign restored. Isolated old-save and room-plan roundtrips preserve resources and placement. Native framebuffer capture at1600x1000 and1280x720 including enlarged text. Programmatic scene/controller and framebuffer acceptance, not native OS input, manual comfort, headset or FPS acceptance."
+  },
+  "general_ui": {
+    "passed": true,
+    "checks": 28,
+    "scope": "programmatic real terminal opens, UI captures, scaling, Mira and actual native fullscreen/window restore; no manual keyboard/mouse test"
+  },
+  "studio": {
+    "passed": true,
+    "captures": 36,
+    "error": null
+  },
+  "total_numeric_player_checks": 535,
+  "settings_preview_and_cancel_passed": true,
+  "start_menu_check_passed": true,
+  "native_capture_counts": {
+    "power": 20,
+    "studio": 36,
+    "general_ui": 8,
+    "settings": 9,
+    "start": 1
+  },
+  "visually_reviewed_final_images": [
+    {
+      "path": "Final/Power/Logs/StationPowerConsole/03-stromuebersicht-1600x1000.png",
+      "observed": "Rounded frame/cards/buttons and clean slim 50/90% bars; no seam lines."
+    },
+    {
+      "path": "Final/Power/Logs/StationPowerConsole/09-large-sun-companion-bottom.png",
+      "observed": "1280x720 enlarged text, scroll endpoint and footer remain accessible."
+    },
+    {
+      "path": "Final/GeneralUI/Logs/StationOperationsUI/01-hud-und-e-hinweis.png",
+      "observed": "Shared HUD resource/task/selection cards, controls and terminal prompt."
+    },
+    {
+      "path": "Final/GeneralUI/Logs/StationOperationsUI/03-drohnenverwaltung.png",
+      "observed": "Rounded drone console cards, selected tabs, hover state and slim battery/fuel/cargo bars."
+    },
+    {
+      "path": "Final/Settings/Logs/settings-accessibility-large.png",
+      "observed": "Large white text and high-contrast preview, rounded actions, clean slim slider."
+    },
+    {
+      "path": "Final/Studio/Logs/ConsoleStudio/3-sun-companion.png",
+      "observed": "Same rounded dashboard in standalone studio with enlarged long-text fixture."
+    },
+    {
+      "path": "Final/Start/start-menu.png",
+      "observed": "Rounded start panel and actions with existing station backdrop."
+    },
+    {
+      "path": "Final/GeneralUI/Logs/StationOperationsUI/06-grosse-schrift-1280.png",
+      "observed": "Rounded HUD at enlarged text; resource/task separation. Legacy small construction shortcut remains cramped at this scale; no shortcut/layout changes in this visual pass."
+    }
+  ],
+  "three_original_room_plans_sha256_unchanged": {
+    "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Design\\RoomPlans\\drone-workshop-layout.json": "A40E6F49CB48F2E05F2264F5D79FEB5CD79C82EB7822F2B59F5270353CC024EF",
+    "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Design\\RoomPlans\\internal-workshop-layout.json": "D9C20BCC3409C6EF3846DA23B54FAEE4130E18C5A6D0CA023C9CA146E652CFB5",
+    "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Design\\RoomPlans\\command-room-layout.json": "3245D591E9C45E2AC55BFF2789FEFC0F688C3519556A390DFE331789C0B34312"
+  },
+  "deployment": [
+    {
+      "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\InterfaceDevelopment",
+      "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\Windows",
+      "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\Windows-before-ui-chrome-20261026-161938",
+      "files": 247,
+      "allSha256Identical": true
+    },
+    {
+      "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\InterfaceRelease",
+      "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\WindowsRelease",
+      "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\WindowsRelease-before-ui-chrome-20261026-161938",
+      "files": 156,
+      "allSha256Identical": true
+    },
+    {
+      "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\InterfaceStudio",
+      "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio",
+      "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio-before-ui-chrome-20261026-161938",
+      "files": 247,
+      "allSha256Identical": true
+    }
+  ],
+  "preserved": "Only six existing rendering sources changed in this task; all other pre-existing C#/meta files match the pre-task snapshot. Existing work by other chats preserved.",
+  "intermediate_findings": [
+    "Restricted Editor startup crashed with WMI/registry assertions and licensing disconnect before project build; regular local builds succeeded.",
+    "First graphical version passed existing function checks but showed overlapping large corner slices in slim bars. Smaller dedicated bar and slider slices applied before final build and rerun."
+  ],
+  "limits": [
+    "Visual pass on shared components, not a complete redesign of every specialised legacy renderer.",
+    "No new gameplay, energy, save-format, room-plan or model changes. Rectangular hit areas and layout calculations preserved.",
+    "Native framebuffers and existing controller/API checks; no new native OS keyboard/mouse, FPS, headset or full natural campaign acceptance.",
+    "Release built and SHA256-deployed; graphical checks use Development. No commit/push."
+  ],
+  "proof_files": {
+    "build-summary.txt": "EC466F92E52E2DBBE08FB5E7AFAC362E111BB97F476F4E9ED4F5085D50D3F5DE",
+    "deployment.json": "4738A914E6ACB18A6F227061B68340F236D009CE07CB7F8999E5EDC9E8D9AB4E",
+    "drohnenleitstand.png": "86BD4CF0C3511A5D2BDC8D83F8D1883C17D6CA8440923AA781492F3F148B70F4",
+    "einstellungen-audio.png": "A374C0AEBD436FC82C39FA4A6A1167F9686542AD582CCBFAD19A6ACF428279EA",
+    "einstellungen-kontrast-gross.png": "3C802BCB3F3E9CFFB3916E09A5E54EBC391EFB56A31C4B04DAEACD26B8D442D1",
+    "general-ui-result.json": "C5BF6B677ED96288303FD137CDEC27C2035782F86DC622CC333088E8BCE0A5DF",
+    "hud-grosse-schrift.png": "F88BA4BF1B644E39E2F368EBAB882274AD8F57B36997927999108127B29C4EDD",
+    "power-result.json": "1853E700CEA57FAFA805E0AF29DFA0DB6ABF46E0BC828780527C1F02345A920E",
+    "sonnen-grosse-schrift-unten.png": "37DBF95677B55319D77F288B4E26D2B130693B2BA3C141977338F3890409FFDC",
+    "source-final.json": "B4EA02B776E549D09C9AA951831224494036F17F493D877321B3A53A7530687E",
+    "startmenue.png": "456E23051F40F76027B0209B9720AABD01CD0E68094324A2A9E87F46A72B8BCE",
+    "stations-hud.png": "87AB8D43DC551C56C67846FD6A22601FA72D5ACFDAEFB41BAA462867BD742D0E",
+    "stromuebersicht.png": "16966D16910F5B6652F180C5865BB24172E5D8BA1E9B78B26CB923DA8EDE7C40",
+    "studio-grosse-schrift.png": "DAA4839CA05D33946F2EA99FA3EEEE0C57075D5D68F98A36B6021517D316F19B",
+    "studio-result.json": "F9A3B11CD9D2645590C69AA7177A15A7CC0A7EFABA546ADD1F0DAAEFD54EF385",
+    "visual-review.json": "C2C7D75CBABA9CD2BAF46B3FCAB25F3F7529F9BB58EC21804D0CC801BCAA8BC3"
+  }
+}

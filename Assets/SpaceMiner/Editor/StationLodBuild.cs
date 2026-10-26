@@ -11,7 +11,7 @@ namespace SpaceMiner.Editor
     public static class StationLodBuild
     {
         private sealed class Cluster {public Vector3 position,normal;public Vector2 uv;public int count;}
-        private static Mesh Simplify(Mesh source,int resolution,string name)
+        internal static Mesh Simplify(Mesh source,int resolution,string name)
         {
             var vertices=source.vertices;var normals=source.normals;var uv=source.uv;Bounds bounds=source.bounds;
             float step=Mathf.Max(bounds.size.x,bounds.size.y,bounds.size.z)/resolution;

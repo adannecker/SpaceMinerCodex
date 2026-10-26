@@ -1,0 +1,22 @@
+{
+    "primaryFlux": 451.570475035254,
+    "companionFlux": 155.84811754094187,
+    "primaryLuminosity": 0.36037503837455376,
+    "companionLuminosity": 0.11844550534642552,
+    "displayPrimaryKm": 1875.9279284533818,
+    "displayCompanionKm": 1830.6700642272442,
+    "primaryAu": 1.042182182474101,
+    "companionAu": 1.0170389245706912,
+    "solarA": 0.0,
+    "solarB": 3.9645791053771973,
+    "potentialA": 0.5910945534706116,
+    "potentialB": 3.9645791053771973,
+    "areaA": 353.2672424316406,
+    "areaB": 375.3464660644531,
+    "effectiveA": 251.15087890625,
+    "effectiveB": 312.9726257324219,
+    "primaryVisibilityA": 0.0,
+    "companionVisibilityA": 0.90625,
+    "primaryVisibilityB": 1.0,
+    "companionVisibilityB": 1.0
+}

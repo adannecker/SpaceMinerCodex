@@ -443,3 +443,26 @@ Berücksichtigt sind Stationsinnenraum, Scanner/VR, Mira-Porträt und Spielstän
 Offen bleiben besonders Beenden aus dem Spiel, zuverlässige Wiederherstellung der Innenraumposition, Interaktionssounds und UI-Skalierung.
 
 Nur gelesen; keine Dateien geändert, Builds ausgeführt oder Nachrichten weitergeleitet.
+
+<!-- reviewed-project-continuation -->
+
+# Geprüfte Projektfortsetzung
+
+Exportstand: 2026-10-26T16:02:45.759077+00:00. Geprüfter Zeitraum: nach 2026-10-26T06:00:00+00:00 bis 2026-10-26T07:46:47+00:00.
+
+Der vorhandene bereinigte Projektteil bleibt oben unverändert. Frühere Rohtexte werden bewusst nicht erneut importiert.
+
+## Assistent · 2026-10-26T07:46:02.418Z
+
+Ich lese den aktuellen Projektabgleich und die gemeinsamen Kontextdateien. Anschließend bestätige ich den Stand für Git und Rechnerwechsel, ohne Änderungen vorzunehmen.
+
+## Assistent · 2026-10-26T07:46:46.216Z
+
+Kontext aktualisiert. Zuständigkeit: **Git und Projektabgleich**, Sicherungen, Rechnerwechsel, Chatarchive und Unity-Versionen.
+
+- Gitstand: **`659b514`**.
+- Lokal bleibt die uncommittete Migration auf **Unity 6000.6.5f1** erhalten; Remote enthält noch **6000.4.7f1**.
+- Der kombinierte Stand wurde hier noch nicht gebaut. Frühere Tests sind historische Nachweise.
+- **SP-01 bis SP-10** bleibt der nächste Umfang; keine Umsetzung begonnen.
+
+Nur gelesen und abgeglichen. Keine Änderungen, Builds, Git-Mutationen oder weiteren Nachrichten.

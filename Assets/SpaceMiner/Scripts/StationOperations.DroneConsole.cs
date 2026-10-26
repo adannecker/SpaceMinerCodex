@@ -63,7 +63,7 @@ namespace SpaceMiner
             }
             if (ConsoleDetailsVisible) DrawConsoleDetails(layout.Details);
             if (ConsoleOrdersVisible) DrawConsoleOrders(layout.Orders);
-            SpaceMinerUi.Fill(layout.Footer, new Color(.055f, .10f, .14f));
+            UiChrome.Surface(layout.Footer, new Color(.055f, .10f, .14f), new Color(.15f, .38f, .48f));
             GUI.Label(new Rect(layout.Footer.x + 10, layout.Footer.y + 3, layout.Footer.width - 20, layout.Footer.height - 6), new GUIContent(Message, Message), ui.Small);
             ui.Tooltip(1, w, h);
             if (Event.current.type == EventType.MouseUp) consoleDraggedOrder = null;
@@ -96,7 +96,7 @@ namespace SpaceMiner
             for (int i = 0; i < stats.Length; i++)
             {
                 var box = new Rect(r.x + i * (cell + 4), r.y + 68, cell, 38);
-                SpaceMinerUi.Fill(box, new Color(.055f, .12f, .17f));
+                UiChrome.Surface(box, new Color(.055f, .12f, .17f), new Color(.15f, .38f, .48f));
                 var style = new GUIStyle(ui.Small) { wordWrap = true, fontSize = Mathf.Min(ui.Small.fontSize, 17) };
                 GUI.Label(new Rect(box.x + 8, box.y + 3, box.width - 16, box.height - 6), stats[i], style);
             }
@@ -194,14 +194,14 @@ namespace SpaceMiner
         private void DrawConsoleSchematic(DroneFleetReadModel d)
         {
             Rect r = GUILayoutUtility.GetRect(40, 132, GUILayout.ExpandWidth(true));
-            SpaceMinerUi.Fill(r, new Color(.035f, .08f, .12f)); SpaceMinerUi.Border(r, new Color(.15f, .38f, .48f));
+            UiChrome.Surface(r, new Color(.035f, .08f, .12f), new Color(.15f, .38f, .48f));
             var style = new GUIStyle(ui.Small) { alignment = TextAnchor.MiddleCenter, fontSize = Mathf.Min(ui.Small.fontSize, 16) };
             float block = (r.width - 40) / 3;
             string[] slots = d.Internal ? new[] { "BASISGREIFER", "R-01\nBESTANDSSERVICE", "STATIONSVERSORGUNG" } : new[] { d.Tool.ToUpperInvariant(), "AKKU / ANTRIEB\n" + (d.Operational ? "freigegeben" : "gesperrt"), "ROHFRACHT\n" + d.CargoKg.ToString("0.0") + " kg" };
             for (int i = 0; i < 3; i++)
             {
                 Rect box = new Rect(r.x + 10 + i * (block + 10), r.y + 24, block, 80);
-                SpaceMinerUi.Fill(box, new Color(.075f, .17f, .22f)); SpaceMinerUi.Border(box, d.Operational ? SpaceMinerUi.Cyan : SpaceMinerUi.Disabled);
+                UiChrome.Surface(box, new Color(.075f, .17f, .22f), d.Operational ? SpaceMinerUi.Cyan : SpaceMinerUi.Disabled);
                 GUI.Label(new Rect(box.x + 4, box.y + 3, box.width - 8, box.height - 6), slots[i], style);
             }
         }
@@ -469,7 +469,7 @@ namespace SpaceMiner
         private void ConsoleProgress(float fraction, Color color)
         {
             var r = GUILayoutUtility.GetRect(40, 8, GUILayout.ExpandWidth(true));
-            SpaceMinerUi.Fill(r, new Color(.11f, .20f, .26f)); SpaceMinerUi.Fill(new Rect(r.x, r.y, r.width * Mathf.Clamp01(fraction), r.height), color);
+            UiChrome.Progress(r, fraction, color);
             GUILayout.Space(6);
         }
         private static Rect ConsoleInset(Rect r) => new Rect(r.x + 12, r.y + 14, r.width - 24, r.height - 28);

@@ -1,4 +1,4 @@
-"""Local-only GLB preview. Serves the viewer and the two explicit model files."""
+"""Local-only GLB preview. Serves the viewer and three explicit model revisions."""
 from pathlib import Path
 from http.server import ThreadingHTTPServer,SimpleHTTPRequestHandler
 from urllib.parse import urlsplit,unquote
@@ -13,7 +13,7 @@ class Handler(SimpleHTTPRequestHandler):
     def allowed(self):
         path=unquote(urlsplit(self.path).path)
         if '..' in Path(path).parts:return False
-        return path.startswith('/I75Viewer/') or path in [f'/Surface-{v}-2026-10-26/I75_V02_Surface_{v}.glb' for v in ('R01','R02')]
+        return path.startswith('/I75Viewer/') or path in [f'/Surface-{v}-2026-10-26/I75_V02_Surface_{v}.glb' for v in ('R01','R02','R03')]
     def do_GET(self):
         if urlsplit(self.path).path=='/health':
             body=json.dumps({'service':'spaceminer-i75-viewer','version':1}).encode()

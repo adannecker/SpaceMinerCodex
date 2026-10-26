@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-26",
+  "scope": "Publication/static provenance and memory rebuild; no new Unity/Player run",
+  "checks": {
+    "Interface-Stil": {
+      "artifact_hashes_verified": 16,
+      "frozen_sources": 422,
+      "current_source_mismatches": [],
+      "historic_runtime_result_retained": true
+    },
+    "Doppelsonnen-Energie": {
+      "artifact_hashes_verified": 15,
+      "frozen_sources": 404,
+      "current_source_mismatches": [
+        "Assets/SpaceMiner/Scripts/ConsoleStudio.cs",
+        "Assets/SpaceMiner/Scripts/PowerConsoleView.cs",
+        "Assets/SpaceMiner/Scripts/SpaceMinerUi.cs",
+        "Assets/SpaceMiner/Scripts/StationOperations.DroneConsole.cs",
+        "Assets/SpaceMiner/Scripts/StationOperations.PowerConsole.cs",
+        "Assets/SpaceMiner/Scripts/WaterScenarioHud.cs"
+      ],
+      "historic_runtime_result_retained": true
+    }
+  },
+  "exporter_self_test_assertions": 25,
+  "move_receipt_files_identical": 7044,
+  "remote_base": "659b514f79878df772dbc73a1bea130b1594ea7c",
+  "ignored_runtime_folders_not_committed": [
+    "Builds",
+    "Library",
+    "Logs",
+    "work",
+    "UserSettings"
+  ],
+  "lfs_pattern": "Design/Models/OperatorArm/**/*.blend",
+  "phase": "Pre-commit provenance verified; containing Git commit identifies this snapshot",
+  "archive_status_counts": {
+    "curated_extended": 9,
+    "unavailable": 1,
+    "cloud_snapshot_preserved": 3,
+    "preserved": 9,
+    "exported_reviewed": 3
+  },
+  "remote_target": "origin/main"
+}

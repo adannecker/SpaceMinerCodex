@@ -17,16 +17,18 @@ namespace SpaceMiner
         public Vector3 SunDirection { get; }
         public float PotentialKw { get; }
         public float OutputKw { get; }
+        public SolarFieldView SolarDetails {get;}
 
         private StationGeneratorView(string id, string name, float nominalKw, float condition,
             bool connected, bool orientationKnown, float incidence, float angleDegrees,
-            Vector3 panelNormal, Vector3 sunDirection, float potentialKw)
+            Vector3 panelNormal, Vector3 sunDirection, float potentialKw, SolarFieldView solarDetails=default)
         {
             Id = id; Name = name; NominalKw = nominalKw; Condition = condition;
             Connected = connected; OrientationKnown = orientationKnown;
             Incidence01 = incidence; AngleDegrees = angleDegrees;
             PanelNormal = panelNormal; SunDirection = sunDirection;
             PotentialKw = potentialKw; OutputKw = connected ? potentialKw : 0;
+            SolarDetails=solarDetails;
         }
 
         public static StationGeneratorView Reactor(string id, string name, float nominalKw,
@@ -55,6 +57,14 @@ namespace SpaceMiner
         }
 
         private static float NonNegative(float value) => float.IsNaN(value) || float.IsInfinity(value) ? 0 : Mathf.Max(0, value);
+        public static StationGeneratorView SolarPhysical(string id,string name,float condition,bool connected,Vector3 normal,BinaryStarView stars,SolarFieldView field)
+        {
+            float unshaded=field.Primary.UnshadedKw+field.Companion.UnshadedKw;
+            float healthyBest=field.NominalAreaM2>0?field.BestKw*field.EffectiveAreaM2/field.NominalAreaM2:0;
+            return new StationGeneratorView(id,name,field.BestKw,Mathf.Clamp01(condition),connected,field.Known,
+                healthyBest>0?Mathf.Clamp01(unshaded/healthyBest):0,field.Primary.AngleDegrees,normal.normalized,
+                stars.Primary.Direction,field.AvailableKw,field);
+        }
         private static bool Unit(Vector3 vector, out Vector3 result)
         {
             float squared = vector.sqrMagnitude;
@@ -69,10 +79,11 @@ namespace SpaceMiner
         public StationGeneratorView Reactor { get; }
         public StationGeneratorView SolarA { get; }
         public StationGeneratorView SolarB { get; }
+        public BinaryStarView Stars {get;}
         public float TotalOutputKw => Reactor.OutputKw + SolarA.OutputKw + SolarB.OutputKw;
 
         public StationGenerationSnapshot(StationGeneratorView reactor, StationGeneratorView solarA,
-            StationGeneratorView solarB)
-        { Reactor = reactor; SolarA = solarA; SolarB = solarB; }
+            StationGeneratorView solarB,BinaryStarView stars=default)
+        { Reactor = reactor; SolarA = solarA; SolarB = solarB; Stars=stars; }
     }
 }

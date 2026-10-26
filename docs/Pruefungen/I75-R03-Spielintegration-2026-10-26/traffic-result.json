@@ -1,0 +1,154 @@
+{
+    "passed": true,
+    "checks": 949,
+    "samples": 5116,
+    "navigationSources": 749,
+    "guidedSamples": 24253,
+    "overtakes": 11,
+    "crossings": 331,
+    "closeEnvelopeChecks": 0,
+    "minimumSeparation": 0.9537704586982727,
+    "simulatedSeconds": 802.6812744140625,
+    "drones": [
+        {
+            "id": "I-01",
+            "route": "Außendrohnenwerkstatt",
+            "meters": 416.83233642578125,
+            "stops": 60,
+            "roomVisits": 32,
+            "overtakes": 0,
+            "position": {
+                "x": 19.524477005004883,
+                "y": 0.09100546687841415,
+                "z": 33.01870346069336
+            }
+        },
+        {
+            "id": "I-02",
+            "route": "Außendrohnenwerkstatt",
+            "meters": 413.80926513671875,
+            "stops": 58,
+            "roomVisits": 29,
+            "overtakes": 0,
+            "position": {
+                "x": 6.703333854675293,
+                "y": 0.1300000101327896,
+                "z": 35.47217559814453
+            }
+        },
+        {
+            "id": "I-03",
+            "route": "Außendrohnenwerkstatt",
+            "meters": 442.2359924316406,
+            "stops": 61,
+            "roomVisits": 31,
+            "overtakes": 0,
+            "position": {
+                "x": 21.968061447143555,
+                "y": 0.07999999821186066,
+                "z": 36.61735534667969
+            }
+        },
+        {
+            "id": "I-04",
+            "route": "Interne Drohnenwerkstatt",
+            "meters": 337.1060485839844,
+            "stops": 76,
+            "roomVisits": 35,
+            "overtakes": 0,
+            "position": {
+                "x": 19.54263687133789,
+                "y": 0.1300000101327896,
+                "z": 24.832345962524414
+            }
+        },
+        {
+            "id": "I-05",
+            "route": "Interne Drohnenwerkstatt",
+            "meters": 368.54437255859375,
+            "stops": 82,
+            "roomVisits": 37,
+            "overtakes": 0,
+            "position": {
+                "x": 14.176724433898926,
+                "y": 0.1300000101327896,
+                "z": 23.235673904418945
+            }
+        },
+        {
+            "id": "I-06",
+            "route": "Kommandozentrale",
+            "meters": 703.58349609375,
+            "stops": 119,
+            "roomVisits": 60,
+            "overtakes": 0,
+            "position": {
+                "x": -4.239593982696533,
+                "y": 0.1300000101327896,
+                "z": 31.314308166503906
+            }
+        },
+        {
+            "id": "I-07",
+            "route": "Kommandozentrale",
+            "meters": 688.8146362304688,
+            "stops": 117,
+            "roomVisits": 57,
+            "overtakes": 0,
+            "position": {
+                "x": -0.3764168322086334,
+                "y": 0.1300000101327896,
+                "z": 34.27763748168945
+            }
+        },
+        {
+            "id": "I-08",
+            "route": "Ringgang",
+            "meters": 458.3216247558594,
+            "stops": 80,
+            "roomVisits": 0,
+            "overtakes": 0,
+            "position": {
+                "x": 30.523103713989258,
+                "y": 0.1300000101327896,
+                "z": 17.681684494018555
+            }
+        },
+        {
+            "id": "I-09",
+            "route": "Ringgang",
+            "meters": 558.637939453125,
+            "stops": 97,
+            "roomVisits": 0,
+            "overtakes": 11,
+            "position": {
+                "x": -10.807835578918457,
+                "y": 0.1300000101327896,
+                "z": 29.694286346435547
+            }
+        },
+        {
+            "id": "I-10",
+            "route": "Ringgang",
+            "meters": 558.1790161132813,
+            "stops": 97,
+            "roomVisits": 0,
+            "overtakes": 0,
+            "position": {
+                "x": 11.615788459777832,
+                "y": 0.1300000101327896,
+                "z": 29.38763999938965
+            }
+        }
+    ],
+    "pictures": [
+        "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Logs\\I75-R03-Integration\\Verified\\Traffic\\Logs\\StationIndoorTraffic\\05-r03-front-in-game.png",
+        "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Logs\\I75-R03-Integration\\Verified\\Traffic\\Logs\\StationIndoorTraffic\\06-r03-side-in-game.png",
+        "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Logs\\I75-R03-Integration\\Verified\\Traffic\\Logs\\StationIndoorTraffic\\07-r03-rear-in-game.png",
+        "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Logs\\I75-R03-Integration\\Verified\\Traffic\\Logs\\StationIndoorTraffic\\01-batterien-gegenueber-zentrale.png",
+        "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Logs\\I75-R03-Integration\\Verified\\Traffic\\Logs\\StationIndoorTraffic\\02-i75-aussenwerkstatt-route.png",
+        "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Logs\\I75-R03-Integration\\Verified\\Traffic\\Logs\\StationIndoorTraffic\\03-i75-interne-werkstatt-route.png",
+        "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Logs\\I75-R03-Integration\\Verified\\Traffic\\Logs\\StationIndoorTraffic\\04-vier-magnetspuren-im-ring.png"
+    ],
+    "scope": "Ten opt-in authored I75 R03 actors, 0.783m including coupling; shared R-01 visual, real collider-built navigation, doors, floor support, room visits, movement, pause and physical battery placement. Four native game-camera framebuffer captures plus three separate close-up camera renders of an actual scene actor. Rotated full-size body envelopes checked with5mm clearance per body. No productive worker grants, manual comfort, OS-input, headset or frame-rate acceptance."
+}

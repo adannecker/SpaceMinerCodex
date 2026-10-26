@@ -1,5 +1,7 @@
 # Projektchats: Gesamtabgleich für den Rechnerwechsel — 26.10.2026
 
+**Herkunft und heutiger Laptop-Abgleich:** Die folgende Auswertung/Exportzählung stammt vom anderen Rechner und ist als geprüfte Quelle erhalten. Auf dem Laptop wurden inzwischen die bestehenden Themenchats aktualisiert und drei ergänzt; IDs/Erreichbarkeit stehen im [Register](Chats/chat-register.json), der gemeinsame Stand im [Kontextupdate](Chats/Kontextupdate-2026-10-26.md). Die hier erhaltene Unity-Migration setzt6000.6.5f1 voraus; die folgenden6000.4.7f1-/6000.6.4f1-Angaben beschreiben den geholten Remote-/Prüfstand. [Einordnung und Prüfgrenzen](Projektabgleich-Laptop-2026-10-26.md).
+
 ## Umfang und Quellen
 
 Alle **24 vorhandenen Gesprächsarchive** unter `docs/Chats` eingelesen und die neun lokal verfügbaren registrierten Sitzungen mit ihren sichtbaren Projekttexten abgeglichen. Das Register enthält **22 Quellen** einschließlich älterer Fortsetzungen und Cloud-Momentaufnahmen; hinzu kommen die drei Ursprungsarchive. Ein registrierter alter Arbeitschat besitzt weder lokale Sitzung noch Textarchiv. Es wurden keine fremden Chats, Unteragenten-Sitzungen, privaten Codex-Daten oder Rohprotokolle übernommen.

@@ -3,57 +3,167 @@
   "threads": [
     {
       "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
-      "title": "GitHub",
+      "title": "Git und Projektabgleich",
       "file": "04-GitHub.md",
-      "topic": "Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung"
+      "topic": "Repository, Projektkontext, Rechnerwechsel und gemeinsame Sicherung",
+      "local_context_status": "acknowledged_read_only",
+      "previous_titles": [
+        {
+          "title": "GitHub",
+          "until": "2026-10-26"
+        }
+      ],
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "local_context_acknowledged_at": "2026-10-26T07:46:46+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T07:46:47+00:00",
+        "basis": "Visible project-context initialization and acknowledgement reviewed in this sync; historical archive prefix preserved.",
+        "after": "2026-10-26T06:00:00+00:00"
+      }
     },
     {
       "id": "01a11007-2934-7520-96c3-3991e89ccaf8",
       "title": "MainDev",
       "file": "05-MainDev.md",
-      "topic": "Unity 6000.4.7f1, 100-Körper-Wolke, optionale Stresstests, Station und Bergbauzyklus"
+      "topic": "Gesamtintegration, Spielsysteme und Projektabgleich; lokal Unity6000.6.5f1, Sprint SP-01 bis SP-10",
+      "local_context_status": "current_chat",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "after": "2026-10-26T06:00:00+00:00",
+        "through": "2026-10-26T15:58:22.791Z",
+        "basis": "Reviewed project-only visible continuation and final outcomes for26Oct publication; no tool/internal messages, credentials or attachment reconstruction. Historical prefix retained."
+      }
     },
     {
       "id": "01a11007-53fc-7d60-af57-f15ed3399d0d",
       "title": "Asteroidenvarianten",
       "file": "06-Asteroidenvarianten.md",
-      "topic": "Asteroidenformen, Materialien und Generator"
+      "topic": "Asteroidenformen, Materialien und Generator",
+      "local_context_status": "acknowledged_read_only",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "local_context_acknowledged_at": "2026-10-26T07:46:13+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T07:46:14+00:00",
+        "basis": "Visible project-context initialization and acknowledgement reviewed in this sync; historical archive prefix preserved.",
+        "after": "2026-10-26T06:00:00+00:00"
+      },
+      "historical_app_cwd": true,
+      "tool_workdir_must_be_explicit": true
     },
     {
       "id": "01a11007-910e-7ff0-a749-82c7af51fde7",
       "title": "Story, Dialoge & Bordcomputer",
       "file": "07-Story-und-Mira.md",
-      "topic": "Mira, Intro und Sprechertexte; Abgleich der Drohnenzahl offen"
+      "topic": "Mira, neun vertonte Questgespräche, Dialogstudio, Acting und Cinematics",
+      "local_context_status": "acknowledged_read_only",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "local_context_acknowledged_at": "2026-10-26T07:47:11+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T13:28:50.669Z",
+        "basis": "Reviewed project-only visible continuation and final outcomes for26Oct publication; no tool/internal messages, credentials or attachment reconstruction. Historical prefix retained.",
+        "after": "2026-10-26T06:00:00+00:00"
+      }
     },
     {
       "id": "01a110c0-50f2-7fa3-8a18-6905e864e5d9",
-      "title": "Settings UI",
+      "title": "UI und Einstellungen",
       "file": "08-Settings-UI.md",
-      "topic": "Mining-Pulse-Stil, Player-Settings, modulare UI und Audiokanäle"
+      "topic": "Gemeinsame UI, Konsolen, Einstellungen, Eingabe und Barrierefreiheit",
+      "local_context_status": "acknowledged_read_only",
+      "previous_titles": [
+        {
+          "title": "Settings UI",
+          "until": "2026-10-26"
+        }
+      ],
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "local_context_acknowledged_at": "2026-10-26T07:46:17+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T13:06:14.284Z",
+        "basis": "Reviewed project-only visible continuation and final outcomes for26Oct publication; no tool/internal messages, credentials or attachment reconstruction. Historical prefix retained.",
+        "after": "2026-10-26T06:00:00+00:00"
+      }
     },
     {
       "id": "01a110fe-dd07-7f93-9a3d-922c469eccf6",
       "title": "Sound und Effekte",
       "file": "09-Sound-und-Effekte.md",
-      "topic": "Configuration- und Gameplay-Musik, Loop-Dateien und Audioübergänge"
+      "topic": "Configuration- und Gameplay-Musik, Loop-Dateien und Audioübergänge",
+      "local_context_status": "acknowledged_read_only",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "local_context_acknowledged_at": "2026-10-26T07:46:37+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T07:46:38+00:00",
+        "basis": "Visible project-context initialization and acknowledgement reviewed in this sync; historical archive prefix preserved.",
+        "after": "2026-10-26T06:00:00+00:00"
+      }
     },
     {
       "id": "01a110fc-1a02-7ad0-8b6e-48129d0b7453",
       "title": "TechTree",
       "file": "10-TechTree.md",
-      "topic": "Tier-I-Entwurf und integriertes Techtree-Menü; Forschungsmechanik offen"
+      "topic": "Elf Kategorien und 159 Einträge; Labor und Kampagnenforschung unterscheiden",
+      "local_context_status": "acknowledged_read_only",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "local_context_acknowledged_at": "2026-10-26T07:47:13+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T07:47:14+00:00",
+        "basis": "Visible project-context initialization and acknowledgement reviewed in this sync; historical archive prefix preserved.",
+        "after": "2026-10-26T06:00:00+00:00"
+      }
     },
     {
       "id": "01a11127-1368-7990-b23f-38b3524b44ca",
-      "title": "Vehicels",
+      "title": "Drohnen und Fahrzeuge",
       "file": "11-Vehicels.md",
-      "topic": "Separater Themenchat für Fahrzeuge; bisher überwiegend übernommener Kontext"
+      "topic": "Innen-/Außendrohnen, I75, Rollen, Verkehr, Docking und Werkzeuge",
+      "local_context_status": "acknowledged_read_only",
+      "previous_titles": [
+        {
+          "title": "Vehicels",
+          "until": "2026-10-26"
+        }
+      ],
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "local_context_acknowledged_at": "2026-10-26T07:46:18+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T07:46:19+00:00",
+        "basis": "Visible project-context initialization and acknowledgement reviewed in this sync; historical archive prefix preserved.",
+        "after": "2026-10-26T06:00:00+00:00"
+      },
+      "historical_app_cwd": true,
+      "tool_workdir_must_be_explicit": true
     },
     {
       "id": "01a110eb-3487-7061-8a24-86afe58bdc1f",
       "title": "SpaceMinerCodex – lokaler Arbeitschat",
       "file": "12-Lokaler-Arbeitschat.md",
-      "topic": "Früher angelegt; derzeit nicht in aktiver Chatliste oder lokalem Sitzungsbestand bestätigt"
+      "topic": "Früher angelegt; derzeit nicht in aktiver Chatliste oder lokalem Sitzungsbestand bestätigt",
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a110d3-f191-75ae-85c3-acc44489105f",
@@ -61,7 +171,8 @@
       "file": "13-Cloud-Sound-und-Effekte.md",
       "topic": "Historischer Cloud-Kontext zu Sound und Effekten; lokale Integration später erfolgt",
       "source": "cloud_snapshot",
-      "snapshot_date": "2026-10-07"
+      "snapshot_date": "2026-10-07",
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a110cb-9fe2-7122-bfd7-66cc4cd92075",
@@ -69,7 +180,8 @@
       "file": "14-Cloud-Techtree.md",
       "topic": "Historischer Cloud-Kontext zu Techtree und Progression; Konzepte von Umsetzung unterscheiden",
       "source": "cloud_snapshot",
-      "snapshot_date": "2026-10-07"
+      "snapshot_date": "2026-10-07",
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a10da1-b11d-7472-b6b4-b34be7f814fd",
@@ -84,7 +196,8 @@
         "through": "2026-10-26T00:03:50.518Z",
         "basis": "Existing curated project prefix retained; only reviewed project continuation after prior snapshot appended. Earlier raw texts deliberately excluded.",
         "after": "2026-10-09T18:12:00.786090+00:00"
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a11264-3942-7ed1-90f4-94bd00b82d06",
@@ -98,7 +211,8 @@
         "review_date": "2026-10-26",
         "through": "2026-10-09T18:09:33.078Z",
         "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a10dd1-fb99-7451-87bf-2d47afa4be7b",
@@ -112,7 +226,8 @@
         "review_date": "2026-10-26",
         "through": "2026-10-09T18:11:09.830Z",
         "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a10dac-caae-7492-bec8-24aac83ec430",
@@ -126,7 +241,8 @@
         "review_date": "2026-10-26",
         "through": "2026-10-26T00:01:10.106Z",
         "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a11264-4cc8-7ef3-8382-90ae4253b766",
@@ -140,7 +256,8 @@
         "review_date": "2026-10-26",
         "through": "2026-10-25T23:27:47.510Z",
         "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a11264-5c12-7473-99be-5d5931f63656",
@@ -154,7 +271,8 @@
         "review_date": "2026-10-26",
         "through": "2026-10-10T22:33:40.641Z",
         "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a11264-6c41-7131-9f43-3de64ff13f86",
@@ -168,7 +286,8 @@
         "review_date": "2026-10-26",
         "through": "2026-10-19T21:18:21.291Z",
         "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a11264-7f0e-7dc2-abf0-aa313f838f8c",
@@ -182,7 +301,8 @@
         "review_date": "2026-10-26",
         "through": "2026-10-26T00:02:36.072Z",
         "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a112cc-1896-7182-8dae-4f9802fab337",
@@ -194,7 +314,8 @@
         "review_date": "2026-10-26",
         "through": "2026-10-09T18:10:15.610Z",
         "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
-      }
+      },
+      "local_context_status": "archive_source_only_on_this_computer"
     },
     {
       "id": "01a11a1b-ae77-7c81-95a0-6b1713dd0579",
@@ -202,7 +323,18 @@
       "file": "22-Ideenbacklog.md",
       "topic": "Lokale Fortsetzung der dokumentierten Ideen, Entwicklungsideen und offene Ausbaustufen",
       "host_id": "local",
-      "source_archive": "21-Ideenbacklog-Desktop.md"
+      "source_archive": "21-Ideenbacklog-Desktop.md",
+      "local_context_status": "acknowledged_read_only",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "local_context_acknowledged_at": "2026-10-26T07:46:57+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T10:31:47.063Z",
+        "basis": "Reviewed project-only visible continuation and final outcomes for26Oct publication; no tool/internal messages, credentials or attachment reconstruction. Historical prefix retained.",
+        "after": "2026-10-26T06:00:00+00:00"
+      }
     },
     {
       "id": "6ac60095-1fdc-83eb-8290-d19a09d9ea90",
@@ -210,8 +342,93 @@
       "file": "23-Intro-Cinematic-Entwurf.md",
       "topic": "Historischer ChatGPT-Storyentwurf mit zwölf Abschnitten; heutige Umsetzung separat dokumentiert",
       "source": "cloud_snapshot",
-      "snapshot_date": "2026-10-08"
+      "snapshot_date": "2026-10-08",
+      "local_context_status": "archive_source_only_on_this_computer"
+    },
+    {
+      "id": "01a17729-74f5-70b1-8b0c-3f87ff2e3095",
+      "title": "Station und Ausbau",
+      "file": "24-Station-und-Ausbau.md",
+      "topic": "Station, Hülle/Havarie, Hallen, Raumplanung und Reparaturauswahl; SP-08",
+      "host_id": "local",
+      "local_context_status": "acknowledged_read_only",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "created_date": "2026-10-26",
+      "local_context_acknowledged_at": "2026-10-26T07:43:33+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T13:26:21.841Z",
+        "basis": "Reviewed project-only visible continuation and final outcomes for26Oct publication; no tool/internal messages, credentials or attachment reconstruction. Historical prefix retained."
+      }
+    },
+    {
+      "id": "01a17729-89b8-7ff0-955b-5add39e48ed5",
+      "title": "Energie und Versorgung",
+      "file": "25-Energie-und-Versorgung.md",
+      "topic": "Energieauslegung, Verbraucher, Akkus/Ladekurven und Eis/Wasser; SP-02/03",
+      "host_id": "local",
+      "local_context_status": "acknowledged_read_only",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "created_date": "2026-10-26",
+      "local_context_acknowledged_at": "2026-10-26T07:43:55+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T07:43:56+00:00",
+        "basis": "Visible project-context initialization and acknowledgement reviewed in this sync; historical archive prefix preserved."
+      }
+    },
+    {
+      "id": "01a17729-b53d-7de1-b207-68185753b783",
+      "title": "3D Modelle und Texturen",
+      "file": "26-3D-Modelle-und-Texturen.md",
+      "topic": "Blender, FBX/GLB/PBR, UV/Normalen/LOD, Modellqualität und tatsächliche Unity-Zuweisung",
+      "host_id": "local",
+      "local_context_status": "acknowledged_read_only",
+      "local_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+      "context_update_file": "Kontextupdate-2026-10-26.md",
+      "explicit_workdir": "C:/Users/achim.dannecker/source/repos/SpaceMinerCodex",
+      "created_date": "2026-10-26",
+      "local_context_acknowledged_at": "2026-10-26T07:43:54+00:00",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T07:43:55+00:00",
+        "basis": "Visible project-context initialization and acknowledgement reviewed in this sync; historical archive prefix preserved."
+      }
     }
   ],
-  "review_scope": "Registered project sources only; no raw session import or reconstructed attachments."
+  "review_scope": "Registered project sources only; no raw session import or reconstructed attachments.",
+  "local_context_snapshot": {
+    "date": "2026-10-26",
+    "remote_commit": "659b514",
+    "local_uncommitted_unity": "6000.6.5f1",
+    "context_file": "Kontextupdate-2026-10-26.md",
+    "current_project_id": "01a110f6-1e92-7560-9e80-8aa9d2047644",
+    "existing_chats": 9,
+    "new_chats": 3,
+    "renamed": [
+      {
+        "id": "01a11127-1368-7990-b23f-38b3524b44ca",
+        "old": "Vehicels",
+        "title": "Drohnen und Fahrzeuge"
+      },
+      {
+        "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
+        "old": "GitHub",
+        "title": "Git und Projektabgleich"
+      },
+      {
+        "id": "01a110c0-50f2-7fa3-8a18-6905e864e5d9",
+        "old": "Settings UI",
+        "title": "UI und Einstellungen"
+      }
+    ],
+    "historical_source_ids_preserved": true,
+    "acknowledged_existing_other_chats": 8,
+    "acknowledged_new_chats": 3,
+    "current_chat_in_sync": true
+  }
 }

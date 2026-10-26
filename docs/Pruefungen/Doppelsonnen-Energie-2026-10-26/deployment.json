@@ -1,0 +1,23 @@
+[
+  {
+    "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\BinaryStarsDevelopment",
+    "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\Windows",
+    "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\Windows-before-binary-stars-20261026-153936",
+    "files": 247,
+    "allSha256Identical": true
+  },
+  {
+    "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\BinaryStarsRelease",
+    "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\WindowsRelease",
+    "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\WindowsRelease-before-binary-stars-20261026-153936",
+    "files": 156,
+    "allSha256Identical": true
+  },
+  {
+    "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\BinaryStarsStudio",
+    "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio",
+    "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio-before-binary-stars-20261026-153936",
+    "files": 247,
+    "allSha256Identical": true
+  }
+]

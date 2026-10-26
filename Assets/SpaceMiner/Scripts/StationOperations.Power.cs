@@ -5,6 +5,8 @@ namespace SpaceMiner
     public sealed partial class StationOperations
     {
         private Transform solarPanelA, solarPanelB;
+        private readonly SolarFieldSampler solarSamplerA=new SolarFieldSampler(),solarSamplerB=new SolarFieldSampler();
+        internal void InvalidateSolarSamples(){solarSamplerA.Invalidate();solarSamplerB.Invalidate();}
         // Persistent source IDs follow their existing sector nodes: A is at
         // 90 degrees / sector3 (+X), B at270 degrees / sector9 (-X).
         public Transform SolarPanelA => FindSolarPanel(ref solarPanelA, "Solar Wing Right");
@@ -13,24 +15,24 @@ namespace SpaceMiner
 
         public StationGenerationSnapshot CaptureGeneration()
         {
-            var sun = RenderSettings.sun;
-            // RuinedWorld.Start installs the real sunlight. Before that point use
-            // its same fixed world direction, never an interior or helmet light.
-            Vector3 sunDirection = sun != null ? -sun.transform.forward : RuinedWorld.SunPosition.normalized;
+            var stars=BinaryStarEnergy.Observe(transform.position);
             var reactor = Element("reactor");
             return new StationGenerationSnapshot(
                 StationGeneratorView.Reactor("reactor", "Reaktor", Scenario != null ? Scenario.ReactorPowerKw : 0,
                     reactor != null ? reactor.condition : 0, reactor != null && reactor.built && Powered(reactor.sector)),
-                CaptureSolar("solar-a", "Solarfeld A", SolarPanelA, sunDirection),
-                CaptureSolar("solar-b", "Solarfeld B", SolarPanelB, sunDirection));
+                CaptureSolar("solar-a", "Solarfeld A", SolarPanelA, stars,solarSamplerA),
+                CaptureSolar("solar-b", "Solarfeld B", SolarPanelB, stars,solarSamplerB),stars);
         }
 
-        private StationGeneratorView CaptureSolar(string id, string name, Transform panel, Vector3 sunDirection)
+        private StationGeneratorView CaptureSolar(string id, string name, Transform panel, BinaryStarView stars,SolarFieldSampler sampler)
         {
             var element = Element(id);
-            return StationGeneratorView.Solar(id, name, Scenario != null ? Scenario.SolarPowerKw * .5f : 0,
-                element != null ? element.condition : 0, element != null && element.built && Powered(element.sector),
-                panel != null, panel != null ? panel.up : Vector3.zero, sunDirection);
+            float condition=element!=null?element.condition:0;
+            // Preserve the existing save field and its relative developer overrides.
+            float calibration=Scenario!=null?Mathf.Max(0,Scenario.SolarPowerKw)/BinaryStarEnergy.LegacyNeutralSolarSetting:0;
+            var field=sampler.Capture(panel,stars,condition,calibration);
+            return StationGeneratorView.SolarPhysical(id,name,condition,element!=null&&element.built&&Powered(element.sector),
+                panel!=null?panel.up:Vector3.zero,stars,field);
         }
 
         private Transform FindSolarPanel(ref Transform cached, string name)

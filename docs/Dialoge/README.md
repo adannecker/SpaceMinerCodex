@@ -20,7 +20,9 @@ Alle vorhandenen Mira-Dialoge im Spiel, die 16 Erwachen-Cues und alle zwölf Eri
 
 Mira soll als Stations-KI mit Avatar Forschungsvorschläge machen und Projekte unter zusätzlichem Energiebedarf begleiten. Erstes Nutzerbeispiel: Abbaudrohnen zu Außen-Reparaturdrohnen umfunktionieren; eine aktivierte interne Helferdrohne setzt den Umbau im Dock um. Spätere Dialoge sollen Anlass, Voraussetzungen und Fortschritt verständlich machen. Noch keine neuen Forschungsdialoge aufgenommen oder implementiert. Zielbild und offene Helferaktivierung: [Spielidee](../Spielidee.md#chapter-1-drohnen-mira-forschung-und-ausbauziele-08102026).
 
-## Aktuelle Sequenzen
+## Historischer Sequenzstand vom 08.10.2026
+
+Die folgenden Angaben über fehlende Scanner-/Questaufnahmen gelten für den damaligen Stand. Beide Introzeilen und 22 Questaufnahmen sind inzwischen vorhanden; der aktuelle Stand steht am Anfang dieser Datei und in `MiraAvatar.md`.
 
 Aktueller Stand 08.10.2026: [Erwachen und erster Auftrag](01_Intro_Erwachen.md) verwenden die freigegebene Aoede-Stimme mit 14 unveränderten lokalen WAV-Cues. Zwei neue Scan-Introtexte und die ergänzten Questdialoge sind vorerst Text; passende neue Aoede-Aufnahmen fehlen noch. Hedda-Originale liegen unter Sprachproben/Hedda_Original. Die ältere Maya-Vorschau (Resources/Intro/mira_maya_preview.mp3 und 01_Intro_Maya.srt) bleibt als historische Alternative archiviert; sie ist nicht die aktive Stimme.
 

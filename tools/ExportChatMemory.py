@@ -16,7 +16,7 @@ from urllib.parse import parse_qsl, urlsplit, urlunsplit
 ROOT = Path(__file__).resolve().parents[1]
 CONTINUATION = '<!-- reviewed-project-continuation -->'
 TAGS = ('environment_context', 'in-app-browser-context', 'external_codex_apps_open_page',
-        'external_codex_apps_writing_block_edits', 'app-context')
+        'external_codex_apps_writing_block_edits', 'app-context', 'oai-mem-citation')
 URL = re.compile(r'https?://[^\s<>"\[\]`]+')
 EMAIL = re.compile(r'(?<![\w.-])[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}')
 SECRET = re.compile(r'\b(?:sk-[A-Za-z0-9_-]{20,}|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AIza[A-Za-z0-9_-]{30,}|AKIA[A-Z0-9]{16})\b')
@@ -143,6 +143,7 @@ def export(root, session_dirs, stamp):
     index = ['# Projektchats und gemeinsames Chatmemory', '', f'Exportstand: {stamp}.', '',
         'Lesbare Projektmomentaufnahmen, kein importierbares Codex-Sitzungsformat. Nur registrierte und bis zum festgehaltenen Zeitpunkt geprüfte Nutzer-/Assistententexte. System-, Analyse-, Werkzeug- und Umgebungstexte werden ausgelassen. Persönliche E-Mail-Adressen und erkannte Zugangsschlüssel/temporäre URL-Parameter werden bereinigt. Anhänge werden nicht rekonstruiert; übernommene Assets liegen im Projekt.', '',
         'Aktuell: [Projektmemory](../Projektmemory.md), [Projektübergabe](../Projektuebergabe.md). Themenabgleich und Konflikte: [Chat-Auswertung vom 26.10.2026](../Chat-Auswertung-2026-10-26.md). Historische Tests/Pfade sind keine heutige Abnahme. Chat-IDs erzeugen auf einem anderen Rechner keine Sitzungen.', '',
+        'Aktueller Laptop-Kontext, umbenannte und neue Themenchats: [Kontextupdate vom 26.10.2026](Kontextupdate-2026-10-26.md). [Lokaler Projektabgleich](../Projektabgleich-Laptop-2026-10-26.md) erklärt den erhaltenen Unity-Versionsstand und die hiesige Erreichbarkeit; ältere Exportzahlen gelten für ihren jeweiligen Rechner.', '',
         '## Ursprüngliche Archive vom 05.10.2026', '',
         '- [Unity-Spiel gemeinsam entwickeln](01-Unity-Spiel.md)',
         '- [Asteroidenvarianten entwerfen](02-Asteroiden.md)',

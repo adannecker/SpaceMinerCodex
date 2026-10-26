@@ -15,15 +15,16 @@ namespace SpaceMiner
         private WaterScenario scenario;
         private StationInteriorMode interior;
         private int checks, samples, guidedSamples;
+        private int closeEnvelopeChecks;
         private bool failed;
         private float minSeparation=float.PositiveInfinity;
         private readonly List<string> pictures=new List<string>();
         [Serializable] private sealed class Trip { public string id,route; public float meters; public int stops,roomVisits,overtakes; public Vector3 position; }
         [Serializable] private sealed class Report
         {
-            public bool passed; public int checks,samples,navigationSources,guidedSamples,overtakes,crossings; public float minimumSeparation,simulatedSeconds;
+            public bool passed; public int checks,samples,navigationSources,guidedSamples,overtakes,crossings,closeEnvelopeChecks; public float minimumSeparation,simulatedSeconds;
             public Trip[] drones; public string[] pictures;
-            public string scope="Ten opt-in visual I75 V02 actors, 0.75m length; real collider-built navigation, doors, floor support, room visits, movement, pause and physical battery placement. Native game-camera framebuffer captures. No productive worker grants, manual comfort, OS-input, headset or frame-rate acceptance.";
+            public string scope="Ten opt-in authored I75 R03 actors, 0.783m including coupling; shared R-01 visual, real collider-built navigation, doors, floor support, room visits, movement, pause and physical battery placement. Four native game-camera framebuffer captures plus three separate close-up camera renders of an actual scene actor. Rotated full-size body envelopes checked with5mm clearance per body. No productive worker grants, manual comfort, OS-input, headset or frame-rate acceptance.";
         }
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Install()
@@ -80,7 +81,23 @@ namespace SpaceMiner
                     if(other==drone)continue;
                     float separation=Vector3.Distance(p,other.Agent.transform.position);
                     minSeparation=Mathf.Min(minSeparation,separation);
-                    if(separation<.75f)throw new Exception("Traffic bodies intersect / "+drone.Id+" / "+other.Id+" / "+separation);
+                    // Circular broad phase, then separating-axis test of the actual
+                    // rotated 0.482 x 0.783m envelope, with 5mm clearance per body.
+                    if(separation<.94f)
+                    {
+                        closeEnvelopeChecks++;
+                        var a=drone.Agent.transform;var b=other.Agent.transform;var delta=b.position-a.position;
+                        bool separate=false;
+                        foreach(var axis in new[]{a.right,a.forward,b.right,b.forward})
+                        {
+                            float ra=(IndoorDroneVisual.Width*.5f+.005f)*Mathf.Abs(Vector3.Dot(a.right,axis))
+                                +(IndoorDroneVisual.OverallLength*.5f+.005f)*Mathf.Abs(Vector3.Dot(a.forward,axis));
+                            float rb=(IndoorDroneVisual.Width*.5f+.005f)*Mathf.Abs(Vector3.Dot(b.right,axis))
+                                +(IndoorDroneVisual.OverallLength*.5f+.005f)*Mathf.Abs(Vector3.Dot(b.forward,axis));
+                            if(Mathf.Abs(Vector3.Dot(delta,axis))>=ra+rb){separate=true;break;}
+                        }
+                        if(!separate)throw new Exception("R03 oriented envelopes intersect / "+drone.Id+" / "+other.Id+" / "+separation);
+                    }
                 }
             }
             samples++;
@@ -94,6 +111,29 @@ namespace SpaceMiner
                 if(drone.Distance<15 || drone.StopsReached<drone.Stops.Length*3+2 || (drone.Route!="Ringgang"&&drone.RoomVisits<12))return false;
             }
             return passes>0;
+        }
+        private void CaptureModel(string name, Vector3 offset)
+        {
+            // Actual in-game actor, materials and station lighting; only the camera
+            // changes. These close-ups are separate from native framebuffer captures.
+            var actor=traffic.Vehicles[0].Agent.transform;
+            var camera=new GameObject("R03 inspection camera").AddComponent<Camera>();
+            camera.CopyFrom(Camera.main);camera.enabled=false;
+            camera.transform.position=actor.TransformPoint(offset);
+            camera.transform.LookAt(actor.TransformPoint(Vector3.up*.23f));
+            camera.fieldOfView=43;camera.nearClipPlane=.025f;
+            var rt=new RenderTexture(1600,1000,24);var previous=RenderTexture.active;
+            camera.targetTexture=rt;ops.RefreshViewLighting(camera,true);
+            try
+            {
+                camera.Render();RenderTexture.active=rt;
+                var pixels=new Texture2D(1600,1000,TextureFormat.RGB24,false);
+                pixels.ReadPixels(new Rect(0,0,1600,1000),0,0);pixels.Apply();
+                string path=Path.GetFullPath(Folder+"/"+name+".png");
+                File.WriteAllBytes(path,pixels.EncodeToPNG());Destroy(pixels);pictures.Add(path);
+                Require(File.Exists(path),"actual R03 scene close-up / "+name);
+            }
+            finally{RenderTexture.active=previous;camera.targetTexture=null;rt.Release();Destroy(rt);Destroy(camera.gameObject);ops.RefreshViewLighting(Camera.main,true);}
         }
         private void CheckLaneGeometry()
         {
@@ -163,8 +203,19 @@ namespace SpaceMiner
                             if(first){bounds=new Bounds(point,Vector3.zero);first=false;}else bounds.Encapsulate(point);
                         }
                     }
-                    Require(!first&&Mathf.Abs(bounds.size.z-.75f)<.02f,"75cm imported model / "+drone.Id);
+                    var visual=drone.Agent.GetComponentInChildren<IndoorDroneVisual>();
+                    Require(visual!=null&&visual.highBody!=null,"authored R03 replaces temporary visual / "+drone.Id);
+                    Require(!first&&Mathf.Abs(bounds.size.z-IndoorDroneVisual.OverallLength)<.004f
+                        &&Mathf.Abs(bounds.size.x-IndoorDroneVisual.Width)<.004f,"R03 real width and length including coupling / "+drone.Id);
+                    Require(bounds.min.y>=-.002f&&bounds.max.y<.45f,"R03 floor pivot and height / "+drone.Id);
+                    Require(new Vector2(bounds.extents.x,bounds.extents.z).magnitude<drone.Agent.radius,"full R03 envelope inside navigation clearance / "+drone.Id);
+                    var lod=visual.GetComponent<LODGroup>();
+                    Require(lod!=null&&lod.GetLODs().Length==3&&visual.indicators.Length==3,"three detail levels and real status lights / "+drone.Id);
                 }
+                Require(ops.Layout.RepairDrone.GetComponentInChildren<IndoorDroneVisual>()!=null,"productive R-01 uses same authored R03 visual");
+                CaptureModel("05-r03-front-in-game",new Vector3(.48f,.65f,1.05f));
+                CaptureModel("06-r03-side-in-game",new Vector3(1.15f,.53f,.05f));
+                CaptureModel("07-r03-rear-in-game",new Vector3(-.48f,.65f,-1.05f));
                 Require(ops.BatteryBays[0].Installed&&ops.BatteryBays[0].Coupled&&ops.BatteryBays[1].Installed&&!ops.BatteryBays[1].Coupled,"physical pair across command entrance");
                 Require(!ops.BatteryBays[4].Installed&&!ops.BatteryBays[5].Installed&&ops.State.power.capacityKwh==24,"far pair empty and original 24kWh retained");
                 interior.RestoreInterior(World(new Vector3(2,.04f,40.5f)),false,ops.Layout.transform.eulerAngles.y+180,3);
@@ -239,7 +290,7 @@ namespace SpaceMiner
             yield return Capture("04-vier-magnetspuren-im-ring");if(failed)yield break;
             if(!Guard(()=>{
                 var drones=new List<Trip>();int passes=0;foreach(var drone in traffic.Vehicles){passes+=drone.Overtakes;drones.Add(new Trip{id=drone.Id,route=drone.Route,meters=drone.Distance,stops=drone.StopsReached,roomVisits=drone.RoomVisits,overtakes=drone.Overtakes,position=ops.Layout.transform.InverseTransformPoint(drone.Agent.transform.position)});}
-                File.WriteAllText(Folder+"/result.json",JsonUtility.ToJson(new Report{passed=true,checks=checks,samples=samples,guidedSamples=guidedSamples,overtakes=passes,crossings=traffic.CompletedCrossings,simulatedSeconds=Time.time-began,navigationSources=traffic.NavigationSourceCount,minimumSeparation=minSeparation,drones=drones.ToArray(),pictures=pictures.ToArray()},true));
+                File.WriteAllText(Folder+"/result.json",JsonUtility.ToJson(new Report{passed=true,checks=checks,samples=samples,guidedSamples=guidedSamples,closeEnvelopeChecks=closeEnvelopeChecks,overtakes=passes,crossings=traffic.CompletedCrossings,simulatedSeconds=Time.time-began,navigationSources=traffic.NavigationSourceCount,minimumSeparation=minSeparation,drones=drones.ToArray(),pictures=pictures.ToArray()},true));
                 Debug.Log("STATION INDOOR TRAFFIC CHECK PASSED / "+checks);Application.Quit(0);
             }))yield break;
         }

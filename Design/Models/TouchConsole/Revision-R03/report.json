@@ -1,0 +1,14 @@
+{
+  "glassFrontHeight": 0.9069362282752991,
+  "glassRearHeight": 1.1067577600479126,
+  "glassDepth": 0.9194588661193848,
+  "glassSlopeLength": 0.94,
+  "tiltDegrees": 12,
+  "chassisNominal": [
+    1.5,
+    1.14,
+    1.0
+  ],
+  "screenPlanar": true,
+  "unityIntegration": false
+}

@@ -4,7 +4,7 @@ Eigenständige Darstellung aller elf Kapitel-1-Bäume. Keine Unity-Kopie und kei
 
 Start in diesem Ordner: `npm start`, anschliessend http://127.0.0.1:4317 öffnen. Voraussetzung: Node.js. Keine zusätzlichen Pakete. Geometrieprüfung: `npm test`.
 
-Gesamtbaum standardmässig vollständig sichtbar. Zoom endet an der verfügbaren Höhe. Ausschliesslich horizontal per Ziehen verschieben, ohne Scrollbalken. Details öffnen sich per Klick oder Tastatur. Individuelle Ein-/Ausgangsports und orthogonale Linien; auch zusätzliche lokale Elternverbindungen werden dargestellt. Die Vorschau stellt Katalogentwürfe dar und simuliert keine Forschung oder Spielstände. Kosten, Balancingzeiten und externe Freischaltungen sind hier keine verbindliche Spielaussage.
+Aktuell: einheitliche 72px-Ausgangsicons und 1:1-Reset, manuelles Zoomen sowie Verschieben in beide Richtungen ohne Scrollbalken. Große Bäume bleiben in derselben Ausgangsgröße und können über den sichtbaren Bereich hinausreichen. Details öffnen sich per Klick oder Tastatur. Individuelle Ein-/Ausgangsports, orthogonale Linien und gemeinsame Verteiler für passende Endpunktgruppen; auch zusätzliche lokale Elternverbindungen werden dargestellt. Die Vorschau stellt Katalogentwürfe dar und simuliert keine Forschung oder Spielstände. Kosten, Balancingzeiten und externe Freischaltungen sind hier keine verbindliche Spielaussage.
 
 36 technische Miniaturbilder in `assets/technology-atlas-v1.png`, explizite Zuordnung für alle 159 Einträge in `assets/atlas.json`. Bilder wurden mit dem eingebauten Imagegen am 09.10.2026 erzeugt. Mehrere passende Technologien verwenden dasselbe Motiv. Der Atlas bleibt für eine spätere Unity-Integration wiederverwendbar. Prompt: siehe `assets/image-generation.md`.
 

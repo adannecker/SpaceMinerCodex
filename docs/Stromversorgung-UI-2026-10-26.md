@@ -1,5 +1,9 @@
 # Stromversorgungs-UI — 26.10.2026
 
+**Gemeinsamer futuristischer UI-Stil —26.10.2026:** Leicht gerundete Karten/Buttons, feine Cyan-Rahmen, Amber-Auswahl, dezente Flächen und klare Fokus-/Hoverzustände über gemeinsame `SpaceMinerUi`/`UiChrome`-Bausteine. HUD, Menüs, Strom-/Drohnenkonsole und Konsolenstudio angepasst; bestehende Positionen, Klickbereiche, Daten und Skalierung erhalten. Finale drei Builds Unity6000.6.5f1;535 vorhandene numerische Playerchecks,36 Studioaufnahmen sowie Settings-/Startmenüprüfungen bestanden. Drei Nutzerraumpläne erhalten, vorige Player gesichert, normale Startversionen aktualisiert. [Gestaltung, Bild und Grenzen](Interface-Stil-2026-10-26.md), [Nachweis](Pruefungen/Interface-Stil-2026-10-26.json). Kein Commit/Push.
+
+**Doppelsonnen und Strominterface —26.10.2026:** Beide Sterne sind jetzt physikalisch definiert:5000K/0,80R☉ und4200K/0,65R☉; am Stationsursprung451,57+155,85=607,42W/m².1800 Darstellungs-km=1Energie-AE, lokale Meter bleiben unverändert. Echte PV-Flächen, zwei Winkel, Schatten, Zustand und Netzverbindung bestimmen die Erzeugung. Neuer Reiter **SONNEN2**, gleiche Ansicht im Konsolenstudio. Akku lädt höchstens0,5C/12kW, Überschuss wird abgeregelt. Drei aktuelle Builds mit Unity6000.6.5f1;507 Strom-/Sonnenchecks,97 Stationschecks und36 Studioaufnahmen bestanden,22 analytische Checks. Vorige Player gesichert, drei Originalraumpläne erhalten. [Werte, Bedienung und Grenzen](Doppelsonnen-Energie-2026-10-26.md), [Prüfnachweis](Pruefungen/Doppelsonnen-Energie-2026-10-26.json). Frühere Angaben „Sternwerte unbekannt“/1,0+0,5L☉ beschreiben den vorherigen Stand. Weitere Verbraucher-/Reaktor-/Drohnenauslegung bleibt offen; keine Dosissimulation, kein Commit/Push.
+
 Der Nutzer hat das [vierseitige Konzept](Stromversorgung-UI-Konzept-2026-10-25.md) freigegeben und die Verwendung der tatsächlichen Ingame-Modelle angeordnet. Das vorhandene physische Strompult in der Zentrale erhält eine bildschirmfüllende Navy/Cyan/Amber-Oberfläche. Kein neues Unity-Projekt und keine neue Szene.
 
 ## Bedienung
@@ -36,3 +40,8 @@ Final tatsächlich geprüft: Development und Release mit Unity6000.6.4f1 in `Bui
 Ausgeliefert: `Builds/Windows` (Development, bestehender Launcher), `Builds/PowerDashboardRelease` (Release). Vorheriger normaler Player unter `Builds/Windows-before-power-ui-20261026` bewahrt;403 kopierte Builddateien SHA256-identisch. Bilder und Datenbelege unter [Prüfdateien](Pruefungen/Stromversorgung-UI-2026-10-26/power-result.json).
 
 Während dieser Arbeit ergänzte der Story/Mira-Chat Questdialoge in den gemeinsamen `StationOperations.cs`/`.Ui.cs` und weiteren Fachdateien. Deren konkrete Änderungen (`-miraQuestGameCheck`, `RestoreMiraQuestProgress`, `PresentQuestDialogue`) wurden beim Quellabgleich erkannt und vollständig im Checkout erhalten. Unsere Telemetrie-/Vorschaufreigabe bleibt in beiden Fassungen vorhanden. Der ausgelieferte und geprüfte Strombuild verwendet den davor aufgenommenen Mira-Dialogsnapshot; kein ungeprüftes Zusammenführen in die laufende Story-Arbeit. Vierzehn von16 betrachteten Quellen/Metas sind mit dem aktuellen Checkout identisch; die zwei erwarteten gemeinsamen-Dateiabweichungen sind mit beiden Hashes, As-built-Dateien und Diffs im Prüfbericht dokumentiert. Auch die parallele neue I75-Texturarbeit bleibt erhalten und wurde nicht zusätzlich ins Prefab übernommen.
+
+
+## Eigenständiger Layouttest — 26.10.2026
+
+Das [Konsolenstudio](Konsolenstudio.md) verwendet jetzt denselben PowerConsoleView-Renderer wie diese Spielkonsole. Separater Player ohne Kampagne, zunächst Testschema statt Stationsmodell. Finale Studio- und Spielprüfung samt Grenzen: [Nachweis](Pruefungen/Konsolenstudio-2026-10-26.json). Reguläre Builds/Windows-Installation nicht ersetzt.

@@ -1,71 +1,147 @@
 {
-  "exported_at": "2026-10-26T00:09:41.672896+00:00",
+  "exported_at": "2026-10-26T16:02:45.759077+00:00",
   "scope": "registered_reviewed_visible_project_messages_only",
   "raw_session_files_committed": false,
   "threads": [
     {
       "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
-      "title": "GitHub",
+      "title": "Git und Projektabgleich",
       "file": "04-GitHub.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "e4b5dda983bc8e24088b275c94005ca55c83e919e783c159938cee33dd19431c"
+      "curated_prefix_sha256": "cdcd9cc7ebbc21eec7853d07c839e8393290020d5b9292e23377bfbeb87e7fec",
+      "status": "curated_extended",
+      "messages": 2,
+      "reviewed_through": "2026-10-26T07:46:47+00:00",
+      "sanitization": {
+        "context_blocks_omitted": 1,
+        "curated_prefix_raw_messages_omitted": 64,
+        "empty_messages_omitted": 2,
+        "instruction_messages_omitted": 1,
+        "nonvisible_roles_omitted": 15
+      },
+      "archive_sha256": "4084ad0b87d9811409aec2847e7212adb1089b7f2647616b0ef9dad0c9c37982"
     },
     {
       "id": "01a11007-2934-7520-96c3-3991e89ccaf8",
       "title": "MainDev",
       "file": "05-MainDev.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "1ec128005537314648f7e8de46390e1ccf462f44192aaf9bc3c04acde2922971"
+      "curated_prefix_sha256": "e1ba5038099bbb446725d00b95759f38b86845e9e13bc3949fcc6c92d8e4b83d",
+      "status": "curated_extended",
+      "messages": 86,
+      "reviewed_through": "2026-10-26T15:58:22.791Z",
+      "sanitization": {
+        "answer_envelopes_simplified": 1,
+        "attachment_envelopes_omitted": 6,
+        "attachment_preambles_omitted": 1,
+        "context_blocks_omitted": 15,
+        "curated_prefix_raw_messages_omitted": 293,
+        "empty_messages_omitted": 6,
+        "instruction_messages_omitted": 2,
+        "nonvisible_roles_omitted": 67
+      },
+      "archive_sha256": "4dfd9dbd2306345a219784f54b6a9e6cf448e44cae2ccb3d2df3e3b8a81a8c5e"
     },
     {
       "id": "01a11007-53fc-7d60-af57-f15ed3399d0d",
       "title": "Asteroidenvarianten",
       "file": "06-Asteroidenvarianten.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "d6bc1932bd27396108525e5e1f8b32f0b226e22ab9618791772ce1368ed7e856"
+      "curated_prefix_sha256": "4948ebb7b8b2154aa3d2e5106f326115421223cf248310ec8d96934d583713a4",
+      "status": "curated_extended",
+      "messages": 2,
+      "reviewed_through": "2026-10-26T07:46:14+00:00",
+      "sanitization": {
+        "context_blocks_omitted": 1,
+        "curated_prefix_raw_messages_omitted": 12,
+        "empty_messages_omitted": 1,
+        "nonvisible_roles_omitted": 13
+      },
+      "archive_sha256": "7ea6ce22d72bd88e9adf180783536fcc29bca4665e74be9874685ce3b084f8a6"
     },
     {
       "id": "01a11007-910e-7ff0-a749-82c7af51fde7",
       "title": "Story, Dialoge & Bordcomputer",
       "file": "07-Story-und-Mira.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "cbb7c29feef53b2be98a8e9890c77a08ea784ccce82bb233d7d009d2d3469ade"
+      "curated_prefix_sha256": "e0fe5807538646eb25ee570e0f965ffb23fd06642faa6c46d442356b96fa130e",
+      "status": "curated_extended",
+      "messages": 59,
+      "reviewed_through": "2026-10-26T13:28:50.669Z",
+      "sanitization": {
+        "answer_envelopes_simplified": 1,
+        "attachment_envelopes_omitted": 1,
+        "attachment_preambles_omitted": 1,
+        "context_blocks_omitted": 14,
+        "curated_prefix_raw_messages_omitted": 405,
+        "empty_messages_omitted": 3,
+        "instruction_messages_omitted": 1,
+        "nonvisible_roles_omitted": 55
+      },
+      "archive_sha256": "a7a04df1b7305073ddcad971fe5816a50849b6f9baac6ecec015c56d0851e7f6"
     },
     {
       "id": "01a110c0-50f2-7fa3-8a18-6905e864e5d9",
-      "title": "Settings UI",
+      "title": "UI und Einstellungen",
       "file": "08-Settings-UI.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "7a2e9caac4d4452681a4619bfaf2ac4c70598e2f2c1163add12f6a729b41cc59"
+      "curated_prefix_sha256": "84277247c76ca3947763bc723d655cdd3122143e892ba9240470bfde27d7176f",
+      "status": "curated_extended",
+      "messages": 46,
+      "reviewed_through": "2026-10-26T13:06:14.284Z",
+      "sanitization": {
+        "context_blocks_omitted": 12,
+        "curated_prefix_raw_messages_omitted": 73,
+        "empty_messages_omitted": 3,
+        "instruction_messages_omitted": 1,
+        "nonvisible_roles_omitted": 21
+      },
+      "archive_sha256": "78160ac462f2052334b6e3eef509800054dd8c499c5847dcd960b7fed790eaac"
     },
     {
       "id": "01a110fe-dd07-7f93-9a3d-922c469eccf6",
       "title": "Sound und Effekte",
       "file": "09-Sound-und-Effekte.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "d44c29739e4eac6341960548eedaf01230ff759a347ee4594437be6f6164c46f"
+      "curated_prefix_sha256": "d88e318aad076f9ed9bf061c9bd146b4df72e775bbd24ec209b2dd98e11a7ac2",
+      "status": "curated_extended",
+      "messages": 2,
+      "reviewed_through": "2026-10-26T07:46:38+00:00",
+      "sanitization": {
+        "context_blocks_omitted": 1,
+        "curated_prefix_raw_messages_omitted": 43,
+        "empty_messages_omitted": 2,
+        "instruction_messages_omitted": 1,
+        "nonvisible_roles_omitted": 15
+      },
+      "archive_sha256": "83a0824d8c6aa4076dcb49656e23eb94d0c7258b770e40b1bdf4b60528b274de"
     },
     {
       "id": "01a110fc-1a02-7ad0-8b6e-48129d0b7453",
       "title": "TechTree",
       "file": "10-TechTree.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "ba51c421afa359adecd5241aed69626e5a461220145346cdc2697a52a6f6c69b"
+      "curated_prefix_sha256": "494a54e3e98137379c569667ab877b456461d0fd6de38ebf5602980b4fa0a6a2",
+      "status": "curated_extended",
+      "messages": 2,
+      "reviewed_through": "2026-10-26T07:47:14+00:00",
+      "sanitization": {
+        "context_blocks_omitted": 1,
+        "curated_prefix_raw_messages_omitted": 103,
+        "empty_messages_omitted": 2,
+        "instruction_messages_omitted": 1,
+        "nonvisible_roles_omitted": 24
+      },
+      "archive_sha256": "cf52d0e5bb57eafde1e41eed6af84c4a118cff7512ba4d79cb6771f571fb6b55"
     },
     {
       "id": "01a11127-1368-7990-b23f-38b3524b44ca",
-      "title": "Vehicels",
+      "title": "Drohnen und Fahrzeuge",
       "file": "11-Vehicels.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "d070569213a9a34d3dce02cc955f009442bd4fe67b48d69eeac46fc75ddf2158"
+      "curated_prefix_sha256": "1529878dcd08b5e323c5fd097c00728179f9a21830aeb618cee9209d58a35e8b",
+      "status": "curated_extended",
+      "messages": 2,
+      "reviewed_through": "2026-10-26T07:46:19+00:00",
+      "sanitization": {
+        "context_blocks_omitted": 1,
+        "curated_prefix_raw_messages_omitted": 30,
+        "empty_messages_omitted": 1,
+        "nonvisible_roles_omitted": 10
+      },
+      "archive_sha256": "d4feb3ff12bf1fa3f73bf96ceabff7a18284bcc24d3e5b0f6078ec99b49cf2e4"
     },
     {
       "id": "01a110eb-3487-7061-8a24-86afe58bdc1f",
@@ -80,7 +156,7 @@
       "file": "13-Cloud-Sound-und-Effekte.md",
       "status": "cloud_snapshot_preserved",
       "source_snapshot_date": "2026-10-07",
-      "archive_sha256": "04a010a3945cea4261bf9fa8874f764d753e2399ff7e48001bff035fd6cd5879"
+      "archive_sha256": "c169aaa4c4fc6065da6c66231121ab911caed22db9cf2ef459d291b3336b5433"
     },
     {
       "id": "01a110cb-9fe2-7122-bfd7-66cc4cd92075",
@@ -88,163 +164,96 @@
       "file": "14-Cloud-Techtree.md",
       "status": "cloud_snapshot_preserved",
       "source_snapshot_date": "2026-10-07",
-      "archive_sha256": "28c052cf5433bba486d8f9ed5af70377abfd0cdf153bbd9d2e050c6f96a94c93"
+      "archive_sha256": "053caa0990440da6e417cf2b5cb1ab8ab26d4dc6698c9ca803ef2b13c33d59e9"
     },
     {
       "id": "01a10da1-b11d-7472-b6b4-b34be7f814fd",
       "title": "MainDev",
       "file": "13-MainDev-Desktop.md",
-      "curated_prefix_sha256": "2b958fe76a1be6541c47f6b53f93fec62da14f748a11c9a68cf6ea2972d2ad30",
-      "status": "curated_extended",
-      "messages": 364,
-      "reviewed_through": "2026-10-26T00:03:50.518Z",
-      "sanitization": {
-        "after_review_messages_omitted": 1,
-        "answer_envelopes_simplified": 3,
-        "attachment_envelopes_omitted": 24,
-        "attachment_preambles_omitted": 11,
-        "context_blocks_omitted": 13,
-        "curated_prefix_raw_messages_omitted": 247,
-        "empty_messages_omitted": 9,
-        "nonvisible_roles_omitted": 72
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "7d212668aaf1726fe571dee9fe027518fc52b6b888c8e6ad24902c2e65b3c27e"
     },
     {
       "id": "01a11264-3942-7ed1-90f4-94bd00b82d06",
       "title": "GitHub",
       "file": "14-GitHub-Desktop.md",
-      "status": "exported_reviewed",
-      "messages": 13,
-      "reviewed_through": "2026-10-09T18:09:33.078Z",
-      "sanitization": {
-        "context_blocks_omitted": 2,
-        "empty_messages_omitted": 3,
-        "instruction_messages_omitted": 1,
-        "nonvisible_roles_omitted": 7
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "0a8050ee22ffb2f3cc5444aad42bb39078777d3384a740b46f912c92a65fbc83"
     },
     {
       "id": "01a10dd1-fb99-7451-87bf-2d47afa4be7b",
       "title": "Asteroidenvarianten",
       "file": "15-Asteroidenvarianten-Desktop.md",
-      "status": "exported_reviewed",
-      "messages": 22,
-      "reviewed_through": "2026-10-09T18:11:09.830Z",
-      "sanitization": {
-        "context_blocks_omitted": 4,
-        "empty_messages_omitted": 5,
-        "instruction_messages_omitted": 1,
-        "nonvisible_roles_omitted": 11
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "ce8e919ed2c5aed40cd1f72f8db60cbc1c8f706a2460729667afd0cc34128b8e"
     },
     {
       "id": "01a10dac-caae-7492-bec8-24aac83ec430",
       "title": "Story, Dialoge & Bordcomputer",
       "file": "16-Story-und-Mira-Desktop.md",
-      "status": "exported_reviewed",
-      "messages": 210,
-      "reviewed_through": "2026-10-26T00:01:10.106Z",
-      "sanitization": {
-        "answer_envelopes_simplified": 4,
-        "attachment_envelopes_omitted": 1,
-        "attachment_preambles_omitted": 2,
-        "context_blocks_omitted": 50,
-        "empty_messages_omitted": 17,
-        "instruction_messages_omitted": 2,
-        "nonvisible_roles_omitted": 39
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "b5f03fd71eada2188a86686dbd89ed71dc8fc69044578c21327b92789eb2210e"
     },
     {
       "id": "01a11264-4cc8-7ef3-8382-90ae4253b766",
       "title": "Settings UI",
       "file": "17-Settings-UI-Desktop.md",
-      "status": "exported_reviewed",
-      "messages": 24,
-      "reviewed_through": "2026-10-25T23:27:47.510Z",
-      "sanitization": {
-        "context_blocks_omitted": 4,
-        "empty_messages_omitted": 5,
-        "instruction_messages_omitted": 1,
-        "nonvisible_roles_omitted": 13
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "12e7ebb4a9109ad4cdb99585954099afa6b765c5908ddebe24bc5c4a846e2a12"
     },
     {
       "id": "01a11264-5c12-7473-99be-5d5931f63656",
       "title": "Sound und Effekte",
       "file": "18-Sound-und-Effekte-Desktop.md",
-      "status": "exported_reviewed",
-      "messages": 9,
-      "reviewed_through": "2026-10-10T22:33:40.641Z",
-      "sanitization": {
-        "context_blocks_omitted": 3,
-        "empty_messages_omitted": 4,
-        "instruction_messages_omitted": 1,
-        "nonvisible_roles_omitted": 12
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "a22469a810ccf76c1d3f119cb7e2f03b233c045c9ae7d4b883bff46d1dc57dab"
     },
     {
       "id": "01a11264-6c41-7131-9f43-3de64ff13f86",
       "title": "TechTree",
       "file": "19-TechTree-Desktop.md",
-      "status": "exported_reviewed",
-      "messages": 447,
-      "reviewed_through": "2026-10-19T21:18:21.291Z",
-      "sanitization": {
-        "attachment_envelopes_omitted": 4,
-        "attachment_preambles_omitted": 4,
-        "context_blocks_omitted": 65,
-        "empty_messages_omitted": 13,
-        "instruction_messages_omitted": 1,
-        "nonvisible_roles_omitted": 33
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "0765b0b5fb652dc4705b08e41a1765dc92427a6cccb869fafcfbb31a2f3e704e"
     },
     {
       "id": "01a11264-7f0e-7dc2-abf0-aa313f838f8c",
       "title": "Vehicels",
       "file": "20-Vehicels-Desktop.md",
-      "status": "exported_reviewed",
-      "messages": 204,
-      "reviewed_through": "2026-10-26T00:02:36.072Z",
-      "sanitization": {
-        "answer_envelopes_simplified": 1,
-        "attachment_envelopes_omitted": 3,
-        "attachment_preambles_omitted": 3,
-        "context_blocks_omitted": 38,
-        "empty_messages_omitted": 9,
-        "instruction_messages_omitted": 1,
-        "nonvisible_roles_omitted": 23
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "518bbef4b92615f9b5e1df7c5493ba8baf49247f38333bd21ca65c66ace2bc84"
     },
     {
       "id": "01a112cc-1896-7182-8dae-4f9802fab337",
       "title": "Ideenbacklog prüfen",
       "file": "21-Ideenbacklog-Desktop.md",
-      "status": "exported_reviewed",
-      "messages": 19,
-      "reviewed_through": "2026-10-09T18:10:15.610Z",
-      "sanitization": {
-        "context_blocks_omitted": 2,
-        "empty_messages_omitted": 3,
-        "instruction_messages_omitted": 1,
-        "nonvisible_roles_omitted": 7
-      },
+      "status": "preserved",
+      "local_source_matches": 0,
       "archive_sha256": "ce5b2d9df83e6f9c7ca67a23bcf8aafea5656aa7632a6a34935b1ef5b15f2c26"
     },
     {
       "id": "01a11a1b-ae77-7c81-95a0-6b1713dd0579",
       "title": "Ideenbacklog",
       "file": "22-Ideenbacklog.md",
-      "status": "preserved",
-      "local_source_matches": 0,
-      "archive_sha256": "f9800c54378a20619dd81ce851ba53a2b3297b0319997e605e2939f8120fbc75"
+      "curated_prefix_sha256": "ca4a84bf5d43e908b7e1bf305bab5b29938776bb3ef72ca2f70d0066628b521f",
+      "status": "curated_extended",
+      "messages": 4,
+      "reviewed_through": "2026-10-26T10:31:47.063Z",
+      "sanitization": {
+        "context_blocks_omitted": 2,
+        "curated_prefix_raw_messages_omitted": 6,
+        "empty_messages_omitted": 3,
+        "instruction_messages_omitted": 1,
+        "nonvisible_roles_omitted": 12
+      },
+      "archive_sha256": "761d70e98aa76b33056fb90a914360f77cfacc020eca4e33bdfb5e3142ae74fe"
     },
     {
       "id": "6ac60095-1fdc-83eb-8290-d19a09d9ea90",
@@ -252,7 +261,51 @@
       "file": "23-Intro-Cinematic-Entwurf.md",
       "status": "cloud_snapshot_preserved",
       "source_snapshot_date": "2026-10-08",
-      "archive_sha256": "b750cc120914a239ca0cf47359fcfc21d573c7a9d4887def12fdd0ff2c31d86e"
+      "archive_sha256": "6e88bf527a85e509dfa3be35792b88ef133563b3a1cc5239ee8f8998d3163463"
+    },
+    {
+      "id": "01a17729-74f5-70b1-8b0c-3f87ff2e3095",
+      "title": "Station und Ausbau",
+      "file": "24-Station-und-Ausbau.md",
+      "status": "exported_reviewed",
+      "messages": 16,
+      "reviewed_through": "2026-10-26T13:26:21.841Z",
+      "sanitization": {
+        "context_blocks_omitted": 1,
+        "empty_messages_omitted": 3,
+        "instruction_messages_omitted": 2,
+        "nonvisible_roles_omitted": 8
+      },
+      "archive_sha256": "185c4991da3b48de4e0825acee098169c373a22e5aaa1c9203033f50800027ca"
+    },
+    {
+      "id": "01a17729-89b8-7ff0-955b-5add39e48ed5",
+      "title": "Energie und Versorgung",
+      "file": "25-Energie-und-Versorgung.md",
+      "status": "exported_reviewed",
+      "messages": 3,
+      "reviewed_through": "2026-10-26T07:43:56+00:00",
+      "sanitization": {
+        "empty_messages_omitted": 1,
+        "instruction_messages_omitted": 1,
+        "nonvisible_roles_omitted": 5
+      },
+      "archive_sha256": "d358eab95edc2225515faa1da041d8a8602031c50008bcb5750f69916e3ebeac"
+    },
+    {
+      "id": "01a17729-b53d-7de1-b207-68185753b783",
+      "title": "3D Modelle und Texturen",
+      "file": "26-3D-Modelle-und-Texturen.md",
+      "status": "exported_reviewed",
+      "messages": 2,
+      "reviewed_through": "2026-10-26T07:43:55+00:00",
+      "sanitization": {
+        "context_blocks_omitted": 1,
+        "empty_messages_omitted": 1,
+        "instruction_messages_omitted": 1,
+        "nonvisible_roles_omitted": 5
+      },
+      "archive_sha256": "00d5194ec10c9e01d4594e58e908000c43ab85d3f19e79d0ed3815c92b010a41"
     }
   ]
 }

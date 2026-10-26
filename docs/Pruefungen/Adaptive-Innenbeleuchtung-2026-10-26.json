@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-26",
+  "unity": "6000.6.5f1",
+  "developmentBuildExit": 0,
+  "buildLog": "Logs/adaptive-lighting-verified-retry-build.log",
+  "testLogs": [
+    "Logs/adaptive-lighting-verified-check.log",
+    "Logs/adaptive-lighting-verified-power-check.log"
+  ],
+  "totalChecks": 493,
+  "tests": {
+    "lighting": {
+      "passed": true,
+      "checks": 16,
+      "commandDemandKw": 0.02396842,
+      "idleDemandKw": 0.009378944
+    },
+    "power": {
+      "passed": true,
+      "checks": 477,
+      "layout": 15,
+      "frustumWarnings": 0,
+      "pictures": [
+        "01-gegenueber-zentrale-echte-50-prozent.png",
+        "02-strompult-in-zentrale-e-hinweis.png",
+        "03-stromuebersicht-1600x1000.png",
+        "detail-reactor.png",
+        "detail-solar-a.png",
+        "detail-solar-b.png",
+        "detail-battery-bay-1.png",
+        "detail-battery-bay-2.png",
+        "detail-consumer-life.png",
+        "detail-bankbilanz.png",
+        "04-explizite-97-prozent-anzeigefixture.png",
+        "05-stromuebersicht-1280x720.png",
+        "06-stromuebersicht-grosse-schrift-oben.png",
+        "07-stromuebersicht-grosse-schrift-unten.png"
+      ],
+      "scope": "Physical battery placement and four authored cassette meshes per installed bank, physical command-room power terminal, read-only live power dashboard and existing shared energy store. Explicit load, state-of-charge, panel-normal, damage and network fixtures are restored. Genuine R-01 battery repair uses a declared helper/repair-technology/three-parts fixture with original energy; actual trajectory sampled every0.25s, collision/support and damaged-sector avoidance checked, then original campaign restored. Isolated old-save and room-plan roundtrips preserve resources and placement. Native framebuffer capture at1600x1000 and1280x720 including enlarged text. Programmatic scene/controller and framebuffer acceptance, not native OS input, manual comfort, headset or FPS acceptance."
+    }
+  },
+  "playerFilesVerified": 247,
+  "userRoomPlansHashUnchanged": 3,
+  "deployment": "Builds/Windows",
+  "previousPlayer": "Builds/Windows-before-adaptive-lighting-20261026",
+  "lightingBudget": "Prototype split of existing180W systems allowance:90W other systems +90W maximum lighting, not an engineered fixture specification",
+  "failuresPreserved": [
+    "First lighting flag blocked by existing Live gate",
+    "Early active rendering too dim, raised before final build",
+    "Power-off render update delayed; TogglePower now refreshes lights synchronously",
+    "One Unity batch launch ended with1 before import; retry succeeded"
+  ],
+  "limits": [
+    "No physical lux/watt, FPS, headset, Release or natural full-campaign acceptance",
+    "Fixed radial occupancy zones, not automatic wall/door or drone occupancy detection"
+  ],
+  "noCommitPush": true
+}

@@ -1,0 +1,135 @@
+I75 R03: Original boundary edges 2648; small planar caps 123; skin after thickness {'vertices': 21692, 'faces': 23499, 'boundaryEdges': 69, 'nonManifoldEdges': 350}
+I75 R03: EXPORT {"triangles": 87564, "objects": 60}
+INFO Draco mesh compression is available, use library at C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\work\AvatarTools\blender-4.5.14-windows-x64\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+11:52:55 | INFO: Starting glTF 2.0 export
+11:52:55 | INFO: Extracting primitive: Tool mount identification
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Side I75 -1
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Side systems -1
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Side utility -1
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Side service -1
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Side I75 1
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Side systems 1
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Side utility 1
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Side service 1
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Roof identification
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Roof unit
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: I75_V02_OriginalGeometry_WithUV
+11:52:55 | INFO: Primitives created: 5
+11:52:55 | INFO: Extracting primitive: Cube
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.001
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.002
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.003
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.001
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.004
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.002
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.003
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.005
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.006
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.007
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.008
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.009
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.004
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.005
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.006
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.007
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.010
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.008
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.009
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.010
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.011
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.011
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.012
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.013
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.014
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.015
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.016
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.012
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.013
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.014
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.017
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.018
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.015
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.016
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.017
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.018
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.019
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cylinder.020
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.019
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.020
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.021
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.022
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.023
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.024
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.025
+11:52:55 | INFO: Primitives created: 1
+11:52:55 | INFO: Extracting primitive: Cube.026
+11:52:55 | INFO: Primitives created: 1
+11:52:56 | INFO: Finished glTF 2.0 export in 0.6870567798614502 s
+
+
+FBX export starting... 'C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Design\\Models\\IndoorDroneI75\\Surface-R03-2026-10-26\\I75_V02_Surface_R03.fbx'
+export finished in 0.3551 sec.
+Info: Saved as "I75_V02_Surface_R03.blend"
+I75 R03: FINISHED {"triangles": 87564, "rays": 54, "renders": 0}
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Read blend: "C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\Design\Models\IndoorDroneI75\Surface-R02-2026-10-26\I75_V02_Surface_R02.blend"
+
+Blender quit

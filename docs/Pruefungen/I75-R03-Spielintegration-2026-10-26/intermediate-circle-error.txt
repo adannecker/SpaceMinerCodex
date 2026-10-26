@@ -1,0 +1,13 @@
+System.Exception: R03 planar envelopes intersect / I-01 / I-02 / 0.9271155
+  at SpaceMiner.StationIndoorTrafficCheck.Sample () [0x002f8] in C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\Assets\SpaceMiner\Scripts\StationIndoorTrafficCheck.cs:83 
+  at SpaceMiner.StationIndoorTrafficCheck.Guard (System.Action action) [0x00000] in C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\Assets\SpaceMiner\Scripts\StationIndoorTrafficCheck.cs:38 
+I-01 stop=5 pos=(19.95, 0.08, 33.52) target=(18.05, 0.05, 31.26) J=4 ticket=68 granted=False entered=False guided=False passing=False velocity=(-0.59, 0.00, -0.70) status=Wartet
+I-02 stop=5 pos=(20.69, 0.08, 34.08) target=(18.05, 0.05, 31.26) J=4 ticket=62 granted=False entered=False guided=False passing=False velocity=(0.63, 0.00, 0.48) status=Wartet
+I-03 stop=2 pos=(22.67, 0.08, 40.67) target=(23.24, 0.03, 41.66) J=-1 ticket=55 granted=False entered=False guided=False passing=False velocity=(0.57, -0.03, 0.99) status=Fährt
+I-04 stop=8 pos=(21.10, 0.13, 29.29) target=(18.05, 0.05, 31.26) J=4 ticket=69 granted=False entered=False guided=True passing=False velocity=(0.00, 0.00, 0.00) status=Magnetspur
+I-05 stop=1 pos=(16.00, 0.13, 27.71) target=(12.89, 0.05, 23.73) J=4 ticket=61 granted=True entered=True guided=False passing=False velocity=(-0.52, 0.00, -0.89) status=Fährt
+I-06 stop=1 pos=(0.00, 0.13, 31.60) target=(-0.70, 0.05, 40.00) J=2 ticket=67 granted=True entered=True guided=False passing=False velocity=(0.00, 0.00, 0.00) status=Fährt
+I-07 stop=2 pos=(-0.70, 0.13, 40.00) target=(-0.70, 0.05, 43.20) J=-1 ticket=65 granted=False entered=False guided=False passing=False velocity=(0.00, 0.00, 0.00) status=Fährt
+I-08 stop=3 pos=(-19.70, 0.13, 24.71) target=(-15.80, 0.05, 27.37) J=-1 ticket=58 granted=False entered=False guided=True passing=False velocity=(0.00, 0.00, 0.00) status=Magnetspur
+I-09 stop=6 pos=(-3.11, 0.13, 32.95) target=(0.00, 0.05, 31.60) J=-1 ticket=63 granted=False entered=False guided=True passing=True velocity=(0.00, 0.00, 0.00) status=Überholt
+I-10 stop=9 pos=(13.19, 0.13, 28.71) target=(15.80, 0.05, 27.37) J=4 ticket=66 granted=False entered=False guided=True passing=False velocity=(0.00, 0.00, 0.00) status=Wartet

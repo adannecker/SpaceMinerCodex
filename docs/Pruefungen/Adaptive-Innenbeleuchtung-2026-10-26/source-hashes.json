@@ -1,0 +1,10 @@
+{
+  "Assets/SpaceMiner/Scripts/StationOperations.Lighting.cs": "78d81857d72515ddca4a7305d013509c4f1a8fbc1c05ad08d3badefe0a672556",
+  "Assets/SpaceMiner/Scripts/StationOperations.Geometry.cs": "05d5f833d44531e24a134d366ff265f826bb8c08b7e21d468a4a7195a6fe561e",
+  "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs": "35b0d130e92ce02d7251bd5f25f4cfc161a22292d53beab8f820d47435d79b51",
+  "Assets/SpaceMiner/Scripts/StationOperations.cs": "5a97615c52702f68e94ed89e7bdba05fd82e6b395f15d8309db4e6b53eadcc72",
+  "Assets/SpaceMiner/Scripts/StationOperations.PowerTelemetry.cs": "7cdbb81b2f976a7585b0a3aaf85aba6551e8a6d39be8252a9f74eeb0db162d20",
+  "Assets/SpaceMiner/Scripts/AdaptiveLightingCheck.cs": "0647961b66416d15846ba761a00a87ac90e3f32782af0257d21e3770e6b42ba9",
+  "Assets/SpaceMiner/Editor/AdaptiveLightingBuild.cs": "b9787a530a905f002c68f11c43c66d275c42952eab75b774c7ac49555aef2fb7",
+  "Assets/SpaceMiner/Scripts/PlayerSettings.cs": "b690df32b15640583f62fcec5cb912aa6278c2137b65518d679477f5be45aa89"
+}

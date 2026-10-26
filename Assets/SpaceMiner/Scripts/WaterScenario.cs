@@ -9,6 +9,8 @@ namespace SpaceMiner
         public float StartingWaterLiters = 20f;
         public int OperationalDrones = 1;
         public float ReactorPowerKw = 2f;
+        // Serialized legacy calibration:0.5 is100% of the physical PV model, not0.5kW.
+        // Keep field/name for existing saves; actual kW come from CaptureGeneration().
         public float SolarPowerKw = 0.5f;
         public float DroneChargePowerKw = 2f;
         public float SimulationRate = 1f;

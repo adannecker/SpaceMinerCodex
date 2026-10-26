@@ -65,3 +65,25 @@ Meine Zuständigkeit bleibt **Asteroidenformen, Materialien, Generator und Darst
 Techtree-Knoten, Rezepte, Kosten und Kapitelgrenzen bleiben Entwürfe. Projektweit offen sind Beenden, Wiederherstellung der Innenraumposition, Interaktionssounds und UI-Skalierung.
 
 Keine Änderungen, Builds oder Nachrichten an andere Chats ausgeführt.
+
+<!-- reviewed-project-continuation -->
+
+# Geprüfte Projektfortsetzung
+
+Exportstand: 2026-10-26T16:02:45.759077+00:00. Geprüfter Zeitraum: nach 2026-10-26T06:00:00+00:00 bis 2026-10-26T07:46:14+00:00.
+
+Der vorhandene bereinigte Projektteil bleibt oben unverändert. Frühere Rohtexte werden bewusst nicht erneut importiert.
+
+## Assistent · 2026-10-26T07:45:47.661Z
+
+Ich lese den aktuellen Projektabgleich im gemeinsamen Repository und aktualisiere den Kontext dieses Asteroidenchats ausschliesslich lesend.
+
+## Assistent · 2026-10-26T07:46:13.041Z
+
+Kontext auf **659b514** aktualisiert. Ich verwende weiterhin ausschliesslich `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex`.
+
+Meine Zuständigkeit: **Asteroidengeometrie, Materialien, Generator, gescannte Informationen und spätere Wolken-Seeds**. Bekanntes Scanwissen, Wasserpotenzial und unbekannte Restmasse bleiben getrennt.
+
+Wichtige Prüfgrenze: Lokal gilt **Unity 6000.6.5f1** durch die bewahrte, uncommittete Migration; der Remote enthält noch 6000.4.7f1. Der kombinierte Stand ist hier noch nicht gebaut.
+
+**SP-01…SP-10** bleibt der nächste Umfang. Keine Umsetzung begonnen, keine Dateien verändert.

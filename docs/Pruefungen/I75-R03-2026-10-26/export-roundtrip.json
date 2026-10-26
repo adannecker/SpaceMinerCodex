@@ -1,0 +1,63 @@
+{
+  "glbMaterialData": {
+    "materials": 9,
+    "imageTextures": 0,
+    "legacyTextureMaps": false
+  },
+  "glb": {
+    "passed": true,
+    "meshes": 60,
+    "dimensionsMetres": [
+      0.4820000231266022,
+      0.7829999923706055,
+      0.4371030628681183
+    ],
+    "closedStructuralParts": [
+      {
+        "part": "sealed structural chassis",
+        "weldedBoundaryEdges": 0,
+        "weldedNonManifoldEdges": 0
+      },
+      {
+        "part": "closed removable belly",
+        "weldedBoundaryEdges": 0,
+        "weldedNonManifoldEdges": 0
+      },
+      {
+        "part": "sealed rear equipment cover",
+        "weldedBoundaryEdges": 0,
+        "weldedNonManifoldEdges": 0
+      }
+    ],
+    "toolPoles": 6,
+    "sideDesignations": 2
+  },
+  "fbx": {
+    "passed": true,
+    "meshes": 60,
+    "dimensionsMetres": [
+      0.4820000231266022,
+      0.7829999923706055,
+      0.437103000742308
+    ],
+    "closedStructuralParts": [
+      {
+        "part": "sealed structural chassis",
+        "weldedBoundaryEdges": 0,
+        "weldedNonManifoldEdges": 0
+      },
+      {
+        "part": "closed removable belly",
+        "weldedBoundaryEdges": 0,
+        "weldedNonManifoldEdges": 0
+      },
+      {
+        "part": "sealed rear equipment cover",
+        "weldedBoundaryEdges": 0,
+        "weldedNonManifoldEdges": 0
+      }
+    ],
+    "toolPoles": 6,
+    "sideDesignations": 2
+  }
+}

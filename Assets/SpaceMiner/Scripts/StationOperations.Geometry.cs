@@ -63,7 +63,17 @@ namespace SpaceMiner
             Selectable(root,string.IsNullOrEmpty(target)?"command":target);
         }
         private void LightAt(Vector3 position,Color color,float power,float radius)
-        {var t=Group("Gedämpfte Arbeitsleuchte",presentation,position,Quaternion.identity);var l=t.gameObject.AddComponent<Light>();l.type=LightType.Point;l.color=color;l.intensity=power;l.range=radius;l.shadows=LightShadows.None;l.renderMode=LightRenderMode.ForceVertex;l.cullingMask=(1<<25)|(1<<26)|(1<<30);lamps.Add(l);lampSectors[l]=((Mathf.RoundToInt(Mathf.Atan2(position.x,position.z)*Mathf.Rad2Deg/30)%12)+12)%12;Shape("Leuchtfläche",t,Vector3.zero,new Vector3(.8f,.07f,.2f),color.r>color.b?amber:white);}
+        {
+            var t=Group("Adaptive Arbeitsleuchte",presentation,position,Quaternion.identity);
+            var l=t.gameObject.AddComponent<Light>();l.type=LightType.Point;l.color=color;power*=2.2f;
+            l.intensity=power*IdleLightingLevel;l.range=radius;l.shadows=LightShadows.None;
+            l.renderMode=LightRenderMode.ForceVertex;l.cullingMask=(1<<25)|(1<<26)|(1<<30);
+            lamps.Add(l);lampRatings[l]=power;
+            lampSectors[l]=((Mathf.RoundToInt(Mathf.Atan2(position.x,position.z)*Mathf.Rad2Deg/30)%12)+12)%12;
+            var face=Shape("Leuchtfläche",t,Vector3.zero,new Vector3(.8f,.07f,.2f),color.r>color.b?amber:white).GetComponent<Renderer>();
+            // The point emitter sits inside this decorative lens; it must not shadow itself.
+            face.shadowCastingMode=ShadowCastingMode.Off;lampFaces[l]=face;
+        }
         private void BuildPresentation()
         {
             presentation=Group("Station / Versorgung und Aufbau",Layout.transform,Vector3.zero,Quaternion.identity);
@@ -76,6 +86,7 @@ namespace SpaceMiner
             RoomPlan.Initialize(Layout.transform,RoomPlanPath("command-room"));Layout.RoomPlan=RoomPlan;
             var main=Layout.Geometry.CommandConsole;
             RoomPlan.Register("main-console",main,main.Find("Blockoutbody"),main.GetComponentInChildren<StationDisplay>().transform);
+            TouchConsoleVisual.Install(main,true).Bind(main.GetComponentInChildren<StationDisplay>(),main.Find("Blockoutbody"),RoomPlan.Get("main-console").size);
             Layout.Console.SetParent(main,false);
             RoomPlan.Changed+=UpdateCommandInteractionPoints;
             AddTerminal(StationTerminalKind.Drones,"DROHNEN",new Vector3(-10.1f,0,47),270);
@@ -102,6 +113,7 @@ namespace SpaceMiner
                 if(damaged){var sparks=Shape("Kurze elektrische Entladung",presentation,RingWalkthrough.At(36.7f,angle-6,4.6f),new Vector3(.015f,.32f,.015f),white);sparkRenderers.Add(sparks.GetComponent<Renderer>());}
             }
             for(int i=0;i<3;i++)LightAt(new Vector3((i-1)*4,4.8f,45),new Color(.9f,.8f,.65f),1.5f,12);
+            foreach(float x in new[]{-8f,8f})foreach(float z in new[]{42f,49f})LightAt(new Vector3(x,4.7f,z),new Color(1,.89f,.76f),1.35f,10);
             foreach(float r in new[]{42f,49f,59f,67f})LightAt(RingWalkthrough.At(r,30,r>54?4.8f:4.7f),new Color(.65f,.8f,1),1.2f,11);
             foreach(float a in new[]{0f,90f,180f,270f})
             {LightAt(RingWalkthrough.At(20,a,2.7f),a==0?new Color(.7f,.82f,1):new Color(1,.4f,.15f),.65f,8);Shape("Außenposition",presentation,RingWalkthrough.At(54,a,5.9f),new Vector3(.25f,.12f,.25f),cyan);}
@@ -129,7 +141,7 @@ namespace SpaceMiner
         {
             foreach(var material in ownedMaterials){var combine=new List<CombineInstance>();var originals=new List<MeshRenderer>();
                 foreach(var filter in presentation.GetComponentsInChildren<MeshFilter>()){
-                    var renderer=filter.GetComponent<MeshRenderer>();if(renderer==null||renderer.sharedMaterial!=material||!renderer.enabled||filter.transform==helperCargo||filter.GetComponentInParent<CommandRoomBlock>()!=null||filter.GetComponentInParent<MaintenanceLaserVisual>()!=null||ExcludeWorkshopDynamic(filter)||sparkRenderers.Contains(renderer))continue;
+                    var renderer=filter.GetComponent<MeshRenderer>();if(renderer==null||renderer.sharedMaterial!=material||!renderer.enabled||filter.name=="Leuchtfläche"||filter.transform==helperCargo||filter.GetComponentInParent<CommandRoomBlock>()!=null||filter.GetComponentInParent<MaintenanceLaserVisual>()!=null||ExcludeWorkshopDynamic(filter)||sparkRenderers.Contains(renderer))continue;
                     bool moving=false;foreach(var source in debris.Values)if(filter.transform.IsChildOf(source)){moving=true;break;}if(moving)continue;
                     combine.Add(new CombineInstance{mesh=filter.sharedMesh,transform=presentation.worldToLocalMatrix*filter.transform.localToWorldMatrix});originals.Add(renderer);
                 }
@@ -207,7 +219,7 @@ namespace SpaceMiner
             }
             else if(Actor(order)==WorkActor.Internal&&State.helper)
             {
-                Layout.RepairDrone.position=HelperPoint(order,p);helperCargo.gameObject.SetActive(p>.1f&&p<.95f);helperCargo.position=Layout.RepairDrone.position+Vector3.up*.35f;
+                Layout.RepairDrone.position=HelperPoint(order,p);helperCargo.gameObject.SetActive(p>.1f&&p<.95f);helperCargo.position=Layout.RepairDrone.position+Vector3.up*(IndoorDroneVisual.Height*.5f+.175f+.01f);
             }
         }
         private void ApplyRefit(string target)
@@ -234,6 +246,7 @@ namespace SpaceMiner
             for(int i=0;i<2;i++)Scenario.Drones[i].GetComponent<TripoMiningDroneVisual>()?.SetTool(State.tools[i]);
             if(!State.orders.Exists(o=>o.started&&!o.complete&&o.actorId=="R-01"))PlaceHelperAtHome();
             if(!State.helper)helperCargo.gameObject.SetActive(false);
+            Layout.RepairDrone.GetComponentInChildren<IndoorDroneVisual>()?.SetOperational(State.helper);
             foreach(var renderer in Layout.RepairDrone.GetComponentsInChildren<Renderer>())if(renderer.sharedMaterial!=null&&renderer.sharedMaterial.name=="Drone status"){var block=new MaterialPropertyBlock();block.SetColor("_Color",State.helper?new Color(.1f,.7f,.6f):Color.gray);block.SetColor("_EmissionColor",State.helper?new Color(.05f,.3f,.2f):Color.black);renderer.SetPropertyBlock(block);}
             RefreshRingGates();
             RefreshWorkshopVisuals();
@@ -242,19 +255,17 @@ namespace SpaceMiner
         }
         private void UpdateLights(Vector3? forcedEye=null)
         {
-            if(Camera.main==null)return;Vector3 eye=forcedEye??Camera.main.transform.position;int count=0;
-            lamps.Sort((a,b)=>(a.transform.position-eye).sqrMagnitude.CompareTo((b.transform.position-eye).sqrMagnitude));
-            foreach(var l in lamps){float d=(l.transform.position-eye).sqrMagnitude;l.enabled=d<35*35&&count<8&&Powered(lampSectors[l])&&State.power.LifePowered;l.renderMode=count<2?LightRenderMode.ForcePixel:LightRenderMode.ForceVertex;if(l.enabled)count++;}
+            if(Camera.main==null)return;UpdateAdaptiveLighting(forcedEye??Camera.main.transform.position);
             for(int i=0;i<sparkRenderers.Count;i++){var e=Element("sector-"+(i+3));sparkRenderers[i].enabled=e!=null&&e.power&&e.condition<.3f&&Mathf.Repeat(Time.unscaledTime+i*.73f,4)>.0f&&Mathf.Repeat(Time.unscaledTime+i*.73f,4)<.08f;}
         }
         internal void RefreshViewLighting(Camera view,bool inside){UpdateInteriorLighting(inside);UpdateLights(view.transform.position);}
         private void UpdateInteriorLighting(bool? forcedInside=null)
         {
             bool inside=forcedInside??StationInteriorMode.IsInside;if(inside==dimmedInterior)return;dimmedInterior=inside;
-            RenderSettings.ambientLight=inside?new Color(.09f,.12f,.17f):exteriorAmbient;
+            RenderSettings.ambientLight=inside?new Color(.035f,.045f,.065f):exteriorAmbient;
             var probe=new SphericalHarmonicsL2();probe.AddAmbientLight(RenderSettings.ambientLight*(inside?1:1.6f));RenderSettings.ambientProbe=probe;
             for(int i=0;i<exteriorSuns.Count;i++)if(exteriorSuns[i]!=null)exteriorSuns[i].cullingMask=inside?exteriorMasks[i]&~(1<<25):exteriorMasks[i];
-            if(legacyFill!=null)legacyFill.intensity=inside?.1f:.8f;
+            if(legacyFill!=null)legacyFill.intensity=inside?.035f:.8f;
         }
         private void DisposePresentation(){Font.textureRebuilt-=FontRebuilt;if(dimmedInterior){RenderSettings.ambientLight=exteriorAmbient;for(int i=0;i<exteriorSuns.Count;i++)if(exteriorSuns[i]!=null)exteriorSuns[i].cullingMask=exteriorMasks[i];}foreach(var m in ownedMaterials)if(m!=null)Destroy(m);foreach(var m in ownedMeshes)if(m!=null)Destroy(m);ui.Dispose();}
     }

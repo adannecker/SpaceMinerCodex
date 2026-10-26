@@ -209,3 +209,23 @@ Meine Zuständigkeit bleibt **Sound und Effekte**: Splash-, Spiel- und Konfigura
 Beenden und Innenraum-Positionswiederherstellung bleiben offene Projektfehler. Neue Techtree-Knoten, Kosten und Kapitelgrenzen behandle ich als Entwürfe.
 
 Nur gelesen; keine Änderungen, Builds oder Nachrichten an andere Chats.
+
+<!-- reviewed-project-continuation -->
+
+# Geprüfte Projektfortsetzung
+
+Exportstand: 2026-10-26T16:02:45.759077+00:00. Geprüfter Zeitraum: nach 2026-10-26T06:00:00+00:00 bis 2026-10-26T07:46:38+00:00.
+
+Der vorhandene bereinigte Projektteil bleibt oben unverändert. Frühere Rohtexte werden bewusst nicht erneut importiert.
+
+## Assistent · 2026-10-26T07:46:06.425Z
+
+Ich lese den aktuellen Projektabgleich und die Audio-Fachquellen ausschließlich lesend im angegebenen Checkout.
+
+## Assistent · 2026-10-26T07:46:37.642Z
+
+Kontext aktualisiert: **659b514**, lokal gilt **Unity 6000.6.5f1**. Der kombinierte Stand ist hier noch nicht neu gebaut.
+
+Meine Zuständigkeit bleibt **Sound und Effekte**: Musik, Loops, räumliche Interaktionsklänge und Audiokanäle. Schleusen-/VR-Sounds sind inzwischen vorhanden; 22 Quest-WAVs und beide Introergänzungen ebenfalls. Keine erneute Sprachgenerierung ohne Auftrag; High-Mira im Hauptspiel bleibt SP-09.
+
+SP-01…SP-10 bleibt der nächste Umfang. Ausschließlich gelesen, nichts geändert oder gestartet.

@@ -1,6 +1,8 @@
 # I75: nächste To-dos – Docking, Energie und Werkzeuge
 
-26.10.2026. Nutzer beauftragt die Dokumentation der nächsten Aufgaben nach Freigabe der [R02-Gestaltung](Innendrohne-I75-Textur-R02-2026-10-26.md): passende Andock-/Ladestellen und anschließend die Werkzeugausrüstung. Induktive Ladung während der Bewegung wird ausdrücklich als Möglichkeit erfragt; eine bestimmte Ladetechnik ist damit noch nicht beschlossen. Alle folgenden Umsetzungspunkte sind offen.
+**SP-01 abgeschlossen –26.10.2026:** Nutzer bestätigt R03 und beauftragt die Spielübernahme. R03 ist jetzt R-01 und zehn optionalen Fahrprobenakteuren zugewiesen; beide Builds und gezielte Playerprüfungen erfolgreich. [Spielintegration und Prüfgrenzen](Innendrohne-I75-R03-Spielintegration-2026-10-26.md). Dock-/Lade-/Werkzeugfunktion bleibt offen.
+
+26.10.2026. Nutzer beauftragt die Dokumentation der nächsten Aufgaben nach Freigabe der [R02-Gestaltung](Innendrohne-I75-Textur-R02-2026-10-26.md): passende Andock-/Ladestellen und anschließend die Werkzeugausrüstung. Induktive Ladung während der Bewegung wird ausdrücklich als Möglichkeit erfragt; eine bestimmte Ladetechnik ist damit noch nicht beschlossen. Diese Dock-, Energie- und Werkzeugaufgaben bleiben offen; die späteren Modellkorrekturen sind mit R03 abgeschlossen.
 
 ## 1. Docking- und Ladeplätze
 
@@ -27,7 +29,7 @@ Vorschlag für den ersten Prototyp: ein fester Ladeplatz, der auch induktiv arbe
 
 ## 3. Gemeinsame Werkzeugaufnahme
 
-- [ ] Befestigungspunkte am R02-Modell festlegen: mechanische Führung/Verriegelung, Strom-/Datenschnittstelle, Werkzeug-Pivot und Arbeits-/Verstaumaße.
+- [ ] Sichtbare Frontaufnahme am bestätigten R03-Modell funktional ausarbeiten: mechanische Führung/Verriegelung, Strom-/Datenschnittstelle, Werkzeug-Pivot und Arbeits-/Verstaumaße.
 - [ ] Werkzeuge als eigene Baugruppen mit beweglichen Gelenken, sinnvollen Kollisionskörpern und klaren Aufnahmen modellieren. Grundkörper und Werkzeug bleiben getrennt wiederverwendbar.
 - [ ] Umrüsten in der Werkstatt planen: vorhandene Werkzeugkassette ablegen, andere verriegeln, Wechselzeit und reale Werkzeugbestände/Kosten berücksichtigen.
 - [ ] Grundregel erhalten: **eine Drohne hat jeweils eine Aufgabenrolle**; Rollenwechsel erfordert Umrüstung. Hilfsgreifer eines Werkzeugs erlauben keinen zweiten unabhängigen Auftrag.
@@ -65,9 +67,9 @@ Nur Idee und offene Ausarbeitungsaufgaben dokumentiert; kein Dock-/Kranmodell, k
 
 ### Ergänzende Modellkorrekturen – Nutzerhinweise vom26.10.2026
 
-- [ ] R02-Texturen von allen Seiten prüfen; einige Stellen passen laut Nutzer noch nicht. Betroffene Flächen dokumentieren und UV-/Materialübergänge nacharbeiten.
-- [ ] Vom Nutzer gemeldetes Loch an der Unterseite am Mesh prüfen und schließen. Anschließend Normalen, Texturen und Exporte kontrollieren. Noch keine unabhängige Sicht-/Geometrieprüfung dieses Befunds erfolgt.
+- [x] Punktmuster und fehlerhafte Textur-/Schriftprojektion durch ruhige R03-Materialien und separate Schriftgeometrie ersetzt; Exporte und Spielübernahme geprüft. [Spielintegration und Prüfgrenzen](Innendrohne-I75-R03-Spielintegration-2026-10-26.md).
+- [x] Durchblicke an Unterseite, Heck und Seiten mit geschlossener Chassishülle und Strukturabdeckungen behoben; Exporte und Spielübernahme geprüft. Die alte Dekorhaut bleibt als dokumentiertes, nicht vollständig wasserdichtes Mesh erhalten. [Spielintegration und Prüfgrenzen](Innendrohne-I75-R03-Spielintegration-2026-10-26.md).
 
-Weitere neue Aufgaben für Avatar, Steuerpult und Stromoberfläche stehen im [Ideenbacklog](Ideenbacklog.md#neue-prüf--und-überarbeitungsaufgaben--26102026). Die R02-Freigabe als gestalterische Grundlage bleibt bestehen; die offenen Detailmängel werden damit nicht als behoben behandelt.
+Weitere Aufgaben für Avatar, Steuerpult und Stromoberfläche stehen im [Ideenbacklog](Ideenbacklog.md#neue-prüf--und-überarbeitungsaufgaben--26102026). R02 bleibt als historische Quelle erhalten; R03 ist die bestätigte und im Spiel zugewiesene Weiterentwicklung.
 
-Nur To-do-/Konzeptdokumentation ergänzt; keine Dock-/Werkzeugmodelle oder Energiesimulation implementiert. Hersteller-Suchauszüge von SEW am26.10.2026 geprüft; keine Leistungs-/Effizienzwerte oder Ladezeiten für I75 daraus übernommen. Andere zuerst gefundene Hersteller-/Forschungsseiten waren beim Vollabruf teilweise nicht erreichbar und werden nicht als zusätzliche Auslegungsnachweise verwendet. Keine neuen Spieltests oder Builds.
+Die ursprüngliche Planungsrunde enthielt keine Dock-/Werkzeugmodelle oder neue Energiesimulation. Hersteller-Suchauszüge von SEW wurden damals am26.10.2026 geprüft; keine Leistungs-/Effizienzwerte oder Ladezeiten für I75 daraus übernommen. Andere zuerst gefundene Hersteller-/Forschungsseiten waren beim Vollabruf teilweise nicht erreichbar und werden nicht als zusätzliche Auslegungsnachweise verwendet. Die anschließend geprüften R03-Spielbuilds und deren Grenzen stehen im Integrationsbericht oben.

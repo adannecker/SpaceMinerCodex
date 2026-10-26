@@ -62,7 +62,7 @@ BatteryBay_LOD0                 # entsprechend LOD1 / LOD2
 | LOD1 | 12.264 | 6.672 | 11 |
 | LOD2 | 2.612 | 1.640 | 11 |
 
-Runtime: `StationBatteryBay.cs` lädt alle drei Stufen, richtet einen `LODGroup` mit Schwellen 0,22 / 0,07 / 0,004 ein und schaltet Zustandsanzeigen über `MaterialPropertyBlock`. Leere Buchten enthalten durch das ausgeblendete Rack weniger sichtbare Geometrie als die Tabelle. Nur das Paar 180° besitzt vier Kassetten je Bucht: Index4 aktiv, Index5 ausgeschaltet/getrennt. Die Zustandsanzeige repräsentiert den bereits vorhandenen gemeinsamen 24-kWh-Speicher und erzeugt keinen weiteren Energiespeicher.
+Runtime: `StationBatteryBay.cs` lädt alle drei Stufen, richtet einen `LODGroup` mit Schwellen 0,22 / 0,07 / 0,004 ein und schaltet Zustandsanzeigen über `MaterialPropertyBlock`. Leere Buchten enthalten durch das ausgeblendete Rack weniger sichtbare Geometrie als die Tabelle. Aktuell besitzt das Paar **0° direkt gegenüber dem Zentraleneingang** vier Kassetten je Bucht: **Index0 aktiv, Index1 ausgeschaltet/getrennt**, festgelegt in `StationBatteryPlacement.cs`. Die frühere Platzierung bei180°/Index4–5 ist ersetzt. Die Zustandsanzeige repräsentiert den bereits vorhandenen gemeinsamen 24-kWh-Speicher und erzeugt keinen weiteren Energiespeicher.
 
 Die FBX-Dateien enthalten **keine Collider**. Die Runtime verwendet die echte Frame-/Housing-Meshform für die offene Front und einzelne Collider für installierte Rackgruppen. Ein Collider über die gesamte Modell-AABB würde den Servicezugang unsichtbar verschließen und darf dafür nicht verwendet werden. Die stationäre Druckhülle liefert zusätzlich ihre eigenen Collider.
 

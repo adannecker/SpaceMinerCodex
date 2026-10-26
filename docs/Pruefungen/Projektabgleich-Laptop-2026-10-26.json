@@ -1,0 +1,358 @@
+{
+  "date": "2026-10-26",
+  "created_at_utc": "2026-10-26T07:51:37.991829+00:00",
+  "task": "Update existing SpaceMiner repository, analyze delivered work and synchronize authorized project chats",
+  "git": {
+    "before": "13fc4885d1d0574e45d1fc9b940615aae60ce60b",
+    "after": "659b514f79878df772dbc73a1bea130b1594ea7c",
+    "origin_main": "659b514f79878df772dbc73a1bea130b1594ea7c",
+    "method": "fetch origin, fast-forward, reapply preserved local migration",
+    "commits": [
+      "bfedfba",
+      "bba0a6b",
+      "659b514"
+    ],
+    "files_changed_in_pulled_commits": 2055,
+    "insertions": 320800,
+    "deletions": 549,
+    "resolved_documentation_conflicts": [
+      "README.md",
+      "docs/Projektmemory.md",
+      "docs/Projektuebergabe.md"
+    ],
+    "local_backup": "Logs/Projektabgleich-2026-10-26/local-before-update.zip",
+    "backup_patch": "Logs/Projektabgleich-2026-10-26/local-before-update.patch",
+    "stash_retained": true,
+    "committed_this_update": false,
+    "pushed_this_update": false
+  },
+  "unity": {
+    "remote_pin": "6000.4.7f1",
+    "retained_local_pin": "6000.6.5f1",
+    "installed_editor_exists": true,
+    "new_editor_upgrade_performed": false,
+    "combined_source_built_this_update": false,
+    "player_run_this_update": false,
+    "historical_transfer_checks": 530,
+    "historical_checks_rerun": false
+  },
+  "checks": {
+    "techtree_node_tests": {
+      "passed": true,
+      "count": 14
+    },
+    "chat_exporter_synthetic_tests": {
+      "passed": true,
+      "count": 25,
+      "initial_failure": "Sandbox temp directory access denied; rerun with workspace Logs temp passed"
+    },
+    "unity_powershell_syntax": {
+      "passed": true
+    },
+    "git_diff_check_documentation_tools": {
+      "passed": true
+    },
+    "project_integrity": {
+      "json_valid_count": 423,
+      "json_errors": [],
+      "missing_asset_metas": [],
+      "duplicate_asset_guids": {},
+      "preserved_archive_prefixes": 21,
+      "changed_archive_prefixes": [],
+      "readmes": [
+        {
+          "path": "Design/Models/BatteryBay/README.md",
+          "sha256": "c51ea313188b2e729ad0c8f719e33ebf00174c61bbd202b43a1cf14c521df69d",
+          "lines": 100
+        },
+        {
+          "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/README.md",
+          "sha256": "fe5023fd2a7b1b41bfbaf65cbb06230a5d9677de186aace417525f18a779fa3b",
+          "lines": 15
+        },
+        {
+          "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/README.md",
+          "sha256": "ae91d6d366e59f6b578354f2b36a3880a9869f3c3a37ef54a375a8b6fde24b83",
+          "lines": 16
+        },
+        {
+          "path": "Design/Models/TouchConsole/README.md",
+          "sha256": "8c9242bfdc9338e84fecd60e88a68283daa3e1f497a90c85d000af6c3a20a87c",
+          "lines": 3
+        },
+        {
+          "path": "Imports/Tripo/README.md",
+          "sha256": "7df1ac9ac0bcadeb690085610ef788ff6e6414c13a9439edacc4d6089b81296e",
+          "lines": 12
+        },
+        {
+          "path": "README.md",
+          "sha256": "0b904e1ed2823c42930cb3f047704cf93ae8230ed2dddebb29f9eabeec66d261",
+          "lines": 348
+        },
+        {
+          "path": "docs/Chats/README.md",
+          "sha256": "01dd68cc8c928208a46ef638348fd26e0c949c07bb3c313c494d5858f26034b7",
+          "lines": 53
+        },
+        {
+          "path": "docs/Dialoge/IntroCinematic/README.md",
+          "sha256": "15b72ed53e5614ead5bf76206f909a670e12242acaf9a61d62cfc4647a46ff98",
+          "lines": 75
+        },
+        {
+          "path": "docs/Dialoge/README.md",
+          "sha256": "4aa3d168abee029f796a2e738805ed8aa60299e81b723bdf4278610fdc4646cb",
+          "lines": 31
+        },
+        {
+          "path": "docs/Dialoge/Sprachproben/Quests_Aoede_2026-10-26/README.md",
+          "sha256": "03a4d7dba5b6b1a416ef6d308a35dd11859b4cc0e9f59021b2ccf9d62e707dd1",
+          "lines": 9
+        },
+        {
+          "path": "docs/Pruefungen/Aufbauphase-01-2026-10-25/README.md",
+          "sha256": "7573f91ece0f573e2c9822ef33b3347538d883b64a6e78cc2c34dd91afbeb0bf",
+          "lines": 19
+        },
+        {
+          "path": "docs/Techtree/README.md",
+          "sha256": "9b9ca0c5c3b4112721c914486f377333421a751c66f5aa708423dbc0b4126a1d",
+          "lines": 239
+        },
+        {
+          "path": "prototypes/techtree-viewer/README.md",
+          "sha256": "a715b5d1e41e69ddfd3ace9aa0689b686e7e25d0406fc61ef18d10e7d7c844ad",
+          "lines": 34
+        }
+      ],
+      "room_plans": [
+        {
+          "path": "Design/RoomPlans/command-room-layout.json",
+          "same_content_as_head": true
+        },
+        {
+          "path": "Design/RoomPlans/drone-workshop-layout.json",
+          "same_content_as_head": true
+        },
+        {
+          "path": "Design/RoomPlans/internal-workshop-layout.json",
+          "same_content_as_head": true
+        }
+      ]
+    },
+    "transfer_audit": {
+      "passed": true,
+      "log": "Logs/TransferAudit/candidate-audit.json",
+      "limits": "Known credential patterns and filename/size checks only; no general proof of secret-free prose"
+    },
+    "navigation_file_links": {
+      "passed": true,
+      "scope": "New and edited navigation documents; local file targets only, fragment anchors not evaluated",
+      "missing": []
+    },
+    "original_chat_archives_preserved": {
+      "passed": true,
+      "count": 3,
+      "comparison": "Normalized text against HEAD"
+    }
+  },
+  "chats": {
+    "existing_including_current": 9,
+    "new": 3,
+    "other_chats_acknowledged": 11,
+    "all_other_acks_completed": true,
+    "current_chat": "MainDev",
+    "new_threads": [
+      {
+        "id": "01a17729-74f5-70b1-8b0c-3f87ff2e3095",
+        "title": "Station und Ausbau",
+        "file": "24-Station-und-Ausbau.md",
+        "topic": "Station, Hülle/Havarie, Hallen, Raumplanung und Reparaturauswahl; SP-08",
+        "host_id": "local"
+      },
+      {
+        "id": "01a17729-89b8-7ff0-955b-5add39e48ed5",
+        "title": "Energie und Versorgung",
+        "file": "25-Energie-und-Versorgung.md",
+        "topic": "Energieauslegung, Verbraucher, Akkus/Ladekurven und Eis/Wasser; SP-02/03",
+        "host_id": "local"
+      },
+      {
+        "id": "01a17729-b53d-7de1-b207-68185753b783",
+        "title": "3D Modelle und Texturen",
+        "file": "26-3D-Modelle-und-Texturen.md",
+        "topic": "Blender, FBX/GLB/PBR, UV/Normalen/LOD, Modellqualität und tatsächliche Unity-Zuweisung",
+        "host_id": "local"
+      }
+    ],
+    "renamed": [
+      {
+        "id": "01a11127-1368-7990-b23f-38b3524b44ca",
+        "old": "Vehicels",
+        "title": "Drohnen und Fahrzeuge"
+      },
+      {
+        "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
+        "old": "GitHub",
+        "title": "Git und Projektabgleich"
+      },
+      {
+        "id": "01a110c0-50f2-7fa3-8a18-6905e864e5d9",
+        "old": "Settings UI",
+        "title": "UI und Einstellungen"
+      }
+    ],
+    "acknowledgements": [
+      {
+        "id": "01a17729-74f5-70b1-8b0c-3f87ff2e3095",
+        "title": "Station und Ausbau",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000613,
+        "text": "Lesend initialisiert. Stand: HEAD 659b514, lokaler Arbeitsbaum mit Unity 6000.6.5f1 und vorhandenen uncommitteten Änderungen. Der kombinierte Stand ist hier nicht durch Unity geprüft. Zuständigkeit: Stationsgeometrie, Havarie/Hülle, Hallen und Raumplanung sowie SP-08: tatsächliche Station mit auswählbaren Schäden, realen Reparaturaufträgen und nachgeführtem Fortschritt. Abgrenzung: F7-Raumplanung, isolierte Ringbau-Vorschau und tatsächliche Spielgeometrie bleiben getrennt. UI, Modelle, Versorgung und Drohnenabläufe sind gemeinsame Schnittstellen. Historische Widersprüche: Aktuell Innenlayout 15, Bay-Plätze auf einem Deck, Akkupaar bei 0° / Index 0 und 1. Ältere Angaben zu zwei Dockebenen oder 180° sind überholt. Atmosphäre und Tragfähigkeit sind nicht physikalisch nachgewiesen. Benutzerraumpläne bleiben erhalten. Keine Dateien geändert, Builds oder Generatoren gestartet, Git-Mutationen ausgeführt oder Nachrichten versandt.",
+        "cursor": "23f216ef-2a6f-4834-9c2c-43d8c66fda7b:1"
+      },
+      {
+        "id": "01a17729-89b8-7ff0-955b-5add39e48ed5",
+        "title": "Energie und Versorgung",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000635,
+        "text": "Lesend initialisiert. Stand geprüft: HEAD 659b514, lokale uncommittete Unity-Version 6000.6.5f1. Frühere Versions- und Buildberichte sind historische Nachweise; der kombinierte Stand ist hier ungeprüft. Zuständigkeit: Energie und Versorgung, SP-02/03: Erzeuger-/Verbraucherbilanz, I75-Einsatzenergie, Akkus, Ladeverläufe und Versorgungsdaten; Datenabstimmung für SP-04/06/07/10. Verbindliche Basis: gemeinsame 24-kWh-Bank, Akkupaar bei 0°, Reserve getrennt/unbekannt; Solarertrag nach tatsächlichem Hauptsonnenwinkel. Roh-Eis, Wasserpotenzial, Restmasse und Flüssigwasser getrennt führen. Offen: belastbare Leistungsdimensionierung, I75-Akku/Zellchemie, Ladeverfahren, Verluste, Temperaturgrenzen und parallele Lasten. Bestehende Prototypwerte bestätigen keine neue Auslegung. Ältere Angaben von rund 1,84 kW sind durch die spätere Solarwinkelberechnung überholt. Keine Dateien geändert, Builds, Generatoren, Git-Mutationen oder Nachrichten gestartet.",
+        "cursor": "3348f388-2d72-422b-8ce9-cf662be948d7:1"
+      },
+      {
+        "id": "01a17729-b53d-7de1-b207-68185753b783",
+        "title": "3D Modelle und Texturen",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000634,
+        "text": "Lesend initialisiert als Themenchat 3D Modelle und Texturen. Stand geprüft: HEAD 659b514, lokale uncommittete Unity-Version 6000.6.5f1 erhalten. Der kombinierte Stand ist hier nicht gebaut; 6000.4.7f1/6000.6.4f1 sind historische Nachweise. Zuständigkeit: Blender-/FBX-/GLB-/PBR-Produktion, UVs, Normalen, LODs, Exportqualität und tatsächliche Unity-Zuweisung. Offen: SP-01 I75-Unterseite/Texturfehler und Spielintegration; SP-05 Touchpultabgleich und Einbau; SP-09 High-Mira im Hauptspiel; SP-10 Werkzeugmodelle und Aufnahme. Abgrenzung: I75-R02 ist gestalterisch freigegeben, bleibt aber ebenso wie das Touchpult eine separate Vorschau ohne normale Spielzuweisung. Fahrzeugabläufe, Energiewerte, UI und Gesamtintegration werden mit den jeweiligen Fachchats abgestimmt. Keine Dateien geändert, Generatoren, Builds oder Git-Mutationen ausgeführt und keine weiteren Chats oder Nachrichten gestartet.",
+        "cursor": "1dbb6d4e-571a-4a22-861e-7ad3f3ebfb36:1"
+      },
+      {
+        "id": "01a110fc-1a02-7ad0-8b6e-48129d0b7453",
+        "title": "TechTree",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000833,
+        "text": "TechTree-Kontext lesend abgeglichen. Zuständig für Forschungsbäume, Wissens-, Hardware- und Ressourcenbedingungen sowie die Trennung von Labor und Kampagne. Aktuell: elf Bereiche, 159 Einträge, kompakte 72×72-Ausgangsicons und feste rechte Informationsleiste. Frühere schwebende Overlays sind abgelöst. Laborökonomie und echte Kampagnenforschung bleiben getrennt; vollständige Baumökonomie und 40-Stunden-Balance sind offen. Verifiziert: Gitstand 659b514, lokale Projektversion 6000.6.5f1. Der kombinierte Stand ist hier noch nicht gebaut; ältere Prüfberichte bleiben historisch. SP-01…SP-10 bleibt der nächste Umfang. Keine Dateien geändert, Builds oder Umsetzung gestartet.",
+        "cursor": "bdadff29-bbbc-4bc7-9209-0f4cd2b01bc3:1"
+      },
+      {
+        "id": "01a11007-53fc-7d60-af57-f15ed3399d0d",
+        "title": "Asteroidenvarianten",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000773,
+        "text": "Kontext auf 659b514 aktualisiert. Ich verwende weiterhin ausschliesslich C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex. Meine Zuständigkeit: Asteroidengeometrie, Materialien, Generator, gescannte Informationen und spätere Wolken-Seeds. Bekanntes Scanwissen, Wasserpotenzial und unbekannte Restmasse bleiben getrennt. Wichtige Prüfgrenze: Lokal gilt Unity 6000.6.5f1 durch die bewahrte, uncommittete Migration; der Remote enthält noch 6000.4.7f1. Der kombinierte Stand ist hier noch nicht gebaut. SP-01…SP-10 bleibt der nächste Umfang. Keine Umsetzung begonnen, keine Dateien verändert.",
+        "cursor": "f473f27e-ea8a-4c1e-ab49-63ab9090fc6d:1"
+      },
+      {
+        "id": "01a110c0-50f2-7fa3-8a18-6905e864e5d9",
+        "title": "UI und Einstellungen",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000777,
+        "text": "Stand 659b514 übernommen. Lokal gilt die bewahrte, noch uncommittete Unity-Migration 6000.6.5f1; der kombinierte Stand wurde hier noch nicht gebaut. Meine Zuständigkeit: UI und Einstellungen, gemeinsame Komponenten, Skalierung, Eingabe und echte Datenanzeigen; Konsolen SP-05 bis SP-08 gemeinsam mit den Fachchats. Vorhandene Stromoberfläche und UI-Skalierung werden weiterverwendet. Frühere Buildberichte sind historische Nachweise. Sprint SP-01…SP-10 bleibt der nächste Umfang; ausschließlich gelesen, keine Umsetzung begonnen.",
+        "cursor": "3418f055-521b-45b8-b5cf-93d4f2c0f012:1"
+      },
+      {
+        "id": "01a11127-1368-7990-b23f-38b3524b44ca",
+        "title": "Drohnen und Fahrzeuge",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000778,
+        "text": "Stand für Drohnen und Fahrzeuge aktualisiert: Gemeinsamer Checkout auf 659b514, lokale Unity-Migration 6000.6.5f1 erhalten. Dieser kombinierte Stand ist hier noch nicht gebaut. Zuständigkeit: I75/Außendrohnen, Navigation, Verkehr, Docking, Ladung und Werkzeuge; insbesondere SP-01/04/10, abgestimmt mit Energie- und Modellchat. Zehn I75 sind Verkehrsprobefahrzeuge; anfangs ist nur Außendrohne 01 produktiv. R02-Spielintegration, Modellkorrekturen, Ladeauslegung und Werkzeugwechsel bleiben offen. Dynamische Induktion ist eine Prüfoption. Sprint SP-01…SP-10 bleibt maßgeblich. Nur lesend abgeglichen; keine Änderungen, Builds oder weiteren Nachrichten.",
+        "cursor": "0cb8427e-d297-4ff3-aac0-d58d83302745:1"
+      },
+      {
+        "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
+        "title": "Git und Projektabgleich",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000806,
+        "text": "Kontext aktualisiert. Zuständigkeit: Git und Projektabgleich, Sicherungen, Rechnerwechsel, Chatarchive und Unity-Versionen. Gitstand: 659b514. Lokal bleibt die uncommittete Migration auf Unity 6000.6.5f1 erhalten; Remote enthält noch 6000.4.7f1. Der kombinierte Stand wurde hier noch nicht gebaut. Frühere Tests sind historische Nachweise. SP-01 bis SP-10 bleibt der nächste Umfang; keine Umsetzung begonnen. Nur gelesen und abgeglichen. Keine Änderungen, Builds, Git-Mutationen oder weiteren Nachrichten.",
+        "cursor": "44b281aa-a2a2-4f46-b134-dd805d6ff3f6:1"
+      },
+      {
+        "id": "01a110fe-dd07-7f93-9a3d-922c469eccf6",
+        "title": "Sound und Effekte",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000797,
+        "text": "Kontext aktualisiert: 659b514, lokal gilt Unity 6000.6.5f1. Der kombinierte Stand ist hier noch nicht neu gebaut. Meine Zuständigkeit bleibt Sound und Effekte: Musik, Loops, räumliche Interaktionsklänge und Audiokanäle. Schleusen-/VR-Sounds sind inzwischen vorhanden; 22 Quest-WAVs und beide Introergänzungen ebenfalls. Keine erneute Sprachgenerierung ohne Auftrag; High-Mira im Hauptspiel bleibt SP-09. SP-01…SP-10 bleibt der nächste Umfang. Ausschließlich gelesen, nichts geändert oder gestartet.",
+        "cursor": "e5a58472-771d-4c32-8aef-064765acd9c7:1"
+      },
+      {
+        "id": "01a11007-910e-7ff0-a749-82c7af51fde7",
+        "title": "Story, Dialoge & Bordcomputer",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000831,
+        "text": "Kontext aktualisiert: Gitstand 659b514, lokale Unity-Version 6000.6.5f1. Der kombinierte Stand ist hier noch nicht neu gebaut. Meine Zuständigkeit: Mira, Quests, Sprechertexte, Sprachaufnahmen, Acting und Cinematics. Die 22 Quest-WAVs und beide ergänzten Introzeilen sind vorhanden. High-Mira ist im Studio und Questspiel integriert; der reguläre Hauptspielabgleich bleibt SP-09, gemeinsam mit MainDev und Modellchat. Nur gelesen, nichts verändert oder gestartet.",
+        "cursor": "3caa7ba7-569b-4a80-8784-da8d3e2ea809:1"
+      },
+      {
+        "id": "01a11a1b-ae77-7c81-95a0-6b1713dd0579",
+        "title": "Ideenbacklog",
+        "status": {
+          "type": "idle"
+        },
+        "turnStatus": "completed",
+        "completedAt": 1793000817,
+        "text": "Kontext auf 26.10.2026 aktualisiert. Git-HEAD 659b514 und lokale Projektversion 6000.6.5f1 bestätigt. Der kombinierte Stand wurde hier noch nicht mit Unity gebaut. Meine Zuständigkeit Ideenbacklog umfasst beschlossene Sprintpakete, Abhängigkeiten, offene Entscheidungen und überprüfbare Fertig-Kriterien. SP-01 bis SP-10 sind der verbindliche nächste Umfang; alle bleiben offen, bis Integration und erforderliche Prüfung im tatsächlichen Spiel vorliegen. Wichtige Abgrenzungen: Zehn I75 gehören zur Fahrprobe; Touchpult/R02 und High-Mira sind noch nicht vollständig im regulären Hauptspiel integriert. Ältere Versions- und Testberichte gelten für ihre damaligen Stände. Ausschließlich gelesen; keine Änderungen, Builds oder weiteren Aktionen ausgeführt.",
+        "cursor": "a0d57aef-93b9-4df5-8053-72cf145e223c:1"
+      }
+    ],
+    "registered_sources": 25,
+    "export_status_counts": {
+      "curated_extended": 9,
+      "unavailable": 1,
+      "cloud_snapshot_preserved": 3,
+      "preserved": 9,
+      "exported_reviewed": 3
+    },
+    "archive_verification": "docs/Chats/export-verification-laptop-2026-10-26.json",
+    "unavailable_source_id": "01a110eb-3487-7061-8a24-86afe58bdc1f",
+    "historical_cwd_requires_explicit_workdir": [
+      {
+        "id": "01a11007-53fc-7d60-af57-f15ed3399d0d",
+        "title": "Asteroidenvarianten"
+      },
+      {
+        "id": "01a11127-1368-7990-b23f-38b3524b44ca",
+        "title": "Drohnen und Fahrzeuge"
+      }
+    ],
+    "historical_cwd_handling": "App still reports earlier concept CWDs for these two existing chats. Update prompts explicitly require the shared repository as workdir for every tool call; both acknowledged and verified the shared checkout. No private app database was modified."
+  },
+  "limits": [
+    "No new Unity build or gameplay acceptance of the combined source and local migration",
+    "No art generation, model edits, gameplay implementation or sprint execution",
+    "No automatic synchronization of active chats on another computer",
+    "No personal Codex memory or account data modified",
+    "No commit or push; current knowledge and migration are local working changes"
+  ]
+}

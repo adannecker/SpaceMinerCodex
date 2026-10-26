@@ -1,0 +1,15 @@
+﻿id,name,standby_kw,active_kw,peak_kw,evidence,confidence
+computing,"Mira, Rechner, Netzwerk und Pulte",0.6,1.2,2.0,Engineering allowance; actual Mira computing hardware not defined,low
+lighting,Bedarfsabhängige LED-Beleuchtung,0.16,0.995,2.0,"100m2 workspace at300lx +100m2 corridor at100lx +1400m2 background at10lx,140lm/W, utilization0.5, maintenance0.8,30W markers; rounded",medium; area/lux are assumptions
+air,"Umluft, CO2- und Spurenstoffentfernung",0.65,0.65,1.5,One-person large-habitat planning allowance; not an ISS component measurement,low
+water_recycling,"Brauchwasserrecycling, Pumpen und Desinfektion",0.15,0.15,0.6,Daily-average one-person allowance; separate from raw-ice processing,low
+oxygen,Sauerstoff-Elektrolyse,0.2415,0.2415,6.0,"0.84kgO2/person/day *55.2kWh/kgH2 /8 /24h; average replaces full batch draw, never sum both",medium; system scaling uncertain
+cold_store,Kaltlager und Lagersteuerung,1.48,1.48,2.5,"200m2 *0.01W/m2K *(293-150)K /COP0.2 +50W controls; conservative150K scenario, not measured hardware",low; sealed250K store is far cheaper
+thermal_loop,Stations-Kühlmittelpumpen und Wärmeregelung,0.35,0.5,1.0,Pump/control allowance; does not include free unlimited resistive cabin heat or radiators,low
+control_aux,"Ventile, Türzyklen, Sensoren und Docksteuerung",0.1,0.15,1.0,Time-averaged allowance; door motors need transient power,low
+scanner,Nahbereichsscanner,0.03,0.03,1.2,0.1kWh buffer and97-to100% in10s are existing design; proposed1.2kW input at90% efficiency preserves1.08kW stored power,project timing; hardware estimate
+ice,"Eisbrecher, Verdichter und Wasseraufbereitung",0.0,1.9,1.9,"Current0.2+0.2+1.5kW;0.20kWh/L processed ice water,7.5L/h",project physical first sizing
+printer,Metallteilefertigung,0.03,2.4,8.5,EOS M290 reference typical2.4/max8.5kW; current2kg/4min recipe is NOT validated by this reference,manufacturer reference; game recipe open
+sorting,Mechanisches Sortieren/Recycling,0.02,0.8,1.5,Current recipe; excludes metal melting and chemical refining,low
+food,Nahrungsverarbeitung aus vorbereitetem Vorrat,0.03,1.2,2.0,Existing recipe power only; no claim that complete nutrition from raw asteroid carbon is physically solved,low; chemical process open
+tool,Zusatz-Werkzeug am Innenfahrzeug,0,1.5,4,"Onboard planning allowance, charged later through battery; excludes printer/sorter already budgeted separately",low

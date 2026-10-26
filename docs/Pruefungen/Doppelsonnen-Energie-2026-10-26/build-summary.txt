@@ -1,0 +1,4 @@
+Unity 6000.6.5f1; existing scenes; final build03 exit0
+BINARY STAR BUILD SUCCESS: Builds/BinaryStarsDevelopment/SpaceMiner.exe
+BINARY STAR BUILD SUCCESS: Builds/BinaryStarsRelease/SpaceMiner.exe
+BINARY STAR BUILD SUCCESS: Builds/BinaryStarsStudio/ConsoleStudio.exe

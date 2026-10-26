@@ -29,7 +29,7 @@ namespace SpaceMiner
         private void Initialize(WaterScenario scenario,StationInteriorLayout layout)
         {
             Scenario=scenario;Scenario.Operations=this;Layout=layout;State.inventory.water=scenario.WaterTank;
-            Live=!Array.Exists(Environment.GetCommandLineArgs(),a=>a.EndsWith("Check",StringComparison.OrdinalIgnoreCase)&&a!="-miraQuestGameCheck"&&a!="-stationOperationsCheck"&&a!="-stationOperationsUiCheck"&&a!="-stationPerformanceCheck"&&a!="-stationWorkshopCheck"&&a!="-commandRoomPlannerCheck"&&a!="-stationRoomPlanningCheck"&&a!="-stationDebrisCheck"&&a!="-stationHandsCheck"&&a!="-stationDroneSizingCheck"&&a!="-stationIcePlantCheck"&&a!="-stationDroneConsoleCheck"&&a!="-stationTacticalCheck"&&a!="-stationCameraVerticalCheck"&&a!="-stationBatteryBayCheck"&&a!="-stationPowerConsoleCheck");
+            Live=!Array.Exists(Environment.GetCommandLineArgs(),a=>a.EndsWith("Check",StringComparison.OrdinalIgnoreCase)&&a!="-miraQuestGameCheck"&&a!="-stationOperationsCheck"&&a!="-stationOperationsUiCheck"&&a!="-stationPerformanceCheck"&&a!="-stationWorkshopCheck"&&a!="-commandRoomPlannerCheck"&&a!="-stationRoomPlanningCheck"&&a!="-stationDebrisCheck"&&a!="-stationHandsCheck"&&a!="-stationDroneSizingCheck"&&a!="-stationIcePlantCheck"&&a!="-stationDroneConsoleCheck"&&a!="-stationTacticalCheck"&&a!="-stationCameraVerticalCheck"&&a!="-stationBatteryBayCheck"&&a!="-stationPowerConsoleCheck"&&a!="-adaptiveLightingCheck");
             BindIcePlant();
             for(int s=0;s<12;s++)State.elements.Add(new StationElementState("sector-"+s,"Ringsektor S"+(s+1).ToString("00"),"Ringsegment","Durchgang / Versorgungsverteilung",s,RingWalkthrough.DamagedRingSector(s)?.18f:.93f));
             AddElement("command","Kommandozentrale","Modul","Scanner / Drohnen / Forschung / Planung",0,.92f);
@@ -61,7 +61,7 @@ namespace SpaceMiner
         private bool SourceAvailable(string target)=>!State.collected.Contains(target)&&!State.orders.Exists(o=>!o.complete&&(!o.cancelled||o.started)&&o.target==target);
         public bool IsAssigned(DroneAgent drone)=>State.orders.Exists(o=>o.started&&!o.complete&&!o.cancelled&&o.actorId=="drone-"+Array.IndexOf(Scenario.Drones,drone));
         public void SetMessage(string message){Message=message;Scenario.Notify(message);}
-        public bool TogglePower(int sector){var e=Element("sector-"+sector);if(e==null)return false;e.power=!e.power;RefreshPresentation();return true;}
+        public bool TogglePower(int sector){var e=Element("sector-"+sector);if(e==null)return false;e.power=!e.power;RefreshPresentation();UpdateLights();return true;}
         public bool ToggleWater(int sector){var e=Element("sector-"+sector);if(e==null)return false;e.water=!e.water;return true;}
         public bool Enqueue(StationJobKind kind,string target="")
         {
@@ -163,7 +163,7 @@ namespace SpaceMiner
             float loss=0;foreach(var e in State.elements)if(e.id.StartsWith("sector-")&&e.power&&e.condition<.3f)loss+=.04f;
             preparedIcePowerKw=Live&&IceReceivingAvailable?(float)IcePlant.RequestedPowerKw(Scenario.WaterTank.Free,WaterConnected(0)&&WaterConnected(7)):0;
             work+=preparedIcePowerKw;
-            State.power.Advance(seconds,generation,.35f+.18f+loss+(Scenario.Scanner.Ready?0:Scenario.Scanner.ChargePowerKw),work,charging*Scenario.DroneChargePowerKw);
+            State.power.Advance(seconds,generation,.35f+NonLightingSystemsKw+LightingDemandKw+loss+(Scenario.Scanner.Ready?0:Scenario.Scanner.ChargePowerKw),work,charging*Scenario.DroneChargePowerKw);
             ObservePower(seconds,loss,work,charging*Scenario.DroneChargePowerKw);
             ChargePerDroneKw=charging==0?0:State.power.ChargeAllocationKw/charging;
         }
@@ -274,6 +274,6 @@ namespace SpaceMiner
             RestoreWorkshopRefits();BalancePower(0);RefreshPresentation();
         }
         public void ResetCampaign(){if(initialJson==null)return;ClearBuiltPresentation();State=JsonUtility.FromJson<StationCampaignState>(initialJson);Scenario.TankCapacityLiters=200;State.inventory.water=Scenario.WaterTank;BindIcePlant();running.Clear();foreach(var d in Scenario.Drones)if(d!=Scenario.Worker)d.LockInactive();BalancePower(0);RefreshPresentation();}
-        private void OnDestroy(){if(Current==this)Current=null;DisposePowerModels();DisposePresentation();}
+        private void OnDestroy(){if(Current==this)Current=null;DisposePowerModels(true);DisposePresentation();}
     }
 }

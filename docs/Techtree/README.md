@@ -1,5 +1,7 @@
 # Chapter 1: Techtree-Bildvorschläge
 
+**Einordnung beim Abgleich am 26.10.2026:** Diese Galerie dokumentiert die Gestaltungsvorschläge vom 08.10. Die später implementierte kompakte Ansicht mit elf Kategorien/159 Einträgen steht in [Forschungslabor](../Forschungslabor.md) und [Techtree](../Techtree.md). Die Galerie ist keine Beschreibung des aktuellen Spielmenüs oder Beleg einer vollständig integrierten Forschungsökonomie.
+
 Stand: 08.10.2026. Auftrag: alle noch offenen Bäume als Bilder vorschlagen, eine gemeinsame Einstiegsübersicht mit Zählern erstellen, sauber dokumentieren und in Git sichern. Der Nutzer ist während der Ausarbeitung abwesend; offene Gestaltungsfragen wurden mit ausdrücklich markierten Annahmen behandelt. Die neuen Bilder sind Diskussionsentwürfe, keine Freigabe ihrer konkreten Knoten oder Kapitelgrenzen und keine Implementierung im Unity-Menü.
 
 ## Einstieg und Zähler

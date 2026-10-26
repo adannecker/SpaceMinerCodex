@@ -3,6 +3,10 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+# Runtime modules for the checked-in local model viewer, not generated game builds.
+!/Design/Models/IndoorDroneI75/I75Viewer/vendor/build/
+!/Design/Models/IndoorDroneI75/I75Viewer/vendor/build/three.core.js
+!/Design/Models/IndoorDroneI75/I75Viewer/vendor/build/three.module.js
 [Ll]ogs/
 UserSettings/
 .vs/

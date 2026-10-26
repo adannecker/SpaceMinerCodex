@@ -1,7 +1,7 @@
 param(
-    [ValidateSet('Setup', 'Build', 'HundredBuild', 'SpiralBuild', 'MillionBuild', 'Open', 'Play', 'Check', 'MiningCheck', 'AsteroidCheck')]
+    [ValidateSet('Setup', 'Build', 'BuildExisting', 'HundredBuild', 'SpiralBuild', 'MillionBuild', 'Open', 'Play', 'Check', 'MiningCheck', 'AsteroidCheck')]
     [string]$Action = 'Open',
-    [string]$UnityPath = 'C:\Program Files\Unity\Hub\Editor\6000.4.7f1\Editor\Unity.exe',
+    [string]$UnityPath = '',
     [switch]$Visible
 )
 $ErrorActionPreference = 'Stop'
@@ -34,13 +34,21 @@ if ($Action -eq 'Play' -or $Action -eq 'Check' -or $Action -eq 'MiningCheck') {
     return
 }
 
-if (!(Test-Path -LiteralPath $UnityPath)) { throw "Unity nicht gefunden: $UnityPath. Mit -UnityPath den Editor angeben." }
+$versionFile = Join-Path $projectPath 'ProjectSettings\ProjectVersion.txt'
+$versionLine = Get-Content -LiteralPath $versionFile | Where-Object { $_ -match '^m_EditorVersion: ' } | Select-Object -First 1
+if (!$versionLine) { throw "Keine festgelegte Unity-Version in $versionFile." }
+$projectUnityVersion = ($versionLine -replace '^m_EditorVersion: ', '').Trim()
+if (!$UnityPath) { $UnityPath = Join-Path 'C:\Program Files\Unity\Hub\Editor' "$projectUnityVersion\Editor\Unity.exe" }
+if (!(Test-Path -LiteralPath $UnityPath)) { throw "Projekt benötigt Unity $projectUnityVersion. Nicht gefunden: $UnityPath. Diese Version im Hub installieren oder ihren Pfad mit -UnityPath angeben. Versionswechsel bewusst nach docs/Unity-Versionen.md durchführen." }
+$installedUnityVersion = ((Get-Item -LiteralPath $UnityPath).VersionInfo.ProductVersion -split '_')[0]
+if ($installedUnityVersion -ne $projectUnityVersion) { throw "Editorversion $installedUnityVersion entspricht nicht der Projektversion $projectUnityVersion. Bewussten Versionswechsel nach docs/Unity-Versionen.md durchführen." }
 $arguments = @('-projectPath', ('"' + $projectPath + '"'))
 if ($Action -eq 'Open') {
     Start-Process -FilePath $UnityPath -ArgumentList $arguments -WindowStyle Hidden | Out-Null
     return
 }
 $method = if ($Action -eq 'MillionBuild') { 'SpaceMiner.Editor.PrototypeSetup.BuildMillionAsteroids' } elseif ($Action -eq 'SpiralBuild') { 'SpaceMiner.Editor.PrototypeSetup.BuildSpiralAsteroids' } elseif ($Action -eq 'HundredBuild') { 'SpaceMiner.Editor.PrototypeSetup.BuildHundredAsteroids' } elseif ($Action -eq 'Build') { 'SpaceMiner.Editor.PrototypeSetup.BuildWindows' } elseif ($Action -eq 'AsteroidCheck') { 'SpaceMiner.Editor.AsteroidValidation.Run' } else { 'SpaceMiner.Editor.PrototypeSetup.Setup' }
+if ($Action -eq 'BuildExisting') { $method = 'SpaceMiner.Editor.ResearchSimulationValidation.Build' }
 $arguments += @('-batchmode', '-quit', '-executeMethod', $method, '-logFile', ('"' + (Join-Path $logsPath ($Action.ToLower() + '.log')) + '"'))
 $process = Start-Process -FilePath $UnityPath -ArgumentList $arguments -PassThru -WindowStyle Hidden
 $process.WaitForExit()

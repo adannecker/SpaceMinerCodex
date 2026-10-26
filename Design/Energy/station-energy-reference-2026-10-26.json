@@ -1,0 +1,289 @@
+{
+  "schema": 1,
+  "status": "Binary-star definition authorized26Oct2026 and integrated; remaining load/reactor/drone proposals still not implemented",
+  "date": "2026-10-26",
+  "approved_scope": {
+    "crew": 1,
+    "exterior_drones": 1,
+    "interior_drones": 1,
+    "growth": "More crew and drones later; each technology needs a plausible energy profile"
+  },
+  "astronomy_assumptions": {
+    "solar_values_are_conditional_example_only": false,
+    "physical_mapping_approved": true,
+    "stellar_luminosities_known": true,
+    "display_au_equals_physical_au": 1.0,
+    "primary_luminosity_solar": 0.36037503837455376,
+    "companion_luminosity_solar": 0.11844550534642552,
+    "companion_sensitivity_solar": [
+      0.05922275267321276,
+      0.11844550534642552,
+      0.23689101069285104
+    ],
+    "note": "User authorizes defining both stars and using them in physics/UI. Display positions/radii unchanged. Energy coordinates map1800display-km to1physicalAU, preserving real local metres. Two quiet K dwarfs:5000K/0.8Rsun and4200K/0.65Rsun; luminosities derived from R²T⁴. Bolometric energy model, not UV/particle-dose acceptance.",
+    "primary_temperature_k": 5000,
+    "primary_radius_solar": 0.8,
+    "companion_temperature_k": 4200,
+    "companion_radius_solar": 0.65
+  },
+  "solar": {
+    "irradiance_w_m2_at_1_au": 1361,
+    "cell_efficiency": 0.3,
+    "net_system_factor": 0.85,
+    "remaining_cell_factor": 1.0,
+    "visible_missing_cells_already_excluded": true,
+    "legacy_condition_is_separate_sensitivity_not_added_to_reference": false,
+    "damage_rule": "EffectiveArea=min(actual remaining PV area, original full area*condition); missing modules and electrical damage counted once."
+  },
+  "electrical": {
+    "distribution_efficiency": 0.95,
+    "charger_efficiency": 0.91,
+    "battery_storage_efficiency": 0.98,
+    "station_capacity_kwh": 24,
+    "station_start_kwh": 12,
+    "station_reserve_fraction": 0.2,
+    "legacy_discharge_limit_kw": 8,
+    "implemented_station_charge_limit_c": 0.5
+  },
+  "reactor": {
+    "proposed_net_max_kwe": 40,
+    "condition_reference": 0.82,
+    "net_thermal_efficiency": 0.25,
+    "throttle_examples": [
+      0.2,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "minimum_throttle_assumption": 0.2,
+    "thermal_note": "40kWe is a reference class under development, not proof of a certified central inhabited-station reactor. Shielding, coolant, ramp limits and radiator integration remain open."
+  },
+  "drones": {
+    "exterior": {
+      "battery_kwh": 16,
+      "charger_output_kw": 12,
+      "parked_kw": 0.05,
+      "sortie_energy_kwh": 11.594,
+      "sortie_minutes": 78.65,
+      "note": "16kWh and historical sortie consumption retained as project baseline; external propulsion/tool consumption is paid through the onboard battery, not also counted as live station load."
+    },
+    "interior": {
+      "proposed_battery_kwh": 4,
+      "charger_output_kw": 3,
+      "parked_kw": 0.08,
+      "moving_kw": 3,
+      "tool_addition_kw": 1.5,
+      "proposed_mass_kg": 100,
+      "gravity_m_s2": 9.81,
+      "gap_m": 0.08,
+      "pole_count": 4,
+      "pole_area_m2": 0.01,
+      "turns_per_pole": 1000,
+      "mean_turn_length_m": 0.4,
+      "wire_cross_section_mm2": 2.5,
+      "copper_resistivity_ohm_m": 1.68e-08,
+      "note": "Illustrative conventional copper-electromagnet model only. R-01 currently has no mass/battery/magnetic solver; its free-hovering work path is not an engineered 8cm maglev guide. Fringing/return gaps/temperature may greatly increase power; permanent-magnet-assisted designs or shorter gaps may lower it."
+    }
+  },
+  "thermal": {
+    "cold_store_area_m2_assumed": 200,
+    "insulation_u_w_m2_k_assumed": 0.01,
+    "cabin_k": 293,
+    "cold_store_k_assumed": 150,
+    "cryocooler_cop_assumed": 0.2,
+    "radiator_emissivity": 0.9,
+    "background_k": 3,
+    "concept_one_face_m2": 32
+  },
+  "technology_profiles": [
+    {
+      "id": "computing",
+      "name": "Mira, Rechner, Netzwerk und Pulte",
+      "standby_kw": 0.6,
+      "active_kw": 1.2,
+      "peak_kw": 2.0,
+      "evidence": "Engineering allowance; actual Mira computing hardware not defined",
+      "confidence": "low"
+    },
+    {
+      "id": "lighting",
+      "name": "Bedarfsabhängige LED-Beleuchtung",
+      "standby_kw": 0.16,
+      "active_kw": 0.995,
+      "peak_kw": 2.0,
+      "evidence": "100m2 workspace at300lx +100m2 corridor at100lx +1400m2 background at10lx,140lm/W, utilization0.5, maintenance0.8,30W markers; rounded",
+      "confidence": "medium; area/lux are assumptions"
+    },
+    {
+      "id": "air",
+      "name": "Umluft, CO2- und Spurenstoffentfernung",
+      "standby_kw": 0.65,
+      "active_kw": 0.65,
+      "peak_kw": 1.5,
+      "evidence": "One-person large-habitat planning allowance; not an ISS component measurement",
+      "confidence": "low"
+    },
+    {
+      "id": "water_recycling",
+      "name": "Brauchwasserrecycling, Pumpen und Desinfektion",
+      "standby_kw": 0.15,
+      "active_kw": 0.15,
+      "peak_kw": 0.6,
+      "evidence": "Daily-average one-person allowance; separate from raw-ice processing",
+      "confidence": "low"
+    },
+    {
+      "id": "oxygen",
+      "name": "Sauerstoff-Elektrolyse",
+      "standby_kw": 0.2415,
+      "active_kw": 0.2415,
+      "peak_kw": 6.0,
+      "evidence": "0.84kgO2/person/day *55.2kWh/kgH2 /8 /24h; average replaces full batch draw, never sum both",
+      "confidence": "medium; system scaling uncertain"
+    },
+    {
+      "id": "cold_store",
+      "name": "Kaltlager und Lagersteuerung",
+      "standby_kw": 1.48,
+      "active_kw": 1.48,
+      "peak_kw": 2.5,
+      "evidence": "200m2 *0.01W/m2K *(293-150)K /COP0.2 +50W controls; conservative150K scenario, not measured hardware",
+      "confidence": "low; sealed250K store is far cheaper"
+    },
+    {
+      "id": "thermal_loop",
+      "name": "Stations-Kühlmittelpumpen und Wärmeregelung",
+      "standby_kw": 0.35,
+      "active_kw": 0.5,
+      "peak_kw": 1.0,
+      "evidence": "Pump/control allowance; does not include free unlimited resistive cabin heat or radiators",
+      "confidence": "low"
+    },
+    {
+      "id": "control_aux",
+      "name": "Ventile, Türzyklen, Sensoren und Docksteuerung",
+      "standby_kw": 0.1,
+      "active_kw": 0.15,
+      "peak_kw": 1.0,
+      "evidence": "Time-averaged allowance; door motors need transient power",
+      "confidence": "low"
+    },
+    {
+      "id": "scanner",
+      "name": "Nahbereichsscanner",
+      "standby_kw": 0.03,
+      "active_kw": 0.03,
+      "peak_kw": 1.2,
+      "evidence": "0.1kWh buffer and97-to100% in10s are existing design; proposed1.2kW input at90% efficiency preserves1.08kW stored power",
+      "confidence": "project timing; hardware estimate"
+    },
+    {
+      "id": "ice",
+      "name": "Eisbrecher, Verdichter und Wasseraufbereitung",
+      "standby_kw": 0.0,
+      "active_kw": 1.9,
+      "peak_kw": 1.9,
+      "evidence": "Current0.2+0.2+1.5kW;0.20kWh/L processed ice water,7.5L/h",
+      "confidence": "project physical first sizing"
+    },
+    {
+      "id": "printer",
+      "name": "Metallteilefertigung",
+      "standby_kw": 0.03,
+      "active_kw": 2.4,
+      "peak_kw": 8.5,
+      "evidence": "EOS M290 reference typical2.4/max8.5kW; current2kg/4min recipe is NOT validated by this reference",
+      "confidence": "manufacturer reference; game recipe open"
+    },
+    {
+      "id": "sorting",
+      "name": "Mechanisches Sortieren/Recycling",
+      "standby_kw": 0.02,
+      "active_kw": 0.8,
+      "peak_kw": 1.5,
+      "evidence": "Current recipe; excludes metal melting and chemical refining",
+      "confidence": "low"
+    },
+    {
+      "id": "food",
+      "name": "Nahrungsverarbeitung aus vorbereitetem Vorrat",
+      "standby_kw": 0.03,
+      "active_kw": 1.2,
+      "peak_kw": 2.0,
+      "evidence": "Existing recipe power only; no claim that complete nutrition from raw asteroid carbon is physically solved",
+      "confidence": "low; chemical process open"
+    },
+    {
+      "id": "tool",
+      "name": "Zusatz-Werkzeug am Innenfahrzeug",
+      "standby_kw": 0,
+      "active_kw": 1.5,
+      "peak_kw": 4,
+      "evidence": "Onboard planning allowance, charged later through battery; excludes printer/sorter already budgeted separately",
+      "confidence": "low"
+    }
+  ],
+  "sources": [
+    {
+      "id": "irradiance",
+      "url": "https://earth.gsfc.nasa.gov/climate/projects/solar-irradiance/science",
+      "supports": "1361W/m2 near1AU"
+    },
+    {
+      "id": "pv",
+      "url": "https://www.azurspace.com/media/uploads/file_links/file/bdb_00010890-01-00_generalinformationazur.pdf",
+      "supports": "2025 space-cell data around29-31%;30% reference not whole-panel efficiency"
+    },
+    {
+      "id": "charger",
+      "url": "https://www.wiferion.com/en/faq/faq-etalink/",
+      "supports": "3.3kW class,12kW system and typical91%/up to93% source-to-battery efficiency; air gaps1.5-4cm, not8cm"
+    },
+    {
+      "id": "charger12",
+      "url": "https://www.wiferion.com/en/news/logimat-best-product-2020-etalink-12000/",
+      "supports": "12kW contactless charging reference"
+    },
+    {
+      "id": "battery_limits",
+      "url": "https://www.enersys.com/48ef4a/globalassets/documents/product-documentation/_enersys/glob/legacy/batteries/nexsys/nexsys-ion/glob-en-om-nex-ion-0323.pdf",
+      "supports": "BMS changes permissible charge with temperature/state of charge; no exact game pack curve guaranteed"
+    },
+    {
+      "id": "oxygen_rate",
+      "url": "https://ntrs.nasa.gov/api/citations/20190027610/downloads/20190027610.pdf",
+      "supports": "0.84kgO2/person/day"
+    },
+    {
+      "id": "electrolyzer",
+      "url": "https://www.hydrogen.energy.gov/docs/hydrogenprogramlibraries/pdfs/24005-clean-hydrogen-production-cost-pem-electrolyzer.pdf",
+      "supports": "Representative beginning-of-life55.2kWh/kgH2 system; scale-down overhead not known"
+    },
+    {
+      "id": "life_support",
+      "url": "https://www.nasa.gov/reference/environmental-control-and-life-support-systems-eclss/",
+      "supports": "Air, water recovery and oxygen are separate life-support functions"
+    },
+    {
+      "id": "led",
+      "url": "https://www.signify.com/global/prof/indoor-luminaires/surface-mounted/philips-coreline-surface-mounted-gen-4/LP_CF_SM136V_EU/family",
+      "supports": "Modern LED luminaire examples around148-160lm/W;140lm/W planning value"
+    },
+    {
+      "id": "printer",
+      "url": "https://www.eos.info/metal-solutions/metal-printers/data-sheets/sds-eos-m-290",
+      "supports": "Typical2.4kW,max8.5kW,400W laser; technical sheet10Sep2026"
+    },
+    {
+      "id": "reactor",
+      "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+      "supports": "40kWe development class; not a delivered certified station system"
+    },
+    {
+      "id": "reactor_heat",
+      "url": "https://ntrs.nasa.gov/api/citations/20250000584/downloads/Sanzi_Pr_NESC_ThermalTDTWeb_Jan2025_20250000584.pdf",
+      "supports": "Heat pipes, Stirling conversion, radiator and load following are integral to space-reactor concepts;25% efficiency is scenario assumption"
+    }
+  ]
+}

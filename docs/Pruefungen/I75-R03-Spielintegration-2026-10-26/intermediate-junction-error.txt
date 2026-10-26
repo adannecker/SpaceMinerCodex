@@ -1,0 +1,14 @@
+System.Exception: INDOOR TRAFFIC: individual progress in 120 simulation seconds / I-03 / junction=4
+  at SpaceMiner.StationIndoorTrafficCheck.Require (System.Boolean condition, System.String label) [0x00032] in C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\Assets\SpaceMiner\Scripts\StationIndoorTrafficCheck.cs:36 
+  at SpaceMiner.StationIndoorTrafficCheck+<>c__DisplayClass24_0.<Start>b__6 () [0x0001b] in C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\Assets\SpaceMiner\Scripts\StationIndoorTrafficCheck.cs:263 
+  at SpaceMiner.StationIndoorTrafficCheck.Guard (System.Action action) [0x00000] in C:\Users\achim.dannecker\source\repos\SpaceMinerCodex\Assets\SpaceMiner\Scripts\StationIndoorTrafficCheck.cs:39 
+I-01 stop=5 pos=(20.56, 0.08, 34.25) target=(18.05, 0.05, 31.26) J=4 ticket=66 granted=False entered=False guided=False passing=False velocity=(0.00, 0.00, 0.00) status=Wartet
+I-02 stop=5 pos=(20.06, 0.08, 33.43) target=(18.05, 0.05, 31.26) J=4 ticket=60 granted=False entered=False guided=False passing=False velocity=(0.00, 0.00, 0.00) status=Wartet
+I-03 stop=0 pos=(14.50, 0.13, 29.76) target=(15.80, 0.05, 27.37) J=4 ticket=53 granted=False entered=False guided=True passing=True velocity=(0.03, 0.00, -0.01) status=Wartet
+I-04 stop=5 pos=(14.11, 0.13, 23.08) target=(15.80, 0.05, 27.37) J=4 ticket=49 granted=False entered=False guided=False passing=False velocity=(0.00, 0.00, 0.00) status=Wartet
+I-05 stop=8 pos=(20.90, 0.13, 29.43) target=(18.05, 0.05, 31.26) J=4 ticket=58 granted=False entered=False guided=True passing=False velocity=(0.00, 0.00, 0.00) status=Wartet
+I-06 stop=6 pos=(-8.80, 0.13, 33.46) target=(-12.35, 0.05, 33.92) J=1 ticket=84 granted=False entered=False guided=True passing=True velocity=(0.00, 0.00, 0.00) status=Wartet
+I-07 stop=7 pos=(-11.27, 0.13, 31.27) target=(-10.81, 0.05, 29.69) J=1 ticket=83 granted=True entered=True guided=False passing=False velocity=(0.26, 0.00, -0.88) status=Fährt
+I-08 stop=9 pos=(12.29, 0.13, 29.11) target=(15.80, 0.05, 27.37) J=4 ticket=80 granted=False entered=False guided=True passing=False velocity=(0.00, 0.00, 0.00) status=Magnetspur
+I-09 stop=9 pos=(13.63, 0.13, 30.16) target=(15.80, 0.05, 27.37) J=4 ticket=73 granted=False entered=False guided=True passing=True velocity=(-0.03, 0.00, 0.01) status=Überholt
+I-10 stop=9 pos=(13.17, 0.13, 28.72) target=(15.80, 0.05, 27.37) J=4 ticket=65 granted=False entered=False guided=True passing=False velocity=(0.00, 0.00, 0.00) status=Wartet

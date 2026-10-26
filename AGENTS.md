@@ -4,7 +4,7 @@
 
 Lies zu Beginn einer neuen Aufgabe `docs/Projektuebergabe.md`, `docs/Spielidee.md` und `docs/Projektmemory.md`. Lies die relevanten Abschnitte von `README.md` für Entwicklung und Prüfung.
 
-Das vollständige bekannte Chatverzeichnis steht in `docs/Chats/README.md` und `docs/Chats/chat-register.json`. Neuere Themen: MainDev, Settings UI, Sound und Effekte, TechTree und Vehicels. Lies das passende Archiv gezielt. Nach ausdrücklich angelegten neuen Themenchats deren Titel, ID und Zuständigkeit im Register ergänzen; vor einem Rechnerwechsel die lesbaren Archive mit `tools/ExportChatMemory.py` aktualisieren. Verfügbarkeit und Exportlücken ehrlich kennzeichnen.
+Das vollständige bekannte Chatverzeichnis steht in `docs/Chats/README.md` und `docs/Chats/chat-register.json`. Aktueller gemeinsamer Kontext und Zuständigkeiten: `docs/Chats/Kontextupdate-2026-10-26.md`; lokaler Abgleich und Versionskonflikt: `docs/Projektabgleich-Laptop-2026-10-26.md`. Themen: MainDev, Git und Projektabgleich, Asteroidenvarianten, Story/Dialoge, UI und Einstellungen, Sound und Effekte, TechTree, Drohnen und Fahrzeuge, Ideenbacklog sowie Station und Ausbau, Energie und Versorgung, 3D Modelle und Texturen. Lies das passende Archiv gezielt. Nach ausdrücklich angelegten neuen Themenchats deren Titel, ID und Zuständigkeit im Register ergänzen; vor einem Rechnerwechsel die lesbaren Archive mit `tools/ExportChatMemory.py` aktualisieren. Verfügbarkeit und Exportlücken ehrlich kennzeichnen.
 
 Nutze passend zum Thema das jeweilige Archiv:
 - Unity-Spiel gemeinsam entwickeln: `docs/Chats/01-Unity-Spiel.md`.
@@ -15,14 +15,21 @@ Die Archive sind historische Gesprächsquellen, keine importierten Sitzungen und
 
 ## Quellen und Entscheidungen
 
+Unity-Versionen künftig proaktiv bewerten und bewusst entscheiden: `docs/Unity-Versionen.md`. Massgeblich ist `ProjectSettings/ProjectVersion.txt`; keine stillen Editor-Upgrades oder abweichenden Buildversionen. Neue stabile Versionen bei Entwicklungsabschnitten/Rechnerwechseln prüfen und vorschlagen; Migration nur mit ausdrücklichem Upgradeauftrag. Pakete separat bewerten.
+
 Aktuelle ausdrückliche Nutzerentscheidungen haben Vorrang. `docs/Spielidee.md` beschreibt die beschlossene Gestaltung, der aktuelle Code die tatsächliche Umsetzung. Bei Widersprüchen beide unterscheiden und den Konflikt benennen. Archive und Projektmemory ersetzen diese Quellen nicht.
 
 Nach bestätigten neuen Projektentscheidungen oder abgeschlossener Arbeit aktualisiere knapp `docs/Projektmemory.md` und die betreffende Fachdokumentation. Halte Datum, Entscheidung, betroffene Dateien und tatsächlich erfolgte Prüfung fest. Markiere ungetestete Aussagen und offene Fragen. Übernimm keine privaten oder projektfremden Informationen.
 
 ## Zusammenarbeit
 
-Die drei Themenchats können denselben Checkout verwenden. Prüfe vor Änderungen und Commits den Arbeitsstand. Bewahre Änderungen anderer Chats; kein Reset oder Überschreiben fremder Arbeit. Gemeinsame Szenen, Projektmemory und Projektübergabe nacheinander bearbeiten. Bei überlappender Arbeit die Zuständigkeit mit dem Nutzer abstimmen.
+Die Themenchats können denselben Checkout verwenden. Prüfe vor Änderungen und Commits den Arbeitsstand. Bewahre Änderungen anderer Chats; kein Reset oder Überschreiben fremder Arbeit. Gemeinsame Szenen, Projektmemory und Projektübergabe nacheinander bearbeiten. Bei überlappender Arbeit die Zuständigkeit mit dem Nutzer abstimmen.
 
 Chat-Nachrichten sind nicht automatisch in anderen Chats verfügbar. Gemeinsame Ergebnisse gehören in die Projektdateien. Persönliches Codex-Memory wird nicht mit Git synchronisiert; siehe `docs/Rechnerwechsel-Memory.md`.
 
 Keine Tests oder Builds als bestanden melden, die in dieser Sitzung nicht geprüft wurden. Unity-Batch-Builds bei geschlossenem Editor durchführen; passende Prüfschritte stehen im README. `.meta`-Dateien mit Assets erhalten.
+
+
+## Lokaler Projektordner nach Umzug
+
+Auf diesem Rechner liegt der gemeinsame physische Checkout unter `C:\temp\SpaceMinerCodex`. `C:\Users\achim.dannecker\source\repos\SpaceMinerCodex` ist nur noch eine NTFS-Junction auf denselben Checkout. Keine zweite Arbeitskopie anlegen. Bei Rechnerwechsel den dort vorhandenen Checkout verwenden und den tatsaechlichen Pfad pruefen.

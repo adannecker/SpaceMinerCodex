@@ -51,3 +51,35 @@ Aktuell besonders relevant:
 - Batteriewechsel, Drohnenumbauten, Solarsteuerung und Gefahrenvorhersage bleiben Ausbauideen.
 
 Keine Dateien geändert, Builds, Commits, Pushes oder Nachrichten an andere Chats ausgeführt.
+
+<!-- reviewed-project-continuation -->
+
+# Geprüfte Projektfortsetzung
+
+Exportstand: 2026-10-26T16:02:45.759077+00:00. Geprüfter Zeitraum: nach 2026-10-26T06:00:00+00:00 bis 2026-10-26T10:31:47.063Z.
+
+Der vorhandene bereinigte Projektteil bleibt oben unverändert. Frühere Rohtexte werden bewusst nicht erneut importiert.
+
+## Assistent · 2026-10-26T07:46:36.166Z
+
+Ich lese den aktuellen Projektabgleich und die relevanten Backlogquellen ausschließlich lesend im angegebenen Checkout.
+
+## Assistent · 2026-10-26T07:46:57.246Z
+
+Kontext auf **26.10.2026** aktualisiert. Git-HEAD **659b514** und lokale Projektversion **6000.6.5f1** bestätigt. Der kombinierte Stand wurde hier noch nicht mit Unity gebaut.
+
+Meine Zuständigkeit **Ideenbacklog** umfasst beschlossene Sprintpakete, Abhängigkeiten, offene Entscheidungen und überprüfbare Fertig-Kriterien. **SP-01 bis SP-10** sind der verbindliche nächste Umfang; alle bleiben offen, bis Integration und erforderliche Prüfung im tatsächlichen Spiel vorliegen.
+
+Wichtige Abgrenzungen: Zehn I75 gehören zur Fahrprobe; Touchpult/R02 und High-Mira sind noch nicht vollständig im regulären Hauptspiel integriert. Ältere Versions- und Testberichte gelten für ihre damaligen Stände.
+
+Ausschließlich gelesen; keine Änderungen, Builds oder weiteren Aktionen ausgeführt.
+
+## Nutzer · 2026-10-26T10:31:42.240Z
+
+Hast alles von Gut gezoigen?
+
+## Assistent · 2026-10-26T10:31:47.063Z
+
+Falls du Git meinst: MainDev hat den Stand **659b514** eingezogen; ich habe diesen Commit hier bestätigt und den Projektkontext gelesen.
+
+Die lokale Unity-Migration auf **6000.6.5f1** bleibt zusätzlich uncommittet erhalten. Einen weiteren Pull oder neuen Build habe ich nicht ausgeführt.

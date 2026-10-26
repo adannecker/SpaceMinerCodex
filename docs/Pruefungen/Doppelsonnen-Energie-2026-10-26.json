@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "unity": "6000.6.5f1 (3ff58d469c8a)",
+  "scope": "Physical binary-star PV generation and shared power UI; existing main scene and standalone console scene.",
+  "builds": [
+    "BINARY STAR BUILD SUCCESS: Builds/BinaryStarsDevelopment/SpaceMiner.exe",
+    "BINARY STAR BUILD SUCCESS: Builds/BinaryStarsRelease/SpaceMiner.exe",
+    "BINARY STAR BUILD SUCCESS: Builds/BinaryStarsStudio/ConsoleStudio.exe"
+  ],
+  "source_files_and_metas_frozen": 404,
+  "source_hashes_verified_after_tests": true,
+  "power": {
+    "passed": true,
+    "checks": 507,
+    "layout": 15,
+    "frustumWarnings": 0,
+    "pictures": [
+      "01-gegenueber-zentrale-echte-50-prozent.png",
+      "02-strompult-in-zentrale-e-hinweis.png",
+      "03-stromuebersicht-1600x1000.png",
+      "detail-reactor.png",
+      "detail-solar-a.png",
+      "detail-solar-b.png",
+      "detail-battery-bay-1.png",
+      "detail-battery-bay-2.png",
+      "detail-consumer-life.png",
+      "detail-sun-primary.png",
+      "detail-sun-companion.png",
+      "detail-bankbilanz.png",
+      "04-explizite-97-prozent-anzeigefixture.png",
+      "05-stromuebersicht-1280x720.png",
+      "06-stromuebersicht-grosse-schrift-oben.png",
+      "07-stromuebersicht-grosse-schrift-unten.png",
+      "08-large-sun-primary.png",
+      "09-large-sun-primary-bottom.png",
+      "08-large-sun-companion.png",
+      "09-large-sun-companion-bottom.png"
+    ],
+    "scope": "Physical battery placement and four authored cassette meshes per installed bank, physical command-room power terminal, read-only live power dashboard and existing shared energy store. Explicit load, state-of-charge, panel-normal, damage and network fixtures are restored. Genuine R-01 battery repair uses a declared helper/repair-technology/three-parts fixture with original energy; actual trajectory sampled every0.25s, collision/support and damaged-sector avoidance checked, then original campaign restored. Isolated old-save and room-plan roundtrips preserve resources and placement. Native framebuffer capture at1600x1000 and1280x720 including enlarged text. Programmatic scene/controller and framebuffer acceptance, not native OS input, manual comfort, headset or FPS acceptance."
+  },
+  "operations": {
+    "passed": true,
+    "checks": 97,
+    "scope": "domain, actual jobs, finite resources, unlocks, persistence, terminal contract; water supply fixture for later recipes"
+  },
+  "studio": {
+    "passed": true,
+    "captures": 36,
+    "error": null
+  },
+  "analytical_checks": 22,
+  "runtime_observation": {
+    "primaryFlux": 451.570475035254,
+    "companionFlux": 155.84811754094187,
+    "primaryLuminosity": 0.36037503837455376,
+    "companionLuminosity": 0.11844550534642552,
+    "displayPrimaryKm": 1875.9279284533818,
+    "displayCompanionKm": 1830.6700642272442,
+    "primaryAu": 1.042182182474101,
+    "companionAu": 1.0170389245706912,
+    "solarA": 0.0,
+    "solarB": 3.9645791053771973,
+    "potentialA": 0.5910945534706116,
+    "potentialB": 3.9645791053771973,
+    "areaA": 353.2672424316406,
+    "areaB": 375.3464660644531,
+    "effectiveA": 251.15087890625,
+    "effectiveB": 312.9726257324219,
+    "primaryVisibilityA": 0.0,
+    "companionVisibilityA": 0.90625,
+    "primaryVisibilityB": 1.0,
+    "companionVisibilityB": 1.0
+  },
+  "three_original_room_plans_sha256_unchanged": {
+    "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Design\\RoomPlans\\command-room-layout.json": "3245D591E9C45E2AC55BFF2789FEFC0F688C3519556A390DFE331789C0B34312",
+    "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Design\\RoomPlans\\drone-workshop-layout.json": "A40E6F49CB48F2E05F2264F5D79FEB5CD79C82EB7822F2B59F5270353CC024EF",
+    "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Design\\RoomPlans\\internal-workshop-layout.json": "D9C20BCC3409C6EF3846DA23B54FAEE4130E18C5A6D0CA023C9CA146E652CFB5"
+  },
+  "deployment": [
+    {
+      "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\BinaryStarsDevelopment",
+      "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\Windows",
+      "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\Windows-before-binary-stars-20261026-153936",
+      "files": 247,
+      "allSha256Identical": true
+    },
+    {
+      "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\BinaryStarsRelease",
+      "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\WindowsRelease",
+      "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\WindowsRelease-before-binary-stars-20261026-153936",
+      "files": 156,
+      "allSha256Identical": true
+    },
+    {
+      "source": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\BinaryStarsStudio",
+      "target": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio",
+      "backup": "C:\\Users\\achim.dannecker\\source\\repos\\SpaceMinerCodex\\Builds\\ConsoleStudio-before-binary-stars-20261026-153936",
+      "files": 247,
+      "allSha256Identical": true
+    }
+  ],
+  "visually_inspected": [
+    "detail-sun-primary.png",
+    "09-large-sun-companion-bottom.png",
+    "detail-solar-b.png",
+    "studio-long-text-companion.png"
+  ],
+  "test_details": [
+    "Inverse-square distance, radius-squared luminosity, two separate star contributions, backside zero, missing-cell/condition cap without duplicate damage.",
+    "Controlled temporary collider occludes only primary while companion remains productive; real panel rotations, disconnected circuit, real 60s energy/storage change and full fixture restoration.",
+    "Bank 0.5C limit, energy conservation, full-bank curtailment and zero-duration no-free-energy checks; existing R-01 repair and save/room-plan checks retained."
+  ],
+  "intermediate_failure": "Run01 physics checks passed but UI helper failed to restore selection before a legacy model assertion; helper corrected. Final build03 and all final runs pass.",
+  "limits": [
+    "Bolometric energy model; no UV/particle dose, stellar activity, solar storms or radiation safety certification.",
+    "Point-source cell-centre hard-shadow sampling, own-wing trim ignored, colliders on layers0/25 up to1000km, at most2Hz plus pose changes. No penumbra/string/bypass/thermal-degradation simulation.",
+    "No new automatic/manual panel tracking mechanism. Existing reactor/load/drone capacities retained; earlier40kWe/4kWh/3-12kW proposals remain unimplemented.",
+    "Release built and SHA256-deployed; automated graphical runtime checks use Development. No new natural full-campaign, native OS input, headset or FPS acceptance. No commit/push."
+  ],
+  "files": {
+    "08-large-sun-companion.png": "79EC3C6224CE224CAB6B48D7CD751CF4DFEF92D5F66271CB845C8A979DFE6A4A",
+    "08-large-sun-primary.png": "D2D9C836E32E5D70B813FFF7DC5CEE06F5CBA87982DB73E04CC5013FF2A11CE9",
+    "09-large-sun-companion-bottom.png": "0F547290823E3B4745C6975939CF6C091C87F4BB264F6FBFE39D86C3AD7D7CCA",
+    "battery-repair-route.json": "3448BBA1FC7829F06DD3A162E0A0ABF73CE83ED00DE9BA12487E76D4B17AFD89",
+    "binary-star-observation.json": "B807EBDD04753D3082FBAF106CFB1D2E66A8BD6D56A72622AF436EDE208D9039",
+    "build-summary.txt": "5B2BCA132762E1FF6CBE829BE6CE3538A1C740E3EFD9A32AC0177428E61A3F00",
+    "deployment.json": "E39B58480E468D825144AA4BFB2592D6D0B6C3F4EDE5631430AA64D825E7EA03",
+    "detail-solar-b.png": "39E2E6A661B9BACA429D7B86606C37DF3457E1E78962032EED4E71C43118D023",
+    "detail-sun-companion.png": "04CCE8CADAF14A25ED4C908CE282459D4131DE48A9483568CE97D47186B95B25",
+    "detail-sun-primary.png": "6AB7B0DE0E158B3BC057C0CA992E8219F13B591888D5B704F63D8324BCE2B2CE",
+    "operations-result.json": "3DD9CBCA0B6A3BC213BF7066CBAEFABEED8857ADED5E309D9514F701D51C3F7E",
+    "power-result.json": "1853E700CEA57FAFA805E0AF29DFA0DB6ABF46E0BC828780527C1F02345A920E",
+    "source-final.json": "9211FB1B23863708AE89331E8F2A1ADC0F46855129FC5D692EE89C2BD5FF5D3A",
+    "studio-long-text-companion.png": "1742E0EE982EED6F402FBDEEEB611A34B805EBD172879D0D22DDE73D46B46AC3",
+    "studio-result.json": "F9A3B11CD9D2645590C69AA7177A15A7CC0A7EFABA546ADD1F0DAAEFD54EF385"
+  }
+}

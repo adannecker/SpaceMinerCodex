@@ -1,0 +1,591 @@
+{
+  "scope": "Analytical calculation. Binary-star definitions integrated; see separate player verification. Other load/reactor/drone figures remain proposals.",
+  "date": "2026-10-26",
+  "solar_model_defined": true,
+  "physical_unshaded_connected_potential_kw": 4.616821188834537,
+  "solar_status": "Physical star definitions now fixed. Analytical values omit sampled scene occlusion and network isolation; actual runtime output is reported by the shared game read model.",
+  "assumptions": {
+    "schema": 1,
+    "status": "Binary-star definition authorized26Oct2026 and integrated; remaining load/reactor/drone proposals still not implemented",
+    "date": "2026-10-26",
+    "approved_scope": {
+      "crew": 1,
+      "exterior_drones": 1,
+      "interior_drones": 1,
+      "growth": "More crew and drones later; each technology needs a plausible energy profile"
+    },
+    "astronomy_assumptions": {
+      "solar_values_are_conditional_example_only": false,
+      "physical_mapping_approved": true,
+      "stellar_luminosities_known": true,
+      "display_au_equals_physical_au": 1.0,
+      "primary_luminosity_solar": 0.36037503837455376,
+      "companion_luminosity_solar": 0.11844550534642552,
+      "companion_sensitivity_solar": [
+        0.05922275267321276,
+        0.11844550534642552,
+        0.23689101069285104
+      ],
+      "note": "User authorizes defining both stars and using them in physics/UI. Display positions/radii unchanged. Energy coordinates map1800display-km to1physicalAU, preserving real local metres. Two quiet K dwarfs:5000K/0.8Rsun and4200K/0.65Rsun; luminosities derived from R²T⁴. Bolometric energy model, not UV/particle-dose acceptance.",
+      "primary_temperature_k": 5000,
+      "primary_radius_solar": 0.8,
+      "companion_temperature_k": 4200,
+      "companion_radius_solar": 0.65
+    },
+    "solar": {
+      "irradiance_w_m2_at_1_au": 1361,
+      "cell_efficiency": 0.3,
+      "net_system_factor": 0.85,
+      "remaining_cell_factor": 1.0,
+      "visible_missing_cells_already_excluded": true,
+      "legacy_condition_is_separate_sensitivity_not_added_to_reference": false,
+      "damage_rule": "EffectiveArea=min(actual remaining PV area, original full area*condition); missing modules and electrical damage counted once."
+    },
+    "electrical": {
+      "distribution_efficiency": 0.95,
+      "charger_efficiency": 0.91,
+      "battery_storage_efficiency": 0.98,
+      "station_capacity_kwh": 24,
+      "station_start_kwh": 12,
+      "station_reserve_fraction": 0.2,
+      "legacy_discharge_limit_kw": 8,
+      "implemented_station_charge_limit_c": 0.5
+    },
+    "reactor": {
+      "proposed_net_max_kwe": 40,
+      "condition_reference": 0.82,
+      "net_thermal_efficiency": 0.25,
+      "throttle_examples": [
+        0.2,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "minimum_throttle_assumption": 0.2,
+      "thermal_note": "40kWe is a reference class under development, not proof of a certified central inhabited-station reactor. Shielding, coolant, ramp limits and radiator integration remain open."
+    },
+    "drones": {
+      "exterior": {
+        "battery_kwh": 16,
+        "charger_output_kw": 12,
+        "parked_kw": 0.05,
+        "sortie_energy_kwh": 11.594,
+        "sortie_minutes": 78.65,
+        "note": "16kWh and historical sortie consumption retained as project baseline; external propulsion/tool consumption is paid through the onboard battery, not also counted as live station load."
+      },
+      "interior": {
+        "proposed_battery_kwh": 4,
+        "charger_output_kw": 3,
+        "parked_kw": 0.08,
+        "moving_kw": 3,
+        "tool_addition_kw": 1.5,
+        "proposed_mass_kg": 100,
+        "gravity_m_s2": 9.81,
+        "gap_m": 0.08,
+        "pole_count": 4,
+        "pole_area_m2": 0.01,
+        "turns_per_pole": 1000,
+        "mean_turn_length_m": 0.4,
+        "wire_cross_section_mm2": 2.5,
+        "copper_resistivity_ohm_m": 1.68e-08,
+        "note": "Illustrative conventional copper-electromagnet model only. R-01 currently has no mass/battery/magnetic solver; its free-hovering work path is not an engineered 8cm maglev guide. Fringing/return gaps/temperature may greatly increase power; permanent-magnet-assisted designs or shorter gaps may lower it."
+      }
+    },
+    "thermal": {
+      "cold_store_area_m2_assumed": 200,
+      "insulation_u_w_m2_k_assumed": 0.01,
+      "cabin_k": 293,
+      "cold_store_k_assumed": 150,
+      "cryocooler_cop_assumed": 0.2,
+      "radiator_emissivity": 0.9,
+      "background_k": 3,
+      "concept_one_face_m2": 32
+    },
+    "technology_profiles": [
+      {
+        "id": "computing",
+        "name": "Mira, Rechner, Netzwerk und Pulte",
+        "standby_kw": 0.6,
+        "active_kw": 1.2,
+        "peak_kw": 2.0,
+        "evidence": "Engineering allowance; actual Mira computing hardware not defined",
+        "confidence": "low"
+      },
+      {
+        "id": "lighting",
+        "name": "Bedarfsabhängige LED-Beleuchtung",
+        "standby_kw": 0.16,
+        "active_kw": 0.995,
+        "peak_kw": 2.0,
+        "evidence": "100m2 workspace at300lx +100m2 corridor at100lx +1400m2 background at10lx,140lm/W, utilization0.5, maintenance0.8,30W markers; rounded",
+        "confidence": "medium; area/lux are assumptions"
+      },
+      {
+        "id": "air",
+        "name": "Umluft, CO2- und Spurenstoffentfernung",
+        "standby_kw": 0.65,
+        "active_kw": 0.65,
+        "peak_kw": 1.5,
+        "evidence": "One-person large-habitat planning allowance; not an ISS component measurement",
+        "confidence": "low"
+      },
+      {
+        "id": "water_recycling",
+        "name": "Brauchwasserrecycling, Pumpen und Desinfektion",
+        "standby_kw": 0.15,
+        "active_kw": 0.15,
+        "peak_kw": 0.6,
+        "evidence": "Daily-average one-person allowance; separate from raw-ice processing",
+        "confidence": "low"
+      },
+      {
+        "id": "oxygen",
+        "name": "Sauerstoff-Elektrolyse",
+        "standby_kw": 0.2415,
+        "active_kw": 0.2415,
+        "peak_kw": 6.0,
+        "evidence": "0.84kgO2/person/day *55.2kWh/kgH2 /8 /24h; average replaces full batch draw, never sum both",
+        "confidence": "medium; system scaling uncertain"
+      },
+      {
+        "id": "cold_store",
+        "name": "Kaltlager und Lagersteuerung",
+        "standby_kw": 1.48,
+        "active_kw": 1.48,
+        "peak_kw": 2.5,
+        "evidence": "200m2 *0.01W/m2K *(293-150)K /COP0.2 +50W controls; conservative150K scenario, not measured hardware",
+        "confidence": "low; sealed250K store is far cheaper"
+      },
+      {
+        "id": "thermal_loop",
+        "name": "Stations-Kühlmittelpumpen und Wärmeregelung",
+        "standby_kw": 0.35,
+        "active_kw": 0.5,
+        "peak_kw": 1.0,
+        "evidence": "Pump/control allowance; does not include free unlimited resistive cabin heat or radiators",
+        "confidence": "low"
+      },
+      {
+        "id": "control_aux",
+        "name": "Ventile, Türzyklen, Sensoren und Docksteuerung",
+        "standby_kw": 0.1,
+        "active_kw": 0.15,
+        "peak_kw": 1.0,
+        "evidence": "Time-averaged allowance; door motors need transient power",
+        "confidence": "low"
+      },
+      {
+        "id": "scanner",
+        "name": "Nahbereichsscanner",
+        "standby_kw": 0.03,
+        "active_kw": 0.03,
+        "peak_kw": 1.2,
+        "evidence": "0.1kWh buffer and97-to100% in10s are existing design; proposed1.2kW input at90% efficiency preserves1.08kW stored power",
+        "confidence": "project timing; hardware estimate"
+      },
+      {
+        "id": "ice",
+        "name": "Eisbrecher, Verdichter und Wasseraufbereitung",
+        "standby_kw": 0.0,
+        "active_kw": 1.9,
+        "peak_kw": 1.9,
+        "evidence": "Current0.2+0.2+1.5kW;0.20kWh/L processed ice water,7.5L/h",
+        "confidence": "project physical first sizing"
+      },
+      {
+        "id": "printer",
+        "name": "Metallteilefertigung",
+        "standby_kw": 0.03,
+        "active_kw": 2.4,
+        "peak_kw": 8.5,
+        "evidence": "EOS M290 reference typical2.4/max8.5kW; current2kg/4min recipe is NOT validated by this reference",
+        "confidence": "manufacturer reference; game recipe open"
+      },
+      {
+        "id": "sorting",
+        "name": "Mechanisches Sortieren/Recycling",
+        "standby_kw": 0.02,
+        "active_kw": 0.8,
+        "peak_kw": 1.5,
+        "evidence": "Current recipe; excludes metal melting and chemical refining",
+        "confidence": "low"
+      },
+      {
+        "id": "food",
+        "name": "Nahrungsverarbeitung aus vorbereitetem Vorrat",
+        "standby_kw": 0.03,
+        "active_kw": 1.2,
+        "peak_kw": 2.0,
+        "evidence": "Existing recipe power only; no claim that complete nutrition from raw asteroid carbon is physically solved",
+        "confidence": "low; chemical process open"
+      },
+      {
+        "id": "tool",
+        "name": "Zusatz-Werkzeug am Innenfahrzeug",
+        "standby_kw": 0,
+        "active_kw": 1.5,
+        "peak_kw": 4,
+        "evidence": "Onboard planning allowance, charged later through battery; excludes printer/sorter already budgeted separately",
+        "confidence": "low"
+      }
+    ],
+    "sources": [
+      {
+        "id": "irradiance",
+        "url": "https://earth.gsfc.nasa.gov/climate/projects/solar-irradiance/science",
+        "supports": "1361W/m2 near1AU"
+      },
+      {
+        "id": "pv",
+        "url": "https://www.azurspace.com/media/uploads/file_links/file/bdb_00010890-01-00_generalinformationazur.pdf",
+        "supports": "2025 space-cell data around29-31%;30% reference not whole-panel efficiency"
+      },
+      {
+        "id": "charger",
+        "url": "https://www.wiferion.com/en/faq/faq-etalink/",
+        "supports": "3.3kW class,12kW system and typical91%/up to93% source-to-battery efficiency; air gaps1.5-4cm, not8cm"
+      },
+      {
+        "id": "charger12",
+        "url": "https://www.wiferion.com/en/news/logimat-best-product-2020-etalink-12000/",
+        "supports": "12kW contactless charging reference"
+      },
+      {
+        "id": "battery_limits",
+        "url": "https://www.enersys.com/48ef4a/globalassets/documents/product-documentation/_enersys/glob/legacy/batteries/nexsys/nexsys-ion/glob-en-om-nex-ion-0323.pdf",
+        "supports": "BMS changes permissible charge with temperature/state of charge; no exact game pack curve guaranteed"
+      },
+      {
+        "id": "oxygen_rate",
+        "url": "https://ntrs.nasa.gov/api/citations/20190027610/downloads/20190027610.pdf",
+        "supports": "0.84kgO2/person/day"
+      },
+      {
+        "id": "electrolyzer",
+        "url": "https://www.hydrogen.energy.gov/docs/hydrogenprogramlibraries/pdfs/24005-clean-hydrogen-production-cost-pem-electrolyzer.pdf",
+        "supports": "Representative beginning-of-life55.2kWh/kgH2 system; scale-down overhead not known"
+      },
+      {
+        "id": "life_support",
+        "url": "https://www.nasa.gov/reference/environmental-control-and-life-support-systems-eclss/",
+        "supports": "Air, water recovery and oxygen are separate life-support functions"
+      },
+      {
+        "id": "led",
+        "url": "https://www.signify.com/global/prof/indoor-luminaires/surface-mounted/philips-coreline-surface-mounted-gen-4/LP_CF_SM136V_EU/family",
+        "supports": "Modern LED luminaire examples around148-160lm/W;140lm/W planning value"
+      },
+      {
+        "id": "printer",
+        "url": "https://www.eos.info/metal-solutions/metal-printers/data-sheets/sds-eos-m-290",
+        "supports": "Typical2.4kW,max8.5kW,400W laser; technical sheet10Sep2026"
+      },
+      {
+        "id": "reactor",
+        "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+        "supports": "40kWe development class; not a delivered certified station system"
+      },
+      {
+        "id": "reactor_heat",
+        "url": "https://ntrs.nasa.gov/api/citations/20250000584/downloads/Sanzi_Pr_NESC_ThermalTDTWeb_Jan2025_20250000584.pdf",
+        "supports": "Heat pipes, Stirling conversion, radiator and load following are integral to space-reactor concepts;25% efficiency is scenario assumption"
+      }
+    ]
+  },
+  "stars": [
+    {
+      "id": "primary",
+      "display_position_km": [
+        -1343.689912954707,
+        1.7459278859379763,
+        1309.0454555906754
+      ],
+      "luminosity_solar": 0.36037503837455376,
+      "direction": [
+        -0.7162801323344516,
+        0.0009307009341434397,
+        0.6978122281951725
+      ],
+      "display_distance_km": 1875.927939778874,
+      "literal_display_distance_in_au": 1.2539803748549437e-05,
+      "distance_au_assumed": 1.042182188766041,
+      "irradiance_w_m2": 451.57046958274424
+    },
+    {
+      "id": "companion",
+      "display_position_km": [
+        -1103.689912954707,
+        301.745927885938,
+        1429.0454555906754
+      ],
+      "luminosity_solar": 0.11844550534642552,
+      "direction": [
+        -0.6028884859155771,
+        0.16482813103485308,
+        0.7806133234643003
+      ],
+      "display_distance_km": 1830.6700803525673,
+      "literal_display_distance_in_au": 1.2237273644246912e-05,
+      "distance_au_assumed": 1.017038933529204,
+      "irradiance_w_m2": 155.84811479538848
+    }
+  ],
+  "sun_separation_deg": 12.389404254594195,
+  "optimal_normal": [
+    -0.6902597383425024,
+    0.043174813450396275,
+    0.7222724064415471
+  ],
+  "panels": [
+    {
+      "id": "solar-a",
+      "side": "Right",
+      "frame_m": [
+        22.8,
+        21.4
+      ],
+      "frame_area_m2": 487.91999999999996,
+      "remaining_tiles": 32,
+      "original_tiles": 35,
+      "tile_area_m2": 11.039599999999998,
+      "remaining_pv_area_m2": 353.26719999999995,
+      "intact_original_pv_area_m2": 386.38599999999997,
+      "normal": [
+        -0.08715574274765817,
+        0.9778917956532961,
+        -0.19008290954232632
+      ],
+      "legacy_condition": 0.65,
+      "contributions": [
+        {
+          "star": "primary",
+          "angle_deg": 93.97401955749481,
+          "incidence": 0,
+          "output_kw": 0.0
+        },
+        {
+          "star": "companion",
+          "angle_deg": 86.25316434931632,
+          "incidence": 0.06534801906423313,
+          "output_kw": 0.917439589326236
+        }
+      ],
+      "static_output_kw": 0.917439589326236,
+      "optimal_both_suns_kw": 54.47456772974931,
+      "single_sun_1au_face_on_kw": 122.60314809599998,
+      "electrically_usable_area_m2": 251.15089999999998,
+      "physical_unshaded_connected_potential_kw": 0.652242208036621
+    },
+    {
+      "id": "solar-b",
+      "side": "Left",
+      "frame_m": [
+        22.8,
+        21.4
+      ],
+      "frame_area_m2": 487.91999999999996,
+      "remaining_tiles": 34,
+      "original_tiles": 35,
+      "tile_area_m2": 11.039599999999998,
+      "remaining_pv_area_m2": 375.34639999999996,
+      "intact_original_pv_area_m2": 386.38599999999997,
+      "normal": [
+        0.052335956242943835,
+        0.9931589376748557,
+        0.10438521064158734
+      ],
+      "legacy_condition": 0.81,
+      "contributions": [
+        {
+          "star": "primary",
+          "angle_deg": 87.92094430341835,
+          "incidence": 0.03627840471592951,
+          "output_kw": 1.568000331679756
+        },
+        {
+          "star": "companion",
+          "angle_deg": 77.66470190513772,
+          "incidence": 0.21363227229870485,
+          "output_kw": 3.1866975641625426
+        }
+      ],
+      "static_output_kw": 4.754697895842298,
+      "optimal_both_suns_kw": 57.879228212858656,
+      "single_sun_1au_face_on_kw": 130.265844852,
+      "electrically_usable_area_m2": 312.97266,
+      "physical_unshaded_connected_potential_kw": 3.9645789807979166
+    }
+  ],
+  "solar_existing_geometry_undamaged_static_kw": 5.672137485168534,
+  "solar_existing_geometry_best_aligned_kw": 112.35379594260797,
+  "solar_best_rigid_rotation_geometry_kw": 110.85077425550656,
+  "solar_current_hardware_best_aligned_kw": 86.98907534344346,
+  "solar_sensitivity": [
+    {
+      "companion_luminosity_solar": 0.05922275267321276,
+      "static_kw": 3.620068908424145,
+      "both_wings_independently_aligned_kw": 98.09024651338848
+    },
+    {
+      "companion_luminosity_solar": 0.11844550534642552,
+      "static_kw": 5.672137485168534,
+      "both_wings_independently_aligned_kw": 112.35379594260799
+    },
+    {
+      "companion_luminosity_solar": 0.23689101069285104,
+      "static_kw": 9.776274638657313,
+      "both_wings_independently_aligned_kw": 141.01209491725012
+    }
+  ],
+  "load_cases": [
+    {
+      "name": "Quiet/parked; daily-average oxygen",
+      "consumer_bus_kw": 3.9843571428571427,
+      "generation_required_kw": 4.19406015037594
+    },
+    {
+      "name": "Occupied; raw ice process running",
+      "consumer_bus_kw": 7.3765,
+      "generation_required_kw": 7.764736842105264
+    },
+    {
+      "name": "Raw ice plus both fast chargers",
+      "consumer_bus_kw": 23.860016483516482,
+      "generation_required_kw": 25.11580682475419
+    },
+    {
+      "name": "Raw ice, both chargers and full6kW oxygen batch",
+      "consumer_bus_kw": 29.618516483516483,
+      "generation_required_kw": 31.177385772122616
+    },
+    {
+      "name": "Above plus printer8.5kW,sorting0.8kW,food1.2kW and scanner1.2kW",
+      "consumer_bus_kw": 41.20851648351649,
+      "generation_required_kw": 43.37738577212262
+    }
+  ],
+  "charging": {
+    "exterior": {
+      "capacity_kwh": 16,
+      "charger_output_kw": 12,
+      "station_bus_kw": 13.186813186813186,
+      "hotel_kw": 0.05,
+      "stored_kw_cc": 11.710999999999999,
+      "minutes_10_80": 57.381948595337725,
+      "minutes_10_100": 90.57207002842857,
+      "energy_bus_10_80_kwh": 12.6114172737006
+    },
+    "interior": {
+      "capacity_kwh": 4,
+      "charger_output_kw": 3,
+      "station_bus_kw": 3.2967032967032965,
+      "hotel_kw": 0.08,
+      "stored_kw_cc": 2.8615999999999997,
+      "minutes_10_80": 58.70841487279844,
+      "minutes_10_100": 93.92290637661178,
+      "energy_bus_10_80_kwh": 3.2257370809229915
+    }
+  },
+  "growth": [
+    {
+      "crew": 1,
+      "exterior_drones": 1,
+      "interior_drones": 1,
+      "continuous_cycling_avg_generation_kw": 14.871933828028393,
+      "note": "Continuous work/charge cycles with enough docks; not all charging simultaneously, not a normal quest-day prediction;0.4kW extra/person allowance excludes new habitats."
+    },
+    {
+      "crew": 3,
+      "exterior_drones": 3,
+      "interior_drones": 3,
+      "continuous_cycling_avg_generation_kw": 29.92843306303255,
+      "note": "Continuous work/charge cycles with enough docks; not all charging simultaneously, not a normal quest-day prediction;0.4kW extra/person allowance excludes new habitats."
+    },
+    {
+      "crew": 6,
+      "exterior_drones": 10,
+      "interior_drones": 10,
+      "continuous_cycling_avg_generation_kw": 80.94196985923129,
+      "note": "Continuous work/charge cycles with enough docks; not all charging simultaneously, not a normal quest-day prediction;0.4kW extra/person allowance excludes new habitats."
+    }
+  ],
+  "continuous_cycle_average_bus_kw": {
+    "exterior": 5.0645657618982485,
+    "interior": 1.6872713747287247
+  },
+  "station_backup": [
+    {
+      "name": "Quiet/parked; daily-average oxygen",
+      "full_to20percent_hours": 4.57790287015292,
+      "current50_to20percent_hours": 1.7167135763073447,
+      "legacy8kw_discharge_can_supply": true
+    },
+    {
+      "name": "Occupied; raw ice process running",
+      "full_to20percent_hours": 2.4727174134074428,
+      "current50_to20percent_hours": 0.9272690300277908,
+      "legacy8kw_discharge_can_supply": true
+    },
+    {
+      "name": "Raw ice plus both fast chargers",
+      "full_to20percent_hours": 0.7644588180649822,
+      "current50_to20percent_hours": 0.28667205677436824,
+      "legacy8kw_discharge_can_supply": false
+    }
+  ],
+  "maglev_example": {
+    "flux_tesla": 0.2482701106928334,
+    "ampere_turns_per_pole": 15805.366135494583,
+    "amps_per_pole": 15.805366135494584,
+    "ohms_per_pole": 2.6880000000000006,
+    "copper_loss_kw": 2.685952804975524,
+    "copper_only_loss_at_10mm_kw": 0.04196801257774256,
+    "usable70percent_hours_moving": 0.9333333333333332,
+    "note": "Illustrative assumed geometry; fringing, second return gap, temperature and magnetic technology are unresolved"
+  },
+  "thermal": {
+    "cold_store_heat_leak_w": 286.0,
+    "cold_store_cooling_electric_kw": 1.43,
+    "reactor_full_net_kwe": 40,
+    "reactor_full_thermal_kw": 160,
+    "reactor_waste_kw": 120.0,
+    "worst_local_heat_kw": 160.0,
+    "radiators": [
+      {
+        "temperature_k": 350,
+        "reactor_waste_emitting_area_m2": 156.69488677749962,
+        "all_power_dissipated_locally_emitting_area_m2": 208.9265157033328
+      },
+      {
+        "temperature_k": 400,
+        "reactor_waste_emitting_area_m2": 91.85166560361532,
+        "all_power_dissipated_locally_emitting_area_m2": 122.4688874714871
+      },
+      {
+        "temperature_k": 450,
+        "reactor_waste_emitting_area_m2": 57.34254257966318,
+        "all_power_dissipated_locally_emitting_area_m2": 76.45672343955091
+      }
+    ]
+  },
+  "checks": {
+    "passed": true,
+    "count": 22
+  },
+  "source_hashes": {
+    "Assets/SpaceMiner/Scripts/StationVisual.cs": "ef6defe9fed95851615595ffb940219f8dbe2efeeef7a0cd0c6112ea98381bc5",
+    "Assets/SpaceMiner/Scripts/RuinedWorld.cs": "104e314fd2f4651c150e521417ff2752d8feb7fded2da6885d444d188461f918",
+    "Assets/SpaceMiner/Scripts/WaterScenario.cs": "bb1afc4e6cf7388c1a2031968ad2e5538459c8f9b9d586412bececa02badabc1",
+    "Assets/SpaceMiner/Scripts/StationOperations.cs": "5a97615c52702f68e94ed89e7bdba05fd82e6b395f15d8309db4e6b53eadcc72",
+    "Assets/SpaceMiner/Scripts/StationPowerReadModel.cs": "ebc961ba4311b32b9469d9b3b7b34bc5ed159dd50bf0b88dc972468da9001d39",
+    "Assets/SpaceMiner/Scripts/StationWork.cs": "7784913f42d4e3a65cadd9eafb32cb23d047c42142676980cf5913041a539933",
+    "Assets/SpaceMiner/Scripts/StationIcePlant.cs": "506a76f0fb4dd083aac0b53e368100746e6df555d3f94889cba4ff428ee25439",
+    "Assets/SpaceMiner/Scripts/StationInteriorMode.cs": "58bb5fffafb99462cc53789feb2aa23e6ffdaeab1595281184a12b6192545f2d",
+    "Assets/SpaceMiner/Scripts/StationInteriorLayout.cs": "0de37ba2e1695ac2390a339a065922d2577967e5e8b0992fd5663861c5431e15",
+    "Assets/SpaceMiner/Scripts/DroneAgent.cs": "d7d608fc65dda872785a1b6fc4e8c0704295fb331947f54d3e4ef28d03fbf8e5",
+    "Assets/SpaceMiner/Scripts/StationOperations.Lighting.cs": "78d81857d72515ddca4a7305d013509c4f1a8fbc1c05ad08d3badefe0a672556",
+    "Assets/SpaceMiner/Scripts/BinaryStarEnergy.cs": "1d8b284f5d71f44e268f14f1317b5dd82a3c24eced60d6bb954e710c6c89fc70"
+  },
+  "config_sha256": "5f9704c2c9662dc4b2a247f53efeecc40a2f40eb45c44394406b725b6adb3a3b"
+}

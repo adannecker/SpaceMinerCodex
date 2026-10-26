@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-12",
+  "baseCommit": "13fc488",
+  "previousUnity": "6000.4.7f1",
+  "unity": "6000.6.5f1",
+  "revision": "3ff58d469c8a",
+  "releaseDate": "2026-10-08",
+  "officialCatalog": "https://services.api.unity.com/unity/editor/release/v1/releases?version=6000.6",
+  "installedVia": "Unity Hub headless install",
+  "installationExitCode": 0,
+  "projectMigratedInPlace": true,
+  "sceneRegenerated": false,
+  "packageManifestUnchanged": true,
+  "builtInPackageUpdates": {
+    "com.unity.test-framework": "1.8.0",
+    "com.unity.ext.nunit": "2.1.0"
+  },
+  "builds": [
+    {
+      "name": "Development and Release",
+      "exitCode": 0,
+      "log": "Logs/buildexisting.log"
+    },
+    {
+      "name": "Mining showcase",
+      "exitCode": 0,
+      "log": "Logs/UnityUpgrade-2026-10-12/mining-build.log"
+    },
+    {
+      "name": "Techtree demo",
+      "exitCode": 0,
+      "log": "Logs/UnityUpgrade-2026-10-12/techtree-demo-build.log"
+    }
+  ],
+  "tests": [
+    {
+      "name": "Startstation",
+      "checks": 121,
+      "exitCode": 0,
+      "log": "Logs/UnityUpgrade-2026-10-12/startstation.log"
+    },
+    {
+      "name": "Unified presentation",
+      "checks": 28,
+      "exitCode": 0,
+      "log": "Logs/UnityUpgrade-2026-10-12/presentation.log"
+    },
+    {
+      "name": "Mining",
+      "checks": 69,
+      "exitCode": 0,
+      "log": "Logs/UnityUpgrade-2026-10-12/mining.log"
+    },
+    {
+      "name": "Mining balance",
+      "checks": 195,
+      "exitCode": 0,
+      "log": "Logs/UnityUpgrade-2026-10-12/balance.log"
+    }
+  ],
+  "editorChecks": [
+    "Settings validation",
+    "Research simulation",
+    "Research viewport"
+  ],
+  "launcherChecks": [
+    "PowerShell syntax",
+    "Pinned editor resolved automatically",
+    "Older editor rejected before launch"
+  ],
+  "deployment": [
+    {
+      "source": "Builds\\ResearchLaboratory",
+      "destination": "Builds\\Windows",
+      "files": 251,
+      "mismatches": []
+    },
+    {
+      "source": "Builds\\ResearchRelease",
+      "destination": "Builds\\WindowsRelease",
+      "files": 158,
+      "mismatches": []
+    }
+  ],
+  "previousBuildsPreserved": true,
+  "visualReview": [
+    "Logs/Startstation/01-kommandozentrale.png",
+    "Logs/Presentation-1600x1000/sidebar-locked.png",
+    "Logs/TripoMining/23-filled-cartridge.png"
+  ],
+  "limits": [
+    "No separate Release runtime test",
+    "No complete manual input acceptance or subjective audio test",
+    "No performance benchmark",
+    "Other isolated showcases not rebuilt",
+    "No commit or push in this upgrade task"
+  ]
+}

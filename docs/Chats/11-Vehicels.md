@@ -140,3 +140,25 @@ Meine Zuständigkeit bleibt die Gestaltung und Umsetzung von Station, Drohnen un
 Offen sind insbesondere Beenden und Wiederherstellung der Innenraumposition, Interaktionssounds und UI-Skalierung. Neue Techtree-Knoten, Kosten und Kapitelgrenzen bleiben Entwürfe; Forschung, Bau/Umbau, Versorgung und Erfahrung werden getrennt behandelt.
 
 Nur gelesen; keine Änderungen oder Builds ausgeführt.
+
+<!-- reviewed-project-continuation -->
+
+# Geprüfte Projektfortsetzung
+
+Exportstand: 2026-10-26T16:02:45.759077+00:00. Geprüfter Zeitraum: nach 2026-10-26T06:00:00+00:00 bis 2026-10-26T07:46:19+00:00.
+
+Der vorhandene bereinigte Projektteil bleibt oben unverändert. Frühere Rohtexte werden bewusst nicht erneut importiert.
+
+## Assistent · 2026-10-26T07:45:59.347Z
+
+Ich lese das neue Kontextupdate und die relevanten Drohnen-/Fahrzeugunterlagen im gemeinsamen Checkout. Es bleibt bei einem reinen Wissensabgleich.
+
+## Assistent · 2026-10-26T07:46:18.194Z
+
+Stand für **Drohnen und Fahrzeuge** aktualisiert:
+
+- Gemeinsamer Checkout auf **659b514**, lokale Unity-Migration **6000.6.5f1** erhalten. Dieser kombinierte Stand ist hier noch nicht gebaut.
+- Zuständigkeit: I75/Außendrohnen, Navigation, Verkehr, Docking, Ladung und Werkzeuge; insbesondere **SP-01/04/10**, abgestimmt mit Energie- und Modellchat.
+- Zehn I75 sind Verkehrsprobefahrzeuge; anfangs ist nur Außendrohne 01 produktiv. R02-Spielintegration, Modellkorrekturen, Ladeauslegung und Werkzeugwechsel bleiben offen. Dynamische Induktion ist eine Prüfoption.
+
+Sprint SP-01…SP-10 bleibt maßgeblich. Nur lesend abgeglichen; keine Änderungen, Builds oder weiteren Nachrichten.

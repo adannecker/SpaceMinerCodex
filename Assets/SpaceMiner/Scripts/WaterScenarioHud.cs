@@ -80,7 +80,9 @@ namespace SpaceMiner
             Label(34, 64, 275, 22, "WASSER SICHERN", muted);
             Label(34, 95, 275, 24, "Stationstank   " + scenario.WaterLiters.ToString("0.0") + " / " + scenario.TankCapacityLiters.ToString("0") + " L");
             Bar(new Rect(34, 125, 278, 10), scenario.WaterLiters / scenario.TankCapacityLiters);
-            Label(34, 146, 280, 22, "Reaktor " + scenario.ReactorPowerKw.ToString("0.0") + " kW  ·  Solar " + scenario.SolarPowerKw.ToString("0.0") + " kW", muted);
+            var generation=scenario.Operations?.CaptureGeneration();
+            float solar=generation.HasValue?generation.Value.SolarA.OutputKw+generation.Value.SolarB.OutputKw:0;
+            Label(34, 146, 280, 22, "Reaktor " + scenario.ReactorPowerKw.ToString("0.0") + " kW  ·  Solar " + solar.ToString("0.0") + " kW", muted);
             Label(34, 172, 280, 24, "1 bereit  ·  1 wartet auf Ladung  ·  8 defekt", muted);
 
             Panel(Quest);
@@ -234,7 +236,7 @@ namespace SpaceMiner
 
         private static string Tick(bool complete) => complete ? "✓  " : "○  ";
         private void Label(float x, float y, float w, float h, string value, GUIStyle style = null) => GUI.Label(new Rect(x, y, w, h), value, style ?? text);
-        private static void Panel(Rect rect) => Fill(rect, new Color(0.018f, 0.035f, 0.055f, 0.94f));
+        private static void Panel(Rect rect) => UiChrome.Panel(rect, Cyan, SettingsStore.Current.Accessibility.HighContrast);
         private static void Fill(Rect rect, Color color)
         {
             Color previous = GUI.color; GUI.color = color;

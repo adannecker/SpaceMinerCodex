@@ -26,7 +26,7 @@ const loader=new GLTFLoader();let current=null,sequence=0,distance=1.5,center=ne
 function size(){renderer.setSize(stage.clientWidth,stage.clientHeight);camera.aspect=stage.clientWidth/stage.clientHeight;camera.updateProjectionMatrix();}
 addEventListener('resize',size);size();
 function view(name='reset'){
-  const directions={front:[0,.12,1],back:[0,.12,-1],side:[1,.12,0],top:[0,1,.001],reset:[1.1,.65,1.3]};
+  const directions={front:[0,.12,1],back:[0,.12,-1],side:[1,.12,0],top:[0,1,.001],bottom:[0,-1,.001],reset:[1.1,.65,1.3]};
   const direction=new THREE.Vector3(...directions[name]).normalize();camera.up.set(0,1,0);
   camera.position.copy(center).addScaledVector(direction,distance);controls.target.copy(center);controls.update();
 }
@@ -44,7 +44,8 @@ function load(variant){
     // Keep enough room for the lower control panel in a narrow right sidebar.
     distance*=Math.max(1,1/camera.aspect*.90);controls.minDistance=sphere.radius*.55;controls.maxDistance=sphere.radius*16;
     view();wireframe();renderer.domElement.dataset.variant=variant;renderer.domElement.dataset.triangles=String(triangles);
-    status.textContent=`${variant} · ${triangles.toLocaleString('de-DE')} Dreiecke · 75 cm Länge`;
+    const lengthCm=box.getSize(new THREE.Vector3()).z*100;
+    status.textContent=`${variant} · ${triangles.toLocaleString('de-DE')} Dreiecke · ${lengthCm.toLocaleString('de-DE',{maximumFractionDigits:1})} cm Länge`;
   },progress=>{if(request===sequence&&progress.total)status.textContent=`${variant} wird geladen · ${Math.round(progress.loaded/progress.total*100)} %`;},error=>{
     console.error(error);status.classList.add('error');status.textContent='Modell konnte nicht geladen werden. Lokalen Vorschauserver prüfen.';
   });
@@ -55,4 +56,4 @@ document.querySelector('#rotate').addEventListener('change',event=>controls.auto
 document.querySelector('#wire').addEventListener('change',wireframe);
 document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>view(button.dataset.view)));
 renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);renderer.domElement.dataset.camera=camera.position.toArray().map(x=>x.toFixed(4)).join(',');});
-load('R02');
+load('R03');

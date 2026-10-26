@@ -318,79 +318,7 @@ namespace SpaceMiner
             Require(Campaign() == campaign, "charge-display fixtures restore original campaign exactly");
         }
 
-        private void CheckRealSolarAndPowerFixtures()
-        {
-            var original = Copy(SaveGameStore.Capture(scenario, "Power geometry original", ""));
-            string campaign = Campaign();
-            var panel = ops.SolarPanelB;
-            Require(panel != null && panel.IsChildOf(ops.Layout.transform)
-                && panel.GetComponentsInChildren<MeshFilter>().Length > 0, "solar incidence follows an actual rendered station panel");
-            Quaternion rotation = panel.rotation;
-            try
-            {
-                var solar = ops.Element("solar-b"); var sector = ops.Element("sector-9");
-                solar.condition = 1; sector.condition = 1; sector.power = true;
-                Vector3 sun = ops.CaptureGeneration().SolarB.SunDirection;
-                Require(sun.sqrMagnitude > .99f && ops.Powered(9), "declared full-health connectedB orientation fixture has real sunlight and bus");
-                var integrationFixture = Copy(SaveGameStore.Capture(scenario, "Declared connected full-healthB integration fixture", ""));
-                Vector3 perpendicular = Vector3.Cross(sun, Vector3.right);
-                if (perpendicular.sqrMagnitude < .1f) perpendicular = Vector3.Cross(sun, Vector3.forward);
-                perpendicular.Normalize();
-                float nominal = scenario.SolarPowerKw * .5f;
-                float[] angles = { 0, 60, 90, 180 };
-                Vector3[] normals = { sun, Vector3.RotateTowards(sun, perpendicular, Mathf.PI / 3, 0), perpendicular, -sun };
-                float[] fractions = { 1, .5f, 0, 0 };
-                for (int i = 0; i < angles.Length; i++)
-                {
-                    panel.rotation = Quaternion.FromToRotation(panel.up, normals[i]) * panel.rotation;
-                    Physics.SyncTransforms(); ops.RefreshSupplyState(); var snapshot = ops.CaptureGeneration();
-                    Require(Vector3.Distance(snapshot.SolarB.PanelNormal, panel.up) < .0001f,
-                        "read model observes actual transformed photovoltaic cell normal / " + angles[i]);
-                    Require(Mathf.Abs(snapshot.SolarB.AngleDegrees - angles[i]) < .05f
-                        && Mathf.Abs(snapshot.SolarB.Incidence01 - fractions[i]) < .0001f,
-                        "geometric solar angle and useful projected incidence / " + angles[i]);
-                    Require(Mathf.Abs(snapshot.SolarB.OutputKw - nominal * fractions[i]) < .0001f
-                        && Mathf.Abs(ops.State.power.GenerationKw - snapshot.TotalOutputKw) < .0001f,
-                        "actual energy simulation changes with0/60/90/backside angle / " + angles[i]);
-                }
-                panel.rotation = Quaternion.FromToRotation(panel.up, sun) * panel.rotation;
-                solar.condition = .4f; ops.RefreshSupplyState();
-                Require(Mathf.Abs(ops.CaptureGeneration().SolarB.OutputKw - nominal * .4f) < .0001f,
-                    "real solar hardware damage multiplies output after orientation");
-                sector.power = false; ops.RefreshSupplyState();
-                Require(!ops.CaptureGeneration().SolarB.Connected && ops.CaptureGeneration().SolarB.OutputKw == 0
-                    && Mathf.Abs(ops.CaptureGeneration().SolarB.PotentialKw - nominal * .4f) < .0001f,
-                    "open actual sector breaker removes supply but leaves observable oriented potential");
-                ops.Element("reactor").condition = .4f; ops.RefreshSupplyState();
-                Require(Mathf.Abs(ops.CaptureGeneration().Reactor.OutputKw - scenario.ReactorPowerKw * .4f) < .0001f,
-                    "reactor dashboard and true generation follow actual hardware health");
-                ops.Element("sector-0").power = false; ops.RefreshSupplyState();
-                Require(!ops.CaptureGeneration().Reactor.Connected && ops.CaptureGeneration().Reactor.OutputKw == 0,
-                    "isolating source sector removes reactor generation");
-                Require(ops.State.power.storedKwh == original.stationCampaign.power.storedKwh,
-                    "zero-duration power recomputation changes output without granting or consuming stored energy");
-                float[] energyDelta = new float[2];
-                for (int direction = 0; direction < 2; direction++)
-                {
-                    SaveGameStore.Apply(Copy(integrationFixture), scenario); scenario.Scanner.DismissDialogue(); ops.ClosePanel();
-                    panel.rotation = Quaternion.FromToRotation(panel.up, direction == 0 ? sun : perpendicular) * panel.rotation;
-                    ops.RefreshSupplyState(); float before = ops.State.power.storedKwh;
-                    scenario.Advance(60); energyDelta[direction] = ops.State.power.storedKwh - before;
-                    Require(StationOperations.Valid(ops.Capture()), "real60-second angle fixture leaves valid bounded energy state / " + direction);
-                }
-                Require(energyDelta[0] > energyDelta[1] + nominal * 60 / 3600 * .9f
-                    && Mathf.Abs((energyDelta[0] - energyDelta[1]) - nominal * 60 / 3600) < .00015f,
-                    "actual60-second campaign simulation gains projected panel energy when aligned versus edge-on / deltas="
-                    + energyDelta[0].ToString("R") + "," + energyDelta[1].ToString("R"));
-            }
-            finally
-            {
-                panel.rotation = rotation; SaveGameStore.Apply(original, scenario);
-                scenario.Scanner.DismissDialogue(); ops.ClosePanel(); ops.RefreshSupplyState(); UpdateBanks();
-            }
-            Require(Quaternion.Angle(panel.rotation, rotation) < .001f && Campaign() == campaign,
-                "all actual panel, health, network and energy fixtures restore original scene and campaign");
-        }
+        private void CheckRealSolarAndPowerFixtures() => BinaryStarPowerChecks.Run(ops,Require);
 
         private void CheckDashboardFrame(int afterFrame)
         {
@@ -573,12 +501,12 @@ namespace SpaceMiner
                 foreach (var item in ops.PowerHitAreas)
                     Require(item.Value.width > 0 && item.Value.height > 0, "projected hotspot has usable dimensions / " + item.Key);
             })) yield break;
-            foreach (string id in new[] { "reactor", "solar-a", "solar-b", "battery-bay-1", "battery-bay-2", "consumer:life" })
+            foreach (string id in new[] { "reactor", "solar-a", "solar-b", "battery-bay-1", "battery-bay-2", "consumer:life", "sun-primary", "sun-companion" })
             {
                 if (!Guard(() => Require(ops.SelectPowerItem(id), "inspector selection / " + id))) yield break;
                 yield return null; yield return null;
                 yield return Capture("detail-" + id.Replace(":", "-")); if (failed) yield break;
-                if (!id.StartsWith("consumer:") && !Guard(() => Require(ops.PowerDetailMeshCount > 0, "selected item reuses original mesh data / " + id))) yield break;
+                if (!id.StartsWith("consumer:") && !id.StartsWith("sun-") && !Guard(() => Require(ops.PowerDetailMeshCount > 0, "selected item reuses original mesh data / " + id))) yield break;
             }
             if (!Guard(() => { ops.SelectPowerItem("battery-bay-0"); ops.ScrollPowerDashboard(new Vector2(0, 10000)); })) yield break;
             yield return Capture("detail-bankbilanz"); if (failed) yield break;
@@ -602,6 +530,14 @@ namespace SpaceMiner
             yield return Capture("06-stromuebersicht-grosse-schrift-oben"); if (failed) yield break;
             if (!Guard(() => ops.ScrollPowerDashboard(new Vector2(0, 100000)))) yield break;
             yield return Capture("07-stromuebersicht-grosse-schrift-unten"); if (failed) yield break;
+            foreach(string starId in new[]{"sun-primary","sun-companion"})
+            {
+                if(!Guard(()=>{Require(ops.SelectPowerItem(starId),"large-text star inspector / "+starId);ops.ScrollPowerDashboard(Vector2.zero);}))yield break;
+                yield return null;yield return null;
+                yield return Capture("08-large-"+starId);if(failed)yield break;
+                if(!Guard(()=>ops.ScrollPowerDashboard(new Vector2(0,100000))))yield break;
+                yield return Capture("09-large-"+starId+"-bottom");if(failed)yield break;
+            }
             if (!Guard(() =>
             {
                 Require(Campaign() == readonlyCampaign, "rendering, changing resolution and scrolling dashboard preserve campaign resources");

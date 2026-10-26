@@ -2,11 +2,13 @@
 
 ## Nächster Sprint: verbindlicher Umfang und Arbeitsreihenfolge – 26.10.2026
 
-**Nutzerentscheidung:** Die zuletzt genannten Aufgaben sollen im nächsten Sprint eingebaut und priorisiert fertiggestellt werden. Sie sind damit Sprintumfang. Die folgende Arbeitsreihenfolge wurde aus technischen Abhängigkeiten abgeleitet; alle Positionen gehören zum Sprintziel. Status aller Positionen: offen. Kein Start-/Enddatum oder belastbarer Aufwand vereinbart; diese Planung ist keine automatische Terminierung.
+**SP-01 abgeschlossen –26.10.2026:** R03-Gestaltung vom Nutzer bestätigt und im Spiel für R-01/zehn optionale Fahrprobenakteure übernommen. 1523 Playerprüfungen (949 Verkehr, 477 Strom/R-01, 97 Kampagne), beide Builds und drei finale Playerläufe erfolgreich. [Spielintegration und Prüfgrenzen](Innendrohne-I75-R03-Spielintegration-2026-10-26.md). Dock-/Werkzeugfunktionen und Energieauslegung bleiben eigene offene Sprintpakete.
+
+**Nutzerentscheidung:** Die zuletzt genannten Aufgaben sollen im nächsten Sprint eingebaut und priorisiert fertiggestellt werden. Sie sind damit Sprintumfang. Die folgende Arbeitsreihenfolge wurde aus technischen Abhängigkeiten abgeleitet; alle Positionen gehören zum Sprintziel. Status: SP-01 abgeschlossen; SP-02 bis SP-10 weiterhin offen. Kein Start-/Enddatum oder belastbarer Aufwand vereinbart; diese Planung ist keine automatische Terminierung.
 
 | Reihenfolge / ID | Arbeitspaket | Fertig, wenn … |
 | --- | --- | --- |
-| 1 / SP-01 | I75-Unterseite und Texturen korrigieren | das gemeldete Loch am Mesh geprüft und geschlossen ist, die fehlerhaften Texturstellen korrigiert sind und Unterseite, Materialübergänge sowie Exporte in der drehbaren Vorschau geprüft wurden; die korrigierte R02-Fassung ist im Spiel übernommen. |
+| 1 / SP-01 | I75-Unterseite und Texturen korrigieren | das gemeldete Loch am Mesh geprüft und geschlossen ist, die fehlerhaften Texturstellen korrigiert sind und Unterseite, Materialübergänge sowie Exporte in der drehbaren Vorschau geprüft wurden; die bestätigte Korrekturrevision ist im Spiel übernommen. **Erfüllt mit R03 am26.10.2026**, siehe Spielintegrationsbericht. |
 | 2 / SP-02 | Energieauslegung plausibilisieren | Stationsverbrauch und Reaktorerzeugung nachvollziehbar bilanziert sind; Innendrohnen mit Schweben/Fahrt, Bereitschaft, Werkzeug und Transportlast samt Akku, Einsatzdauer und gleichzeitigen Verbrauchern berechnet und im Spiel konsistent abgebildet sind. Keine stillschweigende neue Reaktorleistung: Änderungen aus der Rechnung begründen und dokumentieren. |
 | 3 / SP-03 | Reale Ladegeschwindigkeiten umsetzen | aktuelle belastbare Technikquellen, Akkutyp und Ladeverlauf dokumentiert sind; Teil-/Vollladung, Verluste, Temperatur-/Leistungsgrenzen und parallele Ladungen berücksichtigt werden; Simulation und UI dieselben Werte nutzen. Spielzeit und reale Dauer getrennt prüfen. |
 | 4 / SP-04 | I75-Docking und Laden | passende Dockmodelle mit sicheren Zufahrten abseits der Fahrspuren im Spiel stehen; Anfahren, Belegen, Laden, Freigeben und Rückkehrreserve funktionieren, ohne Türen/Spuren zu blockieren; die Energie aus der echten Stationsbilanz stammt. Kontakt- versus stationäre Induktionsladung begründet auswählen. Dynamische Induktion im Sprint bewerten, nicht ohne weitere Entscheidung als Standard bauen. |
@@ -29,8 +31,8 @@ Die Detailaufgaben und Verweise folgen unten. Ältere offene Ideen außerhalb di
 
 Auf Nutzerauftrag als offene To-dos festgehalten; die ursprüngliche Nennreihenfolge unten bleibt erhalten, die aktuelle Sprintreihenfolge steht darüber. Noch keine Fehlerbehebung, Integration oder neue Energieberechnung erfolgt.
 
-- [ ] **Innendrohne: Texturen prüfen und nacharbeiten.** Einige Stellen passen laut Nutzer noch nicht. R02 in der drehbaren Vorschau von allen Seiten prüfen, betroffene Flächen festhalten und UV-/Materialübergänge korrigieren. [R02-Modell](Innendrohne-I75-Textur-R02-2026-10-26.md).
-- [ ] **Innendrohne: Unterseite schließen.** Vom Nutzer gemeldetes Loch an der Unterseite am tatsächlichen Mesh untersuchen und sauber schließen; Normalen, Texturierung und Export danach prüfen. Befund noch nicht unabhängig überprüft. [I75-Arbeitsliste](I75-Naechste-Schritte-2026-10-26.md).
+- [x] Innendrohne: Texturen prüfen und nacharbeiten. – mit bestätigter R03 und Spielübernahme erledigt; geschlossene Strukturteile, Schrift/Materialien und Exporte geprüft. [Spielintegration und Prüfgrenzen](Innendrohne-I75-R03-Spielintegration-2026-10-26.md).
+- [x] Innendrohne: Unterseite schließen. – mit bestätigter R03 und Spielübernahme erledigt; geschlossene Strukturteile, Schrift/Materialien und Exporte geprüft. [Spielintegration und Prüfgrenzen](Innendrohne-I75-R03-Spielintegration-2026-10-26.md).
 - [ ] **Hochauflösenden Avatar ins Spiel integrieren.** Vorhandenen hochauflösenden Mira-Avatar übernehmen; bisherige Modellwahl-/Dialogstudioarbeit berücksichtigen und tatsächliche Hauptspielintegration, Animationen, Materialien und Laufzeitkosten prüfen. [Mira-Avatar](MiraAvatar.md), [3D-Stand](Mira3D.md).
 - [ ] **Steuerpult: 3D-Modell und Konzeptbild erneut gemeinsam prüfen.** Form, Proportionen, Materialien und Displayeinbau abgleichen; nötige Korrekturen vor weiterer Integration festhalten. [Konzept](Steuerpult-Konzept-2026-10-26.md), [Blender-Modell](Steuerpult-Blender-2026-10-26.md).
 - [ ] **Stromversorgungs-UI näher ans Konzept bringen.** Formen, Abschnittsaufteilung und Gestaltung der tatsächlichen Oberfläche mit dem Konzept vergleichen und überarbeiten; vorhandene reale Datenanbindung erhalten. [UI-Konzept](Stromversorgung-UI-Konzept-2026-10-25.md), [Umsetzung](Stromversorgung-UI-2026-10-26.md).
@@ -173,13 +175,13 @@ Diese Abhängigkeiten beschreiben den Entwurf, noch keine festgelegte Reihenfolg
 ## Umsetzungsstand 07.10.2026
 
 - [x] Neun benannte Planeten auf sichtbaren Bahnen und anklickbares Planetenarchiv; komprimierte Spielabstände.
-- [x] Zwei sichtbare Sonnen mit externer Beleuchtung; ausrichtungsabhängiger Solarertrag bleibt offen.
+- [x] Zwei sichtbare Sonnen mit externer Beleuchtung; seit26.10.2026 zusätzlich physikalischer Ertrag beider Sterne nach Fläche, Ausrichtung, Schatten und Netzverbindung sowie Sonneninformationen im Strominterface. Unabhängige Nachführung bleibt offen.
 - [x] Zerbrochene Heimatwelt Aetherys, beschädigter Mond, Hitze-/Giftdunst und Materialstrom als visuelle Kulisse; Schaden/Strahlungszone noch offen.
 - [x] Zwölfteilige Kohlezeichnungssequenz mit Enceladus, durchgehender Aufnahme, leiser Musik, direkten Überblendungen und MP4-Export.
 - [x] Neue Station mit acht Ladebuchten, zwei Wartungsplätzen und Tankkupplung; Wasserübergabe mit Drohnen.
 - [x] Wasserabbauwissen mit Förderrate-/Energieschwerpunkt im Techtree.
 
-Ältere offene Beschreibungen des Planeten und Bildintros oben werden durch diesen Stand ersetzt. Batteriewechsel, Rollenumbau, spätere Hardwaretiers, Strahlungsschaden, Solarleistung und Ereignisvorhersage sind weiterhin auszuarbeiten.
+Ältere offene Beschreibungen des Planeten und Bildintros oben werden durch diesen Stand ersetzt. Batteriewechsel, Rollenumbau, spätere Hardwaretiers, Strahlungsschaden und Ereignisvorhersage sind weiterhin auszuarbeiten. Die Solarleistung ist inzwischen integriert; weitere Steuerung/Nachführung bleibt offen, siehe Doppelsonnen-Nachtrag unten.
 
 ## Reproduzierbare Asteroidenwolken mit Seeds (08.10.2026)
 
@@ -193,3 +195,12 @@ Status: Alle vier Punkte am 08.10.2026 auf diesem Desktop umgesetzt und technisc
 2. **Innenraumposition zuverlässig speichern und wiederherstellen — umgesetzt.** Manuelle Saves und Autosaves erhalten Position, Blickrichtung und Schleusenphase im Wohnmodul, an beiden bewegten Türen, beim Druckausgleich und im Ring. Laden der Dateien in einem zweiten Player-Prozess sowie Fortsetzung laufender Drohnenaufträge bestanden. Alte v1-Spielstände bleiben lesbar. Lokaler Prüfeditor: 6000.6.4f1; neuer Stand mit Projekteditor 6000.4.7f1 noch ungeprüft.
 3. **Unterschiedliche Interaktionssounds — umgesetzt.** Türmotoren für Öffnen/Schliessen, Dichtungsanschlag, Druckausgleich, Pult, VR und Scanbestätigung plus leise Innenambience. Master/Effects, Live-Mute und Cancel angebunden. Technische Prüfung bestanden, subjektive Hörfreigabe offen. Details: [Audio](Audio.md).
 4. **UI an Auflösung anpassen und UI-Skalierung anbieten — umgesetzt.** Interface-Regler 75–150 Prozent, Standard 100, live mit Apply/Cancel; Quest, Mira, Pult und Menüs/HUD gemeinsam angebunden. Hohe Auflösungen bleiben kompakt, kleine Fenster passen die UI ein. 32 Player-Bilder mit vergrösserter Schrift und skalierte Trefferflächen geprüft; native Zusatzprüfung wegen Windows-Sperre offen. Details: [Settings](Settings.md).
+
+### Analytischer Fortschritt SP-02/03 –26.10.2026
+
+[Stationsenergie-Auslegung](Stationsenergie-Auslegung-2026-10-26.md), [Parameter-/Technologiekatalog](../Design/Energy/station-energy-reference-2026-10-26.json) und reproduzierbarer Rechner liegen vor: Start1Person/je1Drohne, tatsächliche Doppelsonnengeometrie,22 analytische Prüfungen. Größenordnung4,2kW Bereitschaft/7,8kW Eis-Wasserbetrieb/25,1kW beide Schnelllader; Spitzen und Wärme getrennt.3/12kW-Ladereferenz,40kWe-Reaktor und4kWh-I75 sind Vorschläge; keine neue Hardwarefreigabe. Absolute Solar-kW bleiben ohne Leuchtkräfte/physikalische Entwurfsskala unbekannt; AE-Normierung nur ausdrücklich bedingtes Beispiel. SP-02/03 bleiben offen: Stern-/Magnet-/Kälte-/Akkuparameter entscheiden und danach in die vorhandene Simulation integrieren/prüfen. Keine Unity-/Saveänderung in dieser Rechenrunde.
+
+
+### Umgesetzter Teil von SP-02/06: Doppelsonnen –26.10.2026
+
+Sternwerte und Energieskala jetzt entschieden, beide Sonnen real in PV-Bilanz und Strominterface integriert; [aktuelle Definition/Bedienung/Prüfung](Doppelsonnen-Energie-2026-10-26.md).451,57+155,85W/m²; Flächen, Zustand, Winkel, getrennte Schatten und Sektornetz berücksichtigt. Neuer SONNEN-Reiter auch im gemeinsamen Konsolenstudio. Endlicher0,5C-Ladestrom und Abregelung umgesetzt.507 Strom-/Sonnenchecks,97 Stationschecks,36 Studioaufnahmen und22 analytische Checks bestanden. Die ältere Aussage „absolute Solar-kW unbekannt“ ist hiermit überholt. SP-02/03 bleiben insgesamt offen: reale dynamische Verbraucherprofile, Magnet-/Kälte-/Akku- und Drohnenladeauslegung sowie Reaktorregelung und deren Integration;40kWe/4kWh/3-12kW noch Vorschläge. SP-06 hat jetzt diese Sonneninformationen, keine pauschale Freigabe aller übrigen Sprintkriterien.
