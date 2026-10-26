@@ -11,9 +11,20 @@ namespace SpaceMiner
         private StationDisplay source;
         private TextMesh frontText, screenText;
         private float refreshAt;
+        public StationConsoleTouchSurface TouchSurface { get; private set; }
+        public bool TryGetTouchPoint(Camera view,out Vector3 point,out Vector3 normal)
+        {EnsureTouchSurface();return TouchSurface.TryGetTouchPoint(view,out point,out normal);}
+        private void EnsureTouchSurface()
+        {
+            TouchSurface=GetComponent<StationConsoleTouchSurface>()??gameObject.AddComponent<StationConsoleTouchSurface>();
+            // Measured front of the authored R04 glass (28.8 degrees above horizontal).
+            // The generous inset leaves room for three fingers and the curved bezel.
+            TouchSurface.Configure(this,new Vector3(0,.8603f,0),new Vector3(0,.8763067f,-.4817537f),
+                new Vector3(0,.4817537f,.8763067f),new Vector2(Main?1.85f:.43f,.40f));
+        }
         public void Bind(StationDisplay display, Transform body, Vector3 footprint)
         {
-            source=display;FitFootprint(footprint);
+            source=display;FitFootprint(footprint);EnsureTouchSurface();
             if(frontText==null){
                 frontText=Object.Instantiate(display.Front,transform);frontText.name="R04 Frontbeschriftung";frontText.transform.localPosition=new Vector3(0,.535f,-.507f);frontText.transform.localRotation=Quaternion.identity;frontText.transform.localScale=Vector3.one;frontText.characterSize=Main?.065f:.038f;
                 screenText=Object.Instantiate(display.Front,transform);screenText.name="R04 Funktionsanzeige";screenText.transform.localPosition=new Vector3(0,.858f,-.002f);screenText.transform.localRotation=Quaternion.Euler(61.2f,0,0);screenText.transform.localScale=Vector3.one;screenText.characterSize=Main?.075f:.034f;

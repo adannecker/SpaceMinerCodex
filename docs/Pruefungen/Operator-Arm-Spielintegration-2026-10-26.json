@@ -1,0 +1,258 @@
+{
+  "date": "2026-10-26",
+  "baseCommit": "f6deed454619819fd9ba528de341f3a86f21900c",
+  "unity": "6000.6.5f1",
+  "revision": "3ff58d469c8a",
+  "builds": {
+    "development": true,
+    "release": true,
+    "exitCode": 0,
+    "method": "SpaceMiner.Editor.OperatorArmBuild.Build",
+    "sceneRegenerated": false
+  },
+  "playerChecks": [
+    {
+      "flag": "-stationHandsCheck",
+      "checks": 232,
+      "exitCode": 0
+    },
+    {
+      "flag": "-stationConsoleTouchCheck",
+      "checks": 356,
+      "exitCode": 0
+    },
+    {
+      "flag": "-stationOperationsUiCheck",
+      "checks": 28,
+      "exitCode": 0
+    }
+  ],
+  "totalChecks": 616,
+  "model": {
+    "variant": "accepted LEFT R03 plus separate clothing continuation",
+    "sourceTriangles": 1876704,
+    "armTriangles": 45000,
+    "armVertices": 31464,
+    "armBones": 17,
+    "sleeveTriangles": 4506,
+    "sleeveVertices": 8864,
+    "sleeveBoneReferences": 2,
+    "totalTriangles": 49506
+  },
+  "touches": {
+    "completed": 9,
+    "cancelled": 5,
+    "scope": "Actual R03 skinned arm, six real R04 consoles and physical ice-plant wall terminal; same controller entry as E; reach/contact/retract, three independent fingertip contacts, once-only modal opening, frozen walking, reachable range, wall occlusion, exterior/settings/Escape cancellation, moved/rotated/resized room-plan console and a real adjacent unreachable-console candidate. Escape uses the real QuitMenu dispatch controller. Isolated settings/saves/plans. Controller and framebuffer acceptance; no native OS keyboard, manual comfort, headset or performance acceptance."
+  },
+  "sourceFilesChecked": 238,
+  "sourceChangesDuringBuildAndTests": [],
+  "preservedInputs": [
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "sha256": "842e40d6d7c2763128c272109fd51c6233891c2692bda34594bf9e7e52d85b24",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Scenes/AsteroidBelt.unity",
+      "sha256": "4214df275946b8a7bfa69df5c7c10e4388b9862753054d762ea49592a2630de9",
+      "unchanged": true
+    },
+    {
+      "path": "Design/RoomPlans/command-room-layout.json",
+      "sha256": "ff3c7122861684d7f5cbb58ec4259295a2933ff585b861c884a8f2a75c7a1f3e",
+      "unchanged": true
+    },
+    {
+      "path": "Design/RoomPlans/drone-workshop-layout.json",
+      "sha256": "86cb0d1a0ba7ee446ac3693af11b9d00397c2806776cd4bcbb39a126f56270a2",
+      "unchanged": true
+    },
+    {
+      "path": "Design/RoomPlans/internal-workshop-layout.json",
+      "sha256": "18826eaaaf9c1b0dc9153b54b4cf88e88d80053d97fbd6e01a8d831aa3400292",
+      "unchanged": true
+    },
+    {
+      "path": "Design/Models/OperatorArm/Revision-R03/OperatorArm-R03.blend",
+      "sha256": "b89f47efed8dc68710d8e5165d5590c5f0f199076f943b100f438a338a39d848",
+      "unchanged": true
+    },
+    {
+      "path": "Design/Models/OperatorArm/Revision-R03/OperatorArm-R03.glb",
+      "sha256": "d7a26abd9cb272e190f8776159b83cc0a514aa371f537986427039b2ddb01c52",
+      "unchanged": true
+    }
+  ],
+  "deployment": [
+    {
+      "source": "Builds/OperatorArmDevelopment",
+      "target": "Builds/Windows",
+      "files": 247,
+      "identical": true
+    },
+    {
+      "source": "Builds/OperatorArmRelease",
+      "target": "Builds/WindowsRelease",
+      "files": 156,
+      "identical": true
+    }
+  ],
+  "pictures": [
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Hands/01-idle-hand-1600.png",
+      "sha256": "b28675186f928c4c2625281489bd4c058009a2eb5d9dc1908909719b328568dc"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Hands/02-walk-look-hand.png",
+      "sha256": "2259e688c505eb47ce551840c0668af32662ff8fb2d892ae630bd45abbecf859"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Hands/03-terminal-no-hand.png",
+      "sha256": "c8999a8e5f18a4c8407d508f35334f3a4a24f2f372637d612fd8749cff2619c9"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Hands/04-roomplan-no-hand.png",
+      "sha256": "c399d5175f68e0a365c24ac18df7fa56a881012d7196c980c8aa230dbc2bd3ca"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Hands/05-declared-close-wall-fixture.png",
+      "sha256": "bf9a351b19a023e35ac7a3e47eaedc2cd5565062e29f9527d3fdcfc302819776"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Hands/06-outside-no-hand.png",
+      "sha256": "d4e62440c6e4814da6a1a35cf8c95b29b145a03d26e963765ebeb169f2898d30"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/01-main-contact.png",
+      "sha256": "9e619faa15469cb3e2d0c6e278d2fcd5a8fadb3096ae23c9cc92175b2cbd5e89"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/01-main-panel.png",
+      "sha256": "0b6e6e6733921262ed7f8aef3d712cdbbbe3957fbf3c64d48aaf36579d0ff345"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/02-drones-contact.png",
+      "sha256": "8561c2f450fd64a143a0d12a796106f467a3eb2349ea79535a00712872c68330"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/02-drones-panel.png",
+      "sha256": "a986a300e6c690cde64dc690d05e7f6b3fa138fa12ac2191e2935dd1066eaef4"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/03-planning-contact.png",
+      "sha256": "9c28c169dad5adab5d74f1f756937d53bf94575ddb1ff80223442f6eced5bbb1"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/03-planning-panel.png",
+      "sha256": "318d1b8b6589295f42531ca8f1dba42c907b2b6db55312e8e086d1918f5a1555"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/04-research-contact.png",
+      "sha256": "d64746d5bbfa656b6efc8d4c3e5ef12e5cb751a263b40f45adf7e52ecfff27b6"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/04-research-panel.png",
+      "sha256": "7e230f5b2aed48715f97097992b4f91996377a42e2ad439f1bdf74c639441354"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/05-production-contact.png",
+      "sha256": "f831e40f444358f186ee4ac3a49ffa414817955fd6e6a6aabda3a3cf54c4cef6"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/05-production-panel.png",
+      "sha256": "bb9d7223c50edb9f54b4d4c03950985a9b1addb29f68627dbcf49a03b5e1ce4b"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/06-battery-contact.png",
+      "sha256": "0feb86ce15c4ab09b7db39cb64fb0ab976a6702deef32b3d8b7a18a378ba040d"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/06-battery-panel.png",
+      "sha256": "94cd2e7b3e37b1a782ffb18e54c2b6e0b1614bb06d11a960c533570847495f56"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/08-ice-plant-contact.png",
+      "sha256": "27fe33deacf13edf27c39672ab86f85e8a47d17c8154a0ae48b996f485193d56"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/08-ice-plant-panel.png",
+      "sha256": "c4d5448d97af824b4b22b1faaccabb6a6883a2d64fab56170a5f7195c578ba5f"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/09-adjacent-console-contact.png",
+      "sha256": "d56a3f9fed582e37d236a33ef3441c6a505ab3e33dcdca71b600f1b45575b731"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/09-adjacent-console-panel.png",
+      "sha256": "bd9ddd9b50ede4aac5809cfed4c445e81d14932572e3d85acaf84474388a443f"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/07-edited-room-plan-contact.png",
+      "sha256": "97db0a37714c4c9f066ddeda1470617af6cba5aa83b369032914cf53f9f9de57"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/Touch/07-edited-room-plan-panel.png",
+      "sha256": "31d06382a5f3594adc455ae5548ea1659c312063abdc8f262317b1a33990a99f"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/UI/01-hud-und-e-hinweis.png",
+      "sha256": "0359aa9485e5292e28213bd8aee2f3e01bbc8a57d624b7034600e28a1abec9f6"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/UI/02-forschungsterminal.png",
+      "sha256": "9a446e33550ad5ce538ee1e714f913d6756216f7c7ab7545f26fbdc383a578e8"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/UI/03-drohnenverwaltung.png",
+      "sha256": "3c4a6a3cec51150b523e26fcb018c9514ee2ddeb5ffd4693056d4695b5e1de33"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/UI/04-stationsplanung.png",
+      "sha256": "9f6c65e27c97d881328d1d4026f40df381a6cd2295ee3338c9b51bddd9069363"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/UI/05-produktion-und-lager.png",
+      "sha256": "886b339d36048acc2e01525cfe505e0bce5b5d72f7fe2bf6efd7732203bb0fdf"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/UI/06-grosse-schrift-1280.png",
+      "sha256": "34ae6fe884577e514458183a4e4518a7791b350007db1b0989b8b8c2f26057ef"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/UI/07-aufgabe-mit-mira.png",
+      "sha256": "6e2ca52d169a0e31ae80512a1131e7a0537afdb8f9e7503c6e95a0828eb15561"
+    },
+    {
+      "path": "docs/Pruefungen/Operator-Arm-2026-10-26/UI/08-vollbild.png",
+      "sha256": "6337ffc8dfff691fe5da062c46026895aaa6ee028fefcd3d5b234fdd252033db"
+    }
+  ],
+  "visualReview": [
+    "idle left R03",
+    "main and drone console contact",
+    "ice-plant wall contact",
+    "moved/rotated room plan",
+    "shoulder continues into body beyond frame"
+  ],
+  "earlierRuns": [
+    {
+      "state": "before final shoulder continuation",
+      "touchChecks": 329,
+      "finalAcceptance": false
+    },
+    {
+      "state": "hidden Windows startup at unchanged 1600x1000 captured black framebuffer",
+      "exitCode": 1,
+      "fix": "same binary started at1440x900, actual resize to1600x1000",
+      "finalAcceptance": false
+    }
+  ],
+  "limits": [
+    "controller and real framebuffer checks; no native OS keyboard/mouse acceptance",
+    "no subjective animation comfort, headset or FPS benchmark",
+    "release built and deployed; automated player checks use Development",
+    "clothing torso is a first-person continuation, not a complete player character",
+    "no working tool, inventory or wrist HUD"
+  ],
+  "commitOrPush": false
+}

@@ -1,5 +1,7 @@
 # Handdarstellung in der Stationsansicht — 25.10.2026
 
+**Abgelöst durch den R03-Operator-Arm — 26.10.2026:** Die aktuelle First-Person-Ansicht verwendet die **rechte Ableitung des angenommenen R03**, eine schmale Ärmelverlängerung ohne Torso und eine Dreifingerberührung beim Öffnen der E-Pulte. [Aktuelle Darstellung und Prüfung](Pult-Metallblau-und-Rechtsarm-2026-10-26.md), [ursprüngliche E-Integration](Operator-Arm-Spielintegration-2026-10-26.md). Der nachfolgende prozedurale Handschuh und seine damaligen Abnahmen bleiben Entwicklungshistorie.
+
 **Queststart ohne unsichtbare Dialogsperre — 25.10.2026:** Die reine Handkamera empfängt mit `eventMask=0` keine automatischen Unity-Mausereignisse. 207 gezielte Handschuhprüfungen im korrigierten Build, einschließlich Kamera-Strahlraster bei Fenster-/Vollbildwechsel, bestanden. [Nachweis](Pruefungen/Queststart-Mira-2026-10-25.json). Der Queststillstand hatte die separat behobene Dialogsperre als Ursache.
 
 **Drohnenleitstand, taktische Übersicht und Arbeitshandschuh — 25.10.2026:** Der neue dunkle gepolsterte Handschuh wurde im finalen `drone-console-build-05` mit 56 gezielten Assertions geprüft. 1444 Vertices; echte Innen-/Außen-/Terminal-/Raumplan-/Nahwandaufnahmen gesichert, bestehende Sichtbarkeits-, Kamera-, Bewegungs- und Cleanup-Verträge erhalten. Der Griff bleibt leer; ToolMount ist Vorbereitung für spätere Werkzeuge. [Gesamtnachweis](Pruefungen/Drohnenleitstand-VR-Hand-2026-10-25.json). Quellenbasierte Vorschauen und ältere Abnahmen unten sind als solche zu unterscheiden.

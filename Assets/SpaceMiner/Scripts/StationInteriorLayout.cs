@@ -65,6 +65,13 @@ namespace SpaceMiner
             Physics.SyncTransforms();
             StationIndoorTraffic.Install(GetComponentInParent<WaterScenario>(),this);
         }
+        // Same authored start geometry, without installing a campaign or reading a save.
+        internal void BuildModelPreview(StationVisual station)
+        {
+            Geometry = new RingWalkthrough(transform);
+            Ring = Geometry.Root.Find("Ring 1");
+            station.InstallStartLayout(this);
+        }
         // Floors of the built start modules only; future ports are capped by the ring wall.
         public bool ContainsPosition(Vector3 world)
         {

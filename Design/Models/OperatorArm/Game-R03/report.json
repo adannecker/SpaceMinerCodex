@@ -1,0 +1,368 @@
+{
+  "source": "Design\\Models\\OperatorArm\\Revision-R03\\OperatorArm-R03.blend",
+  "sourceSha256": "b89f47efed8dc68710d8e5165d5590c5f0f199076f943b100f438a338a39d848",
+  "variant": "Accepted R03; no R04 surface additions",
+  "originalTriangles": 1876704,
+  "triangles": 45000,
+  "meshVertices": 31518,
+  "unityVertices": 31464,
+  "skinBones": 17,
+  "maxInfluences": 3,
+  "weightsNormalized": true,
+  "coordinates": "Unity explicit metres: +Z fingers, +Y dorsal, +X thumb; root=upper sleeve opening",
+  "uniformSourceScale": 0.73,
+  "boundsMin": [
+    -0.14750413596630096,
+    -0.07860787957906723,
+    -0.04026403650641441
+  ],
+  "boundsMax": [
+    0.08411338925361633,
+    0.21001365780830383,
+    0.742685079574585
+  ],
+  "bones": [
+    {
+      "name": "UpperArm",
+      "parent": -1,
+      "head": [
+        0,
+        0,
+        0
+      ],
+      "tail": [
+        -0.06,
+        0.07,
+        0.22
+      ]
+    },
+    {
+      "name": "Forearm",
+      "parent": 0,
+      "head": [
+        -0.06,
+        0.07,
+        0.22
+      ],
+      "tail": [
+        -0.063,
+        0.12,
+        0.502
+      ]
+    },
+    {
+      "name": "Wrist",
+      "parent": 1,
+      "head": [
+        -0.063,
+        0.12,
+        0.502
+      ],
+      "tail": [
+        -0.057,
+        0.148,
+        0.595
+      ]
+    },
+    {
+      "name": "Thumb01",
+      "parent": 2,
+      "head": [
+        -0.028,
+        0.108,
+        0.55
+      ],
+      "tail": [
+        -0.001,
+        0.07,
+        0.584
+      ]
+    },
+    {
+      "name": "Thumb02",
+      "parent": 3,
+      "head": [
+        -0.001,
+        0.07,
+        0.584
+      ],
+      "tail": [
+        0.019,
+        0.03,
+        0.617
+      ]
+    },
+    {
+      "name": "Index01",
+      "parent": 2,
+      "head": [
+        -0.012,
+        0.132,
+        0.615
+      ],
+      "tail": [
+        -0.02,
+        0.141,
+        0.665
+      ]
+    },
+    {
+      "name": "Index02",
+      "parent": 5,
+      "head": [
+        -0.02,
+        0.141,
+        0.665
+      ],
+      "tail": [
+        -0.024,
+        0.142,
+        0.701
+      ]
+    },
+    {
+      "name": "Index03",
+      "parent": 6,
+      "head": [
+        -0.024,
+        0.142,
+        0.701
+      ],
+      "tail": [
+        -0.027,
+        0.14,
+        0.73
+      ]
+    },
+    {
+      "name": "Middle01",
+      "parent": 2,
+      "head": [
+        -0.046,
+        0.151,
+        0.612
+      ],
+      "tail": [
+        -0.059,
+        0.166,
+        0.668
+      ]
+    },
+    {
+      "name": "Middle02",
+      "parent": 8,
+      "head": [
+        -0.059,
+        0.166,
+        0.668
+      ],
+      "tail": [
+        -0.07,
+        0.17,
+        0.708
+      ]
+    },
+    {
+      "name": "Middle03",
+      "parent": 9,
+      "head": [
+        -0.07,
+        0.17,
+        0.708
+      ],
+      "tail": [
+        -0.075,
+        0.167,
+        0.737
+      ]
+    },
+    {
+      "name": "Ring01",
+      "parent": 2,
+      "head": [
+        -0.08,
+        0.162,
+        0.6
+      ],
+      "tail": [
+        -0.092,
+        0.179,
+        0.649
+      ]
+    },
+    {
+      "name": "Ring02",
+      "parent": 11,
+      "head": [
+        -0.092,
+        0.179,
+        0.649
+      ],
+      "tail": [
+        -0.103,
+        0.184,
+        0.688
+      ]
+    },
+    {
+      "name": "Ring03",
+      "parent": 12,
+      "head": [
+        -0.103,
+        0.184,
+        0.688
+      ],
+      "tail": [
+        -0.108,
+        0.182,
+        0.714
+      ]
+    },
+    {
+      "name": "Little01",
+      "parent": 2,
+      "head": [
+        -0.109,
+        0.163,
+        0.58
+      ],
+      "tail": [
+        -0.12,
+        0.182,
+        0.624
+      ]
+    },
+    {
+      "name": "Little02",
+      "parent": 14,
+      "head": [
+        -0.12,
+        0.182,
+        0.624
+      ],
+      "tail": [
+        -0.132,
+        0.19,
+        0.655
+      ]
+    },
+    {
+      "name": "Little03",
+      "parent": 15,
+      "head": [
+        -0.132,
+        0.19,
+        0.655
+      ],
+      "tail": [
+        -0.138,
+        0.189,
+        0.676
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "name": "TipThumb",
+      "parent": 4,
+      "position": [
+        0.01635422557592392,
+        0.013676423579454422,
+        0.613937497138977
+      ]
+    },
+    {
+      "name": "TipIndex",
+      "parent": 7,
+      "position": [
+        -0.02704665996134281,
+        0.12634938955307007,
+        0.7236704230308533
+      ]
+    },
+    {
+      "name": "TipMiddle",
+      "parent": 10,
+      "position": [
+        -0.07003192603588104,
+        0.15564647316932678,
+        0.7307651042938232
+      ]
+    },
+    {
+      "name": "TipRing",
+      "parent": 13,
+      "position": [
+        -0.10613875836133957,
+        0.17169444262981415,
+        0.7064728140830994
+      ]
+    },
+    {
+      "name": "TipLittle",
+      "parent": 16,
+      "position": [
+        -0.13383665680885315,
+        0.17852750420570374,
+        0.6712382435798645
+      ]
+    }
+  ],
+  "textures": {
+    "BaseColor.jpg": {
+      "width": 2048,
+      "height": 2048
+    },
+    "Normal.png": {
+      "width": 2048,
+      "height": 2048
+    },
+    "RoughMetal.jpg": {
+      "width": 2048,
+      "height": 2048
+    },
+    "MetalSmoothness.png": {
+      "width": 2048,
+      "height": 2048
+    }
+  },
+  "meshPayload": "ArmMesh.bin",
+  "segmentLengths": {
+    "upperArm": 0.23853720827999617,
+    "forearm": 0.28641401465946903
+  },
+  "sourceHashVerified": true,
+  "maxWeightNormalizationError": 2.220446049250313e-16,
+  "verticesPerBone": {
+    "UpperArm": 11797,
+    "Forearm": 11045,
+    "Wrist": 6141,
+    "Thumb01": 710,
+    "Thumb02": 884,
+    "Index01": 970,
+    "Index02": 829,
+    "Index03": 351,
+    "Middle01": 1151,
+    "Middle02": 933,
+    "Middle03": 478,
+    "Ring01": 744,
+    "Ring02": 786,
+    "Ring03": 430,
+    "Little01": 418,
+    "Little02": 482,
+    "Little03": 432
+  },
+  "fingerPadDominantBones": {
+    "TipThumb": "Thumb02",
+    "TipIndex": "Index03",
+    "TipMiddle": "Middle03",
+    "TipRing": "Ring03",
+    "TipLittle": "Little03"
+  },
+  "fbxRoundTrip": {
+    "triangles": 45000,
+    "bones": 17,
+    "armatureModifier": true,
+    "namedJointsRetained": true
+  }
+}

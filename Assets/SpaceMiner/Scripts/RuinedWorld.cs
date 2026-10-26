@@ -36,11 +36,20 @@ namespace SpaceMiner
         public Transform HomeMoon { get; private set; }
         readonly Transform[] orbits = new Transform[9];
         readonly LineRenderer[] guides=new LineRenderer[9];
-        readonly float[] distances = {650,1050,1400,AstronomicalUnit,2500,3500,4700,6100,7800};
+        static readonly float[] distances = {650,1050,1400,AstronomicalUnit,2500,3500,4700,6100,7800};
         public float OverviewRadius => distances[8]+radii[8];
         readonly float[] radii = {1.5f,3.8f,1.9f,HomeRadius,2.1f,44,36,16,15};
         readonly float[] angles = {25,120,215,-42.746f,68,160,250,325,100};
-        readonly float[] inclinations = {3,-5,7,0,4,-8,6,9,-4};
+        static readonly float[] inclinations = {3,-5,7,0,4,-8,6,9,-4};
+        public static float OrbitDisplayRadius(int index) => distances[index];
+        public static float OrbitInclination(int index) => inclinations[index];
+        public Vector3 PlanetDisplayPosition(int index) => orbits[index] != null ? orbits[index].position : ReferencePlanetPosition(index);
+        public static Vector3 ReferencePlanetPosition(int index)
+        {
+            float[] initial = {25,120,215,-42.746f,68,160,250,325,100};
+            float angle = initial[index] * Mathf.Deg2Rad;
+            return SunPosition + Quaternion.Euler(inclinations[index],0,0) * new Vector3(Mathf.Cos(angle)*distances[index],0,Mathf.Sin(angle)*distances[index]);
+        }
         Material crust, lava;
         Material archiveShape;
         bool? archiveMode;

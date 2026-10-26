@@ -30,13 +30,20 @@ namespace SpaceMiner
         private string powerSelection = "battery-bay-0";
         private int powerCategory = 1;
         private float powerContentHeight = 900;
+        private readonly PowerCelestialView celestial = new PowerCelestialView();
+        private int solarPage;
+        internal void SetSolarPage(int value){solarPage=Mathf.Clamp(value,0,2);powerDashboardScroll=Vector2.zero;}
+        internal int CelestialPerspective => celestial.Perspective;
+        internal int CelestialBodyCount => celestial.LastBodyCount;
+        internal bool CelestialTargetsDistinct => !celestial.PrimaryHit.Overlaps(celestial.CompanionHit);
+        internal void SetCelestialPerspective(int value) => celestial.SetPerspective(value);
         private GUIStyle powerValue, powerSmall, powerText;
         public GUIStyle Small => powerSmall;
         public string Selection => powerSelection;
         public int LastRenderedFrame { get; private set; } = -1;
         public void Scroll(Vector2 p) => powerDashboardScroll = p;
         public void SetData(PowerConsoleData value) => data = value;
-        public void Dispose() { ui.Dispose(); ui = new SpaceMinerUi(); }
+        public void Dispose() { celestial.Dispose(); ui.Dispose(); ui = new SpaceMinerUi(); }
         internal bool SelectPowerItem(string id)
         {
             bool battery = id != null && id.StartsWith("battery-bay-", StringComparison.Ordinal)
@@ -47,7 +54,7 @@ namespace SpaceMiner
                 && data.Consumers.Exists(item => "consumer:" + item.Id == id);
             if (!battery && !generator && !consumer && !star) return false;
             powerCategory = battery ? 1 : generator ? 0 : star?3:2;
-            if (powerSelection != id) { powerSelection = id; powerDashboardScroll = Vector2.zero; powerContentHeight = 900; }
+            if (powerSelection != id) { powerSelection = id; solarPage=0; powerDashboardScroll = Vector2.zero; powerContentHeight = 900; }
             return true;
         }
         private static string PowerNumber(float value) => value.ToString(Mathf.Abs(value) < .01f && value != 0 ? "0.000" : "0.00") + " kW";
@@ -211,9 +218,41 @@ namespace SpaceMiner
                 var source = powerSelection == "solar-a" ? generation.SolarA : powerSelection == "solar-b" ? generation.SolarB : generation.Reactor;
                 y = DetailLabel(y, width, battery ? "AKKUPLATZ " + (bay.Index + 1).ToString("00") + " / " + bay.Caption
                     : source.Name.ToUpperInvariant() + (source.Connected ? " / AM NETZ" : " / GETRENNT"), true);
-                float modelHeight = 168, modelWidth = (width - 42) * .4f;
-                PowerModel(new Rect(14, y + 5, modelWidth, modelHeight), data.DetailModel?.Invoke());
-                float summaryX = modelWidth + 28, summaryWidth = width - summaryX - 14, summaryY = y + 8;
+                bool solar=powerSelection=="solar-a"||powerSelection=="solar-b";
+                if(solar)
+                {
+                    string[] pages={"Modell","Sonnen & Winkel","Leistungsdaten"};
+                    float tabWidth=(width-38)/3;
+                    for(int i=0;i<3;i++)if(ui.Tab(new Rect(14+i*(tabWidth+5),y,tabWidth,36),pages[i],solarPage==i))SetSolarPage(i);
+                    y+=44;
+                    if(solarPage>0)
+                    {
+                        if(solarPage==1)
+                        {
+                            y=DrawSolarOrientation(y,width,source);
+                            y=DetailLabel(y,width,"Panel zur Hauptsonne A: "+source.SolarDetails.Primary.AngleDegrees.ToString("0.0")+"° · zum Begleitstern B: "+source.SolarDetails.Companion.AngleDegrees.ToString("0.0")+"°");
+                            y=DetailLabel(y+6,width,"0° bedeutet senkrechter Lichteinfall auf die Zellfläche; über 90° liegt die Sonne hinter dem Panel.");
+                        }
+                        else y=DrawSolarContributions(y,width,source);
+                        FinishPowerDetails(y,width);return;
+                    }
+                }
+                var detail = data.DetailModel?.Invoke();
+                float modelHeight = Mathf.Clamp((width-28)*.48f,180,270);
+                var modelRect = new Rect(14,y+5,width-28,modelHeight);
+                if(detail!=null)PowerModel(modelRect,detail);
+                else GUI.Label(modelRect,"Modell derzeit nicht verfügbar",powerSmall);
+                y+=modelHeight+10;
+                if(detail!=null)
+                {
+                    if(ui.Tab(new Rect(14,y,70,30),"↶",false))detail.Orbit(-20);
+                    if(ui.Tab(new Rect(89,y,70,30),"↷",false))detail.Orbit(20);
+                    if(ui.Tab(new Rect(164,y,70,30),"Ansicht ↑",false))detail.Elevate(15);
+                    if(ui.Tab(new Rect(239,y,70,30),"Ansicht ↓",false))detail.Elevate(-15);
+                    y+=40;
+                }
+                if(powerSelection=="reactor")y=DetailLabel(y,width,"BESTANDSMODELL / Reaktorkapsel · Detailmodell folgt");
+                float summaryX = 14, summaryWidth = width-28, summaryY = y+5;
                 if (battery)
                 {
                     summaryY = PowerLabel(summaryX, summaryY, summaryWidth, BatteryAmount(bay), powerText);
@@ -232,7 +271,7 @@ namespace SpaceMiner
                     summaryY = PowerLabel(summaryX, summaryY + 8, summaryWidth, "ANLAGENZUSTAND " + (source.Condition * 100).ToString("0") + "%", powerSmall);
                     PowerBar(new Rect(summaryX, summaryY, summaryWidth, 7), source.Condition, SpaceMinerUi.Success); summaryY += 17;
                 }
-                y = Mathf.Max(y + modelHeight + 17, summaryY);
+                y = summaryY+12;
                 if (battery) y = DrawBatteryInspector(y, width, bay, data.HasStorageFlow?data.StorageFlowKw:generation.TotalOutputKw-data.ConsumptionKw);
                 else
                 {
@@ -241,8 +280,7 @@ namespace SpaceMiner
                         y = DetailLabel(y, width, source.Id == "solar-a" ? "Rechter Flügel / Sektor 3" : "Linker Flügel / Sektor 9");
                         y = DetailLabel(y, width, source.OrientationKnown ? "Winkel zur Hauptsonne: " + source.AngleDegrees.ToString("0.0") + "°" : "Sonnenrichtung nicht verfügbar");
                         y = DetailBar(y + 6, width, "AUSRICHTUNGSFAKTOR", source.Incidence01, SpaceMinerUi.Cyan);
-                        y = DrawSolarOrientation(y, width, source);
-                        y=DrawSolarContributions(y,width,source);
+                        y=DetailLabel(y+8,width,"Beide Sonnen und ihre Positionen unter Sonnen & Winkel; Flächen, Wirkungsgrad und Beiträge unter Leistungsdaten.");
                     }
                     else
                     {
@@ -252,6 +290,10 @@ namespace SpaceMiner
                     }
                 }
             }
+            FinishPowerDetails(y,width);
+        }
+        private void FinishPowerDetails(float y,float width)
+        {
             y += 18;
             if (GUI.Button(new Rect(14, y, width - 28, 48), "Sektornetz / Stromkreise öffnen", ui.Button))
             { data.OpenUtilities?.Invoke(); }
@@ -284,24 +326,8 @@ namespace SpaceMiner
         private float DrawSolarOrientation(float y, float width, StationGeneratorView source)
         {
             if (!source.OrientationKnown) return y;
-            float length = Mathf.Min(110, width * .23f), angle = source.AngleDegrees * Mathf.Deg2Rad;
-            var center = new Vector2(width * .47f, y + length + 32);
-            var normal = center + Vector2.right * length;
-            var sun = center + new Vector2(Mathf.Cos(angle), -Mathf.Sin(angle)) * length;
-            PowerLine(center + Vector2.up * 22, center + Vector2.down * 22, SpaceMinerUi.Cyan, 5);
-            PowerLine(center, normal, SpaceMinerUi.Cyan);
-            PowerLine(center, sun, SpaceMinerUi.Amber, 3);
-            SpaceMinerUi.Fill(new Rect(sun.x - 4, sun.y - 4, 8, 8), SpaceMinerUi.Amber);
-            GUI.Label(new Rect(normal.x - 25, normal.y + 4, 125, 28), "Panelnormale", powerSmall);
-            GUI.Label(new Rect(sun.x - 25, sun.y - 27, 145, 28), "Hauptsonne", powerSmall);
-            if(source.SolarDetails.Known)
-            {
-                float otherAngle=source.SolarDetails.Companion.AngleDegrees*Mathf.Deg2Rad;
-                var other=center+new Vector2(Mathf.Cos(otherAngle),-Mathf.Sin(otherAngle))*length*.8f;
-                PowerLine(center,other,SpaceMinerUi.Success,2);
-                GUI.Label(new Rect(other.x-25,other.y+10,150,28),"Begleitstern",powerSmall);
-            }
-            return y + length + 72;
+            y=DetailLabel(y+8,width,"SONNEN AM PANEL / A ODER B AUSWÄHLEN",true);
+            return celestial.Draw(y+5,width,data.Generation.Stars,powerSelection,ui,powerSmall,id=>SelectPowerItem(id));
         }
         private float DrawSolarContributions(float y,float width,StationGeneratorView source)
         {
@@ -320,6 +346,15 @@ namespace SpaceMiner
             if(!stars.Known)return DetailLabel(y,width,"Keine Sternparameter hinterlegt.",true);
             var star=primary?stars.Primary:stars.Companion;
             y=DetailLabel(y,width,star.Name.ToUpperInvariant(),true);
+            y=celestial.Draw(y+8,width,stars,powerSelection,ui,powerSmall,id=>SelectPowerItem(id));
+            foreach(bool first in new[]{true,false})
+            {
+                var item=first?stars.Primary:stars.Companion;
+                string caption=item.Name+"  ·  "+item.TemperatureK.ToString("0")+" K  ·  "+item.DistanceAu.ToString("0.000")+" AE";
+                float height=Mathf.Max(42,ui.Button.CalcHeight(new GUIContent(caption),width-28)+8);
+                if(ui.Tab(new Rect(14,y,width-28,height),caption,primary==first))SelectPowerItem(item.Id);
+                y+=height+6;
+            }
             y=DetailLabel(y+10,width,star.IrradianceWm2.ToString("0.0")+" W/m² am Standort",true);
             y=DetailLabel(y+12,width,"Ruhiger K-Zwerg / Referenzzustand\nOberfläche "+star.TemperatureK.ToString("0")+" K\nRadius "+star.RadiusSolar.ToString("0.00")+" Sonnenradien\nLeuchtkraft "+star.LuminositySolar.ToString("0.000")+" × Sonne\nStrahlungsleistung "+star.LuminosityWatts.ToString("0.000E+0")+" W");
             y=DetailLabel(y+14,width,"ENTFERNUNG",true);

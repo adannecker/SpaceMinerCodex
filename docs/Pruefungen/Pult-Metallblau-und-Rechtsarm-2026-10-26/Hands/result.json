@@ -1,0 +1,19 @@
+{
+    "passed": true,
+    "checks": 237,
+    "vertices": 31464,
+    "triangles": 45000,
+    "bones": 17,
+    "continuationVertices": 4928,
+    "continuationTriangles": 2494,
+    "unityVersion": "6000.6.5f1",
+    "pictures": [
+        "01-idle-hand-1600.png",
+        "02-walk-look-hand.png",
+        "03-terminal-no-hand.png",
+        "04-roomplan-no-hand.png",
+        "05-declared-close-wall-fixture.png",
+        "06-outside-no-hand.png"
+    ],
+    "scope": "Actual selected R03 native mirrored RIGHT arm with a narrow sleeve continuation and no torso, normalized skeletal weights, source-derived PBR textures and bounded geometry; actual posed cuff join and authored proximal sleeve endpoint beyond viewport; inside/outside, intro and real modal visibility; bounded idle/walk/look controller, pause and reduced motion; camera mask and instance cleanup while shared assets survive. Screenshots use the real framebuffer. Wall-depth picture includes a declared temporary foreground plane. Console contact has a separate stationConsoleTouchCheck. No actual tool, manual comfort, FPS or headset acceptance."
+}

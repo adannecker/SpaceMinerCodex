@@ -1,5 +1,7 @@
 # R04-Touchpulte im Spiel — 26.10.2026
 
+**Spätere Materialkorrektur:** Auf Nutzerscreenshot wirkte der ursprüngliche Atlas unter der warmen Beleuchtung braun. Die aktuelle Spielfassung verwendet einen abgeleiteten **metallisch blauen Atlas**, kühles Titan und blau-schwarzes Glas; ursprüngliche Geometrie und Texturdetails bleiben erhalten. [Dateien, Wiederaufbau und aktuelle Prüfung](Pult-Metallblau-und-Rechtsarm-2026-10-26.md). Die Bilder und Prüfzahlen unten zeigen den früheren Integrationsstand.
+
 Nutzerauftrag: freigegebenes R04 auf alle Bedienpulte übernehmen, Hauptpult breiter gestalten. Fünf Funktionspulte (Drohnen, Stationsplanung, Mira/Forschung, Fertigung, Stromversorgung) und Hauptpult der Kommandozentrale verwenden nun dieselbe echte R04-Geometrie. Materialdrucker und Nahrungssynthese bleiben eigenständige Anlagen.
 
 Standardgehäuse etwa1,50m breit,1,00m tief,1,14m hoch; vordere Glaskante etwa60cm, hinten1,11m. Hauptpult4,40m breit: mittlere Flächen verbreitert, seitliche Metallwangen und ihre Befestigungen seitlich versetzt statt durchgehend skaliert. Drei Mesh-/Materialgruppen mit zusammen23.772 Dreiecken je Fassung; keine neue LOD-/FPS-Abnahme. Die32.617 Dreiecke der Browseransicht enthalten zusätzlich deren Beispiel-UI, die nicht übernommen wird.

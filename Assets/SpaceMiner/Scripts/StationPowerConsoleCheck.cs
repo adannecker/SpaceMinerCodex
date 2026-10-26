@@ -173,7 +173,10 @@ namespace SpaceMiner
         private void ApproachTerminal()
         {
             ops.ClosePanel(); scenario.Scanner.DismissDialogue(); mode.CloseConsole();
-            mode.RestoreInterior(terminal.transform.TransformPoint(new Vector3(0, .04f, -1.55f)), false, terminal.transform.eulerAngles.y, 0);
+            var visual=terminal.GetComponentInParent<CommandRoomBlock>()?.GetComponentInChildren<TouchConsoleVisual>();
+            // The authored R04 desk requires the same reachable, downward-facing pose as the E-touch checks.
+            if(visual!=null)mode.RestoreInterior(visual.transform.TransformPoint(new Vector3(0,.05f,-.95f)),false,visual.transform.eulerAngles.y,35);
+            else mode.RestoreInterior(terminal.transform.TransformPoint(new Vector3(0, .04f, -1.55f)), false, terminal.transform.eulerAngles.y, 0);
             Physics.SyncTransforms();
         }
 

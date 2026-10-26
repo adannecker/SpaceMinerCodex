@@ -1,0 +1,289 @@
+{
+  "date": "2026-10-26",
+  "baseCommit": "f6deed454619819fd9ba528de341f3a86f21900c",
+  "unity": "6000.6.5f1",
+  "revision": "3ff58d469c8a",
+  "userCorrection": "metallic blue consoles; only arm from RIGHT, remove broad torso",
+  "builds": {
+    "development": true,
+    "release": true,
+    "exitCode": 0,
+    "method": "SpaceMiner.Editor.OperatorArmBuild.Build",
+    "sceneRegenerated": false
+  },
+  "playerChecks": [
+    {
+      "flag": "-stationHandsCheck",
+      "checks": 237,
+      "exitCode": 0
+    },
+    {
+      "flag": "-stationConsoleTouchCheck",
+      "checks": 383,
+      "exitCode": 0
+    },
+    {
+      "flag": "-stationOperationsUiCheck",
+      "checks": 28,
+      "exitCode": 0
+    }
+  ],
+  "totalChecks": 648,
+  "model": {
+    "variant": "native mirrored RIGHT R03; narrow cloth sleeve, no torso",
+    "sourceTriangles": 1876704,
+    "armTriangles": 45000,
+    "armVertices": 31464,
+    "armBones": 17,
+    "sleeveTriangles": 2494,
+    "sleeveVertices": 4928,
+    "sleeveBoneReferences": 2,
+    "totalTriangles": 47494
+  },
+  "consoleMaterials": {
+    "originalAtlasPreserved": true,
+    "blueAtlas": "Assets/SpaceMiner/Resources/TouchConsoleR04/TouchConsole_BlueAlbedo.png",
+    "blueAtlasSha256": "02c955fcc15bf8ced3ce93948cfed337d86f91bfe9a89b5f4c0e45daee3472e2",
+    "maps": "original normal and metallic/smoothness; metallic housing, blue-black diffuse glass",
+    "review": "same UI framing: four glass patches warm RGB50/46/41 to blue RGB6/14/20 approximately"
+  },
+  "touches": {
+    "completed": 9,
+    "cancelled": 5,
+    "scope": "Actual native mirrored RIGHT R03 skinned arm with a narrow sleeve and no torso, six real metallic blue R04 consoles and physical ice-plant wall terminal; same controller entry as E; reach/contact/retract, three independent fingertip contacts, once-only modal opening, frozen walking, reachable range, wall occlusion, exterior/settings/Escape cancellation, moved/rotated/resized room-plan console and a real adjacent unreachable-console candidate. Escape uses the real QuitMenu dispatch controller. Isolated settings/saves/plans. Controller and framebuffer acceptance; no native OS keyboard, manual comfort, headset or performance acceptance."
+  },
+  "sourceFilesChecked": 238,
+  "sourceChangesDuringBuildAndTests": [],
+  "preservedInputs": [
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "sha256": "842e40d6d7c2763128c272109fd51c6233891c2692bda34594bf9e7e52d85b24",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Scenes/AsteroidBelt.unity",
+      "sha256": "4214df275946b8a7bfa69df5c7c10e4388b9862753054d762ea49592a2630de9",
+      "unchanged": true
+    },
+    {
+      "path": "Design/RoomPlans/command-room-layout.json",
+      "sha256": "ff3c7122861684d7f5cbb58ec4259295a2933ff585b861c884a8f2a75c7a1f3e",
+      "unchanged": true
+    },
+    {
+      "path": "Design/RoomPlans/drone-workshop-layout.json",
+      "sha256": "86cb0d1a0ba7ee446ac3693af11b9d00397c2806776cd4bcbb39a126f56270a2",
+      "unchanged": true
+    },
+    {
+      "path": "Design/RoomPlans/internal-workshop-layout.json",
+      "sha256": "18826eaaaf9c1b0dc9153b54b4cf88e88d80053d97fbd6e01a8d831aa3400292",
+      "unchanged": true
+    },
+    {
+      "path": "Design/Models/OperatorArm/Revision-R03/OperatorArm-R03.blend",
+      "sha256": "b89f47efed8dc68710d8e5165d5590c5f0f199076f943b100f438a338a39d848",
+      "unchanged": true
+    },
+    {
+      "path": "Design/Models/OperatorArm/Game-R03/OperatorArm-R03-Game.blend",
+      "sha256": "babdcb0a05078c1258ae4864c64aa7718d179ce70006e94928291449e3f8fd94",
+      "unchanged": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Albedo.png",
+      "sha256": "76178e66dbbe52c0cb1567fe0b6b7d98107db2a99a94271e95ba58cac54f6186",
+      "unchanged": true
+    }
+  ],
+  "deployment": [
+    {
+      "source": "Builds/OperatorArmDevelopment",
+      "target": "Builds/Windows",
+      "files": 247,
+      "identical": true
+    },
+    {
+      "source": "Builds/OperatorArmRelease",
+      "target": "Builds/WindowsRelease",
+      "files": 156,
+      "identical": true
+    }
+  ],
+  "pictures": [
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Hands/01-idle-hand-1600.png",
+      "sha256": "3c7236b1f23e54da7bd9e41f464c8ba048eb8011b50b5ecb3056aa87825fcda7"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Hands/02-walk-look-hand.png",
+      "sha256": "26c64918d6e019228919df336f66540bd10134e973506e656f049b571901f02b"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Hands/03-terminal-no-hand.png",
+      "sha256": "595a4f58ef2882ac83a51972f37e8a7e8fb017c6e20bfd44a80cf9ce5fa11838"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Hands/04-roomplan-no-hand.png",
+      "sha256": "c399d5175f68e0a365c24ac18df7fa56a881012d7196c980c8aa230dbc2bd3ca"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Hands/05-declared-close-wall-fixture.png",
+      "sha256": "c53c9838eaad02f84fc2b3551f40d89eddf5ac1fdb45443e40bba07eeeafc8ab"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Hands/06-outside-no-hand.png",
+      "sha256": "60b277ae66cf93bf3d8f1eb2e0099d3306d54d087889c73ea92b4eda9f9cf3c8"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/01-main-contact.png",
+      "sha256": "f30241d501f329db429a8bd5acc141ea333fc76bb62bffd434942122c907e2c5"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/01-main-panel.png",
+      "sha256": "565b5f5c523b2a0a5151994df7be988796b108a4f00c236dc87ce8c808f3d6e0"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/02-drones-contact.png",
+      "sha256": "cf8b177d4af9c83d6ea2f433ba114e2ce12a5a1a7a8a2822bb38b413569cf7b5"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/02-drones-panel.png",
+      "sha256": "124bf280b1a0c419cb069dcdd6bbec1075fda0ceaebb718e14af56fa188355f8"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/03-planning-contact.png",
+      "sha256": "0334470d9a21c1e36302ee8ff0fea1e2fd96f877f6b897f239dc05fa552817e8"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/03-planning-panel.png",
+      "sha256": "1d39fea8bc32b131b78e5fca631ceee14dff1759e286fd18e599622960ad1383"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/04-research-contact.png",
+      "sha256": "97e3413026a8b623ad711f6f5cfb95576f87a85c2e261862fffb534fc41ce25c"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/04-research-panel.png",
+      "sha256": "a449d07ca0e45dd9acace2d9d13c8d0cec9c9d26bebf47407f4353946a36e184"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/05-production-contact.png",
+      "sha256": "eaa466c5b8598d3489e4b5dff7383884802d223f67c3746b5fa5f24b4e09ead1"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/05-production-panel.png",
+      "sha256": "7b37a992d02a13f36627d93213113233693500f304811376bb7ae93abeaeb210"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/06-battery-contact.png",
+      "sha256": "6eba7f0931d53d58a616ea3b77e0c8dbe8243f0e0f7b9541248b56de21491e6a"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/06-battery-panel.png",
+      "sha256": "b0cdbb4c9dfe26a7678c1eb8d28b8d1506a83f1f27d7c27176317c70ea34d0d6"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/08-ice-plant-contact.png",
+      "sha256": "1a47728a659d3c232e85ad756f019bbec248414a2b03f3fccce340288212cb57"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/08-ice-plant-panel.png",
+      "sha256": "56dd6b17722a7a74e8171f9f673d10ff8a90ffb028dea1f7f7df37c3413c6b69"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/09-adjacent-console-contact.png",
+      "sha256": "6e90928615901f62dc25221dc0e686fd3f199054be0dab795d1630da503082c7"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/09-adjacent-console-panel.png",
+      "sha256": "195933a89be5af745729664a88b62629d560c08b056e1c3038ef3eb4b93e6a5a"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/07-edited-room-plan-contact.png",
+      "sha256": "2450d91a1f20191c02e1b648dc7281a08dd0ef984cff0d76f2993066d4a9821b"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/Touch/07-edited-room-plan-panel.png",
+      "sha256": "58114b130feaebf1fa8aad7ce8e260b9d990b7e495ae6cee6a9619d151b4a278"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/UI/01-hud-und-e-hinweis.png",
+      "sha256": "79e6450be5fa5c2ffea8612cddc1bf544aa0fa3ff61bfb42133899b25e3bb59f"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/UI/02-forschungsterminal.png",
+      "sha256": "bd491f44f0a6f62d4bf66453f742d53cea24c85042b90b02d67f9621a8fae7ed"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/UI/03-drohnenverwaltung.png",
+      "sha256": "23a6b8e5a26e69e06daf0e9e3964cb60d4972e81757b52f828cb20e38c8cdbbd"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/UI/04-stationsplanung.png",
+      "sha256": "be121b20bb49896a68620b971ced9cc97f4e9fbe9c6630337a9ffa26aba655f7"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/UI/05-produktion-und-lager.png",
+      "sha256": "5c062ff36da50201ccdad019351a7c08397834f844f75537d674228f9a275a06"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/UI/06-grosse-schrift-1280.png",
+      "sha256": "e6d43e0186bfe0dbd1cfbc7df4676e72dbb65e2536bd6819de3fd00825734059"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/UI/07-aufgabe-mit-mira.png",
+      "sha256": "529e2e70731f24057092086d6f9726c587819cade2057b03e2c195ffdee01b16"
+    },
+    {
+      "path": "docs/Pruefungen/Pult-Metallblau-und-Rechtsarm-2026-10-26/UI/08-vollbild.png",
+      "sha256": "e37af8d810803314d66dbbf47b78734e670b04b1e43d7a5c22b1db4e3406e447"
+    }
+  ],
+  "visualReview": [
+    "right idle arm, no torso",
+    "blue housing, cool titanium and blue-black glass",
+    "main and drone contact",
+    "physical ice wall contact",
+    "edited room plan"
+  ],
+  "earlierRuns": [
+    {
+      "state": "old larger serialized vertex buffer remained after CopySerialized on smaller sleeve",
+      "exitCode": 1,
+      "fix": "explicitly clear and copy all mesh channels preserving GUID",
+      "finalAcceptance": false
+    },
+    {
+      "state": "first complete right-arm pass: narrow cuff connector stretched visibly",
+      "checks": 648,
+      "exitCode": 0,
+      "finalAcceptance": false,
+      "fix": "cloth appearance and cuff connection refined before rebuilding"
+    },
+    {
+      "state": "first polished seam classifier included176 instead of128 vertices in broad world-space plane slab",
+      "exitCode": 1,
+      "finalAcceptance": false,
+      "fix": "select exact authored seam in bind space; keep20mm posed-skin tolerance"
+    },
+    {
+      "state": "shifted upper anchor made physical ice-plant terminal unreachable at existing maintenance stance",
+      "exitCode": 1,
+      "finalAcceptance": false,
+      "fix": "restore original right upper anchor; do not change reach or fixture"
+    },
+    {
+      "state": "matte connector still collapsed into ribbon in contact image",
+      "finalAcceptance": false,
+      "fix": "use same skin rotation on both sleeve bones; preserve start yaw during touch"
+    }
+  ],
+  "limits": [
+    "controller and real framebuffer checks; no native OS keyboard/mouse acceptance",
+    "no subjective animation comfort, headset or FPS benchmark",
+    "release built and deployed; automated player checks use Development",
+    "no complete character, working tool, inventory or wrist HUD"
+  ],
+  "commitOrPush": false
+}

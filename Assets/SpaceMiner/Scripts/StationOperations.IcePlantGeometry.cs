@@ -248,6 +248,8 @@ namespace SpaceMiner
             float z=49.95f;var root=Group("Eisannahme / E-Produktionspult am Wartungsgang",IcePlantFrame,new Vector3(IceRight(z)+.03f,0,z),Quaternion.Euler(0,IceHalfAngle-90,0));
             IcePlantTerminal=root.gameObject.AddComponent<StationTerminal>();IcePlantTerminal.kind=StationTerminalKind.Production;IcePlantTerminal.target="ice-plant";IcePlantTerminal.label="Eisannahme und Aufbereitung";terminals.Add(IcePlantTerminal);
             IceShape("Wandbuendiges Produktionspult",root,new Vector3(0,1.35f,.025f),new Vector3(1.15f,.72f,.09f),iceDark);
+            var touch=root.gameObject.AddComponent<StationConsoleTouchSurface>();
+            touch.Configure(null,new Vector3(0,1.4f,-.0415f),Vector3.back,Vector3.up,new Vector2(.40f,.20f));
             iceMainDisplay=IceDisplay("EISANNAHME 01\nKALTLAGER / AUFBEREITUNG",root,new Vector3(0,1.4f,-.04f),Quaternion.identity,1.1f);
             IceDisplay("E  /  PRODUKTION",root,new Vector3(0,.95f,-.04f),Quaternion.identity,1.0f);
         }

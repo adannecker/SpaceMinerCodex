@@ -34,12 +34,7 @@ namespace SpaceMiner.Editor
                     if(old==null)AssetDatabase.CreateAsset(mesh,meshPath);else{EditorUtility.CopySerialized(mesh,old);UnityEngine.Object.DestroyImmediate(mesh);mesh=old;}
                     string matPath=Folder+"/"+group.name+".mat";var material=AssetDatabase.LoadAssetAtPath<Material>(matPath);
                     if(material==null){material=new Material(Shader.Find("Standard"));AssetDatabase.CreateAsset(material,matPath);}
-                    material.enableInstancing=true;material.color=Color.white;
-                    if(group.name.Contains("Surface")){
-                        material.mainTexture=AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Albedo.png");
-                        material.SetFloat("_Metallic",.65f);material.SetFloat("_Glossiness",.35f);
-                        material.SetTexture("_BumpMap",AssetDatabase.LoadAssetAtPath<Texture2D>("Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Normal.png"));material.EnableKeyword("_NORMALMAP");
-                    }else{material.color=new Color(.012f,.025f,.03f);material.SetFloat("_Glossiness",.25f);}
+                    ConfigureMaterial(material,group.name.Contains("Surface"),group.name.Contains("Display"));
                     EditorUtility.SetDirty(material);
                     var part=new GameObject(group.name);part.transform.SetParent(root.transform,false);part.AddComponent<MeshFilter>().sharedMesh=mesh;part.AddComponent<MeshRenderer>().sharedMaterial=material;
                 }
@@ -47,6 +42,50 @@ namespace SpaceMiner.Editor
                 }finally{UnityEngine.Object.DestroyImmediate(root);}
             }
             AssetDatabase.SaveAssets();AssetDatabase.Refresh();Debug.Log("R04 STANDARD AND WIDE CONSOLE ASSETS PREPARED");
+        }
+        private static Texture2D Texture(string path)
+        {
+            var texture=AssetDatabase.LoadAssetAtPath<Texture2D>(path);
+            if(texture==null)throw new FileNotFoundException("R04 console texture missing",path);
+            return texture;
+        }
+        private static void ConfigureMaterial(Material material,bool housing,bool display)
+        {
+            material.shader=Shader.Find("Standard");material.enableInstancing=true;
+            material.SetFloat("_Mode",0);material.SetFloat("_SpecularHighlights",housing?1:0);
+            material.SetFloat("_GlossyReflections",housing?1:0);
+            material.SetFloat("_SmoothnessTextureChannel",0);
+            material.SetTexture("_EmissionMap",null);material.SetColor("_EmissionColor",Color.black);
+            material.DisableKeyword("_EMISSION");
+            if(housing)
+            {
+                material.color=Color.white;
+                material.mainTexture=Texture(Folder+"/TouchConsole_BlueAlbedo.png");
+                // Restore the authored per-material metal/smoothness variation:
+                // painted cabinet, titanium frame, rubber and fasteners differ.
+                material.SetTexture("_MetallicGlossMap",Texture("Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalSmooth.png"));
+                material.SetFloat("_Metallic",1);material.SetFloat("_GlossMapScale",.82f);
+                material.SetFloat("_Glossiness",.45f);material.EnableKeyword("_METALLICGLOSSMAP");
+                material.SetTexture("_BumpMap",Texture("Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Normal.png"));
+                material.SetFloat("_BumpScale",.32f);material.EnableKeyword("_NORMALMAP");
+                material.DisableKeyword("_GLOSSYREFLECTIONS_OFF");
+                material.DisableKeyword("_SPECULARHIGHLIGHTS_OFF");
+            }
+            else
+            {
+                material.mainTexture=null;material.SetTexture("_MetallicGlossMap",null);
+                material.SetTexture("_BumpMap",null);material.DisableKeyword("_METALLICGLOSSMAP");
+                material.DisableKeyword("_NORMALMAP");material.EnableKeyword("_GLOSSYREFLECTIONS_OFF");
+                material.EnableKeyword("_SPECULARHIGHLIGHTS_OFF");
+                material.color=display?new Color(.006f,.018f,.035f):new Color(.009f,.019f,.032f);
+                material.SetFloat("_Metallic",display?.08f:.25f);
+                material.SetFloat("_Glossiness",display?.34f:.30f);
+                // Both direct lamp glare and the unrelated exterior sky probe
+                // are suppressed on the powered screen backing, not the metal.
+                // This keeps the readout blue-black beneath the warm room lamps.
+                material.EnableKeyword("_EMISSION");
+                material.SetColor("_EmissionColor",display?new Color(.001f,.009f,.026f):new Color(.001f,.004f,.010f));
+            }
         }
         public static void Build()
         {

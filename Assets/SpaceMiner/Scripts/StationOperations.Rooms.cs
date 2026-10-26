@@ -22,6 +22,8 @@ namespace SpaceMiner
                 return Path.GetFullPath("Logs/StationDebris/" + id + "-layout.json");
             if (Array.IndexOf(args,"-stationHandsCheck") >= 0)
                 return Path.GetFullPath("Logs/StationHands/" + id + "-layout.json");
+            if (Array.IndexOf(args,"-stationConsoleTouchCheck") >= 0)
+                return Path.GetFullPath("Logs/StationConsoleTouch/" + id + "-layout.json");
             if (Array.IndexOf(args,"-stationDroneSizingCheck") >= 0)
                 return Path.GetFullPath("Logs/DroneSizing/" + id + "-layout.json");
             if (Array.IndexOf(args,"-stationIcePlantCheck") >= 0)

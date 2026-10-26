@@ -1,0 +1,29 @@
+{
+    "passed": true,
+    "checks": 356,
+    "contacts": 9,
+    "completedTouches": 9,
+    "cancelledTouches": 5,
+    "unityVersion": "6000.6.5f1",
+    "pictures": [
+        "01-main-contact.png",
+        "01-main-panel.png",
+        "02-drones-contact.png",
+        "02-drones-panel.png",
+        "03-planning-contact.png",
+        "03-planning-panel.png",
+        "04-research-contact.png",
+        "04-research-panel.png",
+        "05-production-contact.png",
+        "05-production-panel.png",
+        "06-battery-contact.png",
+        "06-battery-panel.png",
+        "08-ice-plant-contact.png",
+        "08-ice-plant-panel.png",
+        "09-adjacent-console-contact.png",
+        "09-adjacent-console-panel.png",
+        "07-edited-room-plan-contact.png",
+        "07-edited-room-plan-panel.png"
+    ],
+    "scope": "Actual R03 skinned arm, six real R04 consoles and physical ice-plant wall terminal; same controller entry as E; reach/contact/retract, three independent fingertip contacts, once-only modal opening, frozen walking, reachable range, wall occlusion, exterior/settings/Escape cancellation, moved/rotated/resized room-plan console and a real adjacent unreachable-console candidate. Escape uses the real QuitMenu dispatch controller. Isolated settings/saves/plans. Controller and framebuffer acceptance; no native OS keyboard, manual comfort, headset or performance acceptance."
+}

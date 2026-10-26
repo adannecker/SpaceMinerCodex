@@ -37,11 +37,31 @@ namespace SpaceMiner
         }
         public StationTerminal NearestTerminal(Vector3 feet)
         {StationTerminal best=null;float nearest=2.4f;foreach(var t in terminals){float distance=Vector3.Distance(t.transform.position,feet);if(distance>=nearest)continue;if(Physics.Linecast(feet+Vector3.up*1.6f,t.transform.position+Vector3.up*1.15f,out var hit,1<<25,QueryTriggerInteraction.Ignore)&&!hit.transform.IsChildOf(t.transform))continue;best=t;nearest=distance;}return best;}
-        public string InteractionPrompt(Vector3 feet){var t=NearestTerminal(feet);return t==null?"":"E – "+t.label+" öffnen";}
+        internal StationTerminal ReachableTerminal(Vector3 feet,StationFirstPersonHands hands,Camera view,out StationConsoleTouchSurface surface,out float score)
+        {
+            StationTerminal best=null;surface=null;score=float.PositiveInfinity;
+            foreach(var terminal in terminals)
+            {
+                if(terminal==null||Vector3.Distance(terminal.transform.position,feet)>2.4f)continue;
+                var candidate=StationConsoleTouchSurface.Find(terminal.transform);
+                if(!hands.CanReachConsole(candidate))continue;
+                float next=candidate.ViewScore(view);
+                if(next>=score)continue;best=terminal;surface=candidate;score=next;
+            }
+            return best;
+        }
+        public string InteractionPrompt(Vector3 feet)
+        {
+            var mode=StationInteriorMode.Current;
+            if(mode!=null&&Vector3.Distance(feet,mode.FeetPosition)<.01f&&mode.TrySelectConsole(out var chosen,out _))
+                return chosen==null?"":"E – "+chosen.label+" berühren";
+            var t=NearestTerminal(feet);if(t==null)return "";var hands=mode?.Hands;
+            return hands!=null&&hands.CanReachConsole(StationConsoleTouchSurface.Find(t.transform))?"E – "+t.label+" berühren":t.label+" · näher herantreten und ansehen";
+        }
         public void OpenTerminal(StationTerminal terminal)
-        {if(terminal==null||CommandRoomPlanner.BlocksInput||TacticalViewActive)return;panel=terminal.kind;if(!string.IsNullOrEmpty(terminal.target))selected=terminal.target;panelScroll=Vector2.zero;consumedFrame=Time.frameCount;Cursor.lockState=CursorLockMode.None;Cursor.visible=true;}
+        {if(terminal==null||CommandRoomPlanner.BlocksInput||TacticalViewActive)return;StationInteriorMode.Current?.Hands?.CancelTouch();panel=terminal.kind;if(!string.IsNullOrEmpty(terminal.target))selected=terminal.target;panelScroll=Vector2.zero;consumedFrame=Time.frameCount;Cursor.lockState=CursorLockMode.None;Cursor.visible=true;}
         public void OpenDroneConsole()
-        {if(!StationInteriorMode.IsInside||ForeignModal)return;panel=StationTerminalKind.Drones;panelScroll=Vector2.zero;consumedFrame=Time.frameCount;Cursor.lockState=CursorLockMode.None;Cursor.visible=true;}
+        {if(!StationInteriorMode.IsInside||ForeignModal)return;StationInteriorMode.Current?.Hands?.CancelTouch();panel=StationTerminalKind.Drones;panelScroll=Vector2.zero;consumedFrame=Time.frameCount;Cursor.lockState=CursorLockMode.None;Cursor.visible=true;}
         public void ClosePanel(){ResetDroneConsoleTextInput();DisposePowerModels();panel=null;consumedFrame=Time.frameCount;draggedOrder=null;}
         internal string ElementAtHit(RaycastHit hit)
         {
@@ -65,8 +85,8 @@ namespace SpaceMiner
             if(ForeignModal)return;
             if(Scenario.Scanner.Dialogue!=null)return;
             if(panel.HasValue){if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.E)&&!DroneConsoleTextInputActive)ClosePanel();return;}
-            if(StationInteriorMode.IsInside&&Input.GetKeyDown(KeyCode.E))
-            {var terminal=NearestTerminal(StationInteriorMode.Current.FeetPosition);if(terminal!=null){OpenTerminal(terminal);return;}}
+            // InteriorMode is the sole owner of E activation. It plays the physical
+            // touch first; direct API callers above intentionally remain immediate.
             if(!TacticalTextInputActive&&Input.GetKeyDown(KeyCode.J)){tasksOpen=!tasksOpen;}
             if(Input.GetMouseButtonDown(0)&&!OwnsScreenPoint(Input.mousePosition)&&Cursor.lockState!=CursorLockMode.Locked)
             {

@@ -34,6 +34,7 @@ namespace SpaceMiner
         public void RestoreVitals(PlayerVitals saved) => Vitals = saved != null && saved.IsValid ? saved.Copy() : new PlayerVitals();
         public void RestoreInterior(Vector3 feet, bool console, float? savedYaw=null, float? savedPitch=null)
         {
+            Hands?.CancelTouch();
             Enter(true); if (!inside) return;
             walker.enabled=false; walker.transform.position=Layout.ContainsPosition(feet) && !Layout.OverlapsCommandBox(feet) ? feet : Layout.SpawnPosition; walker.enabled=true;
             verticalSpeed=0;
@@ -140,6 +141,7 @@ namespace SpaceMiner
         public void Exit(bool silent = false)
         {
             if (!inside) return;
+            Hands?.CancelTouch();
             if (!silent) StationInteractionAudio.Play(StationSound.VrOn);
             consoleOpen = false;
             Vitals.IsSprinting = false;
@@ -168,7 +170,7 @@ namespace SpaceMiner
             if ((collision & CollisionFlags.Below) != 0 && verticalSpeed < 0) verticalSpeed = -2;
             if(!RecoverFallenWalker())RememberSafeGround();
         }
-        private bool MovementBlocked => !inside || consoleOpen || SettingsMenu.BlocksInput || IntroSequence.BlocksGameplay
+        private bool MovementBlocked => !inside || consoleOpen || Hands != null && Hands.TouchInProgress || SettingsMenu.BlocksInput || IntroSequence.BlocksGameplay
             || StartMenu.IsOpen || MemoryCinematic.IsPlaying || scenario?.Scanner?.Dialogue != null
             || StationOperations.TacticalTextInputActive || StationOperations.DroneConsoleTextInputActive;
         private bool JumpPressed(bool held, bool hasFocus)
@@ -226,11 +228,54 @@ namespace SpaceMiner
         }
         public void Look(Vector2 degrees)
         {
+            if (Hands != null && Hands.TouchInProgress) return;
             yaw += degrees.x; pitch = Mathf.Clamp(pitch - degrees.y, -80, 80);
+        }
+        internal void FocusTouchPoint(Vector3 point,float fromYaw,float fromPitch,float amount)
+        {
+            Vector3 delta=point-view.transform.position;
+            float desiredPitch=-Mathf.Atan2(delta.y,new Vector2(delta.x,delta.z).magnitude)*Mathf.Rad2Deg;
+            // Keep the player's horizontal framing. Turning toward the right
+            // touch patch dragged the proximal cuff into the centre of view.
+            yaw=fromYaw;
+            pitch=Mathf.Lerp(fromPitch,Mathf.Clamp(desiredPitch,-75,75),amount);
+            ApplyView();
+        }
+        // Native E and the isolated interaction check share this exact gate.
+        // Programmatic OpenConsole/OpenTerminal keep their immediate API behavior.
+        internal bool TrySelectConsole(out StationTerminal terminal,out StationConsoleTouchSurface surface)
+        {
+            terminal=null;surface=null;if(!inside||Hands==null)return false;
+            float score=float.PositiveInfinity;
+            if(NearConsole)
+            {
+                var main=StationConsoleTouchSurface.Find(Layout.Console);
+                if(Hands.CanReachConsole(main)){surface=main;score=main.ViewScore(view);}
+            }
+            var operations=scenario?.Operations;
+            if(operations!=null&&operations.Live)
+            {
+                var candidate=operations.ReachableTerminal(FeetPosition,Hands,view,out var candidateSurface,out float candidateScore);
+                if(candidate!=null&&candidateScore<score){terminal=candidate;surface=candidateSurface;}
+            }
+            return surface!=null;
+        }
+        public bool TryActivateConsole()
+        {
+            if (!inside || consoleOpen || Hands == null || Hands.TouchInProgress || SettingsMenu.BlocksInput
+                || IntroSequence.BlocksGameplay || StartMenu.IsOpen || MemoryCinematic.IsPlaying || scenario?.Scanner?.Dialogue != null) return false;
+            if(!TrySelectConsole(out var terminal,out var surface))return false;
+            var operations=scenario?.Operations;
+            if(terminal!=null)
+            {
+                return Hands.BeginTouch(surface,()=>{if(inside&&terminal!=null&&!SettingsMenu.BlocksInput)operations.OpenTerminal(terminal);});
+            }
+            return Hands.BeginTouch(surface,()=>{if(inside)OpenConsole();});
         }
         public bool OpenConsole()
         {
             if (!inside || consoleOpen || SettingsMenu.BlocksInput || Vector3.Distance(FeetPosition, Layout.Console.position) > 2.4f) return false;
+            Hands?.CancelTouch();
             consoleOpen = true; consoleScroll = Vector2.zero;
             Vitals.IsSprinting = false;
             StationInteractionAudio.Play(StationSound.ConsoleOpen);
@@ -257,9 +302,12 @@ namespace SpaceMiner
                 if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E)) CloseConsole();
                 return;
             }
+            if (Hands != null && Hands.TouchInProgress)
+            { if(Input.GetKeyDown(KeyCode.Escape))Hands.CancelTouch();return; }
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (Near(Layout.Console, 2.4f)) OpenConsole();
+                if (TryActivateConsole()) return;
+                else if (NearConsole || scenario.Operations!=null&&scenario.Operations.Live&&scenario.Operations.NearestTerminal(FeetPosition)!=null) { }
                 else if (Airlock.CanRequest(FeetPosition)) Airlock.Request(FeetPosition);
                 else if (Layout.Geometry.NearestGate(FeetPosition)!=null) { var gate=Layout.Geometry.NearestGate(FeetPosition);gate.Request(!gate.TargetOpen,FeetPosition); }
                 else if (Layout.Geometry.DetailedHall!=null && Layout.Geometry.DetailedHall.Interact(FeetPosition)) { }
@@ -313,7 +361,9 @@ namespace SpaceMiner
             }
             if (orbit.ShowHud) DrawVitals();
             string operationsPrompt=scenario.Operations!=null&&scenario.Operations.Live?scenario.Operations.InteractionPrompt(FeetPosition):"";
-            string prompt = !string.IsNullOrEmpty(operationsPrompt)?operationsPrompt:Near(Layout.Console, 2.4f) ? "E  Stationspult bedienen"
+            string prompt = Hands!=null&&Hands.TouchInProgress?"TOUCHVERBINDUNG  ·  Esc abbrechen"
+                : !string.IsNullOrEmpty(operationsPrompt)?operationsPrompt:Near(Layout.Console, 2.4f)
+                ? Hands!=null&&Hands.CanReachConsole(StationConsoleTouchSurface.Find(Layout.Console))?"E  Stationspult berühren":"Stationspult  ·  näher herantreten und ansehen"
                 : Airlock.CanRequest(FeetPosition) ? "E  Schleusendurchgang starten"
                 : Layout.Geometry.NearestGate(FeetPosition)!=null ? Layout.Geometry.NearestGate(FeetPosition).Prompt
                 : Layout.Geometry.DetailedHall!=null && Layout.Geometry.DetailedHall.Nearest(FeetPosition)>=0 ? Layout.Geometry.DetailedHall.Prompt(FeetPosition)

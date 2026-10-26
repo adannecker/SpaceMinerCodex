@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-26",
+  "unity": "6000.6.5f1",
+  "passed": true,
+  "studioExit": 0,
+  "gameExit": 0,
+  "buildLog": "Logs/console-studio-models-delivery-build.log",
+  "studioLog": "Logs/console-studio-models-delivery-check.log",
+  "gameLog": "Logs/console-models-game-delivery-check.log",
+  "studio": {
+    "passed": true,
+    "checks": 117,
+    "stationMeshes": 4347,
+    "captures": 64,
+    "error": null
+  },
+  "game": {
+    "passed": true,
+    "checks": 507,
+    "layout": 15,
+    "frustumWarnings": 0,
+    "pictures": [
+      "01-gegenueber-zentrale-echte-50-prozent.png",
+      "02-strompult-in-zentrale-e-hinweis.png",
+      "03-stromuebersicht-1600x1000.png",
+      "detail-reactor.png",
+      "detail-solar-a.png",
+      "detail-solar-b.png",
+      "detail-battery-bay-1.png",
+      "detail-battery-bay-2.png",
+      "detail-consumer-life.png",
+      "detail-sun-primary.png",
+      "detail-sun-companion.png",
+      "detail-bankbilanz.png",
+      "04-explizite-97-prozent-anzeigefixture.png",
+      "05-stromuebersicht-1280x720.png",
+      "06-stromuebersicht-grosse-schrift-oben.png",
+      "07-stromuebersicht-grosse-schrift-unten.png",
+      "08-large-sun-primary.png",
+      "09-large-sun-primary-bottom.png",
+      "08-large-sun-companion.png",
+      "09-large-sun-companion-bottom.png"
+    ],
+    "scope": "Physical battery placement and four authored cassette meshes per installed bank, physical command-room power terminal, read-only live power dashboard and existing shared energy store. Explicit load, state-of-charge, panel-normal, damage and network fixtures are restored. Genuine R-01 battery repair uses a declared helper/repair-technology/three-parts fixture with original energy; actual trajectory sampled every0.25s, collision/support and damaged-sector avoidance checked, then original campaign restored. Isolated old-save and room-plan roundtrips preserve resources and placement. Native framebuffer capture at1600x1000 and1280x720 including enlarged text. Programmatic scene/controller and framebuffer acceptance, not native OS input, manual comfort, headset or FPS acceptance."
+  },
+  "totalChecks": 624,
+  "scope": "Gemeinsame Stromansicht mit echten Anlagenmodellen und drei Sonnenprojektionen; Studio ohne Kampagne, Spiel mit echten vorhandenen Daten.",
+  "limits": [
+    "Development-Player; keine neue Release-, VR-, FPS- oder native OS-Eingabeabnahme",
+    "Studio zeigt Referenz-Startmodell und erklärte Stromfixtures, keine Benutzerkampagne",
+    "Stern-/Planetenscheiben vergrößert; Systemskala komprimiert wie im Spiel; Projektionsansicht",
+    "Detaillierter Reaktor weiterhin offen; vorhandene Kapsel und Blockout dargestellt",
+    "Normale Builds/Windows und WindowsRelease in diesem Auftrag nicht ausgetauscht"
+  ],
+  "earlierFailure": "Erster Spiellauf vor neuer UI am alten E-Hinweis-Test gescheitert. Test-Annäherung auf echte R04-Touch-Pose angeglichen (.95m,35Grad); finale507Prüfungen bestanden. Ursprüngliches Log Logs/console-models-game-check.log erhalten.",
+  "sources": [
+    {
+      "path": "Assets/SpaceMiner/Scripts/ConsoleStationPreview.cs",
+      "sha256": "5C58E60D3B9555E32628DD4AE71006C0D0D3D7985D28A099A5615566E116EF6A"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/ConsoleStudio.cs",
+      "sha256": "0CC048C710F7530E5123C09183585682462CC8858AF14621801CFC91F0550A74"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PowerCelestialView.cs",
+      "sha256": "2F63B36F4B780CF1B5ADA6888CC75FC0C4D9F668B12908B07981B06FA6963E09"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PowerConsoleView.cs",
+      "sha256": "9B0BD0C3FA98F3CCA72996B327E44C1C3F76E3C85F79F8612BC38D41B9ABFF44"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/RuinedWorld.cs",
+      "sha256": "97FD6810084A8BC128B11592338B0E6ED7BEAD3EEFEFF1E16C8B3AF0307B61ED"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorLayout.cs",
+      "sha256": "4564FFB503EC3C827E39F4DF143DCCC3D74671266E4468B7ACAC36B122BC9269"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationPowerModelView.cs",
+      "sha256": "4CC84279B64E32D510BD38625695D5658620951E14174FFCDAF9CF483994000F"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationPowerConsoleCheck.cs",
+      "sha256": "DE8943AA0C2446BCDB409B6546098254E029915FB6A0D1F2E49CD1683A608C77"
+    }
+  ],
+  "reviewedPictures": [
+    "Spiel-Sonnen.png",
+    "Studio-Doppelstern.png",
+    "Spiel-Solarmodell.png",
+    "Studio-140-Prozent.png",
+    "Studio-Gesamtsystem.png",
+    "Studio-Solarmodell.png",
+    "Studio-Sonnenwinkel.png"
+  ]
+}

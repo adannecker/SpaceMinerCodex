@@ -1,5 +1,9 @@
 # Operator-Arm: Variantenvergleich
 
+## Spielfassung R03
+
+Auf Nutzerauftrag vom 26.10.2026 wird der angenommene R03 mit Arm-/Fingergelenken und Dreifinger-Touchbedienung der E-Konsolen verwendet. Die spätere Korrektur verlangt **nur den Arm von rechts**, ohne breiten Torso. Der Unity-Importer spiegelt das linke Original geometrisch und erhält positive Objekt-/Knochenskalierungen; native Originale bleiben unverändert. [Game-R03](Game-R03/README.md) enthält optimierte Meshdaten, Blender-/FBX-Fassung, schmale Ärmelverlängerung und Wiederaufbauhinweise; [aktuelle Darstellung und Prüfung](../../../docs/Pult-Metallblau-und-Rechtsarm-2026-10-26.md). R04 des Arms bleibt eine separate, nicht bestätigte Modellvariante.
+
 ## Dateien
 
 - Revision-R03/OperatorArm-R03.glb und .blend: vom Nutzer übernommene Tripo-Bildrekonstruktion mit durchgehendem Stoffärmel/Handschuh und Unterarmdisplay. Unverändert erhalten.
@@ -12,6 +16,6 @@
 
 Aus dem Repository `work/AvatarTools/blender-4.5.14-windows-x64/4.5/python/bin/python.exe tools/ServeOperatorArm.py` starten. Nur lokal unter http://127.0.0.1:8786/. Der Viewer nutzt vorhandene Three.js-Komponenten und Bibliotheken des Projekts; Modellvarianten über das Auswahlfeld, freie Drehung, Zoom, feste Ansichten und Drahtgitter. Bestehende Pult-/Drohnenviewer bleiben unverändert.
 
-## Grenzen
+## Grenzen der früheren Konzeptdateien
 
-Keine Unity-Zuweisung, kein Rig, keine Finger-/Ellenbogenanimation und kein funktionales HUD. Maßstab ist noch nicht festgelegt. Hochauflösendes Konzeptmesh mit etwa 1,88 Millionen Dreiecken; Retopologie/LOD vor tatsächlichem Spieleinsatz nötig. Keine weiteren Tripo-Credits für R04 verwendet. Reproduzierbar mit tools/EnhanceOperatorArmR04.py, Blender4.5.14. Prüfbericht liegt in Revision-R04/report.json; lokale Renderaufnahme front.png.
+Die hochauflösenden Konzeptdateien R03/R04 haben keine Unity-Zuweisung, kein Rig und kein funktionales HUD. Ihr Maßstab ist nicht festgelegt. Das Konzeptmesh hat etwa1,88 Millionen Dreiecke; die bewegliche Spielfassung wurde deshalb separat vereinfacht. Keine weiteren Tripo-Credits für R04 verwendet. R04 reproduzierbar mit tools/EnhanceOperatorArmR04.py, Blender4.5.14. Prüfbericht liegt in Revision-R04/report.json; lokale Renderaufnahme front.png.

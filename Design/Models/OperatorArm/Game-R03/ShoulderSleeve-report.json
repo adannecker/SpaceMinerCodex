@@ -1,0 +1,94 @@
+{
+  "variant": "Narrow fabric-only sleeve; accepted R03 surface unchanged; no torso",
+  "triangles": 2494,
+  "unityVertices": 4928,
+  "skinBones": 2,
+  "bones": [
+    {
+      "name": "UpperArm",
+      "parent": -1,
+      "head": [
+        0,
+        0,
+        0
+      ],
+      "tail": [
+        -0.06,
+        0.07,
+        0.22
+      ]
+    },
+    {
+      "name": "SleeveShoulder",
+      "parent": -1,
+      "head": [
+        -0.019999999552965164,
+        0.12999999523162842,
+        -0.11999999731779099
+      ],
+      "tail": [
+        -0.02541298419237137,
+        0.19151337444782257,
+        -0.19865623116493225
+      ]
+    }
+  ],
+  "binding": "UpperArm existing R03 bone; SleeveShoulder sibling under Skeleton, identity bind rotation; endpoint stays behind lower-right camera edge at runtime",
+  "originalGameBlendSha256": "babdcb0a05078c1258ae4864c64aa7718d179ce70006e94928291449e3f8fd94",
+  "capCenter": [
+    -0.004430694039911032,
+    -0.000688681029714644,
+    0.013435297645628452
+  ],
+  "capOutwardNormal": [
+    0.19187328219413757,
+    -0.33079472184181213,
+    -0.9239910840988159
+  ],
+  "sampledJoinCenter": [
+    -0.009227526374161243,
+    0.007581186946481466,
+    0.036535076797008514
+  ],
+  "radialProfileMin": 0.07198027100134641,
+  "radialProfileMax": 0.0848273340165615,
+  "continuationLength": 0.19901165677659471,
+  "closedShoulder": true,
+  "closedTorsoFlare": false,
+  "clothUvRect": [
+    0.27,
+    0.6,
+    0.325,
+    0.68
+  ],
+  "markers": [
+    {
+      "name": "SleeveProximalEnd",
+      "parent": 1,
+      "position": [
+        -0.02541298419237137,
+        0.19151337444782257,
+        -0.19865623116493225
+      ]
+    },
+    {
+      "name": "SleeveCuffJoin",
+      "parent": 0,
+      "position": [
+        -0.009227526374161243,
+        0.007581186946481466,
+        0.036535076797008514
+      ]
+    },
+    {
+      "name": "SleeveCuffJoinAxis",
+      "parent": 0,
+      "position": [
+        -0.007308793719857931,
+        0.0042732395231723785,
+        0.02729516662657261
+      ]
+    }
+  ],
+  "originalGameBlendHashVerified": true
+}

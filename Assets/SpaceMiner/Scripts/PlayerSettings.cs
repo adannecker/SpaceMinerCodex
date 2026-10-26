@@ -81,6 +81,7 @@ namespace SpaceMiner
                 if(Array.IndexOf(args,"-stationRoomPlanningCheck")>=0)return Path.GetFullPath("Logs/StationRoomPlanning/settings/player-settings.json");
                 if(Array.IndexOf(args,"-stationDebrisCheck")>=0)return Path.GetFullPath("Logs/StationDebris/settings/player-settings.json");
                 if(Array.IndexOf(args,"-stationHandsCheck")>=0)return Path.GetFullPath("Logs/StationHands/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationConsoleTouchCheck")>=0)return Path.GetFullPath("Logs/StationConsoleTouch/settings/player-settings.json");
                 if(Array.IndexOf(args,"-stationDroneSizingCheck")>=0)return Path.GetFullPath("Logs/DroneSizing/settings/player-settings.json");
                 if(Array.IndexOf(args,"-stationIcePlantCheck")>=0)return Path.GetFullPath("Logs/StationIcePlant/settings/player-settings.json");
                 if(Array.IndexOf(args,"-stationDroneConsoleCheck")>=0)return Path.GetFullPath("Logs/StationDroneConsole/settings/player-settings.json");

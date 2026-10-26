@@ -1,5 +1,7 @@
 # Operator-Arm mit HUD-Manschette
 
+**Spielintegration 26.10.2026:** Der angenommene R03 ist mit beweglichen Gelenken und Drei-Finger-Berührung beim Aktivieren von E-Konsolen integriert. Nach späterer Nutzerkorrektur kommt **nur der rechte Arm** ins Bild; die linke native Quelle bleibt unverändert. Optimierte Spielfassung unter `Design/Models/OperatorArm/Game-R03`; beide Konzeptoriginale bleiben erhalten. [Aktuelle Darstellung und Prüfung](Pult-Metallblau-und-Rechtsarm-2026-10-26.md), [ursprüngliche E-Integration](Operator-Arm-Spielintegration-2026-10-26.md). Die folgenden Aussagen „noch kein Rig/Unity-Einsatz“ beschreiben frühere Modellschritte.
+
 Nutzerauftrag vom 26.10.2026: Variante mit Handschuh als Tripo-Modell erzeugen, Arm ausdrücklich über den Ellenbogen hinaus verlängern. Linker Arm mit Manschette, später für individuelle Fingerbewegungen, HUD-Bedienung und Werkzeuggriffe vorgesehen. Noch keine Unity-Integration oder bestätigtes Rig.
 
 Ein einzelner H3.1-Auftrag mit Geometry & Texture über den angemeldeten integrierten Browser gestartet. Angezeigte Kosten 55 Credits; Abbuchung von 2945 auf 2890 sichtbar. Online-Auftrag: https://studio.tripo3d.ai/workspace/generate/265ca632-b4d9-407b-ba6f-8ec5ea5caddd

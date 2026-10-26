@@ -40,6 +40,9 @@ namespace SpaceMiner
         }
         internal void HandleEscape()
         {
+            var hands=StationInteriorMode.Current?.Hands;
+            if(hands!=null&&hands.TouchInProgress&&!SettingsMenu.BlocksInput)
+            {hands.CancelTouch();return;}
             if(StationOperations.TacticalTextInputActive){StationOperations.Current.ReleaseTacticalSearchFocus();return;}
             if(CommandRoomPlanner.BlocksInput)return;
             if (StationInteriorMode.HasConsoleOpen && !SettingsMenu.BlocksInput) { StationInteriorMode.Current.CloseConsole(); return; }

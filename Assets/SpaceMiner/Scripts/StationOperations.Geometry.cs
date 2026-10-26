@@ -60,6 +60,8 @@ namespace SpaceMiner
             var screen=Group("Geneigter Monitor",root,new Vector3(0,1.15f,.05f),Quaternion.Euler(-15,0,0));
             Shape("Bildschirmgehäuse",screen,Vector3.zero,new Vector3(1.15f,.7f,.1f),graphite,true);
             StationDisplay.Create(label,screen,new Vector3(0,0,-.07f),Quaternion.identity,.045f,signageFont,signageMaterial,graphite,cyan,25,1.05f);
+            var touch=screen.gameObject.AddComponent<StationConsoleTouchSurface>();
+            touch.Configure(null,new Vector3(0,0,-.0715f),Vector3.back,Vector3.up,new Vector2(.40f,.22f));
             Selectable(root,string.IsNullOrEmpty(target)?"command":target);
         }
         private void LightAt(Vector3 position,Color color,float power,float radius)

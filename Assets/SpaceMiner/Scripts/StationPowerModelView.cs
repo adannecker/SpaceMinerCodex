@@ -26,13 +26,16 @@ namespace SpaceMiner
         private Bounds bounds;
         private int renderedFrame = -1;
         private float yaw, pitch;
+        private float zoom = 1;
         private readonly Vector3 origin = new Vector3(0, -30000, 0);
         public Texture Texture => texture;
         public int MeshCount => parts.Count;
         public int SharedMeshCount { get; private set; }
         public StationPowerModelView(Transform coordinates, IEnumerable<Transform> roots, bool station)
         {
-            reference = coordinates; yaw = station ? 0 : -15; pitch = station ? 64 : 18;
+            reference = coordinates; yaw = station ? 0 : -15;
+            pitch = station ? 64 : coordinates.name.StartsWith("Solar", StringComparison.Ordinal) ? 45 : 18;
+            if(!station && coordinates.name.StartsWith("Solar",StringComparison.Ordinal))zoom=.65f;
             rig = new GameObject("Strompult / isolierte Modellkamera") { hideFlags = HideFlags.HideAndDontSave };
             rig.transform.position = origin;
             camera = rig.AddComponent<Camera>(); camera.enabled = false; camera.cullingMask = 1 << 31;
@@ -83,6 +86,8 @@ namespace SpaceMiner
             return new Vector2(viewport.x + point.x * viewport.width, viewport.y + (1 - point.y) * viewport.height);
         }
         public void Orbit(float delta) { yaw += delta; renderedFrame = -1; }
+        public void Zoom(float factor) { zoom = Mathf.Clamp(zoom * factor, .55f, 1.8f); renderedFrame = -1; }
+        public void Elevate(float delta) { pitch = Mathf.Clamp(pitch + delta, -80, 85); renderedFrame = -1; }
         public void Render(int width, int height)
         {
             width = Mathf.Clamp(width, 128, 1600); height = Mathf.Clamp(height, 128, 1200);
@@ -104,7 +109,7 @@ namespace SpaceMiner
                 var point = Quaternion.Inverse(rotation) * Vector3.Scale(bounds.extents, sign);
                 extent = Mathf.Max(extent, Mathf.Abs(point.y), Mathf.Abs(point.x) / camera.aspect);
             }
-            camera.orthographicSize = extent * 1.08f;
+            camera.orthographicSize = extent * 1.08f * zoom;
             key.enabled = fill.enabled = true;
             try
             {
