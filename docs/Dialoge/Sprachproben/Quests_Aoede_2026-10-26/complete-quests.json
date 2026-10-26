@@ -1,0 +1,47 @@
+[
+  {
+    "Id": "quest_00",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_00_komplett.wav",
+    "SHA256": "c14cb50ecd907bf7c7d66ac2468a85b3b8b97aa8ddf869bdc72df2f314a0cc3e"
+  },
+  {
+    "Id": "quest_01",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_01_komplett.wav",
+    "SHA256": "cb95f243731b41d11308a50e41d1a8a89f6597c509db74992583448e319acd75"
+  },
+  {
+    "Id": "quest_02",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_02_komplett.wav",
+    "SHA256": "d2bb29c5d90a1110402a7715284dae91938fe047def29c1685a6cec92d5eb39a"
+  },
+  {
+    "Id": "quest_03",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_03_komplett.wav",
+    "SHA256": "8e0678bd2356d39b7d0de5b843b7c2a7d4529be33ed7cf491198a45f1449ddc2"
+  },
+  {
+    "Id": "quest_04",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_04_komplett.wav",
+    "SHA256": "d443bbc144d6505c1d71339ad9907dbdd0c001780b625df0e91f26aee0ec9ac0"
+  },
+  {
+    "Id": "quest_05",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_05_komplett.wav",
+    "SHA256": "d4a494c012119c00d5897562611cfadeb58272c3fa2d3cbb2b15d9eed2d23cd3"
+  },
+  {
+    "Id": "quest_06",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_06_komplett.wav",
+    "SHA256": "337d68187ea70dc75b0b88bce3cd0a4d597a7906b1a006adb07423c76d0afc1b"
+  },
+  {
+    "Id": "quest_07",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_07_komplett.wav",
+    "SHA256": "aaafb93f91539d73dcdd30b3e166f1e9f9e86b307e0b5c599d4969189169a7fb"
+  },
+  {
+    "Id": "quest_08",
+    "File": "docs\\Dialoge\\Sprachproben\\Quests_Aoede_2026-10-26\\Komplette_Quests\\quest_08_komplett.wav",
+    "SHA256": "d7216d8d631594bc33bf3b6e8f2efd4dbfbc22b29332ca9e408c65f24495f269"
+  }
+]

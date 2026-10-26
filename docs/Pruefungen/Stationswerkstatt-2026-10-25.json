@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-25",
+  "build": "workshop-build-08",
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "layout": 11,
+  "passed": true,
+  "assertions": 1906.0,
+  "assertionNote": "Includes repeated interlock sampling and per-display checks, not distinct scenarios",
+  "runs": [
+    {
+      "name": "workshop",
+      "argument": "-stationWorkshopCheck",
+      "checks": 1596,
+      "exitCode": 0,
+      "result": "workshop-result.json",
+      "log": "workshop-player.log"
+    },
+    {
+      "name": "operations",
+      "argument": "-stationOperationsCheck",
+      "checks": 97,
+      "exitCode": 0,
+      "result": "operations-result.json",
+      "log": "operations-player.log"
+    },
+    {
+      "name": "station",
+      "argument": "-stationKeilCheck",
+      "checks": 156,
+      "exitCode": 0,
+      "result": "station-result.json",
+      "log": "station-player.log"
+    },
+    {
+      "name": "vitals",
+      "argument": "-playerVitalsCheck",
+      "checks": 29,
+      "exitCode": 0,
+      "result": "vitals-result.json",
+      "log": "vitals-player.log"
+    },
+    {
+      "name": "ui",
+      "argument": "-stationOperationsUiCheck",
+      "checks": 28,
+      "exitCode": 0,
+      "result": "ui-result.json",
+      "log": "ui-player.log"
+    }
+  ],
+  "sourceFilesMatched": 224,
+  "deliveredFilesMatched": 247,
+  "imagesSaved": 11,
+  "scope": [
+    "Real collision seams and CharacterController fall recovery",
+    "Physical displays on both wall sides and four terminal approaches",
+    "Ten shared-network dock feeds; breaker/valve and damage arc isolation",
+    "Actual drone travel through interlocked airlock to refit cell; full hull clearance",
+    "Service cancel and incoming-cycle cancel; unchanged inventory until safe completion",
+    "Outside-camera transit disk save; mixed order and legacy persistence",
+    "Existing supply, real water flight, repair and build regressions",
+    "Native fullscreen 2560x1440 and restored window1280x720"
+  ],
+  "limitations": [
+    "No manual mouse/keyboard comfort acceptance",
+    "No Release,100k or long survival balance run",
+    "No playable FPS measurement; automatic offscreen diagnostics may overlap other test processes",
+    "Cell02 and generic automatic robot tool changes remain future research"
+  ],
+  "evidenceFolder": "Stationswerkstatt-2026-10-25",
+  "documentation": "../Stationswerkstatt-2026-10-25.md",
+  "visibleStartup": {
+    "processId": 41276,
+    "responding": true,
+    "entry": "Ring vor der Drohnenhalle",
+    "runtimeExceptions": 0,
+    "log": "Logs/werkstatt-player.log"
+  }
+}

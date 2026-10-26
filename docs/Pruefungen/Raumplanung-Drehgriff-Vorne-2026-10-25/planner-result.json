@@ -1,0 +1,11 @@
+{
+    "passed": true,
+    "checks": 718,
+    "layoutRevision": 13,
+    "pictures": [
+        "01-grundriss-1600.png",
+        "02-grundriss-1280-grosse-schrift.png",
+        "03-kommando-boxen-3d.png"
+    ],
+    "scope": "Eight real labelled room blocks and colliders, live terminal/scanner approaches, actual planner pointer move/resize, rotation/numeric edits, undo/redo, rejected atomic edits, isolated disk save/load and corrupt-file recovery, modal movement and simulation guards, 1600x1000 and 1280x720 at 1.4 text scale, direct 3D room render. Programmatic controller acceptance; no manual mouse comfort, performance or production model claim."
+}

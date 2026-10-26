@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-25",
+  "build": "drone-console-build-05",
+  "passed": true,
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "interiorLayout": 14,
+  "roomPlanSchema": 1,
+  "configuration": "Development",
+  "assertions": 4686,
+  "runs": [
+    {
+      "name": "console",
+      "build": "05",
+      "checks": 158,
+      "exitCode": 0,
+      "images": 10
+    },
+    {
+      "name": "tactical",
+      "build": "05",
+      "checks": 137,
+      "exitCode": 0,
+      "images": 6
+    },
+    {
+      "name": "hands",
+      "build": "05",
+      "checks": 56,
+      "exitCode": 0,
+      "images": 6
+    },
+    {
+      "name": "plant",
+      "build": "04",
+      "checks": 245,
+      "exitCode": 0,
+      "images": 7
+    },
+    {
+      "name": "sizing",
+      "build": "04",
+      "checks": 99,
+      "exitCode": 0,
+      "images": 4
+    },
+    {
+      "name": "workshop",
+      "build": "04",
+      "checks": 2181,
+      "exitCode": 0,
+      "images": 12
+    },
+    {
+      "name": "operations",
+      "build": "04",
+      "checks": 97,
+      "exitCode": 0,
+      "images": 7
+    },
+    {
+      "name": "station",
+      "build": "04",
+      "checks": 177,
+      "exitCode": 0,
+      "images": 9
+    },
+    {
+      "name": "rooms",
+      "build": "04",
+      "checks": 794,
+      "exitCode": 0,
+      "images": 4
+    },
+    {
+      "name": "ui",
+      "build": "05",
+      "checks": 28,
+      "exitCode": 0,
+      "images": 8
+    },
+    {
+      "name": "debris",
+      "build": "05",
+      "checks": 685,
+      "exitCode": 0,
+      "images": 6
+    },
+    {
+      "name": "vitals",
+      "build": "04",
+      "checks": 29,
+      "exitCode": 0,
+      "images": 2
+    }
+  ],
+  "sourceFilesMatched": 280,
+  "sourceManifest": "source-manifest.json",
+  "imagesSaved": 81,
+  "userPlansPreserved": true,
+  "preservedPlanManifest": "preserved-room-plans.json",
+  "firstQuestAcceptance": {
+    "passed": true,
+    "checks": 158,
+    "naturalWaterQuestSeconds": 17520,
+    "receivedRawKg": 1033.325805664062,
+    "scope": "real scan and guarded console water flight through paid first water quest; read-only fleet, genuine queue/refit/cancel, terminal boundary, responsive UI captures; no manual mouse/keyboard acceptance"
+  },
+  "tacticalAcceptance": {
+    "passed": true,
+    "checks": 137,
+    "actualKnownAsteroids": 10,
+    "pagedReferenceFixture": 100000,
+    "scope": "Actual first scan, knowledge-safe filters/search/paging, active external/internal fleet and real campaign quest progress. Explicit focus snapshots, actual launched drone tracking and stopping, real R-01 identity guard, unchanged domain snapshots during observation/navigation. A declared100000-reference fixture checks bounded page/index behaviour, not100000 rendered bodies or FPS. Real native framebuffer captures at1600x1000 and1280x720 with enlarged text. Quest threshold and R-01 readiness use declared campaign-state fixtures; no new economy, VR-headset or manual comfort acceptance."
+  },
+  "handsAcceptance": {
+    "passed": true,
+    "checks": 56,
+    "vertices": 1444,
+    "pictures": [
+      "01-idle-hand-1600.png",
+      "02-walk-look-hand.png",
+      "03-terminal-no-hand.png",
+      "04-roomplan-no-hand.png",
+      "05-declared-close-wall-fixture.png",
+      "06-outside-no-hand.png"
+    ],
+    "scope": "Actual padded dark work-glove mesh with curled fingers and empty future grip; inside/outside, intro and real modal visibility; bounded idle/walk/look controller, pause and reduced motion; camera mask/resource cleanup. Screenshots use the real framebuffer. Wall-depth picture includes a declared temporary foreground plane. No actual tool, manual comfort, FPS or tool gameplay acceptance."
+  },
+  "scope": [
+    "Physical terminal and guarded fleet commands, real resource-dependent flight and water quest",
+    "External/internal fleet, live details/equipment/diagnosis, genuine prioritized work queue and removable completed history",
+    "Known-contact filters/search/bounded pages, separate active fleet, read-only quest progress and explicit drone follow",
+    "Darker padded glove, curled empty grip, sleeve and existing independent camera/motion/input contract",
+    "UI scaling and native fullscreen, storage/mass/energy/saves, workshop/room plans/debris/vitals regressions"
+  ],
+  "limitations": [
+    "Current real Drone02 activation remains repair then charging; concept emergency-supply-before-repair is a future backend sequence",
+    "Internal R01 uses station supply and existing capabilities; separate battery/tool module inventory is not invented",
+    "Hand grip has an empty ToolMount; no new usable scanner/tool or hand collision gameplay",
+    "Object filters affect the known-contact catalogue, not world renderer visibility or scan knowledge",
+    "Declared 100000-reference fixture checks bounded catalogue indexing; no new 100k rendering/FPS acceptance",
+    "Automated controller and framebuffer checks, no manual comfort, VR-headset, Release or long-running campaign acceptance",
+    "Existing cold-storage/material/thermal sizing assumptions and explicit independent test fixtures still apply"
+  ],
+  "committed": false,
+  "pushed": false,
+  "regressionBaselineBuild": "drone-console-build-04",
+  "baselineSourceManifest": "baseline-source-manifest.json",
+  "changesSinceBaseline": "presentation-changes-since-baseline.json",
+  "baselineReuse": "Only UI/layout/input/marker presentation and its checks changed. All remaining production sources, including the orbital camera, saves, geometry and resources, matched; five affected UI/flight/hand/debris runs repeated on final build.",
+  "deployed": "Builds/Windows",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json",
+  "preservedPreviousBuild": "Builds/Windows-before-drone-console-20261025"
+}

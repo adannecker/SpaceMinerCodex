@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-24",
+  "scope": "R01 concept image, dimensioned orthographic envelopes, integration handoff; not an implemented reactor",
+  "generator": "built-in image_gen: V4 style reference, annotation correction, final cleanup; SVG generated from JSON with Python standard library",
+  "artifacts": [
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24.png",
+      "bytes": 2064104,
+      "sha256": "ae2a85ed42173ed2161a81c67df93b3b250bfff80fa8bdd3f9ebb122bb49536b",
+      "pixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24.prompt.txt",
+      "bytes": 5431,
+      "sha256": "a7a60255bfa163412bdb08299cb8c2ecb169c49a03a2525779b4351f8e84e4e9"
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24-revision.prompt.txt",
+      "bytes": 1578,
+      "sha256": "c65c9ad6d640347f5efc916718832680556ab8c666ef00324da2bb48b87c4994"
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24-finalisierung.prompt.txt",
+      "bytes": 1026,
+      "sha256": "7d527e3d68b7dbc39a91c4cde678df249cf2fbf0e1b2ce567613a6a32c7cf047"
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24.geometry.json",
+      "bytes": 1897,
+      "sha256": "359fb2ca4b1b47d1e783f62f9abc84590b01053a3cecc5392546fd777f2191f7"
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24-massplan.svg",
+      "bytes": 10924,
+      "sha256": "b7f35b0172b1ed0413a3cd500e96d63724abde2c40adbb3b1f80bc74fcce9e64"
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24-massplan.png",
+      "bytes": 125304,
+      "sha256": "c8c8c7a34955fd493e40b3bdc52d3672413631d9687dc0304062feefc21c7e85",
+      "pixels": [
+        1680,
+        1060
+      ]
+    },
+    {
+      "path": "tools/CreateReactorConceptPlan.py",
+      "bytes": 9991,
+      "sha256": "1458367f0998ffdfbd7cb9c481dc670cc4f6bd43e77236fa989bad4aa3e77531"
+    },
+    {
+      "path": "docs/Reaktor-Konzept-R01-2026-10-24.md",
+      "bytes": 10636,
+      "sha256": "864bebab1464c655337ed55fb9fdd00a2eee2f640a713e64fee2333e27a85927"
+    }
+  ],
+  "reference": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v4.png",
+  "geometry": {
+    "version": "R01",
+    "date": "2026-10-24",
+    "status": "concept_not_implemented",
+    "units": "metres",
+    "unityUnitsPerMetre": 1,
+    "coordinates": {
+      "origin": "concentric housing/collar centre at service midplane",
+      "up": "+Y",
+      "zeroDegrees": "+Z",
+      "positiveAngle": "towards +X",
+      "viewPlan": "north +Z, east +X"
+    },
+    "housing": {
+      "outerDiameter": 8,
+      "height": 6,
+      "yMin": -3,
+      "yMax": 3,
+      "opaque": true,
+      "shieldingVerified": false,
+      "activePackageDimensions": null
+    },
+    "collar": {
+      "outerDiameter": 16,
+      "innerInterfaceDiameter": 8,
+      "height": 3.2,
+      "yMin": -1.6,
+      "yMax": 1.6,
+      "segmentCount": 16,
+      "pressurisedHumanAccessAssumed": false
+    },
+    "services": {
+      "anglesDegrees": [
+        0,
+        90,
+        180,
+        270
+      ],
+      "interfaceRadius": 8,
+      "tipRadius": 11,
+      "exposedStubLength": 3,
+      "clearWidth": 3,
+      "clearHeight": 2.6,
+      "outerWidth": 3.6,
+      "outerHeight": 3.2,
+      "floorY": -1.3,
+      "ceilingY": 1.3,
+      "outerYMin": -1.6,
+      "outerYMax": 1.6,
+      "overallTipSpan": 22,
+      "ringInterfaceRadius": 29,
+      "remainingExtensionLength": 18
+    },
+    "radiators": {
+      "anglesDegrees": [
+        45,
+        135,
+        225,
+        315
+      ],
+      "centreRadius": 10,
+      "radialLength": 4,
+      "tangentialWidth": 2,
+      "thickness": 0.15,
+      "centreY": 1.9,
+      "areaPerPanelFace": 8,
+      "panelCount": 4,
+      "thermalSizingVerified": false,
+      "capacityWatts": null
+    },
+    "humanReferenceHeight": 1.8,
+    "stationV4": {
+      "innerModuleInnerRadius": 18,
+      "ringInnerRadius": 29
+    },
+    "simulation": {
+      "reactorElectricalPowerKw": 2,
+      "solarElectricalPowerKw": 0.5,
+      "changed": false
+    },
+    "authority": "Numeric specification and generated SVG govern model dimensions; image is illustrative. Added collar/stub/radiator dimensions are design proposals, not engineering verification."
+  },
+  "checks": [
+    "Visual inspection: closed housing; four service ports; four separate radiator cassettes; human reference; hidden opaque internal package",
+    "Final generated image uses illustrative auxiliary views; exact dimensions are in SVG/JSON",
+    "Generator executed successfully: housing/collar dimensions, four cardinal ports, clear width/height, 3+18=21 m service continuation, 22 m tip span",
+    "Conservative radiator-panel versus cardinal-service plan envelope separation; 0.225 m panel/roof gap",
+    "Radiator corner radius 12.041594579 m is inside inner-module envelope r18 m; not thermal/radiation clearance",
+    "SVG parsed; final SVG rendered with headless Chrome and visually rechecked after label fixes",
+    "PNG signatures and pixel dimensions; artifact SHA256; geometry JSON parsed",
+    "WaterScenario default ReactorPowerKw remains 2f (source read)",
+    "Latest concurrent V4 integration read; non-matching vertical interfaces explicitly documented"
+  ],
+  "notPerformed": [
+    "Unity or Blender model creation",
+    "Unity build or player test in this concept task",
+    "thermal or radiation protection calculations",
+    "structural/mass/material/flight/performance validation",
+    "design approval, commit or push"
+  ],
+  "integrationNote": "MainDev concurrently built V4 blockout; R01 opening/collar heights are new proposals and not a drop-in replacement for those vertical interfaces.",
+  "localLinksChecked": 14
+}

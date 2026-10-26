@@ -1,0 +1,177 @@
+{
+  "Date": "2026-10-25",
+  "Task": "First awakening dialogue: head gestures, independent shoulders, mood",
+  "Scope": "Sixteen awakening cues; fourteen unchanged recordings and two text-only instructions. Studio default High model. Campaign default Image unchanged.",
+  "UnitySource": "6000.4.7f1",
+  "UnityBuild": "6000.6.4f1",
+  "BuildCopy": "Builds/MiraDialoguePreview-6000.6.4f1",
+  "BuildDemoExit": 0,
+  "BuildGameExit": 0,
+  "Assertions": 291,
+  "Pictures": 55,
+  "Runs": [
+    {
+      "Name": "acting",
+      "Exit": 0,
+      "Result": {
+        "passed": true,
+        "checks": 83,
+        "pictures": 8,
+        "maxHeadDegrees": 3.6592,
+        "maxTorsoDegrees": 0.6748,
+        "maxShoulderMetres": 0.001473,
+        "visemeChanges": 408
+      },
+      "Pictures": 8
+    },
+    {
+      "Name": "models-demo",
+      "Exit": 0,
+      "Result": {
+        "passed": true,
+        "checks": 64,
+        "pictures": 21,
+        "lowVertices": 116465
+      },
+      "Pictures": 21
+    },
+    {
+      "Name": "models-game",
+      "Exit": 0,
+      "Result": {
+        "passed": true,
+        "checks": 64,
+        "pictures": 21,
+        "lowVertices": 116465
+      },
+      "Pictures": 21
+    },
+    {
+      "Name": "dialogue-demo",
+      "Exit": 0,
+      "Result": {
+        "passed": true,
+        "checks": 70,
+        "width": 1440,
+        "height": 900
+      },
+      "Pictures": 3
+    },
+    {
+      "Name": "dialogue-game",
+      "Exit": 0,
+      "Result": {
+        "passed": true,
+        "checks": 10,
+        "width": 1600,
+        "height": 1000
+      },
+      "Pictures": 2
+    }
+  ],
+  "SharedRuntimeSHA256": "4A332CB1DBD1EA5D468789AB3E1285BA3CC9380855DD7CF432882CA835E23F4D",
+  "Sources": [
+    {
+      "Path": "Assets/SpaceMiner/Scripts/MiraDialogueActing.cs",
+      "SHA256": "7EE538A7A1A30818C37088B1B32B2EA9C4DA57C818E72D68FBF985FAABDD8042",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/Scripts/MiraDialogueActingCheck.cs",
+      "SHA256": "F57E7DFE648B21C0C9F23BBF0A3CA31EB3BE3E1DAFCA084D036B1E0A88041359",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/Scripts/MiraDialogueModule.cs",
+      "SHA256": "CFD2CFB62B4B01674BBB88258ACF134DEF77C34C20F8D9EABF9547EDB8D7D953",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/Scripts/MiraPortraitView.cs",
+      "SHA256": "FC11593B5C6FE67EE2F07A658FA947F21E342A8283030199FAC2BD224896028D",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/Scripts/MiraDialogueDemo.cs",
+      "SHA256": "81A7E9F6F1B55CDCF2BE2CECFD634AA595EEFA52C2A7647B352B5F58BED6B4AC",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/Scripts/MiraDialogueModelsCheck.cs",
+      "SHA256": "87EAE8B88D822AF380479C1457C5AA495CAC7DBDF0E1A0C65D3A383A8D520055",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs",
+      "SHA256": "52321949EB5F4FA56698E56B1091FD4DD0C7DDEE7165190795C3806B6B7A450E",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/Editor/MiraDialogueModelsBuild.cs",
+      "SHA256": "6C167361072D2F91097AF27448551ACE62FEE20868F8D26AC30A70B5D719CB3D",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighMesh.asset",
+      "SHA256": "FC1A793FFB255049FADA8B427AEA0AA0C1A517ADE3CD699A1FB7DA5C9ED59697",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/Resources/MiraModels/High.prefab",
+      "SHA256": "4EC675F1FADA981E89AD8545122E5EE71E2BA4B6E0CDCF7D97E4C2E862C18069",
+      "BuildCopyMatches": true
+    },
+    {
+      "Path": "Assets/SpaceMiner/Resources/MiraModels/Low.prefab",
+      "SHA256": "301EBE2C108F97649B1780C3BBD81CC17501215AFD84A90E65A0D42A5BD008A9",
+      "BuildCopyMatches": true
+    }
+  ],
+  "OriginalsUnchanged": [
+    {
+      "Path": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Assets\\SpaceMiner\\AvatarLab\\TripoH25\\MiraTripoMesh.asset",
+      "Hash": "B241C20857605993AB565904021277520A455019E207EF869DF756DFB9647285"
+    },
+    {
+      "Path": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Assets\\SpaceMiner\\AvatarLab\\TripoH25\\MiraTripoPBR.mat",
+      "Hash": "701E01F36F20362E707A0906A2F7E7FCEC633364979ECBE70A81677C18BFD58E"
+    },
+    {
+      "Path": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Assets\\SpaceMiner\\AvatarLab\\TripoH31\\Original.fbx",
+      "Hash": "1FC98738B518634D607EA5F4159C7BDB6F1965F59DDFF4EA8DD4239EE9802E2C"
+    }
+  ],
+  "HighBones": 5,
+  "LowBones": 2,
+  "VisuallyReviewed": [
+    "Logs/MiraActing/cue-00-studio.png",
+    "Logs/MiraActing/cue-00-portrait.png",
+    "Logs/MiraActing/cue-04-portrait.png",
+    "Logs/MiraActing/cue-08-portrait.png",
+    "Logs/MiraActing/cue-15-portrait.png",
+    "Logs/MiraActing/models-demo/demo-high-speaking.png",
+    "Logs/MiraActing/models-game/game-high-speaking.png"
+  ],
+  "PreservedBuilds": [
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\MiraDialogueDemo-before-acting-20261025-231130",
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\MiraDialogueGame-before-acting-20261025-231130"
+  ],
+  "Limits": [
+    "No subjective hearing or native OS-input acceptance",
+    "No release, headset, FPS or anatomical face acceptance",
+    "Builds/Windows untouched; separate main-game check snapshot from this chat, not latest parallel indoor-traffic build",
+    "Gestures authored for existing recordings; new recordings need retiming"
+  ],
+  "DeliveryVerification": [
+    {
+      "Product": "MiraDialogueDemo",
+      "Files": 247,
+      "AllSHA256Equal": true
+    },
+    {
+      "Product": "MiraDialogueGame",
+      "Files": 247,
+      "AllSHA256Equal": true
+    }
+  ]
+}

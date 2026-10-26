@@ -1,0 +1,629 @@
+Mono path[0] = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/Managed'
+Mono config path = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 2 interfaces on host : 0) 192.168.178.28 1) 192.168.96.1
+Player connection [60060]  Target information:
+
+Player connection [60060]  * "[IP] 192.168.178.28 [Port] 55000 [Flags] 2 [Guid] 1866188444 [EditorId] 1814583507 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [60060]  * "[IP] 192.168.96.1 [Port] 55000 [Flags] 2 [Guid] 1866188444 [EditorId] 1814583507 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [60060] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.6.4f1 (12bfff696524)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/UnitySubsystems
+[D3D12 Device Filter] Vendor Name: ATI
+[D3D12 Device Filter] Device Name: AMD Radeon RX 9070 XT
+[D3D12 Device Filter] Driver Version: 32.0.32015.7029
+[D3D12 Device Filter] Feature Level: 12.2
+[D3D12 Device Filter] Graphics Memory: 16191 MB
+[D3D12 Device Filter] Processor Count: 16
+[D3D12 Device Filter] Device Type: Discrete
+GfxDevice: creating device client; kGfxThreadingModeSplitJobs
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        AMD Radeon RX 9070 XT (ID=0x7550)
+    Vendor:          ATI
+    VRAM:            16191 MB
+    App VRAM Budget: 15419 MB
+    Driver:          32.0.32015.7029
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.009 seconds
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+<RI> Input initialized.
+D3D11 device created for Microsoft Media Foundation video decoding.
+UnloadTime: 0.827400 ms
+d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 19193136.
+CAMERA VERTICAL OK: real operative outside context
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:48)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: isolated settings path
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:49)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: isolated room plan / command-room
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:50)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: isolated room plan / drone-bay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:50)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: isolated room plan / drone-workshop
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:50)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: isolated room plan / internal-workshop
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:50)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: actual camera deliberately tilted away from horizontal
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:57)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: held Space ascends through actual controller path
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:59)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: ascent uses world-Y independently of camera pitch and yaw
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:61)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: whole orbit translates without zoom or rotation drift
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:62)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: Shift+Space descends at the same speed rather than adding a triple boost
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:64)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: Shift alone is not vertical movement
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:66)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: one second at60 and144 controller steps yields the same displacement
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:70)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: zoom-dependent speed remains proportional above the near speed floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:73)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: actual camera speed preference scales vertical movement
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:75)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: near zoom retains a usable2m-per-second speed floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:77)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: actual drone following starts
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:78)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: no held movement preserves follow
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:79)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: manual ascent releases follow from latest real target position
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:81)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: manual translation preserves selected drone information
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:84)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: follow available again for invalid-input guard
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:85)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: invalid steps and overflow cannot corrupt pose or cancel follow
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:87)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: paused simulation permits camera movement without toggling pause
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:91)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: camera Space movement changes no saved resources, flight or simulation state
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:CheckController () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:92)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:125)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: actual drawn search holds focus / HUD=True tab=Objects inside=False panel=False dialogue=False keyboard=12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:135)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: Space/Shift+Space cannot move camera while typing in real search
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:Blocked (string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:43)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:138)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:135)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+Direct3D: detected that IDXGISwapChain::GetFrameStatistics is broken (it does not return proper timestamps). Delta time will now be calculated using cpu-side time stampling until the game window is moved.
+CAMERA VERTICAL OK: actual settings modal blocks outside Space in either direction
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:Blocked (string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:43)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_3 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:141)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:141)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: real Mira acknowledgement visible
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:144)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:144)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: Mira acknowledgement blocks outside vertical input
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:Blocked (string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:43)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:144)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:144)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: actual interior mode entered
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_5 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:146)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: inside Space belongs exclusively to interior movement
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:Blocked (string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:43)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_5 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:146)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: disabled outside controller rejects programmatic movement
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:Blocked (string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:43)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_6 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:148)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:148)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: real native screenshot / 01-before-world-vertical
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck/<>c__DisplayClass15_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:105)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Capture>d__15:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: actual scene and HUD rendered / 01-before-world-vertical
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck/<>c__DisplayClass15_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:107)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Capture>d__15:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: held ascent works after all UI closes
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_7 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:150)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:150)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: real native screenshot / 02-after-world-ascent
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck/<>c__DisplayClass15_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:105)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Capture>d__15:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL OK: actual scene and HUD rendered / 02-after-world-ascent
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:28)
+SpaceMiner.StationCameraVerticalCheck/<>c__DisplayClass15_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:107)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Capture>d__15:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:100)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CAMERA VERTICAL CHECK PASSED: 37
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationCameraVerticalCheck:<Start>b__16_8 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:155)
+SpaceMiner.StationCameraVerticalCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:31)
+SpaceMiner.StationCameraVerticalCheck/<Start>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs:152)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792949890892,"processId":15628,"allocatedMemory":1208380,"memoryLabels":[{"Default":447736},{"NewDelete":760},{"Thread":181696},{"Manager":14745},{"Shader":10940},{"GfxDevice":3408},{"GfxThread":522240},{"Serialization":17000},{"BaseObject":11280},{"String":605},{"PoolAlloc":96},{"ScriptManager":5696},{"CodeReload":440},{"CloudService":144},{"VR":1928},{"Video":144},{"Subsystems":96},{"Gui":34},{"CoreBusinessMetrics":128}]}

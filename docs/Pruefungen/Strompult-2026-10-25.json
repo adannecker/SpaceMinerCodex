@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-25",
+  "build": "power-console-build-05",
+  "passed": true,
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "layout": 15,
+  "runs": [
+    {
+      "name": "power",
+      "build": "power-console-build-04",
+      "checks": 253,
+      "exitCode": 0,
+      "images": 7,
+      "reusedAfterSourceComparison": true
+    },
+    {
+      "name": "battery",
+      "build": "power-console-build-04",
+      "checks": 550,
+      "exitCode": 0,
+      "images": 4,
+      "reusedAfterSourceComparison": true
+    },
+    {
+      "name": "rooms",
+      "build": "power-console-build-04",
+      "checks": 794,
+      "exitCode": 0,
+      "images": 4,
+      "reusedAfterSourceComparison": true
+    },
+    {
+      "name": "ops",
+      "build": "power-console-build-04",
+      "checks": 97,
+      "exitCode": 0,
+      "images": 7,
+      "reusedAfterSourceComparison": true
+    },
+    {
+      "name": "planner",
+      "build": "power-console-build-05",
+      "checks": 723,
+      "exitCode": 0,
+      "images": 3,
+      "reusedAfterSourceComparison": false
+    },
+    {
+      "name": "tactical",
+      "build": "power-console-build-05",
+      "checks": 137,
+      "exitCode": 0,
+      "images": 6,
+      "reusedAfterSourceComparison": false
+    },
+    {
+      "name": "ice",
+      "build": "power-console-build-05",
+      "checks": 245,
+      "exitCode": 0,
+      "images": 7,
+      "reusedAfterSourceComparison": false
+    },
+    {
+      "name": "console",
+      "build": "power-console-build-05",
+      "checks": 179,
+      "exitCode": 0,
+      "images": 12,
+      "reusedAfterSourceComparison": false
+    }
+  ],
+  "assertions": 2978,
+  "imagesSaved": 50,
+  "sourceFilesMatched": 323,
+  "sourceManifest": "source-manifest.json",
+  "userPlansPreserved": true,
+  "scope": [
+    "Opposing180-degree installed pair; eight bays, four cassette slots each,8 installed and4 coupled modules.",
+    "Live percentage on both physical display faces,97% and23% explicitly declared/restored fixtures. Reserve charge is unknown, no second energy store.",
+    "Command-room battery proxy becomes physical E-operated power terminal with original stable room-plan ID and unchanged operator pose/size/yaw.",
+    "Shared generator snapshot drives both dashboard and actual energy; reactor health/network and one-sided cosine solar incidence.",
+    "A/right/90/sector3 and B/left/270/sector9 retain existing saved identities; actual panel geometry rotated0/60/90/180 degrees with independent real60-second energy comparison.",
+    "Seven normal framebuffer captures1600x1000/1280x720 including enlarged text and scrolling; terminal input/modal guards and release.",
+    "Actual R-01 battery repair reaches physical bank along intact ring, consumes2parts and returns home; declared isolated helper/research/parts/damage fixture fully restored.",
+    "Room planning, station jobs, battery geometry, tactical navigation, complete ice plant and natural first-water-quest regressions. Per-suite build and strict test-only source comparison are recorded."
+  ],
+  "batteryRepairRoute": "battery-repair-route.json",
+  "limitations": [
+    "Programmatic scene/controller/API and native framebuffer checks; no native OS-input or manual comfort acceptance.",
+    "Four logical cassette modules per populated bay; individual chemical cells and independent cell charge are not simulated.",
+    "No reserve commissioning, per-bank save reservoir or solar tracking actuator added. Reserve telemetry remains unknown.",
+    "Cosine model uses the primary sun; no secondary-star flux, occlusion, irradiance-distance model or PV thermal model.",
+    "No new Release, headset,100k rendering or normal-game FPS acceptance."
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": "Builds/Windows",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json",
+  "preservedPreviousBuild": "Builds/Windows-before-power-console-20261025"
+}

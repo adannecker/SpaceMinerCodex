@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-25",
+  "scope": "Analytical audit of current source defaults; no Unity build/runtime test or game parameter change.",
+  "defaults": {
+    "DryMassKg": 200.0,
+    "FuelCapacityLiters": 10.0,
+    "BatteryCapacityKwh": 8.0,
+    "CargoCapacityKg": 50.0,
+    "CruiseSpeed": 5.0,
+    "ThrustNewtons": 5.0,
+    "ExhaustSpeed": 1000.0,
+    "HeatingKwhPerLiter": 0.2,
+    "MiningRateKgPerSecond": 0.1,
+    "MiningPowerKw": 80.0,
+    "OnboardPowerKw": 0.05,
+    "ReserveFraction": 0.1
+  },
+  "geometry": {
+    "cargoOuterDimensionsM": [
+      1.32,
+      1.64,
+      0.9
+    ],
+    "cargoOuterBoxM3": 1.94832,
+    "existingPackedGeometryCheckDimensionsM": [
+      1.2,
+      1.5,
+      0.81
+    ],
+    "existingCheckedBoxM3": 1.458,
+    "kgPerCheckedM3AtCurrentPayload": 34.29355281207133,
+    "limit": "Checked rectangular envelope, not integrated usable interior volume. Model hull width normalized to 2 m."
+  },
+  "ispSeconds": 101.97162129779284,
+  "fullFuelDeltaVEmptyMps": 48.79016416943204,
+  "fullFuelDeltaVLoaded50kgMps": 39.22071315328133,
+  "continuousThrustWaterKgPerSecond": 0.005,
+  "continuousThrustWaterMinutes": 33.333333333333336,
+  "miningMinutesToEmptyIdeal": 5.996252342286072,
+  "miningMinutesToTenPercentReserveBeforeFlight": 5.396627108057464,
+  "full50kgMiningKwh": 11.118055555555555,
+  "onboardOnlyHoursIdeal": 160.0,
+  "chargeHoursAt2kwIdeal": 4.0,
+  "latentHeatExampleKwhPerKgAtApprox100C": 0.6270833333333333,
+  "example20CToApprox100CSteamKwhPerKg": 0.7197222222222223,
+  "scenarios": [
+    {
+      "pickupKg": 50,
+      "cruiseMps": 2,
+      "waterLiters": 1.8728984170176828,
+      "waterRemainingLiters": 8.127101582982316,
+      "withinTenPercentWaterReserve": true,
+      "propulsionKwhAtCurrentGameAssumption": 0.3745796834035366,
+      "flightMinutesFor10kmEachWayApprox": 169.8,
+      "avionicsKwhForThatFlight": 0.14150000000000001,
+      "maxCruiseWithTenPercentWaterReserveMps": 9.752311069732565
+    },
+    {
+      "pickupKg": 50,
+      "cruiseMps": 5,
+      "waterLiters": 4.655786918122978,
+      "waterRemainingLiters": 5.344213081877022,
+      "withinTenPercentWaterReserve": true,
+      "propulsionKwhAtCurrentGameAssumption": 0.9311573836245955,
+      "flightMinutesFor10kmEachWayApprox": 74.5,
+      "avionicsKwhForThatFlight": 0.06208333333333333,
+      "maxCruiseWithTenPercentWaterReserveMps": 9.752311069732565
+    },
+    {
+      "pickupKg": 250,
+      "cruiseMps": 2,
+      "waterLiters": 2.6713005482193832,
+      "waterRemainingLiters": 7.328699451780617,
+      "withinTenPercentWaterReserve": true,
+      "propulsionKwhAtCurrentGameAssumption": 0.5342601096438767,
+      "flightMinutesFor10kmEachWayApprox": 171.13333333333333,
+      "avionicsKwhForThatFlight": 0.1426111111111111,
+      "maxCruiseWithTenPercentWaterReserveMps": 6.790844139436951
+    },
+    {
+      "pickupKg": 250,
+      "cruiseMps": 5,
+      "waterLiters": 6.645820168289363,
+      "waterRemainingLiters": 3.3541798317106366,
+      "withinTenPercentWaterReserve": true,
+      "propulsionKwhAtCurrentGameAssumption": 1.3291640336578727,
+      "flightMinutesFor10kmEachWayApprox": 77.83333333333333,
+      "avionicsKwhForThatFlight": 0.0648611111111111,
+      "maxCruiseWithTenPercentWaterReserveMps": 6.790844139436951
+    },
+    {
+      "pickupKg": 500,
+      "cruiseMps": 2,
+      "waterLiters": 3.669303212221509,
+      "waterRemainingLiters": 6.330696787778491,
+      "withinTenPercentWaterReserve": true,
+      "propulsionKwhAtCurrentGameAssumption": 0.7338606424443018,
+      "flightMinutesFor10kmEachWayApprox": 172.8,
+      "avionicsKwhForThatFlight": 0.144,
+      "maxCruiseWithTenPercentWaterReserveMps": 4.9264661725230114
+    },
+    {
+      "pickupKg": 500,
+      "cruiseMps": 5,
+      "waterLiters": 9.133361730997347,
+      "waterRemainingLiters": 0.8666382690026531,
+      "withinTenPercentWaterReserve": false,
+      "propulsionKwhAtCurrentGameAssumption": 1.8266723461994694,
+      "flightMinutesFor10kmEachWayApprox": 82.0,
+      "avionicsKwhForThatFlight": 0.06833333333333333,
+      "maxCruiseWithTenPercentWaterReserveMps": 4.9264661725230114
+    }
+  ],
+  "limits": [
+    "Local straight-line co-moving rendezvous; no orbital drift or asteroid gravity.",
+    "Four speed changes; no docking, turns, avoidance, extra waypoint stops, safety margin or reserve consumption.",
+    "Times use conservative constant starting mass per leg; propellant uses sequential ideal rocket equation.",
+    "Displayed scenarios beyond available water are infeasible; energy figures use unvalidated current 0.2 kWh/L.",
+    "50 W onboard-only estimate is ideal continuous load; Ready state currently does not consume onboard energy.",
+    "Thermal values are a reference case, not a universal vacuum engine operating point; no double counting of nozzle conversion energy."
+  ]
+}

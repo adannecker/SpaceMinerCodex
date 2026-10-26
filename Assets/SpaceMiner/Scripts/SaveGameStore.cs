@@ -28,6 +28,7 @@ namespace SpaceMiner
         public float interiorYaw, interiorPitch;
         public StationAirlock.SavedState airlock;
         public PlayerVitals playerVitals;
+        public StationCampaignState stationCampaign;
         public SavedAsteroid[] asteroids;
         public DroneAgent.SavedState[] drones;
         public string Summary => (scanned ? "Erster Scan abgeschlossen" : "Erster Scan offen") + " · " +
@@ -57,6 +58,7 @@ namespace SpaceMiner
                 interiorPitch=StationInteriorMode.Current!=null?StationInteriorMode.Current.ViewPitch:0,
                 airlock=StationInteriorMode.IsInside?StationInteriorMode.Current.Airlock.CaptureState():null,
                 playerVitals=StationInteriorMode.Current?.Vitals.Copy(),
+                stationCampaign=scenario.Operations?.Capture(),
                 asteroids=new SavedAsteroid[scenario.Asteroids.Length], drones=new DroneAgent.SavedState[scenario.Drones.Length]
             };
             for (int i=0;i<state.asteroids.Length;i++) {
@@ -88,6 +90,7 @@ namespace SpaceMiner
         {
             if(value==null)throw new IOException("Unvollständiger Spielstand.");
             if(value is float number) { if(float.IsNaN(number)||float.IsInfinity(number))throw new IOException("Ungültiger Zahlenwert."); return; }
+            if(value is double precise) { if(double.IsNaN(precise)||double.IsInfinity(precise))throw new IOException("Ungültiger Zahlenwert."); return; }
             Type type=value.GetType();
             if(type==typeof(string)||type.IsPrimitive||type.IsEnum)return;
             if(value is Array array) { foreach(var item in array)Numbers(item); return; }
@@ -96,6 +99,8 @@ namespace SpaceMiner
         public static void Validate(SavedGame state, WaterScenario scenario)
         {
             Numbers(state);
+            if(state.stationCampaign!=null&&!StationOperations.Valid(state.stationCampaign))throw new IOException("Ungültiger Stationszustand.");
+            if(state.stationCampaign!=null&&Mathf.Abs(state.stationCampaign.inventory.water.amount-state.water)>.001f)throw new IOException("Widersprüchlicher Wasserbestand.");
             if (state.interiorLayout < 0 || state.interiorLayout > StationInteriorLayout.Revision) throw new IOException("Unbekanntes Stationslayout.");
             if(state.playerVitals!=null && !state.playerVitals.IsValid)throw new IOException("Ungültiger Körperzustand.");
             if(state.hasInteriorView && (!state.hasInteriorState || !state.insideStation || Mathf.Abs(state.interiorPitch)>80))
@@ -117,12 +122,22 @@ namespace SpaceMiner
             }
             foreach(var drone in state.drones) {
                 if(drone.hardware==null || drone.hardware.Length!=12)throw new IOException("Fehlende Drohnenparameter.");
+                if(!DroneCargoProfile.IsValidState(drone.cargoProfile))throw new IOException("Ungültiges Drohnen-Frachtprofil.");
                 for(int i=0;i<9;i++)if(drone.hardware[i]<=0)throw new IOException("Ungültige Drohnenparameter.");
                 if(drone.hardware[9]<0 || drone.hardware[10]<0 || drone.hardware[11]<0 || drone.hardware[11]>.5f ||
                     drone.fuel>drone.hardware[1]+.001f || drone.battery>drone.hardware[2]+.001f || drone.cargo>drone.hardware[3]+.001f)
                     throw new IOException("Ungültige Drohnenversorgung.");
                 if(!Enum.IsDefined(typeof(DronePhase),drone.phase) || drone.fuel<0 || drone.battery<0 || drone.cargo<0 || drone.speed<0 || drone.phaseSeconds<0)
                     throw new IOException("Ungültiger Drohnenzustand.");
+                if(drone.cargoWaterFraction<0 || drone.cargoWaterFraction>1)throw new IOException("Ungültige Frachtzusammensetzung.");
+                if(drone.iceDeliveryVersion<0||drone.iceDeliveryVersion>1||drone.unloadInitialCargoKg<0
+                    ||drone.rawIceDelivery&&(state.stationCampaign==null||!StationIcePlant.HasData(state.stationCampaign.icePlant)))
+                    throw new IOException("Ungültige Roh-Eisübergabe.");
+                if(drone.retainedCargoFlight&&(!drone.rawIceDelivery||drone.tankOrder||drone.target!=null&&drone.target!=""))
+                    throw new IOException("Ungültige Bestandsfrachtfahrt.");
+                if(DroneCargoProfile.HasData(drone.cargoProfile) && drone.cargoProfile.volumeLimited &&
+                    drone.cargo>DroneCargoProfile.Restore(drone.cargoProfile).CapacityKg(drone.cargoWaterFraction,drone.hardware[3])+.01f)
+                    throw new IOException("Drohnenfracht überschreitet das gespeicherte Volumenlimit.");
                 if(!string.IsNullOrEmpty(drone.target)) {
                     var source=Array.Find(state.asteroids,a=>a.id==drone.target);
                     if(source==null || !source.scanned || !source.waterIdentified) throw new IOException("Drohnenziel ist nicht gescannt.");
@@ -142,6 +157,7 @@ namespace SpaceMiner
             scenario.ReactorPowerKw=state.reactorKw;scenario.SolarPowerKw=state.solarKw;scenario.DroneChargePowerKw=state.chargeKw;
             scenario.Mining.TripsPerLevel=state.tripsPerLevel;scenario.Mining.ImprovementPerLevel=state.improvement;
             scenario.RestoreSupply(state.water,state.deliveries,state.delivered,state.sourceAssigned);
+            scenario.Operations?.Restore(state.stationCampaign);
             scenario.Mining.Restore(state.trips,state.throughput,state.efficiency,state.researchProgress);scenario.Mining.Focus=state.researchFocus;
             if (state.hasInteriorState && state.insideStation)
             {
@@ -153,8 +169,9 @@ namespace SpaceMiner
                     room.RestoreInterior(currentLayout ? state.interiorFeet : room.Layout.SpawnPosition, state.console,
                         currentLayout && state.hasInteriorView ? (float?)state.interiorYaw : room.Layout.SpawnYaw,
                         currentLayout && state.hasInteriorView ? (float?)state.interiorPitch : 0);
-                    // Old airlock cycles belong to the retired habitat. Start-station doors stay open.
-                    if (!room.Airlock.PermanentlyOpen && currentLayout && state.airlock != null) room.Airlock.RestoreState(state.airlock);
+                    // Only revision8+ cycles belong to the new physical bay chamber.
+                    if (state.interiorLayout>=8 && !room.Airlock.PermanentlyOpen && currentLayout && state.airlock != null) room.Airlock.RestoreState(state.airlock);
+                    else room.Airlock.RecoverLegacyOccupant(room.FeetPosition);
                 }
             }
             else if (state.console) StationInteriorMode.Current?.Enter(true);
@@ -162,9 +179,16 @@ namespace SpaceMiner
             scenario.Scanner.Restore(state.scannerEnergy,state.scanned,state.console,state.deliveries>0,state.water>=state.tankCapacity-.001f);
             for(int i=0;i<state.drones.Length;i++)
             {
-                scenario.Drones[i].RestoreState(state.drones[i]);
-                if (state.interiorLayout != StationInteriorLayout.Revision) scenario.Drones[i].MigrateStationPose();
+                var drone=scenario.Drones[i];drone.RestoreState(state.drones[i]);
+                // Room plans can change without a campaign layout revision. Parked vehicles
+                // belong to their current physical home, while active saved journeys keep
+                // their existing transit restoration and legacy migration rules.
+                bool parked=drone.Phase==DronePhase.Ready||drone.Phase==DronePhase.Disabled
+                    ||drone.Phase==DronePhase.Servicing||drone.Phase==DronePhase.WaitingForPower;
+                if (state.interiorLayout != StationInteriorLayout.Revision || parked) drone.MigrateStationPose();
             }
+            scenario.Operations?.RestoreWorkshopRefits();
+            scenario.Operations?.RefreshSupplyState();
             scenario.SetSimulationRate(Mathf.Clamp(state.simulationRate,0,500));
             scenario.Notify("Spielstand geladen: "+state.name);
         }

@@ -1,0 +1,2 @@
+Failed to capture screen shot.
+PLAYER VITALS CHECK PASSED: 29 checks; sprint, exhaustion, recovery, modal pause, persistence and HUD

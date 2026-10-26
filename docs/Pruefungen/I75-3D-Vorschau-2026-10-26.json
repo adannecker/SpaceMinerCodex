@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-26",
+  "viewerUrl": "http://127.0.0.1:8769/I75Viewer/",
+  "visibleR02Loaded": true,
+  "observedTriangles": 18912,
+  "observedVariant": "R02",
+  "cameraPositionObserved": "0.0000,-1.5808,-0.0000",
+  "notes": [
+    "User operated the viewer during verification; no further automated gesture tests disturbed it.",
+    "Observed changing camera and rotation control state; did not claim unattended drag/wheel acceptance.",
+    "Screenshot captured through in-app browser; tab marked as deliverable."
+  ],
+  "blenderPluginSearch": "No Blender result; no plugin installed.",
+  "vendor": "three0.180.0, MIT, downloaded from official npm registry; served locally",
+  "serverBind": "127.0.0.1",
+  "modelUploads": false,
+  "unityBuildChanged": false,
+  "picture": "I75-3D-Vorschau-2026-10-26/browser-vorschau.png",
+  "fileManifest": "I75-3D-Vorschau-2026-10-26/file-manifest.json"
+}

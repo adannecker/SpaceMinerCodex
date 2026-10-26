@@ -1,0 +1,110 @@
+{
+  "date": "2026-10-25",
+  "build": "debris-hands-build-02",
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "layout": 13,
+  "passed": true,
+  "assertions": 3989,
+  "runs": [
+    {
+      "name": "hands",
+      "checks": 52,
+      "exitCode": 0,
+      "images": 6,
+      "result": "hands-result.json",
+      "log": "hands-player.log"
+    },
+    {
+      "name": "debris",
+      "checks": 685,
+      "exitCode": 0,
+      "images": 6,
+      "result": "debris-result.json",
+      "log": "debris-player.log"
+    },
+    {
+      "name": "workshop",
+      "checks": 2127,
+      "exitCode": 0,
+      "images": 13,
+      "result": "workshop-result.json",
+      "log": "workshop-player.log"
+    },
+    {
+      "name": "operations",
+      "checks": 97,
+      "exitCode": 0,
+      "images": 7,
+      "result": "operations-result.json",
+      "log": "operations-player.log"
+    },
+    {
+      "name": "station",
+      "checks": 177,
+      "exitCode": 0,
+      "images": 9,
+      "result": "station-result.json",
+      "log": "station-player.log"
+    },
+    {
+      "name": "vitals",
+      "checks": 29,
+      "exitCode": 0,
+      "images": 2,
+      "result": "vitals-result.json",
+      "log": "vitals-player.log"
+    },
+    {
+      "name": "rooms",
+      "checks": 794,
+      "exitCode": 0,
+      "images": 4,
+      "result": "rooms-result.json",
+      "log": "rooms-player.log"
+    },
+    {
+      "name": "ui",
+      "checks": 28,
+      "exitCode": 0,
+      "images": 8,
+      "result": "ui-result.json",
+      "log": "ui-player.log"
+    }
+  ],
+  "sourceFilesMatched": 254,
+  "sourceManifest": "source-manifest.json",
+  "imagesSaved": 55,
+  "userPlansPreserved": true,
+  "preservedPlanManifest": "preserved-room-plans.json",
+  "concept": {
+    "browserChecks": 16,
+    "images": 6,
+    "liveUnityInterface": false,
+    "spec": "../Drohnenleitstand-Konzept-2026-10-25.md"
+  },
+  "scope": [
+    "Five varied scattered wreck contacts, actual first scan, collision selection and five finite retrievals",
+    "Real retrieval routes, disk load, legacy pickup fixture and immediate paused cargo restoration",
+    "Actual glove mesh, camera overlay, modal/outside visibility, motion bounds and cleanup",
+    "Continuous concentric lane meshes through healthy ring joints and seven-metre doors",
+    "Existing workshop, resources, station, vitals, four-room planning and native fullscreen regression suites"
+  ],
+  "limitations": [
+    "Assertion total includes 500 asteroid-clearance checks, 265 lane checks and repeated airlock interlocks; not 3989 independent scenarios",
+    "Later resource and workshop states use explicitly declared fixtures, including 80 L water and 20 kWh for retrievals",
+    "Debris images show offscreen geometry without HUD; API and raycast input is not manual mouse acceptance",
+    "Close-wall hand image uses a declared temporary plane; no manual comfort, VR, tool gameplay or FPS acceptance",
+    "No complete drone-hull collision solver for every salvage route, realistic salvage mass model, Release or 100k/long-running acceptance",
+    "Existing near bench images remain partly occluded by repair columns",
+    "New drone UI and emergency-charge-before-repair workflow remain concept only",
+    "Earlier build01 hand fixture failed on stripped shader; debris01 did not run due to malformed meta GUID; both repaired before final build02"
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": "Builds/Windows",
+  "preservedPreviousBuild": "Builds/Windows-before-debris-hands-20261025",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json"
+}

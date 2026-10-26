@@ -1,0 +1,203 @@
+{
+  "date": "2026-10-24",
+  "scope": "Individual reactor damage geometry and isolated staged station-construction study",
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "campaignLayoutRevision": 6,
+  "build": {
+    "method": "SpaceMiner.Editor.StartMenuBuild.Run",
+    "development": true,
+    "exitCode": 0,
+    "log": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/construction-20261024-build-delivery.log"
+  },
+  "construction": {
+    "passed": true,
+    "checks": 14,
+    "pieces": 515,
+    "batches": 66,
+    "massKg": 4961,
+    "modelSeconds": 41400,
+    "exitCode": 0,
+    "log": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/construction-20261024-check-delivery.log",
+    "sector": 3,
+    "angleDegrees": 60,
+    "radialDepthMetres": 16,
+    "maximumPrinterDimensionMetres": 2.4,
+    "maximumPartsPerDelivery": 8,
+    "defaultSpeed": 320,
+    "defaultDurationSeconds": 129.375,
+    "sevenStages": [
+      "connector",
+      "frame",
+      "floor",
+      "services",
+      "pressure shell",
+      "outer protection",
+      "simulated inspection"
+    ],
+    "inventoryAndTimeMeaning": "proposed model values, not production balance or real engineering rates"
+  },
+  "stationRegression": {
+    "checks": 193,
+    "exitCode": 0,
+    "log": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/construction-20261024-station-delivery.log",
+    "screenCaptureWarnings": 15
+  },
+  "damageStyles": {
+    "90": "asymmetric peeled roof and unequal beam ends",
+    "180": "twisted side fragments and shear debris",
+    "270": "crushed roof and bent broken conduits",
+    "safeBulkheadsAndGaps": "unchanged"
+  },
+  "verified": [
+    "All planned pieces fit the printer using transformed actual mesh vertices",
+    "All racks fit a2.4m volume with at most8 separate pieces",
+    "Manufacturing precedes installation; material remains the same object through assembly",
+    "Pause, invalid time, progressive pickup and deterministic restart",
+    "Sequential construction order and unchanged campaign water/battery across complete run",
+    "Inspection only after all515 pieces installed; model mass accounted once",
+    "Restart reuses geometry without duplicate parts; large step finishes same assembly",
+    "Campaign bulkhead remains closed and preview floor excluded from campaign saves",
+    "Ordinary station entrances, broken-corridor safety, old save positions, hall doors, actual water trip and dock return"
+  ],
+  "initialIssue": {
+    "testExit": 1,
+    "cause": "Printer sizing initially rotated an axis-aligned bounding box, overestimating rotated panel size; corrected to transformed mesh vertices",
+    "log": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/construction-20261024-check-first.log"
+  },
+  "images": [
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/01-anschluss-und-drucker.png",
+      "sha256": "d06014cfa70c2756814e428eda8b712ef908fb0baa4ef54999968d9e5af36a9f"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/02-drucker-einzelteile.png",
+      "sha256": "65044d8d2af65f139cd73bd0f8c0435a65143274976e39c91c7f1a10c71f2293"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/08-fertiges-modul.png",
+      "sha256": "d360847542d3101d35eab6bed1e8fe4b4286a698ad0c4fcb35b9171da0660e50"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/stage-0.png",
+      "sha256": "dc3b2b2d86bacd25d917fd979a041cd58b792d1ecfcf3e512d7a2bfd5e787624"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/stage-1.png",
+      "sha256": "939b74748e7549b99e4f0070d5f74b37810e58f7798b011f5aecc0d3833f0954"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/stage-2.png",
+      "sha256": "ccfa6a35823b64f3e2191a01df0869f10d560eedc57481a63adb7562e7a51044"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/stage-3.png",
+      "sha256": "56856437452ea82ebd559617a83fd69e320fda61518c052d4c86331d52858784"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/stage-4.png",
+      "sha256": "e7a75d91bfe6510af052816026559cb98ff8f5abf1a10c81bd82b1395aadfe1a"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/stage-5.png",
+      "sha256": "099ec5bf9ee30368785abf2f2afa6374e3649c1899aa00806257e9dc9f7dcf78"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Construction/stage-6.png",
+      "sha256": "d360847542d3101d35eab6bed1e8fe4b4286a698ad0c4fcb35b9171da0660e50"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Station/07-modulhuellen-aussen.png",
+      "sha256": "db20d2f81773c474aa265cd3287e72ace66bae2e56cccfe48e9f3bc94a3b0631"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Station/11-aussendock-uebersicht.png",
+      "sha256": "15528e9c62d35d6b9e2cc2abc1d6a7b74dcc1e3b32737f3e54e4ad3eab8655f1"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Station/18-stationsgrundriss.png",
+      "sha256": "07af19baef251a92be6764d264a50752179f75e20cb75d0c8f3d0478470ef073"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Station/19-reaktor-innenmodule.png",
+      "sha256": "f962d96d8156d40d9d2e73c2d8aa666f0b1f7aa16d24366cbdf21fa6e6549bd3"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Station/20-gangbruch-schotten.png",
+      "sha256": "9213cf6567a01122099f0ad1b9aaf7afa4c3574c4d9ffc297ee1d171aebc5fdf"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsbau-Zeitraffer-2026-10-24/Station/21-solarfeld-tragarm.png",
+      "sha256": "6aca18fc5a79ce44969bc1b7cce3f90170af21967a17149a1c4e4af2863897cc"
+    }
+  ],
+  "visualReview": [
+    "Construction/02-drucker-einzelteile.png",
+    "Construction/stage-4.png",
+    "Construction/stage-2.png",
+    "Construction/08-fertiges-modul.png",
+    "Station/20-gangbruch-schotten.png"
+  ],
+  "sourceFilesMatchingBuildCopy": [
+    {
+      "path": "Assets/SpaceMiner/Scripts/RingWalkthrough.cs",
+      "sha256": "534aea7dd877134ab0f3ff7e5e91874a505bdbf9453f96d90a2bd4d715f86005"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerSettings.cs",
+      "sha256": "e107081e5185d8b76542373dcaea4a4d8b6884234c307346490a1c3e66a643c3"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationConstructionPreview.cs",
+      "sha256": "e75e4d164b6e74a023e697c3f525522a8cf808034488714f976a5f7a50f71fbb"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationConstructionPreview.cs.meta",
+      "sha256": "5c60161e78be5649f0b474e466492289a93c71c14d2bb6cccece6b87d32be7eb"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorLayout.cs",
+      "sha256": "ce06f80087335021b825d420d4468702ef719648d150d4dc59f8f27fba3c945b"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationVisual.cs",
+      "sha256": "3f3c9f9213fd33030fcfe1aa3e47a15bc180d49c0abdda4764357c25649a602a"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StartStationCheck.cs",
+      "sha256": "13a4908ec356da60debf274fd1fad72591617873cbfceb72178f06f4b06b9941"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorMode.cs",
+      "sha256": "d621868cdc8f2b662bdbfd0a3ebc966175ed5b5bbb5d03307d010eb6f1d69d15"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerVitalsCheck.cs",
+      "sha256": "c413e5e1bb13efddb296522c19cab40f5f49b413abb170aa37fa7b8f3f81e0ec"
+    }
+  ],
+  "deployed": {
+    "path": "Builds/Windows",
+    "previousBuild": "Builds/Windows-before-construction-20261024",
+    "filesSha256Matched": 247,
+    "assemblySha256": "2a5ebbd2cee75e43c11a3b4f46c043be9409e0361252d9c8e3321726d3f315b0",
+    "launcher": "Start-Stationsbau-Zeitraffer.cmd",
+    "visiblePreview": {
+      "pid": 36056,
+      "responding": true,
+      "arguments": [
+        "-stationConstructionPreview"
+      ],
+      "log": "Logs/station-construction-player.log"
+    }
+  },
+  "limits": [
+    "Development-only concept preview, not a saved gameplay expansion",
+    "Resource costs, realistic power, thermal, quality and pressure simulation not implemented",
+    "Two concept construction drones do not reactivate campaign fleet",
+    "Pressure port remains closed; completed preview module is not playable floor",
+    "3D renders checked; no new GUI screenshot or manual input acceptance",
+    "No Release or performance benchmark; existing other-chat reactor assets retained",
+    "No commit or push"
+  ]
+}

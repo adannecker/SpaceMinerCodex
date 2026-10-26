@@ -27,8 +27,8 @@ namespace SpaceMiner
         private void Start(){scenario=FindFirstObjectByType<WaterScenario>();Application.wantsToQuit+=WantsToQuit;}
         public bool NewSession(){if(HasSession && !Save(true))return false;HasSession=true;autosaveSeconds=0;saveName="Meine Station";comment="";return true;}
         public void EndSession(){HasSession=false;autosaveSeconds=0;}
-        public void OpenSave(Action after=null){if(scenario==null)return;loading=false;exitAction=after;status="";IsOpen=true;}
-        public void OpenLoad(){loading=true;exitAction=null;status="";scroll=Vector2.zero;Refresh();IsOpen=true;}
+        public void OpenSave(Action after=null){if(CommandRoomPlanner.BlocksInput||scenario==null)return;loading=false;exitAction=after;status="";IsOpen=true;}
+        public void OpenLoad(){if(CommandRoomPlanner.BlocksInput)return;loading=true;exitAction=null;status="";scroll=Vector2.zero;Refresh();IsOpen=true;}
         private void Refresh()
         {
             saves.Clear();entries.Clear();warnings.Clear();
@@ -63,6 +63,7 @@ namespace SpaceMiner
         }
         public bool LoadGame(string path)
         {
+            if(CommandRoomPlanner.BlocksInput)return false;
             try {
                 var entry=SaveGameStore.Read(path);
                 SaveGameStore.Validate(entry,scenario);
@@ -72,7 +73,7 @@ namespace SpaceMiner
                 return true;
             }catch(Exception error){status="Laden fehlgeschlagen: "+error.Message;return false;}
         }
-        public void Leave(Action action){if(HasSession){bool saved=Save(true);string message=status;OpenSave(action);if(!saved)status=message;}else action();}
+        public void Leave(Action action){if(CommandRoomPlanner.BlocksInput)return;if(HasSession){bool saved=Save(true);string message=status;OpenSave(action);if(!saved)status=message;}else action();}
         private bool WantsToQuit()
         {
             if(Array.Exists(Environment.GetCommandLineArgs(),a=>a.EndsWith("Check")||a=="-spaceMinerSmokeTest"))return true;
@@ -81,10 +82,12 @@ namespace SpaceMiner
         internal bool RequestApplicationExit()
         {
             if(allowQuit || !HasSession || StartMenu.IsOpen)return true;
+            if(CommandRoomPlanner.BlocksInput)return false;
             Leave(()=>{allowQuit=true;Application.Quit();});return false;
         }
         private void Update()
         {
+            if(CommandRoomPlanner.BlocksInput)return;
             if(IsOpen){if(Input.GetKeyDown(KeyCode.Escape))Close();return;}
             if(!HasSession || StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.PausesSimulation)return;
             if(Input.GetKeyDown(KeyCode.F5))OpenSave();
@@ -99,7 +102,7 @@ namespace SpaceMiner
         private void OnApplicationPause(bool paused){if(paused && HasSession && !StartMenu.IsOpen)Save(true);}
         private void OnGUI()
         {
-            if(!IsOpen)return;
+            if(CommandRoomPlanner.BlocksInput||!IsOpen)return;
             ui.Configure(SettingsStore.Current.Accessibility);var matrix=GUI.matrix;int depth=GUI.depth;
             float scale=UiLayout.Scale(1000,800);GUI.matrix=Matrix4x4.Scale(Vector3.one*scale);GUI.depth=-350;
             float width=Screen.width/scale,height=Screen.height/scale;

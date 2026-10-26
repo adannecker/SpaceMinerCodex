@@ -1,0 +1,11 @@
+{
+  "source": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_P20_V02.fbx",
+  "sourceSha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+  "method": "Bounding centres of left/right mesh vertices in lowest 25mm raw (18.8mm at game scale), 0.75m length normalization. Approximate contact-centre estimate, no separate foot objects.",
+  "contactCentresXMetres": [
+    -0.17623347332259767,
+    0.1729360486334804
+  ],
+  "centreDistanceMetres": 0.3491695219560781,
+  "nominalRailGaugeMetres": 0.35
+}

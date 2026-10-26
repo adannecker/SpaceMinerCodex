@@ -1,0 +1,22 @@
+[
+  {
+    "name": "operations",
+    "exit": 0
+  },
+  {
+    "name": "ui",
+    "exit": 0
+  },
+  {
+    "name": "vitals",
+    "exit": 0
+  },
+  {
+    "name": "station",
+    "exit": 0
+  },
+  {
+    "name": "mining",
+    "exit": 0
+  }
+]

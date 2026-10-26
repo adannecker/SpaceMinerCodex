@@ -62,8 +62,8 @@ namespace SpaceMiner
             if (airlock != null)
             {
                 for (int i = 0; i < 2; i++)
-                    doors[i].transform.position = interior.Room.TransformPoint(new Vector3(0, 1.2f, i == 0 ? StationAirlock.HabitatDoorZ : StationAirlock.RingDoorZ));
-                Pressure.transform.position = interior.Room.TransformPoint(new Vector3(0, 1.2f, -7.8f));
+                    doors[i].transform.position = airlock.transform.TransformPoint(new Vector3(0, 1.2f, i == 0 ? airlock.EntranceZ : airlock.ExitZ));
+                Pressure.transform.position = airlock.transform.TransformPoint(new Vector3(0, 1.2f, (airlock.EntranceZ+airlock.ExitZ)*.5f));
             }
             int moving = -1, direction = 0;
             if (running)

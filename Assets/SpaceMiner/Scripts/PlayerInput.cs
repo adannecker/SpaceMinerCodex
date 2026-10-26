@@ -32,5 +32,8 @@ namespace SpaceMiner
     {
         public static bool Held(CameraAction action) => Input.GetKey(SettingsStore.Current.Controls.Bindings.Get(action));
         public static bool Pressed(CameraAction action) => Input.GetKeyDown(SettingsStore.Current.Controls.Bindings.Get(action));
+        public static bool ShiftHeld => Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        // Space is reserved for mode-specific movement, outside the saved camera bindings.
+        public static float SpaceVerticalAxis(bool spaceHeld, bool shiftHeld) => !spaceHeld ? 0 : shiftHeld ? -1 : 1;
     }
 }

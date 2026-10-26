@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-25",
+  "passed": true,
+  "checks": 272,
+  "runs": [
+    {
+      "name": "demo1440",
+      "checks": 64,
+      "log": "Logs/MiraModels/demo-host-final.log",
+      "exitCode": 0
+    },
+    {
+      "name": "demo960",
+      "checks": 64,
+      "log": "Logs/MiraModels/demo-host-small.log",
+      "exitCode": 0
+    },
+    {
+      "name": "game-models",
+      "checks": 64,
+      "log": "Logs/MiraModels/game-host-final.log",
+      "exitCode": 0
+    },
+    {
+      "name": "dialogue-regression",
+      "checks": 70,
+      "log": "Logs/MiraModels/demo-host-regression.log",
+      "exitCode": 0
+    },
+    {
+      "name": "game-dialogue",
+      "checks": 10,
+      "log": "Logs/MiraModels/game-host-regression.log",
+      "exitCode": 0
+    }
+  ],
+  "sourceUnity": "m_EditorVersion: 6000.4.7f1",
+  "testedUnity": "6000.6.4f1",
+  "configuration": "Development",
+  "buildCopy": "Builds/MiraDialoguePreview-6000.6.4f1",
+  "demo": "Builds/MiraDialogueDemo/MiraDialogueDemo.exe",
+  "game": "Builds/MiraDialogueGame/SpaceMiner.exe",
+  "models": [
+    {
+      "name": "Bild",
+      "source": "MiraDialoguePortraits"
+    },
+    {
+      "source": "Tripo H2.5",
+      "vertices": 116465,
+      "name": "Lowmodell",
+      "renderSize": 512
+    },
+    {
+      "source": "Tripo H3.1",
+      "modelId": "0add4eb7-94ba-4147-9bb1-06b2e47eb0ac",
+      "vertices": 69917,
+      "name": "Highmodell",
+      "renderSize": 1024
+    }
+  ],
+  "highOriginalFbxSha256": "1FC98738B518634D607EA5F4159C7BDB6F1965F59DDFF4EA8DD4239EE9802E2C",
+  "rig": {
+    "lowNeckPivotMeters": 0.245,
+    "highJawLimitMeters": 0.006,
+    "shapesPerModel": 13,
+    "highNeckPivotMeters": 0.19,
+    "sharedOfflineTiming": true,
+    "bonesPerModel": 2
+  },
+  "assemblySha256": "D1876F730190A3FD3BCC18D6A3D43FD9B07B2FF14B42F15C1F6798933C4EFF95",
+  "identicalRuntimeAssemblies": true,
+  "screenshotsSaved": 68,
+  "selectedScreenshots": [
+    "studio-high.png",
+    "studio-low.png",
+    "studio-small.png",
+    "high-closed-eyes.png",
+    "high-mouth-pose.png",
+    "high-paused.png",
+    "high-concerned.png",
+    "game-high.png",
+    "game-moving-host.png",
+    "studio-image.png"
+  ],
+  "visuallyReviewed": [
+    "High/Low studio comparison",
+    "High speaking, paused lips, expression and closed-eye geometry",
+    "Small-window layout",
+    "Game High portrait and translated/rotated host"
+  ],
+  "sourceHashes": [
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraPortraitView.cs",
+      "sha256": "EC0B3C8BA8DD743D710F7A744D274A52D9B5DE65346AB94013A15632D364B5BC"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraDialogueModelsCheck.cs",
+      "sha256": "941FD3B76C5313A81F5F8B09EEE3924479A2BCEFFD2A56713609B8C946856D4A"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraDialogueModule.cs",
+      "sha256": "B6F8C540F43E058252DD9B362135C0BFB75AE267C309CE9A32966434C28DD4AD"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraDialogueDemo.cs",
+      "sha256": "B766AA1C0FAEAB467780C45EA633C80D46268BE2C74624F9D2FDEAF9B65BF34F"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraVisorOverlay.cs",
+      "sha256": "BBEEA000AF3D4997A5660714C9529E9951C4DE3047F67039DFAF9547495060E8"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerSettings.cs",
+      "sha256": "B362560FAE4B74804A04D38862F0675202CB740982C1900A5CF2A3885B65C79D"
+    },
+    {
+      "path": "Assets/SpaceMiner/Editor/MiraDialogueModelsBuild.cs",
+      "sha256": "B10C6FD897ED013DDF6EFB965BF458A3396A2576934E86E0DF3EAE5F8AB30A31"
+    },
+    {
+      "path": "Assets/SpaceMiner/Editor/MiraDialogueBuild.cs",
+      "sha256": "604999195ECB5E56678CD44BB2C77555C5E893A0B7970A28CB17C34C5A169553"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraModels/Low.prefab",
+      "sha256": "4D3CC100DAD43D52FDC271CD1AFA7E3D7EE4B6153A44F4E85BC88607C0839767"
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraModels/High.prefab",
+      "sha256": "7334FCE1BD470EC813B2E7F317F30165390076E0D2CBB6A9F7249267BF2A67EA"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighMesh.asset",
+      "sha256": "C9D346ECBBF8896488A8A2F7072F3F4C5C9571E1D158AF54F508AC77971BDB66"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighPBR.mat",
+      "sha256": "13A9E3C517F7A5655D0142E30ED8E7ABCA37A9EB707FBFEC7F4FAE8D1FF232EF"
+    }
+  ],
+  "verified": [
+    "Paused switch preserves a nonzero audio position and same AudioSource",
+    "Speech-time-driven visemes and actual jaw-shape variation",
+    "Independent H3.1 geometry, own calibrated landmarks and neck pivot",
+    "Friendly/concerned/focused/encouraging expression shapes",
+    "Mute/pause/replay and sixteen-line existing dialogue regression",
+    "Model surface hidden from normal world cameras; portrait lighting/fog restored",
+    "Portrait remains rendered when host is moved and rotated",
+    "Image mode and inactive model lifecycle"
+  ],
+  "limitations": [
+    "Surface face animation, no separate new teeth/tongue or anatomical retopology",
+    "Low/High are model version labels, not an FPS claim; old refined mesh has more vertices",
+    "No subjective listening or native mouse/keyboard acceptance, Release or FPS/headset check",
+    "Main-game default remains image; model selection is exposed by shared module API and studio controls",
+    "Builds/Windows and parallel other-chat source work preserved; no claim that the dedicated build includes later unrelated edits"
+  ],
+  "previousBuilds": [
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\MiraDialogueDemo-before-models-20261025-224142",
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\MiraDialogueGame-before-models-20261025-224142"
+  ],
+  "iterations": [
+    "New dedicated build copy used after detecting a concurrent Unity process",
+    "First model render used to calibrate H3.1 landmarks",
+    "First 58-check comparison passed; lid edge and wrapped list rows refined",
+    "62-check comparisons passed; final host-motion/lifecycle correction added and all five final checks rerun"
+  ],
+  "committed": false,
+  "pushed": false
+}

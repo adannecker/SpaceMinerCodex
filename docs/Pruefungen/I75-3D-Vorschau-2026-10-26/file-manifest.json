@@ -1,0 +1,72 @@
+[
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/index.html",
+    "bytes": 2821,
+    "sha256": "e132aac4959f00887253afe29fe8450ec13d925de847e3fb7d02ab8c0886ccc7"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor-source.json",
+    "bytes": 426,
+    "sha256": "f684fb32a45ab4649deebfec384db088108e0d6efa6cf083cba875f5f50559bc"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/viewer.js",
+    "bytes": 5125,
+    "sha256": "28c65982e870f51447d42fb322a2cdcba72b6546cb2b3886589c1aeec6e1aa35"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/LICENSE",
+    "bytes": 1081,
+    "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/package.json",
+    "bytes": 4635,
+    "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/build/three.core.js",
+    "bytes": 1403455,
+    "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/build/three.module.js",
+    "bytes": 603113,
+    "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/examples/jsm/controls/OrbitControls.js",
+    "bytes": 38703,
+    "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/examples/jsm/environments/RoomEnvironment.js",
+    "bytes": 4899,
+    "sha256": "c20f0b4677f6128a138d7152b85cbef9091f4f45cdfa05adca04d40c1697c7ae"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/examples/jsm/loaders/GLTFLoader.js",
+    "bytes": 114739,
+    "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/examples/jsm/utils/BufferGeometryUtils.js",
+    "bytes": 35539,
+    "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751"
+  },
+  {
+    "path": "tools/ServeI75Viewer.py",
+    "bytes": 1770,
+    "sha256": "cfc2cff55df7492c4f44a6873530165af812e7c7f73e64be6fac9b37231f6632"
+  },
+  {
+    "path": "tools/Start-I75Viewer.ps1",
+    "bytes": 1361,
+    "sha256": "e79ee145e097e9a51e4b1442bf23e537dc180f74100c3839a77f09ec1df85943"
+  },
+  {
+    "path": "Start-I75-3D-Vorschau.cmd",
+    "bytes": 112,
+    "sha256": "50dfef935f17c70e3f380fbc3b81b00094b43bfe635cfcf58b9e53286bb7312e"
+  }
+]

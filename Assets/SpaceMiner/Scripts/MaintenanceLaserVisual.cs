@@ -9,6 +9,10 @@ namespace SpaceMiner
         private readonly List<Mesh> meshes = new List<Mesh>();
         private readonly List<Material> materials = new List<Material>();
         private readonly List<Texture2D> textures = new List<Texture2D>();
+        private readonly List<string> borrowedTextureKeys=new List<string>();
+        private readonly List<Renderer> batchOriginals=new List<Renderer>(),batchRenderers=new List<Renderer>();
+        private static readonly List<MaintenanceLaserVisual> batchedTools=new List<MaintenanceLaserVisual>();
+        private bool combined;
         private Material navy, steel, graphite, copper, warning, lens;
         private Texture2D finish, normal;
         private Texture2D hullAlbedo, hullMetal, hullNormal;
@@ -49,6 +53,8 @@ namespace SpaceMiner
         // The imported hull uses an atlas; new panels need their own matching paint maps.
         private void MakeHullPaint(Color colour)
         {
+            string cacheKey="hull:"+gameObject.name+":"+colour.ToString("F3");var cached=StationTextureCache.Borrow(cacheKey);borrowedTextureKeys.Add(cacheKey);
+            if(cached!=null){hullAlbedo=cached[0];hullMetal=cached[1];hullNormal=cached[2];return;}
             const int size=512;
             hullAlbedo=new Texture2D(size,size,TextureFormat.RGBA32,true,false) { name="Mining / worn hull-blue panel albedo" };
             hullMetal=new Texture2D(size,size,TextureFormat.RGBA32,true,true) { name="Mining / paint and exposed metal roughness" };
@@ -80,7 +86,8 @@ namespace SpaceMiner
             }
             hullAlbedo.SetPixels(albedo); hullMetal.SetPixels(metal); hullNormal.SetPixels(bump);
             foreach(var texture in new[]{hullAlbedo,hullMetal,hullNormal})
-            { texture.wrapMode=TextureWrapMode.Clamp; texture.filterMode=FilterMode.Trilinear; texture.anisoLevel=8; texture.Apply(true,true); textures.Add(texture); }
+            { texture.wrapMode=TextureWrapMode.Clamp; texture.filterMode=FilterMode.Trilinear; texture.anisoLevel=8; texture.Apply(true,true); }
+            StationTextureCache.Store(cacheKey,new[]{hullAlbedo,hullMetal,hullNormal});
         }
 
         public void Build()
@@ -88,6 +95,24 @@ namespace SpaceMiner
             MakeMaterials();
             BuildHead();
         }
+        public void CombineStaticSurfaces()
+        {
+            if(combined)return;combined=true;
+            var moving=new HashSet<Transform>{middleSleeve,piston,Rotor,MiningTip,armUpper,armLower,palm,anchorOuter,anchorInner,anchorFoot,GripPoint,CargoLid,CargoGate,collarLip};foreach(var t in fingers)moving.Add(t);foreach(var t in collarRings)moving.Add(t);
+            var groups=new Dictionary<(Transform,Material),List<CombineInstance>>();var sources=new Dictionary<(Transform,Material),List<Renderer>>();
+            foreach(var filter in GetComponentsInChildren<MeshFilter>()){
+                var source=filter.GetComponent<MeshRenderer>();if(source==null||!source.enabled||moving.Contains(filter.transform)||filter.GetComponentInParent<MaintenanceLaserVisual>()!=this)continue;
+                for(int sub=0;sub<filter.sharedMesh.subMeshCount;sub++){
+                    var key=(filter.transform.parent,source.sharedMaterials[Mathf.Min(sub,source.sharedMaterials.Length-1)]);
+                    if(!groups.TryGetValue(key,out var list)){groups[key]=list=new List<CombineInstance>();sources[key]=new List<Renderer>();}
+                    list.Add(new CombineInstance{mesh=filter.sharedMesh,subMeshIndex=sub,transform=key.Item1.worldToLocalMatrix*filter.transform.localToWorldMatrix});sources[key].Add(source);
+                }
+            }
+            foreach(var group in groups){var mesh=new Mesh{name="Tool / grouped static surfaces",indexFormat=UnityEngine.Rendering.IndexFormat.UInt32};mesh.CombineMeshes(group.Value.ToArray(),true,true);meshes.Add(mesh);var node=new GameObject(mesh.name);node.transform.SetParent(group.Key.Item1,false);node.layer=sources[group.Key][0].gameObject.layer;node.AddComponent<MeshFilter>().sharedMesh=mesh;var renderer=node.AddComponent<MeshRenderer>();renderer.sharedMaterial=group.Key.Item2;var tint=new MaterialPropertyBlock();sources[group.Key][0].GetPropertyBlock(tint);renderer.SetPropertyBlock(tint);batchRenderers.Add(renderer);foreach(var source in sources[group.Key])if(!batchOriginals.Contains(source))batchOriginals.Add(source);}
+            foreach(var renderer in batchOriginals)renderer.enabled=false;batchedTools.Add(this);
+        }
+        internal static void ForceUnbatchedTools(bool original)
+        {foreach(var tool in batchedTools)if(tool!=null){foreach(var r in tool.batchOriginals)if(r!=null)r.enabled=original;foreach(var r in tool.batchRenderers)if(r!=null)r.enabled=!original;}}
         private void MakeMaterials()
         {
             MakeFinish();
@@ -586,10 +611,10 @@ namespace SpaceMiner
         }
         private void MakeFinish()
         {
+            var cached=StationTextureCache.Borrow("tool-finish");borrowedTextureKeys.Add("tool-finish");if(cached!=null){finish=cached[0];normal=cached[1];return;}
             const int size = 256;
             finish = new Texture2D(size,size,TextureFormat.RGBA32,true,false) { name = "Laser brushed finish / fine wear" };
             normal = new Texture2D(size,size,TextureFormat.RGBA32,true,true) { name = "Laser micro-brushed normal" };
-            textures.Add(finish); textures.Add(normal);
             var colors = new Color[size*size]; var normals = new Color[size*size];
             for (int y = 0; y < size; y++) for (int x = 0; x < size; x++)
             {
@@ -600,7 +625,8 @@ namespace SpaceMiner
                 normals[y*size+x] = new Color(.5f + (noise-.5f)*.035f,.5f + Mathf.Sin(y*2.1f)*.025f,1,1);
             }
             finish.SetPixels(colors); normal.SetPixels(normals);
-            foreach (var texture in textures) { texture.wrapMode = TextureWrapMode.Repeat; texture.anisoLevel = 4; texture.Apply(true,true); }
+            foreach (var texture in new[]{finish,normal}) { texture.wrapMode = TextureWrapMode.Repeat; texture.anisoLevel = 4; texture.Apply(true,true); }
+            StationTextureCache.Store("tool-finish",new[]{finish,normal});
         }
         private Transform Render(string label, Mesh mesh, Material[] surface)
         {
@@ -686,6 +712,8 @@ namespace SpaceMiner
         }
         private void OnDestroy()
         {
+            batchedTools.Remove(this);
+            foreach(var key in borrowedTextureKeys)StationTextureCache.Release(key);
             foreach(var mesh in meshes) if(mesh!=null) Destroy(mesh);
             foreach(var material in materials) if(material!=null) Destroy(material);
             foreach(var texture in textures) if(texture!=null) Destroy(texture);

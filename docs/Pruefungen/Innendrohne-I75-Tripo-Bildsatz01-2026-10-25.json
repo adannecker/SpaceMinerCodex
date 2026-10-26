@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-25",
+  "scope": "Four proposed I-75 base reference images shown together to user",
+  "generator": "built-in image_gen",
+  "artifacts": [
+    {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/01-vorne.png",
+      "bytes": 2045859,
+      "sha256": "64634e89773584b08b07c25ab026cf15fc5765fb4106a7453b59cc7fe799fdbd",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/01-vorne.prompt.txt",
+      "bytes": 1493,
+      "sha256": "9f410001b28a156074fdb54d5afc47ce98c533fc53dd2112a92cf1619b482fe3"
+    },
+    {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/02-unten.png",
+      "bytes": 2275567,
+      "sha256": "6e38f4f98e9eec33e93ce184849794e1c8c1af07aa07024cec90b66c4359199f",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/02-unten.prompt.txt",
+      "bytes": 2158,
+      "sha256": "cea402d9777510925f9652f4b3d28071dfdcf8cfde6aa0c149e156290371872c"
+    },
+    {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/03-hinten.png",
+      "bytes": 2021195,
+      "sha256": "621f297620f3e73f7ef484bf9b7bf7540986e6c77f2229071f1898f2d323e70f",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/03-hinten.prompt.txt",
+      "bytes": 1555,
+      "sha256": "0eb51eeab0d434220fea030022b623b6f2daec6db87e60ba13c1a06f5111bc1c"
+    },
+    {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/04-seite.png",
+      "bytes": 1962233,
+      "sha256": "27c62dae2cd27e53b2f5947618bd9e91615cffcc9277d3f8da9abe7455632753",
+      "pixels": [
+        1470,
+        1070
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/04-seite.prompt.txt",
+      "bytes": 2173,
+      "sha256": "866daf5e435587a0f17f8619fc18c2a0da195aaf203a7efa79a0510ee569c7a2"
+    },
+    {
+      "path": "docs/Innendrohne-I75-Tripo-Bildsatz01-2026-10-25.md",
+      "bytes": 3699,
+      "sha256": "fcf4bf58c669e2c4786896b64eeb673512ed09a07e8b58c0dc9a8c2d65893572"
+    }
+  ],
+  "uploadOrder": [
+    "01-vorne.png",
+    "02-unten.png",
+    "03-hinten.png",
+    "04-seite.png"
+  ],
+  "checks": [
+    "Visual review: base only; front vs actual battery rear; vertical short deployed holders",
+    "PNG signatures, dimensions, artifact SHA256",
+    "Local links"
+  ],
+  "localLinksChecked": 13,
+  "tripoUploadPerformed": false,
+  "tripoGenerationStarted": false,
+  "limitations": [
+    "AI-generated views still contain detail/perspective differences, not registered CAD renders",
+    "Underside image eligibility for fixed Tripo angle slots not tested",
+    "Nominal dimensions and holder stroke unvalidated",
+    "No Blender/Unity work, build or runtime tests; no new user design acceptance"
+  ],
+  "followUpGeneration": "docs/Pruefungen/Innendrohne-I75-Tripo-Generierung01-2026-10-25.json"
+}

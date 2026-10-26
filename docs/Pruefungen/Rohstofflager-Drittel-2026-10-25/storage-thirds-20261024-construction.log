@@ -1,0 +1,476 @@
+Mono path[0] = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/Managed'
+Mono config path = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 2 interfaces on host : 0) 192.168.178.28 1) 192.168.96.1
+Player connection [38356]  Target information:
+
+Player connection [38356]  * "[IP] 192.168.178.28 [Port] 55000 [Flags] 2 [Guid] 2073100487 [EditorId] 3742523588 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [38356]  * "[IP] 192.168.96.1 [Port] 55000 [Flags] 2 [Guid] 2073100487 [EditorId] 3742523588 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [38356] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.6.4f1 (12bfff696524)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        AMD Radeon RX 9070 XT (ID=0x7550)
+    Vendor:          ATI
+    VRAM:            16191 MB
+    App VRAM Budget: 15419 MB
+    Driver:          32.0.32015.7029
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.009 seconds
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+D3D11 device created for Microsoft Media Foundation video decoding.
+UnloadTime: 0.651700 ms
+CONSTRUCTION OK: isolated settings and saves
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:461)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: module starts as many separate uninstalled pieces
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:462)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: every separate piece fits the2.4m printer envelope
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:464)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: all transport racks fit the envelope and eight-piece limit
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:466)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: four independent construction roles
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:467)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: fabrication cell is in existing internal workshop
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:468)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: clipped honeycomb covers complete rectangular domain (0.11, 0.20)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:471)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: clipped honeycomb covers complete rectangular domain (3.50, 3.20)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:471)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: clipped honeycomb covers complete rectangular domain (21.70, 16.00)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:471)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: clipped honeycomb covers complete rectangular domain (12.50, 5.50)
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:471)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: reactor cap tiles cover their circular rim without square overhang
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:474)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: outer tile envelope protects roof, underside, both side walls and end wall
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:481)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: cargo handoffs and flight have continuous positions
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:505)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: transfer doors never open together throughout a full delivery
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:506)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: both drones cross only fully opened transfer gates: 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:508)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: internal handler stays below existing 3.1m door headers
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:509)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: delivery drone envelopes clear actual station colliders: 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:510)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: manufacture precedes installation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:511)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: pause freezes work
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:512)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: invalid time ignored
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:513)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: cargo lifts progressively from printer bed before flight
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:516)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:460)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: full sequential run preserves production order, resources and inspection prerequisites
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:536)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:535)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: completed geometry uses reusable grouped racks without duplicate rendered pieces
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:538)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:535)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: every planned piece installed once with accounted model mass
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:539)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:535)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: campaign bulkhead stays closed
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:540)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:535)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: preview does not become saved campaign floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:541)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:535)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: restart reuses parts without duplicates
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:542)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:535)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: large step matches complete sequential build
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:447)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass105_0:<Validate>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:543)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:446)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:535)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION CHECK PASSED: 28
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview/<Validate>d__105:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:549)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792878984500,"processId":43152,"allocatedMemory":252452,"memoryLabels":[{"Default":204920},{"NewDelete":728},{"Thread":7616},{"Manager":9014},{"GfxDevice":3816},{"Serialization":17000},{"BaseObject":11280},{"String":510},{"PoolAlloc":96},{"ScriptManager":5696},{"CodeReload":440},{"CloudService":144},{"VR":1928},{"Video":144},{"Subsystems":96},{"CoreBusinessMetrics":128}]}

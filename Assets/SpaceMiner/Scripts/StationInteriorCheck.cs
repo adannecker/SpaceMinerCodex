@@ -79,7 +79,7 @@ namespace SpaceMiner
                 Require(scenario.AssignTankOrder(scenario.Asteroids[0]), "start real water flight");
                 scenario.Advance(121); Require(scenario.Worker.Phase == DronePhase.Outbound, "drone left berth");
                 scenario.Advance(60); Require(scenario.Worker.Phase == DronePhase.Outbound, "flight away from charging dock");
-                orbit.Focus(scenario.Worker.Info);
+                orbit.FollowDrone(scenario.Worker);
             })) yield break;
             yield return null;
             yield return null;

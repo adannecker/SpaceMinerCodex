@@ -1,0 +1,1485 @@
+Mono path[0] = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/Managed'
+Mono config path = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 2 interfaces on host : 0) 192.168.178.28 1) 192.168.96.1
+Player connection [16164]  Target information:
+
+Player connection [16164]  * "[IP] 192.168.178.28 [Port] 55000 [Flags] 2 [Guid] 1835739254 [EditorId] 3595444259 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [16164]  * "[IP] 192.168.96.1 [Port] 55000 [Flags] 2 [Guid] 1835739254 [EditorId] 3595444259 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [16164] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.6.4f1 (12bfff696524)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/UnitySubsystems
+[D3D12 Device Filter] Vendor Name: ATI
+[D3D12 Device Filter] Device Name: AMD Radeon RX 9070 XT
+[D3D12 Device Filter] Driver Version: 32.0.32015.7029
+[D3D12 Device Filter] Feature Level: 12.2
+[D3D12 Device Filter] Graphics Memory: 16191 MB
+[D3D12 Device Filter] Processor Count: 16
+[D3D12 Device Filter] Device Type: Discrete
+GfxDevice: creating device client; kGfxThreadingModeSplitJobs
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        AMD Radeon RX 9070 XT (ID=0x7550)
+    Vendor:          ATI
+    VRAM:            16191 MB
+    App VRAM Budget: 15419 MB
+    Driver:          32.0.32015.7029
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.009 seconds
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+<RI> Input initialized.
+D3D11 device created for Microsoft Media Foundation video decoding.
+UnloadTime: 0.771100 ms
+d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 19193136.
+DRONE SIZING OK: live campaign enabled for sizing flag
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:79)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: settings isolated from user
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:80)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: room plan isolated: command-room
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:81)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: room plan isolated: drone-bay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:81)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: room plan isolated: drone-workshop
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:81)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: room plan isolated: internal-workshop
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:81)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: fresh worker has valid empty volume-limited cargo hold
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:82)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: campaign uses agreed mass, water, battery and mechanical capacities
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:83)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: campaign uses agreed flight and heating parameters
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:84)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: campaign uses agreed extraction and protected reserves
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:85)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: cargo envelope and fill assumptions are explicit
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:87)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: 80/20 volume target is independently calculated 1033.326 kg
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:88)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: pure ice volume target is independently calculated 902.466 kg
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:89)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: 65/35 volume target is independently calculated 1159.415 kg
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:90)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: mechanical payload limit can stop loading before volume target
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:91)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: 80/20 target occupies 1.3122 cubic metres, not the full box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:92)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: empty mass has zero occupied volume and visible fill
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:93)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual scanner console opens
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:96)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual first scan finds starter resources
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:97)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: real A01 is scanned and identified as 80 percent water
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:99)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: real source uses the volume-aware mass capacity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:100)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: normal receiver accepts a real water order
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:105)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: normal 200 L receiver with 20 L stock limits raw goal to 225 kg
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:106)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: receiver limit stays separate from full-box capacity
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:107)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: nondefault volume and density assumptions survive real disk roundtrip
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:177)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy missing profile preserves actual cargo, water potential and partial supplies
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:183)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy twelve-value hardware schema stays unchanged
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:184)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy saved hardware preserved at index 11
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:185)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: legacy hardware retains mass-limited capacity and existing proportional preview
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:186)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: saving migrated legacy cargo does not convert it or refill supplies
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:189)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: explicit legacy hardware upgrade rejects remaining cargo without dropping it
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:191)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: Unity zero-version inline placeholder is treated as absent legacy profile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:193)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: ordinary simulation reset deliberately retains legacy hardware and cargo profile
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:197)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual new Demo after legacy load initializes current campaign hardware and fresh starting supplies
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:203)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: new campaign initializes current hardware for active and inactive drones
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:206)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: starting a new campaign does not rewrite the older manual save
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:208)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: explicit empty docked legacy upgrade succeeds: Neue Testauslegung übernommen; vorhandene Vorräte erhalten. Reguläres Laden und Betanken aus Stationsbeständen.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:210)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: explicit dock upgrade applies new hardware and volume model
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:211)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: explicit upgrade preserves partial battery, fuel and station water and requests real servicing
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:212)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: corrupt profile is rejected before mutating live drone
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:217)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: save below mechanical limit but above volume target is rejected atomically
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:220)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: new campaign profile restored after isolated legacy fixtures
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:CheckSaveCompatibility (SpaceMiner.SavedGame) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:221)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:109)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: 2000 L receiving fixture accepts complete 90-percent mission
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:114)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual outbound goal is the 90-percent box mass
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:115)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: hardware upgrade cannot reset an active loaded mining trip
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:127)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: simulation genuinely advances before restoring Mining / echte Viertelladung
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:45)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:128)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains phase, mass, battery and propellant: Mining / echte Viertelladung
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:47)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:128)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains actual pose and remaining source: Mining / echte Viertelladung
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:48)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:128)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains composition and planned mass: Mining / echte Viertelladung
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:50)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:128)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains exact volume profile: Mining / echte Viertelladung
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:51)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:128)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load restores actual rendered cargo bounds immediately: Mining / echte Viertelladung
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:52)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:128)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains route index and shape: Mining / echte Viertelladung
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:53)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:128)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains waypoint 0: Mining / echte Viertelladung
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:54)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:128)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual extraction reaches 90-percent target before return reserve stops it: Ladeziel erreicht
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:134)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: source depletion equals actual raw cargo and remains below mechanical payload
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:135)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: full cargo retains computed return energy, propellant and protected reserves
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:136)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: full visible cargo remains inside actual checked box bounds
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:138)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual full rubble meshes reach expected 90-percent height and span the box floor
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:140)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: simulation genuinely advances before restoring Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:45)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains phase, mass, battery and propellant: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:47)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains actual pose and remaining source: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:48)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains composition and planned mass: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:50)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains exact volume profile: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:51)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load restores actual rendered cargo bounds immediately: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:52)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains route index and shape: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:53)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains waypoint 0: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:54)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains waypoint 1: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:54)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: disk load retains waypoint 2: Rückflug / volle Box
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:SaveRestore (string,bool) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:54)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:144)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual unloading transfers 80-percent water potential and empties the carrier
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:148)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission traverses full extraction, disk-resumed return and unloading
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:159)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: productive real worker finishes at its physical planned dock exactly once
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:160)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Launching
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Outbound
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Docking
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Mining
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Undocking
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Returning
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits TankDocking
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Unloading
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits TankUndocking
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Parking
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual mission visits Berthing
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:161)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: complete mission returns with protected energy and water reserves
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:162)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: measured level-one extraction time agrees with 0.5 kg per second
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:163)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: measured mining consumes about 2.325 kWh rather than old 80 kW budget
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:164)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: actual sortie consumes battery and accounts burned propellant without dock refill
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:166)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING OK: completed save reload duplicates no delivery, experience, battery or propellant
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:35)
+SpaceMiner.DroneSizingCheck:Check () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:169)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:67)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+DRONE SIZING CHECK PASSED: 98
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.DroneSizingCheck/<Start>d__13:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/DroneSizingCheck.cs:69)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792936134066,"processId":76040,"allocatedMemory":336511,"memoryLabels":[{"Default":201976},{"NewDelete":760},{"Thread":26816},{"Manager":14745},{"Shader":5272},{"GfxDevice":2616},{"GfxThread":57600},{"Serialization":17000},{"BaseObject":11280},{"String":510},{"PoolAlloc":96},{"ScriptManager":5696},{"CodeReload":440},{"CloudService":144},{"VR":1928},{"Video":144},{"Subsystems":96},{"CoreBusinessMetrics":128}]}

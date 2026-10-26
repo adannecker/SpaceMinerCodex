@@ -16,10 +16,11 @@ namespace SpaceMiner
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void ResetState(){IsOpen=false;closedFrame=-1;}
-        internal static bool ShortcutAllowed=>!StartMenu.IsOpen&&!SettingsMenu.IsOpen&&!SaveGameMenu.IsOpen&&!QuitMenu.BlocksInput&&!IntroSequence.BlocksGameplay&&!MemoryCinematic.IsPlaying;
+        internal static bool ShortcutAllowed=>!StationOperations.TacticalViewActive&&StationOperations.Current?.PanelOpen!=true&&!CommandRoomPlanner.BlocksInput&&!StartMenu.IsOpen&&!SettingsMenu.IsOpen&&!SaveGameMenu.IsOpen&&!QuitMenu.BlocksInput&&!IntroSequence.BlocksGameplay&&!MemoryCinematic.IsPlaying;
         internal void ToggleFromShortcut(){if(!ShortcutAllowed)return;if(IsOpen)Close();else Open();SettingsUiAudio.Activate();}
         private void Update()
         {
+            if(CommandRoomPlanner.BlocksInput)return;
             if(PlayerInput.Pressed(CameraAction.Technology))ToggleFromShortcut();
             if(IsOpen)laboratory?.Tick(Time.unscaledDeltaTime);
             if(IsOpen&&Input.GetKeyDown(KeyCode.Escape)){
@@ -29,12 +30,14 @@ namespace SpaceMiner
         }
         public void Open()
         {
+            if(CommandRoomPlanner.BlocksInput)return;
+            StationOperations.Current?.ClosePanel();
             if(RingConstructionSimulator.IsOpen)GetComponent<RingConstructionSimulator>()?.Close();
             var settings=GetComponent<SettingsMenu>();if(SettingsMenu.IsOpen&&settings!=null)settings.Cancel();
             laboratory??=new ResearchLaboratory();IsOpen=true;
         }
         public void Close(){laboratory?.OnClosed();IsOpen=false;closedFrame=Time.frameCount;}
-        public static bool OwnsScreenPoint(Vector3 point)=>IsOpen||EntryButton.Contains(UiLayout.Point(point));
+        public static bool OwnsScreenPoint(Vector3 point)=>IsOpen||(!StationOperations.TacticalViewActive&&EntryButton.Contains(UiLayout.Point(point)));
         private void OnDisable(){if(IsOpen)Close();}
         private void OnDestroy(){laboratory?.Dispose();ui.Dispose();icons.Dispose();}
         private void OnGUI()
@@ -45,10 +48,10 @@ namespace SpaceMiner
         }
         private void Draw()
         {
-            if(QuitMenu.BlocksInput||SaveGameMenu.IsOpen)return;
+            if(CommandRoomPlanner.BlocksInput||QuitMenu.BlocksInput||SaveGameMenu.IsOpen)return;
             ui.Configure(SettingsStore.Current.Accessibility);GUI.depth=-210;
             if(!IsOpen){
-                if(StartMenu.IsOpen||SettingsMenu.IsOpen||RingConstructionSimulator.IsOpen||IntroSequence.BlocksGameplay||MemoryCinematic.IsPlaying)return;
+                if(StationOperations.TacticalViewActive||StationOperations.Current?.PanelOpen==true||StartMenu.IsOpen||SettingsMenu.IsOpen||RingConstructionSimulator.IsOpen||IntroSequence.BlocksGameplay||MemoryCinematic.IsPlaying)return;
                 string shortcut=SettingsStore.Current.Controls.Bindings.Get(CameraAction.Technology).ToString();
                 if(GUI.Button(EntryButton,new GUIContent("","Technologiebaum öffnen ("+shortcut+")"),ui.Button)){Open();SettingsUiAudio.Activate();}
                 icons.Draw(new Rect(EntryButton.x+7,EntryButton.y+5,20,20),"research",SpaceMinerUi.Cyan);

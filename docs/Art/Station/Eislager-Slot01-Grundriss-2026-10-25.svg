@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="830" viewBox="0 0 1120 830" role="img" aria-label="Eislager Slot01: maßstäblicher Grundriss und seitliche Höhenaufteilung, Entwurf">
+<rect width="1120" height="830" fill="#f5f8fa"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<text x="36" y="43" text-anchor="start" font-size="25" fill="#193544">EISLAGER 01 · RAUM- UND KAPAZITÄTSENTWURF</text>
+<text x="36" y="72" text-anchor="start" font-size="17" fill="#526875">Aktueller 16-m-Lagerkeil · Vorschlag, noch keine gebaute Anlage</text>
+<polygon points="185.40,664.22 225.20,661.52 265.06,660.17 304.94,660.17 344.80,661.52 384.60,664.22 426.53,169.99 369.98,166.16 313.34,164.24 256.66,164.24 200.02,166.16 143.47,169.99" fill="#e3eaee" stroke="#496474" stroke-width="2" />
+<text x="285" y="112" text-anchor="middle" font-size="20" fill="#193544">Außen / Drohne</text>
+<polygon points="351.90,615.05 383.01,615.05 413.39,257.00 382.28,257.00" fill="#e8dbac" stroke="#a6945f" stroke-width="2" />
+<polygon points="186.99,615.05 200.99,615.05 170.61,257.00 156.61,257.00" fill="#d0d9df" stroke="#7d909b" stroke-width="2" />
+<polygon points="200.99,615.05 351.90,615.05 382.28,257.00 170.61,257.00" fill="#d6ebf2" stroke="#28718b" stroke-width="2" />
+<polygon points="204.40,611.33 348.48,611.33 358.24,496.32 194.65,496.32" fill="#b7dce9" stroke="#28718b" stroke-width="2" />
+<text x="278" y="553.825" text-anchor="middle" font-size="19" fill="#193544">Kaltlager 1</text>
+<polygon points="194.33,492.60 358.56,492.60 368.16,379.45 184.73,379.45" fill="#b7dce9" stroke="#28718b" stroke-width="2" />
+<text x="278" y="436.025" text-anchor="middle" font-size="19" fill="#193544">Kaltlager 2</text>
+<polygon points="184.41,375.73 368.48,375.73 378.23,260.72 174.65,260.72" fill="#b7dce9" stroke="#28718b" stroke-width="2" />
+<text x="278" y="318.2249999999998" text-anchor="middle" font-size="19" fill="#193544">Kaltlager 3</text>
+<text x="405" y="440" text-anchor="middle" font-size="16" fill="#61532d" transform="rotate(-90 405 440)">Wartung 1,00 m</text>
+<text x="183" y="440" text-anchor="middle" font-size="15" fill="#526875" transform="rotate(-90 183 440)">Leitungen 0,45 m</text>
+<text x="285" y="704" text-anchor="middle" font-size="19" fill="#193544">Ringzugang · 4,40 m frei</text>
+<polygon points="256.79,241.50 313.21,241.50 313.21,145.40 256.79,145.40" fill="none" stroke="#7d909b" stroke-width="2" stroke-dasharray="6 4"/>
+<polygon points="173.40,249.25 257.10,249.25 257.10,188.80 173.40,188.80" fill="#f2d7b5" stroke="#ad783c" stroke-width="2" />
+<text x="207" y="220" text-anchor="middle" font-size="16" fill="#193544">Brecher</text>
+<text x="207" y="241" text-anchor="middle" font-size="15" fill="#193544">+ Vorschub</text>
+<polygon points="323.75,244.60 381.10,244.60 381.10,188.80 323.75,188.80" fill="#c7e2db" stroke="#4a8275" stroke-width="2" />
+<text x="353" y="220" text-anchor="middle" font-size="13" fill="#193544">Aufbereitung</text>
+<text x="353" y="239" text-anchor="middle" font-size="13" fill="#193544">Wassertank</text>
+<text x="285" y="148" text-anchor="middle" font-size="15" fill="#526875">Receiver darüber</text>
+<line x1="285" y1="156" x2="285" y2="192" stroke="#7d909b" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="148" y1="164" x2="115" y2="164" stroke="#456171" stroke-width="2"/>
+<line x1="148" y1="660" x2="115" y2="660" stroke="#456171" stroke-width="2"/>
+<line x1="118" y1="164" x2="118" y2="660" stroke="#456171" stroke-width="2"/>
+<text x="105" y="412" text-anchor="middle" font-size="17" fill="#193544" transform="rotate(-90 105 412)">16 m</text>
+<text x="285" y="745" text-anchor="middle" font-size="16" fill="#193544">3,0 m Technik · 11,55 m Tank · ≥ 1,0 m frei vor dem Schott</text>
+<text x="590" y="127" text-anchor="start" font-size="20" fill="#193544">HÖHENAUFTEILUNG</text>
+<rect x="610" y="180" width="420" height="203" fill="#e3eaee" stroke="#496474" stroke-width="2"/>
+<rect x="610" y="201" width="420" height="173" fill="#b7dce9" stroke="#28718b" stroke-width="2"/>
+<text x="820" y="167" text-anchor="middle" font-size="15" fill="#193544">0,56 m Deckenraum</text>
+<text x="820" y="286" text-anchor="middle" font-size="20" fill="#193544">4,60 m Tankaußenhöhe</text>
+<text x="820" y="317" text-anchor="middle" font-size="17" fill="#193544">4,36 m lichte Innenhöhe</text>
+<text x="820" y="408" text-anchor="middle" font-size="16" fill="#193544">0,25 m Unterbau / Anschlüsse</text>
+<text x="590" y="472" text-anchor="start" font-size="25" fill="#193544">Innenvolumen: 271 m³</text>
+<text x="590" y="508" text-anchor="start" font-size="21" fill="#193544">Davon betrieblich befüllbar: 257 m³</text>
+<text x="590" y="557" text-anchor="start" font-size="19" fill="#193544">Bei 75 % Feststoff-Packung:</text>
+<text x="590" y="592" text-anchor="start" font-size="22" fill="#193544">Reines Eis: ca. 177 t</text>
+<text x="590" y="627" text-anchor="start" font-size="22" fill="#193544">80/20-Rohgemisch: ca. 202 t</text>
+<text x="590" y="662" text-anchor="start" font-size="20" fill="#193544">darin ca. 162.000 L H₂O-Potenzial</text>
+<text x="590" y="712" text-anchor="start" font-size="16" fill="#526875">Packung, Reststoffdichte und Isolation:</text>
+<text x="590" y="737" text-anchor="start" font-size="16" fill="#526875">Rechenannahmen, keine technische Abnahme.</text>
+<text x="36" y="802" text-anchor="start" font-size="17" fill="#193544">Kalte Zerkleinerung → geführter Transport → Verdichtung · Flüssigwasser nur nach bedarfsweiser Aufbereitung</text>
+</g></svg>

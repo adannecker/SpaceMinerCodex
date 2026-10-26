@@ -1,0 +1,20 @@
+Modify the supplied I-75 cargo concept according to this new user instruction: PUT THE THREE HEXAGONAL PANELS UPRIGHT ON TOP OF THE DRONE instead of lying flat. This is a new upright transport variant V2. Preserve the same 75 cm blue chassis design, manufacturing style, workshop setting and human size reference.
+
+CRITICAL ORIENTATION CHANGE:
+Rotate ALL THREE large hexagonal panels by 90 degrees so their broad hexagonal faces are VERTICAL. They stand on their LOWER FLAT EDGE in three separate padded U-channel slots in a compact carrier ON TOP of the drone. Arrange the three plates PARALLEL, front-to-back like three books in a vertical rack, NOT flat stacked and not side-by-side spread into a wall. In the three-quarter hero angle clearly show the full six-sided face of the front panel and the two separate parallel panel rims receding behind it. Label the exposed rims 1,2,3 so exact count is clear. No additional panels.
+Each panel is 1.56 m wide corner-to-corner across left/right points, 1.35 m vertically between TOP and BOTTOM FLAT EDGES, 8 cm thick. Three plates with two 2 cm gaps occupy 28 cm FRONT-TO-BACK rack depth, NOT 28 cm height. Do not put a vertex downwards; they stand on a FLAT bottom edge.
+The chassis remains 0.75 m LONG and about0.45 m high. The rack's bottom panel support is about0.55 m above floor; loaded overall height therefore about1.90 m. Make this scale legible: the upright loaded carrier is now slightly TALLER than the1.80 m human standing beside it on the same ground plane. Do NOT resize the robot or shrink panels to fit the previous picture.
+
+SECURING AND LOAD PATH:
+Delete the old horizontal stacking frame/straps. Replace them with a bolted top-mounted three-slot carrier mechanically tied into the chassis structural rails and the transport cassette. Padded lower U-channels, rigid side uprights/diagonal braces and two positive mechanical edge clamps hold all three standing panels securely. Secure them near their middle height so they cannot simply topple. Keep carrier centered over drone; it is a removable transport attachment, not an enlarged base drone. The same folded gripper joints/transport module may lock the carrier. No extra small box, suitcase, tools or cargo.
+Low magnetic hover above prepared floor tiles only. Same machine sensor lenses, blue shell and cyan status strip; no wheels, propellers or free-flight thrusters. No operating laser or demounting tools.
+
+COMPOSITION AND LABELS:
+Zoom out or reframe the large hero as needed so the full tall upright load, chassis, feet of person and person's head are ALL visible. Keep a full-height adult reference1.80 m directly beside the loaded drone at the same depth. The vertical panels are the unmistakable main change.
+Replace lower LEFT scale comparison diagram with an UPRIGHT carrier version too. Three parallel vertical hex plates on small chassis, same baseline as human. Keep "CHASSISLÄNGE 0,75 m" as a HORIZONTAL chassis-length dimension. REMOVE all old "STAPEL 0,28 m" height labels. New callout: "RACKTIEFE 0,28 m" with a small front-to-back direction indicator, and "GESAMTHÖHE ca.1,90 m" as vertical overall-height callout. Keep inset caption "GRÖSSENORIENTIERUNG · ILLUSTRATIV".
+The lower RIGHT individual panel sketch remains a flat-topped hexagon with1.56 m horizontal /1.35 m vertical /0.08 m thickness, unchanged.
+Update title to "I-75 · 3 WABENPANEELE HOCHKANT". Subtitle: "75 cm CHASSIS · SENKRECHTER TRANSPORTTRÄGER".
+Hero callouts "3 EINZELPANEELE", "GEPOLSTERTE FÜHRUNGEN", "MECHANISCHE KLEMMUNG", "MAGNETISCHE BODENFAHRSPUR".
+Footer remains "INNENTRANSPORT ZUR ÜBERGABESCHLEUSE · AUSSEN ÜBERNIMMT DIE LASTDROHNE".
+Small note: "KONZEPT · SCHWERPUNKT UND TRAGFÄHIGKEIT NOCH ZU PRÜFEN".
+Do not leave any flat stacked load in either main scene or inset. No box-shaped rectangular plates pretending to be hexagons; all three are clearly six-sided closed hull panels. No load attached only to fragile free gripper tips. Keep the entire result readable and polished.

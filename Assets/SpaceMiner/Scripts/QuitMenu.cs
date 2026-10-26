@@ -15,7 +15,7 @@ namespace SpaceMiner
 
         public void Open()
         {
-            if (StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
+            if (CommandRoomPlanner.BlocksInput || StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             IsOpen = true;
             ReleasePointer();
         }
@@ -32,18 +32,22 @@ namespace SpaceMiner
         }
         private void Update()
         {
+            if(CommandRoomPlanner.BlocksInput)return;
+            if(StationOperations.BlocksInput)return;
             if (SaveGameMenu.BlocksInput) return;
             if (!Input.GetKeyDown(KeyCode.Escape)) return;
             HandleEscape();
         }
         internal void HandleEscape()
         {
+            if(StationOperations.TacticalTextInputActive){StationOperations.Current.ReleaseTacticalSearchFocus();return;}
+            if(CommandRoomPlanner.BlocksInput)return;
             if (StationInteriorMode.HasConsoleOpen && !SettingsMenu.BlocksInput) { StationInteriorMode.Current.CloseConsole(); return; }
             if (IsOpen) Cancel(); else Open();
         }
         private void OnGUI()
         {
-            if (!IsOpen || SaveGameMenu.IsOpen) return;
+            if (CommandRoomPlanner.BlocksInput || !IsOpen || SaveGameMenu.IsOpen) return;
             var matrix = GUI.matrix;
             int depth = GUI.depth;
             bool enabled = GUI.enabled;

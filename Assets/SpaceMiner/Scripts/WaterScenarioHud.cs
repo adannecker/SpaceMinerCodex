@@ -48,6 +48,7 @@ namespace SpaceMiner
 
         public bool OwnsScreenPoint(Vector3 mouse)
         {
+            if(scenario?.Operations?.Live==true)return false;
             Vector2 point = new Vector2(mouse.x, Screen.height - mouse.y) / Scale;
             if (IsPanel(point)) return true;
             foreach (Rect rect in markers) if (rect.Contains(point)) return true;
@@ -59,6 +60,7 @@ namespace SpaceMiner
 
         private void OnGUI()
         {
+            if(scenario!=null&&scenario.Operations!=null&&scenario.Operations.Live)return;
             if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             if (scenario == null || orbit == null || !orbit.ShowHud) return;
             if (StationInteriorMode.IsInside) return;
@@ -104,7 +106,7 @@ namespace SpaceMiner
             Label(34, cy + 36, 508, 22, "Mausrad Zoom  ·  Shift + Rad Schnellzoom  ·  Rechtsziehen Drehen", muted);
             Label(34, cy + 59, 508, 22, "Mittelziehen Verschieben  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Forward) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Left) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Backward) + "/" + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Right) + " Bewegen  ·  Shift Schnell", muted);
             Label(34, cy + 82, 508, 22, SettingsStore.Current.Controls.Bindings.Get(CameraAction.Reset) + " Startansicht  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Overview) + " Feldansicht  ·  " + SettingsStore.Current.Controls.Bindings.Get(CameraAction.Focus) + " Fokus  ·  Tab Drohne", muted);
-            Label(34, cy + 105, 508, 22, "Leertaste Pause  ·  F11 Vollbild / Fenster  ·  H Anzeige  ·  Escape Beenden…", muted);
+            Label(34, cy + 105, 508, 22, "Space ↑ · Shift+Space ↓ · F11 Vollbild · H Anzeige · Esc Menü", muted);
 
             Panel(Inspector);
             }
@@ -166,7 +168,11 @@ namespace SpaceMiner
                 Label(x, y, 308, 24, "Batterie   " + drone.BatteryKwh.ToString("0.00") + " / " + drone.BatteryCapacityKwh + " kWh"); y += 27;
                 Bar(new Rect(x, y, 308, 8), drone.BatteryKwh / drone.BatteryCapacityKwh); y += 22;
                 Label(x, y, 308, 24, "Treibwasser   " + drone.FuelLiters.ToString("0.00") + " / " + drone.FuelCapacityLiters + " L"); y += 30;
-                Label(x, y, 308, 24, "Ladung   " + drone.CargoKg.ToString("0.0") + " / " + drone.CargoCapacityKg + " kg"); y += 30;
+                Label(x, y, 308, 24, "Ladung   " + drone.CargoKg.ToString("0.0") + " / " + drone.EffectiveCargoCapacityKg.ToString("0.0") + " kg"); y += 30;
+                if (drone.CargoProfile.VolumeLimited) {
+                    Label(x, y, 308, 24, "Box   " + (100 * drone.CargoFillFraction).ToString("0.0") + " % · Ziel " + (100 * drone.CargoProfile.TargetFillFraction).ToString("0") + " %"); y += 30;
+                    Label(x, y, 308, 24, drone.CargoVolumeM3.ToString("0.00") + " / " + drone.CargoProfile.UsableVolumeM3.ToString("0.00") + " m³", muted); y += 30;
+                }
                 Label(x, y, 308, 24, "Geschwindigkeit   " + drone.Speed.ToString("0.00") + " m/s"); y += 30;
                 Label(x, y, 308, 24, "Zielentfernung   " + OrbitCamera.FormatDistance(drone.TargetDistance)); y += 30;
                 Label(x, y, 308, 24, "Ankunft in   " + (drone.IsFlying ? WaterScenario.Duration(drone.ArrivalSeconds) : "—")); y += 30;

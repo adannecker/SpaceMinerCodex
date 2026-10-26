@@ -1,5 +1,7 @@
 # Intro — Erwachen
 
+**Animationsstand25.10.2026:** Die aktuellen16 Laufzeitabschnitte erhalten im gemeinsamen Mira-Modul eigene Kopfgesten und abgestufte Stimmung. Das Highmodell ergänzt dezente Oberkörper-/Schulterbewegung; Aufnahmen und Lautzeitdaten unverändert. [Umsetzung und Dialogstudio](../MiraAvatar.md#erstes-gespräch-erwachen-mit-körperregie-25102026). Die folgenden Drehbuchabschnitte enthalten auch ältere Entwurfsformulierungen; tatsächliche Laufzeittexte stehen in `Resources/Intro/intro.json`.
+
 ## Status und Rahmen
 
 - **Status:** Entwurf 03, zur gemeinsamen Überarbeitung. Mira ist als Name beschlossen und ihre Vorstellung ergänzt; Notstrom und die Versorgung nur einer Drohne sind eingearbeitet.

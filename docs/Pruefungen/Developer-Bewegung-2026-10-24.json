@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-24",
+  "scope": "Faster developer movement and unlimited stamina in campaign station; dimensions unchanged",
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "developer": {
+    "walkMetersPerSecond": 6.6,
+    "sprintMetersPerSecond": 20.8,
+    "staminaPercent": 100,
+    "clearsExhaustion": true,
+    "scope": "StationInteriorMode, Editor and Development only"
+  },
+  "release": "Existing PlayerVitals movement and stamina branch preserved; not rebuilt or runtime-tested in this task",
+  "build": {
+    "log": "Logs/developer-walk-20261024-final-build.log",
+    "exitCode": 0
+  },
+  "tests": [
+    {
+      "name": "vitals",
+      "checks": 29,
+      "exitCode": 0,
+      "log": "Logs/developer-walk-20261024-vitals.log",
+      "screenshotWarnings": 0
+    },
+    {
+      "name": "station",
+      "checks": 137,
+      "exitCode": 0,
+      "log": "Logs/developer-walk-20261024-station.log",
+      "screenshotWarnings": 13
+    }
+  ],
+  "sourceFiles": [
+    "Assets/SpaceMiner/Scripts/StationInteriorMode.cs",
+    "Assets/SpaceMiner/Scripts/PlayerVitalsCheck.cs",
+    "Assets/SpaceMiner/Scripts/StartStationCheck.cs"
+  ],
+  "limits": [
+    "No new manual input or visual acceptance",
+    "ScreenCapture emitted warnings in hidden station test; captures are not claimed as passed",
+    "No new Release or standalone ring/hall build",
+    "No commit or push"
+  ],
+  "delivered": {
+    "path": "Builds/Windows/SpaceMiner.exe",
+    "assemblySha256": "B56BDB678488C6FDB970F3BB585CC61310D6523B9C28EA6A1C856979A7EC845F",
+    "previousBuild": "Builds/Windows-before-fast-walk-20261024",
+    "startedWith": [
+      "-startStationPreview",
+      "-droneHallPreview"
+    ],
+    "log": "Logs/developer-station-walk-20261024.log"
+  }
+}

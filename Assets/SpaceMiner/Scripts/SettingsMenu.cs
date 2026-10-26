@@ -7,8 +7,8 @@ namespace SpaceMiner
     {
         public static bool IsOpen { get; private set; }
         private static int closedFrame = -1;
-        public static bool BlocksInput => SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || IsOpen || closedFrame == Time.frameCount || TechTreeMenu.BlocksInput || RingConstructionSimulator.BlocksInput;
-        public static bool PausesSimulation => RingConstructionSimulator.BlocksInput || SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || (BlocksInput && SettingsStore.Current.Gameplay.PauseInMenu);
+        public static bool BlocksInput => CommandRoomPlanner.BlocksInput || StationOperations.BlocksInput || SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || IsOpen || closedFrame == Time.frameCount || TechTreeMenu.BlocksInput || RingConstructionSimulator.BlocksInput;
+        public static bool PausesSimulation => CommandRoomPlanner.BlocksInput || RingConstructionSimulator.BlocksInput || SaveGameMenu.BlocksInput || QuitMenu.BlocksInput || StartMenu.IsOpen || (BlocksInput && SettingsStore.Current.Gameplay.PauseInMenu);
         private readonly SettingsSession session = new SettingsSession();
         private SpaceMinerPlayerSettings draft => session.Draft;
         private int page; private int bindingCapture = -1;
@@ -77,13 +77,13 @@ namespace SpaceMiner
 #endif
         private void Update()
         {
-            if (QuitMenu.BlocksInput || SaveGameMenu.IsOpen) return;
+            if (CommandRoomPlanner.BlocksInput || QuitMenu.BlocksInput || SaveGameMenu.IsOpen) return;
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             if (Input.GetKeyDown(KeyCode.F10)) { if (IsOpen) Cancel(); else Open(); }
 #endif
             if (IsOpen && Input.GetKeyDown(KeyCode.Escape)) { if (bindingCapture >= 0) bindingCapture = -1; else Cancel(); }
         }
-        public void Open() { if (RingConstructionSimulator.IsOpen) GetComponent<RingConstructionSimulator>()?.Close(); var tree = GetComponent<TechTreeMenu>(); if (TechTreeMenu.IsOpen && tree != null) tree.Close(); session.Begin(); scroll = Vector2.zero; IsOpen = true; status = "CORE ONLINE | SYSTEM NOMINAL | BUILD " + Application.version; statusColor = SpaceMinerUi.Cyan; }
+        public void Open() { if (CommandRoomPlanner.BlocksInput) return; if (RingConstructionSimulator.IsOpen) GetComponent<RingConstructionSimulator>()?.Close(); var tree = GetComponent<TechTreeMenu>(); if (TechTreeMenu.IsOpen && tree != null) tree.Close(); session.Begin(); scroll = Vector2.zero; IsOpen = true; status = "CORE ONLINE | SYSTEM NOMINAL | BUILD " + Application.version; statusColor = SpaceMinerUi.Cyan; }
         public void Cancel() { bindingCapture = -1; IsOpen = false; closedFrame = Time.frameCount; session.Cancel(); }
         internal void ShowInterfacePage() { page = 4; scroll = Vector2.zero; }
         public bool Apply()
@@ -92,7 +92,7 @@ namespace SpaceMiner
             status = "EINSTELLUNGEN GESPEICHERT"; statusColor = SpaceMinerUi.Success; return true;
         }
         private void OnDestroy() { IsOpen = false; session.Cancel(); ui.Dispose(); entryIcons.Dispose(); }
-        public static bool OwnsScreenPoint(Vector3 mouse) => IsOpen || RingConstructionSimulator.IsOpen || RingConstructionSimulator.EntryButton.Contains(UiLayout.Point(mouse)) || TechTreeMenu.OwnsScreenPoint(mouse) || EntryButton.Contains(UiLayout.Point(mouse));
+        public static bool OwnsScreenPoint(Vector3 mouse) => CommandRoomPlanner.OwnsScreenPoint(mouse) || IsOpen || RingConstructionSimulator.IsOpen || RingConstructionSimulator.EntryButton.Contains(UiLayout.Point(mouse)) || TechTreeMenu.OwnsScreenPoint(mouse) || EntryButton.Contains(UiLayout.Point(mouse));
         private void OnGUI()
         {
             var savedMatrix = GUI.matrix; int savedDepth = GUI.depth;
@@ -101,7 +101,7 @@ namespace SpaceMiner
         }
         private void DrawMenu()
         {
-            if (QuitMenu.BlocksInput || SaveGameMenu.IsOpen) return;
+            if (CommandRoomPlanner.BlocksInput || QuitMenu.BlocksInput || SaveGameMenu.IsOpen) return;
             GUI.tooltip = "";
             if (IsOpen && bindingCapture >= 0 && Event.current.type == EventType.KeyDown && Event.current.keyCode != KeyCode.Escape)
             { if (draft.Controls.Bindings.TryAssign((CameraAction)bindingCapture, Event.current.keyCode)) bindingCapture = -1; Event.current.Use(); }
@@ -199,11 +199,11 @@ namespace SpaceMiner
                     developer.MiningPower = Slider("Basis-Abbauleistung kW", developer.MiningPower, 1, 150);
                     developer.OnboardPower = Slider("Bordsysteme kW", developer.OnboardPower, 0, 1);
                     developer.Reserve = Slider("Rückkehrreserve", developer.Reserve, 0, .5f);
-                    developer.BatteryCapacity = Slider("Batterie kWh", developer.BatteryCapacity, 1, 30);
-                    developer.FuelCapacity = Slider("Treibwasser L", developer.FuelCapacity, 2, 30);
-                    developer.CargoCapacity = Slider("Frachtraum kg", developer.CargoCapacity, 5, 150);
+                    developer.BatteryCapacity = Slider("Batterie kWh", developer.BatteryCapacity, 1, DeveloperGameConfiguration.MaxBatteryKwh);
+                    developer.FuelCapacity = Slider("Treibwasser L", developer.FuelCapacity, 2, DeveloperGameConfiguration.MaxFuelLiters);
+                    developer.CargoCapacity = Slider("Mechanische Nutzlast kg", developer.CargoCapacity, 5, DeveloperGameConfiguration.MaxCargoKg);
                     developer.CruiseSpeed = Slider("Fluggeschwindigkeit m/s", developer.CruiseSpeed, .5f, 10);
-                    developer.Thrust = Slider("Schub N", developer.Thrust, 1, 50);
+                    developer.Thrust = Slider("Schub N", developer.Thrust, 1, DeveloperGameConfiguration.MaxThrustNewtons);
                     developer.HeatingEnergy = Slider("Antriebsenergie kWh/L", developer.HeatingEnergy, .15f, 2);
                     GUI.enabled = developerEnabled; break;
 #endif

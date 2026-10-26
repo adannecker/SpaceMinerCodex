@@ -1,0 +1,208 @@
+{
+  "Voice": "Aoede",
+  "Model": "gemini-3.1-flash-tts-preview",
+  "Language": "de-DE",
+  "Style": "Du bist Mira, der weibliche Bordcomputer einer beschädigten Raumstation. Sprich auf Deutsch sanft, warm, angenehm und ruhig, mit natürlicher klarer Aussprache und einer vollen weichen Stimme. Du sprichst persönlich zu einem Menschen und duzt ihn. Vermittle behutsam Sicherheit, ohne die ernste Situation zu verharmlosen. Natürliches mittleres Sprechtempo, kurze sinnvolle Pausen. Arbeitsanweisungen verständlich und konzentriert, Erfolge dezent ermutigend. Kein Werbeton, keine epische Chronistenstimme, kein Flüstern oder dramatischer Alarm. Lies ausschließlich den Sprechertext; keine zusätzlichen Worte, Musik oder Geräusche. Trockene klare Sprachaufnahme ohne Hall oder Echo.",
+  "Recordings": [
+    {
+      "Id": "quest_00_start",
+      "Text": "Bevor wir unsere einzige einsatzbereite Drohne losschicken, müssen wir wissen, was uns umgibt. Geh an das Scannerpult und löse den Nahbereichsscan aus, sobald der Scanner bereit ist. Damit finden wir mögliche Wasserquellen und nahe Wrackteile. In der virtuellen Außenansicht erscheinen anschließend die erfassten Kontakte. Was darin steckt, müssen wir erst noch untersuchen.",
+      "TextSHA256": "953d353707c89684b5cc5db11cb8cbdc67854243225809c590889f7913357bec",
+      "Bytes": 1211924,
+      "SHA256": "ab4335e720cf4a7576d3b272dc50cf5c711ca3aafc7ad4ddf63bf29493f8978d",
+      "DurationSeconds": 27.480272108843536,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_00_complete",
+      "Text": "Der erste Scan ist abgeschlossen. Wir haben jetzt eine Grundlage für unsere nächsten Einsätze. Die erfassten Kontakte und bestätigten Rohstoffe findest du in der Übersicht. Für den nächsten Schritt brauchen wir eine bestätigte Eisquelle.",
+      "TextSHA256": "80129ce0020884d4fe388589a0fd5b40cd8c0831238eb1c88e7d1e1a2b5d6342",
+      "Bytes": 749756,
+      "SHA256": "2155c5a9db055a318f1125362b451043dbbb7a4343b0cc9efdcfba2463b754eb",
+      "DurationSeconds": 17.000272108843536,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_01_start",
+      "Text": "Unser Wasservorrat ist begrenzt. Wir brauchen ihn für die Versorgung und als Treibwasser für die Drohnen. Öffne den Drohnenleitstand, wähle Drohne null eins und erteile ihr einen Roh-Eis-Auftrag an einer bestätigten Eisquelle. Der Bohrer muss montiert sein. Die Annahme lagert das Rohmaterial; der Aufbereiter gewinnt daraus mit Stationsstrom sauberes Wasser. Unser erstes Ziel ist eine Lieferung und eine Reserve von vierzig Litern. Das große Roh-Eis-Lager muss dafür nicht voll werden.",
+      "TextSHA256": "442b3df76ef5fe32d02d03b527fec82ea5b20ec5845a78b4e5ad094550ad8060",
+      "Bytes": 1562960,
+      "SHA256": "21e1bf14c3977465dd670b2516ba19d6b32455918dc7aeab40fceb08fde15cbf",
+      "DurationSeconds": 35.44027210884354,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_01_complete",
+      "Text": "Die erste Lieferung ist angekommen, und unser erstes Wasserziel ist erreicht. Das gibt uns etwas Spielraum. Behalte die Aufbereitung im Blick: Roh-Eis im Lager und nutzbares Wasser im Tank sind zwei verschiedene Vorräte.",
+      "TextSHA256": "3845d7b4bc47344b81ef3eedc1be157417efb02a5e7244f90ec37ed9a7a5ad0b",
+      "Bytes": 714476,
+      "SHA256": "f3dd96cc6d5fc7deb4d72f7ef5f246e891980baf13ad75d2482a76f11b7ec09c",
+      "DurationSeconds": 16.20027210884354,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_02_start",
+      "Text": "Bevor wir weitere Anlagen zuschalten, sollten wir unsere Versorgung prüfen. Starte die Versorgungsdiagnose am Stationsplanungspult. Sie hilft uns, die nächsten Arbeiten vorzubereiten. Am Strompult kannst du Erzeugung, Verbrauch und Akkureserve verfolgen. Prüfe auch die Verbindungen der benötigten Sektoren. Eine intakte Maschine kann nicht arbeiten, wenn ihr Strom oder Wasser fehlt.",
+      "TextSHA256": "2e5d43f357cfa108872b662ddd5402720755e01529cd77f0f6fb6ab13672dcab",
+      "Bytes": 1188992,
+      "SHA256": "730b8886023e99b7f5f6c701c8e93f1fa8445b3f99648ed99c0f6ae65ad3d119",
+      "DurationSeconds": 26.960272108843537,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_02_complete",
+      "Text": "Die Versorgungsdiagnose ist abgeschlossen. Damit können wir die weiteren Inbetriebnahmen planen. Die Diagnose selbst hat noch nichts repariert. Wenn eine Arbeit wartet, prüfen wir zuerst ihren Versorgungsweg und die verfügbaren Reserven.",
+      "TextSHA256": "967938065c55b4650cbead154adce23bc0a200249397f35b90253e7d62b33dac",
+      "Bytes": 732116,
+      "SHA256": "7f3469c53d2a0b24f044dac93d2a96d5856af9fedd6807b95fb72b6b1c719a8b",
+      "DurationSeconds": 16.600272108843537,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_03_start",
+      "Text": "Für Reparaturen und die interne Helferdrohne brauchen wir brauchbare Teile. In den georteten Trümmern könnten noch welche erhalten sein. Wähle am Drohnenleitstand einen verfügbaren Wrackkontakt und erteile einen Bergungsauftrag. Drohne null eins braucht dafür einen Bohrer oder Greifer. Was wir tatsächlich verwenden können, zeigt sich nach der Bergung. Unbekanntes Material halten wir getrennt.",
+      "TextSHA256": "7a76a28a2d2d08035356e88b8b6a509c867f7bcc309fbefad85b221b276107c2",
+      "Bytes": 1256024,
+      "SHA256": "c125a61a45ca0934806aab371ede6b16877934c5420d42af7b6284043dd2aaaf",
+      "DurationSeconds": 28.480272108843536,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_03_complete",
+      "Text": "Die erste Bergung ist abgeschlossen. Die geborgenen Bestände sind erfasst. Geprüfte Ersatzteile können wir direkt für die ersten Inbetriebnahmen verwenden. Den übrigen Schrott müssen wir erst aufbereiten, bevor daraus neues Material wird.",
+      "TextSHA256": "3003f98f3cbc7368ae7a1eba7e434abcb117bb6b91e0a4a511dd7a2e66e4206d",
+      "Bytes": 825608,
+      "SHA256": "d3656eef3e1fdbef50d3f4464d885cca6f2ebdf5ca29279c55030b61d452081d",
+      "DurationSeconds": 18.720272108843538,
+      "SampleRate": 22050,
+      "GenerationMethod": "Google Media Studio UI",
+      "StyleOverride": "Du bist Mira, der weibliche Bordcomputer einer beschädigten Raumstation. Sprich auf Deutsch sanft, warm, angenehm und ruhig, mit natürlicher klarer Aussprache und einer vollen weichen Stimme. Du sprichst persönlich zu einem gerade erwachten Menschen und duzt ihn. Vermittle behutsam Sicherheit und Nähe, ohne die ernste Situation zu verharmlosen. Natürliches mittleres Sprechtempo, kurze sinnvolle Pausen, etwas mehr Raum zwischen den Abschnitten. Kein Werbeton, keine epische Chronistenstimme, keine Rauheit, kein Flüstern, kein künstlich monotoner Roboterton oder dramatischer Alarm. Die Lage erklärst du verständlich und gefasst. Beim ersten Auftrag wirst du dezent zuversichtlicher. Lies ausschließlich den Sprechertext; keine zusätzlichen Worte, Musik oder Geräusche. Trockene klare Sprachaufnahme ohne Hall oder Echo."
+    },
+    {
+      "Id": "quest_04_start",
+      "Text": "Wir können die kleine interne Helferdrohne wieder in Betrieb nehmen. Sie wird hier als R null eins geführt. Wähle sie im internen Bereich des Drohnenleitstands aus und beauftrage ihre Inbetriebnahme. Dafür brauchen wir zwei geprüfte Ersatzteile. Sobald sie arbeitet, kann sie interne Arbeitsaufträge übernehmen: Material aufbereiten, Teile fertigen und unsere Außendrohnen umrüsten. So werden wir Schritt für Schritt unabhängiger von den geborgenen Vorräten.",
+      "TextSHA256": "c0eb9bfca297734bb2484ffc7f60902cb75966d25636fa5a93a58f8987f6e7cc",
+      "Bytes": 1324820,
+      "SHA256": "4a9cbb705c6ca504bdc384263a35b24d993ca58eeb46073a4cd17ef8097e0ddd",
+      "DurationSeconds": 30.04027210884354,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_04_complete",
+      "Text": "R null eins ist in Betrieb. Damit haben wir Unterstützung innerhalb der Station. Du kannst ihr jetzt Arbeitsaufträge zuweisen. Plane ihre Reihenfolge bewusst: Eine einzelne Helferdrohne kann immer nur eine Arbeit gleichzeitig übernehmen.",
+      "TextSHA256": "5952440e4f88940ca2c117046b858234c617142257a54d6bc75008ecf03560ff",
+      "Bytes": 728588,
+      "SHA256": "3bcbf9cc5cbc37ff235b7225866a72985b8ae0e3038e96a6ab3ebc4d04dfc3af",
+      "DurationSeconds": 16.52027210884354,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_05_start",
+      "Text": "Wasser allein reicht für unsere weitere Versorgung nicht aus. Als nächsten Ausgangsstoff brauchen wir Kohlenstoff. Nach der Versorgungsdiagnose stehen uns dafür bekannte Prozessproben zur Verfügung. Wähle eine davon am Drohnenleitstand und schicke eine freie Außendrohne mit Bohrer hin. Wir können den nutzbaren Kohlenstoffanteil gewinnen. Was wir noch nicht bestimmen können, bleibt getrennt im Lager.",
+      "TextSHA256": "a1c1f4a956b740586c8c70d05e34b535067090869306874596d45c7a34e5a5bc",
+      "Bytes": 1233092,
+      "SHA256": "6e9d68ee603183b59ef9c244168671fee90033f3626863a3702da4efb90d17f9",
+      "DurationSeconds": 27.960272108843537,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_05_complete",
+      "Text": "Die erste Kohlenstoffprobe ist geborgen. Der nutzbare Anteil ist eingelagert, der unbekannte Rest bleibt erhalten. Damit haben wir einen weiteren Ausgangsstoff für unsere vorhandene Syntheseanlage. Für Grundnahrung brauchen wir außerdem Wasser, Strom und unsere Nährstoffzusätze.",
+      "TextSHA256": "7dcde9dda80c1f955e642436e6d76c6a864e89729afcd30c0bd74545d6a123c3",
+      "Bytes": 866180,
+      "SHA256": "804e8835e7e0608ed73a3b3e65c58658ad1579347e0e244f1c8a56e81f86585d",
+      "DurationSeconds": 19.640272108843536,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_06_start",
+      "Text": "Unsere Notrationen reichen nicht unbegrenzt. Die vorhandene Syntheseanlage kann uns zusätzliche Grundnahrung liefern. Öffne die Fertigung und beauftrage eine erste Charge. R null eins übernimmt die Arbeit. Wir brauchen Kohlenstoff, Wasser, Strom und eine Nährstoffkartusche aus dem Vorrat. Diese Zusätze können wir noch nicht selbst herstellen. Achte deshalb auf ihren Bestand und darauf, dass die Wasserleitung zur Anlage offen ist.",
+      "TextSHA256": "651d5bbbc814c9e448a5f737ae92974c0d760c6dda3081f33522b8b1067082fa",
+      "Bytes": 1432424,
+      "SHA256": "5e0b01a76941d52adeddbf254d6a2a512e740d3927b9531a672bf5bc0f9b66e9",
+      "DurationSeconds": 32.480272108843536,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_06_complete",
+      "Text": "Die erste Charge Grundnahrung ist fertig und eingelagert. Das entlastet unseren Rationsvorrat. Vollständig unabhängig sind wir damit noch nicht: Die Nährstoffkartuschen sind endlich. Für eine dauerhafte Versorgung brauchen wir später weitere Möglichkeiten.",
+      "TextSHA256": "40eceff3a8920a54e2b650cf183f8d2ee6098b895e87148c0be5af32f52cf9ff",
+      "Bytes": 793856,
+      "SHA256": "68d742f5a7ec742149a89b4c8f01469d529acb6016f5c32495d5528e4792967a",
+      "DurationSeconds": 18.000272108843536,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_07_start",
+      "Text": "Mit einer zweiten Außendrohne könnten wir mehrere Aufgaben parallel erledigen. Lass R null eins deshalb Drohne null zwei instand setzen. Wähle sie im Drohnenleitstand und plane die Instandsetzung. Dafür brauchen wir die abgeschlossene Versorgungsdiagnose, zwei Ersatzteile und ausreichende Reserven: mindestens vierzig Liter Wasser und sechs Kilowattstunden im Stationsakku. Nach der Reparatur muss sie am Dock noch geladen und betankt werden. Erst dann planen wir ihren ersten Einsatz.",
+      "TextSHA256": "34634a4a8426115ae3081615225fbcec8d35d25dd322151832224887d196292a",
+      "Bytes": 1497692,
+      "SHA256": "92dd6e40aa3736ffa33db6866b8458af42c8aba6909723f0bd27514e99ed7928",
+      "DurationSeconds": 33.96027210884354,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_07_complete",
+      "Text": "Die Instandsetzung von Drohne null zwei ist abgeschlossen. Prüfe jetzt ihren Dockstatus. Laden und Betanken benötigen weiterhin unsere Stationsvorräte. Sobald sie einsatzbereit ist, kannst du ihr einen eigenen Auftrag geben.",
+      "TextSHA256": "f0d7fedd7e28eeeba818efa13e16ba29571ea7b1efa5d40eb778a7ecba503fc8",
+      "Bytes": 739172,
+      "SHA256": "54790fd514e2368370b428df7fea00ef672fcced9f8f834ac375198da82c767b",
+      "DurationSeconds": 16.760272108843537,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_08_start",
+      "Text": "Jetzt können wir beginnen, die Station gezielt instand zu setzen. Starte am Forschungsterminal die Reparaturrolle. Ich erarbeite die nötigen Verfahren; dafür brauchen wir zusätzliche Energie. Danach wählst du am Stationsplanungspult ein beschädigtes, erreichbares Element und beauftragst die Reparatur. Für Außenarbeiten muss R null eins zuerst eine freie Außendrohne im Dock mit dem Laserwerkzeug ausrüsten. Halte außerdem geprüfte Ersatzteile bereit. Erst eine tatsächlich ausgeführte Reparatur bringt das betroffene Element wieder in Ordnung.",
+      "TextSHA256": "c8571746d7697fe3b99b01ecf3bd47c2e649d9eb73e1f3467ef22e24485a55ec",
+      "Bytes": 1640576,
+      "SHA256": "d4b42accb6ed9e3065d629cee2107effe66cb00307ebe7fc3111d88ae95c2150",
+      "DurationSeconds": 37.200272108843535,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_08_complete",
+      "Text": "Unser erster Reparaturauftrag ist abgeschlossen. Wir haben nicht nur ein Verfahren erforscht, sondern ein beschädigtes Element tatsächlich wiederhergestellt. Diese Erfahrung können wir für die nächsten Arbeiten nutzen. Die übrigen Schäden bleiben bestehen. Entscheide als Nächstes, welche Reparatur unserer Versorgung am meisten hilft.",
+      "TextSHA256": "0829fc742dc30d62d5ea5f75cf6602790414decb753a7e73dbe548ea67e264c3",
+      "Bytes": 1012592,
+      "SHA256": "4e7d24fb28c76e6d0e1c50a88cb8ec1fd352f62d9091bbe15099b457022845d2",
+      "DurationSeconds": 22.960272108843537,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_support_recycle",
+      "Text": "Wir können die geprüften Ersatzteile direkt verwenden. Den übrigen Schrott muss R null eins zuerst analysieren und trennen. Beauftrage die Aufbereitung in der Fertigung. Verwertbares Material kommt in die passenden Behälter, unbekannte Rückstände bleiben getrennt. So gewinnen wir unter anderem Eisen für neue Reparaturteile.",
+      "TextSHA256": "06cdd077b8c95056f61b826c48d371c5885775fb37c40db28b480f32d1d55c05",
+      "Bytes": 1040816,
+      "SHA256": "58781263b37ba3cb970029db82df21c2a8d14f746709ad98cf7494b75b143b0d",
+      "DurationSeconds": 23.600272108843537,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_support_print_parts",
+      "Text": "Wir müssen nicht jedes Reparaturteil in einem Wrack finden. Aus aufbereitetem Eisen kann der Materialdrucker einfache neue Teile fertigen. Plane den Auftrag in der Fertigung. R null eins braucht dafür Zeit, Strom und einen freien Lagerplatz. Für komplexe Bauteile fehlen uns weiterhin die passenden Verfahren.",
+      "TextSHA256": "64e9f08fbf97bf9d748ed6b65eae144bcedc8a1a9e3b4a2bfc97c601b3d0ee95",
+      "Bytes": 964964,
+      "SHA256": "3d0b5416b08a807aedf5d9de4118266bcbd9b542c6dcad6ca968f5a9b8defeca",
+      "DurationSeconds": 21.88027210884354,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_support_repair_researched",
+      "Text": "Die Reparaturverfahren sind ausgearbeitet. Für eine Außenreparatur wählst du jetzt eine freie Außendrohne am Dock und beauftragst den Umbau auf das Laserwerkzeug. R null eins führt den Werkzeugwechsel aus. Für eine zugängliche Innenreparatur kannst du stattdessen R null eins einsetzen. Wähle ein beschädigtes Ziel und halte die benötigten Ersatzteile bereit.",
+      "TextSHA256": "7577cce2a5978669e352fb6331eb2030ab3042893b2f9322f5ed68448d272f17",
+      "Bytes": 1180172,
+      "SHA256": "dfde736c6e3b8ba4954f5ec04a2edfeb68fa616291ea90ea13e90e3d672d10ea",
+      "DurationSeconds": 26.760272108843537,
+      "SampleRate": 22050
+    },
+    {
+      "Id": "quest_support_laser_ready",
+      "Text": "Das Laserwerkzeug ist montiert. Wähle jetzt im Drohnenleitstand ein bekanntes, beschädigtes Stationselement als Reparaturziel und erteile den Auftrag. Prüfe vorher die benötigten Ersatzteile und die Einsatzbereitschaft der Drohne. Mit diesem Werkzeug übernimmt sie Reparaturarbeiten; für den nächsten Eisabbau braucht sie wieder den Bohrer.",
+      "TextSHA256": "adac7f220913ec087ceb93b6f8bebe8c3f2e4fd70dac45aac3ee8784ffaba6e5",
+      "Bytes": 1058456,
+      "SHA256": "8868fb522dacb94a56f4efdff0173039684181f7e76d9f930995347de837af9a",
+      "DurationSeconds": 24.000272108843536,
+      "SampleRate": 22050
+    }
+  ]
+}

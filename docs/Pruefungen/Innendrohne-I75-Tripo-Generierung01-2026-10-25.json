@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-25",
+  "scope": "First I-75 base model generation and FBX/4K export",
+  "modelId": "82186324-c59e-4f69-a811-f1020096b63c",
+  "assetLink": "https://studio.tripo3d.ai/workspace/generate/blue-and-beige-futuristic-cargo-container-with-rugged-chassis-and-glow-82186324-c59e-4f69-a811-f1020096b63c",
+  "status": "completed and downloaded; raw model pending user review/cleanup",
+  "inputs": {
+    "Front": {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/01-vorne.png",
+      "bytes": 2045859,
+      "sha256": "64634e89773584b08b07c25ab026cf15fc5765fb4106a7453b59cc7fe799fdbd",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    "Left": {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/04-seite.png",
+      "bytes": 1962233,
+      "sha256": "27c62dae2cd27e53b2f5947618bd9e91615cffcc9277d3f8da9abe7455632753",
+      "pixels": [
+        1470,
+        1070
+      ]
+    },
+    "Right": {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/05-rechte-seite.png",
+      "bytes": 1864109,
+      "sha256": "0e0b51d77bc09c8d857961f17d5f5bf29e4d8007451759bda33487c659c808b8",
+      "pixels": [
+        1470,
+        1070
+      ]
+    },
+    "Back": {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/03-hinten.png",
+      "bytes": 2021195,
+      "sha256": "621f297620f3e73f7ef484bf9b7bf7540986e6c77f2229071f1898f2d323e70f",
+      "pixels": [
+        1254,
+        1254
+      ]
+    }
+  },
+  "excludedReference": "docs/Art/Drohnen/I75-Tripo-Set01/02-unten.png",
+  "supplementalPrompt": {
+    "path": "docs/Art/Drohnen/I75-Tripo-Set01/05-rechte-seite.prompt.txt",
+    "bytes": 1876,
+    "sha256": "478aaafac6dd233057085582431cacb171c535c74c2e9da8a628d61255e294e5"
+  },
+  "settings": {
+    "model": "H3.1",
+    "ultraMeshQuality": true,
+    "texture": true,
+    "textureQuality": "4K",
+    "removeLighting": true,
+    "pbr": true,
+    "topology": "Quad",
+    "polycountSetting": 50000,
+    "generateParts": false,
+    "texture8K": false,
+    "privacyObserved": "Sharing Only"
+  },
+  "credits": {
+    "before": 3005,
+    "afterGeneration": 2945,
+    "afterExport": 2945,
+    "generationDelta": 60,
+    "exportDeltaObserved": 0
+  },
+  "export": {
+    "zipPath": "Imports/Tripo/SpaceMiner_I75_Base_H31_4K_2026-10-25.zip",
+    "zipBytes": 10006741,
+    "zipSha256": "a8ab2a23c94fcaea005f1707365656486dbff630ceb1d7191c06cc3a1e6f138e",
+    "crcAndPathsVerified": true,
+    "files": [
+      {
+        "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbx",
+        "bytes": 2751292,
+        "sha256": "16c2deebbec845f5f9559e9498884b80a2c3996879d48964c2ef756feb4b5a47",
+        "fbxVersion": 7400
+      },
+      {
+        "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/Color.jpg",
+        "bytes": 1371332,
+        "sha256": "883904e87128de838ea8107dc93675067e8864da5eed37a89fbf46c3f26ef207",
+        "pixels": [
+          4096,
+          4096
+        ]
+      },
+      {
+        "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/SpaceMiner_I75_Base_H31_4K_2026-10-25_metallic.JPEG",
+        "bytes": 952132,
+        "sha256": "54d803d78d5e13d8daac7551d539b231871e6416b1ee104dd93640bb647a784e",
+        "pixels": [
+          4096,
+          4096
+        ]
+      },
+      {
+        "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/Normal.png",
+        "bytes": 4130364,
+        "sha256": "868fe9f4ddc071b04f2e820d63d2dd5ec51ac9d5722f150502fab2b56f5681f5",
+        "pixels": [
+          4096,
+          4096
+        ]
+      },
+      {
+        "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/SpaceMiner_I75_Base_H31_4K_2026-10-25_roughness.JPEG",
+        "bytes": 951476,
+        "sha256": "99729d5f4faf78bf62ea218c544b5fba2d36c233e65663577399b1ae150b0117",
+        "pixels": [
+          4096,
+          4096
+        ]
+      }
+    ],
+    "fbx": {
+      "version": 7400,
+      "objectCounts": {
+        "Geometry": 1,
+        "Model": 1,
+        "Material": 1,
+        "Texture": 4,
+        "Video": 4
+      },
+      "meshes": [
+        {
+          "vertices": 45859,
+          "polygons": 45725,
+          "polygonSizes": {
+            "4": 45641,
+            "3": 74,
+            "5": 9,
+            "7": 1
+          },
+          "fanTriangleCount": 91388
+        }
+      ],
+      "parser": "Existing official Blender FBX binary parser; no Blender viewport import"
+    }
+  },
+  "browserMeshCounts": {
+    "vertices": 45859,
+    "polygons": 45725
+  },
+  "evidence": [
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-Tripo-2026-10-25/02-vier-ansichten-vor-start.jpg",
+      "bytes": 150283,
+      "sha256": "b47355f0a50ad7acacc8e603df7a0eb677b77bf6b1d424cde835904caa5d18bb",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-Tripo-2026-10-25/03-modell-front.jpg",
+      "bytes": 147289,
+      "sha256": "4f04fdc191d3a4111f728fa2354fad7c5deb5b2ee1c4957202cf03eebe6ec764",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-Tripo-2026-10-25/04-modell-heck-seite.jpg",
+      "bytes": 139160,
+      "sha256": "0bb8e6a6cc9d7a6ad785fa0839ad60a9cba4e040f807f2b28607c3e7608f429d",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-Tripo-2026-10-25/05-modell-nach-export.jpg",
+      "bytes": 139823,
+      "sha256": "195a9a69e90df6dd42d360d74ae5261b2fe762c306479e4d124b03db06a196b1",
+      "pixels": [
+        1331,
+        1244
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "path": "docs/Innendrohne-I75-Tripo-Generierung01-2026-10-25.md",
+      "bytes": 6466,
+      "sha256": "b3e8a574c800de52fbf3961cc0ff9553f265e5e5b8c8a629c850569367d7e112"
+    },
+    {
+      "path": "docs/Innendrohne-I75-Tripo-Grundform-2026-10-25.md",
+      "bytes": 6504,
+      "sha256": "e7e7ea408cb77b88cfccd927f9feeb26aa8620519d11f52a87e0d7377ef4e213"
+    },
+    {
+      "path": "docs/Innendrohne-I75-Tripo-Bildsatz01-2026-10-25.md",
+      "bytes": 3699,
+      "sha256": "fcf4bf58c669e2c4786896b64eeb673512ed09a07e8b58c0dc9a8c2d65893572"
+    }
+  ],
+  "visualFindings": [
+    "Front stereo sensor, cyan bar and empty tool dock recognizable",
+    "Magnetic feet and closed battery rear present",
+    "Repeated side housings/maintenance motifs and additional lifting lugs; softened/distorted edges",
+    "One mesh object; feet are not exported as individually controllable objects"
+  ],
+  "checks": [
+    "Four uploaded slots visually confirmed before Generate",
+    "Generation completion and credit balances confirmed in UI",
+    "Front and rear/side model views inspected in Tripo",
+    "Download archive CRC and safe extraction paths; download/backup SHA256 equality",
+    "FBX7400 parsed by existing official Blender FBX reader; UI counts match actual data",
+    "Four texture files fully read/verified at 4096x4096",
+    "Artifacts hashed and local document links checked"
+  ],
+  "limitations": [
+    "No user design acceptance",
+    "No metric scale adjustment, mesh cleanup, manifold or collision validation",
+    "No Blender viewport/material import or Unity integration",
+    "No animation/rig or separate movable feet",
+    "No build, runtime or physical load/magnetic system test",
+    "No additional generation, retry or segmentation triggered"
+  ],
+  "localLinksChecked": {
+    "docs/Innendrohne-I75-Tripo-Generierung01-2026-10-25.md": 13,
+    "docs/Innendrohne-I75-Tripo-Grundform-2026-10-25.md": 13,
+    "docs/Innendrohne-I75-Tripo-Bildsatz01-2026-10-25.md": 13
+  },
+  "followUpSmartMeshComparison": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25.json"
+}

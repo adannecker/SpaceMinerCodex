@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-24",
+  "version": "V2",
+  "kind": "Concept revision, no Unity implementation",
+  "userDecision": "11m radial inward-facing rooms between service corridors",
+  "image": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v2.png",
+  "imageSha256": "20b6d669aed43f0105e7665fadadab9ec19f430057d5f36df193f75849a14aae",
+  "pixels": [
+    1536,
+    1024
+  ],
+  "generator": "built-in image_gen edit of V1",
+  "prompt": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v2.prompt.txt",
+  "specification": "docs/Stationskonzept-V2-2026-10-24.md",
+  "proposedGeometry": {
+    "innerRoomsRadius": [
+      18,
+      29
+    ],
+    "innerDepthMeters": 11,
+    "walkRingRadius": [
+      29,
+      38
+    ],
+    "outerModulesRadius": [
+      38,
+      54
+    ],
+    "innerFacadeDiameter": 36,
+    "serviceCorridors": 4,
+    "corridorAxes": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "corridorClearWidth": 3,
+    "corridorRange": [
+      8,
+      29
+    ],
+    "nominalCorridorLength": 21,
+    "innerRoomAngleSectors": [
+      [
+        8,
+        82
+      ],
+      [
+        98,
+        172
+      ],
+      [
+        188,
+        262
+      ],
+      [
+        278,
+        352
+      ]
+    ],
+    "decks": 1
+  },
+  "checks": [
+    "Image visually reviewed: inward room groups and four clear service axes",
+    "Updated labels and plan/detail views reviewed",
+    "PNG signature/dimensions/hash",
+    "Radial depth/diameter/corridor arithmetic",
+    "Local links exist"
+  ],
+  "limits": [
+    "Image is illustrative, not exact construction geometry",
+    "Only 11m inward depth is a new explicit dimension decision; other geometry remains a proposal",
+    "No Unity geometry/code/build/runtime changes",
+    "No commit or push"
+  ]
+}

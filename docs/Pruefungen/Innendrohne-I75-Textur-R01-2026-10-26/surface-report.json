@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-26",
+  "source": "Assets\\SpaceMiner\\Resources\\IndoorDroneI75\\I75_P20_V02.fbx",
+  "sourceSha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+  "vertices": 10510,
+  "polygons": 10659,
+  "triangles": 18312,
+  "dimensionsMetres": [
+    0.48033708333969116,
+    0.75,
+    0.4371030628681183
+  ],
+  "uvLayers": 1,
+  "uvRasterCoverage": 0.46762824058532715,
+  "materialCount": 1,
+  "textureResolution": [
+    2048,
+    2048
+  ],
+  "textures": [
+    "I75_R01_BaseColor.png",
+    "I75_R01_Emission.png",
+    "I75_R01_Height.png",
+    "I75_R01_Normal.png",
+    "I75_R01_Occlusion.png",
+    "I75_R01_ORM.png",
+    "I75_R01_UnityMetalSmooth.png"
+  ],
+  "renders": [
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R01-2026-10-26\\01-I75-R01-hero.png",
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R01-2026-10-26\\02-I75-R01-rear.png",
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R01-2026-10-26\\03-I75-R01-side.png"
+  ],
+  "geometryUnchangedAfterNormalization": true,
+  "elapsedSeconds": 260.878536939621,
+  "notes": [
+    "Actual Blender renders of original V02 mesh, not generated concept art.",
+    "Surface finish only. No rig, mesh repair, separate magnetic feet or Unity build replacement.",
+    "Two-dimensional stencil artwork is authored locally; no Tripo credits or external generated textures."
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-25",
+  "scope": "I-75 isolated base reference and underside/rear views",
+  "generator": "built-in image_gen",
+  "artifacts": [
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-rear-2026-10-25-v1-korrektur.prompt.txt",
+      "bytes": 1405,
+      "sha256": "9470b55c358b4e4b5f69ab509728864a2e788a074708f7e18713d268fb928633"
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-rear-2026-10-25-v1.png",
+      "bytes": 2013200,
+      "sha256": "96a11e22d38748fe7f7f9f929ca070c4ee4034c6887d6c2110979f8ba2d0c30d",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-rear-2026-10-25-v1.prompt.txt",
+      "bytes": 2164,
+      "sha256": "0fae44b02a3cb0e42c8d76a5cb5ee5266d67ea8e06aaa087b8bfcf4110889747"
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-Tripo-2026-10-25-v1.png",
+      "bytes": 1846985,
+      "sha256": "eb3a347a457ec88541a351e2daca68b47d99c060f8b5aac2c9d6f42d6000aae0",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-Tripo-2026-10-25-v1.prompt.txt",
+      "bytes": 2229,
+      "sha256": "6a39089b892806be91ac1ea9f43a18b6fa3447ae9b348511683c2c1db3f9dc0d"
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-underside-2026-10-25-v1.png",
+      "bytes": 2275567,
+      "sha256": "6e38f4f98e9eec33e93ce184849794e1c8c1af07aa07024cec90b66c4359199f",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-underside-2026-10-25-v1.prompt.txt",
+      "bytes": 2158,
+      "sha256": "cea402d9777510925f9652f4b3d28071dfdcf8cfde6aa0c149e156290371872c"
+    },
+    {
+      "path": "docs/Innendrohne-I75-Tripo-Grundform-2026-10-25.md",
+      "bytes": 6504,
+      "sha256": "e7e7ea408cb77b88cfccd927f9feeb26aa8620519d11f52a87e0d7377ef4e213"
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-Tripo-2026-10-25/01-upload-blockiert.jpg",
+      "bytes": 145374,
+      "sha256": "8e0500d08eb66af247f8066603dc760257ad616917b3376027e73ca41cc48583"
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-rear-2026-10-25-v2.png",
+      "bytes": 2144205,
+      "sha256": "678057971b3167a68985922f829825fb4b020baec6ad20344220aa006c43f7c3",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Grundform-rear-2026-10-25-v2.prompt.txt",
+      "bytes": 2783,
+      "sha256": "b5dabb401022a34b4744b58aadcc046f6a12a4f15cf4d010516888bdcdb72a3e"
+    }
+  ],
+  "checks": [
+    "PNG signatures and pixel dimensions",
+    "Artifact SHA256",
+    "Local links excluding self-report before creation",
+    "Rear V1 visual acceptance invalidated by user; rear V2 compared with original identity view"
+  ],
+  "localLinksChecked": 13,
+  "tripo": {
+    "model": "H3.1",
+    "displayedGenerateCostCredits": 60,
+    "creditsBefore": 3005,
+    "creditsAfterBlockedAttempt": 3005,
+    "status": "Upload denied by browser approval gate; no workaround and no generation",
+    "uploaded": false,
+    "generationStarted": false
+  },
+  "assumptions": {
+    "chassisLengthMetres": 0.75,
+    "proposedWidthMetres": 0.55,
+    "proposedHeightMetres": 0.45,
+    "proposedPodStrokeMetres": 0.05
+  },
+  "limitations": [
+    "Front reference stowed; underside/rear references deployed: unify pose before multiview generation",
+    "AI views not geometry-registered CAD renders",
+    "Five centimetre holder stroke is proposed, not magnetic hover clearance",
+    "No 3D file, Blender edit, Unity integration, physics validation, build or runtime test"
+  ],
+  "rearCorrection": {
+    "reason": "User correctly identified rear V1 as rear door painted onto front end",
+    "rejectedImage": "docs/Art/Drohnen/Innendrohne-I75-Grundform-rear-2026-10-25-v1.png",
+    "latestImage": "docs/Art/Drohnen/Innendrohne-I75-Grundform-rear-2026-10-25-v2.png",
+    "method": "New rear camera based only on original front identity reference",
+    "visualCheck": "Protruding battery enclosure and near lifting lugs identify actual rear; front sensor and dock hidden",
+    "engineeringConsistency": "Foot mechanism details still require reconciliation before multiview use",
+    "userApproval": "Pending"
+  },
+  "latestReferenceSet": "docs/Pruefungen/Innendrohne-I75-Tripo-Bildsatz01-2026-10-25.json",
+  "followUpGeneration": "docs/Pruefungen/Innendrohne-I75-Tripo-Generierung01-2026-10-25.json"
+}

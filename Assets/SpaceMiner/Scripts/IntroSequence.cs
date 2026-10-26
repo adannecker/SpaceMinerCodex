@@ -16,12 +16,6 @@ namespace SpaceMiner
             public string Audio;
         }
 
-        [Serializable] private sealed class Script
-        {
-            public string Voice;
-            public Cue[] Cues;
-        }
-
         public static bool IsPlaying { get; private set; }
         private static int completedFrame = -1;
         public static bool BlocksGameplay => IsPlaying || completedFrame == Time.frameCount;
@@ -32,18 +26,17 @@ namespace SpaceMiner
         public int VoicedCueCount { get; private set; }
         public event Action Finished;
 
-        private Script script;
+        private MiraDialogueScript script;
         private AudioClip[] clips;
         private float[] durations;
-        private AudioSource voice;
         private OrbitCamera orbit;
         private Camera view;
         private float elapsed, stageElapsed;
         private GUIStyle heading, caption, speaker, hint;
         private Font introFont;
         private Font hintFont;
-        private bool initialized; private bool settingsPausedVoice;
-        private readonly MiraVisorOverlay dialogueOverlay=new MiraVisorOverlay();
+        private bool initialized;
+        public MiraDialogueModule DialogueModule { get; private set; }
 
         private void Awake()
         {
@@ -51,11 +44,8 @@ namespace SpaceMiner
             completedFrame = -1;
             orbit = GetComponent<OrbitCamera>();
             view = GetComponent<Camera>();
-            voice = gameObject.AddComponent<AudioSource>();
-            voice.playOnAwake = false;
-            voice.spatialBlend = 0;
-            voice.volume = 0.85f;
-            PlayerAudioSource.Attach(voice, PlayerAudioChannel.Voices);
+            DialogueModule = MiraDialogueModule.Create(gameObject);
+            DialogueModule.AutomaticClock = false;
         }
 
         private void Start() { if (StartMenu.IsOpen) IsPlaying = false; else PlayIntro(); }
@@ -66,7 +56,7 @@ namespace SpaceMiner
             {
                 TextAsset data = Resources.Load<TextAsset>("Intro/intro");
                 if (data == null) { Debug.LogWarning("Mira intro script is missing."); Skip(); return; }
-                script = JsonUtility.FromJson<Script>(data.text);
+                script = MiraDialogueScript.LoadAwakening();
                 if (script?.Cues == null || script.Cues.Length == 0) { Skip(); return; }
                 clips = new AudioClip[CueCount];
                 durations = new float[CueCount];
@@ -74,12 +64,11 @@ namespace SpaceMiner
                 VoicedCueCount = 0;
                 for (int i = 0; i < CueCount; i++)
                 {
-                    Cue cue = script.Cues[i];
+                    MiraDialogueLine cue = script.Cues[i];
                     clips[i] = string.IsNullOrEmpty(cue.Audio) ? null : Resources.Load<AudioClip>(cue.Audio);
                     if (clips[i] != null) VoicedCueCount++;
                     HasCompleteVoiceTrack &= clips[i] != null;
-                    float readingTime = cue.Text.Split(' ').Length / 2.1f;
-                    durations[i] = Mathf.Max(3.5f, clips[i] != null ? clips[i].length + 1.2f : readingTime + 1.5f);
+                    durations[i] = cue.Duration(clips[i]);
                 }
                 initialized = true;
             }
@@ -95,8 +84,8 @@ namespace SpaceMiner
         private void Update()
         {
             if (!IsPlaying || !initialized) return;
-            if (SettingsMenu.BlocksInput) { if (!settingsPausedVoice) { voice.Pause(); settingsPausedVoice = true; } return; }
-            if (settingsPausedVoice) { voice.UnPause(); settingsPausedVoice = false; }
+            DialogueModule.SetPaused(SettingsMenu.BlocksInput);
+            if (SettingsMenu.BlocksInput) return;
             if (Input.GetKeyDown(KeyCode.Escape)) { Skip(); return; }
             AdvancePlayback(Time.unscaledDeltaTime);
             if (IsPlaying) SetCamera();
@@ -108,6 +97,7 @@ namespace SpaceMiner
             if (!IsPlaying || !initialized || seconds <= 0) return;
             elapsed += seconds;
             stageElapsed += seconds;
+            DialogueModule.Advance(seconds);
             while (IsPlaying && elapsed >= CueDuration)
             {
                 elapsed -= CueDuration;
@@ -116,14 +106,13 @@ namespace SpaceMiner
                 if (CueIndex >= CueCount) { Skip(); return; }
                 if (previousStage != script.Cues[CueIndex].Stage) stageElapsed = elapsed;
                 BeginCue();
+                DialogueModule.Advance(elapsed);
             }
         }
 
         private void BeginCue()
         {
-            voice.Stop();
-            voice.clip = clips[CueIndex];
-            if (voice.clip != null) voice.Play();
+            DialogueModule.Play(script.Cues[CueIndex]);
         }
 
         public void Skip()
@@ -131,7 +120,7 @@ namespace SpaceMiner
             if (!IsPlaying) return;
             IsPlaying = false;
             completedFrame = Time.frameCount;
-            if (voice != null) { voice.Stop(); voice.clip = null; }
+            DialogueModule.Close();
             if (orbit != null) orbit.ResetView();
             Finished?.Invoke();
         }
@@ -172,7 +161,7 @@ namespace SpaceMiner
             float scale = UiLayout.Scale();
             GUI.matrix = Matrix4x4.Scale(Vector3.one * scale);
             float width = Screen.width / scale, height = Screen.height / scale;
-            Cue cue = script.Cues[CueIndex];
+            MiraDialogueLine cue = script.Cues[CueIndex];
             float fade = Mathf.SmoothStep(0, 1, Mathf.Clamp01(elapsed / 0.7f))
                 * Mathf.SmoothStep(0, 1, Mathf.Clamp01((CueDuration - elapsed) / 0.7f));
             float darkness = cue.Stage == 0 ? 1 : Mathf.Lerp(1, 0.45f, Mathf.Clamp01(stageElapsed / 2.5f));
@@ -187,8 +176,8 @@ namespace SpaceMiner
             introFont.RequestCharactersInTexture("MIRA", 14, FontStyle.Bold);
             hintFont.RequestCharactersInTexture("SPACE MINER  /  ERWACHEN ESC  ·  Intro überspringen  F11  Vollbild Fenster 0123456789/", 13, FontStyle.Normal);
 
-            var mood=CueIndex<=2?MiraAvatar.Mood.Friendly:CueIndex<=6?MiraAvatar.Mood.Concerned:CueIndex>=14?MiraAvatar.Mood.Encouraging:MiraAvatar.Mood.Focused;
-            dialogueOverlay.Draw(MiraVisorOverlay.Bounds(width,height),cue.Heading,cue.Text,mood,"ESC · Intro überspringen   /   "+(CueIndex+1)+" / "+CueCount,showText:SettingsStore.Current.Accessibility.Subtitles,alpha:fade);
+            DialogueModule.Subtitles = SettingsStore.Current.Accessibility.Subtitles;
+            DialogueModule.Draw(MiraVisorOverlay.Bounds(width,height),"ESC · Intro überspringen   /   "+(CueIndex+1)+" / "+CueCount,alpha:fade);
             GUI.color = Color.white;
             GUI.Label(new Rect(35, 28, width - 70, 30), "SPACE MINER  /  ERWACHEN", hint);
             GUI.depth = previousDepth;
@@ -226,7 +215,6 @@ namespace SpaceMiner
 
         private void OnDestroy()
         {
-            dialogueOverlay.Dispose();
             if (introFont != null) Destroy(introFont);
             if (hintFont != null) Destroy(hintFont);
         }

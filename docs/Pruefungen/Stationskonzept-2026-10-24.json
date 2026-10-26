@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-24",
+  "kind": "Concept and implementation proposal, not implemented",
+  "generator": "built-in image_gen",
+  "image": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v1.png",
+  "imageSha256": "63600b89cc6206de029e99cc2ac64a5124e07b11fd38abe814115f6f13551a50",
+  "pixels": [
+    1536,
+    1024
+  ],
+  "prompt": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v1.prompt.txt",
+  "reference": "docs/Art/Station/Station-Ausgangsstand-2026-10-24.png",
+  "specification": "docs/Stationskonzept-2026-10-24.md",
+  "proposedGeometry": {
+    "decks": 1,
+    "segments": 12,
+    "innerRadius": 27,
+    "existingRingInnerRadius": 29,
+    "existingRingOuterRadius": 38,
+    "outerRadius": 54,
+    "insideDepthAddition": 2,
+    "outerExpansionDepth": 16,
+    "reactorHousingRadius": 4,
+    "maintenanceCollarRadius": 8,
+    "serviceCorridors": 4,
+    "corridorClearWidth": 3,
+    "corridorNominalLength": 19,
+    "clearHeight": 5.5
+  },
+  "interpretation": "First radial outer expansion stage on one walkable deck; requires user feedback",
+  "checks": [
+    "PNG signature/dimensions/hash",
+    "Current 29/38/16m and twelve-sector code parameters matched",
+    "Dimensional arithmetic checked",
+    "Local concept links exist",
+    "Generated image visually reviewed"
+  ],
+  "limits": [
+    "Concept rendering is illustrative, not a dimensionally exact construction drawing",
+    "Exact dimensions, corridor count and layout are proposals, not approved gameplay decisions",
+    "No station geometry/code modified in this concept task",
+    "No Unity build or runtime test",
+    "No commit or push"
+  ]
+}

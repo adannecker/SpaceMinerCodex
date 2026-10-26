@@ -1,0 +1,4 @@
+System.Exception: INDOOR TRAFFIC: individual progress in 120 simulation seconds / I-01 / junction=4
+  at SpaceMiner.StationIndoorTrafficCheck.Require (System.Boolean condition, System.String label) [0x00032] in C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Assets\SpaceMiner\Scripts\StationIndoorTrafficCheck.cs:35 
+  at SpaceMiner.StationIndoorTrafficCheck+<>c__DisplayClass22_0.<Start>b__5 () [0x0001b] in C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Assets\SpaceMiner\Scripts\StationIndoorTrafficCheck.cs:204 
+  at SpaceMiner.StationIndoorTrafficCheck.Guard (System.Action action) [0x00000] in C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Assets\SpaceMiner\Scripts\StationIndoorTrafficCheck.cs:38 

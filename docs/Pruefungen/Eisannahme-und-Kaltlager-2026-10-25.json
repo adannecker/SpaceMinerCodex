@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-25",
+  "build": "ice-plant-build-07",
+  "configuration": "Development",
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "interiorLayout": 14,
+  "roomPlanSchema": 1,
+  "passed": true,
+  "assertions": 4335,
+  "runs": [
+    {
+      "name": "plant",
+      "checks": 245,
+      "exitCode": 0,
+      "images": 7,
+      "result": "plant-result.json",
+      "log": "plant-player.log"
+    },
+    {
+      "name": "sizing",
+      "checks": 99,
+      "exitCode": 0,
+      "images": 4,
+      "result": "sizing-result.json",
+      "log": "sizing-player.log"
+    },
+    {
+      "name": "workshop",
+      "checks": 2181,
+      "exitCode": 0,
+      "images": 12,
+      "result": "workshop-result.json",
+      "log": "workshop-player.log"
+    },
+    {
+      "name": "operations",
+      "checks": 97,
+      "exitCode": 0,
+      "images": 7,
+      "result": "operations-result.json",
+      "log": "operations-player.log"
+    },
+    {
+      "name": "station",
+      "checks": 177,
+      "exitCode": 0,
+      "images": 9,
+      "result": "station-result.json",
+      "log": "station-player.log"
+    },
+    {
+      "name": "rooms",
+      "checks": 794,
+      "exitCode": 0,
+      "images": 4,
+      "result": "rooms-result.json",
+      "log": "rooms-player.log"
+    },
+    {
+      "name": "ui",
+      "checks": 28,
+      "exitCode": 0,
+      "images": 8,
+      "result": "ui-result.json",
+      "log": "ui-player.log"
+    },
+    {
+      "name": "debris",
+      "checks": 685,
+      "exitCode": 0,
+      "images": 6,
+      "result": "debris-result.json",
+      "log": "debris-player.log"
+    },
+    {
+      "name": "vitals",
+      "checks": 29,
+      "exitCode": 0,
+      "images": 2,
+      "result": "vitals-result.json",
+      "log": "vitals-player.log"
+    }
+  ],
+  "sourceFilesMatched": 268,
+  "sourceManifest": "source-manifest.json",
+  "imagesSaved": 59,
+  "userPlansPreserved": true,
+  "preservedPlanManifest": "preserved-room-plans.json",
+  "plantAcceptance": {
+    "passed": true,
+    "checks": 245,
+    "coldMeshVertices": 2880,
+    "serviceCapsules": 14,
+    "actualReceivedRawKg": 1033.325805664062,
+    "actualWaterPotentialKg": 826.660656849453,
+    "actualRestKg": 206.66514881460898,
+    "actualProcessedWaterKg": 0.24999237060546875,
+    "domainProcessedWaterKg": 7.5,
+    "domainResidueKg": 1.8749999999999998,
+    "domainProcessingEnergyKwh": 1.5000000000000007,
+    "missionSeconds": 4719.0,
+    "batteryAtDockKwh": 4.406081676483154,
+    "propellantAtDockLiters": 7.308261871337891,
+    "automaticHeavyReturnBatteryKwh": 2.2351160049438477,
+    "automaticHeavyReturnFuelLiters": 5.500969886779785,
+    "scope": "Real scanned A01 90-percent sortie with normal 200 L consumption tank; coupled raw receipt, all material retained, separate paid processing. Analytical domain steps cover mixed batches, finite cold volume, buffers, blackout/valves/start-stop, rest-bin backpressure and disk saves. Declared material fixtures isolate later processing. Full-intake case A uses unchanged real arriving supplies and physically flies the automatic heavy return; independent waiting/stop/resume/save case B explicitly adds 1 kWh within battery capacity. Real cold-cell vertices, service capsules, ring gate and revision-13 occupant migration. Actual contextual E-terminal reachability and Production/ice view, native framebuffer screenshots after backbuffer recreation. Programmatic controller tests, not manual keyboard comfort, structural/thermal certification or FPS acceptance."
+  },
+  "droneAcceptance": {
+    "passed": true,
+    "checks": 99,
+    "rawKg": 1033.3258056640625,
+    "fillFraction": 0.8999999165534973,
+    "occupiedM3": 1.3121998310089111,
+    "deliveredWaterLiters": 0.3359355926513672,
+    "receivedRawKg": 1033.3258056640625,
+    "simulationSeconds": 4719.0,
+    "miningSeconds": 2065.0,
+    "batteryAtDockKwh": 4.406081676483154,
+    "fuelAtDockLiters": 7.308261871337891,
+    "consumedBatteryKwh": 11.593917846679688,
+    "burnedWaterLiters": 7.691709041595459,
+    "observedMiningEnergyKwh": 2.3237075805664062,
+    "minimumBatteryKwh": 4.406081676483154,
+    "minimumFuelLiters": 7.308261871337891,
+    "scope": "Actual A01 launch, mining, loaded return, raw ice receipt and berthing with normal 200 L consumption-water tank and real cold-storage receiver; no 2000 L tank or mined-material fixture. Volume/mixture/mechanical constraints; real disk saves in mining and return; old twelve-value hardware and optional profiles; actual new Demo after legacy load. Detailed processing/mass/energy/geometry checks belong to StationIcePlantCheck; no structural certification or complete orbital/thermal claim."
+  },
+  "scope": [
+    "Real normal-capacity A01 flight, full 90% raw cargo and closed coupled transfer",
+    "Separate finite intake, crusher, compactor, three widening cold cells, paid refining and residual material retention",
+    "Water/rest and energy ledgers, finite buffers, pause, closed valves, blackout, full destinations and partial dock acceptance",
+    "Real loaded cancellation return, retained legacy cargo flight without free source extraction or experience",
+    "On-disk flight/processing saves, strict rejection of corrupt ledgers, old-save migration without free water or new hardware",
+    "Actual mesh and collision checks, service path and ring entrance, revision-13 occupant migration to revision14",
+    "Existing station/workshop/resources/four-room-planner/UI/native-fullscreen/salvage/vitals regressions"
+  ],
+  "limitations": [
+    "Packing, mineral density, mining and process energy/throughput are declared first game-sizing assumptions",
+    "Long process and capacity cases use explicit domain/material fixtures; real flight uses normal 200 L consumption tank",
+    "Heavy-return case A uses actual arrival supplies; independent wait/resume/save case B explicitly adds 1 kWh within drone capacity",
+    "No full thermal, pressure, dissolved-contaminant, sterilisation, structural, orbital or asteroid-gravity validation",
+    "Cold sealed storage is idealised; no heat leak, refrigeration loop or sublimation loss simulation",
+    "Residuals remain in local 45 t bin; later drone transport and material identification are separate logistics work",
+    "Damaged02/03 add no cold capacity; existing later repair can still install a small 100 L liquid-water buffer",
+    "Assertion count includes repeated mesh, capsule, collision, distance and interlock checks",
+    "No new Release, VR, manual comfort, 100k, long-running campaign or playable-FPS acceptance"
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": "Builds/Windows",
+  "preservedPreviousBuild": "Builds/Windows-before-ice-plant-20261025",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json"
+}

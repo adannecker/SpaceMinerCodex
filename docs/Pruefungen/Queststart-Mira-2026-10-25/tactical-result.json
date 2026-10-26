@@ -1,0 +1,7 @@
+{
+    "passed": true,
+    "checks": 137,
+    "actualKnownAsteroids": 10,
+    "pagedReferenceFixture": 100000,
+    "scope": "Actual first scan, knowledge-safe filters/search/paging, active external/internal fleet and real campaign quest progress. Explicit focus snapshots, actual launched drone tracking and stopping, real R-01 identity guard, unchanged domain snapshots during observation/navigation. A declared100000-reference fixture checks bounded page/index behaviour, not100000 rendered bodies or FPS. Real native framebuffer captures at1600x1000 and1280x720 with enlarged text. Quest threshold and R-01 readiness use declared campaign-state fixtures; no new economy, VR-headset or manual comfort acceptance."
+}

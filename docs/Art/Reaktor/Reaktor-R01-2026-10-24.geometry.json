@@ -1,0 +1,82 @@
+{
+  "version": "R01",
+  "date": "2026-10-24",
+  "status": "concept_not_implemented",
+  "units": "metres",
+  "unityUnitsPerMetre": 1,
+  "coordinates": {
+    "origin": "concentric housing/collar centre at service midplane",
+    "up": "+Y",
+    "zeroDegrees": "+Z",
+    "positiveAngle": "towards +X",
+    "viewPlan": "north +Z, east +X"
+  },
+  "housing": {
+    "outerDiameter": 8,
+    "height": 6,
+    "yMin": -3,
+    "yMax": 3,
+    "opaque": true,
+    "shieldingVerified": false,
+    "activePackageDimensions": null
+  },
+  "collar": {
+    "outerDiameter": 16,
+    "innerInterfaceDiameter": 8,
+    "height": 3.2,
+    "yMin": -1.6,
+    "yMax": 1.6,
+    "segmentCount": 16,
+    "pressurisedHumanAccessAssumed": false
+  },
+  "services": {
+    "anglesDegrees": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "interfaceRadius": 8,
+    "tipRadius": 11,
+    "exposedStubLength": 3,
+    "clearWidth": 3,
+    "clearHeight": 2.6,
+    "outerWidth": 3.6,
+    "outerHeight": 3.2,
+    "floorY": -1.3,
+    "ceilingY": 1.3,
+    "outerYMin": -1.6,
+    "outerYMax": 1.6,
+    "overallTipSpan": 22,
+    "ringInterfaceRadius": 29,
+    "remainingExtensionLength": 18
+  },
+  "radiators": {
+    "anglesDegrees": [
+      45,
+      135,
+      225,
+      315
+    ],
+    "centreRadius": 10,
+    "radialLength": 4,
+    "tangentialWidth": 2,
+    "thickness": 0.15,
+    "centreY": 1.9,
+    "areaPerPanelFace": 8,
+    "panelCount": 4,
+    "thermalSizingVerified": false,
+    "capacityWatts": null
+  },
+  "humanReferenceHeight": 1.8,
+  "stationV4": {
+    "innerModuleInnerRadius": 18,
+    "ringInnerRadius": 29
+  },
+  "simulation": {
+    "reactorElectricalPowerKw": 2,
+    "solarElectricalPowerKw": 0.5,
+    "changed": false
+  },
+  "authority": "Numeric specification and generated SVG govern model dimensions; image is illustrative. Added collar/stub/radiator dimensions are design proposals, not engineering verification."
+}

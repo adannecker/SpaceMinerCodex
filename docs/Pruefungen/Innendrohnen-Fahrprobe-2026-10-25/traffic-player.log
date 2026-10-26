@@ -1,0 +1,943 @@
+Mono path[0] = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/Managed'
+Mono config path = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 2 interfaces on host : 0) 192.168.178.28 1) 192.168.96.1
+Player connection [73712]  Target information:
+
+Player connection [73712]  * "[IP] 192.168.178.28 [Port] 55000 [Flags] 2 [Guid] 1169340437 [EditorId] 3567972613 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [73712]  * "[IP] 192.168.96.1 [Port] 55000 [Flags] 2 [Guid] 1169340437 [EditorId] 3567972613 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [73712] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.6.4f1 (12bfff696524)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/UnitySubsystems
+[D3D12 Device Filter] Vendor Name: ATI
+[D3D12 Device Filter] Device Name: AMD Radeon RX 9070 XT
+[D3D12 Device Filter] Driver Version: 32.0.32015.7029
+[D3D12 Device Filter] Feature Level: 12.2
+[D3D12 Device Filter] Graphics Memory: 16191 MB
+[D3D12 Device Filter] Processor Count: 16
+[D3D12 Device Filter] Device Type: Discrete
+GfxDevice: creating device client; kGfxThreadingModeSplitJobs
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        AMD Radeon RX 9070 XT (ID=0x7550)
+    Vendor:          ATI
+    VRAM:            16191 MB
+    App VRAM Budget: 15419 MB
+    Driver:          32.0.32015.7029
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.009 seconds
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+<RI> Initializing input.
+<RI> Input initialized.
+D3D11 device created for Microsoft Media Foundation video decoding.
+UnloadTime: 1.041600 ms
+d3d12: upload buffer was too small for the requested resource! Size: 16777216. Requested: 19193136.
+INDOOR TRAFFIC OK: isolated settings
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:108)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:105)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: ten drones created / 
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:118)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: isolated room plan / command-room
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:121)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: isolated room plan / drone-bay
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:121)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: isolated room plan / drone-workshop
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:121)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: isolated room plan / internal-workshop
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:121)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: ten actual agents on collider navigation
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:122)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-01
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-02
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-03
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-04
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-05
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-06
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-07
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-08
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-09
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: 75cm imported model / I-10
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:136)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: physical pair across command entrance
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:138)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: far pair empty and original 24kWh retained
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__1 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:139)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:117)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 1
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 2
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 3
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 4
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 5
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 6
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 7
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 8
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: simulation pause stops visual drone / 9
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__2 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:146)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: native framebuffer exists / 01-batterien-gegenueber-zentrale
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:48)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: native framebuffer dimensions / 01-batterien-gegenueber-zentrale
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:51)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: nonempty actual station view / 01-batterien-gegenueber-zentrale
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:53)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-01 / Außendrohnenwerkstatt / 162,7232m / stops=24 / visits=12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-02 / Außendrohnenwerkstatt / 181,4841m / stops=26 / visits=13
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-03 / Außendrohnenwerkstatt / 176,8653m / stops=26 / visits=12
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-04 / Interne Drohnenwerkstatt / 165,1962m / stops=35 / visits=19
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-05 / Interne Drohnenwerkstatt / 178,8207m / stops=36 / visits=17
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-06 / Kommandozentrale / 196,529m / stops=36 / visits=20
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-07 / Kommandozentrale / 168,5346m / stops=28 / visits=13
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-08 / Ringgang / 182,7547m / stops=17 / visits=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-09 / Ringgang / 193,2564m / stops=18 / visits=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRIP I-10 / Ringgang / 169,9662m / stops=16 / visits=0
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:163)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: all ten complete a full route circuit, including return trips
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:164)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: damaged/locked gate stays closed / Not-Schott / Ringhavarie
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:165)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: damaged/locked gate stays closed / Not-Schott / Ringhavarie
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:165)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: damaged/locked gate stays closed / Not-Schott / Ringhavarie
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:165)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: damaged/locked gate stays closed / Reaktorschott / 180
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:165)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: damaged/locked gate stays closed / Wasserlager 02 / HAVARIE
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:165)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: damaged/locked gate stays closed / Wasserlager 03 / HAVARIE
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:165)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: damaged/locked gate stays closed / Reaktorschott / 270
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:165)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: damaged/locked gate stays closed / Reaktorschott / 90
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:165)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: traffic reopens the physically closed healthy hall bulkhead
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:167)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: visual trial creates no campaign work orders
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__4 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:168)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:162)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: native framebuffer exists / 02-i75-aussenwerkstatt-route
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:48)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: native framebuffer dimensions / 02-i75-aussenwerkstatt-route
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:51)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: nonempty actual station view / 02-i75-aussenwerkstatt-route
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:53)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: native framebuffer exists / 03-i75-interne-werkstatt-route
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:48)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: native framebuffer dimensions / 03-i75-interne-werkstatt-route
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:51)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+INDOOR TRAFFIC OK: nonempty actual station view / 03-i75-interne-werkstatt-route
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:35)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass16_0:<Capture>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:53)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Capture>d__16:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:47)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+STATION INDOOR TRAFFIC CHECK PASSED / 49
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationIndoorTrafficCheck/<>c__DisplayClass20_0:<Start>b__6 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:178)
+SpaceMiner.StationIndoorTrafficCheck:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:38)
+SpaceMiner.StationIndoorTrafficCheck/<Start>d__20:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs:175)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792964138344,"processId":85848,"allocatedMemory":1601288,"memoryLabels":[{"Default":791800},{"NewDelete":760},{"Thread":192448},{"Manager":14745},{"Shader":16488},{"GfxDevice":3408},{"GfxThread":554496},{"Serialization":17000},{"BaseObject":12408},{"String":621},{"PoolAlloc":96},{"ScriptManager":5696},{"CodeReload":440},{"CloudService":144},{"VR":1928},{"Video":144},{"Subsystems":96},{"Gui":306},{"CoreBusinessMetrics":128}]}

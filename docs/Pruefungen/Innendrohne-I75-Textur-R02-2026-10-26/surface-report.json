@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-26",
+  "source": "Assets\\SpaceMiner\\Resources\\IndoorDroneI75\\I75_P20_V02.fbx",
+  "sourceSha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+  "vertices": 10846,
+  "polygons": 10983,
+  "triangles": 18912,
+  "dimensionsMetres": [
+    0.4820000231266022,
+    0.75,
+    0.4371030628681183
+  ],
+  "uvLayers": 1,
+  "uvRasterCoverage": 0.4719562530517578,
+  "materialCount": 1,
+  "textureResolution": [
+    2048,
+    2048
+  ],
+  "textures": [
+    "I75_R02_BaseColor.png",
+    "I75_R02_Emission.png",
+    "I75_R02_Height.png",
+    "I75_R02_Normal.png",
+    "I75_R02_Occlusion.png",
+    "I75_R02_ORM.png",
+    "I75_R02_UnityMetalSmooth.png"
+  ],
+  "renders": [
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R02-2026-10-26\\01-I75-R02-hero.png",
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R02-2026-10-26\\02-I75-R02-rear.png",
+    "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R02-2026-10-26\\03-I75-R02-side.png"
+  ],
+  "coreGeometryRetained": true,
+  "geometryUnchangedAfterUVAuthoring": true,
+  "addedParts": "4 thin corner-angle sets (8 plates), 2 straight rails, 8 hex fasteners; smooth-angle22 and weighted panel normals",
+  "elapsedSeconds": 214.27846693992615,
+  "notes": [
+    "Actual Blender renders of original V02 mesh, not generated concept art.",
+    "R02 angular guard kit and harder normals; original body retained. No rig, separate magnetic feet or Unity build replacement.",
+    "Two-dimensional stencil artwork is authored locally; no Tripo credits or external generated textures."
+  ]
+}

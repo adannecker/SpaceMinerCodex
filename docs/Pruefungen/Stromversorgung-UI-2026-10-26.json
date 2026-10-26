@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-26",
+  "build": "power-ui-20261026-final-03",
+  "passed": true,
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "isolatedBuildCopy": "Builds/LocalPreview-6000.6.4f1",
+  "developmentBuildExit": 0,
+  "releaseBuildExit": 0,
+  "playerExit": 0,
+  "checks": 477,
+  "screenshots": 14,
+  "layout": 15,
+  "checkedSourceAndMetaFiles": 16,
+  "identicalCurrentSourceAndMetaFiles": 14,
+  "verifiedDeliveredFiles": 403,
+  "preservedConcurrentSourceDeviations": [
+    "Assets\\SpaceMiner\\Scripts\\StationOperations.cs",
+    "Assets\\SpaceMiner\\Scripts\\StationOperations.Ui.cs"
+  ],
+  "concurrentWork": "Story/Mira added -miraQuestGameCheck,RestoreMiraQuestProgress and PresentQuestDialogue after this build snapshot. Inspected differences in StationOperations.cs/Ui.cs and preserved all those current source changes. Power telemetry and model disposal integrations remain in both. Supplied power build uses the prior Mira dialog snapshot, not the ongoing quest-dialog changes. As-built files and diffs retained. I75 texture work remains separate/unassigned to game prefab.",
+  "deployed": "Builds/Windows",
+  "release": "Builds/PowerDashboardRelease",
+  "previousBuild": "Builds/Windows-before-power-ui-20261026",
+  "sources": "Stromversorgung-UI-2026-10-26/source-manifest.json",
+  "deliveredHashes": "Stromversorgung-UI-2026-10-26/delivered-manifest.json",
+  "result": "Stromversorgung-UI-2026-10-26/power-result.json",
+  "playerLog": "Stromversorgung-UI-2026-10-26/player.log",
+  "scope": "Real station/battery/reactor/solar meshes and materials; read-only telemetry, generation/consumer sum, rolling history from real simulation steps, conditional charge/discharge forecasts,8battery+3generator nonoverlapping hotspots at3dashboard sizes/text states, selected item inspectors,14native framebuffer images, physical console access and modal release, real battery repair and solar calculation, isolated save/room-plan preservation.",
+  "limits": [
+    "No native OS mouse/keyboard acceptance, headset, subjective comfort or FPS certification.",
+    "No new independent cassette telemetry or battery reserve activation; shared24kWh model unchanged.",
+    "Additional reactor/second-sun telemetry unavailable, no invented numbers.",
+    "Source editor6000.4.7f1 not installed or tested here; source project version unchanged.",
+    "Release built successfully; targeted scripted player acceptance runs in Development.",
+    "Initial sandbox licensing attempt stalled; subsequent real builds ran outside sandbox. One added test first used a nonexistent simulation API, corrected to existing Advance. A later hotspot test exposed paired-label overlap, corrected with collision-free callout placement. Earlier attempts are not claimed as final passes."
+  ],
+  "commitOrPush": false
+}

@@ -1,0 +1,78 @@
+{
+  "scope": "Git tracked and non-ignored untracked regular files; values of matches omitted",
+  "files": 4140,
+  "bytes": 2681013576,
+  "groupsBytes": {
+    "docs": 1639568193,
+    "Assets": 822736874,
+    "Design": 147658120,
+    "outputs": 60151671,
+    "prototypes": 10380583,
+    "tools": 373549,
+    "README.md": 74923,
+    "ProjectSettings": 54611,
+    "AGENTS.md": 2877,
+    "Packages": 2324,
+    "Imports": 1135,
+    ".gitignore": 794,
+    ".gitattributes": 724,
+    "Start-Mira-Dialogstudio.cmd": 449,
+    "Start-Station-Keilmodule.cmd": 436,
+    "Start-Mira-Questspiel.cmd": 432,
+    "Start-Stationsbau-Zeitraffer.cmd": 419,
+    "Start-Aufbauphase-01.cmd": 414,
+    "Start-Drohnenhalle-Station.cmd": 411,
+    "Start-Innendrohnen-Fahrprobe.cmd": 401,
+    "Start-Ringbau-Test.cmd": 396,
+    "Start-Ring-Rundgang.cmd": 392,
+    "Start-Wasserlager-Station.cmd": 390,
+    "Start-TechTree-Test.cmd": 384,
+    "Start-Startstation-Dev.cmd": 376,
+    "Start-Startstation.cmd": 374,
+    "Start-Wartungsdrohne-Showcase.cmd": 364,
+    "Start-Hallenexperiment.cmd": 346,
+    "Start-Mira-Tripo-Gespraech.cmd": 343,
+    "Start-Tripo-Groessenprobe.cmd": 334,
+    "Start-Mining-Drohne.cmd": 329,
+    "Start-I75-3D-Vorschau.cmd": 112,
+    ".vsconfig": 96
+  },
+  "largeFiles": [
+    {
+      "path": "Assets/SpaceMiner/Resources/Audio/Asteroid Solitude.wav",
+      "bytes": 69080080
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/Audio/Asteroid-Solitude-Loop.wav",
+      "bytes": 64704044
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v06.blend",
+      "bytes": 53419133
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v07.blend",
+      "bytes": 54356954
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v08.blend",
+      "bytes": 54904957
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v09.blend",
+      "bytes": 52616035
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v10.blend",
+      "bytes": 52631375
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v11.blend",
+      "bytes": 79734850
+    }
+  ],
+  "githubSizeBlockers": [],
+  "credentialFileNames": [],
+  "secretLikeMatches": [],
+  "passed": true
+}

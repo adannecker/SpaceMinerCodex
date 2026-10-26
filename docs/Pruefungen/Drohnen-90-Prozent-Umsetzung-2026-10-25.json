@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-25",
+  "build": "drone-sizing-build-02",
+  "configuration": "Development",
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "layout": 13,
+  "passed": true,
+  "assertions": 4035,
+  "runs": [
+    {
+      "name": "sizing",
+      "checks": 98,
+      "exitCode": 0,
+      "images": 4,
+      "result": "sizing-result.json",
+      "log": "sizing-player.log"
+    },
+    {
+      "name": "workshop",
+      "checks": 2127,
+      "exitCode": 0,
+      "images": 12,
+      "result": "workshop-result.json",
+      "log": "workshop-player.log"
+    },
+    {
+      "name": "operations",
+      "checks": 97,
+      "exitCode": 0,
+      "images": 7,
+      "result": "operations-result.json",
+      "log": "operations-player.log"
+    },
+    {
+      "name": "station",
+      "checks": 177,
+      "exitCode": 0,
+      "images": 9,
+      "result": "station-result.json",
+      "log": "station-player.log"
+    },
+    {
+      "name": "rooms",
+      "checks": 794,
+      "exitCode": 0,
+      "images": 4,
+      "result": "rooms-result.json",
+      "log": "rooms-player.log"
+    },
+    {
+      "name": "ui",
+      "checks": 28,
+      "exitCode": 0,
+      "images": 8,
+      "result": "ui-result.json",
+      "log": "ui-player.log"
+    },
+    {
+      "name": "debris",
+      "checks": 685,
+      "exitCode": 0,
+      "images": 6,
+      "result": "debris-result.json",
+      "log": "debris-player.log"
+    },
+    {
+      "name": "vitals",
+      "checks": 29,
+      "exitCode": 0,
+      "images": 2,
+      "result": "vitals-result.json",
+      "log": "vitals-player.log"
+    }
+  ],
+  "sourceFilesMatched": 260,
+  "sourceManifest": "source-manifest.json",
+  "imagesSaved": 52,
+  "userPlansPreserved": true,
+  "preservedPlanManifest": "preserved-room-plans.json",
+  "actualFullSortie": {
+    "passed": true,
+    "checks": 98,
+    "rawKg": 1033.3258056640625,
+    "fillFraction": 0.8999999165534973,
+    "occupiedM3": 1.3121998310089111,
+    "deliveredWaterLiters": 826.66064453125,
+    "simulationSeconds": 4719.0,
+    "miningSeconds": 2065.0,
+    "batteryAtDockKwh": 4.406081676483154,
+    "fuelAtDockLiters": 7.308261871337891,
+    "consumedBatteryKwh": 11.593917846679688,
+    "burnedWaterLiters": 7.691709518432617,
+    "observedMiningEnergyKwh": 2.3237075805664062,
+    "minimumBatteryKwh": 4.406081676483154,
+    "minimumFuelLiters": 7.308261871337891,
+    "scope": "Actual A01 launch, mining, loaded return, unloading and berthing; 2000 L receiving-tank fixture with 20 L initial water, 20 kWh station reserve. Normal 200 L / 20 L stock separately caps the goal at 225 kg. Volume/mixture/mechanical constraints; real disk saves in mining and return; old twelve-value hardware and optional profiles; actual new Demo after a legacy load, distinguished from ordinary simulation resets. Existing direct water-unloading convention retained; no raw-ice processing, residue-conservation, structural certification or complete orbital/thermal claim."
+  },
+  "scope": [
+    "Material-dependent volume limit, 90% target, independent 80/20, pure-ice and 65/35 reference capacities",
+    "Actual A01 launch, mining, loaded return, water unloading and physical berthing with protected reserves",
+    "Real on-disk save/restore during extraction and loaded return, actual rendered cargo mesh bounds",
+    "Old twelve-value hardware with missing/zero-version profile, explicit empty-dock upgrade without free supplies",
+    "True new campaign after legacy load versus ordinary hardware-preserving simulation reset",
+    "Existing workshop, resources, station, four-room planner, native fullscreen, salvage and vitals regressions"
+  ],
+  "limitations": [
+    "First normal water order remains 225 kg for 200 L tank and 20 L initial stock; full-volume flight explicitly uses 2000 L receiving capacity and 20 kWh station fixture",
+    "No new raw-ice storage/refining plant; existing immediate water conversion and untracked residual fraction retained",
+    "16 kWh, 15 L, 250 kg dry, 5 N, 1.2 kWh/L and 0.5 kg/s at 4 kW are declared game-sizing assumptions, not certified hardware",
+    "No complete orbital dynamics, asteroid gravity, structural/torque or thermal-rejection certification",
+    "Local docking maneuvers remain animated; salvage/refit routes retain separate preexisting fixed fees",
+    "Assertion total includes repeated lane, collision, distance and airlock checks, not that many independent scenarios",
+    "Full-sortie sampled mining duration differs from mass/rate reference by small integration steps; analytical duration is 2066.652 s",
+    "No new Release, VR, manual comfort, 100k, FPS or long-running campaign acceptance",
+    "Separate legacy 12 kg mining showcase remains intentionally mass-based and was not rerun"
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": "Builds/Windows",
+  "preservedPreviousBuild": "Builds/Windows-before-drone-sizing-20261025",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json"
+}

@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-25",
+  "build": "workbench-build-02",
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "layout": 13,
+  "passed": true,
+  "assertions": 2656.0,
+  "runs": [
+    {
+      "name": "workshop",
+      "checks": 1862,
+      "exitCode": 0,
+      "result": "workshop-result.json",
+      "log": "workshop-player.log"
+    },
+    {
+      "name": "rooms",
+      "checks": 794,
+      "exitCode": 0,
+      "result": "rooms-result.json",
+      "log": "rooms-player.log"
+    }
+  ],
+  "sourceFilesMatched": 246,
+  "deliveredFilesMatched": 247,
+  "sourceManifest": "source-manifest.json",
+  "deliveredManifest": "delivered-manifest.json",
+  "imagesSaved": 16,
+  "userPlansPreserved": true,
+  "preservedPlanManifest": "preserved-room-plans.json",
+  "deployed": "Builds/Windows",
+  "preservedPreviousBuild": "Builds/Windows-before-workbench-20261025",
+  "scope": [
+    "Normalize imported left and right benches into plan width-X, depth-Z and negative-Z drawer fronts without wall shear",
+    "Actual tabletop dimensions and working height, two physically distinct support banks across width, front drawer and handle geometry",
+    "Existing complete workshop refit through the airlock and return/cancellation",
+    "Four room catalogue/model editing and persistence acceptance"
+  ],
+  "cabinetFinding": "Two original static ServiceCabinet decorations with no gameplay or F7 binding; retained",
+  "visualReview": [
+    "workshop/11-originalwerkbank-links-vorne.png",
+    "workshop/12-originalwerkbank-rechts-vorne.png"
+  ],
+  "limitations": [
+    "Default repair-cell columns partially occlude near bench images; visible parts reviewed, both complete benches checked by actual mesh geometry",
+    "No manual comfort or user-layout walkthrough acceptance",
+    "No repeated full operations, station, vitals, fullscreen, Release or FPS suites for this isolated mesh correction"
+  ],
+  "committed": false,
+  "pushed": false
+}

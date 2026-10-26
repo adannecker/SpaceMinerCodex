@@ -1,0 +1,14 @@
+{
+    "passed": true,
+    "checks": 207,
+    "vertices": 1444,
+    "pictures": [
+        "01-idle-hand-1600.png",
+        "02-walk-look-hand.png",
+        "03-terminal-no-hand.png",
+        "04-roomplan-no-hand.png",
+        "05-declared-close-wall-fixture.png",
+        "06-outside-no-hand.png"
+    ],
+    "scope": "Actual padded dark work-glove mesh with curled fingers and empty future grip; inside/outside, intro and real modal visibility; bounded idle/walk/look controller, pause and reduced motion; camera mask/resource cleanup. Screenshots use the real framebuffer. Wall-depth picture includes a declared temporary foreground plane. No actual tool, manual comfort, FPS or tool gameplay acceptance."
+}

@@ -1,6 +1,12 @@
 # Preserve original diagnostic evidence byte-for-byte, including Unity line endings.
 docs/Pruefungen/**/*.log -text -diff
 
+# Preserve raw assertion summaries, authored prompts and upstream viewer sources.
+# Their recorded whitespace is provenance, not newly authored application code.
+docs/Pruefungen/**/*.txt -text whitespace=-blank-at-eol
+docs/Art/**/*.prompt.txt -text whitespace=-blank-at-eof
+Design/Models/IndoorDroneI75/I75Viewer/vendor/** -text whitespace=-space-before-tab
+
 # Unity serializes empty YAML values with a trailing space; retain its output.
 *.meta whitespace=-blank-at-eol
 *.mat whitespace=-blank-at-eol

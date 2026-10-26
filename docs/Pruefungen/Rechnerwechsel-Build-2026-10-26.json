@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-26",
+  "task": "Fresh combined-source transfer validation: existing campaign scene, current power UI and spoken Mira quest integration in one Development binary",
+  "passed": true,
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "buildMethod": "SpaceMiner.Editor.StartMenuBuild.Run",
+  "buildOptions": "Development",
+  "buildExit": 0,
+  "buildLog": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/build.log",
+  "sourceSnapshotFile": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/source-manifest.json",
+  "sourceSnapshotFileCount": 1949,
+  "sourceCopyVerifiedBeforeBuild": true,
+  "sourceFilesChangedAfterBuild": [],
+  "stageSourceAdjustments": [
+    {
+      "path": "Packages/packages-lock.json",
+      "before": "9f7c94869fe166e511d219b4fcb8e7c6935ddabf4eb4690c9df2d6612da35354",
+      "after": "3ef5b33b86812ef7267918d85712295d8e394d392625925ed1e5551d3fa7de99",
+      "expectedProjectVersionOverride": false
+    },
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "before": "03d8c24484ff7ae2d199acf656b08e77e66b779fa2da6a0bd45cb7d1f437e477",
+      "after": "a35c2c87870781882617d3e5fa7188e6e5528821fb74c74e29a43c4559f57390",
+      "expectedProjectVersionOverride": true
+    }
+  ],
+  "stageScriptChanges": [],
+  "nativeRoomPlansUnchanged": true,
+  "output": "Builds/TransferPreview-20261026",
+  "deliveredBuildFilesVerified": 247,
+  "deliveredManifest": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/delivered-manifest.json",
+  "runtimeAssemblySha256": "2d5020cb3b3a48eda8295de5091a2e45dcb05760c59d62bec5934aa29394281c",
+  "runtimeRuns": [
+    {
+      "name": "power",
+      "arguments": [
+        "-stationPowerConsoleCheck",
+        "-force-d3d11",
+        "-screen-fullscreen",
+        "0",
+        "-screen-width",
+        "1600",
+        "-screen-height",
+        "1000",
+        "-logFile",
+        "<isolated run>/player.log"
+      ],
+      "workingDirectory": "Builds/TransferPreview-20261026/TestRuns/Power",
+      "exitCode": 0,
+      "result": {
+        "passed": true,
+        "checks": 477,
+        "layout": 15,
+        "frustumWarnings": 0,
+        "pictures": [
+          "01-gegenueber-zentrale-echte-50-prozent.png",
+          "02-strompult-in-zentrale-e-hinweis.png",
+          "03-stromuebersicht-1600x1000.png",
+          "detail-reactor.png",
+          "detail-solar-a.png",
+          "detail-solar-b.png",
+          "detail-battery-bay-1.png",
+          "detail-battery-bay-2.png",
+          "detail-consumer-life.png",
+          "detail-bankbilanz.png",
+          "04-explizite-97-prozent-anzeigefixture.png",
+          "05-stromuebersicht-1280x720.png",
+          "06-stromuebersicht-grosse-schrift-oben.png",
+          "07-stromuebersicht-grosse-schrift-unten.png"
+        ],
+        "scope": "Physical battery placement and four authored cassette meshes per installed bank, physical command-room power terminal, read-only live power dashboard and existing shared energy store. Explicit load, state-of-charge, panel-normal, damage and network fixtures are restored. Genuine R-01 battery repair uses a declared helper/repair-technology/three-parts fixture with original energy; actual trajectory sampled every0.25s, collision/support and damaged-sector avoidance checked, then original campaign restored. Isolated old-save and room-plan roundtrips preserve resources and placement. Native framebuffer capture at1600x1000 and1280x720 including enlarged text. Programmatic scene/controller and framebuffer acceptance, not native OS input, manual comfort, headset or FPS acceptance."
+      },
+      "resultPath": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/result.json",
+      "logPath": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/player.log",
+      "images": [
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/01-gegenueber-zentrale-echte-50-prozent.png",
+          "bytes": 1374840,
+          "sha256": "d7bf9ffe7677466d0c3f8af13aebf4f65200df73bf982b6a7b165bc328a31a88"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/02-strompult-in-zentrale-e-hinweis.png",
+          "bytes": 478031,
+          "sha256": "02c451d0f08d1537a9efd79762017ca67a12ac10d10419203e5c0ae7014dd2c4"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/03-stromuebersicht-1600x1000.png",
+          "bytes": 262524,
+          "sha256": "8a8012577a9647b2f241db0034dd8eb789ec7b3c0316153044458604cb5563a7"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/04-explizite-97-prozent-anzeigefixture.png",
+          "bytes": 263688,
+          "sha256": "a14c464e2c226606b20504be070effaed5465660f30f81e939dc4edac99634fc"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/05-stromuebersicht-1280x720.png",
+          "bytes": 164575,
+          "sha256": "f7cb71faddd22cd00bb0f34be5944c7b0e11eabc1f48fce44ee116e31240d412"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/06-stromuebersicht-grosse-schrift-oben.png",
+          "bytes": 193356,
+          "sha256": "05269e4970c2b42c6732c73f4b0e6f5b85610bae4c0688cf9b3953aaf7c8cfb6"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/07-stromuebersicht-grosse-schrift-unten.png",
+          "bytes": 195072,
+          "sha256": "74c0d5ef8cb95939aaba07820a727063e8b0d4a5d5d4b421402207a28257f100"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/detail-bankbilanz.png",
+          "bytes": 260351,
+          "sha256": "45b4c7434b34d64c4fe8d18a40f8bda98c18cbb5c57797aec83911a06a554cb6"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/detail-battery-bay-1.png",
+          "bytes": 242878,
+          "sha256": "a8b14dd110acace895972ec4416ba9d1d3af84d93ca66804dfd1f30a2f19373d"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/detail-battery-bay-2.png",
+          "bytes": 224420,
+          "sha256": "559d1f75c5aa5c9218964a5bf97f902abf41be1c7a20cf4133dd7ab393e34338"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/detail-consumer-life.png",
+          "bytes": 203840,
+          "sha256": "bd6151fd98684d1459b9e994dcfc5107fac6a829814129fa349d6c3681543f27"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/detail-reactor.png",
+          "bytes": 230236,
+          "sha256": "3f119a566670cc98a8060b89b0217fea34f765c46a4283a84129c0cf32d12a3e"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/detail-solar-a.png",
+          "bytes": 218840,
+          "sha256": "ff517a8325d3a5cf1ae5d5a917b94d2113dea9ebd808096c74bd631e48641197"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/detail-solar-b.png",
+          "bytes": 223952,
+          "sha256": "4fe0cfd42fd5fee795e8cfce28616b7dbd4836af11e2b88c93e07ac077a89c6a"
+        }
+      ]
+    },
+    {
+      "name": "mira-quest-game",
+      "arguments": [
+        "-miraQuestGameCheck",
+        "-force-d3d11",
+        "-screen-fullscreen",
+        "0",
+        "-screen-width",
+        "1600",
+        "-screen-height",
+        "1000",
+        "-logFile",
+        "<isolated run>/player.log"
+      ],
+      "workingDirectory": "Builds/TransferPreview-20261026/TestRuns/MiraQuestGame",
+      "exitCode": 0,
+      "result": {
+        "passed": true,
+        "game": true,
+        "checks": 53,
+        "pictures": 2,
+        "width": 1600,
+        "height": 1000
+      },
+      "resultPath": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/mira-quest-game/result.json",
+      "logPath": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/mira-quest-game/player.log",
+      "images": [
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/mira-quest-game/game-quest-complete.png",
+          "bytes": 28041,
+          "sha256": "a8d0e2c99a4bbdfaeef5805427f896d99d3ca3f2e2798a523c14110a2492e862"
+        },
+        {
+          "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/mira-quest-game/game-quest-scan.png",
+          "bytes": 28041,
+          "sha256": "a8d0e2c99a4bbdfaeef5805427f896d99d3ca3f2e2798a523c14110a2492e862"
+        }
+      ]
+    }
+  ],
+  "totalRuntimeAssertions": 530,
+  "totalNewImages": 16,
+  "deployedToBuildsWindows": false,
+  "reviewedImages": [
+    {
+      "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/power/03-stromuebersicht-1600x1000.png",
+      "status": "native power dashboard reviewed; nonblack, readable current UI"
+    }
+  ],
+  "limits": [
+    "One current full-source Development build with two targeted automated scene/controller/framebuffer regressions; no release, long-duration campaign, headset, manual OS-input, subjective audio or FPS acceptance.",
+    "Mira quest predicate test deliberately restores/sets isolated quest completion fixtures; it is not a naturally played full campaign.",
+    "Power test uses declared and restored load/charge/repair/solar fixtures; its97-percent image is an explicit fixture, not natural gameplay.",
+    "Unity import/version adjustments, if any, occurred only in the isolated stage and are listed. No main project version, scene, gameplay source, save or user room plan was altered by this validation.",
+    "The new build stays under ignored Builds/TransferPreview-20261026; it is not published and is not automatically included in Git. Source/assets/rebuild instructions and this proof are portable.",
+    "Mira quest run was started hidden: both captured PNGs are black and expressly excluded from visual acceptance. Result53 API/audio/quest/save assertions passed; no fresh Mira-appearance claim."
+  ],
+  "rejectedVisualCaptures": [
+    {
+      "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/mira-quest-game/game-quest-complete.png",
+      "reason": "hidden launch produced all-black framebuffer; rejected as visual evidence, API/audio checks still passed",
+      "meanRgb": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "extrema": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/mira-quest-game/game-quest-scan.png",
+      "reason": "hidden launch produced all-black framebuffer; rejected as visual evidence, API/audio checks still passed",
+      "meanRgb": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "extrema": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "acceptedVisualScope": "Power dashboard native captures; Mira quest test accepted for predicates, playback AudioSource and save-history APIs only. Its two hidden-run framebuffer captures are black and do not establish visible Mira rendering.",
+  "isolatedStagePackageResolution": {
+    "originalSourceLockUnchanged": true,
+    "stageLock": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/stage-packages-lock.json",
+    "changes": [
+      {
+        "package": "com.unity.test-framework",
+        "source": "1.6.0",
+        "isolated6000.6.4f1": "1.8.0"
+      },
+      {
+        "package": "com.unity.ext.nunit",
+        "source": "2.0.5",
+        "isolated6000.6.4f1": "2.1.0"
+      }
+    ],
+    "description": "Unity built-in test packages resolved automatically for the stage editor version. Gameplay source, assets and source project lock are unchanged."
+  },
+  "isolatedStageProjectVersion": "docs/Pruefungen/Rechnerwechsel-Build-2026-10-26/stage-ProjectVersion.txt",
+  "usablePowerCaptures": 14,
+  "rejectedMiraHiddenCaptures": 2
+}

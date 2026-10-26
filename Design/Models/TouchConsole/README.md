@@ -1,0 +1,3 @@
+# Touch-Steuerpult
+
+Native Blender/PBR-Umsetzung des freigegebenen Touch-Konzepts. Erzeugen mit dem vorhandenen portablen Blender und `tools/CreateTouchConsole.py`. Native `.blend` bleibt außerhalb von Assets; Unity importiert drei FBX-LODs mit gemeinsamem 2048²-PBR-Atlas. Vorderseite −Z, Bodenmittelpunkt; Schnittstellen und tatsächliche Meshmaße im `model-report.json`. Glas und Frontplakette sind absichtlich blank für echte Runtime-Oberfläche und Beschriftung. Renders/04 ist eine ausdrücklich getrennte Demo-UI-Fixture, kein Spielbild und keine exportierte Bildtextur. Alle Oberflächen selbst prozedural verfasst, keine heruntergeladenen Modelle oder Konzeptbildtextur.

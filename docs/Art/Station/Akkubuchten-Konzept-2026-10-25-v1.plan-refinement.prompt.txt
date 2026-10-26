@@ -1,0 +1,11 @@
+Edit ONLY the small circular overall PLAN INSET in the lower-right panel. Keep the large main scene and upper-right battery cutaway completely unchanged, pixel-for-pixel in design and composition. The main view's solid uninterrupted floor and closed door are correct.
+
+In the PLAN INSET, the reactor is currently drawn too large and the damaged gaps are mistakenly outside the ring. Correct the station diagram to show:
+1. An unbroken continuous circular RING with no exterior rupture debris at its top or sides.
+2. A much smaller central circular reactor, about ONE FIFTH of the diameter of the empty circular opening inside the ring. This leaves enough space for long radial spokes.
+3. Exactly FOUR radial reactor service spokes at clock 12,3,6,9. They connect the inner ring edge toward the SMALL central reactor. The BOTTOM spoke is intact. The TOP spoke has a long missing section halfway BETWEEN the ring and reactor, the LEFT spoke has a shorter different irregular missing section, the RIGHT spoke has a distinct shifted ragged rupture section. These three missing gaps and small rubble sit INSIDE the ring opening along those spokes, not outside the ring. The reactor end and ring end of each broken spoke remain visible separated by vacuum.
+4. Exactly EIGHT short battery service-bay footprints anchored onto the INNER ring edge, two flanking each spoke close to the ring. Long axes point radially inward beside the spoke, short service face directly adjoins the ring. At the TOP pair only: left installed cyan/green module, right installed amber/dark module. Other SIX footprints are empty white outlines. Keep their individual short access connections to the ring.
+5. The only exterior room in this inset is a single command-centre wedge at bottom, attached outward from the ring. No exterior spoke debris, no fifth spoke.
+Keep "REAKTOR" readable near the small central reactor. No new text, numbers or gauges.
+
+Preserve every other element of the sheet unchanged, especially both main battery fronts, inactive right battery condition, the closed central pressure door, solid ring floor, utilities, title and the upper-right cutaway.

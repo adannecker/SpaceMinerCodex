@@ -1,0 +1,115 @@
+TRIPO MINING OK: isolated settings
+TRIPO MINING OK: empty operational mining drone in real dock
+TRIPO MINING OK: detailed independent auger geometry
+TRIPO MINING OK: cargo lid closed at starting berth
+TRIPO MINING OK: cargo frame and anchor rails have four measured original-hull roof mounts
+TRIPO MINING OK: initial cargo is empty and sliding gate shut
+TRIPO MINING OK: closed rear armour covers cargo aperture and compression seal meets rear edge within 5 mm
+TRIPO MINING OK: two side guides finish at cartridge height and no overhead gate frame remains
+TRIPO MINING OK: no rock emitted before actual drilling
+TRIPO MINING OK: suction collar starts retracted and unsealed
+TRIPO MINING OK: unloading receiver has an actual storage bulkhead
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / -0,7 / -0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / -0,7 / 0 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / -0,7 / 0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0 / -0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0 / 0 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0 / 0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0,7 / -0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0,7 / 0 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0,7 / 0,45 / clear
+TRIPO MINING OK: ESC opens modal quit menu and blocks showcase controls
+TRIPO MINING OK: ESC immediately releases and shows mouse pointer
+TRIPO MINING OK: quit dialog freezes actual showcase simulation
+Failed to capture screen shot.
+TRIPO MINING OK: quit dialog keeps pointer available across frames
+TRIPO MINING OK: closing ESC is consumed before gameplay resumes
+TRIPO MINING OK: cancelled quit menu resumes prior simulation
+TRIPO MINING OK: manual showcase pause survives opening and cancelling quit menu
+Failed to capture screen shot.
+Failed to capture screen shot.
+Failed to capture screen shot.
+Failed to capture screen shot.
+TRIPO MINING PHASE: Launching cargo=0 raw=10000 tank=20
+TRIPO MINING PHASE: Outbound cargo=0 raw=10000 tank=20
+TRIPO MINING OK: cargo lid closed during outbound flight
+Failed to capture screen shot.
+TRIPO MINING PHASE: Docking cargo=0 raw=10000 tank=20
+TRIPO MINING PHASE: Mining cargo=0,001041701 raw=9999,999 tank=20
+Failed to capture screen shot.
+TRIPO MINING OK: collected chunk follows actual centre between articulated jaws
+TRIPO MINING OK: pause freezes collecting joints and held chunk
+TRIPO MINING OK: pause freezes articulated lid
+TRIPO MINING OK: stopped drilling and pause emit no additional block
+Failed to capture screen shot.
+TRIPO MINING OK: carried chunk remains in jaws above cargo rim
+Failed to capture screen shot.
+TRIPO MINING OK: released sample drops through open top into transparent box
+TRIPO MINING OK: cargo lid fully open before depositing sample
+Failed to capture screen shot.
+Failed to capture screen shot.
+TRIPO MINING OK: only actual gripper deposits fill visible cargo
+TRIPO MINING OK: both stabilisers touch actual asteroid collider
+TRIPO MINING OK: actual auger tip contacts mining surface
+TRIPO MINING OK: source loss equals carried raw mass
+TRIPO MINING OK: mining consumes actual battery
+TRIPO MINING OK: return supplies protected while mining
+TRIPO MINING OK: pause freezes resource extraction and effects
+Failed to capture screen shot.
+Failed to capture screen shot.
+TRIPO MINING OK: single sequential drill blocks fill all twelve visible cargo slots
+TRIPO MINING OK: filled rocks remain inside cartridge walls floor and lid clearance
+Failed to capture screen shot.
+TRIPO MINING PHASE: Undocking cargo=11,99961 raw=9988,001 tank=20
+TRIPO MINING PHASE: Turning cargo=11,99961 raw=9988,001 tank=20
+TRIPO MINING PHASE: Returning cargo=11,99961 raw=9988,001 tank=20
+TRIPO MINING OK: collecting arm stowed and cargo lid closed for loaded return
+Failed to capture screen shot.
+Failed to capture screen shot.
+TRIPO MINING PHASE: TankDocking cargo=11,99961 raw=9988,001 tank=20
+TRIPO MINING PHASE: Unloading cargo=11,99961 raw=9988,001 tank=20
+TRIPO MINING OK: new rear cargo coupling meets station tank socket
+Failed to capture screen shot.
+TRIPO MINING OK: collar approaches while rear hatch and cargo remain closed
+Failed to capture screen shot.
+TRIPO MINING OK: suction collar contacts cartridge before hatch opening
+TRIPO MINING OK: pause freezes attached collar and closed hatch
+Failed to capture screen shot.
+TRIPO MINING OK: wide rear sliding wall seals at real receiver before opening
+TRIPO MINING OK: rear wall opens at most 90 percent and retains overlap in short guides
+TRIPO MINING OK: gate opens only after collar touches and seals cartridge
+TRIPO MINING OK: pause preserves rear sliding gate pose
+Failed to capture screen shot.
+Failed to capture screen shot.
+TRIPO MINING PHASE: TankUndocking cargo=1,788082E-07 raw=9988,001 tank=29,59969
+TRIPO MINING PHASE: Parking cargo=1,788082E-07 raw=9988,001 tank=29,59969
+TRIPO MINING PHASE: Berthing cargo=1,788082E-07 raw=9988,001 tank=29,59969
+TRIPO MINING PHASE: Servicing cargo=1,788082E-07 raw=9988,001 tank=29,59969
+TRIPO MINING OK: complete actual mining and delivery mission
+TRIPO MINING OK: one real water delivery recorded
+TRIPO MINING OK: 12 kg extracted and unloaded without duplicate cargo
+TRIPO MINING OK: raw mixture converted using actual ice fraction
+TRIPO MINING OK: station tank mass balance before refuelling
+TRIPO MINING OK: returned to exact real charging berth
+TRIPO MINING OK: productive completed trip awards real material experience
+TRIPO MINING OK: mission completes with safety reserves
+TRIPO MINING OK: parked drill stops and cargo display empties
+TRIPO MINING OK: collecting arm completes pickup transfer and release cycles
+TRIPO MINING OK: articulated jaws collect three different sample sizes
+TRIPO MINING OK: collecting tool folds after mining and holds no phantom cargo
+TRIPO MINING OK: moving collecting mesh stays outside cargo box throughout mining
+TRIPO MINING OK: all transferred chunk sizes clear actual cargo rim by at least 6 cm
+TRIPO MINING OK: cargo lid closed and collecting geometry clear at final berth
+TRIPO MINING OK: same gripper-loaded pieces pass through receiver and rear gate closes
+TRIPO MINING OK: rear sliding gate closed before leaving receiver
+TRIPO MINING OK: rear wall seals against cartridge again after unloading and return
+TRIPO MINING OK: all cargo came from one-at-a-time drilling emissions at the auger tip
+TRIPO MINING OK: collar approach seal gate sequence completed and collar retracted after hatch closure
+TRIPO MINING OK: all unloading rock vertices clear the 90 percent gate aperture by at least 15 mm / samples=143 margin=0,01693526 piece=2 progress=0,2023044 opening=0,9 rock=Center: (0.00, -0.21, 0.23), Extents: (0.17, 0.17, 0.18) panel=Center: (0.00, 0.81, 0.00), Extents: (0.65, 0.45, 0.04)
+TRIPO MINING OK: actual flight and dock poses checked against station asteroid and cradle colliders
+Failed to capture screen shot.
+TRIPO MINING OK: quit action opens usable save-before-leaving dialog
+Failed to capture screen shot.
+TRIPO MINING OK: cancel leaving keeps completed showcase and manual pause
+TRIPO MINING OK: leave action reaches start menu without stuck modal
+TRIPO MINING CHECK PASSED: 78 checks, actual extraction and delivery

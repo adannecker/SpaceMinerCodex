@@ -1,5 +1,23 @@
 # Mira: Kopf und Schultern in 3D
 
+## Gemeinsames Dialogstudio mit H2.5 und H3.1 (25.10.2026)
+
+Auf neuen Nutzerauftrag ist der bisher statische H3.1-Export jetzt in das gemeinsame Mira-Dialogmodul übernommen: **Bild / Lowmodell · Tripo2.5 / Highmodell · Tripo3.1** im Dialogstudio, mit größerer Vergleichsansicht, Kopf-/Augen-/Mimikschaltern und Mundstärke. H3.1 erhält eigene anhand seiner gerenderten Geometrie kalibrierte Gesichtsformen und einen eigenen Halsübergang. Bestehende H2.5-Vertices/Formen werden nicht auf das neue Mesh kopiert; die Lautzeitdaten der Aufnahmen sind hingegen gemeinsam. Der Moduswechsel behält die Aufnahme und ihre Position, auch in Pause. Kampagnenvorgabe bleibt das Bild; dieselbe Modul-API kann die beiden3D-Varianten im Spiel darstellen. [Bedienung, Ressourcen und Grenzen](MiraAvatar.md#bild-lowmodell-und-highmodell-25102026).
+
+H3.1 ist weiter eine animierte Oberfläche ohne neue getrennte Zahnreihen/Zunge oder vollständige anatomische Retopologie. Die Exportoriginale bleiben erhalten; neue Assets liegen unter `Assets/SpaceMiner/AvatarLab/TripoH31`, Runtime-Prefabs unter `Resources/MiraModels`. Die nachfolgenden Aussagen „kein Unity-Import/keine Animation“ beschreiben den vorherigen Exportstand.
+
+## H3.1-Original erfolgreich heruntergeladen — 25.10.2026
+
+Auf Nutzerauftrag die bereits am18.10. erzeugte HD-Fassung `0add4eb7-94ba-4147-9bb1-06b2e47eb0ac` erneut geöffnet und erstmals erfolgreich exportiert: **FBX / Blender / 4K Current**. Keine neue Generierung, Hochskalierung, Aufladung oder Abobuchung. Angezeigte Credits vor/nach abgeschlossenem Download **3005 → 3005**, also kein beobachteter Creditabzug für diesen Export. Die historische Exportsperre unten beschreibt weiterhin den damaligen Zustand vom18.10.
+
+Originalarchiv `Mira_Head_Shoulders_H31_4K_2026-10-25.zip` (8.036.291 Bytes) lokal unter `Imports/Tripo` gesichert. Alle fünf unveränderten Exportquellen versionierbar unter [Tripo-H31-2026-10-25](Art/Mira3D/Tripo-H31-2026-10-25/): [Original-FBX](Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbx), Color/Normal/Metallic/Roughness mit jeweils4096×4096 Pixeln. [Exportansicht](Pruefungen/Mira-Tripo-H31-Export-2026-10-25/Tripo-Export-4K.jpg), [Datei-/Strukturprüfung und Hashes](Pruefungen/Mira-Tripo-H31-Export-2026-10-25.json). Kein Unity-Import und keine bestehende H2.5-Quelle überschrieben.
+
+FBX7400 mit dem vorhandenen offiziellen Blender-FBX-Reader erfolgreich gelesen: ein Mesh, ein Material, vier Texturen;46.105 geometrische Vertices und46.009 Polygone (45.742 Quads,213 Dreiecke,51 Fünfecke,3 Sechsecke), nach einfacher Fächertriangulierung91.862 Dreiecke. Keine Skelett-/Deformer-/Blendshape-/Animationsobjekte enthalten. Das ist eine statische Modellgrundlage; innere Mund-/Augen-/Zahnanatomie ist dadurch noch nicht geprüft.
+
+Einschätzung: sinnvoller Kandidat für eine neue isolierte Gesprächsprobe, vor allem wegen der Gesichts-/Haarform. Die H2.5-Originale besaßen bereits4K-Texturen; „höhere Qualität“ ist hier nicht gleichbedeutend mit mehr Polygonen oder erstmals4K. Vorhandene Aoede-Clips und ihre Lautzeitdaten können weiter dienen, aber die für den H2.5-Kopf erzeugten Gesichtsformen/Knochengewichte dürfen wegen anderer Geometrie nicht ungeprüft übernommen werden. Gesichtsaufbau und Animation zuerst an H3.1 anpassen und mit der bisherigen Probe vergleichen; Kampagnenübernahme/gestalterische Freigabe bleiben offen.
+
+Tatsächlich geprüft: Download abgeschlossen, Archiv-CRC und sichere Pfade, FBX-Signatur/Struktur, intakte4K-Texturen, SHA256-identische Originalablage und ZIP-Sicherung, sichtbarer unveränderter Creditstand. Keine neue Blender-Ansichts-/Anatomie-, Unity-, Laufzeit-, Performance- oder Sprechprüfung. Kein Commit/Push; andere lokale Änderungen erhalten.
+
 Sicherung19.10.2026 auf Nutzerauftrag: [Umfang, Assetablage, Wiederaufbau und tatsächliche Prüfungen](Entwicklungsstand-2026-10-19.md). Die folgenden datierten Angaben dokumentieren die Entwicklung; ältere Aussagen zum damaligen Commit-/Pushstatus bleiben historisch erhalten.
 
 Neuer Nutzerauftrag18.10.2026: Aus dem freigegebenen MiraSketch in Tripo einen möglichst ähnlichen echten3D-Kopf mit Schultern erzeugen und anschließend das erste Gespräch damit ausprobieren. Natürliche Zähne und eine für spätere Sprechbewegungen geeignete Mundpartie sind ausdrücklich Qualitätsziele. Die gezeichnete Mira bleibt im Hauptspiel erhalten; die neue Fassung wird zunächst als eigene Dialog-Testanwendung beurteilt. Tripo-Versuch und tatsächliches Ergebnis werden unten separat dokumentiert.

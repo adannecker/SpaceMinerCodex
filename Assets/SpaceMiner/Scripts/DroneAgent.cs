@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SpaceMiner
 {
-    public enum DronePhase { Ready, Outbound, Mining, Returning, Unloading, Servicing, Disabled, Stranded, WaitingForPower, Docking, Undocking, Turning, Parking, Launching, TankDocking, TankUndocking, Berthing }
+    public enum DronePhase { Ready, Outbound, Mining, Returning, Unloading, Servicing, Disabled, Stranded, WaitingForPower, Docking, Undocking, Turning, Parking, Launching, TankDocking, TankUndocking, Berthing, StationWork }
 
     public sealed class DroneAgent : MonoBehaviour
     {
@@ -12,24 +12,62 @@ namespace SpaceMiner
         public Vector3 HomePosition;
         public Quaternion HomeRotation = Quaternion.identity;
         public static readonly Vector3 CargoOutletOffset = new Vector3(0,0.53f,-0.92f);
-        public float DryMassKg = 200f;
-        public float FuelCapacityLiters = 10f;
-        public float BatteryCapacityKwh = 8f;
-        public float CargoCapacityKg = 50f;
-        public float CruiseSpeed = 5f;
+        // Runtime sizing assumptions; old saves retain their own twelve hardware values.
+        public float DryMassKg = 250f;
+        public float FuelCapacityLiters = 15f;
+        public float BatteryCapacityKwh = 16f;
+        public float CargoCapacityKg = 1200f; // Mechanical payload limit; volume can stop loading earlier.
+        public float CruiseSpeed = 2f;
         public float ThrustNewtons = 5f;
         public float ExhaustSpeed = 1000f;
-        public float HeatingKwhPerLiter = 0.2f;
-        public float MiningRateKgPerSecond = 0.1f;
-        public float MiningPowerKw = 80f;
+        public float HeatingKwhPerLiter = 1.2f;
+        public float MiningRateKgPerSecond = 0.5f;
+        public float MiningPowerKw = 4f;
         public float OnboardPowerKw = 0.05f;
         [Range(0f, .5f)] public float ReserveFraction = .1f;
         public float EffectiveMiningRate => MiningRateKgPerSecond * Scenario.Mining.RateMultiplier;
         public float EffectiveMiningPower => MiningPowerKw * Scenario.Mining.PowerMultiplier;
         public float EnergyReserveKwh => BatteryCapacityKwh * ReserveFraction;
         public float FuelReserveLiters => FuelCapacityLiters * ReserveFraction;
+        public DroneCargoProfile CargoProfile { get; private set; } = DroneCargoProfile.Campaign();
+        public float CargoWaterMassFraction => CargoKg <= .0001f && Target == null ? .8f : cargoWaterFraction;
+        public float EffectiveCargoCapacityKg => CargoProfile.CapacityKg(CargoWaterMassFraction, CargoCapacityKg);
+        public float CargoVolumeM3 => CargoProfile.OccupiedVolumeM3(CargoKg, CargoWaterMassFraction);
+        // New profiles show checked-volume occupancy (full plan = 90%). Legacy
+        // previews retain their old relative mass display without inflating cargo.
+        public float CargoFillFraction => Mathf.Clamp01(CargoProfile.VolumeLimited
+            ? CargoVolumeM3 / CargoProfile.UsableVolumeM3 : CargoKg / Mathf.Max(.001f, CargoCapacityKg));
+        public float CargoCapacityFor(AsteroidResource source) => CargoProfile.CapacityKg(source != null ? source.WaterFraction : CargoWaterMassFraction, CargoCapacityKg);
+        public void UseLegacyCargoProfile() { CargoProfile = DroneCargoProfile.Legacy(); }
+        // Called only when a genuinely new campaign is accepted, before its supply reset.
+        // General simulation resets and saved-game loads intentionally do not call this.
+        public void InitializeNewCampaignHardware()
+        {
+            DryMassKg = 250f; FuelCapacityLiters = 15f; BatteryCapacityKwh = 16f;
+            CargoCapacityKg = 1200f; CruiseSpeed = 2f; ThrustNewtons = 5f; ExhaustSpeed = 1000f;
+            HeatingKwhPerLiter = 1.2f; MiningRateKgPerSecond = .5f; MiningPowerKw = 4f;
+            OnboardPowerKw = .05f; ReserveFraction = .1f; CargoProfile = DroneCargoProfile.Campaign();
+        }
+        // Explicit opt-in for an old save. Resource amounts are preserved exactly;
+        // a larger legacy store must be used first rather than silently discarded.
+        public bool ApplyNewSizingAtDock(out string reason)
+        {
+            bool parked = Phase == DronePhase.Ready || Phase == DronePhase.Disabled
+                || Phase == DronePhase.Servicing || Phase == DronePhase.WaitingForPower;
+            if (!parked || HasTankOrder || CargoKg > .0001f || Vector3.Distance(transform.position, HomePosition) > .05f)
+            { reason = "Auslegung nur ohne Auftrag und Fracht am eigenen Dock umstellen."; return false; }
+            if (BatteryKwh > 16f || FuelLiters > 15f)
+            { reason = "Vorhandene Vorräte übersteigen die neue Kapazität; erst verbrauchen."; return false; }
+            InitializeNewCampaignHardware();
+            if (IsOperational && Phase == DronePhase.Ready) Phase = DronePhase.Servicing;
+            reason = IsOperational ? "Neue Testauslegung übernommen; vorhandene Vorräte erhalten. Reguläres Laden und Betanken aus Stationsbeständen."
+                : "Neue Testauslegung übernommen; vorhandene Vorräte erhalten. Drohne bleibt inaktiv.";
+            return true;
+        }
         public float RequiredReturnEnergyKwh => ReturnBudget(CargoKg).Energy + EnergyReserveKwh;
         public float RequiredReturnFuelLiters => ReturnBudget(CargoKg).Fuel + FuelReserveLiters;
+        public float RequiredDockReturnEnergyKwh=>DockReturnBudget(CargoKg).Energy+EnergyReserveKwh;
+        public float RequiredDockReturnFuelLiters=>DockReturnBudget(CargoKg).Fuel+FuelReserveLiters;
         public string ReturnReason { get; private set; } = "";
 
         public DronePhase Phase { get; private set; }
@@ -38,6 +76,8 @@ namespace SpaceMiner
         public float BatteryKwh { get; private set; }
         public float CargoKg { get; private set; }
         public float CargoWaterLiters => CargoKg * cargoWaterFraction;
+        public bool RawIceDelivery=>rawIceDelivery;
+        public bool DeliveringExistingCargo=>retainedCargoFlight;
         public float Speed { get; private set; }
         public float BurnedWaterLiters { get; private set; }
         public bool HasTankOrder { get; private set; }
@@ -49,6 +89,7 @@ namespace SpaceMiner
         private float miningStandOff = 2.4f;
         private Vector3 cargoPortOffset = CargoOutletOffset;
         private DroneFlightPlanner navigator;
+        internal DroneFlightPlanner Navigation=>navigator;
         private Vector3[] route;
         private int routeIndex;
         private float launchDistance=1.8f,launchLift,holdHeight=8f;
@@ -66,7 +107,8 @@ namespace SpaceMiner
         public Vector3 TankDockPoint => TankInlet - TankDockRotation * cargoPortOffset;
         public Vector3 TankApproachPoint => TankDockPoint + TankOutward * 4f + Vector3.up * 0.6f;
         public Vector3 HomeApproachPoint => HomePosition + HomeRotation * Vector3.forward * launchDistance+Vector3.up*launchLift;
-        public float UnloadProgress => Phase == DronePhase.Unloading ? Mathf.Clamp01((phaseSeconds-unloadStart)/Mathf.Max(1f,unloadEnd-unloadStart)) : 0f;
+        public float UnloadProgress => Phase == DronePhase.Unloading ? rawIceDelivery?Mathf.Clamp01(1-CargoKg/Mathf.Max(.001f,unloadInitialCargoKg))
+            : Mathf.Clamp01((phaseSeconds-unloadStart)/Mathf.Max(1f,unloadEnd-unloadStart)) : 0f;
         public Vector3 TankInlet
         {
             get
@@ -109,6 +151,9 @@ namespace SpaceMiner
         private float phaseSeconds;
         private float cargoGoal;
         private float cargoWaterFraction;
+        private bool rawIceDelivery;
+        private bool retainedCargoFlight;
+        private float unloadInitialCargoKg;
         private float finalRawGoal;
         private Vector3 maneuverStart;
         private Quaternion maneuverRotation;
@@ -150,9 +195,12 @@ namespace SpaceMiner
             if (source == null || !source.CanMineWater) { reason = "Kein abbaubares Wasservorkommen."; return false; }
             Vector3 approach = ApproachPoint(source);
             Vector3 above = HomeHoldPoint;
-            Budget outbound = FlightBudget(CargoCapacityKg, 240f, HomeApproachPoint, above, approach);
-            Budget returning = ReturnBudget(CargoCapacityKg);
-            float minimumKg = Mathf.Min(1f, source.RemainingRawKg);
+            bool rawDelivery=HasTankOrder?rawIceDelivery:Scenario.UsesIcePlant;
+            float targetCargo = PlannedCargoGoal(source,rawDelivery);
+            if (targetCargo <= CargoKg + .0001f) { reason = rawDelivery?"Roh-Eisannahme geschlossen oder ohne freien Puffer.":"Kein Platz für eine weitere Wasserlieferung."; return false; }
+            Budget outbound = FlightBudget(CargoKg, 240f, HomeApproachPoint, above, approach);
+            Budget returning = ReturnBudget(targetCargo, source.WaterFraction,rawDelivery);
+            float minimumKg = Mathf.Min(1f, targetCargo - CargoKg);
             float estimatedEnergy = outbound.Energy + returning.Energy + EnergyReserveKwh
                 + minimumKg / EffectiveMiningRate * (EffectiveMiningPower + OnboardPowerKw) / 3600f;
             if (FuelLiters < outbound.Fuel + returning.Fuel + FuelReserveLiters) { reason = "Zu wenig Treibwasser für Hinflug, Rückkehr und Reserve."; return false; }
@@ -166,8 +214,25 @@ namespace SpaceMiner
             if (source == null || !source.CanMineWater) return;
             Target = source;
             cargoWaterFraction = source.WaterFraction;
+            rawIceDelivery=Scenario.UsesIcePlant;
+            retainedCargoFlight=false;
             HasTankOrder = true;
             BeginOutbound();
+        }
+
+        public bool DeliverExistingCargo(out string reason)
+        {
+            if(!Scenario.UsesIcePlant||!IsOperational||!IsReady||HasTankOrder||CargoKg<=.0001f
+                ||Vector3.Distance(transform.position,HomePosition)>.05f)
+            {reason="Bestandsfracht nur mit bereiter Drohne am eigenen Dock zur Eisannahme senden.";return false;}
+            float accepted=Mathf.Min(CargoKg,(float)Scenario.RawReceivingCapacity(cargoWaterFraction));
+            if(accepted<=0){reason="Roh-Eisannahme geschlossen oder voll.";return false;}
+            Budget loaded=FlightBudget(CargoKg,navigator!=null?570f:480f,HomeApproachPoint,HomeHoldPoint,TankApproachPoint);
+            Budget parking=FlightBudget(CargoKg-accepted,240f,TankApproachPoint,HomeHoldPoint,HomeApproachPoint);
+            if(FuelLiters<loaded.Fuel+parking.Fuel+FuelReserveLiters||BatteryKwh<loaded.Energy+parking.Energy+EnergyReserveKwh)
+            {reason="Versorgung für beladene Annahmefahrt, Rückkehr und Reserve reicht nicht.";return false;}
+            rawIceDelivery=retainedCargoFlight=true;HasTankOrder=false;productiveTrip=cancelledTrip=false;Target=null;
+            BeginManeuver(DronePhase.Launching);reason="Bestandsfracht fährt zur Roh-Eisannahme; kein neuer Abbauauftrag.";return true;
         }
 
         [System.Serializable]
@@ -183,6 +248,11 @@ namespace SpaceMiner
             public Vector3[] route;
             public int routeIndex;
             public float[] hardware;
+            public DroneCargoProfile.SavedState cargoProfile;
+            public bool rawIceDelivery;
+            public bool retainedCargoFlight;
+            public int iceDeliveryVersion;
+            public float unloadInitialCargoKg;
         }
         public SavedState CaptureState() => new SavedState {
             position=transform.position, rotation=transform.rotation, phase=Phase, target=Target == null ? null : Target.name,
@@ -192,6 +262,8 @@ namespace SpaceMiner
             maneuverStart=maneuverStart, maneuverRotation=maneuverRotation, parkingAbove=parkingAbove, outboundAbove=outboundAbove,
             productiveTrip=productiveTrip, cancelledTrip=cancelledTrip, returnReason=ReturnReason,
             hardware=new[]{DryMassKg,FuelCapacityLiters,BatteryCapacityKwh,CargoCapacityKg,CruiseSpeed,ThrustNewtons,ExhaustSpeed,HeatingKwhPerLiter,MiningRateKgPerSecond,MiningPowerKw,OnboardPowerKw,ReserveFraction},
+            cargoProfile=CargoProfile.Capture(),
+            rawIceDelivery=rawIceDelivery,retainedCargoFlight=retainedCargoFlight,iceDeliveryVersion=1,unloadInitialCargoKg=unloadInitialCargoKg,
             operational=IsOperational,needsInitialCharge=NeedsInitialCharge,route=route,routeIndex=routeIndex
         };
         public void RestoreState(SavedState state)
@@ -201,6 +273,13 @@ namespace SpaceMiner
             var h=state.hardware;
             DryMassKg=h[0];FuelCapacityLiters=h[1];BatteryCapacityKwh=h[2];CargoCapacityKg=h[3];CruiseSpeed=h[4];ThrustNewtons=h[5];
             ExhaustSpeed=h[6];HeatingKwhPerLiter=h[7];MiningRateKgPerSecond=h[8];MiningPowerKw=h[9];OnboardPowerKw=h[10];ReserveFraction=h[11];
+            CargoProfile=DroneCargoProfile.Restore(state.cargoProfile);
+            // Existing LIVE journeys keep phase, cargo and supplies, but their next
+            // physical unloading now preserves both constituents through the plant.
+            rawIceDelivery=Scenario.UsesIcePlant&&(state.rawIceDelivery||state.tankOrder||state.cargo>0);
+            retainedCargoFlight=state.retainedCargoFlight;
+            unloadInitialCargoKg=state.unloadInitialCargoKg;
+            if(rawIceDelivery&&state.phase==DronePhase.Unloading&&unloadInitialCargoKg<state.cargo)unloadInitialCargoKg=state.cargo;
             transform.SetPositionAndRotation(state.position,state.rotation); Phase=state.phase;
             Target=System.Array.Find(Scenario.Asteroids,a=>a.name==state.target);
             FuelLiters=state.fuel; BatteryKwh=state.battery; CargoKg=state.cargo; Speed=state.speed;
@@ -211,9 +290,28 @@ namespace SpaceMiner
             maneuverRotation=state.maneuverRotation;parkingAbove=state.parkingAbove;outboundAbove=state.outboundAbove;
             productiveTrip=state.productiveTrip;cancelledTrip=state.cancelledTrip;
             route=state.route;routeIndex=state.routeIndex;
+            if(Scenario.Drones!=null && System.Array.IndexOf(Scenario.Drones,this)>0 && (Scenario.Operations==null||!Scenario.Operations.CanUseDrone(System.Array.IndexOf(Scenario.Drones,this)))) LockInactive();
             if(Target!=null && (Phase==DronePhase.Launching || Phase==DronePhase.Outbound || Phase==DronePhase.Docking || Phase==DronePhase.Mining || Phase==DronePhase.Undocking)) UseWorkingSurface();
             GetComponent<MiningDroneVisual>()?.RefreshPose();
+            GetComponent<TripoMiningDroneVisual>()?.RestoreCargoPresentation();
         }
+
+        internal void LockInactive()
+        {
+            ReleaseWorkingSurface(); IsOperational=false; NeedsInitialCharge=false;
+            HasTankOrder=false; Target=null; Speed=0; Phase=DronePhase.Disabled;
+            transform.SetPositionAndRotation(HomePosition,HomeRotation);
+            GetComponent<MiningDroneVisual>()?.RefreshPose();
+        }
+        internal bool StartStationWork()
+        {
+            if(!IsReady||HasTankOrder||BatteryKwh<EnergyReserveKwh+.35f||FuelLiters<FuelReserveLiters+.25f)return false;
+            BatteryKwh-=.35f;FuelLiters-=.25f;Phase=DronePhase.StationWork;Speed=0;return true;
+        }
+        internal void ResumeStationWork(){Phase=DronePhase.StationWork;}
+        internal void SetStationWorkPose(Vector3 position,float seconds){Speed=seconds>0?Vector3.Distance(transform.position,position)/seconds:0;transform.SetPositionAndRotation(position,HomeRotation);}
+        internal void FinishStationWork(){transform.SetPositionAndRotation(HomePosition,HomeRotation);Speed=0;Phase=DronePhase.Servicing;}
+        internal void ActivateAtDock(){IsOperational=true;NeedsInitialCharge=true;FuelLiters=BatteryKwh=0;Phase=DronePhase.Servicing;}
 
         internal void RebindHome(Transform berth)
         {
@@ -239,6 +337,7 @@ namespace SpaceMiner
                 maneuverStart = TankDockPoint; maneuverRotation = TankDockRotation;
             }
             GetComponent<MiningDroneVisual>()?.RefreshPose();
+            GetComponent<TripoMiningDroneVisual>()?.Refresh(0);
         }
 
         public void ResetDrone()
@@ -250,6 +349,7 @@ namespace SpaceMiner
             FuelLiters = IsOperational && !NeedsInitialCharge ? FuelCapacityLiters : 0f;
             BatteryKwh = IsOperational && !NeedsInitialCharge ? BatteryCapacityKwh : 0f;
             CargoKg = Speed = BurnedWaterLiters = phaseSeconds = 0f;
+            rawIceDelivery=retainedCargoFlight=false;unloadInitialCargoKg=0;
             HasTankOrder = false;
             Target = null;
             productiveTrip = cancelledTrip = false;
@@ -288,13 +388,22 @@ namespace SpaceMiner
             }
             cargoWaterFraction = Target.WaterFraction;
             // The final delivery fits the remaining tank space; earlier trips use the full cargo hold.
-            finalRawGoal = Mathf.Min(CargoCapacityKg, (Scenario.TankCapacityLiters - Scenario.WaterLiters) / cargoWaterFraction);
-            cargoGoal = Mathf.Min(Target.RemainingRawKg, finalRawGoal);
+            finalRawGoal = rawIceDelivery?Mathf.Min(CargoCapacityFor(Target),(float)Scenario.RawReceivingCapacity(cargoWaterFraction))
+                : Mathf.Min(CargoCapacityFor(Target), Mathf.Max(0, Scenario.TankCapacityLiters - Scenario.WaterLiters) / cargoWaterFraction);
+            cargoGoal = PlannedCargoGoal(Target,rawIceDelivery);
             productiveTrip = cancelledTrip = false;
             ReturnReason = "";
             UseWorkingSurface();
             ApproachPoint(Target);
             BeginManeuver(DronePhase.Launching);
+        }
+
+        private float PlannedCargoGoal(AsteroidResource source,bool rawDelivery)
+        {
+            if (source == null || source.WaterFraction <= 0) return CargoKg;
+            float tankLimit = rawDelivery?(float)Scenario.RawReceivingCapacity(source.WaterFraction)
+                : Mathf.Max(0, Scenario.TankCapacityLiters - Scenario.WaterLiters) / source.WaterFraction;
+            return Mathf.Min(CargoCapacityFor(source), tankLimit, CargoKg + source.RemainingRawKg);
         }
 
         // Only the working asteroid needs an exact near-surface collider. Restore the shared LOD after mining.
@@ -335,6 +444,12 @@ namespace SpaceMiner
         public void Tick(float seconds)
         {
             if (!IsOperational || Phase == DronePhase.Disabled || Phase == DronePhase.Stranded) return;
+            if(Phase==DronePhase.Unloading&&!rawIceDelivery&&Scenario.Operations!=null&&Scenario.Operations.Live&&!Scenario.Operations.WaterConnected(7))return;
+            // Check before spending another waiting timestep. The route starts at
+            // this receiver, not at the asteroid used for the earlier sortie.
+            if(rawIceDelivery&&Phase==DronePhase.Unloading&&CargoKg>0&&phaseSeconds>=unloadStart
+                &&Scenario.RawReceivingCapacity(cargoWaterFraction)<=0&&DockWaitReserveReached(seconds))
+                BeginLoadedDockReturn("Annahme blockiert: Rückkehrreserve erreicht. Restladung bleibt an Bord.");
             if (IsFlying || IsManeuver || Phase == DronePhase.Unloading)
             {
                 float demand = OnboardPowerKw * seconds / 3600f;
@@ -368,9 +483,10 @@ namespace SpaceMiner
                         Vector3.Lerp(HomePosition+Vector3.up*launchLift,HomePosition,Mathf.SmoothStep(0,1,(phaseSeconds-100)/20))):Vector3.Lerp(maneuverStart,HomePosition,Mathf.SmoothStep(0,1,Mathf.Clamp01((phaseSeconds-45)/75)));
                     if (phaseSeconds >= 120f) {
                         transform.rotation = HomeRotation;
-                        if (productiveTrip && !cancelledTrip) Scenario.Mining.CompleteTrip();
+                        if (productiveTrip && !cancelledTrip&&!retainedCargoFlight) Scenario.Mining.CompleteTrip();
                         productiveTrip = false;
-                        Phase = Scenario.QuestComplete ? DronePhase.Ready : DronePhase.Servicing;
+                        retainedCargoFlight=false;
+                        Phase = !rawIceDelivery&&Scenario.QuestComplete ? DronePhase.Ready : DronePhase.Servicing;
                     }
                     break;
                 case DronePhase.Docking:
@@ -404,8 +520,31 @@ namespace SpaceMiner
                 case DronePhase.Unloading:
                     phaseSeconds += seconds;
                     transform.rotation = TankDockRotation;
+                    if(rawIceDelivery&&CargoKg>0){
+                        if(Vector3.Distance(CargoOutletPoint,TankInlet)>.025f){ReturnReason="Rohannahme wartet auf geschlossene Kupplung";break;}
+                        if(phaseSeconds>220f){phaseSeconds=unloadEnd;break;}
+                        float activeSeconds=Mathf.Max(0,Mathf.Min(seconds,phaseSeconds-unloadStart));
+                        double requested=(double)unloadInitialCargoKg/Mathf.Max(1,unloadEnd-unloadStart)*activeSeconds;
+                        // Backpressure is a physical capacity constraint. The exact
+                        // transfer can be slightly smaller solely because CargoKg is
+                        // a float; that rounding is not a blocked receiving machine.
+                        double receivingSpace=Scenario.RawReceivingCapacity(cargoWaterFraction);
+                        bool backpressure=receivingSpace+1e-7<System.Math.Min(CargoKg,requested);
+                        double rawAccepted=Scenario.DepositRawIce(CargoKg,requested,cargoWaterFraction,out float remaining);
+                        if(rawAccepted>0){if(!productiveTrip)Scenario.RecordRawDelivery();productiveTrip=true;CargoKg=remaining;}
+                        if(CargoKg>0){
+                            phaseSeconds=Mathf.Min(phaseSeconds,unloadEnd);
+                            if(requested>0&&backpressure&&DockWaitReserveReached(seconds))
+                                BeginLoadedDockReturn("Annahme zu langsam: Rückkehrreserve erreicht. Restladung bleibt an Bord.");
+                            else ReturnReason=rawAccepted<=0?"Eisannahme voll / Restladung bleibt an Bord":"Roh-Eis wird geschlossen übergeben";
+                            break;
+                        }
+                    }
                     if (phaseSeconds >= 240f)
                     {
+                        if(rawIceDelivery){
+                            HasTankOrder=false;BeginManeuver(DronePhase.TankUndocking);break;
+                        }
                         float accepted = Scenario.DepositWater(CargoWaterLiters);
                         productiveTrip = accepted > .001f;
                         CargoKg = Mathf.Max(0f, CargoKg - accepted / Mathf.Max(0.001f, cargoWaterFraction));
@@ -414,8 +553,8 @@ namespace SpaceMiner
                     }
                     break;
                 case DronePhase.Servicing:
-                    FuelLiters += Scenario.TakeFuelWater(Mathf.Min(FuelCapacityLiters - FuelLiters, seconds));
-                    BatteryKwh = Mathf.Min(BatteryCapacityKwh, BatteryKwh + Scenario.DroneChargePowerKw * seconds / 3600f);
+                    if(Scenario.Operations==null||!Scenario.Operations.Live||Scenario.Operations.WaterConnected(1))FuelLiters += Scenario.TakeFuelWater(Mathf.Min(FuelCapacityLiters - FuelLiters, seconds));
+                    BatteryKwh = Mathf.Min(BatteryCapacityKwh, BatteryKwh + Scenario.AllocatedChargeKw * seconds / 3600f);
                     if (FuelLiters >= FuelCapacityLiters - 0.001f && BatteryKwh >= BatteryCapacityKwh - 0.001f)
                     {
                         Phase = DronePhase.Ready;
@@ -458,8 +597,33 @@ namespace SpaceMiner
             return new Budget { Fuel = fuel, Energy = fuel * HeatingKwhPerLiter + duration * OnboardPowerKw / 3600f };
         }
 
-        private Budget ReturnBudget(float cargo) => FlightBudget(cargo, navigator!=null?930f:840f,
-            SurfacePoint + SurfaceNormal * 5f, TankApproachPoint, HomeHoldPoint, HomeApproachPoint);
+        private Budget ReturnBudget(float cargo) => ReturnBudget(cargo, cargoWaterFraction,rawIceDelivery);
+        private Budget DockReturnBudget(float cargo)=>FlightBudget(cargo,240f,TankApproachPoint,HomeHoldPoint,HomeApproachPoint);
+        private bool DockWaitReserveReached(float seconds)
+        {
+            Budget home=DockReturnBudget(CargoKg);
+            float nextWait=OnboardPowerKw*Mathf.Max(.25f,seconds)/3600f;
+            return BatteryKwh<=home.Energy+EnergyReserveKwh+nextWait+.001f
+                ||FuelLiters<=home.Fuel+FuelReserveLiters+.0001f;
+        }
+        private void BeginLoadedDockReturn(string reason)
+        {
+            HasTankOrder=false;cancelledTrip=true;ReturnReason=reason;Scenario.Notify(reason);
+            BeginManeuver(DronePhase.TankUndocking);
+        }
+        private Budget ReturnBudget(float cargo, float waterFraction,bool rawDelivery)
+        {
+            // Only the approach to the receiving tank carries the collected load.
+            // If the tank cannot take everything, keep the remainder on the home legs.
+            float available = Mathf.Max(0, Scenario.TankCapacityLiters - Scenario.WaterLiters);
+            float deliveredRaw = rawDelivery?Mathf.Min(cargo,(float)Scenario.RawReceivingCapacity(waterFraction))
+                : waterFraction > 0 ? Mathf.Min(cargo, available / waterFraction) : 0;
+            Budget loaded = FlightBudget(cargo, navigator != null ? 690f : 600f,
+                SurfacePoint + SurfaceNormal * 5f, TankApproachPoint);
+            Budget parking = FlightBudget(Mathf.Max(0, cargo - deliveredRaw), 240f,
+                TankApproachPoint, HomeHoldPoint, HomeApproachPoint);
+            return new Budget { Fuel = loaded.Fuel + parking.Fuel, Energy = loaded.Energy + parking.Energy };
+        }
 
         private void MineWithinBudget(float seconds)
         {
@@ -513,7 +677,8 @@ namespace SpaceMiner
                 phaseSeconds = 0f;
                 if(route!=null && routeIndex+1<route.Length) { StartLeg(route[++routeIndex],Phase); return; }
                 if (Phase == DronePhase.Outbound) {
-                    if (outboundAbove) { outboundAbove = false; BeginFlight(ApproachPoint(Target),DronePhase.Outbound); }
+                    if(retainedCargoFlight){outboundAbove=false;BeginFlight(TankApproachPoint,DronePhase.Returning);}
+                    else if (outboundAbove) { outboundAbove = false; BeginFlight(ApproachPoint(Target),DronePhase.Outbound); }
                     else BeginManeuver(DronePhase.Docking);
                 }
                 else if (Phase == DronePhase.Parking)
@@ -538,7 +703,15 @@ namespace SpaceMiner
 
         public void ReturnToShip()
         {
-            if (!IsOperational || !HasTankOrder) return;
+            if (!IsOperational || (!HasTankOrder&&!retainedCargoFlight)) return;
+            if(rawIceDelivery&&Phase==DronePhase.Unloading){
+                Budget home=DockReturnBudget(CargoKg);
+                if(BatteryKwh<home.Energy+EnergyReserveKwh||FuelLiters<home.Fuel+FuelReserveLiters){
+                    ReturnReason="Beladener Heimflug samt Reserve noch nicht gesichert; weiter entladen statt unsicher abdocken.";
+                    Scenario.Notify(ReturnReason);return;
+                }
+                BeginLoadedDockReturn("Auftrag beendet. Rückflug mit tatsächlicher Restladung und geschützter Reserve.");return;
+            }
             HasTankOrder = false;
             cancelledTrip = true;
             Scenario.Notify("Auftrag beendet. Drohne kehrt mit ihrer Ladung zurück.");
@@ -557,6 +730,7 @@ namespace SpaceMiner
             maneuverRotation = transform.rotation;
             phaseSeconds = Speed = 0f;
             Phase = phase;
+            if(phase==DronePhase.Unloading)unloadInitialCargoKg=CargoKg;
         }
 
         private static Quaternion Facing(Vector3 direction)

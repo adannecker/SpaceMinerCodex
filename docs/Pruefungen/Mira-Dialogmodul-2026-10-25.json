@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-25",
+  "passed": true,
+  "request": "Shared Mira dialogue and voice component in an isolated test application and main-game awakening/station dialogue",
+  "sourceUnity": "6000.4.7f1",
+  "testedUnity": "6000.6.4f1",
+  "configuration": "Development",
+  "demo": "Builds/MiraDialogueDemo/MiraDialogueDemo.exe",
+  "demoProductName": "Mira Dialogstudio",
+  "game": "Builds/MiraDialogueGame/SpaceMiner.exe",
+  "runtimeAssembliesIdentical": true,
+  "demoAssemblySha256": "E264225DAFD9548B258E38965D3FE6DA57FFDFA8DF44CFF57FBF72AC8BF5BBBF",
+  "gameAssemblySha256": "E264225DAFD9548B258E38965D3FE6DA57FFDFA8DF44CFF57FBF72AC8BF5BBBF",
+  "checks": 399,
+  "runs": [
+    {
+      "name": "demo-1440x900",
+      "checks": 70,
+      "exitCode": 0,
+      "log": "Logs/MiraDialogue/demo-final-1440.log",
+      "build": "demo-04"
+    },
+    {
+      "name": "demo-960x600",
+      "checks": 70,
+      "exitCode": 0,
+      "log": "Logs/MiraDialogue/demo-960.log",
+      "build": "demo-03, identical runtime assembly; before product identity separation"
+    },
+    {
+      "name": "demo-2560x1440",
+      "checks": 70,
+      "exitCode": 0,
+      "log": "Logs/MiraDialogue/demo-2560.log",
+      "build": "demo-03, identical runtime assembly; before product identity separation"
+    },
+    {
+      "name": "main-game-dialogue",
+      "checks": 10,
+      "exitCode": 0,
+      "log": "Logs/MiraDialogue/integration.log",
+      "build": "game-02"
+    },
+    {
+      "name": "drone-console-mira-regression",
+      "checks": 179,
+      "exitCode": 0,
+      "log": "Logs/MiraDialogue/drone-console.log",
+      "build": "game-02"
+    }
+  ],
+  "voiceCues": 14,
+  "textOnlyCues": 2,
+  "screenshotsSaved": 23,
+  "screenshotsVisuallyReviewed": [
+    "demo-voiced-1440.png",
+    "demo-voiced-960.png",
+    "demo-subtitles-off-2560.png",
+    "game-station-dialogue.png"
+  ],
+  "scope": [
+    "Real AudioSource advancement/pause/resume/mute, replacement and stop",
+    "All sixteen real awakening lines and mood selection",
+    "Missing recording fallback and text duration, one completion event and retained acknowledgement",
+    "Shared main-game module during awakening and spoken station acknowledgement",
+    "Actual drone command, delivery dialogue over existing terminal and natural paid water quest"
+  ],
+  "sourceHashes": [
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraDialogueModule.cs",
+      "sha256": "487869C0AD0414E1E00B3BCD1F3063D7FF8AC68B9607FAF44B9AF0CE6EDB6F3B"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraDialogueDemo.cs",
+      "sha256": "3A0AB70F2406D61FDAADB95FB3C4D2FF232DC9EF997586B2453AC6DD015BE732"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraDialogueModuleCheck.cs",
+      "sha256": "F0DDAB9834C90686D4345B874E6607FADA2576FEE584A2E4E8A298E317445FAA"
+    },
+    {
+      "path": "Assets/SpaceMiner/Editor/MiraDialogueBuild.cs",
+      "sha256": "61A32447F5EB242FC72901180FDE6AE9360533BF7DC1D191E85916F51517821C"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/IntroSequence.cs",
+      "sha256": "2325E9A49CA59B3D6D6243CDC6EDA8F5CDB7E8222223EC9DC71A96019180EAD2"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/ScannerProgression.cs",
+      "sha256": "BDDE23E061B8ED28A5F737C61BB0924405A2E127AAFF3C11ED06E0B8983092EA"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerSettings.cs",
+      "sha256": "9AB3411562FEFD985417C57BD1AC967A2827E5C3494AC0FB9A781DD9F13778DE"
+    },
+    {
+      "path": "Assets/SpaceMiner/DialogueLab/MiraDialogueDemo.unity",
+      "sha256": "AA8DBBDB3F80D4842848235E6225F6999A7D79C9A12E7D7B53696B08923502FA"
+    }
+  ],
+  "preservedRoomPlanEvidence": "Mira-Dialogmodul-2026-10-25/preserved-room-plans.json",
+  "buildAttempts": [
+    "Initial sandbox editor stalled before compilation at licensing; retry with local license-service access succeeded",
+    "First functional run passed 67 checks but relative screenshot paths failed; absolute paths and file checks added, both players rebuilt and successful runs repeated",
+    "Final demo rebuilt with separate Unity product name; source settings restored and delivered identity verified in globalgamemanagers"
+  ],
+  "limits": [
+    "No subjective listening or native mouse/keyboard acceptance claimed",
+    "No Release build, 3D model integration, live speech synthesis or full-project performance validation",
+    "Existing Builds/Windows installation not replaced; separate main-game check build only",
+    "Four concurrent unrelated source differences to the build snapshot preserved: IndoorDroneTrafficBuild, StationBatteryPlacement, StationIndoorTraffic, StationInteriorLayout; no claim that this check build contains those newer edits",
+    "Only command-room plan was included in initial before/after hash snapshot; no hash-based preservation claim for the other two plans",
+    "Memory cinematic retains its continuous narration timeline and the existing common visor view"
+  ],
+  "committed": false,
+  "pushed": false
+}

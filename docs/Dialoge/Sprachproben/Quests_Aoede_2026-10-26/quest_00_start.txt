@@ -1,0 +1,1 @@
+Bevor wir unsere einzige einsatzbereite Drohne losschicken, müssen wir wissen, was uns umgibt. Geh an das Scannerpult und löse den Nahbereichsscan aus, sobald der Scanner bereit ist. Damit finden wir mögliche Wasserquellen und nahe Wrackteile. In der virtuellen Außenansicht erscheinen anschließend die erfassten Kontakte. Was darin steckt, müssen wir erst noch untersuchen.

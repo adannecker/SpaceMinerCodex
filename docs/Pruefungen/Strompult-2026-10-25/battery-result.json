@@ -1,0 +1,13 @@
+{
+    "passed": true,
+    "checks": 550,
+    "layout": 15,
+    "frustumWarnings": 0,
+    "pictures": [
+        "01-intakter-nullgrad-gang-leere-buchten.png",
+        "02-gegenueber-zentrale-01-aktiv-02-aus.png",
+        "03-aktive-kassetten-und-servicefront.png",
+        "04-aussen-doppelhuelle-und-anschluesse.png"
+    ],
+    "scope": "Eight real reactor-axis battery housings, ring-wall apertures, pressure backing, lane and character collisions; imported three-LOD inserts; two installed banks at180 degrees, active01 bound to the existing24kWh power store and02 isolated. Explicit zero-power/7.25kWh old-save fixtures are restored, no resource grants. Four native framebuffer views use the normal game camera, without an additional render camera or lamp. Programmatic scene/controller acceptance, not native OS input, manual comfort, headset or FPS acceptance."
+}

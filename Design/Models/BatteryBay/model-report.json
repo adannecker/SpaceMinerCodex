@@ -1,0 +1,427 @@
+{
+  "generator": "tools/CreateBatteryBay.py",
+  "blender": "4.5.14 LTS",
+  "seed": 251025,
+  "coordinateSystem": "Unity local +X width +Y up +Z depth, front -Z, front-centre floor pivot",
+  "canonicalToBlender": "(x,-z,y), FBX -Z forward / Y up",
+  "lods": [
+    {
+      "name": "BatteryBay_LOD0",
+      "boundsMin": [
+        -1.149999976158142,
+        0.0,
+        -0.029000001028180122
+      ],
+      "boundsMax": [
+        1.149999976158142,
+        3.2200000286102295,
+        3.1399998664855957
+      ],
+      "size": [
+        2.299999952316284,
+        3.2200000286102295,
+        3.168999867513776
+      ],
+      "triangles": 19841,
+      "vertices": 11985,
+      "meshObjects": 11,
+      "groups": [
+        {
+          "name": "ActiveDisplay",
+          "parent": "BatteryBay_LOD0",
+          "vertices": 24,
+          "triangles": 44,
+          "materials": [
+            "BatteryBay_Display"
+          ]
+        },
+        {
+          "name": "Frame",
+          "parent": "BatteryBay_LOD0",
+          "vertices": 504,
+          "triangles": 908,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Housing",
+          "parent": "BatteryBay_LOD0",
+          "vertices": 1672,
+          "triangles": 3092,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Backplane",
+          "parent": "Rack",
+          "vertices": 936,
+          "triangles": 1732,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette01",
+          "parent": "Rack",
+          "vertices": 1752,
+          "triangles": 2926,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette02",
+          "parent": "Rack",
+          "vertices": 1837,
+          "triangles": 3011,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette03",
+          "parent": "Rack",
+          "vertices": 1895,
+          "triangles": 3069,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette04",
+          "parent": "Rack",
+          "vertices": 1763,
+          "triangles": 2939,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "CoolingLoop",
+          "parent": "Rack",
+          "vertices": 408,
+          "triangles": 752,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "CoveredBusbar",
+          "parent": "Rack",
+          "vertices": 1146,
+          "triangles": 1280,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "StatusLenses",
+          "parent": "BatteryBay_LOD0",
+          "vertices": 48,
+          "triangles": 88,
+          "materials": [
+            "BatteryBay_Status"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BatteryBay_LOD1",
+      "boundsMin": [
+        -1.149999976158142,
+        0.0,
+        -0.029000001028180122
+      ],
+      "boundsMax": [
+        1.149999976158142,
+        3.2200000286102295,
+        3.1399998664855957
+      ],
+      "size": [
+        2.299999952316284,
+        3.2200000286102295,
+        3.168999867513776
+      ],
+      "triangles": 12264,
+      "vertices": 6672,
+      "meshObjects": 11,
+      "groups": [
+        {
+          "name": "ActiveDisplay",
+          "parent": "BatteryBay_LOD1",
+          "vertices": 24,
+          "triangles": 44,
+          "materials": [
+            "BatteryBay_Display"
+          ]
+        },
+        {
+          "name": "Frame",
+          "parent": "BatteryBay_LOD1",
+          "vertices": 312,
+          "triangles": 588,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Housing",
+          "parent": "BatteryBay_LOD1",
+          "vertices": 1048,
+          "triangles": 1924,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Backplane",
+          "parent": "Rack",
+          "vertices": 840,
+          "triangles": 1540,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette01",
+          "parent": "Rack",
+          "vertices": 992,
+          "triangles": 1824,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette02",
+          "parent": "Rack",
+          "vertices": 992,
+          "triangles": 1824,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette03",
+          "parent": "Rack",
+          "vertices": 992,
+          "triangles": 1824,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette04",
+          "parent": "Rack",
+          "vertices": 992,
+          "triangles": 1824,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "CoolingLoop",
+          "parent": "Rack",
+          "vertices": 336,
+          "triangles": 608,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "CoveredBusbar",
+          "parent": "Rack",
+          "vertices": 96,
+          "triangles": 176,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "StatusLenses",
+          "parent": "BatteryBay_LOD1",
+          "vertices": 48,
+          "triangles": 88,
+          "materials": [
+            "BatteryBay_Status"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "BatteryBay_LOD2",
+      "boundsMin": [
+        -1.149999976158142,
+        0.0,
+        -0.029000001028180122
+      ],
+      "boundsMax": [
+        1.149999976158142,
+        3.2200000286102295,
+        3.1399998664855957
+      ],
+      "size": [
+        2.299999952316284,
+        3.2200000286102295,
+        3.168999867513776
+      ],
+      "triangles": 2612,
+      "vertices": 1640,
+      "meshObjects": 11,
+      "groups": [
+        {
+          "name": "ActiveDisplay",
+          "parent": "BatteryBay_LOD2",
+          "vertices": 8,
+          "triangles": 12,
+          "materials": [
+            "BatteryBay_Display"
+          ]
+        },
+        {
+          "name": "Frame",
+          "parent": "BatteryBay_LOD2",
+          "vertices": 104,
+          "triangles": 172,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Housing",
+          "parent": "BatteryBay_LOD2",
+          "vertices": 344,
+          "triangles": 564,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Backplane",
+          "parent": "Rack",
+          "vertices": 160,
+          "triangles": 240,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette01",
+          "parent": "Rack",
+          "vertices": 168,
+          "triangles": 252,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette02",
+          "parent": "Rack",
+          "vertices": 168,
+          "triangles": 252,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette03",
+          "parent": "Rack",
+          "vertices": 168,
+          "triangles": 252,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "Cassette04",
+          "parent": "Rack",
+          "vertices": 168,
+          "triangles": 252,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "CoolingLoop",
+          "parent": "Rack",
+          "vertices": 304,
+          "triangles": 544,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "CoveredBusbar",
+          "parent": "Rack",
+          "vertices": 32,
+          "triangles": 48,
+          "materials": [
+            "BatteryBay_Surface"
+          ]
+        },
+        {
+          "name": "StatusLenses",
+          "parent": "BatteryBay_LOD2",
+          "vertices": 16,
+          "triangles": 24,
+          "materials": [
+            "BatteryBay_Status"
+          ]
+        }
+      ]
+    }
+  ],
+  "materials": 3,
+  "atlasResolution": [
+    2048,
+    2048
+  ],
+  "textureChannels": {
+    "Albedo": "sRGB RGB, alpha1",
+    "Normal": "tangent +Y normal, linear",
+    "MetalSmooth": "linear red=metal, alpha=smoothness (Unity Standard)",
+    "MetalRough": "linear red=metal, green=roughness, blue=1"
+  },
+  "runtimeGroups": {
+    "permanent": [
+      "Frame",
+      "Housing"
+    ],
+    "installed": "Rack",
+    "blankDisplay": "ActiveDisplay",
+    "neutralLenses": "StatusLenses"
+  },
+  "displayPlane": {
+    "centre": [
+      0,
+      3.015,
+      -0.026
+    ],
+    "width": 1.24,
+    "height": 0.16,
+    "normal": [
+      0,
+      0,
+      -1
+    ]
+  },
+  "cassetteHandlesFrontZ": 1.114,
+  "frontServiceClearanceM": 1.1,
+  "noCapacityOrChargeText": true,
+  "noColliders": true,
+  "previewFixturesNotExported": true,
+  "notes": "Authored mesh/PBR asset only. No cell chemistry, kWh, active/off state, bank logic or Unity runtime acceptance.",
+  "sha256": {
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\BatteryBay_LOD0.fbx": "820cfe8af655e1d8d9f04e0ac7d863811d5a128de35755bc540f60ea7351cbc6",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\BatteryBay_LOD1.fbx": "9b0176d853de9a7b15234a556710505dcc6bcbdc3f6035c35ba451326d794f22",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\BatteryBay_LOD2.fbx": "e1b52a3c6e8a00edac67e395e5efaad5643bc3488be62e6b14c6368097cadc5b",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\Materials\\BatteryBay_Display.mat": "eeefbc5dd852ec1b0a22b1fcc5b5a09a3f6030df65f584f4968aaa45624fa260",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\Materials\\BatteryBay_Status.mat": "68a83ad33331d42b479c8c7fb65fd81b13dce72c2e094a9ce783df3de98c530a",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\Materials\\BatteryBay_Surface.mat": "55b025c25565908f83bb7e697b18ac7448ad28e6e61c0a95b918ca68c2dfe062",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\Textures\\BatteryBay_Albedo.png": "54277b183fa80dadc3e8293cc7afac5bb58282e142b90230d5b6ec5553c8ef94",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\Textures\\BatteryBay_MetalRough.png": "fe21ed0ef6ace152f620c793b76cf623accf7c221462c7c7f8672c74248547d5",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\Textures\\BatteryBay_MetalSmooth.png": "786226c7d72be3ae5625f381073c79ee648999d3311e4990e7e32c900cd14d77",
+    "Assets\\SpaceMiner\\Resources\\BatteryBay\\Textures\\BatteryBay_Normal.png": "f9f236fa2ef8bf98888635cef1ea22f873fce6475f8407ad55657f9d5c3e8c5d"
+  }
+}

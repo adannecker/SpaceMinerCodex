@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-25",
+  "build": "stationrooms-build-06",
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "layout": 13,
+  "passed": true,
+  "assertions": 3663.0,
+  "runs": [
+    {
+      "name": "workshop",
+      "checks": 1844,
+      "exitCode": 0,
+      "result": "workshop-result.json",
+      "log": "workshop-player.log"
+    },
+    {
+      "name": "rooms",
+      "checks": 794,
+      "exitCode": 0,
+      "result": "rooms-result.json",
+      "log": "rooms-player.log"
+    },
+    {
+      "name": "planner",
+      "checks": 694,
+      "exitCode": 0,
+      "result": "planner-result.json",
+      "log": "planner-player.log"
+    },
+    {
+      "name": "operations",
+      "checks": 97,
+      "exitCode": 0,
+      "result": "operations-result.json",
+      "log": "operations-player.log"
+    },
+    {
+      "name": "station",
+      "checks": 177,
+      "exitCode": 0,
+      "result": "station-result.json",
+      "log": "station-player.log"
+    },
+    {
+      "name": "vitals",
+      "checks": 29,
+      "exitCode": 0,
+      "result": "vitals-result.json",
+      "log": "vitals-player.log"
+    },
+    {
+      "name": "ui",
+      "checks": 28,
+      "exitCode": 0,
+      "result": "ui-result.json",
+      "log": "ui-player.log"
+    }
+  ],
+  "sourceFilesMatched": 246,
+  "sourceManifest": "source-manifest.json",
+  "imagesSaved": 43,
+  "sharedPlanPreserved": true,
+  "sharedPlanSHA256": "767FD90AEDD3988B44EE28FF100CE6E1BFF0DB6A0D73F73071060E721AA9DC7F",
+  "sharedPlanNote": "Current design last edited at 11:30 before this room expansion; preserved. Earlier rotation proof refers to the previous design. All acceptance runs use isolated plan paths.",
+  "scope": [
+    "Four room catalogues and 31 actual movable mesh/collider groups; move, resize, rotate, Shift snapping and isolated room persistence",
+    "Seven-metre telescoping ring gates, real human and drone capsule clearance, supported controller walking and sealed damaged joints",
+    "Ten ground-level imported cradles and water/electric feeds; moved home anchors and navigation cache invalidation",
+    "Current-revision campaign load reconciles parked drones with moved docks while preserving supplies",
+    "Full workshop refit through the interlocked airlock, return and cancellation; existing water/operations/vitals/UI regression",
+    "Actual native fullscreen switch and window restoration"
+  ],
+  "visualReview": [
+    "rooms/01-command-room.png",
+    "rooms/02-drone-bay.png",
+    "rooms/03-drone-workshop.png",
+    "rooms/04-internal-workshop.png",
+    "workshop/10-breites-ringschott.png",
+    "workshop/09-bodengleiche-dockreihen-und-fahrgassen.png",
+    "workshop/02-drohnenhalle-zwei-umbauplaetze.png"
+  ],
+  "limitations": [
+    "Programmatic controller and pointer acceptance with image review; no manual comfort acceptance",
+    "Protected lanes and geometric validation; no complete route solver for arbitrary furniture arrangements",
+    "Resizing is geometric and does not change engineering capacity or production balance",
+    "No new Release, 100k, long-term balance or playable FPS benchmark"
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": "Builds/Windows",
+  "preservedPreviousBuild": "Builds/Windows-before-stationrooms-20261025",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json"
+}

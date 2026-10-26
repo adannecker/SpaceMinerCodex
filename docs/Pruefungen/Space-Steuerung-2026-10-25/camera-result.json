@@ -1,0 +1,5 @@
+{
+    "passed": true,
+    "checks": 37,
+    "scope": "Real outside camera controller held-Space path: world-Y ascent/descent, unchanged orbit/view, equal Shift descent speed, frame-step integration and zoom/settings scaling. Simulation pause stays unchanged; manual translation releases actual drone follow. Real inside/settings/Mira/rendered-search guards and invalid inputs preserve camera state. Native before/after framebuffer screenshots. Programmatic input/controller checks; no native OS key injection, headset or manual comfort acceptance. Interior jump is checked separately."
+}

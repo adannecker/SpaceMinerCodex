@@ -15,7 +15,12 @@ namespace SpaceMiner
         public MiningResearch Mining = new MiningResearch();
         private float resumeRate = 1f;
 
-        public float WaterLiters { get; private set; }
+        private readonly FluidTank waterTank=new FluidTank(StationResources.Water,200,20);
+        public FluidTank WaterTank {get{waterTank.capacity=TankCapacityLiters;return waterTank;}}
+        public float WaterLiters=>WaterTank.amount;
+        public StationOperations Operations {get;internal set;}
+        public bool UsesIcePlant=>Operations!=null&&Operations.Live&&Operations.IcePlant!=null;
+        public float AllocatedChargeKw=>Operations!=null&&Operations.Live?Operations.ChargePerDroneKw:DroneChargePowerKw;
         public int Deliveries { get; private set; }
         public float DeliveredLiters { get; private set; }
         public bool SourceAssigned { get; private set; }
@@ -40,9 +45,8 @@ namespace SpaceMiner
         private void Update()
         {
             if (IntroSequence.BlocksGameplay || SettingsMenu.PausesSimulation) return;
-            if (!SettingsMenu.BlocksInput && Input.GetKeyDown(KeyCode.Space)) TogglePause();
-            if (!SettingsMenu.BlocksInput && !StationInteriorMode.IsInside && Input.GetKeyDown(KeyCode.Tab) && Worker != null)
-                Camera.main.GetComponent<OrbitCamera>().Focus(Worker.Info);
+            if (!SettingsMenu.BlocksInput && !StationOperations.TacticalTextInputActive && !StationInteriorMode.IsInside && Input.GetKeyDown(KeyCode.Tab) && Worker != null)
+                Camera.main.GetComponent<OrbitCamera>().FollowDrone(Worker);
             Advance(Time.unscaledDeltaTime * SimulationRate);
         }
 
@@ -51,11 +55,15 @@ namespace SpaceMiner
 
         public void Advance(float seconds)
         {
+            if(!ResourceContainer.Finite(seconds)||seconds<=0)return;
             // Simulation time is independent of camera/UI time. Small steps keep braking stable.
             while (seconds > 0.0001f)
             {
                 float step = Mathf.Min(seconds, 0.25f);
-                Worker.Tick(step);
+                Operations?.Prepare(step);
+                foreach(var drone in Drones)if(drone.IsOperational)drone.Tick(step);
+                GetComponent<CampaignDroneFleet>()?.Advance(step);
+                Operations?.Advance(step);
                 Scanner?.Advance(step);
                 seconds -= step;
             }
@@ -63,24 +71,65 @@ namespace SpaceMiner
 
         public bool AssignTankOrder(AsteroidResource source)
         {
-            if (QuestComplete) return Reject("Der Schiffstank ist bereits voll.");
+            return AssignTankOrder(source,0);
+        }
+        public bool AssignTankOrder(AsteroidResource source,int droneIndex)
+        {
+            if(droneIndex<0||droneIndex>=Drones.Length||droneIndex>0&&(Operations==null||!Operations.CanUseDrone(droneIndex)))return Reject("Drohne nicht freigeschaltet.");
+            var assigned=Drones[droneIndex];
+            if(Operations!=null&&Operations.IsRefitting(droneIndex))return Reject("Werkzeugumbau läuft: Drohne bleibt im Dock.");
+            if (!UsesIcePlant&&QuestComplete) return Reject("Der Schiffstank ist bereits voll.");
             if (source == null || !source.CanMineWater) return Reject("Kein bestätigtes, abbaubares Wasservorkommen.");
-            if (!Worker.IsOperational) return Reject("Drohne 01 muss zuerst repariert werden.");
-            if (!Worker.IsReady) return Reject("Drohne 01 führt bereits einen Auftrag aus oder lädt noch.");
-            if (!Worker.CanCompleteTrip(source, out string reason)) return Reject(reason);
-            Worker.Assign(source);
+            if (!assigned.IsOperational) return Reject("Drohne muss zuerst repariert werden.");
+            if (!assigned.IsReady) return Reject("Drohne führt bereits einen Auftrag aus oder lädt noch.");
+            if (assigned.CargoKg>.001f) return Reject("Restladung zuerst an der Eisannahme abgeben.");
+            foreach(var other in Drones)if(other!=assigned&&other.HasTankOrder)return Reject("Entladeplatz belegt: Wasserauftrag läuft bereits.");
+            if(Operations!=null&&Operations.State.tools[droneIndex]!="Bohrer")return Reject("Für Eisabbau ist der Bohrer erforderlich.");
+            if (!assigned.CanCompleteTrip(source, out string reason)) return Reject(reason);
+            assigned.Assign(source);
             SourceAssigned = true;
-            Message = "Tankauftrag gestartet: " + source.Info.DisplayName;
+            Message = (UsesIcePlant?"Einzelne Roh-Eislieferung gestartet: ":"Tankauftrag gestartet: ") + source.Info.DisplayName;
             Scanner?.Say("DROHNE 01 UNTERWEGS", "Der Auftrag ist bestätigt. Drohne 01 fliegt zur gescannten Wasserquelle. Ihre Nahbereichssensoren helfen beim Annähern. Wir überwachen Batterie, Treibwasser und Rückkehrreserve.");
             return true;
         }
 
         private bool Reject(string reason) { Message = reason; return false; }
+        public double RawReceivingCapacity(double waterFraction)=>UsesIcePlant?Operations.RawReceivingCapacity(waterFraction):0;
+        public float DepositRawIce(float rawKg,float waterFraction)
+        {
+            return (float)DepositRawIce(rawKg,rawKg,waterFraction,out _);
+        }
+        public double DepositRawIce(float cargoBefore,double requestedRawKg,float waterFraction,out float remainingCargo)
+        {
+            remainingCargo=cargoBefore;
+            if(!UsesIcePlant||!Operations.IceReceivingAvailable||cargoBefore<=0||requestedRawKg<=0)return 0;
+            double limit=Math.Min(cargoBefore,Math.Min(requestedRawKg,RawReceivingCapacity(waterFraction)));
+            if(limit<=0)return 0;
+            float remainder=(float)Math.Max(0,(double)cargoBefore-limit);
+            if((double)cargoBefore-remainder>limit)remainder+=Math.Abs(remainder)*1.2e-7f;
+            double actual=(double)cargoBefore-remainder;
+            if(actual<=0)return 0;
+            double accepted=Operations.IcePlant.Receive(actual,waterFraction);
+            if(accepted!=actual)throw new InvalidOperationException("Rohannahme änderte ihre reservierte Kapazität während einer atomaren Übergabe.");
+            remainingCargo=remainder;return actual;
+        }
+        public void RecordRawDelivery(){Deliveries++;Message="Roh-Eis an der geschlossenen Annahme übernommen; Aufbereitung liefert Wasser nach Bedarf.";}
+        internal void TransferProcessedWater()
+        {
+            if(!UsesIcePlant||!Operations.WaterConnected(0)||!Operations.WaterConnected(7))return;
+            double limit=Math.Min(Operations.IcePlant.CleanWaterPendingKg,WaterTank.Free);
+            if(limit<=0)return;
+            float before=WaterLiters,desired=(float)((double)before+limit);
+            if((double)desired-before>limit)desired-=Math.Abs(desired)*1.2e-7f;
+            float transfer=Math.Max(0,desired-before);if(transfer<=0)return;
+            WaterTank.Add(transfer);double actual=(double)WaterLiters-before;
+            Operations.IcePlant.ExportCleanWater(actual);DeliveredLiters+=(float)actual;
+        }
 
         public float DepositWater(float liters)
         {
             float accepted = Mathf.Min(Mathf.Max(0f, liters), TankCapacityLiters - WaterLiters);
-            WaterLiters += accepted;
+            WaterTank.Add(accepted);
             DeliveredLiters += accepted;
             if (accepted > 0f) Deliveries++;
             Message = QuestComplete ? "Auftrag abgeschlossen: Der Wassertank ist voll." : "Wasser abgeliefert. Drohne wird versorgt.";
@@ -90,18 +139,18 @@ namespace SpaceMiner
         public float TakeFuelWater(float requested)
         {
             float amount = Mathf.Min(Mathf.Max(0f, requested), WaterLiters);
-            WaterLiters -= amount;
+            WaterTank.Remove(amount);
             return amount;
         }
 
         public void Notify(string message) { Message = message; }
         public void RestoreSupply(float water, int deliveries, float delivered, bool assigned)
-        { WaterLiters = water; Deliveries = deliveries; DeliveredLiters = delivered; SourceAssigned = assigned; }
+        { WaterTank.Set(water); Deliveries = deliveries; DeliveredLiters = delivered; SourceAssigned = assigned; }
 
         public void ResetScenario()
         {
             StationInteriorMode.Current?.Vitals.Reset();
-            WaterLiters = StartingWaterLiters;
+            WaterTank.Set(StartingWaterLiters);
             Deliveries = 0;
             DeliveredLiters = 0f;
             SourceAssigned = false;
@@ -109,6 +158,8 @@ namespace SpaceMiner
             Message = "Wähle eine Eisquelle und starte den Tankauftrag.";
             foreach (AsteroidResource asteroid in Asteroids) asteroid.ResetDeposit();
             foreach (DroneAgent drone in Drones) drone.ResetDrone();
+            GetComponent<CampaignDroneFleet>()?.ResetPresentation();
+            Operations?.ResetCampaign();
             Scanner?.ResetProgress();
         }
 
@@ -170,8 +221,8 @@ namespace SpaceMiner
                 var agent = body.GetComponent<DroneAgent>();
                 if (agent == null) agent = body.AddComponent<DroneAgent>();
                 agent.Scenario = this;
-                agent.IsOperational = i < OperationalDrones || i == 1;
-                agent.NeedsInitialCharge = i == 1 && i >= OperationalDrones;
+                agent.IsOperational = i == 0;
+                agent.NeedsInitialCharge = false;
                 var berth = station != null ? station.Berth(i) : null;
                 agent.HomePosition = berth != null ? berth.position : body.transform.position;
                 agent.HomeRotation = berth != null ? berth.rotation : Quaternion.identity;
@@ -179,12 +230,13 @@ namespace SpaceMiner
                 var miningVisual = body.GetComponent<MiningDroneVisual>();
                 if (miningVisual == null) miningVisual = body.AddComponent<MiningDroneVisual>();
                 miningVisual.Build(agent);
-                if (!agent.IsOperational || agent.NeedsInitialCharge)
+                info.Description = i == 0 ? "Einheitliches Bergbaumodell / Drohne 01 einsatzbereit" : "Einheitliches Bergbaumodell / inaktiv, Havarieschaden";
+                if (i > 0)
                 {
                     var properties = new MaterialPropertyBlock();
-                    properties.SetColor("_Color", new Color(0.17f, 0.2f, 0.23f));
-                    properties.SetColor("_EmissionColor", Color.black);
-                    foreach (Renderer renderer in body.GetComponentsInChildren<Renderer>()) renderer.SetPropertyBlock(properties);
+                    properties.SetColor("_Color", Color.Lerp(new Color(.32f,.38f,.42f),new Color(.47f,.51f,.53f),(i%4)/3f));
+                    foreach (Renderer renderer in body.GetComponentsInChildren<Renderer>())
+                        if (renderer.name == "Main chassis" || renderer.name.StartsWith("Cargo side wall")) renderer.SetPropertyBlock(properties);
                 }
             }
             Worker = Drones[0];

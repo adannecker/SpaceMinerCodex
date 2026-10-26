@@ -13,13 +13,17 @@ namespace SpaceMiner
         private MaintenanceLaserVisual cargoVisual;
         private MaintenanceLaserVisual gateVisual;
         private MaintenanceLaserVisual receiverVisual;
+        private DroneCargoFillVisual packedFill;
         public const int SlotCapacity=12;
         internal void ConfigureReceiver(MaintenanceLaserVisual receiver) { receiverVisual=receiver; }
         public int EmittedSamples { get; private set; }
         public int EmissionsWithoutCutting { get; private set; }
         public float MaximumEmissionTipDistance { get; private set; }
         public int LooseSamples { get { int count=0; for(int i=0;i<cargo.Length;i++) if(!deposited[i] && cargo[i].gameObject.activeSelf) count++; return count; } }
-        public bool ContainerFull=>DepositedSamples==SlotCapacity;
+        public bool ContainerFull=>agent!=null && agent.CargoProfile.VolumeLimited
+            ? agent.CargoKg>=agent.EffectiveCargoCapacityKg-.001f : DepositedSamples==SlotCapacity;
+        public float DisplayedCargoFillFraction=>packedFill!=null?packedFill.FillFraction:0;
+        public Bounds CargoFillBounds=>packedFill!=null && packedFill.TryGetBounds(cargoRoot,out var bounds)?bounds:default;
         public bool CollarSealed=>receiverVisual!=null && receiverVisual.CollarSealed;
         public float CollarExtension=>receiverVisual!=null?receiverVisual.CollarExtension:0;
         public float CollarContactGap=>receiverVisual==null?float.PositiveInfinity:Vector3.Distance(receiverVisual.CollarContactPoint,GateCentre-transform.forward*.085f);
@@ -32,6 +36,8 @@ namespace SpaceMiner
                     var box=RockBounds(item,cargoRoot);
                     if(box.min.x<-.60f || box.max.x>.60f || box.min.y<.065f || box.max.y>.875f || box.min.z<-.75f || box.max.z>.75f) return false;
                 }
+                if(packedFill!=null && packedFill.TryGetBounds(cargoRoot,out var bulk)
+                    && (bulk.min.x<-.60f || bulk.max.x>.60f || bulk.min.y<.065f || bulk.max.y>.875f || bulk.min.z<-.75f || bulk.max.z>.75f)) return false;
                 return true;
             }
         }
@@ -146,6 +152,15 @@ namespace SpaceMiner
         public int VisibleCargoPieces { get; private set; }
         public bool SupportsAttached { get; private set; }
         public int DrillTriangles => drill.TriangleCount;
+        private string mountedTool="Bohrer";
+        private Transform laserInsert;
+        internal void SetTool(string tool)
+        {
+            mountedTool=tool;
+            if(tool=="Laser"&&laserInsert==null){laserInsert=new GameObject("Laser / austauschbarer Werkzeugeinsatz").transform;laserInsert.SetParent(rig,false);laserInsert.localScale=Vector3.one*.5f;laserInsert.gameObject.AddComponent<MaintenanceLaserVisual>().Build();}
+            if(laserInsert!=null)laserInsert.gameObject.SetActive(tool=="Laser");
+            if(head!=null)head.gameObject.SetActive(tool=="Bohrer");
+        }
         private const float FeetOffset=-.65f, AxisY=1.30f;
 
         private Material Surface(string name,Color color,float metal=.6f)
@@ -193,6 +208,7 @@ namespace SpaceMiner
                 cargoSlots[i]=new Vector3(i%2==0?-.29f:.29f,.25f+(i/6)*.41f,((i/2)%3-1)*.46f);
                 cargo[i]=Chip("Rock carried into cargo by gripper "+i,cargoRoot,cargoSlots[i],Vector3.one*.3f,ice,i+7); cargo[i].gameObject.SetActive(false);
             }
+            packedFill=DroneCargoFillVisual.Create(cargoRoot,new Bounds(new Vector3(0,.47f,0),new Vector3(1.18f,.80f,1.48f)),ice);
             armRoot=new GameObject("Opposite-side articulated collecting arm").transform; armRoot.SetParent(rig,false); armRoot.localPosition=new Vector3(-.94f,1.38f,.20f);
             collector=armRoot.gameObject.AddComponent<MaintenanceLaserVisual>(); collector.BuildMiningArm();
             sample=cargo[0]; regolithMesh=sample.GetComponent<MeshFilter>().sharedMesh;
@@ -234,6 +250,16 @@ namespace SpaceMiner
             gateOpening=0; gateVisual.PoseCargoGate(0);
             DischargeClearanceSamples=0; MinimumDischargeClearance=float.PositiveInfinity;
             lidOpening=0; cargoVisual.PoseCargoLid(0);
+            packedFill?.SetFill(0);
+        }
+        internal void RestoreCargoPresentation()
+        {
+            ResetCollection();
+            float progress=CollectionProgress;
+            if(agent.Phase==DronePhase.Unloading)progress/=Mathf.Max(.001f,1-agent.UnloadProgress);
+            int count=Mathf.Clamp(Mathf.CeilToInt(progress*SlotCapacity),0,SlotCapacity);
+            for(int i=0;i<count;i++){deposited[i]=true;cargo[i].gameObject.SetActive(true);}
+            DepositedSamples=count;collectionClock=Mathf.Max(0,count*5-.001f);previousCargo=agent.CargoKg;Refresh(0);
         }
         private static void Rod(Transform item,Vector3 start,Vector3 end,float radius)
         { item.position=(start+end)*.5f; item.rotation=Quaternion.FromToRotation(Vector3.up,end-start); item.localScale=new Vector3(radius,(end-start).magnitude*.5f,radius); }
@@ -242,6 +268,7 @@ namespace SpaceMiner
             float extension=agent.Phase==DronePhase.Mining?1:agent.Phase==DronePhase.Docking?Mathf.SmoothStep(0,1,(agent.PhaseElapsed-60)/60)
                 :agent.Phase==DronePhase.Undocking?1-Mathf.SmoothStep(0,1,agent.PhaseElapsed/60):0;
             cassette.PoseCassette(extension); head.localPosition=new Vector3(AxisX,AxisY,Mathf.Lerp(MaintenanceLaserVisual.StowedHead,MaintenanceLaserVisual.ExtendedHead,extension));
+            if(laserInsert!=null)laserInsert.localPosition=head.localPosition;
             hadProductiveStep=realSeconds>0 && agent.CargoKg>previousCargo+.000001f;
             Cutting=agent.Phase==DronePhase.Mining && hadProductiveStep;
             if(Cutting) rotorAngle=Mathf.Repeat(rotorAngle+realSeconds*720,360);
@@ -252,6 +279,10 @@ namespace SpaceMiner
             lidOpening=Mathf.MoveTowards(lidOpening,openLid?1:0,realSeconds*2.5f);
             cargoVisual.PoseCargoLid(lidOpening);
             RefreshUnloading();
+            // CargoKg is already the remaining cargo during discharge. Do not
+            // multiply it by UnloadProgress again, including after loading a save.
+            packedFill.SetFill(agent.CargoProfile.VolumeLimited?agent.CargoFillFraction:0);
+            if(agent.CargoProfile.VolumeLimited)VisibleCargoPieces+=packedFill.VisiblePieces;
             SupportsAttached=true;
             for(int i=0;i<2;i++)
             {
@@ -287,7 +318,7 @@ namespace SpaceMiner
             }
             float before=collectionClock;
             // One cycle per twelfth of real mined cargo. Pausing extraction cannot emit another rock.
-            if(Cutting) collectionClock=Mathf.Min(SlotCapacity*5-.0001f,agent.CargoKg/agent.CargoCapacityKg*SlotCapacity*5);
+            if(Cutting) collectionClock=Mathf.Min(SlotCapacity*5-.0001f,CollectionProgress*SlotCapacity*5);
             int cycle=Mathf.FloorToInt(collectionClock/5);
             float t=collectionClock-cycle*5;
             if(!wasMining || Mathf.FloorToInt(before/5)!=cycle)
@@ -352,9 +383,12 @@ namespace SpaceMiner
             {
                 float p=unloading && docked?Mathf.Clamp01(agent.UnloadProgress*DepositedSamples-i):0;
                 if(agent.Phase==DronePhase.TankUndocking || agent.Phase==DronePhase.Parking || agent.Phase==DronePhase.Berthing || agent.Phase==DronePhase.Servicing || (agent.Phase==DronePhase.Ready && agent.CargoKg<.01f)) p=1;
-                cargo[i].gameObject.SetActive(p<1);
+                // Normal cartridges show the dense bed; the twelve samples remain
+                // individual pieces while the gripper or discharge is moving them.
+                bool visible=p<1 && (!agent.CargoProfile.VolumeLimited || p>0);
+                cargo[i].gameObject.SetActive(visible);
                 if(p>=1) { UnloadedPieces++; continue; }
-                VisibleCargoPieces++;
+                if(visible)VisibleCargoPieces++;
                 Vector3 discharge=Vector3.Lerp(cargoSlots[i],new Vector3(0,.25f,-MaintenanceLaserVisual.CargoDepth*.5f-2.5f),p);
                 discharge.x=Mathf.Lerp(cargoSlots[i].x,0,Mathf.SmoothStep(0,1,Mathf.Clamp01(p/.18f)));
                 discharge.y=Mathf.Lerp(cargoSlots[i].y,.25f,Mathf.SmoothStep(0,1,Mathf.Clamp01(p/.18f)));
@@ -373,6 +407,9 @@ namespace SpaceMiner
                 }
             }
         }
+        private float CollectionProgress=>agent.CargoProfile.VolumeLimited
+            ? Mathf.Clamp01(agent.CargoFillFraction/Mathf.Max(.001f,agent.CargoProfile.TargetFillFraction))
+            : Mathf.Clamp01(agent.CargoKg/Mathf.Max(.001f,agent.CargoCapacityKg));
         private static Bounds RockBounds(Transform item,Transform relative)
         {
             var vertices=item.GetComponent<MeshFilter>().sharedMesh.vertices;

@@ -25,6 +25,7 @@ namespace SpaceMiner
         private DronePhase previousPhase;
         private string safetyMessage;
         private Mesh receiverPortMesh;
+        private bool receiverBulkheadPresent;
         private bool ModalOpen => SettingsMenu.BlocksInput;
         private bool Blocked => paused || ModalOpen;
 
@@ -52,7 +53,8 @@ namespace SpaceMiner
                 source=Array.Find(scenario.Asteroids,a=>a.IsStarterWaterSource && a.WaterFraction>0);
                 if(source==null) throw new Exception("No starter ice asteroid available");
                 source.IsScanned=source.WaterIdentified=true;
-                visual=agent.gameObject.AddComponent<TripoMiningDroneVisual>(); visual.Build(agent);
+                var fleet=scenario.GetComponent<CampaignDroneFleet>();if(fleet!=null)fleet.enabled=false;
+                visual=agent.GetComponent<TripoMiningDroneVisual>();if(visual==null){visual=agent.gameObject.AddComponent<TripoMiningDroneVisual>();visual.Build(agent);}
                 ReplaceOriginalBerth(); BuildCradle(); BuildReceiver();
                 foreach(var parked in scenario.Drones) if(parked!=agent)
                 {
@@ -105,8 +107,11 @@ namespace SpaceMiner
         private void BuildReceiver()
         {
             var socket=scenario.GetComponent<StationVisual>().TankSocket;
-            foreach(var filter in scenario.GetComponentsInChildren<MeshFilter>())
-                if(filter.name=="WASSERLAGER Abschlusswand") CutReceiverPort(filter,socket);
+            var walls=scenario.GetComponentsInChildren<MeshFilter>();
+            var receiverWall=Array.Find(walls,f=>f.name=="WASSERLAGER Anschlusswand") ?? Array.Find(walls,f=>f.name=="WASSERLAGER Abschlusswand");
+            if(receiverWall!=null) CutReceiverPort(receiverWall,socket);
+            // Current wedge geometry already builds the aperture from four separate wall sections.
+            receiverBulkheadPresent=receiverWall!=null || Array.Exists(walls,f=>f.name=="Wasserlager Abschlusswand");
             foreach(Transform item in socket) item.gameObject.SetActive(false);
             var oldPipe=socket.parent.Find("Transfer pipe"); if(oldPipe!=null) oldPipe.gameObject.SetActive(false);
             var receiver=new GameObject("Wide sealed cargo receiver / sliding-gate docking").transform; receiver.SetParent(socket,false);
@@ -151,7 +156,7 @@ namespace SpaceMiner
         private void Restart()
         {
             scenario.ResetScenario(); scenario.SetSimulationRate(0);
-            agent.CargoCapacityKg=12; agent.ResetDrone();
+            agent.UseLegacyCargoProfile(); agent.CargoCapacityKg=12; agent.ResetDrone();
             source.IsScanned=source.WaterIdentified=true;
             startRaw=source.RemainingRawKg; startWater=scenario.WaterLiters; startBattery=agent.BatteryKwh;
             paused=complete=false; mined=clock=simulatedSeconds=0; previousPhase=agent.Phase;
@@ -267,7 +272,13 @@ namespace SpaceMiner
                 Require(visual.EmittedSamples==0 && visual.LooseSamples==0,"no rock emitted before actual drilling");
                 Require(visual.CollarExtension==0 && !visual.CollarSealed,"suction collar starts retracted and unsealed");
                 var socket=scenario.GetComponent<StationVisual>().TankSocket;
-                Require(receiverPortMesh!=null && !Physics.Raycast(socket.position+socket.forward*.05f,-socket.forward,1.4f,~0,QueryTriggerInteraction.Ignore),"wide unloading throat passes through a real opening in storage bulkhead");
+                Require(receiverBulkheadPresent,"unloading receiver has an actual storage bulkhead");
+                // Probe inside the channel, excluding its deliberately solid side/floor/roof profiles.
+                foreach(float x in new[]{-.7f,0,.7f})foreach(float y in new[]{-.45f,0,.45f})
+                {
+                    bool blocked=Physics.Raycast(socket.TransformPoint(new Vector3(x,y,.05f)),-socket.forward,out var hit,1.4f,~0,QueryTriggerInteraction.Ignore);
+                    Require(!blocked,"wide unloading throat passes through a real opening in storage bulkhead / "+x+" / "+y+" / "+(blocked?hit.collider.name:"clear"));
+                }
             })) yield break;
             var quit=FindFirstObjectByType<QuitMenu>();
             if(!Guard(() => {

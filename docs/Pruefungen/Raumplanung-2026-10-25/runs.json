@@ -1,0 +1,44 @@
+[
+  {
+    "name": "planner",
+    "checks": 545,
+    "exitCode": 0,
+    "result": "planner-result.json",
+    "log": "planner-player.log"
+  },
+  {
+    "name": "operations",
+    "checks": 97,
+    "exitCode": 0,
+    "result": "operations-result.json",
+    "log": "operations-player.log"
+  },
+  {
+    "name": "workshop",
+    "checks": 1506,
+    "exitCode": 0,
+    "result": "workshop-result.json",
+    "log": "workshop-player.log"
+  },
+  {
+    "name": "station",
+    "checks": 156,
+    "exitCode": 0,
+    "result": "station-result.json",
+    "log": "station-player.log"
+  },
+  {
+    "name": "vitals",
+    "checks": 29,
+    "exitCode": 0,
+    "result": "vitals-result.json",
+    "log": "vitals-player.log"
+  },
+  {
+    "name": "ui",
+    "checks": 28,
+    "exitCode": 0,
+    "result": "ui-result.json",
+    "log": "ui-player.log"
+  }
+]

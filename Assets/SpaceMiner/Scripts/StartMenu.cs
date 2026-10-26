@@ -160,7 +160,14 @@ namespace SpaceMiner
             if (!IsOpen || SettingsMenu.IsOpen || SaveGameMenu.IsOpen) return;
             var saves = FindFirstObjectByType<SaveGameMenu>();
             if (saves != null && !saves.NewSession()) return;
-            FindFirstObjectByType<WaterScenario>()?.ResetScenario();
+            var scenario = FindFirstObjectByType<WaterScenario>();
+            if (scenario != null)
+            {
+                // A new session starts with current campaign hardware even after
+                // loading an older save. Loading and ordinary resets retain hardware.
+                foreach (var drone in scenario.Drones) drone.InitializeNewCampaignHardware();
+                scenario.ResetScenario();
+            }
             IsOpen = false;
             ClearScenery();
             FindFirstObjectByType<IntroSequence>()?.PlayIntro();

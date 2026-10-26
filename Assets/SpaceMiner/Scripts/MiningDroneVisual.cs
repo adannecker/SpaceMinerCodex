@@ -15,7 +15,11 @@ namespace SpaceMiner
         private readonly Transform[] unloadChunks = new Transform[8];
         private readonly Transform[] storedCargo = new Transform[24];
         private Mesh iceMesh;
+        private DroneCargoFillVisual packedFill;
+        private Transform geometry;
         public int VisibleCargoPieces { get; private set; }
+        public float DisplayedCargoFillFraction=>packedFill!=null?packedFill.FillFraction:0;
+        public Bounds CargoFillBounds=>packedFill!=null && packedFill.TryGetBounds(geometry,out var bounds)?bounds:default;
         public bool TankCoupled => agent != null && agent.Phase == DronePhase.Unloading
             && Vector3.Distance(agent.CargoOutletPoint,agent.TankInlet)<0.01f;
         public Vector3 ContactPoint { get; private set; }
@@ -27,7 +31,7 @@ namespace SpaceMiner
 
         private Material Surface(string name, Color color, float metal, bool glow = false)
         {
-            var material = new Material(Shader.Find("Standard")) { name = name, color = color };
+            var material = StationSurfaceMaterials.Create(color,metal,glow); material.name=name;
             material.SetFloat("_Metallic", metal); material.SetFloat("_Glossiness", 0.28f);
             if (glow) { material.EnableKeyword("_EMISSION"); material.SetColor("_EmissionColor", color); }
             return material;
@@ -52,7 +56,8 @@ namespace SpaceMiner
                 var old = transform.Find(legacy); if (old != null) old.gameObject.SetActive(false);
             }
             bool ready = owner.IsOperational && !owner.NeedsInitialCharge;
-            Material hull = Surface("Drone hull",new Color(0.45f,0.52f,0.56f),0.65f);
+            int fleetIndex=System.Array.IndexOf(owner.Scenario.Drones,owner);
+            Material hull = Surface("Drone hull",new Color(0.45f,0.52f,0.56f)*(1+(fleetIndex%4-1)*.045f),0.65f);
             Material dark = Surface("Drone frame",new Color(0.08f,0.11f,0.15f),0.7f);
             Material metal = Surface("Drone tools",new Color(0.62f,0.66f,0.68f),0.85f);
             Material amber = Surface("Drone markings",new Color(0.95f,0.46f,0.08f),0.2f);
@@ -63,7 +68,7 @@ namespace SpaceMiner
             };
             materials = new[] { hull,dark,metal,amber,status,ice,glass };
             iceMesh = CreateIceMesh();
-            var body = new GameObject("Mining Drone Geometry").transform; body.SetParent(transform,false);
+            var body = new GameObject("Mining Drone Geometry").transform; body.SetParent(transform,false); geometry=body;
             Part(PrimitiveType.Cube,"Main chassis",body,Vector3.zero,new Vector3(1.25f,0.8f,1.45f),hull);
             Part(PrimitiveType.Cube,"Cargo container floor",body,new Vector3(0,0.43f,-0.15f),new Vector3(1.05f,0.06f,0.9f),dark);
             for(int side=-1;side<=1;side+=2) {
@@ -129,6 +134,7 @@ namespace SpaceMiner
                 storedCargo[i].localPosition=new Vector3((i%3-1)*0.29f,0.55f+(i/12)*0.18f,-0.45f+((i/3)%4)*0.21f);
                 storedCargo[i].localRotation=Quaternion.Euler(i*37f,i*71f,i*23f);
             }
+            packedFill=DroneCargoFillVisual.Create(body,new Bounds(new Vector3(0,.635f,-.15f),new Vector3(.93f,.33f,.78f)),ice);
             // Moving presentation pieces must not interfere with selection rays or surface queries.
             foreach (var collider in body.GetComponentsInChildren<Collider>()) collider.enabled = false;
             // Keep one hull collider for drone selection.
@@ -173,7 +179,9 @@ namespace SpaceMiner
             bool unloading=TankCoupled && agent.CargoKg > 0;
             HatchOpen=mining || unloading;
             hatch.localRotation=Quaternion.Euler(HatchOpen ? -105f : 0,0,0);
-            float cycle=Mathf.Repeat(time,120f)/120f;
+            float cycle=agent.CargoProfile.VolumeLimited
+                ? Mathf.Repeat(Mathf.Min(11.9999f,agent.CargoFillFraction/Mathf.Max(.001f,agent.CargoProfile.TargetFillFraction)*12),1)
+                : Mathf.Repeat(time,120f)/120f;
             Vector3 rest=new Vector3(-0.56f,-0.05f,1.72f), mouth=new Vector3(0,1.03f,-0.15f);
             Vector3 loose=contact+new Vector3(-0.25f,0.18f,-0.30f);
             Vector3 grip=rest;
@@ -210,9 +218,12 @@ namespace SpaceMiner
                 float progress=Mathf.Repeat((time-25f)/35f+i/8f,1f);
                 unloadChunks[i].localPosition=Vector3.Lerp(new Vector3(0,0.53f,-0.48f),DroneAgent.CargoOutletOffset,progress);
             }
-            float fill=agent.CargoKg/Mathf.Max(0.01f,agent.CargoCapacityKg)*(1f-agent.UnloadProgress);
-            VisibleCargoPieces=Mathf.CeilToInt(fill*storedCargo.Length);
-            for(int i=0;i<storedCargo.Length;i++) storedCargo[i].gameObject.SetActive(i<VisibleCargoPieces);
+            bool volumeLimited=agent.CargoProfile.VolumeLimited;
+            float fill=agent.CargoFillFraction*(volumeLimited?1:1-agent.UnloadProgress);
+            packedFill.SetFill(volumeLimited?fill:0);
+            int singlePieces=volumeLimited?0:Mathf.CeilToInt(fill*storedCargo.Length);
+            VisibleCargoPieces=singlePieces+packedFill.VisiblePieces;
+            for(int i=0;i<storedCargo.Length;i++) storedCargo[i].gameObject.SetActive(i<singlePieces);
         }
 
         private Vector3 SurfaceContact(Vector3 origin)

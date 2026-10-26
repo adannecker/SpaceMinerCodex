@@ -1,0 +1,97 @@
+[
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/glb-verification.json",
+    "bytes": 153,
+    "sha256": "a4500d952ff76f07631e9789cc2ac014270a5a6976edb74f7b559b408627cfed"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.blend",
+    "bytes": 13089404,
+    "sha256": "90ffe6117ef2102d5fc121ecb2378ed14ee404eb57eaa6db37e01458b8d67c02"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.fbx",
+    "bytes": 626524,
+    "sha256": "750838ddc1828f579cf11f3e244d5663fbcb9d731661fdfce0a6a8493d222e1b"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.glb",
+    "bytes": 12110980,
+    "sha256": "bc84b09013859e03cb08af0a58cd41606457b4b018a4631282992dcc8dada676"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/reimport-verification.json",
+    "bytes": 393,
+    "sha256": "2321101adc6b88f870789a97028d3e4a5c8f1c59b00cacbfec2d327e5b21e0e9"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Source/I75_service-stencil.png",
+    "bytes": 37962,
+    "sha256": "dc11efd878566cee1672d85f05e5fe6471828c9be1578320a5c1480732f96220"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/surface-report.json",
+    "bytes": 1525,
+    "sha256": "248d62d3ec8c190080a36039630a5daa42ee6f703be2dc04b5fed5533bcfb72f"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_BaseColor.png",
+    "bytes": 4699930,
+    "sha256": "dd3f7da01d12f18c63ed8a9dc1e085c0e72958828937483bdec13a596e845541"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_Emission.png",
+    "bytes": 82782,
+    "sha256": "cc0a2a3b1caaaa72bceddb1dcbbee1e9e6d5626720b2a03b7ec102f7f23ff208"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_Height.png",
+    "bytes": 4491591,
+    "sha256": "9ff86800a3e05d1a7e85d3a9c18aa14339ae96e77da7bc002a770c81cb8173c0"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_Normal.png",
+    "bytes": 745351,
+    "sha256": "b3a8ca6cdedc2b52fbf9ea3857dfc368d66dd6d277eea22e7c36fec0e2aee0c2"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_Occlusion.png",
+    "bytes": 2763773,
+    "sha256": "81b543be6c2bc2443e5501249e054a6e7b8b5e299ee02b6552bb840dc6c2b6fc"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_ORM.png",
+    "bytes": 5788848,
+    "sha256": "2b14625c407f3d886c1a34bdeff0f1cd6e0caeb2fa4b6cdf821ce8ea600650a7"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_UnityMetalSmooth.png",
+    "bytes": 4393774,
+    "sha256": "08d00c6bcf808e9c93f33fba3c16c66b14381be481a6158fdc3667c08691c13f"
+  },
+  {
+    "path": "docs/Art/Drohnen/I75-Textur-R01-2026-10-26/01-I75-R01-hero.png",
+    "bytes": 2946814,
+    "sha256": "a0893095105cf9c8ad05c8383602e34c4fe1cc6dbb128cc3190ef685736111b2"
+  },
+  {
+    "path": "docs/Art/Drohnen/I75-Textur-R01-2026-10-26/02-I75-R01-rear.png",
+    "bytes": 2894926,
+    "sha256": "db7d1baaf9e77b39f924f2f54c2335e3f1a0ab8946c1418ac02d794e01c21e5d"
+  },
+  {
+    "path": "docs/Art/Drohnen/I75-Textur-R01-2026-10-26/03-I75-R01-side.png",
+    "bytes": 2751849,
+    "sha256": "f1dd456f94435229c0e3c15a865bfe1057f75dcad27a6f65460a8d4192b33190"
+  },
+  {
+    "path": "tools/MakeI75Stencils.py",
+    "bytes": 1231,
+    "sha256": "e89b80ec4c992a313503cc73bae9699a2dac6a81b6290c817ccc99ed6ecd1e06"
+  },
+  {
+    "path": "tools/TextureIndoorDroneI75.py",
+    "bytes": 15522,
+    "sha256": "5e9ce2ee5f6d750dfef17b06ffb86271bdcbd8011275c6ff56e900c971b3cb34"
+  }
+]

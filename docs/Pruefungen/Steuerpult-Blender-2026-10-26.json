@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "scope": "Blender model, FBX roundtrip, UV/PBR files and native render review only",
+  "blender": "4.5.14 LTS",
+  "modelReport": "../../Design/Models/TouchConsole/model-report.json",
+  "modelReportSha256": "378E503B492D9B2DC49578D804A9DD22AE6259B501BBD35AAF9E96AD116E26CE",
+  "verifiedFileHashes": 31,
+  "lods": [
+    {
+      "name": "TouchConsole_LOD0",
+      "triangles": 17268,
+      "size": [
+        1.5,
+        1.1400001049041748,
+        1.0
+      ]
+    },
+    {
+      "name": "TouchConsole_LOD1",
+      "triangles": 3232,
+      "size": [
+        1.5,
+        1.1400001049041748,
+        1.0
+      ]
+    },
+    {
+      "name": "TouchConsole_LOD2",
+      "triangles": 472,
+      "size": [
+        1.5,
+        1.1400001049041748,
+        1.0
+      ]
+    }
+  ],
+  "roundtrip": [
+    {
+      "lod": 0,
+      "triangles": 17268,
+      "boundsMin": [
+        -0.75,
+        -7.820192848839724E-08,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400002241134644,
+        0.5
+      ],
+      "uvLayersPresent": true,
+      "finite": true
+    },
+    {
+      "lod": 1,
+      "triangles": 3232,
+      "boundsMin": [
+        -0.75,
+        -7.820192848839724E-08,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400002241134644,
+        0.5
+      ],
+      "uvLayersPresent": true,
+      "finite": true
+    },
+    {
+      "lod": 2,
+      "triangles": 472,
+      "boundsMin": [
+        -0.75,
+        -8.146034247147327E-08,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400002241134644,
+        0.5
+      ],
+      "uvLayersPresent": true,
+      "finite": true
+    }
+  ],
+  "visualReview": [
+    "04-demo-screen-fixture-not-gameplay.png",
+    "05-demo-front-fixture-not-gameplay.png",
+    "06-demo-side-fixture-not-gameplay.png"
+  ],
+  "renderDirectory": "../../Design/Models/TouchConsole/Renders/",
+  "modelIsPhysical": true,
+  "displayPreviewIsIllustrative": true,
+  "unityBuildPerformed": false,
+  "gamePultsIntegrated": false,
+  "roomPlansEdited": false
+}

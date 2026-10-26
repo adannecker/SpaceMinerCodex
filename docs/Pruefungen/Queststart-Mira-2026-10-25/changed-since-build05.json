@@ -1,0 +1,8 @@
+[
+  "Assets/SpaceMiner/Scripts/ScannerProgression.cs",
+  "Assets/SpaceMiner/Scripts/StationDroneConsoleCheck.cs",
+  "Assets/SpaceMiner/Scripts/StationFirstPersonHands.cs",
+  "Assets/SpaceMiner/Scripts/StationFirstPersonHandsCheck.cs",
+  "Assets/SpaceMiner/Scripts/StationOperations.DroneCommands.cs",
+  "Assets/SpaceMiner/Scripts/StationOperations.DroneConsole.cs"
+]

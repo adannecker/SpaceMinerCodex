@@ -1,0 +1,9 @@
+[
+  "Assets/SpaceMiner/Scripts/StationDroneConsoleCheck.cs",
+  "Assets/SpaceMiner/Scripts/StationOperations.Debris.cs",
+  "Assets/SpaceMiner/Scripts/StationOperations.DroneCommands.cs",
+  "Assets/SpaceMiner/Scripts/StationOperations.DroneConsole.cs",
+  "Assets/SpaceMiner/Scripts/StationOperations.TacticalOverview.cs",
+  "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+  "Assets/SpaceMiner/Scripts/StationTacticalCheck.cs"
+]

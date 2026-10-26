@@ -1,0 +1,90 @@
+Mono path[0] = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/Managed'
+Mono config path = 'C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 2 interfaces on host : 0) 192.168.178.28 1) 192.168.96.1
+Player connection [63256]  Target information:
+
+Player connection [63256]  * "[IP] 192.168.178.28 [Port] 55000 [Flags] 2 [Guid] 3365776328 [EditorId] 277897439 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [63256]  * "[IP] 192.168.96.1 [Port] 55000 [Flags] 2 [Guid] 3365776328 [EditorId] 277897439 [Version] 1048832 [Id] WindowsPlayer(2,HellCompi) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Space Miner - Prototyp 01" 
+
+Player connection [63256] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.6.4f1 (12bfff696524)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Builds/Windows/SpaceMiner_Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        AMD Radeon RX 9070 XT (ID=0x7550)
+    Vendor:          ATI
+    VRAM:            16191 MB
+    App VRAM Budget: 15419 MB
+    Driver:          32.0.32015.7029
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.009 seconds
+[Physics::Module] Selected backend (deferred post-plugins).
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+D3D11 device created for Microsoft Media Foundation video decoding.
+UnloadTime: 0.711300 ms
+CONSTRUCTION OK: isolated settings and saves
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:328)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass85_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:342)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:327)
+SpaceMiner.StationConstructionPreview/<Validate>d__85:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:341)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+CONSTRUCTION OK: module starts as many separate uninstalled pieces
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:23)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:130)
+SpaceMiner.StationConstructionPreview:Require (bool,string) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:328)
+SpaceMiner.StationConstructionPreview/<>c__DisplayClass85_0:<Validate>b__0 () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:343)
+SpaceMiner.StationConstructionPreview:Guard (System.Action) (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:327)
+SpaceMiner.StationConstructionPreview/<Validate>d__85:MoveNext () (at C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs:341)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 130)
+
+Exception: Construction: every separate piece fits the2.4m printer envelope
+  at SpaceMiner.StationConstructionPreview.Require (System.Boolean condition, System.String label) [0x00032] in C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Assets\SpaceMiner\Scripts\StationConstructionPreview.cs:328 
+  at SpaceMiner.StationConstructionPreview+<>c__DisplayClass85_0.<Validate>b__0 () [0x000db] in C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Assets\SpaceMiner\Scripts\StationConstructionPreview.cs:345 
+  at SpaceMiner.StationConstructionPreview.Guard (System.Action action) [0x00000] in C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Assets\SpaceMiner\Scripts\StationConstructionPreview.cs:327 
+UnityEngine.StackTraceUtility:ExtractStringFromExceptionInternal(Object, String&, String&) (at C:\build\output\unity\unity\Runtime\Export\Scripting\StackTrace.cs:50)
+UnityEngine.DebugLogHandler:Internal_LogException_Injected(Exception, IntPtr)
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+SpaceMiner.StationConstructionPreview:Guard(Action) (at C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Assets\SpaceMiner\Scripts\StationConstructionPreview.cs:327)
+SpaceMiner.<Validate>d__85:MoveNext() (at C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\Builds\LocalPreview-6000.6.4f1\Assets\SpaceMiner\Scripts\StationConstructionPreview.cs:341)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\build\output\unity\unity\Runtime\Export\Scripting\Coroutines.cs:17)
+
+(Filename: C:/Users/achim/Documents/ChatGPT/SpaceMinerCodex/Builds/LocalPreview-6000.6.4f1/Assets/SpaceMiner/Scripts/StationConstructionPreview.cs Line: 328)
+
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1792875474499,"processId":29424,"allocatedMemory":99317,"memoryLabels":[{"Default":52984},{"NewDelete":728},{"Thread":7616},{"Manager":9014},{"GfxDevice":2616},{"Serialization":17000},{"BaseObject":11280},{"String":511},{"PoolAlloc":96},{"ScriptManager":5696},{"CodeReload":440},{"CloudService":144},{"VR":1928},{"Video":144},{"Subsystems":96},{"CoreBusinessMetrics":128}]}

@@ -1,0 +1,18 @@
+{
+    "passed": true,
+    "checks": 794,
+    "editedModels": 31,
+    "rooms": [
+        "command-room",
+        "drone-bay",
+        "drone-workshop",
+        "internal-workshop"
+    ],
+    "pictures": [
+        "01-command-room.png",
+        "02-drone-bay.png",
+        "03-drone-workshop.png",
+        "04-internal-workshop.png"
+    ],
+    "scope": "Four real room catalogues, authored meshes/colliders and per-room frames; every item resized/moved/rotated then restored; boundaries and protected walking/drone lanes; isolated per-room disk save/load, old command-room v1 JSON, atomic rejected loads, separate history and selection, physical inactive berth/cradle/feed/home relocation, busy berth lock. Programmatic controller acceptance and actual player screenshots; no manual comfort, FPS, complete logistics balance or long-running production claim."
+}

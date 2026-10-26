@@ -17,7 +17,7 @@ namespace SpaceMiner
         public bool FirstScanComplete { get; private set; }
         public bool AtConsole => StationInteriorMode.HasConsoleOpen;
         private MiraAvatar portrait;
-        private readonly MiraVisorOverlay dialogueOverlay=new MiraVisorOverlay();
+        public MiraDialogueModule DialogueModule { get; private set; }
         public bool DebugVisibility { get; private set; }
         public bool Ready => EnergyKwh >= CapacityKwh - .0000001f;
         public int KnownCount { get; private set; }
@@ -90,22 +90,28 @@ namespace SpaceMiner
             DebugVisibility = false;
             KnownCount = 0;
             foreach (var asteroid in scenario.Asteroids) { asteroid.IsScanned = false; asteroid.WaterIdentified = false; }
-            Say("ERSTER AUFTRAG · UMGEBUNG SCANNEN", "Geh an die Konsole und führe einen Nahbereichsscan aus. Der Scanner ist zu 97 Prozent geladen. In zehn Sekunden ist er bereit. Die Aussenansicht ist ein virtueller Raum: Dort siehst du nur, was wir bereits gescannt haben.");
+            Say(MiraQuestDialogues.Quest(0).Cues[0]);
+            // Initialization can run before the start menu has installed its modal state.
+            // The normal visibility update resumes this clip when its panel can be shown.
+            DialogueModule.SetPaused(true);
             RefreshVisibility();
         }
 
         public void Advance(float seconds)
         {
-            EnergyKwh = Mathf.Min(CapacityKwh, EnergyKwh + Mathf.Max(0, seconds) * ChargePowerKw / 3600f);
+            if(scenario.Operations?.Live!=true||scenario.Operations.Powered(0)&&scenario.Operations.State.power.LifePowered)
+                EnergyKwh = Mathf.Min(CapacityKwh, EnergyKwh + Mathf.Max(0, seconds) * ChargePowerKw / 3600f);
             if (!deliveryReported && scenario.Deliveries > 0)
             {
                 deliveryReported = true;
-                Say("ERSTE LIEFERUNG", "Die erste Wasserlieferung ist angekommen. Gut gemacht. Drohne 01 kann ihre Flüge fortsetzen, bis unser Tank gefüllt ist.");
+                if (scenario.Operations?.Live != true) Say("ERSTE LIEFERUNG", scenario.UsesIcePlant
+                    ? "Die erste Roh-Eislieferung wird übernommen. Der Brecher und der Verdichter bereiten sie für das Kaltlager vor. Sauberes Wasser entsteht erst im Aufbereiter. Prüfe die Anlage und ihre Stromversorgung am Lagerpult; ein weiterer Rohstoffflug ist ein eigener Auftrag."
+                    : "Die erste Wasserlieferung ist angekommen. Gut gemacht. Drohne 01 kann ihre Flüge fortsetzen, bis unser Tank gefüllt ist.");
             }
             if (!completionReported && scenario.QuestComplete)
             {
                 completionReported = true;
-                Say("WASSERVERSORGUNG GESICHERT", "Unser Wassertank ist voll. Damit haben wir den nächsten Schritt geschafft. Für weitere Aufgaben brauchen wir neue Technik und verlässliche Messdaten.");
+                if (scenario.Operations?.Live != true) Say("WASSERVERSORGUNG GESICHERT", "Unser Wassertank ist voll. Damit haben wir den nächsten Schritt geschafft. Für weitere Aufgaben brauchen wir neue Technik und verlässliche Messdaten.");
             }
         }
 
@@ -125,9 +131,12 @@ namespace SpaceMiner
                 if (asteroid.WaterIdentified) water++;
             }
             FirstScanComplete = true;
+            scenario.Operations?.RefreshDebrisKnowledge();
+            int wrecks = scenario.Operations?.KnownDebrisCount ?? 0;
             StationInteractionAudio.Play(StationSound.ScanComplete);
-            scenario.Notify("Scan abgeschlossen: " + KnownCount + " Kontakte, " + water + " Wasserquellen. Neuer Auftrag: Wasser sichern.");
-            Say("SCAN ABGESCHLOSSEN · WASSER SICHERN", "Der Scan hat " + KnownCount + " Asteroiden erfasst. Bei " + water + " davon ist Wasser bestätigt. Ihre Oberflächen sind noch nicht kartiert. Öffne die virtuelle Aussenansicht, wähle eine Wasserquelle und beauftrage Drohne 01, unseren Stationstank zu füllen.");
+            scenario.Notify("Scan abgeschlossen: " + KnownCount + " Asteroiden, " + water + " Wasserquellen und " + wrecks + " unbekannte Wrackkontakte. Neuer Auftrag: Wasser sichern.");
+            if (scenario.Operations?.Live == true) Say(MiraQuestDialogues.Quest(0).Cues[1]);
+            else Say("SCAN ABGESCHLOSSEN · WASSER SICHERN", "Der Scan hat " + KnownCount + " Asteroiden erfasst. Bei " + water + " davon ist Wasser bestätigt. Ihre Oberflächen sind noch nicht kartiert. Zusätzlich haben wir " + wrecks + " unbekannte Teile im Nahbereich geortet. Deren Inhalt und Zusammensetzung kennen wir erst nach Bergung beziehungsweise Analyse. Öffne die virtuelle Aussenansicht, wähle eine Wasserquelle und beauftrage Drohne 01 mit einer Eislieferung. Im Lager wird das Rohmaterial angenommen; der Aufbereiter versorgt danach unseren Wassertank.");
             RefreshVisibility();
             return true;
         }
@@ -136,8 +145,20 @@ namespace SpaceMiner
         public void OpenConsole() { StationInteriorMode.Current?.OpenConsole(); orbit.Select(null); RefreshVisibility(); }
         public void ReturnToStation() { StationInteriorMode.Current?.Enter(); RefreshVisibility(); }
         public void SetDebugVisibility(bool value) { DebugVisibility = value; orbit.Select(null); RefreshVisibility(); }
-        public void Say(string title, string text) { DialogueTitle = title; Dialogue = text; }
-        public void DismissDialogue() { Dialogue = null; }
+        public void Say(string title, string text)
+        {
+            Say(new MiraDialogueLine { Heading = title, Text = text });
+        }
+        public void Say(MiraDialogueLine line)
+        {
+            if (DialogueModule == null) DialogueModule = MiraDialogueModule.Create(gameObject);
+            DialogueModule.Play(line);
+            DialogueTitle = line.Heading;
+            Dialogue = line.Text ?? "";
+            if (scenario.Operations?.Live == true) scenario.Operations.RememberMiraLine(line.Id);
+            DialogueModule.SetPaused(!DialogueCanRender);
+        }
+        public void DismissDialogue() { Dialogue = null; DialogueModule?.Close(); }
         public void Restore(float energy, bool scanned, bool console, bool firstDelivery, bool complete)
         {
             EnergyKwh = energy; FirstScanComplete = scanned;
@@ -152,6 +173,7 @@ namespace SpaceMiner
         public void RefreshVisibility()
         {
             if (scenario == null) return;
+            scenario.Operations?.RefreshDebrisKnowledge();
             foreach (var asteroid in scenario.Asteroids)
             {
                 bool visible = ShowsUnknown || asteroid.IsScanned;
@@ -172,39 +194,59 @@ namespace SpaceMiner
         private void LateUpdate()
         {
             if (scenario == null) return;
+            if (DialogueModule != null) DialogueModule.SetPaused(!DialogueCanRender);
             float mode = (ShowsUnknown ? 1 : 0) + (VirtualView ? 2 : 0) + (DebugVisibility ? 4 : 0);
             if (mode != appliedMode) RefreshVisibility();
 
         }
 
         private float Scale => UiLayout.Scale();
+        public Rect VirtualToolbarRect
+        {
+            get {
+                var ops=scenario?.Operations;
+                if(ops==null||!ops.Live)return new Rect(346,158,640,38);
+                float x=ops.TacticalOverviewBounds.xMax+14;
+                return new Rect(x,ops.HudResourceBounds.yMax+12,Mathf.Max(180,Mathf.Min(640,UiLayout.Width-x-18)),Mathf.Max(38,44*SettingsStore.Current.Accessibility.TextScale));
+            }
+        }
         private Rect DialogueRect
         {
             get {
                 return MiraVisorOverlay.Bounds(Screen.width/Scale,Screen.height/Scale);
             }
         }
+        // A station panel yields to Mira. It must not suppress the only UI that
+        // can acknowledge her message, even during the panel's closing frame.
+        public bool DialogueCanRender => scenario != null && Dialogue != null
+            && !StartMenu.IsOpen && !IntroSequence.BlocksGameplay && !MemoryCinematic.IsPlaying
+            && !SettingsMenu.IsOpen && !SaveGameMenu.BlocksInput && !QuitMenu.BlocksInput
+            && !CommandRoomPlanner.BlocksInput && !TechTreeMenu.BlocksInput && !RingConstructionSimulator.BlocksInput;
+        public int LastDialogueRenderedFrame { get; private set; } = -1;
         public bool OwnsScreenPoint(Vector3 point)
         {
             Vector2 p = new Vector2(point.x, Screen.height - point.y) / Scale;
-            return AtConsole || new Rect(346, 158, 640, 38).Contains(p) || (Dialogue != null && DialogueRect.Contains(p));
+            return AtConsole || (VirtualView && Dialogue == null && !MemoryCinematic.IsPlaying && VirtualToolbarRect.Contains(p))
+                || (DialogueCanRender && DialogueRect.Contains(p));
         }
 
         private void OnGUI()
         {
-            if (scenario == null || StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
+            if (scenario == null || StartMenu.IsOpen || IntroSequence.BlocksGameplay || MemoryCinematic.IsPlaying
+                || (SettingsMenu.BlocksInput && !DialogueCanRender)) return;
             ui.Configure(SettingsStore.Current.Accessibility);
             var previous = GUI.matrix; int depth = GUI.depth;
             GUI.matrix = Matrix4x4.Scale(Vector3.one * Scale); GUI.depth = -40;
             float width = Screen.width / Scale, height = Screen.height / Scale;
             bool initialEnabled = GUI.enabled;
-            if (VirtualView)
+            if (VirtualView && Dialogue == null)
             {
-                if (GUI.Button(new Rect(346,158,245,38), "Zur Station",ui.Button)) ReturnToStation();
-                bool debug=GUI.Toggle(new Rect(605,158,380,38),DebugVisibility,"Debug · alle Objekte sichtbar",ui.ToggleStyle);
+                Rect toolbar=VirtualToolbarRect;float returnWidth=Mathf.Min(245,(toolbar.width-14)*.4f);
+                if (GUI.Button(new Rect(toolbar.x,toolbar.y,returnWidth,toolbar.height), "Zur Station [V]",ui.Button)) ReturnToStation();
+                bool debug=GUI.Toggle(new Rect(toolbar.x+returnWidth+14,toolbar.y,toolbar.width-returnWidth-14,toolbar.height),DebugVisibility,"Debug · alle Objekte sichtbar",ui.ToggleStyle);
                 if(debug!=DebugVisibility)SetDebugVisibility(debug);
             }
-            else if (!AtConsole)
+            else if (Dialogue == null && !AtConsole && scenario.Operations?.Live != true)
             {
                 string questTitle = FirstScanComplete ? "AUFTRAG · WASSER SICHERN" : "AUFTRAG · ERSTER SCAN";
                 string questText = FirstScanComplete ? "Öffne am Pult die virtuelle Aussenansicht und beauftrage Drohne 01 mit einer Wasserquelle." : "Gehe zum Stationspult. Öffne es mit E und führe den Nahbereichsscan aus.";
@@ -217,10 +259,13 @@ namespace SpaceMiner
                 GUI.Label(new Rect(38,bodyTop,274,bodyHeight),questText,ui.Text);
                 GUI.Label(new Rect(38,chargeTop,274,30),"Scanner " +(Charge*100).ToString("F1")+" %",ui.Small);
             }
-            if (Dialogue != null)
+            if (DialogueCanRender)
             {
                 GUI.enabled = initialEnabled;
-                if(dialogueOverlay.Draw(DialogueRect,DialogueTitle,Dialogue,MiraAvatar.Mood.Focused,"STATIONSKANAL / MIRA","Verstanden"))DismissDialogue();
+                if (Event.current.type == EventType.Repaint) LastDialogueRenderedFrame = Time.frameCount;
+                // Quest instructions remain readable even when cinematic subtitles are disabled.
+                DialogueModule.Subtitles = true;
+                if(DialogueModule.Draw(DialogueRect,"STATIONSKANAL / MIRA","Verstanden"))DismissDialogue();
             }
             GUI.enabled = initialEnabled; GUI.depth = depth; GUI.matrix = previous;
         }
@@ -230,6 +275,7 @@ namespace SpaceMiner
             if(portrait==null) { portrait=gameObject.AddComponent<MiraAvatar>(); portrait.DialoguePortraits=Resources.Load<Texture2D>("Mira/MiraDialoguePortraits"); portrait.Motion=false; }
             portrait.Draw(rect);
         }
-        private void OnDestroy() { dialogueOverlay.Dispose();ui.Dispose(); if (contactMaterial != null) Destroy(contactMaterial); }
+        private void OnDisable() { DismissDialogue(); }
+        private void OnDestroy() { ui.Dispose(); if (contactMaterial != null) Destroy(contactMaterial); }
     }
 }

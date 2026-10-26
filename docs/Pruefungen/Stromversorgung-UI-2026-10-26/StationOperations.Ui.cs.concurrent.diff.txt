@@ -1,0 +1,14 @@
+diff --git "a/C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\LocalPreview-6000.6.4f1\\Assets\\SpaceMiner\\Scripts\\StationOperations.Ui.cs" "b/C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Assets\\SpaceMiner\\Scripts\\StationOperations.Ui.cs"
+index b51acce..b48f07b 100644
+--- "a/C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\LocalPreview-6000.6.4f1\\Assets\\SpaceMiner\\Scripts\\StationOperations.Ui.cs"
++++ "b/C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Assets\\SpaceMiner\\Scripts\\StationOperations.Ui.cs"
+@@ -121,8 +121,7 @@ namespace SpaceMiner
+         public int CurrentQuest {get{for(int i=0;i<questTitles.Length;i++)if(!QuestDone(i))return i;return questTitles.Length-1;}}
+         public void ExplainQuest(int q)
+         {
+-            string[] text={"Am vorhandenen Scannerpult E drücken. Der Nahbereichsscan erschließt die ersten Wasserquellen und die nahen Trümmer.","Drohne 01 mit Bohrer an eine gescannte Eisquelle schicken. Roh-Eis wird an die geschlossene Annahme übergeben und kalt gespeichert. Der Aufbereiter gewinnt daraus mit Strom sauberes Wasser. Ziel: erste Lieferung und 40 Liter Flüssigwasserreserve; der große Rohspeicher muss dafür nicht voll sein.","Die Versorgungsdiagnose am Stationsplanungspult starten. Strom- und Wassersektoren lassen sich an den Sektor-Terminals trennen.","Ein nahes Wrackteil auswählen und einen Bergungsauftrag erteilen. Es liefert Schrott und geprüfte Ersatzteile für die ersten Inbetriebnahmen.","Zwei geprüfte Ersatzteile genügen für die erste R-01-Inbetriebnahme. Danach übernimmt sie Transporte, Aufbereitung, Fertigung und Werkzeugumbauten.","Kohlenstoffhaltige Proben im Nahbereich bergen. Für diese Prozessproben kennen wir die erste Aufbereitung; der unbekannte Anteil bleibt getrennt gelagert.","Die vorhandene Syntheseanlage benötigt Kohlenstoff, Wasser, Energie und eine endliche Nährstoffkartusche. Das ist eine vereinfachte Grundnahrungskette, keine vollständig validierte chemische Ernährung.","Drohne 02 benötigt zwei Ersatzteile, R-01, mindestens 40 Liter Wasser und 6 kWh Stationsreserve. Danach wird sie am Dock tatsächlich geladen und betankt.","Mira erforscht die Reparaturrolle. R-01 setzt einen Laser ein. Danach können einzelne Stationselemente mit Ersatzteilen instand gesetzt werden."};
+-            ClosePanel();Scenario.Scanner.Say(questTitles[q],text[q]);
++            PresentQuestDialogue(q, q >= 0 && q < questTitles.Length && QuestDone(q));
+         }
+         private void DrawTasks()
+         {

@@ -1,0 +1,5 @@
+{
+  "passed": true,
+  "checks": 16,
+  "scope": "Concept only: local fleet selection, recovery stages and R-01 dependency, compatible job targets, equipment orders/research lock, priority/cancel, responsive dark/light preview. No live game connection."
+}

@@ -1,8 +1,10 @@
 # GitHub
 
-Chat-ID: `01a11264-3942-7ed1-90f4-94bd00b82d06`. Exportstand: 2026-10-09T21:42:37.839915+00:00.
+Chat-ID: `01a11264-3942-7ed1-90f4-94bd00b82d06`. Exportstand: 2026-10-26T00:09:41.672896+00:00.
 
 Desktop-Fortsetzung: Repository, Git, Rechnerwechsel und gemeinsame Kontext-/Chatsicherung
+
+Projekttexte bis 2026-10-09T18:09:33.078Z gesichtet. Bereinigung/Auslassungen: `export-status.json`; Anhänge nicht rekonstruiert.
 
 ## Assistent · 2026-10-06T18:05:26.312Z
 

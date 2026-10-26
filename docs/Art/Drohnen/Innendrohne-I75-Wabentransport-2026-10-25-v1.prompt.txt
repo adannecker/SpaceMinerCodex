@@ -1,0 +1,33 @@
+Use case: stylized-concept.
+Asset: additional realistic SpaceMiner concept image showing a SMALL 75 cm interior transport drone carrying exactly THREE full-sized hexagonal construction panels, with a convincing human size comparison.
+Input image 1 is the PRIMARY design reference: preserve the exact navy-blue I-75 drone family, compact beveled body, twin sensor lenses, cyan status strip, metal bumpers, low magnetic pads and common front tool cassette. This is an ADDITIONAL transport study, not a replacement or redesign.
+Input image 2 is a GEOMETRY/MATERIAL reference for the actual station hexagonal hull panels: closed six-sided flat industrial plates, not open hexagonal hoops, not a whole room or connected three-cell wall.
+Do not reproduce the reference sheet layout, captions, game UI or screenshot.
+
+Create a wide high-resolution industrial concept board, about 3:2. Large main three-quarter product scene in a station workshop corridor fills about 75 percent. Show the complete small I-75 drone and the whole secured stack. One full-height anonymous adult worker in a simple dark work suit stands BESIDE the drone on the same floor plane at the same depth, clearly 1.80 m tall, for accurate scale; head and feet fully visible. A subtle shared metric scale or clean side-elevation inset reinforces the proportions. Remaining bottom strip contains a clean side silhouette size diagram and a small individual hex-panel outline with dimensions. Neutral workshop lighting, blue-grey metal palette, restrained cyan indicators and yellow maintenance accents, clear crisp silhouette and realistic panel thickness. The hero should make the load noticeably larger than the drone, not the drone larger to match the load.
+
+NUMERIC SCALE MUST GOVERN:
+- I-75 chassis unchanged, nominal 0.75 m LONG x 0.55 m WIDE x 0.45 m HIGH, tools stowed. 75 cm refers ONLY to chassis length, not load envelope.
+- Exactly THREE separate congruent hexagonal hull PANELS, each regular hexagon with centre-to-corner radius 0.78 m: 1.56 m CORNER-TO-CORNER, approximately 1.35 m FLAT-TO-FLAT, and 0.08 m THICK. Solid closed navy/metal faces with slightly bevelled rims and small mechanical interface details. They are individual finished hull components, not open honeycomb frames and not miniature panels shrunk to 75 cm.
+- Stack them HORIZONTALLY above the drone, centered over its base, three visible layers with 0.02 m separator blocks between layers: bare panel stack height 0.28 m. Stagger them by only 2 cm for count visibility, keep the stack compact and aligned. Put small clear layer numbers 1,2,3 on the rims if necessary. A 1.56 m load is approximately TWICE the 0.75 m chassis length, and 1.35 m is roughly 2.45 times the chassis width. Show this genuinely.
+- Bottom of the stack is about 0.55 m above floor; top about 0.83 m. A HUMAN 1.80 m high must be more than twice as tall as the loaded stack/drone, not equal height. No oversized knee-high human, no giant 2 m chassis.
+
+TRANSPORT HARDWARE:
+Equip ONLY the transport cassette. Its two articulated opposed gripper arms lock an EXPANDABLE LOAD BRIDGE / cradle. The bridge runs back over the chassis structural rails and supports the stack close to its centre of mass. Telescopic side supports spread under the much wider panels, at least three positive support/contact points; mechanical padded edge clamps and two secure restraining bars or straps capture ALL THREE panels. The stack cannot simply rest on a small front claw cantilever or float. Clearly visible metal load paths from support frame through cassette/rails to chassis. Preserve access to front sensors below the load. The blue drone body remains partly visible under the middle of the load, with recognisable lower shell and magnetic pads.
+The transport cassette's wider load frame is an ATTACHMENT, not a permanently enlarged base vehicle. Do not add laser, screwdriver, printing head or welding sparks: this unit is performing TRANSPORT ONLY.
+The base hovers at a small symbolic gap just above equipped magnetic drive tiles; no wheels, no propellers, no free-flight thrusters or antigravity beam. Feet retracted. Glow, if any, is only a tiny status light, not a force field.
+
+CONTEXT:
+Interior travel from fabrication to a closed material-transfer lock, with unobtrusive clear floor lanes. Exterior construction framework may be glimpsed through a distant viewport only; the small indoor machine stays INSIDE. It does NOT fly outside carrying panels. No need to show a second outdoor drone; a short caption can state the later exterior handoff.
+Make a compact side-view scale inset with a true 0.75 m chassis under a 1.56 m panel stack and a 1.80 m human beside it; align all to same baseline, drawn proportions matching these values. This inset is a concept scale guide, not certified engineering.
+
+EXACT READABLE TEXT:
+Title: "I-75 · TRANSPORT VON 3 WABENPANEELEN"
+Subtitle: "75 cm CHASSIS · LASTTRÄGER AUSFAHRBAR"
+Short callouts: "3 EINZELPANEELEN" (prefer correct German "3 EINZELPANEELE"), "MECHANISCHE KLEMMUNG", "LAST ÜBER DEM CHASSIS", "MAGNETISCHE BODENFAHRSPUR"
+Individual component spec label: "JE PANEEL: 1,56 m ECKMASS · 1,35 m FLACHMASS · 8 cm DICKE"
+Scale labels: "MENSCH 1,80 m", "CHASSIS 0,75 m", "STAPEL 0,28 m"
+Footer: "INNENTRANSPORT ZUR ÜBERGABESCHLEUSE · AUSSEN ÜBERNIMMT DIE LASTDROHNE"
+Small note: "KONZEPT · TRAGFÄHIGKEIT UND FAHRWEG NOCH ZU PRÜFEN"
+
+Avoid: tiny hex tiles, inflated drone, a single thick hex block instead of 3 panels, 4 or more panels, panels joined side-by-side, dangling unstable front-heavy load, fingers through panels, wheels, general levitation, operating laser or multi-role tools, toy aesthetic, game HUD, extraneous machines hiding the size comparison.

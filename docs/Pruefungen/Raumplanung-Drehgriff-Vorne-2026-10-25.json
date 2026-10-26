@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-25",
+  "build": "frontrotation-build-01",
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "layout": 13,
+  "passed": true,
+  "assertions": 1540.0,
+  "runs": [
+    {
+      "name": "planner",
+      "checks": 718,
+      "exitCode": 0,
+      "result": "planner-result.json",
+      "log": "planner-player.log"
+    },
+    {
+      "name": "rooms",
+      "checks": 794,
+      "exitCode": 0,
+      "result": "rooms-result.json",
+      "log": "rooms-player.log"
+    },
+    {
+      "name": "ui",
+      "checks": 28,
+      "exitCode": 0,
+      "result": "ui-result.json",
+      "log": "ui-player.log"
+    }
+  ],
+  "sourceFilesMatched": 246,
+  "deliveredFilesMatched": 247,
+  "sourceManifest": "source-manifest.json",
+  "deliveredManifest": "delivered-manifest.json",
+  "imagesSaved": 15,
+  "sharedPlanUnchanged": true,
+  "sharedPlanSHA256": "767FD90AEDD3988B44EE28FF100CE6E1BFF0DB6A0D73F73071060E721AA9DC7F",
+  "deployed": "Builds/Windows",
+  "preservedPreviousBuild": "Builds/Windows-before-frontrotation-20261025",
+  "scope": [
+    "Rotation handle and stem attached to the marked local -Z display front instead of rear",
+    "Handle follows item position, size and heading, without viewport clamping that would detach it",
+    "Front-axis and clearance assertions before and during real free and Shift rotation gestures",
+    "Existing command planner, all four room plans and actual native fullscreen/window restoration"
+  ],
+  "visualReview": [
+    "planner/01-grundriss-1600.png",
+    "planner/02-grundriss-1280-grosse-schrift.png",
+    "rooms/02-drone-bay.png"
+  ],
+  "limitations": [
+    "Programmatic pointer/controller checks and selected image review; no manual comfort acceptance",
+    "Full workshop, operations, station and vitals suites not repeated for this isolated handle placement change; earlier 3663-assertion proof applies to predecessor build",
+    "No new Release, FPS or long-term balance benchmark"
+  ],
+  "committed": false,
+  "pushed": false
+}

@@ -1,0 +1,3633 @@
+{
+  "date": "2026-10-26",
+  "kind": "static model/source/metadata and Git-transfer audit, not build or Blender roundtrip",
+  "scope": "Tracked and nonignored untracked working-tree candidates before final staging; excluded generated caches, local tool binaries, dependencies and ZIP duplicates. Counts can grow when other handoff documents are added.",
+  "candidateTotals": {
+    ".gitattributes": {
+      "files": 1,
+      "bytes": 365
+    },
+    ".gitignore": {
+      "files": 1,
+      "bytes": 794
+    },
+    ".vsconfig": {
+      "files": 1,
+      "bytes": 96
+    },
+    "AGENTS.md": {
+      "files": 1,
+      "bytes": 2877
+    },
+    "Assets": {
+      "files": 1925,
+      "bytes": 822736874
+    },
+    "Design": {
+      "files": 54,
+      "bytes": 147658120
+    },
+    "Imports": {
+      "files": 1,
+      "bytes": 1135
+    },
+    "Packages": {
+      "files": 2,
+      "bytes": 2324
+    },
+    "ProjectSettings": {
+      "files": 22,
+      "bytes": 54611
+    },
+    "README.md": {
+      "files": 1,
+      "bytes": 73603
+    },
+    "Start-Aufbauphase-01.cmd": {
+      "files": 1,
+      "bytes": 414
+    },
+    "Start-Drohnenhalle-Station.cmd": {
+      "files": 1,
+      "bytes": 411
+    },
+    "Start-Hallenexperiment.cmd": {
+      "files": 1,
+      "bytes": 346
+    },
+    "Start-I75-3D-Vorschau.cmd": {
+      "files": 1,
+      "bytes": 112
+    },
+    "Start-Innendrohnen-Fahrprobe.cmd": {
+      "files": 1,
+      "bytes": 401
+    },
+    "Start-Mining-Drohne.cmd": {
+      "files": 1,
+      "bytes": 329
+    },
+    "Start-Mira-Dialogstudio.cmd": {
+      "files": 1,
+      "bytes": 449
+    },
+    "Start-Mira-Questspiel.cmd": {
+      "files": 1,
+      "bytes": 432
+    },
+    "Start-Mira-Tripo-Gespraech.cmd": {
+      "files": 1,
+      "bytes": 343
+    },
+    "Start-Ring-Rundgang.cmd": {
+      "files": 1,
+      "bytes": 392
+    },
+    "Start-Ringbau-Test.cmd": {
+      "files": 1,
+      "bytes": 396
+    },
+    "Start-Startstation-Dev.cmd": {
+      "files": 1,
+      "bytes": 376
+    },
+    "Start-Startstation.cmd": {
+      "files": 1,
+      "bytes": 374
+    },
+    "Start-Station-Keilmodule.cmd": {
+      "files": 1,
+      "bytes": 436
+    },
+    "Start-Stationsbau-Zeitraffer.cmd": {
+      "files": 1,
+      "bytes": 419
+    },
+    "Start-TechTree-Test.cmd": {
+      "files": 1,
+      "bytes": 384
+    },
+    "Start-Tripo-Groessenprobe.cmd": {
+      "files": 1,
+      "bytes": 334
+    },
+    "Start-Wartungsdrohne-Showcase.cmd": {
+      "files": 1,
+      "bytes": 364
+    },
+    "Start-Wasserlager-Station.cmd": {
+      "files": 1,
+      "bytes": 390
+    },
+    "docs": {
+      "files": 1846,
+      "bytes": 1631782182
+    },
+    "outputs": {
+      "files": 5,
+      "bytes": 60151671
+    },
+    "prototypes": {
+      "files": 183,
+      "bytes": 10380583
+    },
+    "tools": {
+      "files": 42,
+      "bytes": 356175
+    }
+  },
+  "candidateFiles": 4104,
+  "candidateBytes": 2673208512,
+  "filesAtLeast50MiB": [
+    {
+      "path": "Assets/SpaceMiner/Resources/Audio/Asteroid Solitude.wav",
+      "bytes": 69080080,
+      "sha256": "7869c80f25946b70b65c5c68a9190b6ca25222a62dab60f1d3b2c9ba7354844e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/Audio/Asteroid-Solitude-Loop.wav",
+      "bytes": 64704044,
+      "sha256": "e16590e8923d086a27d57f3e28550c8234b288ed429d96f56ddcc84d03701acd",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v06.blend",
+      "bytes": 53419133,
+      "sha256": "871a53d0f481dad74670c150c422aeef0efbf5687e3301bee05ab3aca00296ad",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v07.blend",
+      "bytes": 54356954,
+      "sha256": "cc62f68ba556af4dbed40328ded5bce2a80b048dc3617d6ef02ead54092204dd",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v08.blend",
+      "bytes": 54904957,
+      "sha256": "9443ab04d474c4ed5e64e73d3c320259f529f3a93df67fb22d918c3d58dce352",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v09.blend",
+      "bytes": 52616035,
+      "sha256": "91fd9fa1fcf74ee29baf83eef30bf64e9995d8fa8307e73beff94d0fa54da00d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v10.blend",
+      "bytes": 52631375,
+      "sha256": "eb72d28efd8312d5c1e388e022fefc585811cd29400ca785b345b7c4536a963a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v11.blend",
+      "bytes": 79734850,
+      "sha256": "187b34918b3df4e501a752d7c98506d7e185bff907adfaf54539feef64984a87",
+      "trackedAtAudit": true
+    }
+  ],
+  "filesAtLeast100MiB": [],
+  "scopedModelFiles": [
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/StationHall-v01.fbx",
+      "bytes": 2685692,
+      "sha256": "46888ce69ec2901cdc4e2fca1eabe07d91b84a3858ee27b1c0339b668b79ae65",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbx",
+      "bytes": 17125148,
+      "sha256": "ad5a6a1550ce43729d01e0e094c97588bc8e053de912f16501326581148d2627",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbx",
+      "bytes": 15144908,
+      "sha256": "369d754d6afea261af8d5a9cb3b76147f599b3a9ab4b1836a520716909bc88c6",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+      "bytes": 4099852,
+      "sha256": "586de1c65e42cf8e9358b99867ecc0f37c3c76441ce795779b61f124bd5830b4",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Original.fbx",
+      "bytes": 2755356,
+      "sha256": "1fc98738b518634d607ea5f4159c7bdb6f1965f59ddff4ea8dd4239ee9802e2c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD0.fbx",
+      "bytes": 660476,
+      "sha256": "820cfe8af655e1d8d9f04e0ac7d863811d5a128de35755bc540f60ea7351cbc6",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD1.fbx",
+      "bytes": 411420,
+      "sha256": "9b0176d853de9a7b15234a556710505dcc6bcbdc3f6035c35ba451326d794f22",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD2.fbx",
+      "bytes": 116220,
+      "sha256": "e1b52a3c6e8a00edac67e395e5efaad5643bc3488be62e6b14c6368097cadc5b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_P20_V02.fbx",
+      "bytes": 420864,
+      "sha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD0.fbx",
+      "bytes": 549020,
+      "sha256": "ea5d4b4a9b0bfb5b3ada37875cac497c95443dee6220eb02b142e77126ada21f",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD1.fbx",
+      "bytes": 132796,
+      "sha256": "8af94a66d0b343ae292c87383d91c170f5d5f3b0bc721eb5d65157e877628d80",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD2.fbx",
+      "bytes": 47500,
+      "sha256": "ce0836592855796c6b3eb49222f366cbda76e681cea7cb9b2aaebd25a38f8974",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/BatteryBay/BatteryBay.blend",
+      "bytes": 18612150,
+      "sha256": "5572ed6528cb675bcb786d6bd4ebd46bab19df6d3638b4194ab76edce78860bb",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.blend",
+      "bytes": 13089404,
+      "sha256": "90ffe6117ef2102d5fc121ecb2378ed14ee404eb57eaa6db37e01458b8d67c02",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.fbx",
+      "bytes": 626524,
+      "sha256": "750838ddc1828f579cf11f3e244d5663fbcb9d731661fdfce0a6a8493d222e1b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.glb",
+      "bytes": 12110980,
+      "sha256": "bc84b09013859e03cb08af0a58cd41606457b4b018a4631282992dcc8dada676",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.blend",
+      "bytes": 11075846,
+      "sha256": "aeeadba2aac1fef2edae3ef956b46d767177decd3916475d9f83d335507bde3c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.fbx",
+      "bytes": 645804,
+      "sha256": "8ed41f816657a1881bd5ff8672fc9753450c22dac358ae7f5362a71234425420",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.glb",
+      "bytes": 10403284,
+      "sha256": "1bd6efd7e314764e9b1fbb84521a4ba94027fe556da8e1b7d62fd722bf4af64a",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/TouchConsole-Preview.blend",
+      "bytes": 12214802,
+      "sha256": "b7e70b107be610c9b630f0c3c502334bec4d5ee7ccafe7d56a5a53e6b6199cea",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/TouchConsole.blend",
+      "bytes": 12203558,
+      "sha256": "3d4204de8f5198b73b22361fa2e03f1a7a6e4213ec2f4e24356193674542667b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbx",
+      "bytes": 2751292,
+      "sha256": "16c2deebbec845f5f9559e9498884b80a2c3996879d48964c2ef756feb4b5a47",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V01_2026-10-25.fbx",
+      "bytes": 236944,
+      "sha256": "f541cb7dfce616864a7299940c7261f854df5537797a3b1f6c2207315a630d30",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V02_2026-10-25.fbx",
+      "bytes": 420864,
+      "sha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V03_2026-10-25.fbx",
+      "bytes": 637616,
+      "sha256": "677d2c6a2909a4a6dff2552e9bf461684cdd29a79c1c474f1df16bfcf0906559",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V04_2026-10-25.fbx",
+      "bytes": 333296,
+      "sha256": "555924d44b7345f0a6301762b37c5e884519dff756971b0c3d2096e0d39d1b74",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/HallExperiment/Station-Hall-Experiment-v01.blend",
+      "bytes": 11503682,
+      "sha256": "9bfb1e7e17a77314f0d9d30337280fe481cb66e0126a9c9c985d8747c5f78843",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-AnatomicalBase.blend",
+      "bytes": 42559255,
+      "sha256": "17354f4020dd414ab4841364b776b7263a14984166cae9736addff6c1e5cdeba",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Demo-Authoring.blend",
+      "bytes": 41288587,
+      "sha256": "ab33efd3ddcedee8e4835276207facb3d42808eaf0c515ff4ae05e70ce9a9362",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v02.blend",
+      "bytes": 48123856,
+      "sha256": "aa2b0b7ead471b31496f5dbfff1ebdb90bbd15512ef27ab566a02baeb03f9940",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v03.blend",
+      "bytes": 50538457,
+      "sha256": "5d7c7099670dd1c9e20ee11090acf60be761dc8724399f59e6bfc0075e8bbbd1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v04.blend",
+      "bytes": 51719954,
+      "sha256": "83b67254b8bf001914c6b73d11c8a61605ce8de86d4f4bc05c4616e05a888617",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v05.blend",
+      "bytes": 51767786,
+      "sha256": "ae3b0ad1aa6a45d32ca695902b10cc003c6c9999d522dd1eb8822893a25a8b96",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v06.blend",
+      "bytes": 53419133,
+      "sha256": "871a53d0f481dad74670c150c422aeef0efbf5687e3301bee05ab3aca00296ad",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v07.blend",
+      "bytes": 54356954,
+      "sha256": "cc62f68ba556af4dbed40328ded5bce2a80b048dc3617d6ef02ead54092204dd",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v08.blend",
+      "bytes": 54904957,
+      "sha256": "9443ab04d474c4ed5e64e73d3c320259f529f3a93df67fb22d918c3d58dce352",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v09.blend",
+      "bytes": 52616035,
+      "sha256": "91fd9fa1fcf74ee29baf83eef30bf64e9995d8fa8307e73beff94d0fa54da00d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v10.blend",
+      "bytes": 52631375,
+      "sha256": "eb72d28efd8312d5c1e388e022fefc585811cd29400ca785b345b7c4536a963a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v11.blend",
+      "bytes": 79734850,
+      "sha256": "187b34918b3df4e501a752d7c98506d7e185bff907adfaf54539feef64984a87",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+      "bytes": 4099852,
+      "sha256": "586de1c65e42cf8e9358b99867ecc0f37c3c76441ce795779b61f124bd5830b4",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbx",
+      "bytes": 2755356,
+      "sha256": "1fc98738b518634d607ea5f4159c7bdb6f1965f59ddff4ea8dd4239ee9802e2c",
+      "trackedAtAudit": false
+    }
+  ],
+  "nativeBlendCount": 18,
+  "modelScopeManifest": [
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment.meta",
+      "bytes": 62,
+      "sha256": "5cf830741a9427a7df74653e309bdcee588015ddc5c465d201ad80553ce03b33",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials.meta",
+      "bytes": 172,
+      "sha256": "2207cd2d8cf9e98630f8a524496a8ae0abec8f2cbfbb5b75c031a99b34ed7bdc",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Blockout.mat",
+      "bytes": 2233,
+      "sha256": "85194017f39186d83945988ecb8765f574b3797ce657b898eb5b95a4b2cdeb43",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Blockout.mat.meta",
+      "bytes": 188,
+      "sha256": "3b72b6bd5232f0c7f2750d1a691dbfccdab9ef9957192b65f635cff6034898ad",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Glass.mat",
+      "bytes": 2211,
+      "sha256": "e7061062241477e4a76e44347414a43347252fed476897d476bc570766eeced7",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Glass.mat.meta",
+      "bytes": 188,
+      "sha256": "86e078b34740654e97973616b5c72af8d6ee921714a232129e999a3358bbdf1a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Label.mat",
+      "bytes": 2210,
+      "sha256": "2f01a6c9ee7efa5ee9e1631f102db6950e48de1e71d41e41f9ef8e1857ce9c47",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Label.mat.meta",
+      "bytes": 188,
+      "sha256": "64f9e9bd453c78aeeb595a764d97c177a9ca0dd1a506844a521e73e9c3f90d69",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Light_Warm.mat",
+      "bytes": 2240,
+      "sha256": "79110f30d7073a6288c21ad2fe3456245a0151fe57f84f1cad08f77020bede0b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Light_Warm.mat.meta",
+      "bytes": 188,
+      "sha256": "7a080938cbcafb5fb59a971265449d8f1641569a295bf3f508cbde4cd52a316d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Paint_Ivory.mat",
+      "bytes": 2419,
+      "sha256": "cc126f20995b3468fb81574f9037d7990fcf915f2ac432f4277292e087ed8e05",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Paint_Ivory.mat.meta",
+      "bytes": 188,
+      "sha256": "d1fe4cdfa68d30eac426bb0fcf5bcc4170bc2e5ebd855cd1501180035376e69a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Paint_Navy.mat",
+      "bytes": 2419,
+      "sha256": "2d41dde36e23567b476f44724c7137789697980649420e3b6da43cf683c21f6b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Paint_Navy.mat.meta",
+      "bytes": 188,
+      "sha256": "20773bbbd38f607fe4d40035edd45fde5a7f0fa6e19cc27387738890c7e581b7",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Rubber.mat",
+      "bytes": 2213,
+      "sha256": "9a03aa419225d1e39197950ac446f625f8d5c40df2878c0c7fe200ae72dd9802",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Rubber.mat.meta",
+      "bytes": 188,
+      "sha256": "ed8b727210cb7d20881a754d7dd1b4fd404dc3cc74e725b138a1e8673704213b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Safety_Yellow.mat",
+      "bytes": 2219,
+      "sha256": "eeaad95d8754e4baf4fbf2468ddfb5c0e02953c2105784f2aba55b2def5278d7",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Safety_Yellow.mat.meta",
+      "bytes": 188,
+      "sha256": "4a39c8b255e040293f04cc9d785f89e0d79c3d36f33976b59587f8d2f89eb79a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Screen.mat",
+      "bytes": 2214,
+      "sha256": "5fe9166066640deeab92235080970afa24d7f6455ec5fd6b75f6dc61f55fc45b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Screen.mat.meta",
+      "bytes": 188,
+      "sha256": "47a928fd2910d35ae449b3bb9e8238e1a70effec59aa749f4c154073d92fe07d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Signal_Amber.mat",
+      "bytes": 2243,
+      "sha256": "67e5897de337bcb11704a51a095d1243691e61ac15ece28198972fbdf37c15f1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Signal_Amber.mat.meta",
+      "bytes": 188,
+      "sha256": "1ed216c90ac9d7b442cf1aea933f272cb6ba4e439cf50d181f2637b5a9c33801",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Signal_Cyan.mat",
+      "bytes": 2240,
+      "sha256": "92e6c6a2e2ca1f5ade4da851f6596f0050ed5cff6e4c7d80decd03b1dea77f0a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Signal_Cyan.mat.meta",
+      "bytes": 188,
+      "sha256": "43825e68eef46c594c206915d5120e81da355d8e3b8fe6c56804a4e71e48655c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Stars.mat",
+      "bytes": 804,
+      "sha256": "8e52f78648a444d1ba6c40f459ba6e0dc94d16ef1018f4fcaadc3ff85cf5801b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Stars.mat.meta",
+      "bytes": 188,
+      "sha256": "0234d7424717816a8f98e943a17b744f2f4eedaa5984f5cc936c98a4ad40f993",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Steel_Brush.mat",
+      "bytes": 2364,
+      "sha256": "b5d8989f216e1fbf3e494d8de4491da6d3ae378e6aba4aa8b0d1426e351d5918",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Steel_Brush.mat.meta",
+      "bytes": 188,
+      "sha256": "4a11b39c33147badc57eb13e0a00a68c5c1b6e8bbed57a7855197f34d05cc6f4",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Steel_Dark.mat",
+      "bytes": 2362,
+      "sha256": "4eca3a0893be864d7f70d02e37a44824ba9c18c50656a8b174f8df6840e0f60b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Materials/Steel_Dark.mat.meta",
+      "bytes": 188,
+      "sha256": "5a00e9e3ec214a3e1773063bd304bdbfc4381265355fd85ab8d4172a517fd514",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/StationHall-v01.fbx",
+      "bytes": 2685692,
+      "sha256": "46888ce69ec2901cdc4e2fca1eabe07d91b84a3858ee27b1c0339b668b79ae65",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/StationHall-v01.fbx.meta",
+      "bytes": 3063,
+      "sha256": "5d1a7f290b0ddb8b13127191a9f7ca6c26a5df6e05f0c4957c39b02ddfa1260b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures.meta",
+      "bytes": 62,
+      "sha256": "611ef1105ab36a2e94a42984537edefd4e384d30ff7c50b593466f6ace1aa352",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures/MicroNormal.png",
+      "bytes": 106214,
+      "sha256": "888eab4e8854ae900daf31b33d9bf318b7842d60449b97762374844d2742560b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures/MicroNormal.png.meta",
+      "bytes": 2714,
+      "sha256": "1826f14049ed7feab6a9b7ae9ce61f78e217bbe6f1c53f4480da287b82f53559",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures/Paint_MetalSmooth.png",
+      "bytes": 110047,
+      "sha256": "d9722016a56e1a4df13e8f9f5275ed192571e82e0cdd3636c715ddf88fc6ef96",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures/Paint_MetalSmooth.png.meta",
+      "bytes": 2714,
+      "sha256": "df662ad54ee637730f5c49d4aec883625bacdca1f2b9ab61b7d71f7d8e9ae5ad",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures/PaintedAlloy_Albedo.png",
+      "bytes": 3714806,
+      "sha256": "42301ba0f0c0a943a1ea4c970974bb34cc635657a472bdb866c3e8605c5fbb62",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures/PaintedAlloy_Albedo.png.meta",
+      "bytes": 2714,
+      "sha256": "5f8b068624eed3d5e7fe26a36446dafc2582d1975ac532b28c0b88a892e72a86",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures/Steel_MetalSmooth.png",
+      "bytes": 118363,
+      "sha256": "4d7bf9bab6cc191ab46aaae43e730939867f1b4e824bae8edc3400289a2b47d8",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/HallExperiment/Textures/Steel_MetalSmooth.png.meta",
+      "bytes": 2714,
+      "sha256": "fb857770f5c61f483cf5fab17fe918fda872ffbfb81f272c46e5a28b2af82183",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo.meta",
+      "bytes": 172,
+      "sha256": "724978e86ad664b0d5caf8606897e6f37a7e3a68bcfa44f2edde17da9dbc50cc",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle.meta",
+      "bytes": 172,
+      "sha256": "240d5cc9016505443231764536547cd57312eafef5bc18c05559c774f401c48d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/PreviewPBR.mat",
+      "bytes": 2408,
+      "sha256": "a081e5f0a2e4b47d896dc406955a1bccb01552e954f442b700391d9e3180e893",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/PreviewPBR.mat.meta",
+      "bytes": 188,
+      "sha256": "3452a032a6b3af77c49af29773a30f840b8d77c1082dc48cdeb96f852dfedc81",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/StandardMetallicSmoothness.png",
+      "bytes": 3015052,
+      "sha256": "578627cb2c2853aa6c6c0e9d6b3a4bd57d8797e13c764c9605a6fad66691e4dc",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/StandardMetallicSmoothness.png.meta",
+      "bytes": 2714,
+      "sha256": "8dcd6232768db242b8b2a5f28e21e60385949faca8a070fa52500b530eb80f0b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm.meta",
+      "bytes": 172,
+      "sha256": "91198c6d91e778ed5bb78da6216512afa23d3003255bc9c4042e1e65d7769b4c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_basecolor.JPEG",
+      "bytes": 1508367,
+      "sha256": "0ca88d912050af236cbf4655d880fb01e20be9a281d031bdb0749698817a4c99",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_basecolor.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "00b847f38764ca0e52d439ba427ec9408dbdf7a2cd12fbfce2bd6604f6e12fe5",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_metallic.JPEG",
+      "bytes": 1611752,
+      "sha256": "e5236d439a8256ebe6589ccd366eff23dc3d582d752fc53c68eb1e9cf1b6cff0",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_metallic.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "73a202215102c981964b9824ce767e7187de80a46deebca04953b528287a43c2",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_normal.PNG",
+      "bytes": 1125607,
+      "sha256": "3251ee85b41511af47d0124aebb6ae1ea6be276c2288e9fef533c5f8da6ad3a9",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_normal.PNG.meta",
+      "bytes": 2714,
+      "sha256": "6cbc1aff13d7704ac4d1ac6be74bc311964c967c562cab3a9c62dbc3e5222714",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_rm.JPEG",
+      "bytes": 1586710,
+      "sha256": "e7784754b05dc57c15a70067f3730eeff6eff1d95452ebc53962b2b7232aa78f",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_rm.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "c87f3e57d9b707195d4cf0fbbd7fe45791887f26e9cc729912a3793d38603022",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_roughness.JPEG",
+      "bytes": 1490825,
+      "sha256": "35e461d90f6b6daa811ea41cb39dea4e6d568c46a25589cafab190489b98373c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_roughness.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "ba7a4bfe8e72f67347de7db531a2e1edadf129d5da6e473fdf359be618fbf809",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbx",
+      "bytes": 17125148,
+      "sha256": "ad5a6a1550ce43729d01e0e094c97588bc8e053de912f16501326581148d2627",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbx.meta",
+      "bytes": 3063,
+      "sha256": "a4e2f856fa6df89d8b88dc7ca4aa33c5a72571a057779427ea17c0fcf1e1032e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone.meta",
+      "bytes": 172,
+      "sha256": "714a590eaa51fb6572e89fa5512c0b9c2cadaf86444182ed81f4bb152e54900b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/PreviewPBR.mat",
+      "bytes": 2408,
+      "sha256": "e3aeecfd6ef41d4c26e78a324e62bde28300a00ff5783b4b3e425a1aa7eb32de",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/PreviewPBR.mat.meta",
+      "bytes": 188,
+      "sha256": "4adf921f1d7cd248cea63acc7818691215fa515bef84b5e98ddc9e4291ec1ee5",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/StandardMetallicSmoothness.png",
+      "bytes": 3165395,
+      "sha256": "8545455a3ad24921e61cb789fc369f968ffe512a65f060f7d3813b90f1a2cca3",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/StandardMetallicSmoothness.png.meta",
+      "bytes": 2714,
+      "sha256": "4f87f4200c4f956d8518429e6582fc0220103637def1a797a12ef773fb17b9ca",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm.meta",
+      "bytes": 172,
+      "sha256": "3ae26c8e8099dee460bf1fc92f5954cc182777fc69231f7cab83b638b447c55b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_basecolor.JPEG",
+      "bytes": 1840814,
+      "sha256": "311942219064d57e1a94a0d026090103ce6ec614b721adca39ae6aa40885d102",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_basecolor.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "f062c479c205682a37be6ce6241e4a93711420574e305eb7779ed91f1d4b5c89",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_metallic.JPEG",
+      "bytes": 1743238,
+      "sha256": "dcc0f010b0c1d9dc34ce89f4cded148023e9df7749a95425ee7ce3db30b1247d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_metallic.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "cd9c246dd8c13ba396698c2ff97a6ff79189320c54e94f9fa5c29e4e85be2a49",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_normal.PNG",
+      "bytes": 1732245,
+      "sha256": "338cff9b2a35f9c5c1f8885c41258514d0bc62a9c5620e05e3f3c27fd6674272",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_normal.PNG.meta",
+      "bytes": 2714,
+      "sha256": "7cbb514cbde4598e3977e19c26f30d6e1248799bbb247d7d1d2568260b371ceb",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_rm.JPEG",
+      "bytes": 1777505,
+      "sha256": "2b80c3c2d917b3486d689447a35d3655f55390f76764166a499ddb010ef40fad",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_rm.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "22af695b224751e7a2f96ddabcc916d3415839839b3700d774e0af672e1fe3af",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_roughness.JPEG",
+      "bytes": 1604808,
+      "sha256": "71f9ea1e3795c62818a5cdda6b377291b8d271b6cb8c68a767dcadf491991832",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_roughness.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "3e282e79def9130abd47547cbfedd28a45d203251d876cb6f75aa1cc5ee3d8a2",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbx",
+      "bytes": 15144908,
+      "sha256": "369d754d6afea261af8d5a9cb3b76147f599b3a9ab4b1836a520716909bc88c6",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbx.meta",
+      "bytes": 3063,
+      "sha256": "a115723e9c73e53463c3bc5709632de9de1675ecdd289429e14aaf0fb2fec398",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Mira3DDemo.unity",
+      "bytes": 47903,
+      "sha256": "f3656343a6cc2f27ed9a7510c7792c078ecbdbda045de823f21bf6b50377d71f",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Mira3DDemo.unity.meta",
+      "bytes": 162,
+      "sha256": "37833df24a5832d6814da8737ccb721d2f995c1d94a74088cf2b75fba4e5a456",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraAvatar.cs",
+      "bytes": 3996,
+      "sha256": "46299682f5be6408e034e3da7ffcb6bd009b3a2ef67771fd3e08e859124c691c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraAvatar.cs.meta",
+      "bytes": 60,
+      "sha256": "488737cfc08e7fe2b706eec8e3608444d45ff0d0f225b44af443771ad3db8815",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraAvatar3D.cs",
+      "bytes": 2730,
+      "sha256": "142394e83af1094c7985bb649793eeddefa338ae84ab2c9d71e74aed19e11f7e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraAvatar3D.cs.meta",
+      "bytes": 60,
+      "sha256": "32d47f7bb083dca783cbc0382a7ed5d432e611faeaa89d5198d67f1f291e9179",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraAvatarLab.unity",
+      "bytes": 10077,
+      "sha256": "e83d5c0cd3d220a049dcdf8131fc8bea03cd5bdddb45abe96e627ec8e4e5bf5b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraAvatarLab.unity.meta",
+      "bytes": 162,
+      "sha256": "6c76c45748ae555c2dcc5e7f978c0712774bdacab4fb62244f12f0e0660fe4f5",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraDialoguePortraits.png",
+      "bytes": 2801331,
+      "sha256": "77db12c3088766e6885f8ec20c0d87f89c01017d12503bf753951e3502b7c132",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraDialoguePortraits.png.meta",
+      "bytes": 3137,
+      "sha256": "c137a904adaf08673735c39845283f55354838e8ac55618fcb48687c4a8bf0e5",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraDialoguePreview.cs",
+      "bytes": 10377,
+      "sha256": "5c7bde5dd9c67180e0473d7267da5d84788b7c143e12e0d04ceed405f08cced0",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraDialoguePreview.cs.meta",
+      "bytes": 60,
+      "sha256": "65afd9c10c2efc689361d6c3966a649c7e602376a3c767ab8eb1097214f88828",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraExpressions.png",
+      "bytes": 2647530,
+      "sha256": "88ceabf0230478d6139a7c02bc44aae9a15af8eccf2117aa6488ad1e33a0746f",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraExpressions.png.meta",
+      "bytes": 3137,
+      "sha256": "8e6f8cb4de725d382155985be9887f61940effebcb7b7362abb3e7cac2d8c2d9",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs",
+      "bytes": 10829,
+      "sha256": "52321949eb5f4fa56698e56b1091fd4dd0c7ddee7165190795c3806b6b7a450e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs.meta",
+      "bytes": 61,
+      "sha256": "66d3dfab896703ce3035d26826f00e8eca4774431331a0b77f51c6c6eb093571",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraHair.shader",
+      "bytes": 695,
+      "sha256": "e1a0f1dbc48eca549c1da02e74b8ce66a52e82446b16ce27a998a4773752d873",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraHair.shader.meta",
+      "bytes": 213,
+      "sha256": "b1b82b10bb89f69d45a0db6a27090f0121ea2679626dbd5a5c40444b0ada937d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraSketch.png",
+      "bytes": 3121707,
+      "sha256": "a5a6ac42a25d093afe1ce9250970484b11bfb9bd9cfee4eae56a7b763aa1ccf9",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraSketch.png.meta",
+      "bytes": 3137,
+      "sha256": "bda8d8b5094a0d10687846cf9812915b18858cd9df8e5b92427b3394d22a55e8",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraSkin.shader",
+      "bytes": 1178,
+      "sha256": "74e9928a468ddfcdfb4e5304d5cc8459a9598b4dfd6da261b2afadfe2181eda2",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraSkin.shader.meta",
+      "bytes": 213,
+      "sha256": "5fd5b04b625c603dadc0049a8f8899e83efb03a73e420271de18103c0a71880f",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraTripoDemo.unity",
+      "bytes": 25095,
+      "sha256": "34648cc14ceff49c6d994985abe2d6b3932f84efffa9e48bdb10bafb59f87ed2",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraTripoDemo.unity.meta",
+      "bytes": 155,
+      "sha256": "6126ccf9f0cab86f0a2e9d947b5e382322a9afa90867464e8f80e60db41b1ac1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraTripoDialogueCheck.cs",
+      "bytes": 14266,
+      "sha256": "7b335462ac9cd6c3fbcd4b1320037625dbfb85cefa33da0f2b23475ed3546bdb",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraTripoDialogueCheck.cs.meta",
+      "bytes": 60,
+      "sha256": "9f25bbaa65d7198e9c862d62bea9e15ec0b7647e8d09837a6d11e750ed123775",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D.meta",
+      "bytes": 180,
+      "sha256": "4a5492ef52fd925ab1afc4a8e194eafc5f4bd70f0ebb27b2c04117907e7e853b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/MiraHairLocks.png",
+      "bytes": 18256,
+      "sha256": "d9313b82d3cb0f39293a636480dc49b5bb6ecf63be8873e1ec9160d38a22419a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/MiraHairLocks.png.meta",
+      "bytes": 3137,
+      "sha256": "a561de9cec5ad7fd04c80fb6d897c224a3b2c2e0453efa7ee602870230589955",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/MiraPortrait.renderTexture",
+      "bytes": 896,
+      "sha256": "b1e0eb6a651a0b8d5b7d5f6b06b4d536963e2e3a2f3cc67b88c4428f75ead72a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/MiraPortrait.renderTexture.meta",
+      "bytes": 196,
+      "sha256": "86c8e4584e4b109c6f03bc4849dbce3246cb38a2a81716e994b2d9e84a6a01db",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/MiraStaticHairLocks.png",
+      "bytes": 33596,
+      "sha256": "9b3f69d0d5cea6a62581a111be59b621e7e4c4d7e4622204cb608ec7d091b186",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/MiraStaticHairLocks.png.meta",
+      "bytes": 3137,
+      "sha256": "623b04ef80835aa999177185c0e8ecf6c4fc041810219fa3c3f583db6f8c8456",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.asset",
+      "bytes": 1413668,
+      "sha256": "05d223c34ad6f891d19eca735d4fe00bc12aefad7bb041c409ebda8897268ada",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.asset.meta",
+      "bytes": 196,
+      "sha256": "82ab21ef0eac25401640969daaeb93bfc4bd9f53e2ac4bc64c274794ec63b2a5",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow001.asset",
+      "bytes": 16242,
+      "sha256": "95f005acdfc6ffb3d82abfadcc2ed7e394064a0aad6ca50338a5dcdcb0ae4dba",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow001.asset.meta",
+      "bytes": 196,
+      "sha256": "86cd483b4d4a6758d15dc61d98d6c46a68bcdcb017aa7ac3283395e269f58ebd",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow001.mat",
+      "bytes": 1012,
+      "sha256": "8ded0277c02163d984dd3b3c7d1adffe90e0404de2a1c2cee41831ec2994e67a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow001.mat.meta",
+      "bytes": 196,
+      "sha256": "5f6b729341d2af446f545464475e164883f7534a2d3b501c4caf337941e8616a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow001.png",
+      "bytes": 100186,
+      "sha256": "1b1f509b428528a42a4941b49ffd83924c96414b2f1d135879e175daa3d0e750",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow001.png.meta",
+      "bytes": 3137,
+      "sha256": "e5cee93f9c6f4e9b78fcefc33416deb62165061b553e37c65aac14f9f53742e2",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow005.asset",
+      "bytes": 16272,
+      "sha256": "22041586385cb02e9dc2498f6a98be73b08bca0afd83a8898ba0a68ae1aa3974",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow005.asset.meta",
+      "bytes": 196,
+      "sha256": "bc7985825718d91bdcc8edb860efaab65163fdba6b8b8e37672704527c1f18a3",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow005.mat",
+      "bytes": 1021,
+      "sha256": "65e2db4bbf4945e06001c2ea69d30483ed11d9825fd5242b7d50af5e79eac594",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow005.mat.meta",
+      "bytes": 196,
+      "sha256": "ad3b9dc56400294e4b6fee6288c68984c74f7a6a7af8f7d2763c716b5d4c38ba",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow005.png",
+      "bytes": 89732,
+      "sha256": "d8adb8f1cedf66fa09f3f2da9678b969152f2c364dd8f8522cd49823383fb0bb",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyebrow005.png.meta",
+      "bytes": 3137,
+      "sha256": "bdbdd8e3b3f8fd4900628b0a41eb3d270da7ccca840068e2c44603251a06aa35",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes01.asset",
+      "bytes": 28530,
+      "sha256": "b3a2d5b619001fb72cd5d92c3f90ba75069c0afc19ca082d9e1e8c867dd0c380",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes01.asset.meta",
+      "bytes": 196,
+      "sha256": "986a082c510d9143bb0d424025446452b22f7b8ebe88affc06635826d32816c1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes01.mat",
+      "bytes": 1012,
+      "sha256": "216ba6d49126bd9191a59f1ea33179ac26c1860b8ace09c1539b0665999be471",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes01.mat.meta",
+      "bytes": 196,
+      "sha256": "2d7c0d4991beb8d2ae7a3f6bdb0b43bd12eab5999fee330380f84089f96ba5a4",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes01.png",
+      "bytes": 111903,
+      "sha256": "cefe3aa06869e88c908c342984c624ada1f74c918fd67226ecba28d99502a239",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes01.png.meta",
+      "bytes": 3137,
+      "sha256": "cc3e77adf2ad7d15f9ec5814be2476d28c28a8a7f6dc5775f0925041c7015c6d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes04.asset",
+      "bytes": 28536,
+      "sha256": "44d8d11e009a8cfa9728952b01f394717ece39e516dcd1fe329e1141be078340",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes04.asset.meta",
+      "bytes": 196,
+      "sha256": "4205c5326c54556bd089c3d2b559af37aa1ef324378e11f5e44ca541de17f003",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes04.mat",
+      "bytes": 1012,
+      "sha256": "13ffb8f1e142e7ecfc1c6b80f90a34ed3c51edbdcb09d1c3dc4ae3ed26bc8e8a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes04.mat.meta",
+      "bytes": 196,
+      "sha256": "b4123426e9bba178fd66f82ff1a35dccd57e868dabf72fd13a27d1429eb11096",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes04.png",
+      "bytes": 112648,
+      "sha256": "c4ae9dca9cc66f87168dad3e2afe4a43d27ae5801b628e5dc94519ca5a76d14c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.eyelashes04.png.meta",
+      "bytes": 3137,
+      "sha256": "d42646a34f91cf7a648b2b10a7f0e7863809a3f6d2ae1b226b151e3791569fab",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.female_casualsuit01.asset",
+      "bytes": 112281,
+      "sha256": "7e9a753a7ae30b4beadd5acf0bdb603227a8419f83c9258f8903a87f935cfb0b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.female_casualsuit01.asset.meta",
+      "bytes": 196,
+      "sha256": "95222bbfe2adbdac221db52d118d48725e395acfe9f17f2e1e52496576acbeb9",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.female_casualsuit01.mat",
+      "bytes": 2342,
+      "sha256": "257a2deb43e3fe87d75d1730d76bc7c0bb69add858f7aee59fdbbb84afaec833",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.female_casualsuit01.mat.meta",
+      "bytes": 196,
+      "sha256": "f3ae1ff1eab923af7b67a982740abdec312ff364f45022ac636f53bad36e173c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.female_casualsuit01.png",
+      "bytes": 3567565,
+      "sha256": "d08150dd956e7b3c344f09b29643effa763d0d87d7530f3cf6f60302e47fd623",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.female_casualsuit01.png.meta",
+      "bytes": 3137,
+      "sha256": "2f04d40b93b59d59148820f3fc5883501c1b1c42a67d76e88157e45e25fcbdce",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.high-poly.asset",
+      "bytes": 64463,
+      "sha256": "9956b337b4d010616e60e05d129371d66d30ee20fccf913baf5f21dadd85c4f7",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.high-poly.asset.meta",
+      "bytes": 196,
+      "sha256": "5684d4947e568ca4a23384ceaab66dd0f01b1fa64d2dd079403ca1c9b8efd036",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.high-poly.mat",
+      "bytes": 2341,
+      "sha256": "22e10823ca04a4c29fe6a6d3c0e10fa0d01876a0d9debfc2c25379f86b57a667",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.high-poly.mat.meta",
+      "bytes": 196,
+      "sha256": "031f1abe869ab0b4b8024e384556d0c8c09bcde1b45e02e1f2eaf2a332e6c16b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.high-poly.png",
+      "bytes": 816106,
+      "sha256": "90bc09811585d48b016d546a1b30b2e60aed4d2f46e4e0e261b9591f32292379",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.high-poly.png.meta",
+      "bytes": 3137,
+      "sha256": "8e20854c4d6674a1f60d36fd610edf27ba6ad0a80c707cd335e92f73ca86fbaf",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.mat",
+      "bytes": 1023,
+      "sha256": "170bd7d9aede9e0337544abe363a39a2e870302f5d25e0007f13b16b8b7adfee",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.mat.meta",
+      "bytes": 196,
+      "sha256": "25877576f7ddbe88b51b91af634d135386fdb0b30eec0d03407c79b2001b49e0",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.png",
+      "bytes": 5249387,
+      "sha256": "33fec958e0d40773e46d6f64b084871e40388c957e32930fc74c200e5e256934",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.png.meta",
+      "bytes": 3137,
+      "sha256": "a0cf5c285fc567ebb654d6f87e3d87402fcb0dc2e1337fcfcb9ff80f19318ed0",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short03.asset",
+      "bytes": 116017,
+      "sha256": "8ae8acc4a6a2e1269929b7847a6aacf85120a6d8a2a000c860790efa62ae6ff0",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short03.asset.meta",
+      "bytes": 196,
+      "sha256": "5f9d98e973039623b89eb171dbd67db0641779c9feb678b06b0231735d064bfa",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short03.mat",
+      "bytes": 1021,
+      "sha256": "3744da3e00ec741d07442e5e9de63ffbc34cfa136654a1509189cb3d4e839952",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short03.mat.meta",
+      "bytes": 196,
+      "sha256": "2bbb02df78fc19a95982490861318c4bd7b41d43e6738ea64f56df97f9dd4fa2",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short03.png",
+      "bytes": 3103297,
+      "sha256": "99a897e8b9a367348fa822c9a47c3ee2849f704488ad4f200272e852a0252946",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short03.png.meta",
+      "bytes": 3137,
+      "sha256": "6f9cc3a2173e481ed896de1b2bd7a7323043312d03c9f47bf12e93803e070bd4",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short04.asset",
+      "bytes": 91831,
+      "sha256": "b99a6232748ee717fae89a5587bd8f6350982db0960f80898f9f41fc8147eb88",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short04.asset.meta",
+      "bytes": 196,
+      "sha256": "a50a172fcc3ce866659574d35716933cae0634d3b5fa509b49d894817dc24fc0",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short04.mat",
+      "bytes": 1012,
+      "sha256": "37e1c31a7cfc723a282c68304d8ecd56bec2a2c9c1fcf41378e7d09543333801",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short04.mat.meta",
+      "bytes": 196,
+      "sha256": "85062180d83013bb0e58619405fa80efa3da67b74ed4630697dc9093a05b71e9",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short04.png",
+      "bytes": 2821874,
+      "sha256": "9c5f87f1036018264be0ef5bb1f10af3aec84fa7cf40f44d3baf7c90a2dca317",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.short04.png.meta",
+      "bytes": 3137,
+      "sha256": "ec04f54492f1a23467ae41a4eeb49fbd720ed53222d94e72cd2f0b9cc035d181",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.teeth_base.asset",
+      "bytes": 505258,
+      "sha256": "464fae7b6689f77784cc67e75546163c6e6c7144adcde366c7fb86635713e5c2",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.teeth_base.asset.meta",
+      "bytes": 196,
+      "sha256": "19a253602b6bf80ad9ec3c9c4eb6b8e2fcc94ffedcdc1ae5189d7ecaa54080de",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.teeth_base.mat",
+      "bytes": 2341,
+      "sha256": "d3fd838e3c125184861dcfe96e02b8a640333d41258eb34ba0e32ac0d150a38e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.teeth_base.mat.meta",
+      "bytes": 196,
+      "sha256": "04a781b369610063b8ecef9bac8021f28de5070b08810ebae928fff3dfb3181b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.teeth_base.png",
+      "bytes": 2474023,
+      "sha256": "f73c5936a40ea046f7fb136aa4857fb37a67702b1ef95ffa41db922e57afbf58",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.teeth_base.png.meta",
+      "bytes": 3137,
+      "sha256": "891d43161c89038ea71c04606e95ec3dc09df49f4c511fa953b0bdaefdc71d9c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.tongue01.asset",
+      "bytes": 30639,
+      "sha256": "00babc5005712a92525d29d9a6dee1385495c902ad3bd000eadbd30c2781d737",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.tongue01.asset.meta",
+      "bytes": 196,
+      "sha256": "bd335432bc36b14330faa7ba925ea08d56270832c5c93a95755d4982d6c48706",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.tongue01.mat",
+      "bytes": 2344,
+      "sha256": "d698f0ba28468fb2d101136acc829c3df8d2bca22dfa1c934b02e43738b5d9e3",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.tongue01.mat.meta",
+      "bytes": 196,
+      "sha256": "98f077d25608b9bfa6aaab8ec2ef04939a33b061849155d43f7a5eb2c5dde9ab",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.tongue01.png",
+      "bytes": 751968,
+      "sha256": "a6a1b883355eafba77e0764ace30c0c32b7c2a0e4e9943cb3599afad4d8458c9",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_AnatomicalBase.tongue01.png.meta",
+      "bytes": 3137,
+      "sha256": "080d7c65577b1d40ec8dd87916da8e8e5b3621a0248c35da8edd2267124412a1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_HairCards.asset",
+      "bytes": 532348,
+      "sha256": "e91f7a0e1ec65de3f635185ee69fd19a57b1e22617584778742cc35431246e2d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_HairCards.asset.meta",
+      "bytes": 196,
+      "sha256": "5370f3304fda26670f4e37c5f233f37919282fae381fafea09fada350dca2194",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_HairCards.mat",
+      "bytes": 1013,
+      "sha256": "559a334625b675e93287f6287512c1df3c25272e1778c9a34c269d51c66d1bd7",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_HairCards.mat.meta",
+      "bytes": 196,
+      "sha256": "920459353a3c7dcb95b3b48e538aadcbeff74412f8b0fcdb1cd3a11d1c0d6bcc",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_HairCards.png",
+      "bytes": 31585,
+      "sha256": "1a97e965d15706240b4d87a9a852972c467d70952b6c1d8a12ead20af1af3067",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_HairCards.png.meta",
+      "bytes": 3137,
+      "sha256": "2c696d7ebb1eb4f61e1a4afd7276034d315f80df116023c6f0e103d4ebd7eb84",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_Jacket.asset",
+      "bytes": 1077533,
+      "sha256": "9e5d14549f56de7bb965d8c1f4dbfece0790b5ea2aaec456db0db8e5e3f1d115",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_Jacket.asset.meta",
+      "bytes": 196,
+      "sha256": "894fa2ab5cc73d9650a835c6f7ed6ae5838b810900ff09c8053052dcd95f217f",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_Jacket.mat",
+      "bytes": 2305,
+      "sha256": "74ff9bb453dec4ee274cee493c3828aaa3d73e9c987d06ec9d82e8055189c917",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_Jacket.mat.meta",
+      "bytes": 196,
+      "sha256": "c4ddd493f98b9e1d3d4b17e5902983d5803ba8e3524057a9191b8f10432c6c6e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_StaticHairCards.asset",
+      "bytes": 532352,
+      "sha256": "27b43a80139ff6f8e2cfd5ca773baa02eb80b759c64289620d458093f8046a0e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_StaticHairCards.asset.meta",
+      "bytes": 196,
+      "sha256": "12fcaa34b40dd40dedba43049b9b17af572107934f9fffc789b257e5c2b875ae",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_StaticHairCards.mat",
+      "bytes": 1014,
+      "sha256": "2355adc490c4829ec79ec5973b9909c9a7573718323d80d7019cb9a7699360f8",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_StaticHairCards.mat.meta",
+      "bytes": 196,
+      "sha256": "b83c3b6adde8840e98b098e8efa353c89742721c02e6bb04703878014e1ab45f",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_StaticHairCards.png",
+      "bytes": 53829,
+      "sha256": "9fa6329751ef646e4debe4a36e27f1c47df24405364965a4987fdd233c307df3",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_StaticHairCards.png.meta",
+      "bytes": 3137,
+      "sha256": "83ca336f2de9521109c28cca87bba2d64a0d453592dcadbd955371e2812228ca",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_brushed_alloy_seams.asset",
+      "bytes": 13579,
+      "sha256": "c60dd5f571a60a2a24030d1c101ae7fce849ee982baeb05ff5d51196e29619dd",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_brushed_alloy_seams.asset.meta",
+      "bytes": 196,
+      "sha256": "64980b6dec678f6a97446bb064166e513fa49f10099df75c09f1e96508a6380f",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_brushed_alloy_seams.mat",
+      "bytes": 2302,
+      "sha256": "11d2509264b14ad439377b4cc14fee4e0c81650946a67aa1f99a5f02b5190063",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_brushed_alloy_seams.mat.meta",
+      "bytes": 196,
+      "sha256": "15220bd973969c00db3fdfa8fe983966b88c95506afcbef050739417e2de61f6",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_cyan_inlay.asset",
+      "bytes": 39430,
+      "sha256": "34932c9b2cade78244d586c244ca098b17396d422d1e2ea9b78deca52afaf647",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_cyan_inlay.asset.meta",
+      "bytes": 196,
+      "sha256": "30b2819c0360ea826209417c959ab747de607a5cb5ade8aa4df076d24400a7e0",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_cyan_inlay.mat",
+      "bytes": 2321,
+      "sha256": "bcb7b7b3ef7f6923b0ea30a28fc52c04842af4fce0a8ed87f6faed2cc84435a0",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_cyan_inlay.mat.meta",
+      "bytes": 196,
+      "sha256": "ceebb8051d7c7a8c830938cae8e5dfb1b66225aeeaab06575b8f47b997dc4664",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_individual_dark_chestnut_strands.asset",
+      "bytes": 6117208,
+      "sha256": "741bc52a1bd71b7543b1b94207050e8e30e8f78f2e7cb5f5eac83bf8c45f7da9",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_individual_dark_chestnut_strands.asset.meta",
+      "bytes": 196,
+      "sha256": "27f9496f8176ac1d0763428a3ef871ac43eb7e4135556033cc404d21365a7195",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_individual_dark_chestnut_strands.mat",
+      "bytes": 2305,
+      "sha256": "b51700cdadd0406f9c050a372ea0e05fbc96068edb1af1793b580b8d2add6205",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_detail_individual_dark_chestnut_strands.mat.meta",
+      "bytes": 196,
+      "sha256": "fb370aca91874279fc11ffedd2e0cafc36b04e831dcd0882b884ccac4c00f1e9",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_teeth_new.asset",
+      "bytes": 395726,
+      "sha256": "7c4f9f8c5cf5f82e5ba5708fe5523b7092c2b62cd49df53c815dc3d3a637ddd6",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_teeth_new.asset.meta",
+      "bytes": 196,
+      "sha256": "5bc117ae2b98ee1097dc327003e338f72e76e9841781e2c4a7cb80709d044bb8",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_teeth_new.mat",
+      "bytes": 2302,
+      "sha256": "570d85ccb68b27eeab6d3a11450c394a30f957142498576382e9a67695633d28",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/Mira_teeth_new.mat.meta",
+      "bytes": 196,
+      "sha256": "2f037f2db73fcbf6c9d0301efbcf20f95c88969ca1660ae727a49f831caafb0c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/mira-geometry.json",
+      "bytes": 5691945,
+      "sha256": "7127e45b5c01ac9b8a9c228260711e19bf98be6ee5bd6b5c44943617b0d9ab0a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/Model3D/mira-geometry.json.meta",
+      "bytes": 165,
+      "sha256": "3ba3dabb989499f807132376e70c7f3550ca70603b3ebf551f9759c171eff996",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25.meta",
+      "bytes": 172,
+      "sha256": "b8a1134a4821c2c20f82cce629feb805259ab7ba4cf33cffb7cd725590f86096",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png",
+      "bytes": 3303162,
+      "sha256": "d9d71dd4f5631ae525bd36a0569535c3d9d92b4f0df613bca818256883a2fe84",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MetalSmoothness.png.meta",
+      "bytes": 2714,
+      "sha256": "57a266db4ef2ec0bedbc0fd6042ece0dc07e7a6d3b0826809b103f12052af5b3",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset",
+      "bytes": 24621723,
+      "sha256": "b241c20857605993ab565904021277520a455019e207ef869df756dfb9647285",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset.meta",
+      "bytes": 188,
+      "sha256": "dea0288042fec77dd6173eb47cc8662adc579971ff1d4a15bcf6c0a4ba67516a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPBR.mat",
+      "bytes": 2411,
+      "sha256": "701e01f36f20362e707a0906a2f7e7fcec633364979ecbe70a81677c18bfd58e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPBR.mat.meta",
+      "bytes": 188,
+      "sha256": "1890904d2347f9ec60aa8d40ad316c8d7b46ccfe96e9b4146680771815890860",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPortrait.renderTexture",
+      "bytes": 864,
+      "sha256": "90461a11e21c908a7559e9be503eb2ef738340ddca018c95d27e8b2569796fb6",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPortrait.renderTexture.meta",
+      "bytes": 188,
+      "sha256": "bee8cc8c8f3cadc687d5903fba72f52f702f6ca5179e079f7808e4f96aca2c81",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm.meta",
+      "bytes": 172,
+      "sha256": "59ce1cc6fc8c1b8679c783d4199899df89eb32c6ab0e578567bdac5703af297e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg",
+      "bytes": 835686,
+      "sha256": "c57d447111a55dd6910225c5ec0fbe9379cd34cf28606eebe4cb4ff00f6bc3b1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg.meta",
+      "bytes": 2714,
+      "sha256": "dc04bcfa964e4441903466fb9d0a8ea1c6ffeec6308a23441beeec7f29845cc7",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG",
+      "bytes": 463436,
+      "sha256": "dbc2ca881cef6341940934580c0cf1fde10c120ea04077cc247027878d111151",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "a1f9585a6aa3264f0af595257825159189a151ad489b1d70eb28d388585f8541",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG",
+      "bytes": 527630,
+      "sha256": "acf4c55db81e096c6616c0ed4cc5a61c5ae85ac89710ed40008224b4a17a6702",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "df4a501b32063c3f7eb9d9d32268f4aa5fa7c08126195d2cd6a2dfef19745a6c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png",
+      "bytes": 1366279,
+      "sha256": "0d889b8656bc04f97cf63eacf57ec4841a713b0587caf81ddcd9a4746fa1ba3e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png.meta",
+      "bytes": 2714,
+      "sha256": "ec9de4f50a2bbc4c07ba5d794e1f80bd11a6c894cbb85cb3c89cef80a9688d31",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+      "bytes": 4099852,
+      "sha256": "586de1c65e42cf8e9358b99867ecc0f37c3c76441ce795779b61f124bd5830b4",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx.meta",
+      "bytes": 3063,
+      "sha256": "696c99fc1a089f8844e9d3ee302efcf4f9747e28b701315de10cb0d00989568e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31.meta",
+      "bytes": 172,
+      "sha256": "aae2fb64535ba051aad694c0f2fad6f6d9343745fbbb983f1847f9d1c8c6ebcd",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Color.jpg",
+      "bytes": 1368992,
+      "sha256": "313b7e98b92c4f656ff1ab85fb7be7d422059879a65d82e8e33d49b1d949c36b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Color.jpg.meta",
+      "bytes": 2714,
+      "sha256": "e32e98fdd57b7272b10befdbaa83c8022c95419a34886fc05a368437d10b2b32",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MetalSmoothness.png",
+      "bytes": 6415418,
+      "sha256": "e5116b1537160a894aed982d130b87310e6a3d6aec3eb245b5317381bf60b727",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MetalSmoothness.png.meta",
+      "bytes": 2714,
+      "sha256": "b19984c99a57f4a9a4d8544a8b4c20b7f128d51324fac9ddc0b8ec52e83d1176",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Metallic.JPEG",
+      "bytes": 334947,
+      "sha256": "fc01ecbae4726b955d74fbec1bcb01d263ed5f934bfb419931976a3289a84a5c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Metallic.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "0d973004fa7a2a2c1da97d1ca00a3c0f16445778b26908f7fc209a4254192629",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighMesh.asset",
+      "bytes": 15005849,
+      "sha256": "fc1a793ffb255049fada8b427aea0aa0c1a517ade3cd699a1fb7da5c9ed59697",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighMesh.asset.meta",
+      "bytes": 188,
+      "sha256": "646412c18644dda12f7d4d2e2ff65b51f69c6bc6d837a139ee54154e8a418dd1",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighPBR.mat",
+      "bytes": 2410,
+      "sha256": "13a9e3c517f7a5655d0142e30ed8e7abca37a9eb707fbfec7f4fae8d1ff232ef",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighPBR.mat.meta",
+      "bytes": 188,
+      "sha256": "9f5ea1066d56f30d5f479436f527e11f397621048dd5016c705cb7c088cc6eea",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Normal.png",
+      "bytes": 3326576,
+      "sha256": "07fdd0657a4760ef0bbf5692d0a6c008d6c809a9d6e3f475b05f8cc80ecc7e55",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Normal.png.meta",
+      "bytes": 2714,
+      "sha256": "4563153492c0688f4d77e96663767a3db77e452b34689192084f7abd931a9e67",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Original.fbx",
+      "bytes": 2755356,
+      "sha256": "1fc98738b518634d607ea5f4159c7bdb6f1965f59ddff4ea8dd4239ee9802e2c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Original.fbx.meta",
+      "bytes": 3063,
+      "sha256": "89b74a614243f8634e778d5e5fc8b81cb1237ba9abf083a485ae0ffcb934f6ec",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Roughness.JPEG",
+      "bytes": 553860,
+      "sha256": "73c5ebc11b0b0a96a54f5f8f97d4da82b4d2ec385ad747604d9400f9c058bf5a",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Roughness.JPEG.meta",
+      "bytes": 2714,
+      "sha256": "cecb31d4fd2288880fb152c48876c79e6436bc78c543db60e303b8bc0d143684",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD0.fbx",
+      "bytes": 660476,
+      "sha256": "820cfe8af655e1d8d9f04e0ac7d863811d5a128de35755bc540f60ea7351cbc6",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD0.fbx.meta",
+      "bytes": 3769,
+      "sha256": "13537bbfde6eb41cb38f952ab68a01388a909045c27c1ec9dfbe23350273e422",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD1.fbx",
+      "bytes": 411420,
+      "sha256": "9b0176d853de9a7b15234a556710505dcc6bcbdc3f6035c35ba451326d794f22",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD1.fbx.meta",
+      "bytes": 3769,
+      "sha256": "2f194932f7c08aabc14f971bf9744d44c6b7dac432909184509433fc15bb1698",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD2.fbx",
+      "bytes": 116220,
+      "sha256": "e1b52a3c6e8a00edac67e395e5efaad5643bc3488be62e6b14c6368097cadc5b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/BatteryBay_LOD2.fbx.meta",
+      "bytes": 3769,
+      "sha256": "4aa2d6c92346e37a86efcbd77e9d90d0ddc4383ddf483240356a213de230925e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Materials.meta",
+      "bytes": 180,
+      "sha256": "3a3965790e88512400512de6cbc9574b287e5a35cc424ed0d629a7b3a405279b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Materials/BatteryBay_Display.mat",
+      "bytes": 2311,
+      "sha256": "eeefbc5dd852ec1b0a22b1fcc5b5a09a3f6030df65f584f4968aaa45624fa260",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Materials/BatteryBay_Display.mat.meta",
+      "bytes": 196,
+      "sha256": "3b2e5da29e7cf14d463008711229558dd730c0c89b476d6d743ec4117df9d27e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Materials/BatteryBay_Status.mat",
+      "bytes": 2307,
+      "sha256": "68a83ad33331d42b479c8c7fb65fd81b13dce72c2e094a9ce783df3de98c530a",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Materials/BatteryBay_Status.mat.meta",
+      "bytes": 196,
+      "sha256": "53c34493bb719c1bf6a0e5dd944547a856f9239a5aa349a01b0bde4a26acdb8c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Materials/BatteryBay_Surface.mat",
+      "bytes": 2504,
+      "sha256": "55b025c25565908f83bb7e697b18ac7448ad28e6e61c0a95b918ca68c2dfe062",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Materials/BatteryBay_Surface.mat.meta",
+      "bytes": 196,
+      "sha256": "5fbc80c7a0b7036a3f5682053bf109f11ed302de3f87b59e3f79b64e2f762cdd",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures.meta",
+      "bytes": 180,
+      "sha256": "5976b16bb29f1eaffe55ba4b384435a37278c5d8e6ead59913acc0546ae683de",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures/BatteryBay_Albedo.png",
+      "bytes": 4564167,
+      "sha256": "54277b183fa80dadc3e8293cc7afac5bb58282e142b90230d5b6ec5553c8ef94",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures/BatteryBay_Albedo.png.meta",
+      "bytes": 2833,
+      "sha256": "a2f5d568cbc911a479dee125f02821ebdeacafd1a38646215ef289d03781b443",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures/BatteryBay_MetalRough.png",
+      "bytes": 3325036,
+      "sha256": "fe21ed0ef6ace152f620c793b76cf623accf7c221462c7c7f8672c74248547d5",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures/BatteryBay_MetalRough.png.meta",
+      "bytes": 2833,
+      "sha256": "2d36c8a569bbfeb4618e9488d9bc75a7b4a5f17737a6467eac97b88e069c8db0",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures/BatteryBay_MetalSmooth.png",
+      "bytes": 3313960,
+      "sha256": "786226c7d72be3ae5625f381073c79ee648999d3311e4990e7e32c900cd14d77",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures/BatteryBay_MetalSmooth.png.meta",
+      "bytes": 2833,
+      "sha256": "182674064ff9f34a65a078e44ffd4c7d5ea4c659232c99d4b16a4bcb01e4e47b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures/BatteryBay_Normal.png",
+      "bytes": 6407474,
+      "sha256": "f9f236fa2ef8bf98888635cef1ea22f873fce6475f8407ad55657f9d5c3e8c5d",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/BatteryBay/Textures/BatteryBay_Normal.png.meta",
+      "bytes": 2833,
+      "sha256": "0d2c6bb8147848f8fa3c9dc14bb3cb5c1aa28baafd96066c262c2d28cb5e6290",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75Traffic.prefab",
+      "bytes": 6320,
+      "sha256": "67af1591ac3b0b5c32e9942db8c9c62fb1557953d76e37250b0835ac6dc6f0d2",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75Traffic.prefab.meta",
+      "bytes": 154,
+      "sha256": "9ba1861212f27421c79e62aaa82268829e947e25e6d3a9ebaeefbf5e61b7bb03",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Metal.mat",
+      "bytes": 2215,
+      "sha256": "d5871fc3ff538c004f3a40ac9ee966306d173f10358834f88384c7360cfff671",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Metal.mat.meta",
+      "bytes": 188,
+      "sha256": "3c69fb63ed693bb536ef7fd8c4826ee681a1d7c67573add9ad77f1ee4d697086",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_P20_V02.fbx",
+      "bytes": 420864,
+      "sha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_P20_V02.fbx.meta",
+      "bytes": 3063,
+      "sha256": "a19c2bb1f1671885b8fbbbc858252f6c08e011a26f0007c9f4f34ae0522f5d9e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Status.mat",
+      "bytes": 2248,
+      "sha256": "1f4bf936df96a7113931707d92f596305ba6c7d0b5a9556d1a56592fbc247da9",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Status.mat.meta",
+      "bytes": 188,
+      "sha256": "64457056dac36ae6f7fcace3c7ac1d0b049175979d4d367e70c438dbbf8949e4",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraModels/High.prefab",
+      "bytes": 10419,
+      "sha256": "4ec675f1fada981e89ad8545122e5ee71e2ba4b6e0cdcf7d97e4c2e862c18069",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraModels/High.prefab.meta",
+      "bytes": 154,
+      "sha256": "e59290f5e76ece1039bac2332ab4ac478c4fb8518ce4cd7ca33626c165b6707e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraModels/Low.prefab",
+      "bytes": 7450,
+      "sha256": "301ebe2c108f97649b1780c3bbd81cc17501215afd84a90e65a0d42a5bd008a9",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/MiraModels/Low.prefab.meta",
+      "bytes": 154,
+      "sha256": "ee1ebec522142891946eb54173e73bdac0c792f62beb62e298df49bec239724f",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/StationLOD/ChargingCradleFar.asset",
+      "bytes": 1367599,
+      "sha256": "cbed6aaea34c832d34839c58e2072d428c9b13b54f518e42c15507af98be511b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/StationLOD/ChargingCradleFar.asset.meta",
+      "bytes": 188,
+      "sha256": "0465bf5e9da08e5899e9585e87888d21d08f10bd7cc3d0b718fea63aec09bef1",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/StationLOD/ChargingCradleMedium.asset",
+      "bytes": 6310434,
+      "sha256": "aab9df5012a3a3a700c003e7a59efa06a12571e42c10d0321d7bf6e0f3617e7e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/StationLOD/ChargingCradleMedium.asset.meta",
+      "bytes": 188,
+      "sha256": "e881b823acbfb9da22921b4658e45b59e3a64f734d5f334ac54e5cd4ca72a310",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/StationLOD/MaintenanceDroneFar.asset",
+      "bytes": 1699353,
+      "sha256": "0184d7d8c8254409dd6bc2a16ecdf6196fd380592cfa9efc125f39e54bd79f28",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/StationLOD/MaintenanceDroneFar.asset.meta",
+      "bytes": 188,
+      "sha256": "34e2895520ffdbabbc4dc2962a39b5202a6d9277dc8eec1ad7eb01b4ff8baa6f",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/StationLOD/MaintenanceDroneMedium.asset",
+      "bytes": 7548131,
+      "sha256": "af1bcecd385c3511b2529e35fee8f8bf68165545d0b83a23f4c7e719db14d444",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/StationLOD/MaintenanceDroneMedium.asset.meta",
+      "bytes": 188,
+      "sha256": "7ec0c1159495a69615bef21295a9c8214902a0f06c04c54d1a74eddda91c75f2",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Materials.meta",
+      "bytes": 180,
+      "sha256": "9a945052db30b9617b4756bb61c46967135dd8f2509acd9af80aba9dc4606667",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Display.mat",
+      "bytes": 2314,
+      "sha256": "ea0f5d52e8e35f9cf4f5226978597e39212f58343c4e5b9076df786f83bbc4f1",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Display.mat.meta",
+      "bytes": 196,
+      "sha256": "6b5ba0baf7f273ee2afb92322d72b92dd7c8b13d0a50607affbd51488bfcdfa0",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Plaque.mat",
+      "bytes": 2313,
+      "sha256": "83a84d11b812f9940ef1511659439af6957b8c972886e302dc1c57f17a57d4fc",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Plaque.mat.meta",
+      "bytes": 196,
+      "sha256": "e23959f07db9d15c3d7fdc40bb2c0f40e5d51e829eb3366c27b2ea24d662ee5e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Surface.mat",
+      "bytes": 2506,
+      "sha256": "d745f614ef1f1554accdc8280f10e764e55a8263346e9bb187c3bdc87b317a20",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Surface.mat.meta",
+      "bytes": 196,
+      "sha256": "73d8b5f2967d44cfdde69ab9dd43fe50d7d5b78b28d8548f9579be0acd3272a5",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures.meta",
+      "bytes": 180,
+      "sha256": "d05253a8fa448fcbb0dc8aa806032fe503507602e87fe1fa696f0853cc7a4572",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Albedo.png",
+      "bytes": 3262022,
+      "sha256": "76178e66dbbe52c0cb1567fe0b6b7d98107db2a99a94271e95ba58cac54f6186",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Albedo.png.meta",
+      "bytes": 2833,
+      "sha256": "6193a5c7560b333af317fb093688538bc164345919ef1977a1d074e6e688fd38",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalRough.png",
+      "bytes": 3186656,
+      "sha256": "711e684cca8e1db7f3a456e486290633722c5612af44ee772e81a43f74359776",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalRough.png.meta",
+      "bytes": 2833,
+      "sha256": "2a426ec18bfdb41559a7a596eb2801792d897b2e2240d4c482515293c73fdf16",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalSmooth.png",
+      "bytes": 3183604,
+      "sha256": "e8855ab516eca06bd9f2c3d8ec37d6666ba54e48482b668962f3d90381322ed4",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalSmooth.png.meta",
+      "bytes": 2833,
+      "sha256": "f06a6540e5a281936562883c295db814a029f6b99b611774bf47b2729f5f0f1a",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Normal.png",
+      "bytes": 5298932,
+      "sha256": "47cbf41d87a08dc7fbeeaf5e0483d722462ee046b9752c2c0a0e6bfc59a57eaf",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Normal.png.meta",
+      "bytes": 2833,
+      "sha256": "4d88330f348da3d3cb6c9f1a37f996f51ba85d9cf6c13376b2a1581c3244972c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD0.fbx",
+      "bytes": 549020,
+      "sha256": "ea5d4b4a9b0bfb5b3ada37875cac497c95443dee6220eb02b142e77126ada21f",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD0.fbx.meta",
+      "bytes": 3775,
+      "sha256": "fb352fac88f34d335578459708b2b56a0ceff99954841267f2713a49ebe501f9",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD1.fbx",
+      "bytes": 132796,
+      "sha256": "8af94a66d0b343ae292c87383d91c170f5d5f3b0bc721eb5d65157e877628d80",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD1.fbx.meta",
+      "bytes": 3775,
+      "sha256": "14c57ad8a4b1aa01c01d920ef3462b8b1aa9e3640af61c3874a9d84fcef65f74",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD2.fbx",
+      "bytes": 47500,
+      "sha256": "ce0836592855796c6b3eb49222f366cbda76e681cea7cb9b2aaebd25a38f8974",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD2.fbx.meta",
+      "bytes": 3775,
+      "sha256": "37c128549e5b91f04f4afaeb5e28adc00abf573a0ff9fe0fd664017675f9ec55",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/Tripo/ChargingCradle.prefab",
+      "bytes": 2700,
+      "sha256": "9b29de2fa2a27ab96f3b5f3a0644de60d245887fa9c5b8603eed4a95c3aca914",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/Tripo/ChargingCradle.prefab.meta",
+      "bytes": 154,
+      "sha256": "dd477af8d6c84c946b1290cef5f5117f9f5e4cbcb901126afdb672b963b91676",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/Tripo/MaintenanceDrone.prefab",
+      "bytes": 2698,
+      "sha256": "b35d966241073854500ba280d81e954de8ea8321083182f9e7804cb96ff57778",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Resources/Tripo/MaintenanceDrone.prefab.meta",
+      "bytes": 154,
+      "sha256": "111dbd1b598cd06d6d2dec9c94544020f362213898bc1dabe3528ba83500fc0e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "Design/Models/BatteryBay/BatteryBay.blend",
+      "bytes": 18612150,
+      "sha256": "5572ed6528cb675bcb786d6bd4ebd46bab19df6d3638b4194ab76edce78860bb",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/BatteryBay/README.md",
+      "bytes": 7770,
+      "sha256": "6183b8c48720d02e78592b2f30d44e9f66f8d312b4265e675ea13370da4cbf73",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/BatteryBay/model-report.json",
+      "bytes": 11459,
+      "sha256": "62b0c44dc498e1b6de565a6b43ccaef7892b17887efdb76c6aeb42ba0666f559",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/index.html",
+      "bytes": 2821,
+      "sha256": "e132aac4959f00887253afe29fe8450ec13d925de847e3fb7d02ab8c0886ccc7",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor-source.json",
+      "bytes": 426,
+      "sha256": "f684fb32a45ab4649deebfec384db088108e0d6efa6cf083cba875f5f50559bc",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/examples/jsm/controls/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/examples/jsm/environments/RoomEnvironment.js",
+      "bytes": 4899,
+      "sha256": "c20f0b4677f6128a138d7152b85cbef9091f4f45cdfa05adca04d40c1697c7ae",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 114739,
+      "sha256": "67ac5551fdafa6e349bd80c8f8e5e39c136d6b2fb1ad647db9abb21dc86f9e4a",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 35539,
+      "sha256": "fda7e946b8e0b5ab39b779206589e7a1079a22eb24efb89d7223e03fdfb1f751",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/vendor/package.json",
+      "bytes": 4635,
+      "sha256": "aa42494664dba4cf76d89c6975ee38321a402f09a048672e190bad6f13beec93",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/I75Viewer/viewer.js",
+      "bytes": 5125,
+      "sha256": "28c65982e870f51447d42fb322a2cdcba72b6546cb2b3886589c1aeec6e1aa35",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.blend",
+      "bytes": 13089404,
+      "sha256": "90ffe6117ef2102d5fc121ecb2378ed14ee404eb57eaa6db37e01458b8d67c02",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.fbx",
+      "bytes": 626524,
+      "sha256": "750838ddc1828f579cf11f3e244d5663fbcb9d731661fdfce0a6a8493d222e1b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/I75_V02_Surface_R01.glb",
+      "bytes": 12110980,
+      "sha256": "bc84b09013859e03cb08af0a58cd41606457b4b018a4631282992dcc8dada676",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/README.md",
+      "bytes": 840,
+      "sha256": "f8be4014857cad7e9914b0dd1f4d9a3629a27a50af7f3ff0cabf741abb20df2f",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Source/I75_service-stencil.png",
+      "bytes": 37962,
+      "sha256": "dc11efd878566cee1672d85f05e5fe6471828c9be1578320a5c1480732f96220",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_BaseColor.png",
+      "bytes": 4699930,
+      "sha256": "dd3f7da01d12f18c63ed8a9dc1e085c0e72958828937483bdec13a596e845541",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_Emission.png",
+      "bytes": 82782,
+      "sha256": "cc0a2a3b1caaaa72bceddb1dcbbee1e9e6d5626720b2a03b7ec102f7f23ff208",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_Height.png",
+      "bytes": 4491591,
+      "sha256": "9ff86800a3e05d1a7e85d3a9c18aa14339ae96e77da7bc002a770c81cb8173c0",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_Normal.png",
+      "bytes": 745351,
+      "sha256": "b3a8ca6cdedc2b52fbf9ea3857dfc368d66dd6d277eea22e7c36fec0e2aee0c2",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_ORM.png",
+      "bytes": 5788848,
+      "sha256": "2b14625c407f3d886c1a34bdeff0f1cd6e0caeb2fa4b6cdf821ce8ea600650a7",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_Occlusion.png",
+      "bytes": 2763773,
+      "sha256": "81b543be6c2bc2443e5501249e054a6e7b8b5e299ee02b6552bb840dc6c2b6fc",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/Textures/I75_R01_UnityMetalSmooth.png",
+      "bytes": 4393774,
+      "sha256": "08d00c6bcf808e9c93f33fba3c16c66b14381be481a6158fdc3667c08691c13f",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/glb-verification.json",
+      "bytes": 153,
+      "sha256": "a4500d952ff76f07631e9789cc2ac014270a5a6976edb74f7b559b408627cfed",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/reimport-verification.json",
+      "bytes": 393,
+      "sha256": "2321101adc6b88f870789a97028d3e4a5c8f1c59b00cacbfec2d327e5b21e0e9",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R01-2026-10-26/surface-report.json",
+      "bytes": 1525,
+      "sha256": "248d62d3ec8c190080a36039630a5daa42ee6f703be2dc04b5fed5533bcfb72f",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.blend",
+      "bytes": 11075846,
+      "sha256": "aeeadba2aac1fef2edae3ef956b46d767177decd3916475d9f83d335507bde3c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.fbx",
+      "bytes": 645804,
+      "sha256": "8ed41f816657a1881bd5ff8672fc9753450c22dac358ae7f5362a71234425420",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.glb",
+      "bytes": 10403284,
+      "sha256": "1bd6efd7e314764e9b1fbb84521a4ba94027fe556da8e1b7d62fd722bf4af64a",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/README.md",
+      "bytes": 891,
+      "sha256": "dcff6a08f533a78eddbd0898914aa3cfe1c8bd7a03de15bfc1318d9e30771b36",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_BaseColor.png",
+      "bytes": 3495549,
+      "sha256": "119c0ce2ff10ae23da71785ee5b8013427435341bec9c23a9c49bb02b8f77452",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_Emission.png",
+      "bytes": 81936,
+      "sha256": "847936465220d47a1ed73db8ff7371d1c5b37a31451b1cc04175f25e67d50b00",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_Height.png",
+      "bytes": 4443260,
+      "sha256": "ae818e7686813f215d6df5dc980895ddb83d94baccfbf85ed1d4ff1f9e4b1435",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_Normal.png",
+      "bytes": 191137,
+      "sha256": "054e126c4727b6ffadf0099fddcfc4674cd71242919d314374d3d3d7cf7b6952",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_ORM.png",
+      "bytes": 5544733,
+      "sha256": "5aa70bcb44d9a6b590163431068c7734767ce95df645fc786f87548b8efd9855",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_Occlusion.png",
+      "bytes": 2324971,
+      "sha256": "639ea8faa5b8edc21b0aad7916f97599678dca2d9d816bdc958b7c848a2a76c2",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_UnityMetalSmooth.png",
+      "bytes": 4434946,
+      "sha256": "67793c5bada116282769f6726f7e5aaca6af476eeb7f855c11c573f0d8d8ab8d",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/glb-verification.json",
+      "bytes": 144,
+      "sha256": "c5717e7ed96e8f339ad28694f869a49ea17475d6cd09a2e9849bf750f60cf5ff",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/reimport-verification.json",
+      "bytes": 452,
+      "sha256": "5db391be1ed1ee255f8b9b81587ff3913f80bb12a1abb2b595bdf57746ecda5d",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/surface-report.json",
+      "bytes": 1722,
+      "sha256": "a9392f8966875a9ca863dd13f410ceeeff1a88bd4b58087b9194632027d2eb0e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/README.md",
+      "bytes": 689,
+      "sha256": "8c9242bfdc9338e84fecd60e88a68283daa3e1f497a90c85d000af6c3a20a87c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/Renders/01-authored-blank-three-quarter.png",
+      "bytes": 2181397,
+      "sha256": "f1945abd85bf1e31db1479b0404d5af8e37ac8b9b43347cb2368a610679ab2ec",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/Renders/02-authored-front.png",
+      "bytes": 2061707,
+      "sha256": "e1d4fb42d7b619834fe240fd144322684c7ed06a11168f0f91a6c9b29be86e28",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/Renders/03-authored-side-rear.png",
+      "bytes": 2164533,
+      "sha256": "55fca78314a14f292f499ef067d3d56f74f05d011cc0da29fa9bd333d8a7ea59",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/Renders/04-demo-screen-fixture-not-gameplay.png",
+      "bytes": 2334367,
+      "sha256": "f16f7dbbf7cfd535e20c9b181de3c0aaf8ccaceabac75b20a334afc4e296d68e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/Renders/05-demo-front-fixture-not-gameplay.png",
+      "bytes": 2145167,
+      "sha256": "a2d901711c8f65272237e9a7821cef30b3687c120ac2eec49dafadb57113c6d5",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/Renders/06-demo-side-fixture-not-gameplay.png",
+      "bytes": 2013272,
+      "sha256": "105c8c6e3406e8103fe9674e108193d28af8abd0436731d95e780e3561dd76e2",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/TouchConsole-Preview.blend",
+      "bytes": 12214802,
+      "sha256": "b7e70b107be610c9b630f0c3c502334bec4d5ee7ccafe7d56a5a53e6b6199cea",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/TouchConsole.blend",
+      "bytes": 12203558,
+      "sha256": "3d4204de8f5198b73b22361fa2e03f1a7a6e4213ec2f4e24356193674542667b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "Design/Models/TouchConsole/model-report.json",
+      "bytes": 12294,
+      "sha256": "378e503b492d9b2dc49578d804a9dd22ae6259b501bbd35aaf9e96ad116e26ce",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/Color.jpg",
+      "bytes": 1371332,
+      "sha256": "883904e87128de838ea8107dc93675067e8864da5eed37a89fbf46c3f26ef207",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/Normal.png",
+      "bytes": 4130364,
+      "sha256": "868fe9f4ddc071b04f2e820d63d2dd5ec51ac9d5722f150502fab2b56f5681f5",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/SpaceMiner_I75_Base_H31_4K_2026-10-25_metallic.JPEG",
+      "bytes": 952132,
+      "sha256": "54d803d78d5e13d8daac7551d539b231871e6416b1ee104dd93640bb647a784e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/SpaceMiner_I75_Base_H31_4K_2026-10-25_roughness.JPEG",
+      "bytes": 951476,
+      "sha256": "99729d5f4faf78bf62ea218c544b5fba2d36c233e65663577399b1ae150b0117",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbx",
+      "bytes": 2751292,
+      "sha256": "16c2deebbec845f5f9559e9498884b80a2c3996879d48964c2ef756feb4b5a47",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V01_2026-10-25.fbx",
+      "bytes": 236944,
+      "sha256": "f541cb7dfce616864a7299940c7261f854df5537797a3b1f6c2207315a630d30",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V02_2026-10-25.fbx",
+      "bytes": 420864,
+      "sha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V03_2026-10-25.fbx",
+      "bytes": 637616,
+      "sha256": "677d2c6a2909a4a6dff2552e9bf461684cdd29a79c1c474f1df16bfcf0906559",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V04_2026-10-25.fbx",
+      "bytes": 333296,
+      "sha256": "555924d44b7345f0a6301762b37c5e884519dff756971b0c3d2096e0d39d1b74",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/HallExperiment/Station-Hall-Experiment-v01.blend",
+      "bytes": 11503682,
+      "sha256": "9bfb1e7e17a77314f0d9d30337280fe481cb66e0126a9c9c985d8747c5f78843",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/HallExperiment/model-report.json",
+      "bytes": 623,
+      "sha256": "a408e362d462a7326d853c922841f1d66007a94d94bf6293d1e6b76d15a03ea3",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/LICENSE-MakeHuman-Assets.md",
+      "bytes": 7003,
+      "sha256": "5f3ab0cf6f7ebe92efe4b83213131c617d308d164eeefd5da230373640b0c226",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-AnatomicalBase.blend",
+      "bytes": 42559255,
+      "sha256": "17354f4020dd414ab4841364b776b7263a14984166cae9736addff6c1e5cdeba",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-AnatomicalBase.png",
+      "bytes": 1001214,
+      "sha256": "80ce8cb4b045eaa97feac934f8f1ca380e380189204fbeb70e2d5ff80b7c69a8",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Demo-Authoring.blend",
+      "bytes": 41288587,
+      "sha256": "ab33efd3ddcedee8e4835276207facb3d42808eaf0c515ff4ae05e70ce9a9362",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Hair-v07-Loop.gif",
+      "bytes": 1763761,
+      "sha256": "daa22c70be71bb8596c77c1589a8b0782839391fe8617c012832636956685304",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v02-Side.png",
+      "bytes": 1097919,
+      "sha256": "9464c4a14be54d8a4eac6bb04f87003fca077bd91635d91d4353cc02900c733d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v02.blend",
+      "bytes": 48123856,
+      "sha256": "aa2b0b7ead471b31496f5dbfff1ebdb90bbd15512ef27ab566a02baeb03f9940",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v02.png",
+      "bytes": 1099010,
+      "sha256": "72b5dd6f4ee1dd392ff61ceac2e17cbb104167767cb8d8fe9d06014d04d5685c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v03-Side.png",
+      "bytes": 1135748,
+      "sha256": "3e4436e67a7284ba8dbdcdda663c8c5964dc717e655a70b67287b491007c79b6",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v03.blend",
+      "bytes": 50538457,
+      "sha256": "5d7c7099670dd1c9e20ee11090acf60be761dc8724399f59e6bfc0075e8bbbd1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v03.png",
+      "bytes": 1134982,
+      "sha256": "825089d0af44987ff91d5eff797a56d8e63b01c4bf85db60550e70e2f3f26e09",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v04-Side.png",
+      "bytes": 1140502,
+      "sha256": "b7dad80784d1b013736755e20629871a1be259fc1c85bb109448d4865e143e23",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v04.blend",
+      "bytes": 51719954,
+      "sha256": "83b67254b8bf001914c6b73d11c8a61605ce8de86d4f4bc05c4616e05a888617",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v04.png",
+      "bytes": 1133295,
+      "sha256": "c26a106e2c77859f14fdf746caa864d320d7b0d81d75459a65f2c6796bb4c68a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v05-Side.png",
+      "bytes": 1143047,
+      "sha256": "00391d224827e83ba7a2c7c5df6fa775d39f1ef925c7908ed0efaea38d9c4de5",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v05.blend",
+      "bytes": 51767786,
+      "sha256": "ae3b0ad1aa6a45d32ca695902b10cc003c6c9999d522dd1eb8822893a25a8b96",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v05.png",
+      "bytes": 1139541,
+      "sha256": "bbed1857910adcaba9af2e392a480045da44d9ce391ecfc3c48f1762d14894ef",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v06-Side.png",
+      "bytes": 1150602,
+      "sha256": "ce65d9dd4bf67b0fcea4c38a2e644ea034c2fab2a1437fc7f95191eed9beb05c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v06.blend",
+      "bytes": 53419133,
+      "sha256": "871a53d0f481dad74670c150c422aeef0efbf5687e3301bee05ab3aca00296ad",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v06.png",
+      "bytes": 1146977,
+      "sha256": "b828a464e6ab13a66c5fc19b7343ef92c236a19bf6ee306f8b2c80abe740ac83",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v07-Side.png",
+      "bytes": 1153271,
+      "sha256": "dd577c8e4fa29681f7784f179bf5f43a466c7054b4c0cf7d1617cdeb41428e23",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v07.blend",
+      "bytes": 54356954,
+      "sha256": "cc62f68ba556af4dbed40328ded5bce2a80b048dc3617d6ef02ead54092204dd",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v07.png",
+      "bytes": 1148936,
+      "sha256": "b075d981c9ded98aa10888cc01a993c2628bd0c91594764f8e6830ea410118ab",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v08-Side.png",
+      "bytes": 1162860,
+      "sha256": "fcf5cdeb81c903288ec5a5e03d5e6a6b2dd556c2a9472eb430d77efadb8e89ee",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v08.blend",
+      "bytes": 54904957,
+      "sha256": "9443ab04d474c4ed5e64e73d3c320259f529f3a93df67fb22d918c3d58dce352",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v08.png",
+      "bytes": 1161802,
+      "sha256": "ec7381ffd9b02224157c097bfe193594e35086e0b465560253154208816e6083",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v09-Side.png",
+      "bytes": 1205395,
+      "sha256": "09bf7d23262da02979a6316da0a5549d5522367bb0d0f5c6eee2e1862b95fe72",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v09.blend",
+      "bytes": 52616035,
+      "sha256": "91fd9fa1fcf74ee29baf83eef30bf64e9995d8fa8307e73beff94d0fa54da00d",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v10-Side.png",
+      "bytes": 1207482,
+      "sha256": "094068ba33718101bc8b9d5e27b00cc5b3ca36e99aec7319df371c5c3d2f6f13",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v10.blend",
+      "bytes": 52631375,
+      "sha256": "eb72d28efd8312d5c1e388e022fefc585811cd29400ca785b345b7c4536a963a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v11-Side.png",
+      "bytes": 1195497,
+      "sha256": "5ed018d2e481d8f839bc8801359b72f6f163772eed84e8650b122db0af9d1c75",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Portrait-v11.blend",
+      "bytes": 79734850,
+      "sha256": "187b34918b3df4e501a752d7c98506d7e185bff907adfaf54539feef64984a87",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Spoken-MaterialFix-Unity.png",
+      "bytes": 183901,
+      "sha256": "5a9c58be0dc502440cb61223d2848a956a033defba334a6501e57814ca76a100",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Spoken-StaticHair-v10.png",
+      "bytes": 183652,
+      "sha256": "2f4e752f8ce70b4b2dd0abc484c28232c24f991942489813484e8e9d95604cc6",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Spoken-v08-Unity.png",
+      "bytes": 177934,
+      "sha256": "330d4b705bbed222cd8a8d2f18e05982a6ddb055ad3deb7deb52c04feb0113c4",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Mira-Spoken-v09-Unity.png",
+      "bytes": 184212,
+      "sha256": "012c2710c25c2d9d068a857f39118831a077565015946ff0fbe687ebe69bbd14",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg",
+      "bytes": 835686,
+      "sha256": "c57d447111a55dd6910225c5ec0fbe9379cd34cf28606eebe4cb4ff00f6bc3b1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG",
+      "bytes": 463436,
+      "sha256": "dbc2ca881cef6341940934580c0cf1fde10c120ea04077cc247027878d111151",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG",
+      "bytes": 527630,
+      "sha256": "acf4c55db81e096c6616c0ed4cc5a61c5ae85ac89710ed40008224b4a17a6702",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png",
+      "bytes": 1366279,
+      "sha256": "0d889b8656bc04f97cf63eacf57ec4841a713b0587caf81ddcd9a4746fa1ba3e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+      "bytes": 4099852,
+      "sha256": "586de1c65e42cf8e9358b99867ecc0f37c3c76441ce795779b61f124bd5830b4",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Color.jpg",
+      "bytes": 1368992,
+      "sha256": "313b7e98b92c4f656ff1ab85fb7be7d422059879a65d82e8e33d49b1d949c36b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Mira_Head_Shoulders_H31_4K_2026-10-25_metallic.JPEG",
+      "bytes": 334947,
+      "sha256": "fc01ecbae4726b955d74fbec1bcb01d263ed5f934bfb419931976a3289a84a5c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Mira_Head_Shoulders_H31_4K_2026-10-25_roughness.JPEG",
+      "bytes": 553860,
+      "sha256": "73c5ebc11b0b0a96a54f5f8f97d4da82b4d2ec385ad747604d9400f9c058bf5a",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Normal.png",
+      "bytes": 3326576,
+      "sha256": "07fdd0657a4760ef0bbf5692d0a6c008d6c809a9d6e3f475b05f8cc80ecc7e55",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbx",
+      "bytes": 2755356,
+      "sha256": "1fc98738b518634d607ea5f4159c7bdb6f1965f59ddff4ea8dd4239ee9802e2c",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Prompt.txt",
+      "bytes": 1931,
+      "sha256": "717d23b3612fc46f45f86a3fb16d41d9e5afd422f50a5e2726984a3fab13979a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Referenz.png",
+      "bytes": 1244320,
+      "sha256": "8e4c457f93cbc624bbaa86a0101a934764e4ea3d1251d4c0396d2182201c8c79",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Schraeg.jpg",
+      "bytes": 153517,
+      "sha256": "d76fce576f7dd8142c757a206d5d446bb6f7ba7d3c6492a91d9e37b631d69f3a",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Seite.jpg",
+      "bytes": 155080,
+      "sha256": "4b8f21092e46adead32334a6e743f32d4836a115cae5f75e4c424bfa283e9637",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-2026-10-18-Vorschau.jpg",
+      "bytes": 146541,
+      "sha256": "7dd0bbd2b584c9a559f4857595dba342a79bc2796796b8fe1a97d0231197297b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-H25-2026-10-18-Export.jpg",
+      "bytes": 149098,
+      "sha256": "23f8c92cb1f4ec4fe1b95c1d58e53f28ab6154e37cd30d2510002d92e2b8607c",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-Mira-H25-2026-10-18-Vorschau.jpg",
+      "bytes": 144944,
+      "sha256": "0030d57f75e17231225e205fdff2a7ee7131aaf93006b8e111b798900b439232",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/base-report.json",
+      "bytes": 274,
+      "sha256": "dd9100992fc9a47408d8b0033917291d53f70fae4a8646dbb5c16ec92632dc85",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/mira-dialogue-portraits-prompt.txt",
+      "bytes": 1230,
+      "sha256": "ab8adfb108bb03c2f8599ef12edabc6e39f37980cba92f28008571953692b0d5",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/portrait-v02-report.json",
+      "bytes": 1081,
+      "sha256": "a1fcf0dc1e554a2cdf62068ace948ee8dda22e96e9a0db88f95aed4dafe66ef5",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/portrait-v03-report.json",
+      "bytes": 1525,
+      "sha256": "54f17d08a0e36bcc5ab0782a07ec29a44767647944d6fc990e9db581f47cc8c1",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/portrait-v04-report.json",
+      "bytes": 1875,
+      "sha256": "ac886b2f226a2ed57b2f5b7ca2881c03de6746b18f75d051b27237470f10bdd6",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/portrait-v05-report.json",
+      "bytes": 1910,
+      "sha256": "cf1028f9e2f5c8aa2b28d595c693d56f7e61b996a227911f6336f20b72b8467e",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/portrait-v06-report.json",
+      "bytes": 2132,
+      "sha256": "16dedcbaa536af701347bc5021c5bd05a1d039149134f0ad653dee78fe0aec17",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/portrait-v07-report.json",
+      "bytes": 2142,
+      "sha256": "31f0861c2be8dcf1350e5abd77419053161bb2a814812b2ac48ce7a48c11a7f3",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Mira3D/portrait-v08-report.json",
+      "bytes": 2190,
+      "sha256": "2c92c2aa5e6919f421e8f4927da00af4378a1b321f8e9f75bd4da3ceccd4577b",
+      "trackedAtAudit": true
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24-finalisierung.prompt.txt",
+      "bytes": 1026,
+      "sha256": "7d527e3d68b7dbc39a91c4cde678df249cf2fbf0e1b2ce567613a6a32c7cf047",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24-massplan.png",
+      "bytes": 125304,
+      "sha256": "c8c8c7a34955fd493e40b3bdc52d3672413631d9687dc0304062feefc21c7e85",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24-massplan.svg",
+      "bytes": 10924,
+      "sha256": "b7f35b0172b1ed0413a3cd500e96d63724abde2c40adbb3b1f80bc74fcce9e64",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24-revision.prompt.txt",
+      "bytes": 1578,
+      "sha256": "c65c9ad6d640347f5efc916718832680556ab8c666ef00324da2bb48b87c4994",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24.geometry.json",
+      "bytes": 1897,
+      "sha256": "359fb2ca4b1b47d1e783f62f9abc84590b01053a3cecc5392546fd777f2191f7",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24.png",
+      "bytes": 2064104,
+      "sha256": "ae2a85ed42173ed2161a81c67df93b3b250bfff80fa8bdd3f9ebb122bb49536b",
+      "trackedAtAudit": false
+    },
+    {
+      "path": "docs/Art/Reaktor/Reaktor-R01-2026-10-24.prompt.txt",
+      "bytes": 5431,
+      "sha256": "a7a60255bfa163412bdb08299cb8c2ecb169c49a03a2525779b4351f8e84e4e9",
+      "trackedAtAudit": false
+    }
+  ],
+  "modelScopeFileCount": 447,
+  "modelScopeBytes": 1070690179,
+  "metaAudit": {
+    "scope": [
+      "Resources/IndoorDroneI75",
+      "Resources/MiraModels",
+      "Resources/TouchConsole",
+      "Resources/BatteryBay",
+      "Resources/StationLOD",
+      "AvatarLab/TripoH31",
+      "Art/HallExperiment",
+      "Resources/Tripo"
+    ],
+    "yamlFilesChecked": 93,
+    "missingMetaPairs": [],
+    "unresolvedGuids": [],
+    "duplicateAssetGuids": []
+  },
+  "runtimePrefabReferenceResolution": {
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75Traffic.prefab": {
+      "1899402d1831716438c0bbe012197939": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_P20_V02.fbx",
+      "034cb23a2307dd9439bf99f200ea1b3a": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Status.mat",
+      "0000000000000000e000000000000000": "Unity builtin",
+      "4c72cfe0f48efc84ebda55b5b144167c": "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Metal.mat"
+    },
+    "Assets/SpaceMiner/Resources/MiraModels/High.prefab": {
+      "1b8dcf83b3218bd4882464607ad48543": "Assets/SpaceMiner/AvatarLab/MiraAvatar3D.cs",
+      "22f7b78949c14eb438d0f4bf79959d4b": "Assets/SpaceMiner/AvatarLab/MiraAvatar.cs",
+      "15dc3ff3f5544aec86dec272bd81af4e": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs",
+      "aa8fd140899b40f4d8b2905643a2588e": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighMesh.asset",
+      "83540f10559675f4db2acff2b29eb511": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighPBR.mat"
+    },
+    "Assets/SpaceMiner/Resources/MiraModels/Low.prefab": {
+      "1b8dcf83b3218bd4882464607ad48543": "Assets/SpaceMiner/AvatarLab/MiraAvatar3D.cs",
+      "22f7b78949c14eb438d0f4bf79959d4b": "Assets/SpaceMiner/AvatarLab/MiraAvatar.cs",
+      "15dc3ff3f5544aec86dec272bd81af4e": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs",
+      "ab28831f931c4c44b9b34acd430723c1": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoPBR.mat",
+      "21e9e078bd4df804a9d9cd5801c1e863": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset"
+    }
+  },
+  "ignoredTripoArchives": [
+    {
+      "path": "Imports/Tripo/drone+charging+cradle+3d+model.zip",
+      "bytes": 23519179,
+      "sha256": "0bb03fc908db4cd1af91ad01932d32950604e0819c5d873fb01044718e108975",
+      "crcPassed": true,
+      "containsNativeBlend": false,
+      "entries": [
+        {
+          "archiveEntry": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbx",
+          "bytes": 17125148,
+          "sha256": "ad5a6a1550ce43729d01e0e094c97588bc8e053de912f16501326581148d2627",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbx"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_normal.PNG",
+          "bytes": 1125607,
+          "sha256": "3251ee85b41511af47d0124aebb6ae1ea6be276c2288e9fef533c5f8da6ad3a9",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_normal.PNG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_basecolor.JPEG",
+          "bytes": 1508367,
+          "sha256": "0ca88d912050af236cbf4655d880fb01e20be9a281d031bdb0749698817a4c99",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_basecolor.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_roughness.JPEG",
+          "bytes": 1490825,
+          "sha256": "35e461d90f6b6daa811ea41cb39dea4e6d568c46a25589cafab190489b98373c",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_roughness.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_metallic.JPEG",
+          "bytes": 1611752,
+          "sha256": "e5236d439a8256ebe6589ccd366eff23dc3d582d752fc53c68eb1e9cf1b6cff0",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_metallic.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_rm.JPEG",
+          "bytes": 1586710,
+          "sha256": "e7784754b05dc57c15a70067f3730eeff6eff1d95452ebc53962b2b7232aa78f",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/ChargingCradle/tripo_convert_555c461c-ddf3-4c99-bf95-f4a12b0a54be.fbm/drone_charging_cradle_3d_model_rm.JPEG"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Imports/Tripo/industrial+maintenance+drone+3d+model.zip",
+      "bytes": 22941835,
+      "sha256": "e80915b01850a9744db3d01744a19a182a56b720a5f0149f9fb7036a3b945958",
+      "crcPassed": true,
+      "containsNativeBlend": false,
+      "entries": [
+        {
+          "archiveEntry": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbx",
+          "bytes": 15144908,
+          "sha256": "369d754d6afea261af8d5a9cb3b76147f599b3a9ab4b1836a520716909bc88c6",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbx"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_basecolor.JPEG",
+          "bytes": 1840814,
+          "sha256": "311942219064d57e1a94a0d026090103ce6ec614b721adca39ae6aa40885d102",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_basecolor.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_metallic.JPEG",
+          "bytes": 1743238,
+          "sha256": "dcc0f010b0c1d9dc34ce89f4cded148023e9df7749a95425ee7ce3db30b1247d",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_metallic.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_normal.PNG",
+          "bytes": 1732245,
+          "sha256": "338cff9b2a35f9c5c1f8885c41258514d0bc62a9c5620e05e3f3c27fd6674272",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_normal.PNG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_roughness.JPEG",
+          "bytes": 1604808,
+          "sha256": "71f9ea1e3795c62818a5cdda6b377291b8d271b6cb8c68a767dcadf491991832",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_roughness.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_rm.JPEG",
+          "bytes": 1777505,
+          "sha256": "2b80c3c2d917b3486d689447a35d3655f55390f76764166a499ddb010ef40fad",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/Art/Tripo/MaintenanceDrone/tripo_convert_704a790d-4736-4007-83fc-5e59678ce25e.fbm/industrial_maintenance_drone_3d_model_rm.JPEG"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Imports/Tripo/Mira_Head_Shoulders_H25_V1.zip",
+      "bytes": 6978879,
+      "sha256": "f0dc66a534b20cfd45b35afbf0d50b69af0bdaf7d69c6f71c548eb345b362f3f",
+      "crcPassed": true,
+      "containsNativeBlend": false,
+      "entries": [
+        {
+          "archiveEntry": "tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+          "bytes": 4099852,
+          "sha256": "586de1c65e42cf8e9358b99867ecc0f37c3c76441ce795779b61f124bd5830b4",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx",
+            "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbx"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG",
+          "bytes": 527630,
+          "sha256": "acf4c55db81e096c6616c0ed4cc5a61c5ae85ac89710ed40008224b4a17a6702",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG",
+            "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_roughness.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG",
+          "bytes": 463436,
+          "sha256": "dbc2ca881cef6341940934580c0cf1fde10c120ea04077cc247027878d111151",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG",
+            "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Mira_Head_Shoulders_H25_V1_metallic.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg",
+          "bytes": 835686,
+          "sha256": "c57d447111a55dd6910225c5ec0fbe9379cd34cf28606eebe4cb4ff00f6bc3b1",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg",
+            "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Color.jpg"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png",
+          "bytes": 1366279,
+          "sha256": "0d889b8656bc04f97cf63eacf57ec4841a713b0587caf81ddcd9a4746fa1ba3e",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH25/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png",
+            "docs/Art/Mira3D/Tripo-H25-2026-10-18/tripo_convert_7f6fd40b-faa2-491c-834a-bb6cad787989.fbm/Normal.png"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Imports/Tripo/Mira_Head_Shoulders_H31_4K_2026-10-25.zip",
+      "bytes": 8036291,
+      "sha256": "882dfc9e083278ae16d1c476ab16d2d9f9d1dd5f9e0b726bf43e2c66f5ae26e1",
+      "crcPassed": true,
+      "containsNativeBlend": false,
+      "entries": [
+        {
+          "archiveEntry": "tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbx",
+          "bytes": 2755356,
+          "sha256": "1fc98738b518634d607ea5f4159c7bdb6f1965f59ddff4ea8dd4239ee9802e2c",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH31/Original.fbx",
+            "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbx"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Color.jpg",
+          "bytes": 1368992,
+          "sha256": "313b7e98b92c4f656ff1ab85fb7be7d422059879a65d82e8e33d49b1d949c36b",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH31/Color.jpg",
+            "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Color.jpg"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Mira_Head_Shoulders_H31_4K_2026-10-25_metallic.JPEG",
+          "bytes": 334947,
+          "sha256": "fc01ecbae4726b955d74fbec1bcb01d263ed5f934bfb419931976a3289a84a5c",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH31/Metallic.JPEG",
+            "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Mira_Head_Shoulders_H31_4K_2026-10-25_metallic.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Mira_Head_Shoulders_H31_4K_2026-10-25_roughness.JPEG",
+          "bytes": 553860,
+          "sha256": "73c5ebc11b0b0a96a54f5f8f97d4da82b4d2ec385ad747604d9400f9c058bf5a",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH31/Roughness.JPEG",
+            "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Mira_Head_Shoulders_H31_4K_2026-10-25_roughness.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Normal.png",
+          "bytes": 3326576,
+          "sha256": "07fdd0657a4760ef0bbf5692d0a6c008d6c809a9d6e3f475b05f8cc80ecc7e55",
+          "matchingCommitCandidates": [
+            "Assets/SpaceMiner/AvatarLab/TripoH31/Normal.png",
+            "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Normal.png"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "Imports/Tripo/SpaceMiner_I75_Base_H31_4K_2026-10-25.zip",
+      "bytes": 10006741,
+      "sha256": "a8ab2a23c94fcaea005f1707365656486dbff630ceb1d7191c06cc3a1e6f138e",
+      "crcPassed": true,
+      "containsNativeBlend": false,
+      "entries": [
+        {
+          "archiveEntry": "tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbx",
+          "bytes": 2751292,
+          "sha256": "16c2deebbec845f5f9559e9498884b80a2c3996879d48964c2ef756feb4b5a47",
+          "matchingCommitCandidates": [
+            "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbx"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/Color.jpg",
+          "bytes": 1371332,
+          "sha256": "883904e87128de838ea8107dc93675067e8864da5eed37a89fbf46c3f26ef207",
+          "matchingCommitCandidates": [
+            "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/Color.jpg"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/SpaceMiner_I75_Base_H31_4K_2026-10-25_metallic.JPEG",
+          "bytes": 952132,
+          "sha256": "54d803d78d5e13d8daac7551d539b231871e6416b1ee104dd93640bb647a784e",
+          "matchingCommitCandidates": [
+            "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/SpaceMiner_I75_Base_H31_4K_2026-10-25_metallic.JPEG"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/Normal.png",
+          "bytes": 4130364,
+          "sha256": "868fe9f4ddc071b04f2e820d63d2dd5ec51ac9d5722f150502fab2b56f5681f5",
+          "matchingCommitCandidates": [
+            "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/Normal.png"
+          ]
+        },
+        {
+          "archiveEntry": "tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/SpaceMiner_I75_Base_H31_4K_2026-10-25_roughness.JPEG",
+          "bytes": 951476,
+          "sha256": "99729d5f4faf78bf62ea218c544b5fba2d36c233e65663577399b1ae150b0117",
+          "matchingCommitCandidates": [
+            "docs/Art/Drohnen/Tripo-I75-H31-2026-10-25/tripo_convert_7a0e0706-77f2-4c94-a49f-65c490a4a6e2.fbm/SpaceMiner_I75_Base_H31_4K_2026-10-25_roughness.JPEG"
+          ]
+        }
+      ]
+    }
+  ],
+  "ignoredAuthoringSearch": {
+    "searched": [
+      "work",
+      "outputs"
+    ],
+    "excludedSubdirectories": [
+      "blender-*",
+      "venv",
+      ".venv",
+      "node_modules",
+      "__pycache__",
+      "python",
+      "lib",
+      "site-packages"
+    ],
+    "found": [
+      {
+        "path": "work/DocumentBatteryBays.py",
+        "bytes": 9617,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/DocumentPowerConsole.py",
+        "bytes": 9766,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/DocumentQuestStartFix.py",
+        "bytes": 4723,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/DocumentSpaceNavigation.py",
+        "bytes": 8303,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/implement_indoor_traffic.py",
+        "bytes": 4407,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/inspect_i75_feet.py",
+        "bytes": 1930,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/PolishIcePlantDocs.py",
+        "bytes": 1481,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordBatteryBays.py",
+        "bytes": 5666,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordDebrisHandsProof.py",
+        "bytes": 6098,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordDroneConsoleProof.py",
+        "bytes": 7898,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordDroneSizingProof.py",
+        "bytes": 6664,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordIcePlantProof.py",
+        "bytes": 7176,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordIndoorDeadlock.py",
+        "bytes": 6912,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordIndoorTraffic.py",
+        "bytes": 5180,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordMagneticLanes.py",
+        "bytes": 5922,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordPowerConsole.py",
+        "bytes": 7223,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordQuestStartFix.py",
+        "bytes": 5320,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/RecordSpaceNavigation.py",
+        "bytes": 4591,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/SnapshotDroneConsoleBaseline.py",
+        "bytes": 859,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/UpdateDroneConsoleDocs.py",
+        "bytes": 12378,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/UpdateIcePlantDocs.py",
+        "bytes": 11781,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/UpdateIcePlantUi.py",
+        "bytes": 1840,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/VerifyIcePlantDocs.py",
+        "bytes": 1887,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/HallExperiment/MoveCabinets.py",
+        "bytes": 797,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Surface/detail-r02.py",
+        "bytes": 599,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Surface/inspect.py",
+        "bytes": 707,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Surface/uvtest.py",
+        "bytes": 878,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Surface/verify-r02.py",
+        "bytes": 2077,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Surface/verify.py",
+        "bytes": 1716,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Tripo/finalize_report.py",
+        "bytes": 5200,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Tripo/finalize_smartmesh_report.py",
+        "bytes": 4867,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Tripo/inspect_export.py",
+        "bytes": 3960,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Tripo/inspect_smartmesh.py",
+        "bytes": 3261,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      },
+      {
+        "path": "work/I75Viewer/vendor.py",
+        "bytes": 1510,
+        "classification": "local inspection/documentation helper; not sole authored model source"
+      }
+    ],
+    "soleNativeAuthoringFilesFound": []
+  },
+  "limits": [
+    "No fresh Unity build, import or native Blender open/pack check in this audit. Existing model reports remain the original import/render evidence.",
+    "No outside-workspace Downloads or other computer inventoried. Previously blocked online-only Tripo H3.1 attempt dated 2026-10-18 has no promised local export.",
+    "Historical MPFB generator bootstrap requires external portable tools/addon/core packs to be reinstalled; they are not Git content. Packed Blender outputs and Unity assets are present."
+  ],
+  "pass": true
+}

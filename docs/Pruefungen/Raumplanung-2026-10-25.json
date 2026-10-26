@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-25",
+  "build": "roomplan-build-04",
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "layout": 12,
+  "passed": true,
+  "assertions": 2361,
+  "assertionNote": "Includes repeated physical interlock and per-display checks; not distinct game scenarios",
+  "runs": [
+    {
+      "name": "planner",
+      "checks": 545,
+      "exitCode": 0,
+      "result": "planner-result.json",
+      "log": "planner-player.log"
+    },
+    {
+      "name": "operations",
+      "checks": 97,
+      "exitCode": 0,
+      "result": "operations-result.json",
+      "log": "operations-player.log"
+    },
+    {
+      "name": "workshop",
+      "checks": 1506,
+      "exitCode": 0,
+      "result": "workshop-result.json",
+      "log": "workshop-player.log"
+    },
+    {
+      "name": "station",
+      "checks": 156,
+      "exitCode": 0,
+      "result": "station-result.json",
+      "log": "station-player.log"
+    },
+    {
+      "name": "vitals",
+      "checks": 29,
+      "exitCode": 0,
+      "result": "vitals-result.json",
+      "log": "vitals-player.log"
+    },
+    {
+      "name": "ui",
+      "checks": 28,
+      "exitCode": 0,
+      "result": "ui-result.json",
+      "log": "ui-player.log"
+    }
+  ],
+  "sourceFilesMatched": 240,
+  "sourceManifestScope": "Scripts and metas; Resources/StationLOD; StationArc shader and meta",
+  "deliveredFilesMatched": 247,
+  "imagesSaved": 11,
+  "savePlan": "Design/RoomPlans/command-room-layout.json",
+  "deployed": "Builds/Windows",
+  "preservedPreviousBuild": "Builds/Windows-before-roomplan-20261025-1030",
+  "scope": [
+    "Eight individually movable labelled command blocks and real colliders; four terminal functions and central scanner preserved",
+    "Actual controller drag/resize path; free fractional positioning; Shift quarter-metre and neighbouring edge magnets; rotation, undo/redo, cancel",
+    "Atomic invalid-plan rejection; isolated disk save, reload, backup and corrupt-file recovery",
+    "Full pause and modal input; unchanged free walker/camera; overlap recovery and genuine static-wall spawn fallback",
+    "Current station, water mission, workshop/refit/save, vitals and native fullscreen regressions"
+  ],
+  "visualReview": [
+    "01-grundriss-1600.png",
+    "02-grundriss-1280-grosse-schrift.png",
+    "03-kommando-boxen-3d.png",
+    "ui-04-stationsplanung.png",
+    "ui-08-vollbild.png"
+  ],
+  "limitations": [
+    "Programmatic controller acceptance and image review; no manual mouse or keyboard comfort acceptance",
+    "Only the existing eight command-room elements; no complete CAD or room editor",
+    "15cm spacing does not guarantee walkable routes or every terminal-front clearance for arbitrary user layouts",
+    "Room design is separate from campaign saves and capacities",
+    "No new Release, 100k stress, long-term balance or playable FPS benchmark"
+  ],
+  "sourceManifest": "source-manifest.json",
+  "deliveredManifest": "delivered-manifest.json",
+  "committed": false,
+  "pushed": false
+}

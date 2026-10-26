@@ -1,0 +1,228 @@
+{
+  "date": "2026-10-24",
+  "scope": "Damaged starting layout, larger solar arrays, only requested built expansions",
+  "layoutRevision": 6,
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "layout": {
+    "ringRadiiMetres": [
+      29,
+      38
+    ],
+    "outerModules": [
+      {
+        "sector": "S01",
+        "angle": 0,
+        "role": "command",
+        "radii": [
+          38,
+          54
+        ]
+      },
+      {
+        "sector": "S02",
+        "angle": 30,
+        "role": "drone repair hall",
+        "radii": [
+          38,
+          54
+        ]
+      },
+      {
+        "sector": "S02",
+        "angle": 30,
+        "role": "external bay",
+        "radii": [
+          54,
+          70
+        ],
+        "realBerths": 10
+      },
+      {
+        "sector": "S08",
+        "angle": 210,
+        "role": "ice/water storage opposite hall",
+        "radii": [
+          38,
+          54
+        ]
+      }
+    ],
+    "innerModules": [
+      {
+        "sector": "S02",
+        "angle": 30,
+        "role": "internal drone repair",
+        "radii": [
+          18,
+          29
+        ]
+      }
+    ],
+    "solarArrays": {
+      "count": 2,
+      "frameWidthMetres": 22.8,
+      "frameDepthMetres": 21.4,
+      "centreRadiusMetres": 60,
+      "structuralBooms": true,
+      "electricalBalanceChanged": false
+    },
+    "reactorServices": [
+      {
+        "angle": 0,
+        "status": "intact"
+      },
+      {
+        "angle": 90,
+        "status": "broken",
+        "missingRadii": [
+          14,
+          20
+        ]
+      },
+      {
+        "angle": 180,
+        "status": "broken",
+        "missingRadii": [
+          11,
+          19.5
+        ]
+      },
+      {
+        "angle": 270,
+        "status": "broken",
+        "missingRadii": [
+          16,
+          23
+        ]
+      }
+    ],
+    "ruptureEnds": "closed static pressure bulkheads at both ends, bent attached hull and beam remnants",
+    "sealedReactorHousingMetres": {
+      "diameter": 8,
+      "height": 6,
+      "collarDiameter": 16
+    }
+  },
+  "build": {
+    "development": true,
+    "method": "SpaceMiner.Editor.StartMenuBuild.Run",
+    "exitCode": 0,
+    "log": "docs/Pruefungen/Startstation-Havarie-2026-10-24/station-start-damage-20261024-build-final.log"
+  },
+  "runtime": [
+    {
+      "name": "station",
+      "checks": 193,
+      "exitCode": 0,
+      "log": "docs/Pruefungen/Startstation-Havarie-2026-10-24/station-start-damage-20261024-check-final.log",
+      "screenCaptureWarnings": 15
+    },
+    {
+      "name": "vitals",
+      "checks": 29,
+      "exitCode": 0,
+      "log": "docs/Pruefungen/Startstation-Havarie-2026-10-24/station-start-damage-20261024-vitals.log",
+      "screenCaptureWarnings": 1
+    }
+  ],
+  "initialCheck": {
+    "exitCode": 1,
+    "cause": "Test used Transform.Find with slash-containing water-storage object name; corrected to existing tank-socket parent",
+    "log": "docs/Pruefungen/Startstation-Havarie-2026-10-24/station-start-damage-20261024-check-first.log"
+  },
+  "verified": [
+    "All ring joins and built outer doors traverse; all omitted outer ports are physically capped",
+    "Only internal workshop opens; other inner room ports block capsule",
+    "Solar frames measured22.8 by21.4m and water storage opposite hall",
+    "Internal repair drone lies in surviving workshop",
+    "Intact command-axis corridor reaches maintenance ring and returns",
+    "All3 broken corridors stop capsule at both pressure bulkheads",
+    "Raycasts find no hidden floor in any rupture; gap excluded from save geometry",
+    "Old saved locations in removed outer/inner rooms and all3 new gaps migrate safely",
+    "Current and retained old valid save positions/view; resources retained",
+    "Detailed hall doors, visitor protection,10 real berths and unobstructed launches",
+    "Complete water extraction/unloading and drone return",
+    "Developer movement, unlimited stamina and persistence regression"
+  ],
+  "directRenderImages": [
+    {
+      "path": "docs/Pruefungen/Startstation-Havarie-2026-10-24/07-modulhuellen-aussen.png",
+      "sha256": "5192d40ddc021ad522e757cce1c078408c705035487769a1c012792402fb63d8"
+    },
+    {
+      "path": "docs/Pruefungen/Startstation-Havarie-2026-10-24/11-aussendock-uebersicht.png",
+      "sha256": "a129bd91bb34fe10969d03f85ed5610aa87370e0549f044ca761d4da245ba9af"
+    },
+    {
+      "path": "docs/Pruefungen/Startstation-Havarie-2026-10-24/18-stationsgrundriss.png",
+      "sha256": "61d28ecea55159980aad24c62f5fb9d1c4bcebd4e5996d53b2bcb51c50d82cab"
+    },
+    {
+      "path": "docs/Pruefungen/Startstation-Havarie-2026-10-24/19-reaktor-innenmodule.png",
+      "sha256": "39491509a72f3e404aec9003c09ea0e5ced8e413f750c34d72a00e6ab11ff820"
+    },
+    {
+      "path": "docs/Pruefungen/Startstation-Havarie-2026-10-24/20-gangbruch-schotten.png",
+      "sha256": "134135fd50e1ccd1667c9986c9ba2fd8aae8360e1a205120ddc830fdf05cbeb6"
+    },
+    {
+      "path": "docs/Pruefungen/Startstation-Havarie-2026-10-24/21-solarfeld-tragarm.png",
+      "sha256": "d64ea2b1479df75fedb75e2fcb8dc513cea675eaab18d305e5b75ea700471e9b"
+    }
+  ],
+  "visuallyReviewed": [
+    "18-stationsgrundriss.png",
+    "20-gangbruch-schotten.png",
+    "21-solarfeld-tragarm.png"
+  ],
+  "sourcesMatchingBuildCopy": [
+    {
+      "path": "Assets/SpaceMiner/Scripts/RingWalkthrough.cs",
+      "sha256": "e60e10fab679f5b353c2ea9b18ccf6011e9e86f6dd58790327620a1e7515c2eb"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorLayout.cs",
+      "sha256": "ce06f80087335021b825d420d4468702ef719648d150d4dc59f8f27fba3c945b"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationVisual.cs",
+      "sha256": "3f3c9f9213fd33030fcfe1aa3e47a15bc180d49c0abdda4764357c25649a602a"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StartStationCheck.cs",
+      "sha256": "13a4908ec356da60debf274fd1fad72591617873cbfceb72178f06f4b06b9941"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorMode.cs",
+      "sha256": "d621868cdc8f2b662bdbfd0a3ebc966175ed5b5bbb5d03307d010eb6f1d69d15"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerVitalsCheck.cs",
+      "sha256": "c413e5e1bb13efddb296522c19cab40f5f49b413abb170aa37fa7b8f3f81e0ec"
+    }
+  ],
+  "deployed": {
+    "directory": "Builds/Windows",
+    "previousBuild": "Builds/Windows-before-start-damage-20261024",
+    "filesSha256Matched": 247,
+    "assemblySha256": "3bbf35576a1e5a8f70b27afee994a368c32a78a5a0ef10a3cf070f59a0c8dd47",
+    "started": {
+      "pid": 14904,
+      "windowTitle": "Space Miner - Prototyp 01",
+      "responding": true,
+      "arguments": [
+        "-startStationPreview"
+      ],
+      "log": "Logs/station-start-damage-player-20261024.log"
+    }
+  },
+  "limits": [
+    "Static rupture/bulkheads: no pressure simulation or repair mechanic",
+    "Solar dimensions only; existing electricity balance unchanged",
+    "Reactor still placeholder; separate design assets preserved",
+    "ScreenCapture unavailable in hidden tests;6 explicit3D renders retained, no new GUI screenshot/manual-input acceptance",
+    "No Release, standalone or performance benchmark",
+    "No commit or push"
+  ]
+}

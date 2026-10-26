@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-25",
+  "scope": "Additional I-75 panel transport concept; latest request is UPRIGHT load",
+  "generator": "built-in image_gen, I-75 identity + actual hull reference, then targeted edits",
+  "latestImage": "docs/Art/Drohnen/Innendrohne-I75-Wabentransport-2026-10-25-v2-hochkant.png",
+  "artifacts": [
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Wabentransport-2026-10-25-v1.png",
+      "bytes": 2190283,
+      "sha256": "37be1087f29bec78c3bc31308671f5c2129a0799ce74d1c9b7937f35fc5770e6",
+      "pixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Wabentransport-2026-10-25-v1.prompt.txt",
+      "bytes": 5728,
+      "sha256": "292da2b89dd22f58766c8805154dda37cb041814a2f635fc1d66c33e73a2d1f0"
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Wabentransport-2026-10-25-v1-korrektur.prompt.txt",
+      "bytes": 1753,
+      "sha256": "bc9f0f5acb503e23b8aaf839c36d36833400f8cd6bdec794efdcbb9897d34948"
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Wabentransport-2026-10-25-v2-hochkant.png",
+      "bytes": 2214317,
+      "sha256": "c028830424060321ef2980d5e16ca1cdab83be60852bf445191ad0e44c952aa1",
+      "pixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-Wabentransport-2026-10-25-v2-hochkant.prompt.txt",
+      "bytes": 4014,
+      "sha256": "00c8871d6e77d0ca7bca6b355ac5bd56236853c2b1a5c23d87adcd1f13b8304b"
+    },
+    {
+      "path": "docs/Innendrohne-I75-Wabentransport-2026-10-25.md",
+      "bytes": 5364,
+      "sha256": "083418f580ec5ca44839e957d4578017c488eaf586a89bccd75fac49ebcb66a7"
+    }
+  ],
+  "sourceParameters": {
+    "path": "Assets/SpaceMiner/Scripts/HoneycombHull.cs",
+    "radiusMetres": 0.78,
+    "thicknessMetres": 0.08
+  },
+  "numericDesign": {
+    "chassisLengthMetres": 0.75,
+    "panelCount": 3,
+    "panelCornerSpanMetres": 1.56,
+    "panelFlatSpanMetres": 1.3509996299037244,
+    "panelThicknessMetres": 0.08,
+    "proposedGapBetweenPanelsMetres": 0.02,
+    "bareThreePanelPackDepthMetres": 0.27999999999999997,
+    "proposedRackSupportAboveFloorMetres": 0.55,
+    "proposedTopOfPanelsMetres": 1.9009996299037244,
+    "referenceHumanHeightMetres": 1.8,
+    "orientation": "parallel vertical closed hexagonal panels resting on flat bottom edges; removable over-chassis carrier"
+  },
+  "checks": [
+    "Read actual HoneycombHull radius/thickness and construction-stage role separation",
+    "Visual review: three upright plates, 75cm chassis family, visible restraint and separate human reference",
+    "Two-radius, sqrt(3)-radius, three-panel pack and nominal top-height arithmetic",
+    "PNG signatures, pixel dimensions and artifact SHA256",
+    "Local links after report creation"
+  ],
+  "limitations": [
+    "Generated perspective and small inset dimension arrows are illustrative, not CAD measurements",
+    "Carrier brackets/clamps add to bare pack envelope",
+    "No payload, magnetic drive capacity, centre-of-mass, load path strength or route clearance validated",
+    "No Unity/Blender model or game logic changed; no new build/runtime tests",
+    "Upright arrangement accepted as design direction; no engineering validation, commit or push"
+  ],
+  "localLinksChecked": 8
+}

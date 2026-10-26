@@ -1,0 +1,16 @@
+[
+  {
+    "name": "planner",
+    "checks": 694,
+    "exitCode": 0,
+    "result": "planner-result.json",
+    "log": "planner-player.log"
+  },
+  {
+    "name": "ui",
+    "checks": 28,
+    "exitCode": 0,
+    "result": "ui-result.json",
+    "log": "ui-player.log"
+  }
+]

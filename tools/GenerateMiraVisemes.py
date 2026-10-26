@@ -22,6 +22,8 @@ def meta(path):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rhubarb', type=Path, required=True)
+    parser.add_argument('--clips', nargs='+', help='Only regenerate these assigned clip names, e.g. mira_12 mira_13')
+    parser.add_argument('--quests', action='store_true', help='Also include assigned quest and workflow recordings')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     resources = root / 'Assets/SpaceMiner/Resources'
@@ -31,10 +33,18 @@ def main():
     process = subprocess.run([str(args.rhubarb.resolve()), '--version'], text=True, capture_output=True, check=True)
     version = (process.stdout + process.stderr).strip()
     cues = json.loads((resources / 'Intro/intro.json').read_text(encoding='utf-8-sig'))['Cues']
+    if args.quests:
+        catalog = json.loads((resources / 'MiraQuests/catalog.json').read_text(encoding='utf-8-sig'))
+        cues += [cue for quest in catalog['Quests'] for cue in quest['Cues']] + catalog['Helpers']
+    assigned = [cue for cue in cues if cue.get('Audio')]
+    if args.clips:
+        requested = set(args.clips)
+        known = {Path(cue['Audio']).stem for cue in assigned}
+        if requested - known:
+            parser.error('Clips are not assigned in intro.json: ' + ', '.join(sorted(requested - known)))
+        assigned = [cue for cue in assigned if Path(cue['Audio']).stem in requested]
     report = []
-    for cue in cues:
-        if not cue.get('Audio'):
-            continue  # Revised scanner instructions deliberately have no matching recording.
+    for cue in assigned:
         source = resources / (cue['Audio'] + '.wav')
         with wave.open(str(source)) as wav:
             duration = wav.getnframes() / wav.getframerate()
@@ -58,7 +68,7 @@ def main():
         meta(target)
         report.append(dict(clip=source.stem, cues=len(shapes), duration=duration))
         print(source.stem, len(shapes), 'mouth cues', flush=True)
-    assert len(report) == 14
+    assert len(report) == len(assigned)
     print(json.dumps(dict(generator=version, recordings=report), indent=2))
 
 

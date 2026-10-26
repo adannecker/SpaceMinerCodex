@@ -1,0 +1,86 @@
+[
+  {
+    "Resource": "Intro/mira_00",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_00.wav",
+    "Bytes": 171592,
+    "SHA256": "56D627DE909E6496891C6423F4554222BD25C9B60A25202DCEBE460AADF41490"
+  },
+  {
+    "Resource": "Intro/mira_01",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_01.wav",
+    "Bytes": 144252,
+    "SHA256": "C2E353AE790E52E6E4866143D13845450358FBF62F1707F244F0D286CD8D541D"
+  },
+  {
+    "Resource": "Intro/mira_02",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_02.wav",
+    "Bytes": 190116,
+    "SHA256": "A880E3D9A83BC57EDFA69ED807259B8F317C61FD3324049B53A52E20C0D5503E"
+  },
+  {
+    "Resource": "Intro/mira_03",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_03.wav",
+    "Bytes": 157920,
+    "SHA256": "B4AE1E186B78AB069D3A0B51FF02FD388408F8CA76F12BB7A05A5EFC804813D3"
+  },
+  {
+    "Resource": "Intro/mira_04",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_04.wav",
+    "Bytes": 254942,
+    "SHA256": "6C8C2DABF96C516BBE5EAAFC8C748E95C1BDFCB62093CF80FF7DD3B769837996"
+  },
+  {
+    "Resource": "Intro/mira_05",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_05.wav",
+    "Bytes": 322416,
+    "SHA256": "E70948F2247BFC8DBFEB60B6602BCFDA9C07BEBC1C398BBB75FF03FC2242336E"
+  },
+  {
+    "Resource": "Intro/mira_06",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_06.wav",
+    "Bytes": 291546,
+    "SHA256": "5B83DFA9E2D61C6E53D43FE043ADEB90215885EE51DEE781EF8CEF5694B9FF7D"
+  },
+  {
+    "Resource": "Intro/mira_07",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_07.wav",
+    "Bytes": 167182,
+    "SHA256": "2DC793B20C9A6AD6385E0C071288C3C1571152DC601006201A12109AB16693CA"
+  },
+  {
+    "Resource": "Intro/mira_08",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_08.wav",
+    "Bytes": 342260,
+    "SHA256": "681B68A709977808616CB462B646B9267B846A6B2AF1BA6AD487324658B5BFCC"
+  },
+  {
+    "Resource": "Intro/mira_09",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_09.wav",
+    "Bytes": 294632,
+    "SHA256": "DAE6AA931ACBA857359C752651B746C3E09D431A9A4AF1AB7A79FABE868CE09A"
+  },
+  {
+    "Resource": "Intro/mira_10",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_10.wav",
+    "Bytes": 205550,
+    "SHA256": "35B6225FCBDC1F6C1F053F729AC0BACCDEEBA509C99EBDA2D621EF4D74E271DA"
+  },
+  {
+    "Resource": "Intro/mira_11",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_11.wav",
+    "Bytes": 512044,
+    "SHA256": "DB1D714420DFD947DE1AC5571053E507155ADA666EB93224D030EA69BEFF0E24"
+  },
+  {
+    "Resource": "Intro/mira_14",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_14.wav",
+    "Bytes": 106326,
+    "SHA256": "FBFE40402D0E2BCF9ADEF295534B87B26F5061B38E885683DE2AA03243FCE55E"
+  },
+  {
+    "Resource": "Intro/mira_15",
+    "File": "Assets/SpaceMiner/Resources/Intro/mira_15.wav",
+    "Bytes": 66206,
+    "SHA256": "C2C7BF55C334B8427292DDFFB6DE1089EC594494454E9BAB36A67136FBEF8F17"
+  }
+]

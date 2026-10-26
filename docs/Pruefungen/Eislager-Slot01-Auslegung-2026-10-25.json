@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25",
+  "status": "Layout and analytical proposal; no Unity changes or new runtime acceptance.",
+  "existingSlot": {
+    "axisDegrees": 200,
+    "angleDegrees": 9.7,
+    "innerRadiusM": 38,
+    "outerRadiusM": 54,
+    "visibleClearHeightM": 5.41,
+    "nominalSectorFloorM2": 124.60254595837917
+  },
+  "proposal": {
+    "tankAxisPlaneNearM": 39.45,
+    "tankAxisPlaneFarM": 51.0,
+    "tankOuterLengthM": 11.549999999999997,
+    "tankOuterWidthNearM": 4.868221954694127,
+    "tankOuterWidthFarM": 6.828285342072639,
+    "tankBottomM": 0.25,
+    "tankTopM": 4.85,
+    "tankOuterHeightM": 4.6,
+    "tankWallAndInsulationAssumptionM": 0.12,
+    "serviceClearanceM": 1.0,
+    "utilityClearanceM": 0.45,
+    "ringEntrySpaceNominalM": 1.4500000000000028,
+    "ringEntryClearOfDoorShouldersM": 1.0100000000000051,
+    "processingSpaceM": 3.0,
+    "ceilingClearanceM": 0.5650000000000004,
+    "tankInnerHeightM": 4.359999999999999,
+    "tankInnerVolumeBeforePartitionsM3": 276.5094333855945,
+    "tankInnerVolumeAfterTwoPartitionsM3": 270.64185920234576,
+    "operationalFillFraction": 0.95,
+    "operationalFillVolumeM3": 257.10976624222843
+  },
+  "assumptions": {
+    "iceDensityKgM3": 917.0,
+    "waterMassFraction": 0.8,
+    "unknownMineralDensityKgM3": 2500.0,
+    "defaultPackingFraction": 0.75,
+    "unknownDensityConfirmed": false
+  },
+  "capacityScenarios": [
+    {
+      "solidPackingFraction": 0.65,
+      "pureIceKg": 153250.27616868028,
+      "pureIceMeltwaterLitersApprox": 153250.27616868028,
+      "rawMixtureKg": 175472.0575349,
+      "rawMixturePotentialWaterLitersApprox": 140377.64602792,
+      "rawMixtureUnknownKg": 35094.411506979995
+    },
+    {
+      "solidPackingFraction": 0.75,
+      "pureIceKg": 176827.24173309258,
+      "pureIceMeltwaterLitersApprox": 176827.24173309258,
+      "rawMixtureKg": 202467.75869411536,
+      "rawMixturePotentialWaterLitersApprox": 161974.2069552923,
+      "rawMixtureUnknownKg": 40493.551738823066
+    },
+    {
+      "solidPackingFraction": 0.85,
+      "pureIceKg": 200404.20729750494,
+      "pureIceMeltwaterLitersApprox": 200404.20729750494,
+      "rawMixtureKg": 229463.45985333074,
+      "rawMixturePotentialWaterLitersApprox": 183570.7678826646,
+      "rawMixtureUnknownKg": 45892.691970666136
+    }
+  ],
+  "limits": [
+    "Inner volume is analytical geometry, not a built or collision-checked mesh.",
+    "Packing 65/75/85 percent is a sensitivity assumption, not measured cold-ice press performance.",
+    "The unknown 20 percent is only modeled as 2500 kg/m3 mineral for this scenario; actual contact density is unknown.",
+    "Water equivalent is potential H2O after complete recovery; not currently available clean liquid water.",
+    "12 cm wall/insulation and 1 m service aisle are layout assumptions, no strength, pressure or heat-leak validation.",
+    "Crusher, ram, feed header and service access need detailed layout; no gravity hopper or belt conveyor proposed.",
+    "Only intact Slot01 counted; damaged02/03 do not add current capacity."
+  ]
+}

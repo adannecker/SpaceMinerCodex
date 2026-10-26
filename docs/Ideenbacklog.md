@@ -1,5 +1,76 @@
 # SpaceMiner Ideenbacklog
 
+## Nächster Sprint: verbindlicher Umfang und Arbeitsreihenfolge – 26.10.2026
+
+**Nutzerentscheidung:** Die zuletzt genannten Aufgaben sollen im nächsten Sprint eingebaut und priorisiert fertiggestellt werden. Sie sind damit Sprintumfang. Die folgende Arbeitsreihenfolge wurde aus technischen Abhängigkeiten abgeleitet; alle Positionen gehören zum Sprintziel. Status aller Positionen: offen. Kein Start-/Enddatum oder belastbarer Aufwand vereinbart; diese Planung ist keine automatische Terminierung.
+
+| Reihenfolge / ID | Arbeitspaket | Fertig, wenn … |
+| --- | --- | --- |
+| 1 / SP-01 | I75-Unterseite und Texturen korrigieren | das gemeldete Loch am Mesh geprüft und geschlossen ist, die fehlerhaften Texturstellen korrigiert sind und Unterseite, Materialübergänge sowie Exporte in der drehbaren Vorschau geprüft wurden; die korrigierte R02-Fassung ist im Spiel übernommen. |
+| 2 / SP-02 | Energieauslegung plausibilisieren | Stationsverbrauch und Reaktorerzeugung nachvollziehbar bilanziert sind; Innendrohnen mit Schweben/Fahrt, Bereitschaft, Werkzeug und Transportlast samt Akku, Einsatzdauer und gleichzeitigen Verbrauchern berechnet und im Spiel konsistent abgebildet sind. Keine stillschweigende neue Reaktorleistung: Änderungen aus der Rechnung begründen und dokumentieren. |
+| 3 / SP-03 | Reale Ladegeschwindigkeiten umsetzen | aktuelle belastbare Technikquellen, Akkutyp und Ladeverlauf dokumentiert sind; Teil-/Vollladung, Verluste, Temperatur-/Leistungsgrenzen und parallele Ladungen berücksichtigt werden; Simulation und UI dieselben Werte nutzen. Spielzeit und reale Dauer getrennt prüfen. |
+| 4 / SP-04 | I75-Docking und Laden | passende Dockmodelle mit sicheren Zufahrten abseits der Fahrspuren im Spiel stehen; Anfahren, Belegen, Laden, Freigeben und Rückkehrreserve funktionieren, ohne Türen/Spuren zu blockieren; die Energie aus der echten Stationsbilanz stammt. Kontakt- versus stationäre Induktionsladung begründet auswählen. Dynamische Induktion im Sprint bewerten, nicht ohne weitere Entscheidung als Standard bauen. |
+| 5 / SP-05 | Steuerpultmodell am Konzept ausrichten | 3D-Modell und freigegebenes Konzept gemeinsam abgeglichen, nötige Form-/Material-/Displaykorrekturen abgeschlossen und die passenden Touchpulte im Spiel integriert sind. |
+| 6 / SP-06 | Stromversorgungs-UI überarbeiten | Formen, Abschnitte und Gestaltung am Konzept ausgerichtet sind und die tatsächlichen Energie-/Ladedaten weiterhin korrekt und bedienbar dargestellt werden. |
+| 7 / SP-07 | Scannerkonsole mit Animation und Fundübersicht | Konsole im Spiel nutzbar ist, tatsächliches Aufladen und Scannen sichtbar animiert sind, erkennbare Fundarten dargestellt werden und gefundene Objekte für bekannte Details anklickbar sind; Reichweite, Ausbau und unbekannte Daten bleiben berücksichtigt. |
+| 8 / SP-08 | Stationsplanung samt Reparaturauswahl | Planmodell die tatsächliche Station mit Ausbau und Schäden erkennbar wiedergibt; kaputte Bauteile einzeln auswählbar sind, passende reale Reparaturaufträge ausgelöst werden können und Fortschritt/Reparaturzustand nachgeführt werden. |
+| 9 / SP-09 | Hochauflösenden Mira-Avatar integrieren | die vorhandene High-Fassung im vorgesehenen Hauptspiel verwendet wird und Materialien, Animation, Dialogdarstellung und Laufzeitkosten dort geprüft sind. Bereits vorhandene Dialogstudio-/Questspielintegration weiterverwenden und verbleibende Lücken prüfen. |
+| 10 / SP-10 | Wechselbare I75-Werkzeuge | gemeinsame Aufnahme und getrennte Bau-/Laser-, Demontage- und Transportmodule einschließlich aufrechtem Wabenträger modelliert und im Spiel nutzbar sind; Umrüsten in der Werkstatt, jeweils eine Aufgabenrolle, Last-/Energiebilanz und Arbeitsabläufe nachvollziehbar funktionieren. |
+
+**Gestaltungsidee zu SP-10 vom26.10.2026:** Werkzeugwechseldock mit stationsseitigem Kran und Montagearm: Drohne dockt an, vorhandenes Werkzeug gegebenenfalls zuerst abnehmen/ablegen, neues Werkzeug holen, ansetzen und befestigen. Sichtbar animierten Wechsel und reale Werkzeugplätze ausarbeiten, gemeinsam mit SP-04. [Ablauf und offene Mechanik](I75-Naechste-Schritte-2026-10-26.md#idee-werkzeugwechseldock-mit-kran-und-montagearm--26102026). Vom Nutzer als Idee eingebracht, genaue Konstruktion noch offen.
+
+Abhängigkeiten: SP-02/03 liefern die Werte für SP-04/06/07/10; SP-01 ist Modellgrundlage für Dock und Werkzeuge, SP-05 die gemeinsame Pultgrundlage. Werkzeugannahmen bereits bei SP-02 einbeziehen und nach SP-10 mit dem tatsächlichen Modell abgleichen. Bestehende Implementierungen vorab sichten und weiterverwenden; bereits erledigte Teilfunktionen nicht neu bauen.
+
+**Gemeinsames Fertig-Kriterium:** Integration im tatsächlichen Spiel statt ausschließlich Konzept/Einzelvorschau, nachvollziehbare Daten statt Beispieldaten, passende Funktions- und Sichtprüfung mit dokumentiertem Ergebnis. Betroffene Spielstände, Raumpläne und bestehende Änderungen anderer Chats erhalten. Ein Punkt bleibt offen, solange Umsetzung oder erforderliche Prüfung fehlt. Vor Sprintabschluss einen zusammenhängenden Ablauf mit Laden, Einsatz, Konsole und Reparatur prüfen und den tatsächlich geprüften Build dokumentieren.
+
+Die Detailaufgaben und Verweise folgen unten. Ältere offene Ideen außerhalb dieses Umfangs werden dadurch nicht automatisch in den Sprint übernommen. In dieser Sitzung nur Sprintplanung dokumentiert und mit den genannten Aufgaben abgeglichen; noch keine Umsetzung, Aufwandsschätzung oder neuen Spieltests/Builds.
+
+## Neue Prüf- und Überarbeitungsaufgaben – 26.10.2026
+
+Auf Nutzerauftrag als offene To-dos festgehalten; die ursprüngliche Nennreihenfolge unten bleibt erhalten, die aktuelle Sprintreihenfolge steht darüber. Noch keine Fehlerbehebung, Integration oder neue Energieberechnung erfolgt.
+
+- [ ] **Innendrohne: Texturen prüfen und nacharbeiten.** Einige Stellen passen laut Nutzer noch nicht. R02 in der drehbaren Vorschau von allen Seiten prüfen, betroffene Flächen festhalten und UV-/Materialübergänge korrigieren. [R02-Modell](Innendrohne-I75-Textur-R02-2026-10-26.md).
+- [ ] **Innendrohne: Unterseite schließen.** Vom Nutzer gemeldetes Loch an der Unterseite am tatsächlichen Mesh untersuchen und sauber schließen; Normalen, Texturierung und Export danach prüfen. Befund noch nicht unabhängig überprüft. [I75-Arbeitsliste](I75-Naechste-Schritte-2026-10-26.md).
+- [ ] **Hochauflösenden Avatar ins Spiel integrieren.** Vorhandenen hochauflösenden Mira-Avatar übernehmen; bisherige Modellwahl-/Dialogstudioarbeit berücksichtigen und tatsächliche Hauptspielintegration, Animationen, Materialien und Laufzeitkosten prüfen. [Mira-Avatar](MiraAvatar.md), [3D-Stand](Mira3D.md).
+- [ ] **Steuerpult: 3D-Modell und Konzeptbild erneut gemeinsam prüfen.** Form, Proportionen, Materialien und Displayeinbau abgleichen; nötige Korrekturen vor weiterer Integration festhalten. [Konzept](Steuerpult-Konzept-2026-10-26.md), [Blender-Modell](Steuerpult-Blender-2026-10-26.md).
+- [ ] **Stromversorgungs-UI näher ans Konzept bringen.** Formen, Abschnittsaufteilung und Gestaltung der tatsächlichen Oberfläche mit dem Konzept vergleichen und überarbeiten; vorhandene reale Datenanbindung erhalten. [UI-Konzept](Stromversorgung-UI-Konzept-2026-10-25.md), [Umsetzung](Stromversorgung-UI-2026-10-26.md).
+- [ ] **Stromverbrauch und Reaktorerzeugung erneut plausibilisieren.** Stationsverbraucher und Erzeugung gemeinsam bilanzieren; für Innendrohnen Schweben/Fahren, Bereitschaft, Werkzeuge und Transportlast sowie Akkukapazität, Einsatzdauer, Energie pro Einsatz und Ladung berechnen. Gleichzeitige Drohnen und Ladeverluste berücksichtigen. Bestehende Werte sind bis zur Prüfung keine neu bestätigte Auslegung; der Prüfauftrag setzt noch keine neue Reaktorleistung. [Versorgungsarchitektur](Stationsversorgung-Architektur.md), [I75-Ladeaufgaben](I75-Naechste-Schritte-2026-10-26.md).
+- [ ] **Aufladen an heute mögliche Ladegeschwindigkeiten anpassen.** Bei Umsetzung aktuelle belastbare Akku-/Ladegerätequellen recherchieren, passenden Akkutyp wählen und daraus Ladeleistung, Ladeverlauf, Temperaturgrenzen, Wirkungsgrad und Ladezeiten ableiten. Vergleichbare Ladezustandsbereiche unterscheiden (z. B. Teil- und Vollladung); verfügbare Stationsleistung und parallele Ladungen begrenzen den Durchsatz. Spielzeit und reale Dauer bei Zeitbeschleunigung getrennt ausweisen. Noch keine neue Rate festgelegt.
+
+## Scannerkonsole mit animiertem Scan und Fundübersicht – 26.10.2026
+
+Weiterer Nutzerwunsch zur offenen Aufgabenliste; noch keine Umsetzung:
+
+- [ ] Eine passend zu den Kommandopulten gestaltete Scannerkonsole ausarbeiten und ins Spiel integrieren; bestehende Scannerfunktion und Kampagnendaten verwenden.
+- [ ] Das Aufladen des Scanner-Energiespeichers sichtbar animieren und mit dem tatsächlichen Ladefortschritt verbinden.
+- [ ] Den anschließenden Scan anschaulich animieren: Fortschritt, erfasster Bereich und eintreffende Kontakte. „Alles scannen“ bleibt auf die tatsächliche Reichweite und Fähigkeiten des Scanners begrenzt.
+- [ ] Anzeigen, welche Arten von Funden mit dem aktuellen Ausbau bereits erkennbar sind; mögliche Erkennungen von tatsächlich gefundenen Objekten unterscheiden. Genauere Kategorien anhand des vorhandenen Scan-/Forschungsstands ausarbeiten.
+- [ ] Nach dem Scan eine übersichtliche, interaktiv anklickbare Fundübersicht anbieten. Auswahl öffnet die bekannten Details des Fundes und seine Position; unbekannte Bestandteile bleiben als unbekannt gekennzeichnet. Konkrete Detailfelder und Darstellung noch ausarbeiten.
+
+[Scanner-Fachdokumentation und bestehender Stand](Scanner-und-Spielstaende.md). Keine zusätzlichen Fundarten, Reichweiten, Ladezeiten oder Energiewerte beschlossen.
+
+## Stationsplanung näher am tatsächlichen Stationsmodell – 26.10.2026
+
+Weiterer Nutzerwunsch zur offenen Aufgabenliste; noch keine Umsetzung:
+
+- [ ] Das Modell in der Stationsplanung an Form, Proportionen, Anordnung und tatsächlichen Ausbauzustand der im Spiel gebauten Station annähern.
+- [ ] Auch beschädigte Teile und fehlende/zerstörte Abschnitte nachvollziehbar darstellen; intakte und reparierte Teile entsprechend dem echten Zustand anzeigen.
+- [ ] Beschädigte Bauteile in der Planansicht einzeln auswählbar machen und die Auswahl mit dem passenden realen Reparaturziel verbinden, damit dessen Reparatur geplant/beauftragt werden kann.
+- [ ] Vorhandene Reparaturvoraussetzungen, Aufträge und Fortschritte verwenden; die Planansicht nach tatsächlich erfolgter Reparatur aktualisieren. Bestehende auswählbare Schadenszustände berücksichtigen, statt eine zweite Reparatursimulation anzulegen.
+
+[Vorhandene Stationsplanung und Reparaturzustände](Stationsversorgung-Architektur.md). Keine neuen Reparaturkosten oder Freischaltungen festgelegt.
+
+## Nächste I75-Arbeiten – 26.10.2026
+
+Nutzerauftrag nach Freigabe von R02: passende Docking-/Ladeplätze und anschließend die Werkzeugmodule ausarbeiten. [Verbindliche offene Aufgabenliste](I75-Naechste-Schritte-2026-10-26.md).
+
+- [ ] Dockgeometrie, sichere Zufahrt abseits der Durchgangsspuren, Belegung/Warteschlange und Rückkehr bei niedrigem Akku planen.
+- [ ] Ladeverfahren wählen: Kontakte oder stationäres induktives Pad; kapazitäts-/leistungsbegrenzte echte Stationsbilanz.
+- [ ] Induktive Streckenversorgung während der Fahrt als mögliche spätere Ausbaustufe prüfen; noch keine Technikauswahl oder Leistungswerte beschlossen.
+- [ ] Gemeinsame wechselbare Werkzeugaufnahme und separate Bau-/Laser-, Demontage- und Transportkassetten einschließlich aufrechtem Wabenträger modellieren und auslegen. Weiterhin eine Aufgabenrolle pro Drohne, Wechsel durch Umrüstung.
+
+Nur To-dos dokumentiert, noch keine Dock-/Werkzeugumsetzung. Frühere Ideen folgen darunter.
+
 Stand: 08.10.2026. Diese Ausbaustufen erweitern Drohneneinsätze, Stationssteuerung und Gefahren im Asteroidengürtel. Die folgenden Ideen stammen aus dem Ideenbacklog-Chat; Prioritäten, Kosten, Forschungsstufen und konkrete Umsetzung sind noch offen. Der aktuelle Umsetzungsstand steht unten; übrige Ausbaustufen bleiben offen.
 
 ## Drohnenversorgung und Spezialisierung
@@ -85,6 +156,9 @@ Das Intro soll das Unglück mit stilisierten Bildern erzählen, begleitet von Mi
 Bildstil, Bildfolge, Dauer und Sprechertext bleiben auszuarbeiten. Dabei ist festzulegen, was Mira über das Unglück weiß und ob die Bilder bekannte Ereignisse oder eine unvollständige Rekonstruktion zeigen. Der zerstörte Planet kann Teil dieser Bildfolge sein; sein Zusammenhang mit der Stationskatastrophe bleibt offen. Die bisherige überspringbare Intro-Sequenz ist die Grundlage für die spätere Erweiterung, siehe [Story und Dialoge](Dialoge/IntroCinematic/README.md).
 
 ## Steam Integration
+
+Statusprüfung22.10.2026: Steamworks-Partnerregistrierung im angemeldeten Browser bereits begonnen, Abschluss/Freischaltung noch ausstehend. Die Anwendungsliste leitete zurück zur Steamworks-Startseite; SpaceMiner-App-ID und hochgeladene Builds deshalb weiterhin nicht bestätigt. Noch keine nachgewiesene technische Steam-Anbindung im Spiel. Ausschliesslich gelesen; keine Vereinbarungen angenommen, Angaben geändert oder Dateien hochgeladen. Private Konto-/Bank-/Steuer-/Identitätsdaten gehören nicht ins Projektarchiv.
+
 
 Idee vom 06.10.2026: SpaceMiner soll später eine Steam-Integration erhalten. Der konkrete Funktionsumfang und der Zeitpunkt sind noch offen. Erfolge, Cloud-Spielstände und Workshop sind mögliche Ausbaustufen zur späteren Auswahl, noch keine beschlossenen Anforderungen.
 

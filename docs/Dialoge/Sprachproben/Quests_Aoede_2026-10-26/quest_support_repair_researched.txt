@@ -1,0 +1,1 @@
+Die Reparaturverfahren sind ausgearbeitet. Für eine Außenreparatur wählst du jetzt eine freie Außendrohne am Dock und beauftragst den Umbau auf das Laserwerkzeug. R null eins führt den Werkzeugwechsel aus. Für eine zugängliche Innenreparatur kannst du stattdessen R null eins einsetzen. Wähle ein beschädigtes Ziel und halte die benötigten Ersatzteile bereit.

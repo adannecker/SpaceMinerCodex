@@ -8,6 +8,10 @@ namespace SpaceMiner
         private readonly Transform[] berths = new Transform[10];
         public const int ChargingBerthCount = 8;
         public Transform TankSocket { get; private set; }
+        private readonly Transform[] storageDocks = new Transform[RingWalkthrough.StorageStageCount];
+        public int StorageDockCount => storageDocks.Length;
+        public Transform StorageDock(int stage) => storageDocks[stage];
+        public bool StorageDockOperational(int stage) => stage==0 && storageDocks[stage]!=null;
         public Transform DroneDock { get; private set; }
         public Transform Berth(int index) { Build(); return berths[index]; }
         private void Awake() => Build();
@@ -19,23 +23,23 @@ namespace SpaceMiner
             var hull = old.Find("Water Ice Tank").GetComponent<Renderer>().sharedMaterial;
             var dark = old.Find("Tank cap").GetComponent<Renderer>().sharedMaterial;
             var cyan = old.Find("Tank blue band").GetComponent<Renderer>().sharedMaterial;
-            // Retain the damaged solar cells, but attach them to their built access modules.
+            // Larger surviving arrays on exterior structural booms; no extra inhabited modules.
             for (int i = 0; i < 2; i++)
             {
                 var wing = old.Find(i == 0 ? "Solar Wing Left" : "Solar Wing Right");
                 wing.SetParent(layout.transform, false);
                 wing.localPosition = RingWalkthrough.At(60, i == 0 ? 270 : 90, 1.8f);
+                wing.localScale = new Vector3(2, 1, 2);
+                float angle = i == 0 ? 270 : 90;
+                var boom = new GameObject("Solar structural boom " + i).transform;
+                boom.SetParent(layout.transform, false); boom.localRotation = Quaternion.Euler(0, angle, 0);
+                Part(PrimitiveType.Cube, "Solar boom spine", boom, new Vector3(0, .3f, 49), new Vector3(1.1f, .7f, 22), dark);
+                Part(PrimitiveType.Cube, "Solar hull mounting", boom, new Vector3(0, .8f, 38.5f), new Vector3(3, 2, 1.2f), hull);
+                for (int brace = 0; brace < 4; brace++)
+                    Part(PrimitiveType.Cube, "Solar boom brace " + brace, boom, new Vector3(0, .85f, 41 + brace * 5), new Vector3(1.35f, .12f, .3f), hull);
             }
-            var tank = new GameObject("Campaign water storage / Stage 1").transform;
-            tank.SetParent(layout.transform, false);
-            tank.localPosition = RingWalkthrough.At(50, 210);
-            tank.localRotation = Quaternion.Euler(0, 210, 0);
-            Part(PrimitiveType.Cylinder, "Water Ice Tank", tank, new Vector3(0, 2, 0), new Vector3(4, 2, 4), hull);
-            Part(PrimitiveType.Cylinder, "Tank cap", tank, new Vector3(0, 4.1f, 0), new Vector3(4.15f, .1f, 4.15f), dark);
-            Part(PrimitiveType.Cube, "Tank status", tank, new Vector3(0, 2, -2.05f), new Vector3(1.4f, .5f, .1f), cyan);
-            TankSocket.SetParent(tank, false);
-            TankSocket.localPosition = new Vector3(0, 3.3f, 4.6f); TankSocket.localRotation = Quaternion.identity;
-            Part(PrimitiveType.Cube, "Transfer pipe", tank, new Vector3(0, 3.3f, 3.1f), new Vector3(.35f, .35f, 3), dark);
+            var amber=Surface("Storage disabled / steady amber",new Color(.85f,.32f,.06f),.2f,true);
+            for(int stage=0;stage<RingWalkthrough.StorageStageCount;stage++) BuildStorageStage(layout,stage,hull,dark,cyan,amber);
             DroneDock = new GameObject("Campaign Drone Dock").transform;
             DroneDock.SetParent(layout.transform, false);
             DroneDock.localPosition = RingWalkthrough.At(64.75f, 30);
@@ -48,14 +52,79 @@ namespace SpaceMiner
             }
             foreach (Transform child in old)
                 if (!child.name.StartsWith("Reactor") && child.name != "Shielded Reactor") child.gameObject.SetActive(false);
+            // A replaceable metre-scale blockout; the detailed reactor is designed separately.
+            old.Find("Shielded Reactor").localScale = new Vector3(8, 3, 8);
+            old.Find("Shielded Reactor").localPosition = Vector3.up * 3;
+            old.Find("Reactor cap").localScale = new Vector3(7.6f, .12f, 7.6f);
+            old.Find("Reactor cap").localPosition = Vector3.up * 6.12f;
+            old.Find("Reactor status band").localScale = new Vector3(8.03f, .045f, 8.03f);
+            old.Find("Reactor status band").localPosition = Vector3.up * 4.5f;
+            old.Find("Reactor mast").gameObject.SetActive(false);
             var info = GetComponent<SpaceObject>();
-            info.DiameterMeters = 172;
-            info.Description = "Startstation / zwölf Ringsegmente, Kommandozentrale, Wohnen, Drohnendeck, Versorgung, Werkstatt und Wasserlager";
+            info.DiameterMeters = 172; // 108-m ring body with the ground-level exterior dock reaching r=84.
+            info.Description = "Havarierte Startstation / Kommandozentrale, Drohnenhalle mit Aussendock, Eis-Wasserlager gegenueber, interne Werkstatt; ein Reaktorgang intakt";
+        }
+        private void BuildStorageStage(StationInteriorLayout layout,int stage,Material hull,Material dark,Material cyan,Material amber)
+        {
+            var tank=new GameObject("Campaign water storage / Stage "+(stage+1)).transform;
+            tank.SetParent(layout.transform,false); float radius=46, heading=RingWalkthrough.StorageAngle(stage);
+            tank.localPosition=RingWalkthrough.At(radius,heading); tank.localRotation=Quaternion.Euler(0,heading,0);
+            var body=Part(PrimitiveType.Cylinder,stage==0?"Water Ice Tank":"Ruptured tank / offline",tank,new Vector3(1.6f,1.65f,0),new Vector3(2.6f,1.65f,2.6f),hull);
+            if(stage==0) {
+                Part(PrimitiveType.Cylinder,"Tank cap",tank,new Vector3(1.6f,3.4f,0),new Vector3(2.7f,.1f,2.7f),dark);
+                Part(PrimitiveType.Cube,"Tank status",tank,new Vector3(1.6f,1.8f,-1.34f),new Vector3(1,.4f,.08f),cyan);
+            } else {
+                // A split visual tank, not a second working resource container.
+                body.SetActive(false);
+                Part(PrimitiveType.Cylinder,"Broken tank end",tank,new Vector3(1.6f,.5f,0),new Vector3(2.6f,.35f,2.6f),dark,Quaternion.Euler(stage==1?9:31,0,stage==1?-12:24));
+                TornTankShell(tank,stage,hull);
+                for(int rib=0;rib<5;rib++) {
+                    float a=rib*51; Vector3 p=new Vector3(1.6f+Mathf.Sin(a*Mathf.Deg2Rad)*1.25f,1.8f,Mathf.Cos(a*Mathf.Deg2Rad)*1.25f);
+                    Part(PrimitiveType.Cube,"Torn tank rib",tank,p,new Vector3(.12f,stage==1?2.7f:1.4f,.18f),hull,Quaternion.Euler(stage*11,rib*51,rib%2==0?19:-14));
+                }
+            }
+            Vector3 normal=Quaternion.Euler(0,heading,0)*Vector3.forward;
+            Vector3 inlet=RingWalkthrough.At(54.8f,heading,3.3f);
+            Transform socket;
+            if(stage==0) socket=TankSocket;
+            else socket=new GameObject("Storage dock "+(stage+1)+" / damaged offline").transform;
+            socket.SetParent(tank,false);
+            socket.localPosition=Quaternion.Inverse(tank.localRotation)*(inlet-tank.localPosition);
+            socket.localRotation=Quaternion.Inverse(tank.localRotation)*Quaternion.LookRotation(normal,Vector3.up);
+            storageDocks[stage]=socket;
+            if(stage==0) {
+                Vector3 start=new Vector3(1.6f,3.3f,0), end=socket.localPosition-socket.localRotation*Vector3.forward*.35f;
+                Part(PrimitiveType.Cube,"Transfer pipe",tank,(start+end)/2,new Vector3(.24f,.24f,(end-start).magnitude),dark,Quaternion.LookRotation(end-start));
+            } else {
+                Part(PrimitiveType.Cube,"Disabled receiver cap",socket,new Vector3(0,0,-.1f),new Vector3(.8f,.65f,.16f),dark);
+                foreach(float sign in new[]{-1f,1f})
+                    Part(PrimitiveType.Cube,"Broken docking jaw",socket,new Vector3(sign*.55f,0,.15f),new Vector3(.14f,.8f,.6f),hull,Quaternion.Euler(stage*17,sign*stage*11,sign*24));
+                Part(PrimitiveType.Cube,"Severed transfer pipe",socket,new Vector3(0,-.25f,-.5f),new Vector3(.24f,.24f,.7f),dark,Quaternion.Euler(stage*19,0,0));
+            }
+            Part(PrimitiveType.Cube,stage==0?"Storage dock 01 / active":"Storage dock / locked out",socket,new Vector3(0,.6f,-.12f),new Vector3(.8f,.12f,.1f),stage==0?cyan:amber);
         }
 
+        private void TornTankShell(Transform parent,int style,Material material)
+        {
+            var vertices=new System.Collections.Generic.List<Vector3>();var indices=new System.Collections.Generic.List<int>();
+            void Quad(Vector3 a,Vector3 b,Vector3 c,Vector3 d)
+            {int n=vertices.Count;vertices.AddRange(new[]{a,b,c,d});indices.AddRange(new[]{n,n+1,n+2,n,n+2,n+3,n+2,n+1,n,n+3,n+2,n});}
+            for(int i=0;i<18;i++)
+            {
+                float a=(style==1?25:115)+i*(style==1?13:8),b=a+(style==1?13:8);
+                Vector3 Point(float angle,float radius,float y)=>new Vector3(1.6f+Mathf.Sin(angle*Mathf.Deg2Rad)*radius,y,Mathf.Cos(angle*Mathf.Deg2Rad)*radius);
+                float h0=(style==1?3.3f:2.7f)+Mathf.Sin(i*1.7f)*.2f,h1=(style==1?3.3f:2.7f)+Mathf.Sin((i+1)*1.7f)*.2f;
+                Quad(Point(a,1.3f,.45f),Point(b,1.3f,.45f),Point(b,1.3f,h1),Point(a,1.3f,h0));
+                Quad(Point(b,1.23f,.45f),Point(a,1.23f,.45f),Point(a,1.23f,h0),Point(b,1.23f,h1));
+                Quad(Point(a,1.3f,h0),Point(b,1.3f,h1),Point(b,1.23f,h1),Point(a,1.23f,h0));
+            }
+            var mesh=new Mesh{name="Ruptured cylindrical tank shell / "+style};mesh.SetVertices(vertices);mesh.SetTriangles(indices,0);mesh.RecalculateNormals();StationSurfaceMaterials.WorldUvs(mesh);
+            var shell=new GameObject("Attached torn tank shell");shell.transform.SetParent(parent,false);
+            shell.AddComponent<MeshFilter>().sharedMesh=mesh;shell.AddComponent<MeshRenderer>().sharedMaterial=material;
+        }
         private Material Surface(string name, Color color, float metal, bool glow = false)
         {
-            var material = new Material(Shader.Find("Standard")) { name = name, color = color };
+            var material = StationSurfaceMaterials.Create(color,metal,glow);material.name=name;
             material.SetFloat("_Metallic", metal); material.SetFloat("_Glossiness", 0.25f);
             if (glow) { material.EnableKeyword("_EMISSION"); material.SetColor("_EmissionColor", color * 1.2f); }
             return material;

@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-25",
+  "scope": "I-75 indoor drone image concept only",
+  "generator": "built-in image_gen, two inspected project reference images",
+  "artifacts": [
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-2026-10-25-v1.png",
+      "bytes": 2433928,
+      "sha256": "332f47d3bc0dc003de9663be42bf322c0965396b702eb8d571486af916791941",
+      "pixels": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "docs/Art/Drohnen/Innendrohne-I75-2026-10-25-v1.prompt.txt",
+      "bytes": 5724,
+      "sha256": "ad1be0692f63d40a8d5aaa185357d970a13997f6dcc4df27b251dc73489d43c0"
+    },
+    {
+      "path": "docs/Innendrohne-I75-Konzept-2026-10-25.md",
+      "bytes": 6087,
+      "sha256": "800c8ea5876daeed13bc9b34cb1cdc7cdc05238e3903f999450c428e311733b7"
+    }
+  ],
+  "userRequirements": [
+    "approximately75cm indoor drone",
+    "magnetic hovering",
+    "one task role per unit, workshop refit",
+    "building/laser, dismantling, gripping/transport alternatives"
+  ],
+  "assumptions": {
+    "sizeInterpretation": "75cm chassis length, not height or loaded work envelope",
+    "chassisMetres": [
+      0.75,
+      0.55,
+      0.45
+    ],
+    "magneticMotion": "surface-adjacent controlled motion over powered floor tiles; not implemented",
+    "capacityAndPayload": "not specified or validated"
+  },
+  "physicsReference": "https://www.beckhoff.com/en-us/products/motion/xplanar-planar-motor-system/",
+  "checks": [
+    "Visual review of three exclusive configurations, cassette interface, small scale, gripping and magnetic-floor context",
+    "PNG signature/pixels and SHA256",
+    "Local document links after report creation"
+  ],
+  "notPerformed": [
+    "Unity/Blender model",
+    "actual magnetic levitation, load, structural or energy sizing",
+    "build or runtime tests",
+    "design approval, commit or push"
+  ],
+  "localLinksChecked": 4
+}

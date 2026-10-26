@@ -1,0 +1,134 @@
+KEIL OK: new layout revision
+KEIL OK: three joined wedge modules, two distinct wrecks
+KEIL OK: one surviving and three broken reactor links
+KEIL OK: double-layer station skins
+KEIL OK: three capped interfaces on free ring segments
+KEIL OK: physical bay airlock
+KEIL OK: ring and module compartment bulkheads
+KEIL OK: small repair drone is a passive instance of the same geometry
+KEIL OK: inactive repair drone status is dark
+KEIL OK: fleet operational policy 0
+KEIL OK: same drone model 0
+KEIL OK: fleet operational policy 1
+KEIL OK: same drone model 1
+KEIL OK: inactive drone remains disabled 1
+KEIL OK: fleet operational policy 2
+KEIL OK: same drone model 2
+KEIL OK: inactive drone remains disabled 2
+KEIL OK: fleet operational policy 3
+KEIL OK: same drone model 3
+KEIL OK: inactive drone remains disabled 3
+KEIL OK: fleet operational policy 4
+KEIL OK: same drone model 4
+KEIL OK: inactive drone remains disabled 4
+KEIL OK: fleet operational policy 5
+KEIL OK: same drone model 5
+KEIL OK: inactive drone remains disabled 5
+KEIL OK: fleet operational policy 6
+KEIL OK: same drone model 6
+KEIL OK: inactive drone remains disabled 6
+KEIL OK: fleet operational policy 7
+KEIL OK: same drone model 7
+KEIL OK: inactive drone remains disabled 7
+KEIL OK: fleet operational policy 8
+KEIL OK: same drone model 8
+KEIL OK: inactive drone remains disabled 8
+KEIL OK: fleet operational policy 9
+KEIL OK: same drone model 9
+KEIL OK: inactive drone remains disabled 9
+KEIL OK: unsafe floor excluded 90
+KEIL OK: teleport refuses damaged area 90
+KEIL OK: unsafe floor excluded 120
+KEIL OK: teleport refuses damaged area 120
+KEIL OK: unsafe floor excluded 210
+KEIL OK: teleport refuses damaged area 210
+KEIL OK: unsafe floor excluded 220
+KEIL OK: teleport refuses damaged area 220
+KEIL OK: active storage bulkhead reachable
+KEIL OK: closed storage gate blocks actual player
+KEIL OK: open storage gate admits actual player into wedge01
+KEIL OK: closed inner bay door blocks player
+KEIL OK: airlock request from pressurized hall
+KEIL OK: two bay doors remain mutually interlocked / 0
+KEIL OK: two bay doors remain mutually interlocked / 1
+KEIL OK: two bay doors remain mutually interlocked / 2
+KEIL OK: two bay doors remain mutually interlocked / 3
+KEIL OK: two bay doors remain mutually interlocked / 4
+KEIL OK: two bay doors remain mutually interlocked / 5
+KEIL OK: two bay doors remain mutually interlocked / 6
+KEIL OK: two bay doors remain mutually interlocked / 7
+KEIL OK: two bay doors remain mutually interlocked / 8
+KEIL OK: two bay doors remain mutually interlocked / 9
+KEIL OK: two bay doors remain mutually interlocked / 10
+KEIL OK: two bay doors remain mutually interlocked / 11
+KEIL OK: two bay doors remain mutually interlocked / 12
+KEIL OK: two bay doors remain mutually interlocked / 13
+KEIL OK: two bay doors remain mutually interlocked / 14
+KEIL OK: two bay doors remain mutually interlocked / 15
+KEIL OK: two bay doors remain mutually interlocked / 16
+KEIL OK: two bay doors remain mutually interlocked / 17
+KEIL OK: two bay doors remain mutually interlocked / 18
+KEIL OK: two bay doors remain mutually interlocked / 19
+KEIL OK: two bay doors remain mutually interlocked / 20
+KEIL OK: two bay doors remain mutually interlocked / 21
+KEIL OK: two bay doors remain mutually interlocked / 22
+KEIL OK: two bay doors remain mutually interlocked / 23
+KEIL OK: two bay doors remain mutually interlocked / 24
+KEIL OK: two bay doors remain mutually interlocked / 25
+KEIL OK: two bay doors remain mutually interlocked / 26
+KEIL OK: two bay doors remain mutually interlocked / 27
+KEIL OK: two bay doors remain mutually interlocked / 28
+KEIL OK: airlock completes close/equalize/open sequence
+KEIL OK: actual player traverses bay airlock outward
+KEIL OK: outer door closes after exit
+KEIL OK: airlock request from vacuum bay
+KEIL OK: two bay doors remain mutually interlocked / 0
+KEIL OK: two bay doors remain mutually interlocked / 1
+KEIL OK: two bay doors remain mutually interlocked / 2
+KEIL OK: two bay doors remain mutually interlocked / 3
+KEIL OK: two bay doors remain mutually interlocked / 4
+KEIL OK: two bay doors remain mutually interlocked / 5
+KEIL OK: two bay doors remain mutually interlocked / 6
+KEIL OK: two bay doors remain mutually interlocked / 7
+KEIL OK: two bay doors remain mutually interlocked / 8
+KEIL OK: two bay doors remain mutually interlocked / 9
+KEIL OK: two bay doors remain mutually interlocked / 10
+KEIL OK: two bay doors remain mutually interlocked / 11
+KEIL OK: two bay doors remain mutually interlocked / 12
+KEIL OK: two bay doors remain mutually interlocked / 13
+KEIL OK: two bay doors remain mutually interlocked / 14
+KEIL OK: two bay doors remain mutually interlocked / 15
+KEIL OK: two bay doors remain mutually interlocked / 16
+KEIL OK: two bay doors remain mutually interlocked / 17
+KEIL OK: two bay doors remain mutually interlocked / 18
+KEIL OK: two bay doors remain mutually interlocked / 19
+KEIL OK: two bay doors remain mutually interlocked / 20
+KEIL OK: two bay doors remain mutually interlocked / 21
+KEIL OK: two bay doors remain mutually interlocked / 22
+KEIL OK: two bay doors remain mutually interlocked / 23
+KEIL OK: two bay doors remain mutually interlocked / 24
+KEIL OK: two bay doors remain mutually interlocked / 25
+KEIL OK: two bay doors remain mutually interlocked / 26
+KEIL OK: two bay doors remain mutually interlocked / 27
+KEIL OK: two bay doors remain mutually interlocked / 28
+KEIL OK: two bay doors remain mutually interlocked / 29
+KEIL OK: airlock completes close/equalize/open sequence
+KEIL OK: actual player traverses airlock inward
+KEIL OK: left ring casualty closed bulkhead prevents entering vacuum
+KEIL OK: legacy unsafe save relocates to console
+KEIL OK: save migration preserves water
+KEIL OK: legacy second worker disabled without deleting stored energy
+KEIL OK: initial console scan reveals resource sources
+KEIL OK: water mining order starts
+KEIL OK: real mining flight unloads at new front socket
+KEIL OK: cargo outlet seals at relocated tank
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL COMPLETE: 133 checks

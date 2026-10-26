@@ -1,0 +1,180 @@
+FBX version: 7400
+I75 SURFACE: R02 angular guard kit: 18912 triangles total; original body retained
+I75 SURFACE: Original geometry normalized; creating UV islands
+I75 SURFACE: UV surface coverage 47.2%
+I75 SURFACE: Industrial paint, warnings and service markings authored
+I75 SURFACE: Baking actual self-occlusion
+Blender 4.5.14 LTS (hash 62c1db4208e8 built 2026-09-15 01:33:49)
+Fra:1 Mem:221.40M (Peak 240.41M) | Time:218:44:44.13 | Mem:0.00M, Peak:0.00M | Scene | Synchronizing object | I75_V02_Surface_R02
+Fra:1 Mem:223.06M (Peak 240.41M) | Time:218:44:44.14 | Mem:0.00M, Peak:0.00M | Scene | Initializing
+Info: Baking map saved to internal image, save it externally or pack it
+I75 SURFACE: Baking tangent-space coating normal map
+Fra:1 Mem:221.54M (Peak 768.58M) | Time:218:44:55.80 | Mem:0.00M, Peak:0.00M | Scene | Synchronizing object | I75_V02_Surface_R02
+Fra:1 Mem:223.63M (Peak 768.58M) | Time:218:44:55.81 | Mem:0.00M, Peak:0.00M | Scene | Initializing
+Info: Baking map saved to internal image, save it externally or pack it
+I75 SURFACE: Exporting UV-mapped FBX and embedded-texture GLB
+
+FBX export starting... 'C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Design\\Models\\IndoorDroneI75\\Surface-R02-2026-10-26\\I75_V02_Surface_R02.fbx'
+export finished in 0.0327 sec.
+INFO Draco mesh compression is available, use library at C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\work\HallExperiment\blender-4.5.14-windows-x64\4.5\scripts\addons_core\io_scene_gltf2\extern_draco.dll
+00:23:48 | INFO: Starting glTF 2.0 export
+00:23:48 | INFO: Extracting primitive: I75_V02_OriginalGeometry_WithUV
+00:23:48 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+00:23:48 | INFO: Primitives created: 1
+00:23:48 | INFO: Finished glTF 2.0 export in 0.19170546531677246 s
+
+I75 SURFACE: Rendering 01-I75-R02-hero
+Fra:1 Mem:14.31M (Peak 77.95M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_V02_Surface_R02
+Fra:1 Mem:14.31M (Peak 77.95M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | RIM / overhead strip
+Fra:1 Mem:16.40M (Peak 77.95M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:16.06M (Peak 77.95M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:16.06M (Peak 77.95M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:16.06M (Peak 77.95M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:16.06M (Peak 77.95M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:16.14M (Peak 77.95M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:17.22M (Peak 77.95M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:17.22M (Peak 77.95M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:18.86M (Peak 77.95M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:18.86M (Peak 77.95M) | Time:00:00.02 | Mem:1.64M, Peak:1.64M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:18.86M (Peak 77.95M) | Time:00:00.02 | Mem:1.64M, Peak:1.64M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:18.86M (Peak 77.95M) | Time:00:00.02 | Mem:2.22M, Peak:2.22M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:18.86M (Peak 77.95M) | Time:00:00.02 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:18.86M (Peak 77.95M) | Time:00:00.02 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:19.82M (Peak 77.95M) | Time:00:00.02 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:19.82M (Peak 77.95M) | Time:00:00.02 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:19.82M (Peak 77.95M) | Time:00:00.02 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:19.82M (Peak 77.95M) | Time:00:00.02 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:19.82M (Peak 77.95M) | Time:00:00.02 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images | Loading I75_R02_Emission.png
+Fra:1 Mem:35.82M (Peak 77.95M) | Time:00:00.02 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images | Loading I75_R02_Normal.png
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.10 | Mem:67.87M, Peak:67.87M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.10 | Mem:67.87M, Peak:67.87M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.10 | Mem:67.95M, Peak:67.95M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.10 | Mem:67.95M, Peak:67.95M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.16 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.16 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.16 | Mem:71.29M, Peak:71.37M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.16 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.16 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:87.26M (Peak 89.56M) | Time:00:00.16 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:87.26M (Peak 89.56M) | Time:00:00.16 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Sample 0/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:01.53 | Remaining:00:53.27 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 1/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:23.26 | Remaining:00:31.25 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 17/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:43.65 | Remaining:00:09.22 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 33/40
+Fra:1 Mem:337.67M (Peak 448.91M) | Time:01:00.62 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 40/40
+Fra:1 Mem:337.67M (Peak 448.91M) | Time:01:00.62 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R02-2026-10-26\01-I75-R02-hero.png'
+Time: 01:00.98 (Saving: 00:00.35)
+
+I75 SURFACE: Rendering 02-I75-R02-rear
+Fra:1 Mem:14.31M (Peak 14.31M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_V02_Surface_R02
+Fra:1 Mem:14.31M (Peak 14.31M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | FILL / soft warm
+Fra:1 Mem:14.31M (Peak 14.31M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | RIM / overhead strip
+Fra:1 Mem:16.40M (Peak 17.62M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:16.06M (Peak 17.62M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:16.06M (Peak 17.62M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:16.06M (Peak 17.62M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:16.06M (Peak 17.62M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:17.22M (Peak 17.62M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:17.22M (Peak 17.62M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.02 | Mem:1.64M, Peak:1.64M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.02 | Mem:1.64M, Peak:1.64M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.02 | Mem:2.22M, Peak:2.22M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.03 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.03 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images | Loading I75_R02_Emission.png
+Fra:1 Mem:35.82M (Peak 35.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images | Loading I75_R02_ORM.png
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.12 | Mem:67.87M, Peak:67.87M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.12 | Mem:67.87M, Peak:67.87M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.12 | Mem:67.95M, Peak:67.95M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.12 | Mem:67.95M, Peak:67.95M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.18 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.18 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.18 | Mem:71.29M, Peak:71.37M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.18 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.18 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:87.26M (Peak 89.56M) | Time:00:00.18 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:87.26M (Peak 89.56M) | Time:00:00.18 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Sample 0/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:01.68 | Remaining:00:58.72 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 1/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:22.86 | Remaining:00:30.68 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 17/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:43.91 | Remaining:00:09.27 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 33/40
+Fra:1 Mem:337.67M (Peak 448.91M) | Time:00:58.63 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 40/40
+Fra:1 Mem:337.67M (Peak 448.91M) | Time:00:58.63 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R02-2026-10-26\02-I75-R02-rear.png'
+Time: 00:58.87 (Saving: 00:00.23)
+
+I75 SURFACE: Rendering 03-I75-R02-side
+Fra:1 Mem:14.31M (Peak 14.31M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | I75_V02_Surface_R02
+Fra:1 Mem:14.33M (Peak 14.33M) | Time:00:00.00 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | RIM / overhead strip
+Fra:1 Mem:16.40M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:16.06M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Fra:1 Mem:16.06M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:16.06M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:16.06M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Procedurals
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Background
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Camera
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes Flags
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Copying Transformations to device
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Particle Systems | Copying Particles to device
+Fra:1 Mem:16.14M (Peak 17.62M) | Time:00:00.01 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Meshes
+Fra:1 Mem:17.22M (Peak 17.62M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Objects | Applying Static Transformations
+Fra:1 Mem:17.22M (Peak 17.62M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Computing attributes
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.02 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Mesh | Copying Attributes to device
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.02 | Mem:1.64M, Peak:1.64M | Scene, ViewLayer | Updating Scene BVH | Building
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.02 | Mem:1.64M, Peak:1.64M | Scene, ViewLayer | Updating Scene BVH | Building BVH
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.02 | Mem:2.22M, Peak:2.22M | Scene, ViewLayer | Updating Scene BVH | Building BVH 0%
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.03 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Scene BVH | Copying BVH to device
+Fra:1 Mem:18.86M (Peak 18.86M) | Time:00:00.03 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Mesh | Computing normals
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:2.91M, Peak:3.49M | Scene, ViewLayer | Updating Mesh | Copying Mesh to device
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Objects Flags
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Primitive Offsets
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images
+Fra:1 Mem:19.82M (Peak 19.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images | Loading I75_R02_Emission.png
+Fra:1 Mem:35.82M (Peak 35.82M) | Time:00:00.03 | Mem:3.87M, Peak:3.87M | Scene, ViewLayer | Updating Images | Loading I75_R02_Normal.png
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.10 | Mem:67.87M, Peak:67.87M | Scene, ViewLayer | Updating Camera Volume
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.10 | Mem:67.87M, Peak:67.87M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.10 | Mem:67.95M, Peak:67.95M | Scene, ViewLayer | Updating Lights
+Fra:1 Mem:83.83M (Peak 83.83M) | Time:00:00.10 | Mem:67.95M, Peak:67.95M | Scene, ViewLayer | Updating Lights | Computing tree
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.15 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Integrator
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.15 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Film
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.15 | Mem:71.29M, Peak:71.37M | Scene, ViewLayer | Updating Lookup Tables
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.15 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Baking
+Fra:1 Mem:87.25M (Peak 89.56M) | Time:00:00.15 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Updating Device | Writing constant memory
+Fra:1 Mem:87.26M (Peak 89.56M) | Time:00:00.15 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:87.26M (Peak 89.56M) | Time:00:00.15 | Mem:71.37M, Peak:71.37M | Scene, ViewLayer | Sample 0/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:01.49 | Remaining:00:52.15 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 1/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:24.96 | Remaining:00:33.56 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 17/40
+Fra:1 Mem:263.51M (Peak 263.51M) | Time:00:47.84 | Remaining:00:10.11 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 33/40
+Fra:1 Mem:337.67M (Peak 448.91M) | Time:01:05.34 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Sample 40/40
+Fra:1 Mem:337.67M (Peak 448.91M) | Time:01:05.34 | Mem:247.51M, Peak:247.51M | Scene, ViewLayer | Finished
+Saved: 'C:\Users\achim\Documents\ChatGPT\SpaceMinerCodex\docs\Art\Drohnen\I75-Textur-R02-2026-10-26\03-I75-R02-side.png'
+Time: 01:05.58 (Saving: 00:00.23)
+
+Info: Saved as "I75_V02_Surface_R02.blend"
+I75 SURFACE: FINISHED {"date": "2026-10-26", "source": "Assets\\SpaceMiner\\Resources\\IndoorDroneI75\\I75_P20_V02.fbx", "sourceSha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e", "vertices": 10846, "polygons": 10983, "triangles": 18912, "dimensionsMetres": [0.4820000231266022, 0.75, 0.4371030628681183], "uvLayers": 1, "uvRasterCoverage": 0.4719562530517578, "materialCount": 1, "textureResolution": [2048, 2048], "textures": ["I75_R02_BaseColor.png", "I75_R02_Emission.png", "I75_R02_Height.png", "I75_R02_Normal.png", "I75_R02_Occlusion.png", "I75_R02_ORM.png", "I75_R02_UnityMetalSmooth.png"], "renders": ["C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R02-2026-10-26\\01-I75-R02-hero.png", "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R02-2026-10-26\\02-I75-R02-rear.png", "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R02-2026-10-26\\03-I75-R02-side.png"], "coreGeometryRetained": true, "geometryUnchangedAfterUVAuthoring": true, "addedParts": "4 thin corner-angle sets (8 plates), 2 straight rails, 8 hex fasteners; smooth-angle22 and weighted panel normals", "elapsedSeconds": 214.27846693992615, "notes": ["Actual Blender renders of original V02 mesh, not generated concept art.", "R02 angular guard kit and harder normals; original body retained. No rig, separate magnetic feet or Unity build replacement.", "Two-dimensional stencil artwork is authored locally; no Tripo credits or external generated textures."]}
+
+Blender quit

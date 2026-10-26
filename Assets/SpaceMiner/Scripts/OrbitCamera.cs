@@ -12,6 +12,8 @@ namespace SpaceMiner
         public SpaceObject Selected { get; private set; }
         public bool IsCelestialView { get; private set; }
         public bool ShowHud = true;
+        public Transform FollowingTarget => followTarget;
+        public bool IsFollowing => followTarget != null;
 
         private float yaw;
         private float pitch;
@@ -33,16 +35,22 @@ namespace SpaceMiner
 
         private void Update()
         {
-            if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput)
+            StationOperations.Current?.UpdateTacticalSearchInput();
+            var scanner = FindFirstObjectByType<WaterScenario>()?.Scanner;
+            if (IntroSequence.BlocksGameplay || MemoryCinematic.IsPlaying || SettingsMenu.BlocksInput
+                || scanner?.AtConsole == true || scanner?.Dialogue != null)
             {
                 lastMouse = Input.mousePosition;
                 return;
             }
-            if (FindFirstObjectByType<WaterScenario>()?.Scanner?.AtConsole == true) return;
-            if (PlayerInput.Pressed(CameraAction.Reset) || Input.GetKeyDown(KeyCode.Home)) ResetView();
-            if (PlayerInput.Pressed(CameraAction.Overview)) Overview();
-            if (PlayerInput.Pressed(CameraAction.Focus) && Selected != null) Focus(Selected);
-            if (PlayerInput.Pressed(CameraAction.ToggleHud)) ShowHud = !ShowHud;
+            bool typing = StationOperations.TacticalTextInputActive;
+            if (!typing)
+            {
+                if (PlayerInput.Pressed(CameraAction.Reset) || Input.GetKeyDown(KeyCode.Home)) ResetView();
+                if (PlayerInput.Pressed(CameraAction.Overview)) Overview();
+                if (PlayerInput.Pressed(CameraAction.Focus) && Selected != null) Focus(Selected);
+                if (PlayerInput.Pressed(CameraAction.ToggleHud)) ShowHud = !ShowHud;
+            }
             Vector3 mouse = Input.mousePosition;
             Vector3 delta = mouse - lastMouse;
             // Ignore the initial delta after clicking or re-entering the game window.
@@ -59,11 +67,13 @@ namespace SpaceMiner
             float horizontal = (PlayerInput.Held(CameraAction.Right) ? 1f : 0f) - (PlayerInput.Held(CameraAction.Left) ? 1f : 0f);
             float forward = (PlayerInput.Held(CameraAction.Forward) ? 1f : 0f) - (PlayerInput.Held(CameraAction.Backward) ? 1f : 0f);
             float vertical = (PlayerInput.Held(CameraAction.Up) ? 1f : 0f) - (PlayerInput.Held(CameraAction.Down) ? 1f : 0f);
-            Move(new Vector3(horizontal, vertical, forward), Time.unscaledDeltaTime,
+            Move(typing ? Vector3.zero : new Vector3(horizontal, vertical, forward), Time.unscaledDeltaTime,
                 Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift));
+            ApplySpaceTranslation(!typing && Input.GetKey(KeyCode.Space), PlayerInput.ShiftHeld, Time.unscaledDeltaTime);
 
             if (Input.GetMouseButtonDown(0) && !IsOverHud(mouse))
             {
+                GUIUtility.keyboardControl = 0;
                 if (Physics.Raycast(view.ScreenPointToRay(mouse), out RaycastHit hit, view.farClipPlane))
                 {FindFirstObjectByType<RuinedWorld>()?.SelectPlanet(-1);Select(hit.collider.GetComponentInParent<SpaceObject>());}
                 else
@@ -122,13 +132,62 @@ namespace SpaceMiner
         {
             if (target == null) return;
             if (!(FindFirstObjectByType<WaterScenario>()?.Scanner?.CanInspect(target) ?? true)) return;
+            if (!FocusPoint(target.transform.position, target.DiameterMeters)) return;
+            Selected = target;
+        }
+
+        // A focus is a snapshot. Only an explicitly chosen real drone may be followed.
+        public bool FocusPoint(Vector3 point, float diameterMeters)
+        {
+            if (!Finite(point.x) || !Finite(point.y) || !Finite(point.z) || !Finite(diameterMeters)) return false;
+            if (view == null) view = GetComponent<Camera>();
             IsCelestialView=false;
             view.fieldOfView=normalFieldOfView;
-            Selected = target;
-            followTarget = target.transform;
-            Pivot = target.transform.position;
-            Distance = Mathf.Clamp(target.DiameterMeters * 2.2f, 6f, MaximumDistance);
+            Selected = null;
+            followTarget = null;
+            Pivot = point;
+            Distance = Mathf.Clamp(Mathf.Max(0, diameterMeters) * 2.2f, 6f, MaximumDistance);
             ApplyPose();
+            return true;
+        }
+
+        public bool FollowDrone(DroneAgent drone)
+        {
+            if (StationInteriorMode.IsInside || !ActualOperationalDrone(drone)) return false;
+            Focus(drone.Info);
+            if (Selected != drone.Info) return false;
+            followTarget = drone.transform;
+            return true;
+        }
+
+        public bool FollowInternalDrone(Transform drone)
+        {
+            var operations = StationOperations.Current;
+            if (StationInteriorMode.IsInside || drone == null || operations == null || !operations.State.helper
+                || operations.Layout == null || operations.Layout.RepairDrone != drone) return false;
+            if (!FocusPoint(drone.position, 1.2f)) return false;
+            followTarget = drone;
+            return true;
+        }
+
+        public void StopFollow()
+        {
+            if (followTarget != null) Pivot = followTarget.position;
+            followTarget = null;
+            ApplyPose();
+        }
+
+        private static bool Finite(float value) => !float.IsNaN(value) && !float.IsInfinity(value);
+        private static bool ActualOperationalDrone(DroneAgent drone) => drone != null && drone.IsOperational
+            && drone.Scenario != null && drone.Scenario.Drones != null && System.Array.IndexOf(drone.Scenario.Drones, drone) >= 0;
+
+        private bool ValidFollowTarget()
+        {
+            if (followTarget == null) return false;
+            var drone = followTarget.GetComponent<DroneAgent>();
+            if (drone != null) return ActualOperationalDrone(drone);
+            var operations = StationOperations.Current;
+            return operations != null && operations.State.helper && operations.Layout != null && operations.Layout.RepairDrone == followTarget;
         }
 
         public void Zoom(float wheelSteps, bool fast = false)
@@ -187,6 +246,32 @@ namespace SpaceMiner
             ApplyPose();
         }
 
+        public bool CanUseOutsideTranslation
+        {
+            get
+            {
+                if (!isActiveAndEnabled || StationInteriorMode.IsInside || IntroSequence.BlocksGameplay || MemoryCinematic.IsPlaying
+                    || SettingsMenu.BlocksInput || StationOperations.TacticalTextInputActive || StationOperations.DroneConsoleTextInputActive) return false;
+                var scanner = FindFirstObjectByType<WaterScenario>()?.Scanner;
+                return scanner?.AtConsole != true && scanner?.Dialogue == null;
+            }
+        }
+        // This is the same held-input path used by Update and the controller acceptance.
+        // Shift selects downwards here; it does not also accelerate the vertical step.
+        public bool ApplySpaceTranslation(bool spaceHeld, bool shiftHeld, float seconds)
+            => MoveWorldVertical(PlayerInput.SpaceVerticalAxis(spaceHeld, shiftHeld), seconds);
+        public bool MoveWorldVertical(float direction, float seconds)
+        {
+            if (!Finite(direction) || !Finite(seconds) || seconds <= 0 || Mathf.Abs(direction) < .001f || !CanUseOutsideTranslation) return false;
+            float speed = Mathf.Max(2f, Distance * .35f) * SettingsStore.Current.Controls.CameraSpeed;
+            // Do not lose the latest tracked pose when manual input releases a follow.
+            Vector3 pivot = followTarget != null ? followTarget.position : Pivot;
+            float y = pivot.y + Mathf.Clamp(direction, -1, 1) * speed * seconds;
+            if (!Finite(y)) return false;
+            followTarget = null; Pivot = new Vector3(pivot.x, y, pivot.z);
+            ApplyPose(); return true;
+        }
+
         internal static void ConfigureDepth(Camera camera,float distance) => ConfigureDepthRange(camera,distance);
         internal void RestoreViewPose() => ApplyPose();
         private void ApplyPose()
@@ -212,6 +297,7 @@ namespace SpaceMiner
 
         private bool IsOverHud(Vector3 mouse)
         {
+            if (StationOperations.OwnsScreenPoint(mouse)) return true;
             if (StationInteriorMode.OwnsScreenPoint(mouse)) return true;
             if (FindFirstObjectByType<WaterScenario>()?.Scanner?.OwnsScreenPoint(mouse) == true) return true;
             var world=FindFirstObjectByType<RuinedWorld>();if(world!=null&&world.OwnsScreenPoint(mouse))return true;
@@ -244,7 +330,7 @@ namespace SpaceMiner
             GUI.Label(new Rect(40, height - 160, 430, 22), "STEUERUNG", mutedStyle);
             GUI.Label(new Rect(40, height - 134, 430, 24), "Mausrad  Zoom   |   Rechte Maustaste  Drehen", textStyle);
             GUI.Label(new Rect(40, height - 109, 430, 24), "Mittlere Maustaste  Verschieben   |   Shift + Rad  Schnellzoom", textStyle);
-            GUI.Label(new Rect(40, height - 84, 430, 24), "W A S D  Bewegen   |   Q / E  Ab / Auf   |   Shift  Schnell", textStyle);
+            GUI.Label(new Rect(40, height - 84, 430, 24), "WASD  Bewegen   |   Space  Auf   |   Shift + Space  Ab", textStyle);
             GUI.Label(new Rect(40, height - 59, 430, 24), "R  Startansicht   |   B  Feldansicht   |   Klick + F  Fokus", textStyle);
 
             GUI.DrawTexture(new Rect(width - 310, 22, 288, 146), panel);
@@ -309,6 +395,7 @@ namespace SpaceMiner
         {
             if (IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput) return;
             if (FindFirstObjectByType<WaterScenario>()?.Scanner?.AtConsole == true) return;
+            if (followTarget != null && !ValidFollowTarget()) StopFollow();
             if (followTarget != null) Pivot = followTarget.position;
             ApplyPose();
         }

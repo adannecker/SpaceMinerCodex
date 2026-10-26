@@ -1,0 +1,19 @@
+{
+    "passed": true,
+    "checks": 245,
+    "coldMeshVertices": 2880,
+    "serviceCapsules": 14,
+    "actualReceivedRawKg": 1033.325805664062,
+    "actualWaterPotentialKg": 826.660656849453,
+    "actualRestKg": 206.66514881460898,
+    "actualProcessedWaterKg": 0.24999237060546875,
+    "domainProcessedWaterKg": 7.5,
+    "domainResidueKg": 1.8749999999999998,
+    "domainProcessingEnergyKwh": 1.5000000000000007,
+    "missionSeconds": 4719.0,
+    "batteryAtDockKwh": 4.406081676483154,
+    "propellantAtDockLiters": 7.308261871337891,
+    "automaticHeavyReturnBatteryKwh": 2.2351160049438477,
+    "automaticHeavyReturnFuelLiters": 5.500969886779785,
+    "scope": "Real scanned A01 90-percent sortie with normal 200 L consumption tank; coupled raw receipt, all material retained, separate paid processing. Analytical domain steps cover mixed batches, finite cold volume, buffers, blackout/valves/start-stop, rest-bin backpressure and disk saves. Declared material fixtures isolate later processing. Full-intake case A uses unchanged real arriving supplies and physically flies the automatic heavy return; independent waiting/stop/resume/save case B explicitly adds 1 kWh within battery capacity. Real cold-cell vertices, service capsules, ring gate and revision-13 occupant migration. Actual contextual E-terminal reachability and Production/ice view, native framebuffer screenshots after backbuffer recreation. Programmatic controller tests, not manual keyboard comfort, structural/thermal certification or FPS acceptance."
+}

@@ -456,8 +456,8 @@ namespace SpaceMiner
             if (!Guard(() =>
             {
                 Require(intro != null && IntroSequence.IsPlaying && IntroSequence.BlocksGameplay, "intro blocks gameplay at startup");
-                Require(intro.CueCount == 16 && intro.VoicedCueCount == 14, "original voice clips and two new scan text cues");
-                Require(GetComponent<AudioSource>().isPlaying, "Mira voice starts playing");
+                Require(intro.CueCount == 16 && intro.VoicedCueCount == 16, "all sixteen awakening cues are voiced");
+                Require(intro.DialogueModule.Speech.isPlaying, "Mira voice starts playing");
             })) yield break;
             float simulationRate = scenario.SimulationRate;
             yield return new WaitForSecondsRealtime(1.1f);
@@ -475,7 +475,7 @@ namespace SpaceMiner
             {
                 intro.Skip();
                 Require(!IntroSequence.IsPlaying && IntroSequence.BlocksGameplay, "skip consumes completion frame so Escape cannot quit game");
-                Require(!GetComponent<AudioSource>().isPlaying, "skip stops speech immediately");
+                Require(!intro.DialogueModule.Speech.isPlaying, "skip stops speech immediately");
                 Require(camera.Distance == 140f && camera.Pivot == Vector3.zero, "skip restores gameplay camera");
             })) yield break;
             yield return null;
@@ -498,7 +498,7 @@ namespace SpaceMiner
             if (!Guard(() =>
             {
                 intro.AdvancePlayback(1000f);
-                Require(!IntroSequence.IsPlaying && !GetComponent<AudioSource>().isPlaying, "timed completion enters gameplay and stops speech");
+                Require(!IntroSequence.IsPlaying && !intro.DialogueModule.Speech.isPlaying, "timed completion enters gameplay and stops speech");
                 intro.Skip();
                 Require(camera.Distance == 140f, "repeated skip leaves gameplay camera stable");
             })) yield break;

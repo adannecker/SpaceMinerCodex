@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-25",
+  "build": "battery-bays-build-07",
+  "passed": true,
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "layout": 15,
+  "runs": [
+    {
+      "name": "battery",
+      "checks": 550,
+      "exitCode": 0,
+      "images": 4
+    },
+    {
+      "name": "keil",
+      "checks": 177,
+      "exitCode": 0,
+      "images": 9
+    },
+    {
+      "name": "rooms",
+      "checks": 794,
+      "exitCode": 0,
+      "images": 4
+    },
+    {
+      "name": "vitals",
+      "checks": 51,
+      "exitCode": 0,
+      "images": 2
+    },
+    {
+      "name": "camera",
+      "checks": 37,
+      "exitCode": 0,
+      "images": 2
+    },
+    {
+      "name": "tactical",
+      "checks": 137,
+      "exitCode": 0,
+      "images": 6
+    },
+    {
+      "name": "console",
+      "checks": 179,
+      "exitCode": 0,
+      "images": 12
+    }
+  ],
+  "assertions": 1925,
+  "imagesSaved": 39,
+  "sourceFilesMatched": 313,
+  "sourceManifest": "source-manifest.json",
+  "authoredSourceManifest": "authored-source-manifest.json",
+  "userPlansPreserved": true,
+  "scope": [
+    "Eight actual double-skin wall niches, genuine apertures and sealed pressure backing.",
+    "Real imported three-LOD PBR asset; two installed at180 degrees, active01 left and electrically isolated02 right, six empty.",
+    "Actual character walkthrough: ring, open empty maintenance bay, cassette clearance and locked damaged corridor.",
+    "New battery hull and insert collisions do not project into existing ring lanes. Existing unrelated outer wall fittings are not certified as obstacle-free.",
+    "2.9m reactor door clearance retained using compact eight-leaf shutters.",
+    "Single existing24kWh store, blackout and7.25kWh old-save fixtures restored; no added energy or inventories.",
+    "Room planning, jump, camera, tactical overview and natural first-water-quest regressions on this same final binary."
+  ],
+  "limitations": [
+    "Programmatic controller/API and native game framebuffer acceptance; no native OS-input or manual comfort acceptance.",
+    "Blender studio renders are offline asset previews and not Unity proof.",
+    "No reserve commissioning, individual battery save fields, cell chemistry or increased capacity.",
+    "No new Release, headset,100k rendering or FPS acceptance."
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": "Builds/Windows",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json",
+  "preservedPreviousBuild": "Builds/Windows-before-battery-bays-20261025"
+}

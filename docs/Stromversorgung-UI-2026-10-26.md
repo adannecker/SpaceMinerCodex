@@ -1,0 +1,38 @@
+# Stromversorgungs-UI — 26.10.2026
+
+Der Nutzer hat das [vierseitige Konzept](Stromversorgung-UI-Konzept-2026-10-25.md) freigegeben und die Verwendung der tatsächlichen Ingame-Modelle angeordnet. Das vorhandene physische Strompult in der Zentrale erhält eine bildschirmfüllende Navy/Cyan/Amber-Oberfläche. Kein neues Unity-Projekt und keine neue Szene.
+
+## Bedienung
+
+Mit `Start-Aufbauphase-01.cmd` starten. In der Kommandozentrale zum Pult **STROMVERSORGUNG** gehen und **E** drücken. **E / Zu** beziehungsweise **Escape** schließen die Ansicht. Bei aktivierter Menüpause bleibt die Simulation im Pult stehen; nach dem Schließen laufen Station und Verlauf weiter.
+
+- Oben: gemeinsame kW-Kurven für Erzeugung und tatsächlichen Verbrauch, aktuelle Leistungswerte, voneinander unabhängige Trendanzeigen, Speicherenergie und Voll-/Leer-Prognose bei gleichbleibender Bilanz. Zeiten sind ausdrücklich Spielzeit. Bei vollem/leeren Speicher und ausgeglichener Bilanz werden keine erfundenen endlichen Fristen angezeigt. Unterversorgung der Grundlast wird eigens gekennzeichnet.
+- Links: tatsächliches Stationsmodell und elf Auswahlflächen für acht Akkubuchten, Reaktor und zwei Solarfelder. Die Projektion benutzt dieselbe Modellkamera wie die Vorschau. Listen unter dem Modell bieten dieselbe Anlagenauswahl; die Kategorien unten wechseln zwischen drei Erzeugern, acht Speicherplätzen und tatsächlichen Verbrauchern mit Gesamtwerten.
+- Rechts: ausgewählte Anlage mit echter Modellvorschau. Die aktive Akkubank zeigt vier Module, Ladezustand, Bankzustand, Lade-/Entladerichtung und Bankbilanz. Die Reserve bleibt elektrisch getrennt mit unbekannter Telemetrie; freie Buchten bleiben leer. Reaktor zeigt Einspeisung, Nennleistung und Zustand. Solar zeigt Einspeisung, Anlagenzustand, Winkel und geometrischen Ausrichtungsfaktor sowie eine Winkelskizze zur Hauptsonne.
+- Lange Listen und Details sind scrollbar; gemeinsamer UI-Maßstab und Accessibility-Textgröße bleiben wirksam. Der vorhandene Übergang **Sektornetz / Stromkreise öffnen** führt zu den echten Versorgungsschaltern.
+
+## Daten und Grenzen
+
+`StationPowerHistory` zeichnet ausschließlich tatsächlich beobachtete Werte während der laufenden Sitzung auf, maximal 240 Punkte und bis zu 30 Minuten Spielzeit. Stabile Messungen werden in Zehn-Sekunden-Intervallen verdichtet. Vor der ersten Zeitentwicklung erscheint ein Messpunkt mit Hinweis auf die entstehende Historie. Bei Laden oder neuem Kampagnenzustand wird die Historie zurückgesetzt; sie ist kein neues Savefeld.
+
+`StationOperations.PowerTelemetry` übernimmt die tatsächlich zugeteilte Leistung aus der unveränderten Stromsimulation. Die Aufteilung der gemeinsam priorisierten Grundversorgung auf Lebenserhaltung, Systeme, Scanner und Havarieverluste ist proportional, keine zusätzliche Einzelzähler-Simulation. Aufträge, Eisannahme/Aufbereitung und Drohnenladung lesen deren bestehende Zuteilung. Die Summe stimmt mit dem abgerechneten Verbrauch überein; unerfüllter Bedarf bleibt im Verbraucherinspektor erkennbar.
+
+Die vier Kassetten teilen weiterhin denselben 24-kWh-Bankwert und Anlagenzustand. Sie bekommen keine erfundenen unterschiedlichen Ladungen, Kapazitäten oder Gesundheitswerte. Es gibt keine zusätzliche Reserveenergie, Aktivierung von Bank 02 oder Änderung von Balancing/Saveformat/Raumplänen. Zusätzliche Reaktor-Kühl-/Temperatur-/Brennstoff-/Schutzdaten bleiben als nicht verfügbar gekennzeichnet. Die Begleitsonne wird nicht zusätzlich in die Erzeugung gerechnet; Ausrichtungsfaktor und PV-Wirkungsgrad sind getrennte Begriffe.
+
+## Modellvorschauen
+
+`StationPowerModelView` verwendet die vorhandenen `MeshFilter.sharedMesh`, Materialien, PropertyBlocks und die tatsächlichen Transformationsmatrizen. Eine eigene RenderTexture-Kamera zeichnet diese per `Graphics.DrawMesh`, mit höchster vorhandener LOD für die Akkubuchten. Kein Nachbau aus Konzeptbildern, keine neuen Steuerungskomponenten, Collider oder Energiespeicher. Die Anlage selbst wird weder umgelagert noch auf andere Ebenen geschaltet. Eigene Vorschauleuchten werden nur für das Zeichnen aktiviert. Kameras und RenderTextures werden beim Schließen beziehungsweise Szenenende freigegeben.
+
+Die Stationsvorschau enthält Stationsarchitektur, reale Solarmodelle und strukturelle Träger, Tankgeometrie, Reaktor und acht Akkubuchten; entfernte Wrackkontakte gehören nicht zum Stationsmodell. Die Akkufront entspricht der dokumentierten Ingame-Koordinate −Z. Die Darstellung bleibt dem tatsächlichen Modell treu, einschließlich dessen Platzhalter und Schäden.
+
+## Dateien und reproduzierbare Prüfung
+
+Neue Laufzeitdateien samt Metas: `StationPowerHistory.cs`, `StationPowerModelView.cs`, `StationOperations.PowerTelemetry.cs`. Neue Editorhilfe `PowerDashboardBuild.cs` samt Meta: `Run` baut Development nach `Builds/PowerDashboard`, `Release` nach `Builds/PowerDashboardRelease`, `All` nacheinander beide, jeweils mit der vorhandenen Szene ohne Setup/Neugenerierung. Integration in `StationOperations.PowerConsole.cs`, `StationOperations.cs` und `StationOperations.Ui.cs`.
+
+Der erweiterte `-stationPowerConsoleCheck` isoliert Einstellungen, Saves und Raumpläne im Prüfverzeichnis. Er umfasst echte vorhandene Anlagen, Bestandserhalt, Save-/Plan-Roundtrips, reale Solarwinkel/Erzeugung, R-01-Reparatur, rollende Telemetrie aus echten Simulationsschritten, Prognosen und Ressourcenbilanz sowie Modellansichten, eindeutige Auswahlflächen, Eingabesperren und Framebufferaufnahmen bei 1600×1000 und 1280×720 mit 140 Prozent Schrift. Abschließende Ergebnisse und Versions-/Buildzuordnung werden im [Prüfbericht](Pruefungen/Stromversorgung-UI-2026-10-26.json) festgehalten. Frühere Konzeptbilder und Testläufe sind keine neue Prüfung der endgültigen Binärdatei.
+
+Final tatsächlich geprüft: Development und Release mit Unity6000.6.4f1 in `Builds/LocalPreview-6000.6.4f1`, Buildprozess Exit0. Finaler Development-Player **477 Checks / Exit0 / 14Framebufferaufnahmen**, darunter drei Layoutzustände ohne sich überdeckende Anlagen-Callouts. Mehrere Ansichten visuell kontrolliert; Akkufront, große Schrift, Solarwinkel und Modellrahmung nach Bild-/Funktionskontrolle korrigiert und danach die endgültige Binärdatei erneut vollständig gezielt geprüft. Quelle bleibt6000.4.7f1 und ist mit diesem Editor hier nicht geprüft. Keine native OS-Maus-/Tastatur-, subjektive Komfort-, Headset- oder FPS-Abnahme und kein erneuter gesamter Projektregressionstest.
+
+Ausgeliefert: `Builds/Windows` (Development, bestehender Launcher), `Builds/PowerDashboardRelease` (Release). Vorheriger normaler Player unter `Builds/Windows-before-power-ui-20261026` bewahrt;403 kopierte Builddateien SHA256-identisch. Bilder und Datenbelege unter [Prüfdateien](Pruefungen/Stromversorgung-UI-2026-10-26/power-result.json).
+
+Während dieser Arbeit ergänzte der Story/Mira-Chat Questdialoge in den gemeinsamen `StationOperations.cs`/`.Ui.cs` und weiteren Fachdateien. Deren konkrete Änderungen (`-miraQuestGameCheck`, `RestoreMiraQuestProgress`, `PresentQuestDialogue`) wurden beim Quellabgleich erkannt und vollständig im Checkout erhalten. Unsere Telemetrie-/Vorschaufreigabe bleibt in beiden Fassungen vorhanden. Der ausgelieferte und geprüfte Strombuild verwendet den davor aufgenommenen Mira-Dialogsnapshot; kein ungeprüftes Zusammenführen in die laufende Story-Arbeit. Vierzehn von16 betrachteten Quellen/Metas sind mit dem aktuellen Checkout identisch; die zwei erwarteten gemeinsamen-Dateiabweichungen sind mit beiden Hashes, As-built-Dateien und Diffs im Prüfbericht dokumentiert. Auch die parallele neue I75-Texturarbeit bleibt erhalten und wurde nicht zusätzlich ins Prefab übernommen.

@@ -1,5 +1,11 @@
 # Begehbare Drohnenhalle — Materialexperiment vom 19.10.2026
 
+Aktuell25.10.2026: [Neue Stationswerkstatt](Stationswerkstatt-2026-10-25.md). Originale Hallenmöbel wandbündig, neun Ersatzwerkzeug-Aufnahmen, wandseitige Schrottannahme, zwei neue Zellen mit vier Bodenrobotern. Nur Platz01 betriebsbereit; die echte Außendrohne besucht ihn durch die größere Schleuse. Aktuelle Hauptstation Layout11; das separate ursprüngliche Materialexperiment bleibt eigenständig. Frühere Angaben folgen.
+
+Aktuell25.10.2026: [Rahmen-/Flottennacharbeit](Stationsrahmen-und-Drohnenflotte-2026-10-25.md). In der Hauptstation zeigen Boden, Wand und Decke der ausgearbeiteten Halle wieder ihre ursprünglichen Innenpaneele; zusätzliche Wabenlagen dort nur außen. Dazwischen sichtbare Stützprofile und Randabschlüsse. Alle zehn Außenplätze jetzt mit ausgearbeitetem Tripo-Modell und importiertem Ladedock, ausschließlich01 aktiv. Die isolierte Hallenexperiment-EXE wurde weiterhin nicht neu gebaut.
+
+Aktualisierung25.10.2026 der Kampagnenintegration: [Keilstation mit Außenschleuse](Station-Keilmodule-Umsetzung-2026-10-25.md). Zur Bay jetzt über eine eigene Zweitür-Kammer; Seitentore als Vakuumgrenze geschlossen/verriegelt, bisheriges Mitteltor offen innerhalb der Kammer. E an der Schleusentür startet den Durchgang. Gemeinsame Bay-Oberflächen auch an weiteren Stationsflächen;133+29 aktuelle Prüfungen Exit0. Die folgenden drei frei bedienbaren Außentore beschreiben den Stand19.10.; die isolierte Hallenprobe wurde nicht neu gebaut.
+
 Der Nutzer beauftragt einen großen, frei beurteilbaren Versuch für Hallen, Materialien und Texturen der Raumstation. Zunächst entstand ein eigenständiger Ausschnitt der Drohnenwerkstatt mit eigener Blender-Quelle, Unity-Szene und Anwendung. Nach positiver Rückmeldung wird derselbe Hallenausschnitt am19.10.2026 auf ausdrücklichen Wunsch in die tatsächliche Startstation übernommen.
 
 ## In der Station vom Ring aus betreten
@@ -90,3 +96,11 @@ Bei geschlossenem Unity-Editor `SpaceMiner.Editor.HallExperimentBuild.Build` per
 Der Development-Player prüft mit `-hallExperimentCheck` opt-in Bindungen, Maße, Texturen, Boden, tatsächliche Kapselbewegung an geschlossenem und offenem Tor, Torbewegung, Belegungsschutz, Sprint/Ausdauer sowie Vergleichs- und Cursorzustände. Er schreibt `Logs/HallExperiment/result.json` und sieben Laufzeitbilder; Erfolg ist Exit0 und `HALL EXPERIMENT CHECK PASSED`. Aufruf aus dem Projektverzeichnis, damit die Prüfdateien dort landen. Aktuelle tatsächliche Ergebnisse und Grenzen stehen im zugehörigen [Prüfbericht](Pruefungen/Hallenexperiment-2026-10-19.json).
 
 Offen für weiteres Nutzerfeedback: Materialfarben und Abnutzung, Beleuchtung, Detailsprache, Größenwirkung und gewünschte Qualität weiterer Räume. Die erste Drohnenhalle ist inzwischen ausdrücklich zur Integration freigegeben; weitere Räume bleiben unverändert. Keine subjektive Abnahme von Haptik, manueller Eingabe oder Leistung durch automatisierte Prüfungen ersetzen.
+
+
+## Bestandsanalyse vom24.10.2026
+
+Auf Nutzerfrage erneute Prüfung von Dokumentation, Tor-/Ring-/Spieleranbindung und vorhandenen lokalen Dateien. Aktueller Commit bba0a6b enthält die Integration der detaillierten Drohnenhalle S02 in die echte Startstation; separate Hallenprobe und zehn äußere Dockplätze bleiben vorhanden. Alle65 Quellen-/Assetdateien,33 Prüfbelege und494 ausgelieferten Builddateien stimmen heute per SHA256 mit dem Integrationsbericht vom19.10.2026 überein. Beide Starteinstiege und EXE-Dateien vorhanden. Aufnahme des Arbeitsplatzes erneut angesehen. Keine neue Implementierung, kein Unity-Build oder Laufzeittest;137 Stations-/36 Einzelprüfungen bleiben Ergebnisse vom19.10.2026. Offene Grenzen: Torzustände beim Neuaufbau wieder offen, keine Drucksimulation oder Werkstatt-/Reparaturökonomie. [Bestandsnachweis](Pruefungen/Drohnenhalle-Bestandsanalyse-2026-10-24.json).
+
+
+Developer-Rundgang24.10.2026: Direkteinstieg `Start-Drohnenhalle-Station.cmd` nutzt nun den neu gebauten Hauptstations-Development-Player mit6,6m/s beim Gehen,20,8m/s mit Shift und100% Stamina. Stations-/Hallenmaße bleiben unverändert.29 Körperzustands-/Bewegungsprüfungen und137 Stationsprüfungen Exit0; keine neue Bild-/manuelle Eingabeabnahme (ScreenCapture-Warnungen im versteckten Prüflauf). Separate Hallenprobe bleibt bei ihrer bisherigen Bewegung. [Prüfnachweis](Pruefungen/Developer-Bewegung-2026-10-24.json). Die vorherige Bestandsanalyse beschreibt den Zustand vor dieser anschliessenden Codeänderung.

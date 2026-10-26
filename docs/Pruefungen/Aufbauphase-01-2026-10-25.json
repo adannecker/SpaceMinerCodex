@@ -1,0 +1,63 @@
+{
+  "renderedUiImages": 8,
+  "buildUnity": "6000.6.4f1",
+  "comparison": "Original imported LOD plus unbatched station/tool surfaces versus runtime LOD and spatial/static batches; same current lighting in both variants.",
+  "deployedFilesVerified": 247,
+  "sourceUnity": "6000.4.7f1",
+  "evidence": "Aufbauphase-01-2026-10-25/",
+  "layoutRevision": 10,
+  "performance": [
+    {
+      "optimizedMedianMs": 31.84,
+      "originalMedianMs": 53.28,
+      "reductionPercent": 40.2,
+      "view": "command"
+    },
+    {
+      "optimizedMedianMs": 94.55,
+      "originalMedianMs": 232.07,
+      "reductionPercent": 59.3,
+      "view": "drone_bay"
+    },
+    {
+      "optimizedMedianMs": 75.7,
+      "originalMedianMs": 178.38,
+      "reductionPercent": 57.6,
+      "view": "overview"
+    }
+  ],
+  "starter": "Start-Aufbauphase-01.cmd",
+  "date": "2026-10-25",
+  "sourceMetaLodFilesVerified": 256,
+  "buildLog": "Logs/operations-build-16.log",
+  "renderedWorldImages": 7,
+  "buildType": "Development",
+  "assemblySha256": "24F18C9D06135864302EFA418A17301216A35D58CEEED6AFD1A6B74AFF6CF77C",
+  "deployedBuild": "Builds/Windows",
+  "commitPush": "Not requested; none performed.",
+  "previousBuild": "Builds/Windows-before-aufbauphase-01-20261025-021031",
+  "tests": {
+    "allExits": 0,
+    "operations": 97,
+    "station": 156,
+    "mining": 78,
+    "vitals": 29,
+    "total": 384,
+    "ui": 24
+  },
+  "deploymentManifest": "Aufbauphase-01-2026-10-25/build-files.json",
+  "performanceMethod": "Synchronous offscreen render + one-pixel GPU readback; fixed camera; simulation paused. Comparison of rendering cost, NOT playable FPS or isolated GPU time.",
+  "change": "Aufbauphase 01: station supply, generic containers, terminals, workshop, finite salvage, research, repair, construction, save migration and first rendering optimization",
+  "limits": [
+    "Prototype capacities, masses, costs, recipe chemistry and wear times are provisional, not physical certification.",
+    "Full water mission tested live; later campaign jobs use explicit water/energy/material supply fixtures.",
+    "Programmatic terminal and native fullscreen checks with real captures; no manual keyboard/mouse comfort test.",
+    "Synchronous offscreen renders with GPU readback compare rendering costs, not playable FPS. Counter zero batches is not interpreted; other counters may include automatic/shadow camera rendering.",
+    "Legacy station/vitals/mining checks intentionally disable new campaign consumption. Dedicated operations test covers active supply.",
+    "Standalone mining batch screenshots failed and are not used as visual evidence; 78 functional checks passed.",
+    "Full 159-node lab economy and four-role construction demonstration remain separate from the campaign prototype.",
+    "Electrolysis long-run, release build, prolonged survival balance and 100k asteroid stress test not separately repeated."
+  ],
+  "sourceManifest": "Aufbauphase-01-2026-10-25/sources.json",
+  "buildExit": 0
+}

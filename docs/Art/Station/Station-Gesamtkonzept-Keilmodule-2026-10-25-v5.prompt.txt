@@ -1,0 +1,53 @@
+# Eingebautes ImageGen — Gesamtstation mit Keilmodulen V5, 25.10.2026
+
+## Referenzen
+
+1. docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/18-stationsgrundriss.png — Gesamtanordnung
+2. docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/07-modulhuellen-aussen.png — bestehende Architektur
+3. Ringsegment-Verbundene-Keilmodule-2026-10-25-v4.png — bestätigte Keilform
+
+## Hauptprompt
+
+Use case: precise-object-edit / stylized-concept.
+Asset: SpaceMiner overall starting-station concept integrating approved connected wedge modules and their damaged starting state. Landscape, polished readable 3D game environment design, German captions.
+
+Input images and roles:
+Image1: AUTHORITATIVE OVERALL LAYOUT reference, current complete station top view. Preserve its sparse layout and proportions.
+Image2: SAME STATION in oblique view, supporting architecture and dock shape reference.
+Image3: APPROVED MODULE GEOMETRY reference: three adjoining outward-widening annular-sector wedges, thin side joints and lateral structural couplings. Integrate this geometry into the WATER STORAGE sector of the complete station. Do NOT turn Image3 into the whole station or build a complete new outer ring.
+
+Composition: main hero image of the ENTIRE station, fully visible with both solar arrays, fills about75% of the sheet. Near-overhead shallow isometric view, enough top visibility to inspect four reactor spokes and all attachment positions. Ring centre visually clear. Preserve approximately the orientation of Image1: water storage at upper right about1o'clock, drone hall and open bay directly opposite at lower left about7o'clock, command module adjacent near5-6o'clock, solar arrays at left/right. Small zoom panel on the right shows the SAME water storage trio and its three distinct states. Minimal leader labels, no giant text boxes. Title "STARTSTATION – KEILMODULE UND HAVARIE". Footer "KONZEPT – NICHT MASSHALTIG".
+
+Whole-station invariants:
+- Exactly ONE closed traffic ring, twelve nominal30degree parent segments, one deck; ring inner radius29m outer38m, clear interior height5.5m as conceptual proportions.
+- Central compact enclosed cylindrical reactor, nominal8m diameter6m high, maintenance collar16m diameter. No giant reactor replacing the ring opening.
+- Four radial reactor service axes: ONE complete enclosed spoke, THREE broken spokes with recognizable irregular gaps and surviving sections at both reactor and ring ends. Each broken spoke has a DIFFERENT failure silhouette: torn roof, twisted sideways frame, crushed/split section. Sealed ends. Do not complete all four spokes.
+- One11m deep inner repair workshop under the drone-hall sector, radial inward wedge as in the layout reference; no extra built inner workshops, no dense interior wheel of rooms.
+- Command module beside the drone hall: one broad outward wedge, one16m radial step, forward window. Keep it.
+- Drone repair hall one16m outward step and immediately beyond it the existing OPEN AIR bay another16m step, with ten compact docking berths in two rows. Bay stays open overhead, not a roofed dome. Command and hall are broad existing special modules occupying the parent-sector width; they may span the three-slot raster without dividing their interior rooms.
+- Exactly TWO large solar arrays on opposite left/right support booms, each about22.8x21.4m, dark blue panels. No extra arrays, no extra space ships or modules.
+- All other outward parent sectors unbuilt: closed ring hull and small capped building couplings. Give each unbuilt parent sector a group of THREE module coupling frames across its outer curved face. They are attachment slots, not holes or new rooms. Do not fill all outer slots with buildings.
+- Overall industrial blue-gray honeycomb DOUBLE-SKIN hull, thin cyan status accents and amber offline accents, restrained neutral sunlight with readable shadow areas. No starscape clutter or explosion.
+
+Main new WATER STORAGE group, directly opposite the drone hall:
+Replace the old broad storage frame/three radial short bands with THREE ADJOINING WEDGE MODULES SIDE BY SIDE in ONE30degree parent sector, all beginning at ring outer radius38m and ending at radius54m. Each wedge is nominal10degrees wide and16m deep, widens outward, common radial side planes, thin closed montage seams, NO empty triangular alleys. Together they fill one annular-sector footprint. All three independently attach directly to the SAME ring boundary; side structural locking rails connect neighboring frames. NOT three rooms in a radial chain.
+Maintain the agreed wedge design even where roofs are damaged: common side edges and remnants show how they once fitted together.
+01: completely intact, sealed protective roof and inner pressure skin, intact floor/walls, cyan ready marker on exposed outer-front material fitting.
+02: visibly damaged, different from03. Keep roughly half of roof/wall envelope attached. One large peeled roof plate with curled torn edge, locally buckled stout frame, ruptured cylindrical tank still in saddles. Attached side frame at01 survives but01's pressure wall stays closed.
+03: more severely damaged, missing outer corner and broad roof portion, twisted floor frame, torn tank shell, remaining side coupling stubs and wall fragments. Largely attached wreckage, only a FEW local loose fragments in zero gravity.
+Both skins tear at different places with small exposed insulation and stand-off braces; no identical damage holes, no sparse unfinished scaffolding, no rust, smoke, flames or gravity-dangling junk.
+Ring pressure boundaries remain sealed individually behind02/03. Keep01's intact hull undamaged. Three material fittings at free outer ends, only01 active, others offline/capped.
+Storage inset must faithfully show these SAME THREE SIDE-BY-SIDE ADJOINING KEILS and states, not three isolated boxes or radial strips.
+
+Text, minimal readable German:
+Hero leader labels "KOMMANDO", "DROHNENHALLE + BAY", "WASSERLAGER", "REAKTOR", "SOLAR". Small note by a free segment "3 ANBAUSLOTS JE SEGMENT".
+Inset heading "WASSERLAGER IM DETAIL"; leaders "01 INTAKT", "02 BESCHÄDIGT", "03 SCHWER BESCHÄDIGT". Optional small "SEITLICHE KUPPLUNGEN".
+Do not include detailed dimensions or a falsely precise CAD grid in image. No other text.
+Critical review: whole sparse station and BOTH solar panels fully in frame; storage trio opposite drone hall; one intact and three DIFFERENT broken reactor passages; three attached outward-widening storage neighbors with01 healthy02/03 individually damaged; preserve one ring deck and approved architecture.
+
+## Gezielte Korrektur
+
+Make ONLY these two local corrections, preserve the ENTIRE rest of this concept sheet unchanged.
+1. In the main whole-station hero, REMOVE the extra BARE DIAGONAL TRUSS running from the reactor lower-left edge toward the INNER REPAIR WORKSHOP at about7-8o'clock. This diagonal truss is an erroneous FIFTH reactor connection. Replace only that diagonal metal link with the dark space background. Keep the small inner repair workshop wedge attached to the ring at7o'clock exactly where it is, with a closed inner-facing end; it must NOT connect to the reactor. Preserve the FOUR intended cardinal reactor corridors exactly: complete downward6o'clock and three different broken passages at12/3/9o'clock. Do not remove those or add another.
+2. In the RIGHT water-storage detail inset, the small CYAN status strip on damaged middle module02 near its inner/root end must be AMBER/OFFLINE instead. Module01 remains the only cyan/healthy storage module. Module03 already amber stays amber. Keep roof damage, tanks, couplings, labels and all station geometry unchanged.
+

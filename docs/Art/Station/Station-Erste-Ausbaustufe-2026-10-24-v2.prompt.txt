@@ -1,0 +1,25 @@
+Use case: precise-object-edit, architectural station concept revision V2.
+EDIT the provided V1 concept board. Preserve its visual identity, viewpoint, layout, single inhabited deck, PBR/material palette, flat roof height, outer ring body diameter108m, outer16m module belt, existing9m circulation ring, compact central reactor and maintenance collar, FOUR enclosed service corridors, and existing external drone dock.
+The user approves the overall V1 direction and asks for ONE geometric change: INWARD-FACING ROOMS BETWEEN THE FOUR SERVICE CORRIDORS, EACH11 METRES DEEP RADIALLY, slightly deeper than the9m walkable circulation annulus. These must be real, enclosed, clearly visible room volumes projecting into the previous central opening, not just a renamed thin rim.
+CONSTRUCTION GEOMETRY:
+- Existing walkable circulation ring remains radius29–38m,9m radial depth.
+- Outer continuous module belt remains radius38–54m,16m depth.
+- REMOVE/REPLACE the old optional2m inside rim. The NEW inward-facing room belt spans radius18–29m, total radial room depth11m; NOT 11m in addition to the old2m strip.
+- This inner room belt is INTERRUPTED at all FOUR cardinal service-corridor axes, leaving clear continuous access from the walkable ring to the central reactor maintenance collar.
+- Form FOUR curved inner room blocks, one in each quadrant BETWEEN service corridors. They are annular-sector blocks with curved/faceted inward frontages, NOT long triangular fingers toward the reactor. Retain repeated modular panel joints. At each service axis leave clearance equivalent to at least3m corridor width plus structural collars. A practical proposal is8 degrees clearance on either side of each axis; inner room sectors8–82,98–172,188–262,278–352 degrees.
+- Keep all FOUR enclosed3m-wide radial service corridors physically connected to the ring at radius29m and the maintenance collar at radius8m. Corridors must NOT be blocked, swallowed by rooms, or terminate at a wall. The parts between room blocks remain visible as four radial slots; the central remaining visible portions between radius18m and radius8m are about10m long.
+- Keep center reactor housing radius4m and maintenance collar radius8m. Do not move/enlarge them. Keep single floor and5.5m clear room height throughout; inward room blocks do not make a lower floor or second story.
+- Opposing INNER ROOM FACADES now define diameter36m before accounting for reactor/spokes, NOT54m.
+BOARD UPDATES MUST SHOW THE SAME NEW GEOMETRY IN EVERY VIEW:
+1. Main large isometric view: visibly add the four11m-deep inner arc blocks and show all four clear service connections.
+2. Bottom-left top-down inset: show four inner arc blocks separated by service axes; keep108m outside dimension, replace old54m inside dimension with36m between inward room fronts.
+3. Bottom-middle roof-cutaway sector: clearly show THREE functional radial zones from the center outward:11m inner rooms,9m circulation ring,16m outer modules. A few simple room partitions/doors demonstrate new inner space without inventing assigned gameplay functions.
+4. Side profile remains a low single floor, central reactor slightly raised; no stacked decks.
+TEXT CHANGES, exact German:
+- Subtitle becomes "KONZEPT V2 · EINE BEGEHBARE EBENE".
+- Replace EVERY occurrence of "Innenstreifen +2 m" / "Innenstreifen" / "(27–29 m)" with "Innenmodule 11 m" / "Innenmodule" / "(18–29 m)" as appropriate.
+- Main new callout: "Innenmodule 11 m".
+- Keep "Ringgang 9 m", "Modulgürtel 16 m", "4 Servicegänge", "Abgeschirmter Reaktor", "Drohnenbucht / Außendock", and title "STATION · ERSTE AUSBAUSTUFE".
+- Top-down inner dimension label: "Zwischen Innenfronten Ø 36 m".
+- Footer: "Maßvorschlag · Innenmodule 11 m · Raumhöhe 5,5 m".
+Be meticulous: this is a surgical V2 layout revision, not a wholesale redesign. Do NOT change exterior radius, shift the dock, enlarge the reactor, add a floor, fill the center, remove corridors, or leave obsolete2m/54m inner-room labels. Render the full coherent updated board, clean and legible, no watermark.

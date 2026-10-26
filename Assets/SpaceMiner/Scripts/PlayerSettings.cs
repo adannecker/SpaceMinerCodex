@@ -70,12 +70,37 @@ namespace SpaceMiner
             {
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
                 var args = Environment.GetCommandLineArgs();
+                if (Array.IndexOf(args, "-miraQuestPreview") >= 0)
+                    return Path.GetFullPath("Logs/MiraQuestPreview/settings/player-settings.json");
+                if (Array.IndexOf(args, "-miraDialogueIntegrationCheck") >= 0 || Array.IndexOf(args, "-miraDialogueCheck") >= 0 || Array.IndexOf(args, "-miraModelsCheck") >= 0
+                    || Array.IndexOf(args, "-miraQuestsCheck") >= 0 || Array.IndexOf(args, "-miraQuestGameCheck") >= 0)
+                    return Path.GetFullPath("Logs/MiraDialogue/settings/player-settings.json");
+                if(Array.IndexOf(args,"-commandRoomPlannerCheck")>=0)return Path.GetFullPath("Logs/CommandRoomPlannerCheck/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationRoomPlanningCheck")>=0)return Path.GetFullPath("Logs/StationRoomPlanning/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationDebrisCheck")>=0)return Path.GetFullPath("Logs/StationDebris/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationHandsCheck")>=0)return Path.GetFullPath("Logs/StationHands/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationDroneSizingCheck")>=0)return Path.GetFullPath("Logs/DroneSizing/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationIcePlantCheck")>=0)return Path.GetFullPath("Logs/StationIcePlant/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationDroneConsoleCheck")>=0)return Path.GetFullPath("Logs/StationDroneConsole/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationTacticalCheck")>=0)return Path.GetFullPath("Logs/StationTactical/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationCameraVerticalCheck")>=0)return Path.GetFullPath("Logs/CameraVertical/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationPowerConsoleCheck")>=0)return Path.GetFullPath("Logs/StationPowerConsole/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationIndoorTrafficCheck")>=0)return Path.GetFullPath("Logs/StationIndoorTraffic/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationBatteryBayCheck")>=0)return Path.GetFullPath("Logs/StationBatteryBays/settings/player-settings.json");
+                if(Array.IndexOf(args,"-stationWorkshopCheck")>=0)return Path.GetFullPath("Logs/StationWorkshop/settings/player-settings.json");
+                if(Array.Exists(args,a=>a=="-stationOperationsCheck"||a=="-stationOperationsUiCheck"||a=="-stationOperationsPreview"))return Path.GetFullPath("Logs/StationOperations-settings/player-settings.json");
+                if (Array.IndexOf(args,"-stationKeilCheck")>=0 || Array.IndexOf(args,"-stationKeilPreview")>=0 || Array.IndexOf(args,"-startStationCheck")>=0)
+                    return Path.GetFullPath("Logs/KeilStation-settings/player-settings.json");
+                if (Array.IndexOf(args, "-stationConstructionPreview") >= 0 || Array.IndexOf(args, "-stationConstructionCheck") >= 0)
+                    return Path.GetFullPath("Logs/StationConstruction-settings/player-settings.json");
                 if (Array.IndexOf(args, "-tripoMiningShowcase") >= 0 || Array.IndexOf(args, "-tripoMiningCheck") >= 0)
                     return Path.GetFullPath("Logs/TripoMining-settings/player-settings.json");
                 if (Array.IndexOf(args, "-maintenanceShowcase") >= 0 || Array.IndexOf(args, "-maintenanceShowcaseCheck") >= 0)
                     return Path.GetFullPath("Logs/MaintenanceShowcase-settings/player-settings.json");
                 if (Array.IndexOf(args, "-tripoModelPreview") >= 0 || Array.IndexOf(args, "-tripoModelCheck") >= 0)
                     return Path.GetFullPath("Logs/TripoModels-settings/player-settings.json");
+                if (Array.IndexOf(args,"-storagePreview")>=0)
+                    return Path.GetFullPath("Logs/StoragePreview-settings/player-settings.json");
                 if (Array.IndexOf(args, "-startStationCheck") >= 0)
                     return Path.GetFullPath("Logs/Startstation-settings/player-settings.json");
                 if (Array.IndexOf(args, "-ringWalkthroughCheck") >= 0)

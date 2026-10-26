@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-24",
+  "scope": "Read-only analysis of existing drone hall integration; no rebuild or runtime test",
+  "baseCommit": "bba0a6b",
+  "historicalRuntimeReport": "Drohnenhalle-Station-2026-10-19.json",
+  "groups": {
+    "sourceFiles": {
+      "checked": 65,
+      "matching": 65,
+      "missing": [],
+      "changed": []
+    },
+    "evidence": {
+      "checked": 33,
+      "matching": 33,
+      "missing": [],
+      "changed": []
+    },
+    "deployedFiles": {
+      "checked": 494,
+      "matching": 494,
+      "missing": [],
+      "changed": []
+    }
+  },
+  "launchers": {
+    "Start-Drohnenhalle-Station.cmd": true,
+    "Start-Hallenexperiment.cmd": true
+  },
+  "executables": {
+    "Builds/Windows/SpaceMiner.exe": true,
+    "Builds/HallExperiment/HallExperiment.exe": true
+  },
+  "limits": [
+    "No new Unity build or runtime test",
+    "Historical 137 station checks and 36 standalone checks are from 2026-10-19",
+    "Gate states still reset open on scene rebuild",
+    "No workshop repair/production economy or pressure simulation",
+    "No commit or push"
+  ]
+}

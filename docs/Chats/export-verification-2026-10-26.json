@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-26",
+  "scope": "project-chat-export-and-documentation-only",
+  "game_tests_run": false,
+  "cloud_retrieval_performed": false,
+  "raw_sessions_committed": false,
+  "existing_curated_prefix_text_sha256_preserved": true,
+  "curated_prefix_text_sha256": "2b958fe76a1be6541c47f6b53f93fec62da14f748a11c9a68cf6ea2972d2ad30",
+  "curated_prefix_text_hash_convention": "UTF-8, normalized LF, trailing whitespace stripped",
+  "exporter_synthetic_command": "python tools/ExportChatMemory.py --self-test",
+  "exporter_synthetic_assertions": 25,
+  "exporter_synthetic_result": "passed",
+  "exporter_sha256": "e5e9e96ff76b11a6d3c426fe735f1b433f42ec48feba4eeda8cfa3ddf4e8a209",
+  "sensitive_pattern_scan": {
+    "credential_strings": 0,
+    "email_addresses": 0,
+    "environment_context_blocks": 0,
+    "signed_or_credential_urls": 0,
+    "limitation": "Pattern-based verification supplements the project-content review; arbitrary private prose is not classified automatically."
+  },
+  "available_archive_files": [
+    {
+      "file": "01-Unity-Spiel.md",
+      "bytes": 40243,
+      "sha256": "afed10142342fd756441ef9012f9b644c388c957d4f5f5e8d8059a2971861c3d",
+      "visible_messages": 88
+    },
+    {
+      "file": "02-Asteroiden.md",
+      "bytes": 8260,
+      "sha256": "9379aa3395b1093e6798928898165ac477e3e2ce23e8285dfc6b1c895bed1583",
+      "visible_messages": 18
+    },
+    {
+      "file": "03-Story-und-Mira.md",
+      "bytes": 16462,
+      "sha256": "27fe8296fce638c3241d344659b0fce0056bf6e72605d486c21ca1f20b90f8aa",
+      "visible_messages": 37
+    },
+    {
+      "file": "04-GitHub.md",
+      "bytes": 23816,
+      "sha256": "e4b5dda983bc8e24088b275c94005ca55c83e919e783c159938cee33dd19431c",
+      "visible_messages": 57
+    },
+    {
+      "file": "05-MainDev.md",
+      "bytes": 80492,
+      "sha256": "1ec128005537314648f7e8de46390e1ccf462f44192aaf9bc3c04acde2922971",
+      "visible_messages": 213
+    },
+    {
+      "file": "06-Asteroidenvarianten.md",
+      "bytes": 3911,
+      "sha256": "d6bc1932bd27396108525e5e1f8b32f0b226e22ab9618791772ce1368ed7e856",
+      "visible_messages": 9
+    },
+    {
+      "file": "07-Story-und-Mira.md",
+      "bytes": 150504,
+      "sha256": "cbb7c29feef53b2be98a8e9890c77a08ea784ccce82bb233d7d009d2d3469ade",
+      "visible_messages": 391
+    },
+    {
+      "file": "08-Settings-UI.md",
+      "bytes": 38561,
+      "sha256": "7a2e9caac4d4452681a4619bfaf2ac4c70598e2f2c1163add12f6a729b41cc59",
+      "visible_messages": 66
+    },
+    {
+      "file": "09-Sound-und-Effekte.md",
+      "bytes": 11878,
+      "sha256": "d44c29739e4eac6341960548eedaf01230ff759a347ee4594437be6f6164c46f",
+      "visible_messages": 38
+    },
+    {
+      "file": "10-TechTree.md",
+      "bytes": 34878,
+      "sha256": "ba51c421afa359adecd5241aed69626e5a461220145346cdc2697a52a6f6c69b",
+      "visible_messages": 96
+    },
+    {
+      "file": "11-Vehicels.md",
+      "bytes": 9382,
+      "sha256": "d070569213a9a34d3dce02cc955f009442bd4fe67b48d69eeac46fc75ddf2158",
+      "visible_messages": 27
+    },
+    {
+      "file": "13-Cloud-Sound-und-Effekte.md",
+      "bytes": 25477,
+      "sha256": "04a010a3945cea4261bf9fa8874f764d753e2399ff7e48001bff035fd6cd5879",
+      "visible_messages": 23
+    },
+    {
+      "file": "13-MainDev-Desktop.md",
+      "bytes": 257057,
+      "sha256": "7d212668aaf1726fe571dee9fe027518fc52b6b888c8e6ad24902c2e65b3c27e",
+      "visible_messages": 596
+    },
+    {
+      "file": "14-Cloud-Techtree.md",
+      "bytes": 15917,
+      "sha256": "28c052cf5433bba486d8f9ed5af70377abfd0cdf153bbd9d2e050c6f96a94c93",
+      "visible_messages": 8
+    },
+    {
+      "file": "14-GitHub-Desktop.md",
+      "bytes": 6491,
+      "sha256": "0a8050ee22ffb2f3cc5444aad42bb39078777d3384a740b46f912c92a65fbc83",
+      "visible_messages": 13
+    },
+    {
+      "file": "15-Asteroidenvarianten-Desktop.md",
+      "bytes": 10586,
+      "sha256": "ce8e919ed2c5aed40cd1f72f8db60cbc1c8f706a2460729667afd0cc34128b8e",
+      "visible_messages": 22
+    },
+    {
+      "file": "16-Story-und-Mira-Desktop.md",
+      "bytes": 89854,
+      "sha256": "b5f03fd71eada2188a86686dbd89ed71dc8fc69044578c21327b92789eb2210e",
+      "visible_messages": 210
+    },
+    {
+      "file": "17-Settings-UI-Desktop.md",
+      "bytes": 12536,
+      "sha256": "12e7ebb4a9109ad4cdb99585954099afa6b765c5908ddebe24bc5c4a846e2a12",
+      "visible_messages": 24
+    },
+    {
+      "file": "18-Sound-und-Effekte-Desktop.md",
+      "bytes": 4480,
+      "sha256": "a22469a810ccf76c1d3f119cb7e2f03b233c045c9ae7d4b883bff46d1dc57dab",
+      "visible_messages": 9
+    },
+    {
+      "file": "19-TechTree-Desktop.md",
+      "bytes": 183552,
+      "sha256": "0765b0b5fb652dc4705b08e41a1765dc92427a6cccb869fafcfbb31a2f3e704e",
+      "visible_messages": 447
+    },
+    {
+      "file": "20-Vehicels-Desktop.md",
+      "bytes": 83037,
+      "sha256": "518bbef4b92615f9b5e1df7c5493ba8baf49247f38333bd21ca65c66ace2bc84",
+      "visible_messages": 204
+    },
+    {
+      "file": "21-Ideenbacklog-Desktop.md",
+      "bytes": 8507,
+      "sha256": "ce5b2d9df83e6f9c7ca67a23bcf8aafea5656aa7632a6a34935b1ef5b15f2c26",
+      "visible_messages": 19
+    },
+    {
+      "file": "22-Ideenbacklog.md",
+      "bytes": 2857,
+      "sha256": "f9800c54378a20619dd81ce851ba53a2b3297b0319997e605e2939f8120fbc75",
+      "visible_messages": 4
+    },
+    {
+      "file": "23-Intro-Cinematic-Entwurf.md",
+      "bytes": 25938,
+      "sha256": "b750cc120914a239ca0cf47359fcfc21d573c7a9d4887def12fdd0ff2c31d86e",
+      "visible_messages": 10
+    }
+  ],
+  "refreshed_visible_messages": 1312,
+  "statuses": {
+    "preserved": 9,
+    "unavailable": 1,
+    "cloud_snapshot_preserved": 3,
+    "curated_extended": 1,
+    "exported_reviewed": 8
+  }
+}

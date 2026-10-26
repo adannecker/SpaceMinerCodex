@@ -1,0 +1,38 @@
+[
+  {
+    "path": "Assets/SpaceMiner/Editor/MiraDialogueBuild.cs",
+    "testedSha256": "61A32447F5EB242FC72901180FDE6AE9360533BF7DC1D191E85916F51517821C",
+    "workspaceSha256": "604999195ECB5E56678CD44BB2C77555C5E893A0B7970A28CB17C34C5A169553",
+    "reason": "Concurrent Story/Dialoge chat changes remain in the workspace; this trial uses the earlier Mira snapshot."
+  },
+  {
+    "path": "Assets/SpaceMiner/Editor/MiraDialogueModelsBuild.cs",
+    "testedSha256": "3F6D470265F3AE52B6B61A976C985D06928D315D38F5B391F26FCC49518C80E3",
+    "workspaceSha256": "08577F6D9BBCB71706EAA17D9229437213C7A9F8E0494460570AFAC599F24C31",
+    "reason": "Concurrent Story/Dialoge chat changes remain in the workspace; this trial uses the earlier Mira snapshot."
+  },
+  {
+    "path": "Assets/SpaceMiner/Scripts/MiraDialogueDemo.cs",
+    "testedSha256": "3A0AB70F2406D61FDAADB95FB3C4D2FF232DC9EF997586B2453AC6DD015BE732",
+    "workspaceSha256": "8B6B90B948E624DA636F6178768ED23845275A0EF998368E4707A997752B6407",
+    "reason": "Concurrent Story/Dialoge chat changes remain in the workspace; this trial uses the earlier Mira snapshot."
+  },
+  {
+    "path": "Assets/SpaceMiner/Scripts/MiraDialogueModule.cs",
+    "testedSha256": "487869C0AD0414E1E00B3BCD1F3063D7FF8AC68B9607FAF44B9AF0CE6EDB6F3B",
+    "workspaceSha256": "B6F8C540F43E058252DD9B362135C0BFB75AE267C309CE9A32966434C28DD4AD",
+    "reason": "Concurrent Story/Dialoge chat changes remain in the workspace; this trial uses the earlier Mira snapshot."
+  },
+  {
+    "path": "Assets/SpaceMiner/Scripts/MiraVisorOverlay.cs",
+    "testedSha256": "39B4484AF919E62E110C1146C06BA8D9D750403B9BD39F38E30B058B58BBA240",
+    "workspaceSha256": "BBEEA000AF3D4997A5660714C9529E9951C4DE3047F67039DFAF9547495060E8",
+    "reason": "Concurrent Story/Dialoge chat changes remain in the workspace; this trial uses the earlier Mira snapshot."
+  },
+  {
+    "path": "Assets/SpaceMiner/Scripts/PlayerSettings.cs",
+    "testedSha256": "9AB3411562FEFD985417C57BD1AC967A2827E5C3494AC0FB9A781DD9F13778DE",
+    "workspaceSha256": "B362560FAE4B74804A04D38862F0675202CB740982C1900A5CF2A3885B65C79D",
+    "reason": "Concurrent Story/Dialoge chat changes remain in the workspace; this trial uses the earlier Mira snapshot."
+  }
+]

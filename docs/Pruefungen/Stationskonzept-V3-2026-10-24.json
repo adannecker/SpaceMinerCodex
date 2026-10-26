@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-24",
+  "version": "V3",
+  "scope": "Individual inward modules docked in same sector grid as outside",
+  "generator": "built-in image_gen edit of V2",
+  "image": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v3.png",
+  "imageSha256": "d27fc6c02cac1ed2d0a6a1b3352ec71bfbb70cd9d9759914abd2a249ae944282",
+  "pixels": [
+    1536,
+    1024
+  ],
+  "prompt": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v3.prompt.txt",
+  "specification": "docs/Stationskonzept-V3-2026-10-24.md",
+  "geometryProposal": {
+    "outerSectorCount": 12,
+    "sectorAngle": 30,
+    "innerCenters": [
+      30,
+      60,
+      120,
+      150,
+      210,
+      240,
+      300,
+      330
+    ],
+    "innerCount": 8,
+    "reservedServiceAxes": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "innerRadialDepth": 11,
+    "innerRadii": [
+      18,
+      29
+    ],
+    "walkRadii": [
+      29,
+      38
+    ],
+    "outerRadii": [
+      38,
+      54
+    ],
+    "decks": 1
+  },
+  "interpretation": "Same angular module unit and docking architecture; prior11m inner depth retained, not identical inner/outer floor area",
+  "checks": [
+    "Visual review: separate hulls/collars, clear services, maintained zones",
+    "PNG signature/dimensions/hash",
+    "Eight module centers and four reserved service axes",
+    "Local links"
+  ],
+  "limits": [
+    "Illustrative concept, text parameters govern geometry",
+    "No Unity implementation/build/runtime test",
+    "No commit or push"
+  ]
+}

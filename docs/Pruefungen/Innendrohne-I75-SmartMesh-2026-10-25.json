@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-25",
+  "scope": "User-requested Smart Mesh P2.0 trial compared with H3.1",
+  "status": "four generated FBX originals downloaded and inspected; no design acceptance or game integration",
+  "inputsReused": {
+    "Front": {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/01-vorne.png",
+      "bytes": 2045859,
+      "sha256": "64634e89773584b08b07c25ab026cf15fc5765fb4106a7453b59cc7fe799fdbd",
+      "pixels": [
+        1254,
+        1254
+      ]
+    },
+    "Left": {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/04-seite.png",
+      "bytes": 1962233,
+      "sha256": "27c62dae2cd27e53b2f5947618bd9e91615cffcc9277d3f8da9abe7455632753",
+      "pixels": [
+        1470,
+        1070
+      ]
+    },
+    "Right": {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/05-rechte-seite.png",
+      "bytes": 1864109,
+      "sha256": "0e0b51d77bc09c8d857961f17d5f5bf29e4d8007451759bda33487c659c808b8",
+      "pixels": [
+        1470,
+        1070
+      ]
+    },
+    "Back": {
+      "path": "docs/Art/Drohnen/I75-Tripo-Set01/03-hinten.png",
+      "bytes": 2021195,
+      "sha256": "621f297620f3e73f7ef484bf9b7bf7540986e6c77f2229071f1898f2d323e70f",
+      "pixels": [
+        1254,
+        1254
+      ]
+    }
+  },
+  "settings": {
+    "model": "P2.0",
+    "topologySetting": "Quad",
+    "generationCount": 4,
+    "samePolygonCount": false,
+    "budgetSlots": [
+      5000,
+      7500,
+      10000,
+      15000
+    ],
+    "variantNaming": "Our inspection/export order, not proven UI budget slot order",
+    "texturesRequested": false,
+    "riggingRequested": false,
+    "segmentationRequested": false
+  },
+  "credits": {
+    "before": 2945,
+    "afterGeneration": 2945,
+    "afterAllExports": 2945,
+    "observedDelta": 0,
+    "trialBefore": 2,
+    "trialAfterFinalReload": 1,
+    "buttonBefore": "100 crossed out / 0"
+  },
+  "variants": [
+    {
+      "variant": "V01",
+      "modelId": "7b918240-7781-43be-bd45-15a7dbc76b76",
+      "source": "U:\\Downloads\\SpaceMiner_I75_P20_V01_2026-10-25.fbx",
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V01_2026-10-25.fbx",
+      "bytes": 236944,
+      "sha256": "f541cb7dfce616864a7299940c7261f854df5537797a3b1f6c2207315a630d30",
+      "fbxVersion": 7400,
+      "objectCounts": {
+        "Geometry": 1,
+        "Material": 1,
+        "Model": 1
+      },
+      "meshes": [
+        {
+          "vertices": 5279,
+          "polygons": 5868,
+          "polygonSizes": {
+            "3": 1643,
+            "4": 4225
+          },
+          "fanTriangleCount": 10093,
+          "uvLayerCount": 0,
+          "indexBoundaryEdges": 496,
+          "indexNonManifoldEdges": 45
+        }
+      ],
+      "triangleReductionPercentVsH31": 88.95588042193724
+    },
+    {
+      "variant": "V02",
+      "modelId": "fe09d747-9c5c-49ba-9298-428a3ec35f2f",
+      "source": "U:\\Downloads\\SpaceMiner_I75_P20_V02_2026-10-25.fbx",
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V02_2026-10-25.fbx",
+      "bytes": 420864,
+      "sha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+      "fbxVersion": 7400,
+      "objectCounts": {
+        "Geometry": 1,
+        "Material": 1,
+        "Model": 1
+      },
+      "meshes": [
+        {
+          "vertices": 10510,
+          "polygons": 10659,
+          "polygonSizes": {
+            "3": 3006,
+            "4": 7653
+          },
+          "fanTriangleCount": 18312,
+          "uvLayerCount": 0,
+          "indexBoundaryEdges": 2648,
+          "indexNonManifoldEdges": 126
+        }
+      ],
+      "triangleReductionPercentVsH31": 79.96235829649407
+    },
+    {
+      "variant": "V03",
+      "modelId": "1c636772-a525-4517-8672-6a2e0b5b06ce",
+      "source": "U:\\Downloads\\SpaceMiner_I75_P20_V03_2026-10-25.fbx",
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V03_2026-10-25.fbx",
+      "bytes": 637616,
+      "sha256": "677d2c6a2909a4a6dff2552e9bf461684cdd29a79c1c474f1df16bfcf0906559",
+      "fbxVersion": 7400,
+      "objectCounts": {
+        "Geometry": 1,
+        "Material": 1,
+        "Model": 1
+      },
+      "meshes": [
+        {
+          "vertices": 15903,
+          "polygons": 16219,
+          "polygonSizes": {
+            "3": 4750,
+            "4": 11469
+          },
+          "fanTriangleCount": 27688,
+          "uvLayerCount": 0,
+          "indexBoundaryEdges": 4211,
+          "indexNonManifoldEdges": 282
+        }
+      ],
+      "triangleReductionPercentVsH31": 69.70280561999387
+    },
+    {
+      "variant": "V04",
+      "modelId": "b271060b-0161-4dd6-a70c-e401fc53dac1",
+      "source": "U:\\Downloads\\SpaceMiner_I75_P20_V04_2026-10-25.fbx",
+      "path": "docs/Art/Drohnen/Tripo-I75-P20-2026-10-25/SpaceMiner_I75_P20_V04_2026-10-25.fbx",
+      "bytes": 333296,
+      "sha256": "555924d44b7345f0a6301762b37c5e884519dff756971b0c3d2096e0d39d1b74",
+      "fbxVersion": 7400,
+      "objectCounts": {
+        "Geometry": 1,
+        "Material": 1,
+        "Model": 1
+      },
+      "meshes": [
+        {
+          "vertices": 7999,
+          "polygons": 7963,
+          "polygonSizes": {
+            "3": 2456,
+            "4": 5507
+          },
+          "fanTriangleCount": 13470,
+          "uvLayerCount": 0,
+          "indexBoundaryEdges": 2555,
+          "indexNonManifoldEdges": 80
+        }
+      ],
+      "triangleReductionPercentVsH31": 85.26064691206723
+    }
+  ],
+  "baseline": {
+    "modelId": "82186324-c59e-4f69-a811-f1020096b63c",
+    "polygons": 45725,
+    "vertices": 45859,
+    "fanTriangleCount": 91388,
+    "textures": "Four 4096x4096 PBR images",
+    "sourceReport": "docs/Pruefungen/Innendrohne-I75-Tripo-Generierung01-2026-10-25.json"
+  },
+  "evidence": [
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/01-vor-start-kostenlos.jpg",
+      "bytes": 139256,
+      "sha256": "1ab9c0adebffb29910c02576e9516e4bb565188325db1ba5f82f190ac039d5e6",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/02-variante-5000-front.jpg",
+      "bytes": 164036,
+      "sha256": "a9b713afe72bd8e1a7c94e0b6c0b57354522d4a4a1f7054cfb42b193d059d433",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/03-variante-02-front.jpg",
+      "bytes": 151045,
+      "sha256": "924e00965fb5bad749827adff4860e2050cfaffdc2400b43b06f6f7d977b074a",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/04-variante-03-front.jpg",
+      "bytes": 160872,
+      "sha256": "89627594827b22466cf9aaf79ffceb5bb18e266b08f2cfd9fd7f1ad159eda298",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/05-variante-04-front.jpg",
+      "bytes": 154280,
+      "sha256": "f9170cd44b845f7b5660a97dbcb2d7315b7433e7e893f8464ff23bddfdf24d2f",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/06-variante-02-solid-front.jpg",
+      "bytes": 138555,
+      "sha256": "ac006b445922cc9eab459c3e242907421ef5e3480034b347773c26b2dfb64c23",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/07-variante-02-solid-seite.jpg",
+      "bytes": 126142,
+      "sha256": "a9da3f19447833642f6c7a4d2485a3c994b34dc14557ea5c7fb2dc98731eb126",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/08-variante-02-solid-heck.jpg",
+      "bytes": 124224,
+      "sha256": "726eff119a0f997c42d12efa243f11d7425e71e020da7be8cd6b2b5b12832f55",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/09-budget-einstellungen.jpg",
+      "bytes": 149964,
+      "sha256": "3ead8925b18ecd4bbb9447a3eb6cb2060151ba91df1f2ad33faf271927636360",
+      "pixels": [
+        1331,
+        1244
+      ]
+    },
+    {
+      "path": "docs/Pruefungen/Innendrohne-I75-SmartMesh-2026-10-25/10-ergebnis-variante-02.jpg",
+      "bytes": 158281,
+      "sha256": "1b759b53914ecf2338adeb5cca23623f11582a1334acaaaad255d8d6b8797d06",
+      "pixels": [
+        1331,
+        1244
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "path": "docs/Innendrohne-I75-SmartMesh-Vergleich-2026-10-25.md",
+      "bytes": 7980,
+      "sha256": "6f05655eab7b71c3e108f4fd74098c6a6f9c4a1d387f74f481a54c0bd2279991"
+    },
+    {
+      "path": "docs/Innendrohne-I75-Tripo-Generierung01-2026-10-25.md",
+      "bytes": 6466,
+      "sha256": "b3e8a574c800de52fbf3961cc0ff9553f265e5e5b8c8a629c850569367d7e112"
+    }
+  ],
+  "provisionalCandidate": "V02, 18312 triangles, approximately 80 percent lower triangle count vs HD",
+  "visualReview": {
+    "allFour": "Front wireframe inspected; shape and local detail vary between regenerated meshes",
+    "V02": "Front, side and closed battery rear inspected without wireframe; identifiable chassis, simplified corners and thin/fragmented underbody details",
+    "baseline": "Previous session front and rear/side review retained in H3.1 evidence"
+  },
+  "checks": [
+    "FBX7400 binary parsed by existing official Blender FBX parser",
+    "All four UI mesh counts match FBX files",
+    "Download/original hash equality",
+    "Triangle/quad composition and UV absence checked",
+    "Index edge incidence counted without modifying meshes",
+    "All saved JPEG evidence verified",
+    "Local document links checked"
+  ],
+  "limitations": [
+    "No one-to-one budget-slot mapping claimed from asynchronous asset order",
+    "Each variant is a regenerated model, not an exact LOD of the same geometry",
+    "All meshes have indexed boundary/nonmanifold edges; unwelded coincident seams may contribute",
+    "One mesh object/material each; no textures, UVs, rig or separate articulated feet",
+    "No Blender viewport import, Unity integration, metric scale or physics validation",
+    "No build, runtime or FPS tests",
+    "No texturing, Smart UV, Edit Mesh or segmentation tasks started"
+  ],
+  "localLinksChecked": {
+    "docs/Innendrohne-I75-SmartMesh-Vergleich-2026-10-25.md": 16,
+    "docs/Innendrohne-I75-Tripo-Generierung01-2026-10-25.md": 13
+  }
+}

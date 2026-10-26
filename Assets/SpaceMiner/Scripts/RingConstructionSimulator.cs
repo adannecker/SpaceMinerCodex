@@ -35,6 +35,7 @@ namespace SpaceMiner
         private static void ResetState(){IsOpen=false;closedFrame=-1;}
         public void Open()
         {
+            if(CommandRoomPlanner.BlocksInput)return;
             if(SettingsMenu.IsOpen)GetComponent<SettingsMenu>().Cancel();
             if(TechTreeMenu.IsOpen)GetComponent<TechTreeMenu>().Close();
             Model??=new RingConstructionModel();view??=new RingConstructionView();view.SetActive(true);IsOpen=true;
@@ -45,6 +46,7 @@ namespace SpaceMiner
         private void OnDestroy(){if(IsOpen)Close();view?.Dispose();walkthrough?.Dispose();ui.Dispose();}
         internal void EnterWalkthrough()
         {
+            if(CommandRoomPlanner.BlocksInput)return;
             if(!IsOpen)Open();
             view.SetActive(false);walkthrough??=new RingWalkthrough();walkthrough.SetActive(true);Walking=true;dragging=false;
         }
@@ -55,7 +57,8 @@ namespace SpaceMiner
         }
         private void Update()
         {
-            bool allowed=!StartMenu.IsOpen&&!SaveGameMenu.IsOpen&&!QuitMenu.BlocksInput&&!IntroSequence.BlocksGameplay&&!MemoryCinematic.IsPlaying&&!SettingsMenu.IsOpen;
+            if(CommandRoomPlanner.BlocksInput)return;
+            bool allowed=!StationOperations.TacticalViewActive&&StationOperations.Current?.PanelOpen!=true&&!StartMenu.IsOpen&&!SaveGameMenu.IsOpen&&!QuitMenu.BlocksInput&&!IntroSequence.BlocksGameplay&&!MemoryCinematic.IsPlaying&&!SettingsMenu.IsOpen;
             if(Input.GetKeyDown(KeyCode.F6)&&allowed){if(IsOpen)Close();else Open();}
             if(!IsOpen)return;
             if(Input.GetKeyDown(KeyCode.Escape)){if(Walking)LeaveWalkthrough();else Close();return;}
@@ -79,7 +82,7 @@ namespace SpaceMiner
         }
         private void LateUpdate()
         {
-            if(!IsOpen||view==null)return;
+            if(CommandRoomPlanner.BlocksInput||!IsOpen||view==null)return;
             if(Walking){walkthrough.ApplyView(!StartMenu.IsOpen&&!SettingsMenu.IsOpen&&!QuitMenu.BlocksInput&&!SaveGameMenu.IsOpen);return;}
             view.Update(Model,elapsed);
         }
@@ -98,11 +101,11 @@ namespace SpaceMiner
         private void OnGUI()
         {
             using(var scope=new UiLayout.Scope(UiLayout.Scale())){
-                if(QuitMenu.BlocksInput||SaveGameMenu.IsOpen)return;
+                if(CommandRoomPlanner.BlocksInput||QuitMenu.BlocksInput||SaveGameMenu.IsOpen)return;
                 ui.Configure(SettingsStore.Current.Accessibility);
                 if(IsOpen&&Walking){int oldDepth=GUI.depth;try{GUI.depth=-216;walkthrough.Draw(LeaveWalkthrough,Display);}finally{GUI.depth=oldDepth;}return;}
                 if(!IsOpen){
-                    if(StartMenu.IsOpen||SettingsMenu.IsOpen||TechTreeMenu.IsOpen||IntroSequence.BlocksGameplay||MemoryCinematic.IsPlaying)return;
+                    if(StationOperations.TacticalViewActive||StationOperations.Current?.PanelOpen==true||StartMenu.IsOpen||SettingsMenu.IsOpen||TechTreeMenu.IsOpen||IntroSequence.BlocksGameplay||MemoryCinematic.IsPlaying)return;
                     if(GUI.Button(EntryButton,new GUIContent("Ausbau · F6","Ringbau-Simulator öffnen"),ui.Button))Open();return;
                 }
             }

@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "asset": "I75 Smart Mesh P2.0 V02 / authored Surface R01",
+  "blender": "4.5.14 LTS",
+  "source": {
+    "date": "2026-10-26",
+    "source": "Assets\\SpaceMiner\\Resources\\IndoorDroneI75\\I75_P20_V02.fbx",
+    "sourceSha256": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+    "vertices": 10510,
+    "polygons": 10659,
+    "triangles": 18312,
+    "dimensionsMetres": [
+      0.48033708333969116,
+      0.75,
+      0.4371030628681183
+    ],
+    "uvLayers": 1,
+    "uvRasterCoverage": 0.46762824058532715,
+    "materialCount": 1,
+    "textureResolution": [
+      2048,
+      2048
+    ],
+    "textures": [
+      "I75_R01_BaseColor.png",
+      "I75_R01_Emission.png",
+      "I75_R01_Height.png",
+      "I75_R01_Normal.png",
+      "I75_R01_Occlusion.png",
+      "I75_R01_ORM.png",
+      "I75_R01_UnityMetalSmooth.png"
+    ],
+    "renders": [
+      "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R01-2026-10-26\\01-I75-R01-hero.png",
+      "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R01-2026-10-26\\02-I75-R01-rear.png",
+      "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\docs\\Art\\Drohnen\\I75-Textur-R01-2026-10-26\\03-I75-R01-side.png"
+    ],
+    "geometryUnchangedAfterNormalization": true,
+    "elapsedSeconds": 260.878536939621,
+    "notes": [
+      "Actual Blender renders of original V02 mesh, not generated concept art.",
+      "Surface finish only. No rig, mesh repair, separate magnetic feet or Unity build replacement.",
+      "Two-dimensional stencil artwork is authored locally; no Tripo credits or external generated textures."
+    ]
+  },
+  "glbVerification": {
+    "glbTriangles": 18312,
+    "meshCount": 1,
+    "materialCount": 1,
+    "embeddedTextures": 4,
+    "glbBytes": 12110980,
+    "allPBRSlotsPresent": true
+  },
+  "reimportVerification": {
+    "passed": true,
+    "originalSourceHashUnchanged": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+    "blendPackedImages": 4,
+    "fbxReimportMeshCount": 1,
+    "fbxReimportPolygons": 10659,
+    "fbxReimportTriangles": 18312,
+    "fbxReimportUVLayers": 1,
+    "fbxReimportDimensionsMetres": [
+      0.48033708333969116,
+      0.7500000298023224,
+      0.437103000742308
+    ]
+  },
+  "nativeRendersVisuallyInspected": 3,
+  "textureImagesChecked": 7,
+  "originalGameAssetsPreserved": [
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Metal.mat",
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Metal.mat.meta",
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_P20_V02.fbx",
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_P20_V02.fbx.meta",
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Status.mat",
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75_Status.mat.meta",
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75Traffic.prefab",
+    "Assets/SpaceMiner/Resources/IndoorDroneI75/I75Traffic.prefab.meta"
+  ],
+  "rightPreviewRequest": "open_in_codex hero image requested, host returned queued",
+  "unityBuildChanged": false,
+  "tripoCreditsUsed": 0,
+  "limitations": [
+    "Surface authoring preview, not yet assigned to the live Unity prefab.",
+    "Original mesh topology retained including its existing imperfections; no rig or independently animated feet.",
+    "Studio renders do not establish performance or lighting appearance in Unity."
+  ],
+  "manifest": "Innendrohne-I75-Textur-R01-2026-10-26/file-manifest.json"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "command-room-layout.json",
+    "sha256": "51225F79D49768681C0A4EDC1D81E7CEDE268890753D48F1AB55CB4F1292B881"
+  },
+  {
+    "name": "drone-workshop-layout.json",
+    "sha256": "86CB0D1A0BA7EE446AC3693AF11B9D00397C2806776CD4BCBB39A126F56270A2"
+  },
+  {
+    "name": "internal-workshop-layout.json",
+    "sha256": "18826EAAAF9C1B0DC9153B54B4CF88E88D80053D97FBD6E01A8D831AA3400292"
+  }
+]

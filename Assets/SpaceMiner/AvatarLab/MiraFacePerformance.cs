@@ -12,6 +12,12 @@ namespace SpaceMiner
         [Serializable] public sealed class Timing { public MouthCue[] mouthCues; public string audioSha256; public float duration; }
         public MiraAvatar3D Avatar;
         public Transform Head;
+        public Transform Torso, LeftShoulder, RightShoulder;
+        public MiraDialogueActing Acting;
+        public bool BodyMotion = true;
+        public float MovementStrength = 1;
+        public Vector3 TorsoAngles { get; private set; }
+        public float ShoulderLift { get; private set; }
         public bool EyeMotion=true, Expressions=true;
         public int Blinks { get; private set; }
         public int GazeChanges { get; private set; }
@@ -27,6 +33,8 @@ namespace SpaceMiner
         private Vector2 gaze,targetGaze;
         private Vector3 headTarget;
         private float jaw,round,wide,close,smile,concern,focus;
+        private Vector3 torsoRest, leftRest, rightRest;
+        private float actingWeight;
         // Used only by the deterministic pose inspection in the editor/test player.
         internal bool DiagnosticPose;
 
@@ -34,6 +42,9 @@ namespace SpaceMiner
         private void Awake()
         {
             if(Avatar==null || Avatar.Face==null)return;
+            if(Torso!=null)torsoRest=Torso.localPosition;
+            if(LeftShoulder!=null)leftRest=LeftShoulder.localPosition;
+            if(RightShoulder!=null)rightRest=RightShoulder.localPosition;
             for(int i=0;i<Avatar.Face.sharedMesh.blendShapeCount;i++)shapes[Avatar.Face.sharedMesh.GetBlendShapeName(i)]=i;
         }
         public Timing GetTiming(AudioClip clip)
@@ -98,10 +109,11 @@ namespace SpaceMiner
             jaw=Mathf.Lerp(jaw,targetJaw,blend);round=Mathf.Lerp(round,targetRound,blend);
             wide=Mathf.Lerp(wide,targetWide,blend);close=Mathf.Lerp(close,targetClose,blend);
             Set("JawOpen",jaw*Avatar.JawWeight);Set("Round",round*100);Set("Wide",wide*100);Set("LipClose",close*100);
-            float desiredSmile=driver.CurrentMood==MiraAvatar.Mood.Encouraging?.48f:driver.CurrentMood==MiraAvatar.Mood.Friendly?.20f:0;
+            float emotion=Acting!=null?Mathf.Clamp01(Acting.MoodIntensity):1;
+            float desiredSmile=(driver.CurrentMood==MiraAvatar.Mood.Encouraging?.48f:driver.CurrentMood==MiraAvatar.Mood.Friendly?.20f:0)*emotion;
             smile=Mathf.Lerp(smile,Expressions?desiredSmile:0,1-Mathf.Exp(-dt*3));
-            concern=Mathf.Lerp(concern,Expressions && driver.CurrentMood==MiraAvatar.Mood.Concerned?.6f:0,1-Mathf.Exp(-dt*3));
-            focus=Mathf.Lerp(focus,Expressions && driver.CurrentMood==MiraAvatar.Mood.Focused?.5f:0,1-Mathf.Exp(-dt*3));
+            concern=Mathf.Lerp(concern,Expressions && driver.CurrentMood==MiraAvatar.Mood.Concerned?.6f*emotion:0,1-Mathf.Exp(-dt*3));
+            focus=Mathf.Lerp(focus,Expressions && driver.CurrentMood==MiraAvatar.Mood.Focused?.5f*emotion:0,1-Mathf.Exp(-dt*3));
             Set("Smile",smile*100);Set("BrowConcern",concern*100);Set("BrowFocus",focus*100);
             if(time>=nextBlink){blinkAt=time;nextBlink=time+Range(2.8f,6.2f);if(EyeMotion)Blinks++;}
             float phase=time-blinkAt;
@@ -118,8 +130,51 @@ namespace SpaceMiner
             Set("LookUp",Mathf.Max(0,gaze.y)*100*eyes);Set("LookDown",Mathf.Max(0,-gaze.y)*100*eyes);
             if(time>=nextHead){headTarget=new Vector3(Range(-.65f,.65f),Range(-2,2),Range(-.7f,.7f));nextHead=time+Range(2.7f,5.5f);}
             var angles=headTarget+new Vector3((speaking?jaw*.9f:0)+Mathf.Sin(time*.9f)*.20f,gaze.x*.5f,Mathf.Sin(time*.55f)*.12f);
+            actingWeight=Mathf.Lerp(actingWeight,Acting!=null?1:0,1-Mathf.Exp(-dt*3));
+            Vector3 gesture=Vector3.zero; float shoulder=0;
+            if(Acting?.Gestures!=null && speech!=null && speech.clip!=null)
+                foreach(var cue in Acting.Gestures)
+                {
+                    float weight=cue.Weight(speech.time);
+                    gesture+=cue.Head*weight;shoulder+=cue.Shoulder*weight;
+                }
+            // Authored head gestures follow recording time, independent of jaw amplitude.
+            // The small gaze contribution settles later than the eye movement.
+            var posture=driver.CurrentMood==MiraAvatar.Mood.Friendly?new Vector3(-.6f,0,1.2f):
+                driver.CurrentMood==MiraAvatar.Mood.Concerned?new Vector3(1.1f,0,-.8f):
+                driver.CurrentMood==MiraAvatar.Mood.Focused?new Vector3(1.5f,0,0):new Vector3(-.8f,0,-1);
+            var acted=gesture+(Expressions?posture*emotion:Vector3.zero)+headTarget*.25f+new Vector3(0,gaze.x*2,0);
+            angles=Vector3.Lerp(angles,acted,actingWeight)*Mathf.Clamp(MovementStrength,0,1.5f);
             HeadAngles=Vector3.Lerp(HeadAngles,driver.Motion?angles:Vector3.zero,1-Mathf.Exp(-dt*2.8f));
             if(Head!=null)Head.localRotation=Quaternion.Euler(HeadAngles);
+            UpdateBody(dt,time,emotion,shoulder,driver.CurrentMood);
+        }
+        private void UpdateBody(float dt,float time,float emotion,float gesture,MiraAvatar.Mood mood)
+        {
+            float strength=BodyMotion?actingWeight*Mathf.Clamp(MovementStrength,0,1.5f):0;
+            float breathing=Mathf.Sin(time*1.25f);
+            float tension=Expressions && mood==MiraAvatar.Mood.Concerned?.7f*emotion:
+                Expressions && (mood==MiraAvatar.Mood.Friendly || mood==MiraAvatar.Mood.Encouraging)?-.3f*emotion:0;
+            float lean=Expressions && mood==MiraAvatar.Mood.Focused?.7f*emotion:-.15f;
+            var target=new Vector3(lean+breathing*.17f,Mathf.Sin(time*.31f)*.28f,Mathf.Sin(time*.43f)*.25f)*strength;
+            float blend=1-Mathf.Exp(-dt*3);
+            TorsoAngles=Vector3.Lerp(TorsoAngles,target,blend);
+            ShoulderLift=Mathf.Lerp(ShoulderLift,(breathing*.0006f+(tension+gesture)*.0015f)*strength,blend);
+            if(Torso!=null)
+            {
+                Torso.localRotation=Quaternion.Euler(TorsoAngles);
+                Torso.localPosition=torsoRest+Vector3.up*(strength*breathing*.00035f);
+            }
+            if(LeftShoulder!=null)
+            {
+                LeftShoulder.localPosition=leftRest+Vector3.up*ShoulderLift;
+                LeftShoulder.localRotation=Quaternion.Euler(0,0,-ShoulderLift*450);
+            }
+            if(RightShoulder!=null)
+            {
+                RightShoulder.localPosition=rightRest+Vector3.up*(ShoulderLift*.8f);
+                RightShoulder.localRotation=Quaternion.Euler(0,0,ShoulderLift*380);
+            }
         }
         private void Set(string shape,float weight)
         { if(shapes.TryGetValue(shape,out int index))Avatar.Face.SetBlendShapeWeight(index,Mathf.Clamp(weight,0,100)); }

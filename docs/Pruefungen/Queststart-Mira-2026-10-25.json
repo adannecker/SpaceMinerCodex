@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-25",
+  "build": "queststart-fix-build-03",
+  "passed": true,
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "runs": [
+    {
+      "name": "console",
+      "checks": 179,
+      "exitCode": 0,
+      "images": 12
+    },
+    {
+      "name": "hands",
+      "checks": 207,
+      "exitCode": 0,
+      "images": 6
+    },
+    {
+      "name": "tactical",
+      "checks": 137,
+      "exitCode": 0,
+      "images": 6
+    },
+    {
+      "name": "ui",
+      "checks": 28,
+      "exitCode": 0,
+      "images": 8
+    }
+  ],
+  "assertions": 551,
+  "imagesSaved": 32,
+  "sourceFilesMatched": 280,
+  "sourceManifest": "source-manifest.json",
+  "changedSources": "changed-since-build05.json",
+  "userPlansPreserved": true,
+  "cause": "Accepted water mission opened Mira while a hidden station panel still owned input. Scanner presentation also used the aggregate input guard, hiding the only acknowledgement UI.",
+  "fix": [
+    "Successful water dispatch releases its console and safely exits its current IMGUI pass.",
+    "Mira presentation can render over a station panel, including its closing frame, while real foreign modals retain priority.",
+    "Render-only glove camera opts out of legacy Unity mouse events."
+  ],
+  "priorAcceptanceGap": "Build05 API test dismissed the acknowledgement immediately; it did not establish visible acknowledgement or a live GUI event sequence.",
+  "consoleAcceptance": {
+    "passed": true,
+    "checks": 179,
+    "naturalWaterQuestSeconds": 17520,
+    "receivedRawKg": 1033.325805664062,
+    "scope": "guarded actual water command, two-frame real Mira render over closed/open station terminal, explicit API acknowledgement and natural Update resume; paid first water quest, read-only fleet, real queue/refit/cancel and responsive captures; native mouse/keyboard button acceptance is separate"
+  },
+  "handsAcceptance": {
+    "passed": true,
+    "checks": 207,
+    "vertices": 1444,
+    "pictures": [
+      "01-idle-hand-1600.png",
+      "02-walk-look-hand.png",
+      "03-terminal-no-hand.png",
+      "04-roomplan-no-hand.png",
+      "05-declared-close-wall-fixture.png",
+      "06-outside-no-hand.png"
+    ],
+    "scope": "Actual padded dark work-glove mesh with curled fingers and empty future grip; inside/outside, intro and real modal visibility; bounded idle/walk/look controller, pause and reduced motion; camera mask/resource cleanup. Screenshots use the real framebuffer. Wall-depth picture includes a declared temporary foreground plane. No actual tool, manual comfort, FPS or tool gameplay acceptance."
+  },
+  "scope": "Four targeted graphical acceptance runs on the same corrected binary; previous domain suites were not rerun or reattributed to this build.",
+  "limitations": [
+    "Regression dispatches through the guarded command API and acknowledges only after real rendered frames through the dialogue API; native button clicks are not accepted by this test.",
+    "Automated control/framebuffer checks are distinct from OS mouse/keyboard and manual comfort acceptance.",
+    "No new Release, headset, 100k rendering, long-running campaign or FPS acceptance."
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": "Builds/Windows",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json",
+  "preservedPreviousBuild": "Builds/Windows-before-queststart-fix-20261025"
+}

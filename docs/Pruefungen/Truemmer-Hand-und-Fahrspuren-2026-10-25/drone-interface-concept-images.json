@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "images": [
+    "01-externe-flotte.png",
+    "02-externe-ausruestung.png",
+    "03-auftraege-und-diagnose.png",
+    "04-interne-flotte.png",
+    "05-interne-ausruestung-und-logistik.png",
+    "06-drohne-02-notversorgung.png"
+  ],
+  "scope": "Six concept screenshots rendered from the same interactive draft. Example data; no live Unity connection."
+}

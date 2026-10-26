@@ -1,0 +1,14 @@
+[
+  {
+    "path": "tools/CreateBatteryBay.py",
+    "sha256": "3D2F6A2B030C307F2BF59A4BAACFC5CCAB3C2293BBA670FF5EB5053BF8037AF2"
+  },
+  {
+    "path": "Design/Models/BatteryBay/BatteryBay.blend",
+    "sha256": "5572ED6528CB675BCB786D6BD4EBD46BAB19DF6D3638B4194AB76EDCE78860BB"
+  },
+  {
+    "path": "Design/Models/BatteryBay/model-report.json",
+    "sha256": "62B0C44DC498E1B6DE565A6B43CCAEF7892B17887EFDB76C6AEB42BA0666F559"
+  }
+]

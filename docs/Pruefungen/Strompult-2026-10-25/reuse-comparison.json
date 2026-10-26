@@ -1,0 +1,14 @@
+{
+  "fromBuild": "power-console-build-04",
+  "toBuild": "power-console-build-05",
+  "sourceDifferences": [
+    "Assets/SpaceMiner/Scripts/CommandRoomPlannerCheck.cs"
+  ],
+  "reason": "Only isolated command-room acceptance enumeration changed to exclude the separately tested ice-plant terminal. All runtime scene, model, power, UI, save and job sources are identical.",
+  "reusedSuites": [
+    "battery",
+    "ops",
+    "power",
+    "rooms"
+  ]
+}

@@ -36,3 +36,7 @@ Recordings/
 
 # Local backups; verified Tripo FBX/textures are versioned under Assets.
 /Imports/Tripo/*.zip
+
+# The saved room plan is shared; atomic-write backups stay local.
+/Design/RoomPlans/*.json.bak
+/Design/RoomPlans/*.json.*.tmp

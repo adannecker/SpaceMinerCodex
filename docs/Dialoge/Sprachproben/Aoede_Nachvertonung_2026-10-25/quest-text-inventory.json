@@ -1,0 +1,136 @@
+{
+  "Date": "2026-10-25",
+  "Status": "historical_inventory_superseded_by_recorded_quest_catalog",
+  "Dialogues": [
+    {
+      "Id": "quest_00",
+      "Heading": "Umgebung scannen",
+      "RuntimeText": "Am vorhandenen Scannerpult E drücken. Der Nahbereichsscan erschließt die ersten Wasserquellen und die nahen Trümmer.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_00_start",
+        "quest_00_complete"
+      ]
+    },
+    {
+      "Id": "quest_01",
+      "Heading": "Wasser sichern",
+      "RuntimeText": "Drohne 01 mit Bohrer an eine gescannte Eisquelle schicken. Roh-Eis wird an die geschlossene Annahme übergeben und kalt gespeichert. Der Aufbereiter gewinnt daraus mit Strom sauberes Wasser. Ziel: erste Lieferung und 40 Liter Flüssigwasserreserve; der große Rohspeicher muss dafür nicht voll sein.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_01_start",
+        "quest_01_complete"
+      ]
+    },
+    {
+      "Id": "quest_02",
+      "Heading": "Versorgung diagnostizieren",
+      "RuntimeText": "Die Versorgungsdiagnose am Stationsplanungspult starten. Strom- und Wassersektoren lassen sich an den Sektor-Terminals trennen.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_02_start",
+        "quest_02_complete"
+      ]
+    },
+    {
+      "Id": "quest_03",
+      "Heading": "Trümmer bergen",
+      "RuntimeText": "Ein nahes Wrackteil auswählen und einen Bergungsauftrag erteilen. Es liefert Schrott und geprüfte Ersatzteile für die ersten Inbetriebnahmen.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_03_start",
+        "quest_03_complete"
+      ]
+    },
+    {
+      "Id": "quest_04",
+      "Heading": "Interne R-01 aktivieren",
+      "RuntimeText": "Zwei geprüfte Ersatzteile genügen für die erste R-01-Inbetriebnahme. Danach übernimmt sie Transporte, Aufbereitung, Fertigung und Werkzeugumbauten.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_04_start",
+        "quest_04_complete"
+      ]
+    },
+    {
+      "Id": "quest_05",
+      "Heading": "Kohlenstoff beschaffen",
+      "RuntimeText": "Kohlenstoffhaltige Proben im Nahbereich bergen. Für diese Prozessproben kennen wir die erste Aufbereitung; der unbekannte Anteil bleibt getrennt gelagert.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_05_start",
+        "quest_05_complete"
+      ]
+    },
+    {
+      "Id": "quest_06",
+      "Heading": "Grundnahrung herstellen",
+      "RuntimeText": "Die vorhandene Syntheseanlage benötigt Kohlenstoff, Wasser, Energie und eine endliche Nährstoffkartusche. Das ist eine vereinfachte Grundnahrungskette, keine vollständig validierte chemische Ernährung.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_06_start",
+        "quest_06_complete"
+      ]
+    },
+    {
+      "Id": "quest_07",
+      "Heading": "Zweite Drohne aktivieren",
+      "RuntimeText": "Drohne 02 benötigt zwei Ersatzteile, R-01, mindestens 40 Liter Wasser und 6 kWh Stationsreserve. Danach wird sie am Dock tatsächlich geladen und betankt.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_07_start",
+        "quest_07_complete"
+      ]
+    },
+    {
+      "Id": "quest_08",
+      "Heading": "Station reparieren / erforschen",
+      "RuntimeText": "Mira erforscht die Reparaturrolle. R-01 setzt einen Laser ein. Danach können einzelne Stationselemente mit Ersatzteilen instand gesetzt werden.",
+      "Status": "superseded_by_recorded_quest_dialogues",
+      "Source": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "EditorialDraftIds": [
+        "quest_08_start",
+        "quest_08_complete"
+      ]
+    },
+    {
+      "Heading": "ERSTER AUFTRAG · UMGEBUNG SCANNEN",
+      "RuntimeText": "Geh an die Konsole und führe einen Nahbereichsscan aus. Der Scanner ist zu 97 Prozent geladen. In zehn Sekunden ist er bereit. Die Aussenansicht ist ein virtueller Raum: Dort siehst du nur, was wir bereits gescannt haben.",
+      "Status": "legacy_event_text_outside_quest_recordings",
+      "Source": "Assets/SpaceMiner/Scripts/ScannerProgression.cs"
+    },
+    {
+      "Heading": "WASSERVERSORGUNG GESICHERT",
+      "RuntimeText": "Unser Wassertank ist voll. Damit haben wir den nächsten Schritt geschafft. Für weitere Aufgaben brauchen wir neue Technik und verlässliche Messdaten.",
+      "Status": "legacy_event_text_outside_quest_recordings",
+      "Source": "Assets/SpaceMiner/Scripts/ScannerProgression.cs"
+    },
+    {
+      "Heading": "DROHNE 01 UNTERWEGS",
+      "RuntimeText": "Der Auftrag ist bestätigt. Drohne 01 fliegt zur gescannten Wasserquelle. Ihre Nahbereichssensoren helfen beim Annähern. Wir überwachen Batterie, Treibwasser und Rückkehrreserve.",
+      "Status": "legacy_event_text_outside_quest_recordings",
+      "Source": "Assets/SpaceMiner/Scripts/WaterScenario.cs"
+    }
+  ],
+  "AdditionalVariants": [
+    "Scanergebnis enthält variable Asteroiden-, Wasserquellen- und Wrackzahlen; keine festen Zahlen aufnehmen.",
+    "Erste Lieferung: getrennte Roh-Eis- und ältere Direktwasserfassung.",
+    "Spielstand geladen: getrennte Fassung vor/nach erstem Scan."
+  ],
+  "EditorialReview": [
+    "Grundnahrung: technischen Prototypenhinweis vor einer Aufnahme als Produkttext prüfen.",
+    "Forschungsaufgabe: Mira sollte in ihrer eigenen Stimme sprechen."
+  ],
+  "EditorialDraft": "../../02_Aufbauphase_Questdialoge.md",
+  "EditorialDraftDate": "2026-10-26",
+  "EditorialDraftNote": "Original RuntimeText values remain historical inventory. Nine quest introductions/completions and four workflows are now recorded and integrated via the new catalog; incidental event texts are outside that voice set.",
+  "RuntimeCatalog": "Assets/SpaceMiner/Resources/MiraQuests/catalog.json"
+}

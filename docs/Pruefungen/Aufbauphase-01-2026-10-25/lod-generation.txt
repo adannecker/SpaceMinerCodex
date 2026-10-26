@@ -1,0 +1,4 @@
+MaintenanceDrone Medium: 501518 -> 96140 triangles
+MaintenanceDrone Far: 501518 -> 19817 triangles
+ChargingCradle Medium: 502036 -> 79977 triangles
+ChargingCradle Far: 502036 -> 15854 triangles

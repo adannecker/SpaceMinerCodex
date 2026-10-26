@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "corePositionsMatchR01": true,
+  "addedTriangles": 600,
+  "originalSourceHashUnchanged": "741d7f837a032ab448575b8a3669f369874647f04cdb2d6ecc62143f6eab425e",
+  "blendPackedImages": 4,
+  "fbxReimportMeshCount": 1,
+  "fbxReimportPolygons": 10983,
+  "fbxReimportTriangles": 18912,
+  "fbxReimportUVLayers": 1,
+  "fbxReimportDimensionsMetres": [
+    0.4820000231266022,
+    0.7500000298023224,
+    0.437103000742308
+  ]
+}

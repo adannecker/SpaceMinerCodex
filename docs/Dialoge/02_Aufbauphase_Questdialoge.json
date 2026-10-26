@@ -1,0 +1,299 @@
+{
+  "Date": "2026-10-26",
+  "Status": "recorded_integrated_verified",
+  "Script": "02_Aufbauphase_Questdialoge.md",
+  "QuestCount": 9,
+  "MainTextCount": 18,
+  "SupportTextCount": 4,
+  "Voice": "Mira / Aoede / Gemini 3.1 Flash TTS Preview",
+  "SourceSnapshots": [
+    {
+      "File": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+      "SHA256": "d8ffb8c2cbeeb30fe30fb7fb28fd6044423c9a089d7f2cee78b5b2a73c8080c4"
+    },
+    {
+      "File": "Assets/SpaceMiner/Scripts/StationOperations.cs",
+      "SHA256": "4702188df86d67cb42b0c76496e0ed355ba17f238e494e301239eb3cc920ba95"
+    },
+    {
+      "File": "Assets/SpaceMiner/Scripts/StationWork.cs",
+      "SHA256": "e3e16c9b43117779f63cb49e4781dc51e897d903be84b0d72b8337e7a78c902f"
+    },
+    {
+      "File": "Assets/SpaceMiner/Scripts/StationOperations.DroneConsole.cs",
+      "SHA256": "8ba230bc6091a3282de146620d1e6c2e020e358ea61eb6ca7dddd12a907465a2"
+    },
+    {
+      "File": "Assets/SpaceMiner/Scripts/StationOperations.DroneCommands.cs",
+      "SHA256": "7dca7616e606246ece1bb2a6091c4c46a4800b078498481f40594bd5cb41d5e3"
+    },
+    {
+      "File": "Assets/SpaceMiner/Scripts/StationOperations.TacticalOverview.cs",
+      "SHA256": "c9764caf3115f5e424eee70ad79265ea0514ed31a6dfadfc26f792f1d60b6158"
+    }
+  ],
+  "Dialogue": [
+    {
+      "Id": "quest_00_start",
+      "QuestIndex": 0,
+      "Event": "start",
+      "Mood": "konzentriert",
+      "Text": "Bevor wir unsere einzige einsatzbereite Drohne losschicken, müssen wir wissen, was uns umgibt. Geh an das Scannerpult und löse den Nahbereichsscan aus, sobald der Scanner bereit ist. Damit finden wir mögliche Wasserquellen und nahe Wrackteile. In der virtuellen Außenansicht erscheinen anschließend die erfassten Kontakte. Was darin steckt, müssen wir erst noch untersuchen.",
+      "Audio": "MiraQuests/quest_00_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Umgebung scannen",
+      "DurationSeconds": 27.480272108843536,
+      "AudioSHA256": "ab4335e720cf4a7576d3b272dc50cf5c711ca3aafc7ad4ddf63bf29493f8978d"
+    },
+    {
+      "Id": "quest_00_complete",
+      "QuestIndex": 0,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "Der erste Scan ist abgeschlossen. Wir haben jetzt eine Grundlage für unsere nächsten Einsätze. Die erfassten Kontakte und bestätigten Rohstoffe findest du in der Übersicht. Für den nächsten Schritt brauchen wir eine bestätigte Eisquelle.",
+      "Audio": "MiraQuests/quest_00_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Umgebung scannen",
+      "DurationSeconds": 17.000272108843536,
+      "AudioSHA256": "2155c5a9db055a318f1125362b451043dbbb7a4343b0cc9efdcfba2463b754eb"
+    },
+    {
+      "Id": "quest_01_start",
+      "QuestIndex": 1,
+      "Event": "start",
+      "Mood": "konzentriert",
+      "Text": "Unser Wasservorrat ist begrenzt. Wir brauchen ihn für die Versorgung und als Treibwasser für die Drohnen. Öffne den Drohnenleitstand, wähle Drohne null eins und erteile ihr einen Roh-Eis-Auftrag an einer bestätigten Eisquelle. Der Bohrer muss montiert sein. Die Annahme lagert das Rohmaterial; der Aufbereiter gewinnt daraus mit Stationsstrom sauberes Wasser. Unser erstes Ziel ist eine Lieferung und eine Reserve von vierzig Litern. Das große Roh-Eis-Lager muss dafür nicht voll werden.",
+      "Audio": "MiraQuests/quest_01_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Wasser sichern",
+      "DurationSeconds": 35.44027210884354,
+      "AudioSHA256": "21e1bf14c3977465dd670b2516ba19d6b32455918dc7aeab40fceb08fde15cbf"
+    },
+    {
+      "Id": "quest_01_complete",
+      "QuestIndex": 1,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "Die erste Lieferung ist angekommen, und unser erstes Wasserziel ist erreicht. Das gibt uns etwas Spielraum. Behalte die Aufbereitung im Blick: Roh-Eis im Lager und nutzbares Wasser im Tank sind zwei verschiedene Vorräte.",
+      "Audio": "MiraQuests/quest_01_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Wasser sichern",
+      "DurationSeconds": 16.20027210884354,
+      "AudioSHA256": "f3dd96cc6d5fc7deb4d72f7ef5f246e891980baf13ad75d2482a76f11b7ec09c"
+    },
+    {
+      "Id": "quest_02_start",
+      "QuestIndex": 2,
+      "Event": "start",
+      "Mood": "konzentriert",
+      "Text": "Bevor wir weitere Anlagen zuschalten, sollten wir unsere Versorgung prüfen. Starte die Versorgungsdiagnose am Stationsplanungspult. Sie hilft uns, die nächsten Arbeiten vorzubereiten. Am Strompult kannst du Erzeugung, Verbrauch und Akkureserve verfolgen. Prüfe auch die Verbindungen der benötigten Sektoren. Eine intakte Maschine kann nicht arbeiten, wenn ihr Strom oder Wasser fehlt.",
+      "Audio": "MiraQuests/quest_02_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Versorgung diagnostizieren",
+      "DurationSeconds": 26.960272108843537,
+      "AudioSHA256": "730b8886023e99b7f5f6c701c8e93f1fa8445b3f99648ed99c0f6ae65ad3d119"
+    },
+    {
+      "Id": "quest_02_complete",
+      "QuestIndex": 2,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "Die Versorgungsdiagnose ist abgeschlossen. Damit können wir die weiteren Inbetriebnahmen planen. Die Diagnose selbst hat noch nichts repariert. Wenn eine Arbeit wartet, prüfen wir zuerst ihren Versorgungsweg und die verfügbaren Reserven.",
+      "Audio": "MiraQuests/quest_02_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Versorgung diagnostizieren",
+      "DurationSeconds": 16.600272108843537,
+      "AudioSHA256": "7f3469c53d2a0b24f044dac93d2a96d5856af9fedd6807b95fb72b6b1c719a8b"
+    },
+    {
+      "Id": "quest_03_start",
+      "QuestIndex": 3,
+      "Event": "start",
+      "Mood": "konzentriert",
+      "Text": "Für Reparaturen und die interne Helferdrohne brauchen wir brauchbare Teile. In den georteten Trümmern könnten noch welche erhalten sein. Wähle am Drohnenleitstand einen verfügbaren Wrackkontakt und erteile einen Bergungsauftrag. Drohne null eins braucht dafür einen Bohrer oder Greifer. Was wir tatsächlich verwenden können, zeigt sich nach der Bergung. Unbekanntes Material halten wir getrennt.",
+      "Audio": "MiraQuests/quest_03_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Trümmer bergen",
+      "DurationSeconds": 28.480272108843536,
+      "AudioSHA256": "c125a61a45ca0934806aab371ede6b16877934c5420d42af7b6284043dd2aaaf"
+    },
+    {
+      "Id": "quest_03_complete",
+      "QuestIndex": 3,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "Die erste Bergung ist abgeschlossen. Die geborgenen Bestände sind erfasst. Geprüfte Ersatzteile können wir direkt für die ersten Inbetriebnahmen verwenden. Den übrigen Schrott müssen wir erst aufbereiten, bevor daraus neues Material wird.",
+      "Audio": "MiraQuests/quest_03_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Trümmer bergen",
+      "DurationSeconds": 18.720272108843538,
+      "AudioSHA256": "d3656eef3e1fdbef50d3f4464d885cca6f2ebdf5ca29279c55030b61d452081d"
+    },
+    {
+      "Id": "quest_04_start",
+      "QuestIndex": 4,
+      "Event": "start",
+      "Mood": "ermutigend",
+      "Text": "Wir können die kleine interne Helferdrohne wieder in Betrieb nehmen. Sie wird hier als R null eins geführt. Wähle sie im internen Bereich des Drohnenleitstands aus und beauftrage ihre Inbetriebnahme. Dafür brauchen wir zwei geprüfte Ersatzteile. Sobald sie arbeitet, kann sie interne Arbeitsaufträge übernehmen: Material aufbereiten, Teile fertigen und unsere Außendrohnen umrüsten. So werden wir Schritt für Schritt unabhängiger von den geborgenen Vorräten.",
+      "Audio": "MiraQuests/quest_04_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Interne R-01 aktivieren",
+      "DurationSeconds": 30.04027210884354,
+      "AudioSHA256": "4a9cbb705c6ca504bdc384263a35b24d993ca58eeb46073a4cd17ef8097e0ddd"
+    },
+    {
+      "Id": "quest_04_complete",
+      "QuestIndex": 4,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "R null eins ist in Betrieb. Damit haben wir Unterstützung innerhalb der Station. Du kannst ihr jetzt Arbeitsaufträge zuweisen. Plane ihre Reihenfolge bewusst: Eine einzelne Helferdrohne kann immer nur eine Arbeit gleichzeitig übernehmen.",
+      "Audio": "MiraQuests/quest_04_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Interne R-01 aktivieren",
+      "DurationSeconds": 16.52027210884354,
+      "AudioSHA256": "3bcbf9cc5cbc37ff235b7225866a72985b8ae0e3038e96a6ab3ebc4d04dfc3af"
+    },
+    {
+      "Id": "quest_05_start",
+      "QuestIndex": 5,
+      "Event": "start",
+      "Mood": "konzentriert",
+      "Text": "Wasser allein reicht für unsere weitere Versorgung nicht aus. Als nächsten Ausgangsstoff brauchen wir Kohlenstoff. Nach der Versorgungsdiagnose stehen uns dafür bekannte Prozessproben zur Verfügung. Wähle eine davon am Drohnenleitstand und schicke eine freie Außendrohne mit Bohrer hin. Wir können den nutzbaren Kohlenstoffanteil gewinnen. Was wir noch nicht bestimmen können, bleibt getrennt im Lager.",
+      "Audio": "MiraQuests/quest_05_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Kohlenstoff beschaffen",
+      "DurationSeconds": 27.960272108843537,
+      "AudioSHA256": "6e9d68ee603183b59ef9c244168671fee90033f3626863a3702da4efb90d17f9"
+    },
+    {
+      "Id": "quest_05_complete",
+      "QuestIndex": 5,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "Die erste Kohlenstoffprobe ist geborgen. Der nutzbare Anteil ist eingelagert, der unbekannte Rest bleibt erhalten. Damit haben wir einen weiteren Ausgangsstoff für unsere vorhandene Syntheseanlage. Für Grundnahrung brauchen wir außerdem Wasser, Strom und unsere Nährstoffzusätze.",
+      "Audio": "MiraQuests/quest_05_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Kohlenstoff beschaffen",
+      "DurationSeconds": 19.640272108843536,
+      "AudioSHA256": "804e8835e7e0608ed73a3b3e65c58658ad1579347e0e244f1c8a56e81f86585d"
+    },
+    {
+      "Id": "quest_06_start",
+      "QuestIndex": 6,
+      "Event": "start",
+      "Mood": "konzentriert",
+      "Text": "Unsere Notrationen reichen nicht unbegrenzt. Die vorhandene Syntheseanlage kann uns zusätzliche Grundnahrung liefern. Öffne die Fertigung und beauftrage eine erste Charge. R null eins übernimmt die Arbeit. Wir brauchen Kohlenstoff, Wasser, Strom und eine Nährstoffkartusche aus dem Vorrat. Diese Zusätze können wir noch nicht selbst herstellen. Achte deshalb auf ihren Bestand und darauf, dass die Wasserleitung zur Anlage offen ist.",
+      "Audio": "MiraQuests/quest_06_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Grundnahrung herstellen",
+      "DurationSeconds": 32.480272108843536,
+      "AudioSHA256": "5e0b01a76941d52adeddbf254d6a2a512e740d3927b9531a672bf5bc0f9b66e9"
+    },
+    {
+      "Id": "quest_06_complete",
+      "QuestIndex": 6,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "Die erste Charge Grundnahrung ist fertig und eingelagert. Das entlastet unseren Rationsvorrat. Vollständig unabhängig sind wir damit noch nicht: Die Nährstoffkartuschen sind endlich. Für eine dauerhafte Versorgung brauchen wir später weitere Möglichkeiten.",
+      "Audio": "MiraQuests/quest_06_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Grundnahrung herstellen",
+      "DurationSeconds": 18.000272108843536,
+      "AudioSHA256": "68d742f5a7ec742149a89b4c8f01469d529acb6016f5c32495d5528e4792967a"
+    },
+    {
+      "Id": "quest_07_start",
+      "QuestIndex": 7,
+      "Event": "start",
+      "Mood": "konzentriert",
+      "Text": "Mit einer zweiten Außendrohne könnten wir mehrere Aufgaben parallel erledigen. Lass R null eins deshalb Drohne null zwei instand setzen. Wähle sie im Drohnenleitstand und plane die Instandsetzung. Dafür brauchen wir die abgeschlossene Versorgungsdiagnose, zwei Ersatzteile und ausreichende Reserven: mindestens vierzig Liter Wasser und sechs Kilowattstunden im Stationsakku. Nach der Reparatur muss sie am Dock noch geladen und betankt werden. Erst dann planen wir ihren ersten Einsatz.",
+      "Audio": "MiraQuests/quest_07_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Zweite Drohne aktivieren",
+      "DurationSeconds": 33.96027210884354,
+      "AudioSHA256": "92dd6e40aa3736ffa33db6866b8458af42c8aba6909723f0bd27514e99ed7928"
+    },
+    {
+      "Id": "quest_07_complete",
+      "QuestIndex": 7,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "Die Instandsetzung von Drohne null zwei ist abgeschlossen. Prüfe jetzt ihren Dockstatus. Laden und Betanken benötigen weiterhin unsere Stationsvorräte. Sobald sie einsatzbereit ist, kannst du ihr einen eigenen Auftrag geben.",
+      "Audio": "MiraQuests/quest_07_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Zweite Drohne aktivieren",
+      "DurationSeconds": 16.760272108843537,
+      "AudioSHA256": "54790fd514e2368370b428df7fea00ef672fcced9f8f834ac375198da82c767b"
+    },
+    {
+      "Id": "quest_08_start",
+      "QuestIndex": 8,
+      "Event": "start",
+      "Mood": "konzentriert",
+      "Text": "Jetzt können wir beginnen, die Station gezielt instand zu setzen. Starte am Forschungsterminal die Reparaturrolle. Ich erarbeite die nötigen Verfahren; dafür brauchen wir zusätzliche Energie. Danach wählst du am Stationsplanungspult ein beschädigtes, erreichbares Element und beauftragst die Reparatur. Für Außenarbeiten muss R null eins zuerst eine freie Außendrohne im Dock mit dem Laserwerkzeug ausrüsten. Halte außerdem geprüfte Ersatzteile bereit. Erst eine tatsächlich ausgeführte Reparatur bringt das betroffene Element wieder in Ordnung.",
+      "Audio": "MiraQuests/quest_08_start",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Station reparieren / erforschen",
+      "DurationSeconds": 37.200272108843535,
+      "AudioSHA256": "d4b42accb6ed9e3065d629cee2107effe66cb00307ebe7fc3111d88ae95c2150"
+    },
+    {
+      "Id": "quest_08_complete",
+      "QuestIndex": 8,
+      "Event": "complete",
+      "Mood": "ermutigend",
+      "Text": "Unser erster Reparaturauftrag ist abgeschlossen. Wir haben nicht nur ein Verfahren erforscht, sondern ein beschädigtes Element tatsächlich wiederhergestellt. Diese Erfahrung können wir für die nächsten Arbeiten nutzen. Die übrigen Schäden bleiben bestehen. Entscheide als Nächstes, welche Reparatur unserer Versorgung am meisten hilft.",
+      "Audio": "MiraQuests/quest_08_complete",
+      "Status": "recorded_integrated",
+      "QuestTitle": "Station reparieren / erforschen",
+      "DurationSeconds": 22.960272108843537,
+      "AudioSHA256": "4e7d24fb28c76e6d0e1c50a88cb8ec1fd352f62d9091bbe15099b457022845d2"
+    },
+    {
+      "Id": "quest_support_recycle",
+      "QuestIndex": null,
+      "Event": "support",
+      "Mood": "konzentriert",
+      "Text": "Wir können die geprüften Ersatzteile direkt verwenden. Den übrigen Schrott muss R null eins zuerst analysieren und trennen. Beauftrage die Aufbereitung in der Fertigung. Verwertbares Material kommt in die passenden Behälter, unbekannte Rückstände bleiben getrennt. So gewinnen wir unter anderem Eisen für neue Reparaturteile.",
+      "Audio": "MiraQuests/quest_support_recycle",
+      "Status": "recorded_integrated",
+      "DurationSeconds": 23.600272108843537,
+      "AudioSHA256": "58781263b37ba3cb970029db82df21c2a8d14f746709ad98cf7494b75b143b0d"
+    },
+    {
+      "Id": "quest_support_print_parts",
+      "QuestIndex": null,
+      "Event": "support",
+      "Mood": "konzentriert",
+      "Text": "Wir müssen nicht jedes Reparaturteil in einem Wrack finden. Aus aufbereitetem Eisen kann der Materialdrucker einfache neue Teile fertigen. Plane den Auftrag in der Fertigung. R null eins braucht dafür Zeit, Strom und einen freien Lagerplatz. Für komplexe Bauteile fehlen uns weiterhin die passenden Verfahren.",
+      "Audio": "MiraQuests/quest_support_print_parts",
+      "Status": "recorded_integrated",
+      "DurationSeconds": 21.88027210884354,
+      "AudioSHA256": "3d0b5416b08a807aedf5d9de4118266bcbd9b542c6dcad6ca968f5a9b8defeca"
+    },
+    {
+      "Id": "quest_support_repair_researched",
+      "QuestIndex": null,
+      "Event": "support",
+      "Mood": "ermutigend",
+      "Text": "Die Reparaturverfahren sind ausgearbeitet. Für eine Außenreparatur wählst du jetzt eine freie Außendrohne am Dock und beauftragst den Umbau auf das Laserwerkzeug. R null eins führt den Werkzeugwechsel aus. Für eine zugängliche Innenreparatur kannst du stattdessen R null eins einsetzen. Wähle ein beschädigtes Ziel und halte die benötigten Ersatzteile bereit.",
+      "Audio": "MiraQuests/quest_support_repair_researched",
+      "Status": "recorded_integrated",
+      "DurationSeconds": 26.760272108843537,
+      "AudioSHA256": "dfde736c6e3b8ba4954f5ec04a2edfeb68fa616291ea90ea13e90e3d672d10ea"
+    },
+    {
+      "Id": "quest_support_laser_ready",
+      "QuestIndex": null,
+      "Event": "support",
+      "Mood": "konzentriert",
+      "Text": "Das Laserwerkzeug ist montiert. Wähle jetzt im Drohnenleitstand ein bekanntes, beschädigtes Stationselement als Reparaturziel und erteile den Auftrag. Prüfe vorher die benötigten Ersatzteile und die Einsatzbereitschaft der Drohne. Mit diesem Werkzeug übernimmt sie Reparaturarbeiten; für den nächsten Eisabbau braucht sie wieder den Bohrer.",
+      "Audio": "MiraQuests/quest_support_laser_ready",
+      "Status": "recorded_integrated",
+      "DurationSeconds": 24.000272108843536,
+      "AudioSHA256": "8868fb522dacb94a56f4efdff0173039684181f7e76d9f930995347de837af9a"
+    }
+  ],
+  "RecordingManifest": "Sprachproben/Quests_Aoede_2026-10-26/recordings.json",
+  "Verification": "../Pruefungen/Mira-Questdialoge-2026-10-26.json"
+}

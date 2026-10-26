@@ -11,6 +11,12 @@ namespace SpaceMiner
         private readonly float[] amounts = { 1, 1, 1 };
         private readonly bool[] targets = { true, true, true };
         private readonly float[] travel=new float[3];
+        private bool vacuumBoundary;
+        internal void ConfigureVacuumBoundary()
+        {
+            vacuumBoundary=true;
+            for(int i=0;i<3;i++){amounts[i]=i==1?1:0;targets[i]=i==1;Apply(i);}
+        }
         internal Func<Vector3?> Visitor;
         internal float Amount(int index) => amounts[index];
         internal bool Target(int index) => targets[index];
@@ -61,6 +67,7 @@ namespace SpaceMiner
         }
         internal bool Request(int index,bool open)
         {
+            if(vacuumBoundary)return false;
             if(!open && Occupied(index))return false;
             targets[index]=open;return true;
         }
@@ -70,6 +77,7 @@ namespace SpaceMiner
         }
         internal string Prompt(Vector3 feet)
         {
+            if(vacuumBoundary)return Nearest(feet)<0?"":"Außenbereich: Zweitür-Schleuse benutzen / E an der Schleusentür";
             int i=Nearest(feet);return i<0?"":Occupied(i)?"Durchgang freihalten / E Tor bedienen"
                 :"E  Drohnentor "+(i+1).ToString("00")+(targets[i]?" schließen":" öffnen");
         }

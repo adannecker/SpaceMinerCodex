@@ -1,0 +1,78 @@
+{
+  "Date": "2026-10-25",
+  "Status": "both_clips_downloaded_integrated_verified",
+  "Voice": "Aoede",
+  "Model": "Gemini 3.1 Flash TTS Preview",
+  "Language": "de-DE",
+  "SpeakingRate": 1.0,
+  "VolumeGainDb": 0,
+  "Style": "Du bist Mira, der weibliche Bordcomputer einer beschädigten Raumstation. Sprich auf Deutsch sanft, warm, angenehm und ruhig, mit natürlicher klarer Aussprache und einer vollen weichen Stimme. Du sprichst persönlich zu einem gerade erwachten Menschen und duzt ihn. Vermittle behutsam Sicherheit und Nähe, ohne die ernste Situation zu verharmlosen. Natürliches mittleres Sprechtempo, kurze sinnvolle Pausen, etwas mehr Raum zwischen den Abschnitten. Kein Werbeton, keine epische Chronistenstimme, keine Rauheit, kein Flüstern, kein künstlich monotoner Roboterton oder dramatischer Alarm. Die Lage erklärst du verständlich und gefasst. Beim ersten Auftrag wirst du dezent zuversichtlicher. Lies ausschließlich den Sprechertext; keine zusätzlichen Worte, Musik oder Geräusche. Trockene klare Sprachaufnahme ohne Hall oder Echo.",
+  "Source": "Assets/SpaceMiner/Resources/Intro/intro.json",
+  "SourceSHA256": "BD4FEA1B58B728E1E7922A87CA4281DEC1DBD4E0B87B673D2F85E116F4CD3A01",
+  "Existing14Recordings": "preserve",
+  "Requests": [
+    {
+      "Id": "mira_12",
+      "Section": 13,
+      "Heading": "ERSTER AUFTRAG: UMGEBUNG SCANNEN",
+      "Text": "Bevor wir eine Drohne losschicken, brauchen wir verlässliche Scandaten.",
+      "TargetResource": "Intro/mira_12",
+      "Status": "integrated_verified",
+      "LocalFile": "Assets/SpaceMiner/Resources/Intro/mira_12.wav"
+    },
+    {
+      "Id": "mira_13",
+      "Section": 14,
+      "Heading": "ERSTER AUFTRAG: UMGEBUNG SCANNEN",
+      "Text": "Geh an die Konsole. Sobald der Scanner aufgeladen ist, führe einen Nahbereichsscan aus. In unserer virtuellen Aussenansicht sehen wir nur, was wir bereits erfasst haben.",
+      "TargetResource": "Intro/mira_13",
+      "Status": "integrated_verified",
+      "LocalFile": "Assets/SpaceMiner/Resources/Intro/mira_13.wav"
+    }
+  ],
+  "FollowUp": "Review and record current quest dialogue separately; scan counts are dynamic and must not be hardcoded.",
+  "ObservedBlocker": [],
+  "GeneratedRecordings": 2,
+  "ReplacementConsole": "https://console.cloud.google.com/agent-platform/studio/media/speech",
+  "MigrationEvidence": "User screenshot: old synthesis page explicitly removed; use Vertex Media Studio. Official Gemini-TTS documentation links to Agent Platform Media Studio speech.",
+  "FirstClipObserved": {
+    "SampleRate": 22050,
+    "RmsDb": -23.3187004719106,
+    "Bytes": 247016,
+    "DurationSeconds": 5.600272108843537,
+    "Format": "RIFF WAVE, LINEAR16, mono",
+    "PeakDb": -7.76560642719644,
+    "Id": "mira_12",
+    "LocalFile": "Assets/SpaceMiner/Resources/Intro/mira_12.wav"
+  },
+  "CloudShellExport": {
+    "Directory": "~/mira_aoede_20261025_d8a7",
+    "Authorization": "Explicit user approval: Cloud Shell autorisieren",
+    "Archive": "mira_intro_scan_aoede.zip",
+    "ArchiveBytes": 549442,
+    "Files": [
+      {
+        "Name": "mira_12.wav",
+        "Bytes": 247016,
+        "DurationSeconds": 5.600272108843537,
+        "SHA256": "a8caf9071555e139764ff0b96ebb0bda2078696d7130a876748d7fdda19c1d02"
+      },
+      {
+        "Name": "mira_13.wav",
+        "Bytes": 541604,
+        "DurationSeconds": 12.280272108843537,
+        "SHA256": "8454b7450bb2ce21a26b24715cab27a15ae6cfa47b6273d07a84a51a5449f438"
+      }
+    ],
+    "ValidatedRemotely": "Python wave: RIFF WAVE / LINEAR16, 22050 Hz, 16 bit, mono; SHA256 and file sizes printed and observed in Cloud Shell.",
+    "LocalFiles": [
+      "Assets/SpaceMiner/Resources/Intro/mira_12.wav",
+      "Assets/SpaceMiner/Resources/Intro/mira_13.wav"
+    ],
+    "RuntimeIntegrated": true,
+    "UnityBuildPerformed": true
+  },
+  "LocalVerification": "Original 14 WAV SHA256 unchanged; both new source WAV SHA256 matched remote manifest, assigned in intro.json, 121 Rhubarb intervals; final demo/game checks passed.",
+  "ResolutionDate": "2026-10-26",
+  "CurrentIntroSHA256": "878f7953e2fed898e5ff5f4d1acb3d67ff18a9ca8404850e41b3d2d988ea6324"
+}

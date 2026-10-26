@@ -1,0 +1,360 @@
+TRIPO MINING OK: isolated settings
+TRIPO MINING OK: empty operational mining drone in real dock
+TRIPO MINING OK: detailed independent auger geometry
+TRIPO MINING OK: cargo lid closed at starting berth
+TRIPO MINING OK: cargo frame and anchor rails have four measured original-hull roof mounts
+TRIPO MINING OK: initial cargo is empty and sliding gate shut
+TRIPO MINING OK: closed rear armour covers cargo aperture and compression seal meets rear edge within 5 mm
+TRIPO MINING OK: two side guides finish at cartridge height and no overhead gate frame remains
+TRIPO MINING OK: no rock emitted before actual drilling
+TRIPO MINING OK: suction collar starts retracted and unsealed
+TRIPO MINING OK: unloading receiver has an actual storage bulkhead
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / -0,7 / -0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / -0,7 / 0 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / -0,7 / 0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0 / -0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0 / 0 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0 / 0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0,7 / -0,45 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0,7 / 0 / clear
+TRIPO MINING OK: wide unloading throat passes through a real opening in storage bulkhead / 0,7 / 0,45 / clear
+TRIPO MINING OK: ESC opens modal quit menu and blocks showcase controls
+TRIPO MINING OK: ESC immediately releases and shows mouse pointer
+TRIPO MINING OK: quit dialog freezes actual showcase simulation
+TRIPO MINING OK: quit dialog keeps pointer available across frames
+TRIPO MINING OK: closing ESC is consumed before gameplay resumes
+TRIPO MINING OK: cancelled quit menu resumes prior simulation
+TRIPO MINING OK: manual showcase pause survives opening and cancelling quit menu
+TRIPO MINING OK: cargo lid closed during outbound flight
+TRIPO MINING OK: collected chunk follows actual centre between articulated jaws
+TRIPO MINING OK: pause freezes collecting joints and held chunk
+TRIPO MINING OK: pause freezes articulated lid
+TRIPO MINING OK: stopped drilling and pause emit no additional block
+TRIPO MINING OK: carried chunk remains in jaws above cargo rim
+TRIPO MINING OK: released sample drops through open top into transparent box
+TRIPO MINING OK: cargo lid fully open before depositing sample
+TRIPO MINING OK: only actual gripper deposits fill visible cargo
+TRIPO MINING OK: both stabilisers touch actual asteroid collider
+TRIPO MINING OK: actual auger tip contacts mining surface
+TRIPO MINING OK: source loss equals carried raw mass
+TRIPO MINING OK: mining consumes actual battery
+TRIPO MINING OK: return supplies protected while mining
+TRIPO MINING OK: pause freezes resource extraction and effects
+TRIPO MINING OK: single sequential drill blocks fill all twelve visible cargo slots
+TRIPO MINING OK: filled rocks remain inside cartridge walls floor and lid clearance
+TRIPO MINING OK: collecting arm stowed and cargo lid closed for loaded return
+TRIPO MINING OK: new rear cargo coupling meets station tank socket
+TRIPO MINING OK: collar approaches while rear hatch and cargo remain closed
+TRIPO MINING OK: suction collar contacts cartridge before hatch opening
+TRIPO MINING OK: pause freezes attached collar and closed hatch
+TRIPO MINING OK: wide rear sliding wall seals at real receiver before opening
+TRIPO MINING OK: rear wall opens at most 90 percent and retains overlap in short guides
+TRIPO MINING OK: gate opens only after collar touches and seals cartridge
+TRIPO MINING OK: pause preserves rear sliding gate pose
+TRIPO MINING OK: complete actual mining and delivery mission
+TRIPO MINING OK: one real water delivery recorded
+TRIPO MINING OK: 12 kg extracted and unloaded without duplicate cargo
+TRIPO MINING OK: raw mixture converted using actual ice fraction
+TRIPO MINING OK: station tank mass balance before refuelling
+TRIPO MINING OK: returned to exact real charging berth
+TRIPO MINING OK: productive completed trip awards real material experience
+TRIPO MINING OK: mission completes with safety reserves
+TRIPO MINING OK: parked drill stops and cargo display empties
+TRIPO MINING OK: collecting arm completes pickup transfer and release cycles
+TRIPO MINING OK: articulated jaws collect three different sample sizes
+TRIPO MINING OK: collecting tool folds after mining and holds no phantom cargo
+TRIPO MINING OK: moving collecting mesh stays outside cargo box throughout mining
+TRIPO MINING OK: all transferred chunk sizes clear actual cargo rim by at least 6 cm
+TRIPO MINING OK: cargo lid closed and collecting geometry clear at final berth
+TRIPO MINING OK: same gripper-loaded pieces pass through receiver and rear gate closes
+TRIPO MINING OK: rear sliding gate closed before leaving receiver
+TRIPO MINING OK: rear wall seals against cartridge again after unloading and return
+TRIPO MINING OK: all cargo came from one-at-a-time drilling emissions at the auger tip
+TRIPO MINING OK: collar approach seal gate sequence completed and collar retracted after hatch closure
+TRIPO MINING OK: all unloading rock vertices clear the 90 percent gate aperture by at least 15 mm / samples=143 margin=0,01693526 piece=2 progress=0,2061262 opening=0,9 rock=Center: (0.00, -0.21, 0.22), Extents: (0.17, 0.17, 0.18) panel=Center: (0.00, 0.81, 0.00), Extents: (0.65, 0.45, 0.04)
+TRIPO MINING OK: actual flight and dock poses checked against station asteroid and cradle colliders
+TRIPO MINING OK: quit action opens usable save-before-leaving dialog
+TRIPO MINING OK: cancel leaving keeps completed showcase and manual pause
+TRIPO MINING OK: leave action reaches start menu without stuck modal
+TRIPO MINING CHECK PASSED: 78 checks, actual extraction and delivery
+OPERATIONS OK: live campaign facade installed
+OPERATIONS OK: three command terminals plus production and sector controls
+OPERATIONS OK: authored interior/exterior lights
+OPERATIONS OK: water has a single shared reservoir
+OPERATIONS OK: initial serialized campaign is valid
+OPERATIONS OK: capped mounting slot selects its own build action in the world
+OPERATIONS OK: transfer overflow is atomic
+OPERATIONS OK: valid tank transfer conserves water
+OPERATIONS OK: wrong physical storage phase rejected
+OPERATIONS OK: multi-resource recipe is atomic
+OPERATIONS OK: real console scan
+OPERATIONS OK: water mission starts with shared live station supply
+OPERATIONS OK: actual imported drone delivers water with live electricity and life support
+OPERATIONS OK: water worker safely returns and actually recharges for subsequent jobs
+OPERATIONS OK: enqueue Diagnose
+OPERATIONS OK: complete Diagnose / Abgeschlossen
+OPERATIONS OK: diagnosis persisted in state
+OPERATIONS OK: enqueue Salvage
+OPERATIONS OK: complete Salvage / Abgeschlossen
+OPERATIONS OK: finite debris becomes actual inventory
+OPERATIONS OK: same collected debris cannot be harvested twice
+OPERATIONS OK: enqueue ActivateHelper
+OPERATIONS OK: complete ActivateHelper / Abgeschlossen
+OPERATIONS OK: internal helper actually unlocked
+OPERATIONS OK: enqueue Recycle
+OPERATIONS OK: complete Recycle / Abgeschlossen
+OPERATIONS OK: sorting conserves the ten kilogram batch
+OPERATIONS OK: enqueue PrintParts
+OPERATIONS OK: complete PrintParts / Abgeschlossen
+OPERATIONS OK: printer consumes known material
+OPERATIONS OK: queue food before carbon exists
+OPERATIONS OK: missing carbon blocks production
+OPERATIONS OK: enqueue Carbon
+OPERATIONS OK: complete Carbon / Abgeschlossen
+OPERATIONS OK: carbon sample returns from finite external target
+OPERATIONS OK: enqueue Food
+OPERATIONS OK: complete Food / Abgeschlossen
+OPERATIONS OK: food needs finite supplement cartridge
+OPERATIONS OK: enqueue ResearchRepair
+OPERATIONS OK: complete ResearchRepair / Abgeschlossen
+OPERATIONS OK: campaign repair research unlock
+OPERATIONS OK: queue temporary tool maintenance
+OPERATIONS OK: actual refit exclusively reserves target drone against water missions
+OPERATIONS OK: cancelled maintenance releases unchanged target drone after return
+OPERATIONS OK: enqueue Refit
+OPERATIONS OK: complete Refit / Abgeschlossen
+OPERATIONS OK: refit transfers actual tool inventory
+OPERATIONS OK: enqueue Repair
+OPERATIONS OK: complete Repair / Abgeschlossen
+OPERATIONS OK: targeted repair improves actual condition
+OPERATIONS OK: enqueue ActivateSecond
+OPERATIONS OK: complete ActivateSecond / Abgeschlossen
+OPERATIONS OK: second drone unlocked without free full battery
+OPERATIONS OK: other exterior drones remain inactive
+OPERATIONS OK: enqueue ResearchExpansion
+OPERATIONS OK: complete ResearchExpansion / Abgeschlossen
+OPERATIONS OK: module technology unlock
+OPERATIONS OK: enqueue Expand
+OPERATIONS OK: complete Expand / Abgeschlossen
+OPERATIONS OK: module construction consumes actual parts and material
+OPERATIONS OK: new wedge is a valid persistent walk area
+OPERATIONS OK: actual CharacterController crosses installed module aperture
+OPERATIONS OK: enqueue Repair
+OPERATIONS OK: complete Repair / Abgeschlossen
+OPERATIONS OK: ring repair restores accessible structural area
+OPERATIONS OK: repaired ring has a real upward collision floor
+OPERATIONS OK: enqueue Repair
+OPERATIONS OK: complete Repair / Abgeschlossen
+OPERATIONS OK: water wreck repair restores walk area and real 100 L tank capacity
+OPERATIONS OK: enqueue Repair
+OPERATIONS OK: complete Repair / Abgeschlossen
+OPERATIONS OK: broken reactor link receives real continuous collision floor
+OPERATIONS OK: intermediate sector valve severs water route through intact ring
+OPERATIONS OK: sector isolation changes real generation
+OPERATIONS OK: queue while water isolated
+OPERATIONS OK: closed sector valve blocks water recipe
+OPERATIONS OK: multiple jobs queue
+OPERATIONS OK: priority reorder keeps stable identity
+OPERATIONS OK: load rebuilds geometry without retaining discarded meshes
+OPERATIONS OK: save restores unlocks and second drone policy
+OPERATIONS OK: restored inventory still shares water
+OPERATIONS OK: built module and capacity restored without double growth
+OPERATIONS OK: legacy save resets new campaign systems safely
+OPERATIONS OK: legacy enlarged tank retains water above new starting capacity
+OPERATIONS OK: reload rebuilds real module exactly once after legacy reset
+OPERATIONS OK: queue reserved-input cancellation test
+OPERATIONS OK: active job really reserves iron
+OPERATIONS OK: active saved job cancels after safe return and refunds exactly once
+OPERATIONS OK: container API rejects nonfinite values
+OPERATIONS OK: corrupt serialized reservoir rejected
+OPERATIONS OK: duplicate work identity rejected
+OPERATIONS OK: unknown saved repair target rejected
+OPERATIONS OK: successive salvage orders choose different unclaimed sources
+OPERATIONS OK: queued finite sources have distinct reservations
+OPERATIONS OK: physical research terminal has contextual E prompt
+OPERATIONS OK: terminal releases mouse and blocks world input
+OPERATIONS OK: ten drone and ten cradle distance groups
+OPERATIONS CHECK PASSED: 97
+OPERATIONS PERFORMANCE SAMPLES RECORDED
+KEIL OK: new layout revision
+KEIL OK: three joined wedge modules, two distinct wrecks
+KEIL OK: one surviving and three broken reactor links
+KEIL OK: double-layer station skins
+KEIL OK: shield layers carried by perimeter frames and stand-off ribs
+KEIL OK: authored hall interior retained behind exterior shield
+KEIL OK: all exterior drones use approved imported mining model
+KEIL OK: imported active hull fits real cradle / 
+KEIL OK: three capped interfaces on free ring segments
+KEIL OK: physical bay airlock
+KEIL OK: ring and module compartment bulkheads
+KEIL OK: small repair drone is a passive instance of the same geometry
+KEIL OK: inactive repair drone status is dark
+KEIL OK: fleet operational policy 0
+KEIL OK: same drone model 0
+KEIL OK: old primitive model hidden behind approved hull 0
+KEIL OK: fleet operational policy 1
+KEIL OK: same drone model 1
+KEIL OK: old primitive model hidden behind approved hull 1
+KEIL OK: inactive drone remains disabled 1
+KEIL OK: fleet operational policy 2
+KEIL OK: same drone model 2
+KEIL OK: old primitive model hidden behind approved hull 2
+KEIL OK: inactive drone remains disabled 2
+KEIL OK: fleet operational policy 3
+KEIL OK: same drone model 3
+KEIL OK: old primitive model hidden behind approved hull 3
+KEIL OK: inactive drone remains disabled 3
+KEIL OK: fleet operational policy 4
+KEIL OK: same drone model 4
+KEIL OK: old primitive model hidden behind approved hull 4
+KEIL OK: inactive drone remains disabled 4
+KEIL OK: fleet operational policy 5
+KEIL OK: same drone model 5
+KEIL OK: old primitive model hidden behind approved hull 5
+KEIL OK: inactive drone remains disabled 5
+KEIL OK: fleet operational policy 6
+KEIL OK: same drone model 6
+KEIL OK: old primitive model hidden behind approved hull 6
+KEIL OK: inactive drone remains disabled 6
+KEIL OK: fleet operational policy 7
+KEIL OK: same drone model 7
+KEIL OK: old primitive model hidden behind approved hull 7
+KEIL OK: inactive drone remains disabled 7
+KEIL OK: fleet operational policy 8
+KEIL OK: same drone model 8
+KEIL OK: old primitive model hidden behind approved hull 8
+KEIL OK: inactive drone remains disabled 8
+KEIL OK: fleet operational policy 9
+KEIL OK: same drone model 9
+KEIL OK: old primitive model hidden behind approved hull 9
+KEIL OK: inactive drone remains disabled 9
+KEIL OK: unsafe floor excluded 90
+KEIL OK: teleport refuses damaged area 90
+KEIL OK: unsafe floor excluded 120
+KEIL OK: teleport refuses damaged area 120
+KEIL OK: unsafe floor excluded 210
+KEIL OK: teleport refuses damaged area 210
+KEIL OK: unsafe floor excluded 220
+KEIL OK: teleport refuses damaged area 220
+KEIL OK: active storage bulkhead reachable
+KEIL OK: closed storage gate blocks actual player
+KEIL OK: open storage gate admits actual player into wedge01
+KEIL OK: closed inner bay door blocks player
+KEIL OK: airlock request from pressurized hall
+KEIL OK: two bay doors remain mutually interlocked / 0
+KEIL OK: two bay doors remain mutually interlocked / 1
+KEIL OK: two bay doors remain mutually interlocked / 2
+KEIL OK: two bay doors remain mutually interlocked / 3
+KEIL OK: two bay doors remain mutually interlocked / 4
+KEIL OK: two bay doors remain mutually interlocked / 5
+KEIL OK: two bay doors remain mutually interlocked / 6
+KEIL OK: two bay doors remain mutually interlocked / 7
+KEIL OK: two bay doors remain mutually interlocked / 8
+KEIL OK: two bay doors remain mutually interlocked / 9
+KEIL OK: two bay doors remain mutually interlocked / 10
+KEIL OK: two bay doors remain mutually interlocked / 11
+KEIL OK: two bay doors remain mutually interlocked / 12
+KEIL OK: two bay doors remain mutually interlocked / 13
+KEIL OK: two bay doors remain mutually interlocked / 14
+KEIL OK: two bay doors remain mutually interlocked / 15
+KEIL OK: two bay doors remain mutually interlocked / 16
+KEIL OK: two bay doors remain mutually interlocked / 17
+KEIL OK: two bay doors remain mutually interlocked / 18
+KEIL OK: two bay doors remain mutually interlocked / 19
+KEIL OK: two bay doors remain mutually interlocked / 20
+KEIL OK: two bay doors remain mutually interlocked / 21
+KEIL OK: two bay doors remain mutually interlocked / 22
+KEIL OK: two bay doors remain mutually interlocked / 23
+KEIL OK: two bay doors remain mutually interlocked / 24
+KEIL OK: two bay doors remain mutually interlocked / 25
+KEIL OK: two bay doors remain mutually interlocked / 26
+KEIL OK: two bay doors remain mutually interlocked / 27
+KEIL OK: two bay doors remain mutually interlocked / 28
+KEIL OK: airlock completes close/equalize/open sequence
+KEIL OK: actual player traverses bay airlock outward
+KEIL OK: outer door closes after exit
+KEIL OK: airlock request from vacuum bay
+KEIL OK: two bay doors remain mutually interlocked / 0
+KEIL OK: two bay doors remain mutually interlocked / 1
+KEIL OK: two bay doors remain mutually interlocked / 2
+KEIL OK: two bay doors remain mutually interlocked / 3
+KEIL OK: two bay doors remain mutually interlocked / 4
+KEIL OK: two bay doors remain mutually interlocked / 5
+KEIL OK: two bay doors remain mutually interlocked / 6
+KEIL OK: two bay doors remain mutually interlocked / 7
+KEIL OK: two bay doors remain mutually interlocked / 8
+KEIL OK: two bay doors remain mutually interlocked / 9
+KEIL OK: two bay doors remain mutually interlocked / 10
+KEIL OK: two bay doors remain mutually interlocked / 11
+KEIL OK: two bay doors remain mutually interlocked / 12
+KEIL OK: two bay doors remain mutually interlocked / 13
+KEIL OK: two bay doors remain mutually interlocked / 14
+KEIL OK: two bay doors remain mutually interlocked / 15
+KEIL OK: two bay doors remain mutually interlocked / 16
+KEIL OK: two bay doors remain mutually interlocked / 17
+KEIL OK: two bay doors remain mutually interlocked / 18
+KEIL OK: two bay doors remain mutually interlocked / 19
+KEIL OK: two bay doors remain mutually interlocked / 20
+KEIL OK: two bay doors remain mutually interlocked / 21
+KEIL OK: two bay doors remain mutually interlocked / 22
+KEIL OK: two bay doors remain mutually interlocked / 23
+KEIL OK: two bay doors remain mutually interlocked / 24
+KEIL OK: two bay doors remain mutually interlocked / 25
+KEIL OK: two bay doors remain mutually interlocked / 26
+KEIL OK: two bay doors remain mutually interlocked / 27
+KEIL OK: two bay doors remain mutually interlocked / 28
+KEIL OK: two bay doors remain mutually interlocked / 29
+KEIL OK: airlock completes close/equalize/open sequence
+KEIL OK: actual player traverses airlock inward
+KEIL OK: left ring casualty closed bulkhead prevents entering vacuum
+KEIL OK: legacy unsafe save relocates to console
+KEIL OK: save migration preserves water
+KEIL OK: legacy second worker disabled without deleting stored energy
+KEIL OK: initial console scan reveals resource sources
+KEIL OK: water mining order starts
+KEIL OK: actual imported hull maneuver clears station / Launching / 
+KEIL OK: actual imported hull maneuver clears station / Launching / 
+KEIL OK: actual imported hull maneuver clears station / Launching / 
+KEIL OK: actual imported hull maneuver clears station / TankDocking / 
+KEIL OK: actual imported hull maneuver clears station / TankDocking / 
+KEIL OK: actual imported hull maneuver clears station / TankDocking / 
+KEIL OK: actual imported hull maneuver clears station / TankDocking / 
+KEIL OK: actual imported hull maneuver clears station / TankUndocking / 
+KEIL OK: real mining flight unloads at new front socket
+KEIL OK: cargo outlet seals at relocated tank
+KEIL OK: imported cargo gate uses the real suction collar
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL OK: other drones remain inactive through real trip
+KEIL COMPLETE: 156 checks
+OPERATIONS UI OK: isolated operations UI active
+OPERATIONS UI OK: research E prompt at real approach position
+OPERATIONS UI OK: 01-hud-und-e-hinweis screenshot readable
+OPERATIONS UI OK: 01-hud-und-e-hinweis contains rendered image and UI
+OPERATIONS UI OK: 02-forschungsterminal screenshot readable
+OPERATIONS UI OK: 02-forschungsterminal contains rendered image and UI
+OPERATIONS UI OK: terminal captures gameplay input
+OPERATIONS UI OK: 03-drohnenverwaltung screenshot readable
+OPERATIONS UI OK: 03-drohnenverwaltung contains rendered image and UI
+OPERATIONS UI OK: 04-stationsplanung screenshot readable
+OPERATIONS UI OK: 04-stationsplanung contains rendered image and UI
+OPERATIONS UI OK: 05-produktion-und-lager screenshot readable
+OPERATIONS UI OK: 05-produktion-und-lager contains rendered image and UI
+OPERATIONS UI OK: 06-grosse-schrift-1280 screenshot readable
+OPERATIONS UI OK: 06-grosse-schrift-1280 contains rendered image and UI
+OPERATIONS UI OK: resources and tasks do not overlap at enlarged text
+OPERATIONS UI OK: task opens actual Mira dialogue
+OPERATIONS UI OK: 07-aufgabe-mit-mira screenshot readable
+OPERATIONS UI OK: 07-aufgabe-mit-mira contains rendered image and UI
+OPERATIONS UI OK: display controller installed
+OPERATIONS UI OK: 08-vollbild screenshot readable
+OPERATIONS UI OK: 08-vollbild contains rendered image and UI
+OPERATIONS UI OK: real fullscreen controller selects native monitor framebuffer
+OPERATIONS UI OK: fullscreen controller restores prior window dimensions
+PLAYER VITALS CHECK PASSED: 29 checks; sprint, exhaustion, recovery, modal pause, persistence and HUD

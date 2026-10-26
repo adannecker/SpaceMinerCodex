@@ -1,0 +1,404 @@
+{
+  "generator": "tools/CreateTouchConsole.py",
+  "blender": "4.5.14 LTS",
+  "seed": 261026,
+  "reference": "docs/Art/Station/Steuerpult-Touch-2026-10-26-v2.png",
+  "coordinateSystem": "Unity local +X width, +Y up, front -Z, floor/centre pivot",
+  "canonicalToBlender": "(x,-z,y), FBX -Z forward / +Y up",
+  "lods": [
+    {
+      "name": "TouchConsole_LOD0",
+      "boundsMin": [
+        -0.75,
+        0.0,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400001049041748,
+        0.5
+      ],
+      "size": [
+        1.5,
+        1.1400001049041748,
+        1.0
+      ],
+      "triangles": 17268,
+      "vertices": 8958,
+      "meshObjects": 6,
+      "groups": [
+        {
+          "name": "AlloyFrame",
+          "vertices": 1296,
+          "triangles": 2532,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "Chassis",
+          "vertices": 424,
+          "triangles": 824,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "Fasteners",
+          "vertices": 2496,
+          "triangles": 4784,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "FrontPlaque",
+          "vertices": 112,
+          "triangles": 216,
+          "materials": [
+            "TouchConsole_Plaque"
+          ]
+        },
+        {
+          "name": "ServicePanels",
+          "vertices": 4574,
+          "triangles": 8804,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "TouchGlass",
+          "vertices": 56,
+          "triangles": 108,
+          "materials": [
+            "TouchConsole_Display"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TouchConsole_LOD1",
+      "boundsMin": [
+        -0.75,
+        0.0,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400001049041748,
+        0.5
+      ],
+      "size": [
+        1.5,
+        1.1400001049041748,
+        1.0
+      ],
+      "triangles": 3232,
+      "vertices": 1796,
+      "meshObjects": 6,
+      "groups": [
+        {
+          "name": "AlloyFrame",
+          "vertices": 396,
+          "triangles": 732,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "Chassis",
+          "vertices": 148,
+          "triangles": 272,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "Fasteners",
+          "vertices": 312,
+          "triangles": 520,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "FrontPlaque",
+          "vertices": 48,
+          "triangles": 88,
+          "materials": [
+            "TouchConsole_Plaque"
+          ]
+        },
+        {
+          "name": "ServicePanels",
+          "vertices": 868,
+          "triangles": 1576,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "TouchGlass",
+          "vertices": 24,
+          "triangles": 44,
+          "materials": [
+            "TouchConsole_Display"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TouchConsole_LOD2",
+      "boundsMin": [
+        -0.75,
+        0.0,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400001049041748,
+        0.5
+      ],
+      "size": [
+        1.5,
+        1.1400001049041748,
+        1.0
+      ],
+      "triangles": 472,
+      "vertices": 308,
+      "meshObjects": 5,
+      "groups": [
+        {
+          "name": "AlloyFrame",
+          "vertices": 120,
+          "triangles": 188,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "Chassis",
+          "vertices": 50,
+          "triangles": 76,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "FrontPlaque",
+          "vertices": 16,
+          "triangles": 24,
+          "materials": [
+            "TouchConsole_Plaque"
+          ]
+        },
+        {
+          "name": "ServicePanels",
+          "vertices": 114,
+          "triangles": 172,
+          "materials": [
+            "TouchConsole_Surface"
+          ]
+        },
+        {
+          "name": "TouchGlass",
+          "vertices": 8,
+          "triangles": 12,
+          "materials": [
+            "TouchConsole_Display"
+          ]
+        }
+      ]
+    }
+  ],
+  "roundtrip": [
+    {
+      "lod": 0,
+      "triangles": 17268,
+      "boundsMin": [
+        -0.75,
+        -7.820192848839724e-08,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400002241134644,
+        0.5
+      ],
+      "uvLayersPresent": true,
+      "finite": true
+    },
+    {
+      "lod": 1,
+      "triangles": 3232,
+      "boundsMin": [
+        -0.75,
+        -7.820192848839724e-08,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400002241134644,
+        0.5
+      ],
+      "uvLayersPresent": true,
+      "finite": true
+    },
+    {
+      "lod": 2,
+      "triangles": 472,
+      "boundsMin": [
+        -0.75,
+        -8.146034247147327e-08,
+        -0.5
+      ],
+      "boundsMax": [
+        0.75,
+        1.1400002241134644,
+        0.5
+      ],
+      "uvLayersPresent": true,
+      "finite": true
+    }
+  ],
+  "atlasResolution": [
+    2048,
+    2048
+  ],
+  "materials": [
+    "TouchConsole_Surface",
+    "TouchConsole_Display",
+    "TouchConsole_Plaque"
+  ],
+  "runtimeGroups": {
+    "permanent": [
+      "Chassis",
+      "AlloyFrame",
+      "ServicePanels",
+      "Fasteners"
+    ],
+    "screen": "TouchGlass",
+    "frontLabel": "FrontPlaque"
+  },
+  "screen": {
+    "centre": [
+      0.0,
+      1.0127595663070679,
+      0.007712971419095993
+    ],
+    "width": 1.23,
+    "height": 0.79,
+    "right": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "up": [
+      0.0,
+      0.2079116851091385,
+      0.9781476259231567
+    ],
+    "normal": [
+      0.0,
+      0.9781476259231567,
+      -0.2079116851091385
+    ],
+    "pitchDegrees": 12,
+    "glassCentre": [
+      0.0,
+      1.0088469982147217,
+      0.008544618263840675
+    ],
+    "halfNormalThickness": 0.003,
+    "overlayClearanceAboveGlassM": 0.001
+  },
+  "frontPlaque": {
+    "centre": [
+      0,
+      0.841,
+      -0.498
+    ],
+    "width": 0.98,
+    "height": 0.075,
+    "right": [
+      1,
+      0,
+      0
+    ],
+    "up": [
+      0,
+      1,
+      0
+    ],
+    "normal": [
+      0,
+      0,
+      -1
+    ]
+  },
+  "serialPlaque": {
+    "centre": [
+      0.586,
+      0.841,
+      -0.498
+    ],
+    "width": 0.056,
+    "height": 0.047,
+    "normal": [
+      0,
+      0,
+      -1
+    ]
+  },
+  "screenIsBlankForLiveUi": true,
+  "frontPlaqueBlankForRuntimeText": true,
+  "noPhysicalButtons": true,
+  "noColliders": true,
+  "previewsAreNotGameplay": true,
+  "previewFixtureNotExported": true,
+  "textureChannels": {
+    "Albedo": "sRGB RGB",
+    "Normal": "linear tangent +Y",
+    "MetalSmooth": "linear red metal, alpha smoothness",
+    "MetalRough": "linear red metal, green roughness"
+  },
+  "notes": "Authored model/PBR only. Runtime screen must use live real function. No plan/save mutation or Unity build verification in generator.",
+  "sha256": {
+    "tools/CreateTouchConsole.py": "82bf637639bfaf3a5d4328c89f13a0c6cdd24167bb8bebf05894315acdb34485",
+    "Design/Models/TouchConsole/TouchConsole.blend": "3d4204de8f5198b73b22361fa2e03f1a7a6e4213ec2f4e24356193674542667b",
+    "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Display.mat": "ea0f5d52e8e35f9cf4f5226978597e39212f58343c4e5b9076df786f83bbc4f1",
+    "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Display.mat.meta": "6b5ba0baf7f273ee2afb92322d72b92dd7c8b13d0a50607affbd51488bfcdfa0",
+    "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Plaque.mat": "83a84d11b812f9940ef1511659439af6957b8c972886e302dc1c57f17a57d4fc",
+    "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Plaque.mat.meta": "e23959f07db9d15c3d7fdc40bb2c0f40e5d51e829eb3366c27b2ea24d662ee5e",
+    "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Surface.mat": "d745f614ef1f1554accdc8280f10e764e55a8263346e9bb187c3bdc87b317a20",
+    "Assets/SpaceMiner/Resources/TouchConsole/Materials/TouchConsole_Surface.mat.meta": "73d8b5f2967d44cfdde69ab9dd43fe50d7d5b78b28d8548f9579be0acd3272a5",
+    "Assets/SpaceMiner/Resources/TouchConsole/Materials.meta": "9a945052db30b9617b4756bb61c46967135dd8f2509acd9af80aba9dc4606667",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Albedo.png": "76178e66dbbe52c0cb1567fe0b6b7d98107db2a99a94271e95ba58cac54f6186",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Albedo.png.meta": "6193a5c7560b333af317fb093688538bc164345919ef1977a1d074e6e688fd38",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalRough.png": "711e684cca8e1db7f3a456e486290633722c5612af44ee772e81a43f74359776",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalRough.png.meta": "2a426ec18bfdb41559a7a596eb2801792d897b2e2240d4c482515293c73fdf16",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalSmooth.png": "e8855ab516eca06bd9f2c3d8ec37d6666ba54e48482b668962f3d90381322ed4",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_MetalSmooth.png.meta": "f06a6540e5a281936562883c295db814a029f6b99b611774bf47b2729f5f0f1a",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Normal.png": "47cbf41d87a08dc7fbeeaf5e0483d722462ee046b9752c2c0a0e6bfc59a57eaf",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures/TouchConsole_Normal.png.meta": "4d88330f348da3d3cb6c9f1a37f996f51ba85d9cf6c13376b2a1581c3244972c",
+    "Assets/SpaceMiner/Resources/TouchConsole/Textures.meta": "d05253a8fa448fcbb0dc8aa806032fe503507602e87fe1fa696f0853cc7a4572",
+    "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD0.fbx": "ea5d4b4a9b0bfb5b3ada37875cac497c95443dee6220eb02b142e77126ada21f",
+    "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD0.fbx.meta": "fb352fac88f34d335578459708b2b56a0ceff99954841267f2713a49ebe501f9",
+    "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD1.fbx": "8af94a66d0b343ae292c87383d91c170f5d5f3b0bc721eb5d65157e877628d80",
+    "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD1.fbx.meta": "14c57ad8a4b1aa01c01d920ef3462b8b1aa9e3640af61c3874a9d84fcef65f74",
+    "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD2.fbx": "ce0836592855796c6b3eb49222f366cbda76e681cea7cb9b2aaebd25a38f8974",
+    "Assets/SpaceMiner/Resources/TouchConsole/TouchConsole_LOD2.fbx.meta": "37c128549e5b91f04f4afaeb5e28adc00abf573a0ff9fe0fd664017675f9ec55",
+    "Design/Models/TouchConsole/TouchConsole-Preview.blend": "b7e70b107be610c9b630f0c3c502334bec4d5ee7ccafe7d56a5a53e6b6199cea",
+    "Design/Models/TouchConsole/Renders/01-authored-blank-three-quarter.png": "f1945abd85bf1e31db1479b0404d5af8e37ac8b9b43347cb2368a610679ab2ec",
+    "Design/Models/TouchConsole/Renders/02-authored-front.png": "e1d4fb42d7b619834fe240fd144322684c7ed06a11168f0f91a6c9b29be86e28",
+    "Design/Models/TouchConsole/Renders/03-authored-side-rear.png": "55fca78314a14f292f499ef067d3d56f74f05d011cc0da29fa9bd333d8a7ea59",
+    "Design/Models/TouchConsole/Renders/04-demo-screen-fixture-not-gameplay.png": "f16f7dbbf7cfd535e20c9b181de3c0aaf8ccaceabac75b20a334afc4e296d68e",
+    "Design/Models/TouchConsole/Renders/05-demo-front-fixture-not-gameplay.png": "a2d901711c8f65272237e9a7821cef30b3687c120ac2eec49dafadb57113c6d5",
+    "Design/Models/TouchConsole/Renders/06-demo-side-fixture-not-gameplay.png": "105c8c6e3406e8103fe9674e108193d28af8abd0436731d95e780e3561dd76e2"
+  },
+  "nativeBlendCompressed": true,
+  "previewBlendCompressed": true,
+  "previewTextIsGeometry": true,
+  "previewValuesAreExplicitDemoFixture": true
+}

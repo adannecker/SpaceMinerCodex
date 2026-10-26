@@ -68,7 +68,7 @@ namespace SpaceMiner
         }
         public bool OwnsScreenPoint(Vector3 mouse)
         {
-            if(StartMenu.IsOpen||localCamera==null||!localCamera.GetComponent<OrbitCamera>().ShowHud)return false;
+            if(StationOperations.TacticalViewActive||StartMenu.IsOpen||localCamera==null||!localCamera.GetComponent<OrbitCamera>().ShowHud)return false;
             Vector2 point=UiLayout.Point(mouse);
             if(NavigationRect.Contains(point)||(selectedPlanet>=0&&InfoRect.Contains(point)))return true;
             if(localCamera.GetComponent<OrbitCamera>().Distance>500000)
@@ -148,7 +148,7 @@ namespace SpaceMiner
         }
         void OnGUI()
         {
-            if(StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput || localCamera==null)return;
+            if(StationOperations.TacticalViewActive || StartMenu.IsOpen || IntroSequence.BlocksGameplay || SettingsMenu.BlocksInput || localCamera==null)return;
             if(StationInteriorMode.IsInside)return;
             var orbit=localCamera.GetComponent<OrbitCamera>();if(orbit==null||!orbit.ShowHud)return;
             using var layout = new UiLayout.Scope(UiLayout.Scale());

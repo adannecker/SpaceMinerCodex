@@ -1,5 +1,5 @@
 {
-  "snapshot_date": "2026-10-09",
+  "snapshot_date": "2026-10-26",
   "threads": [
     {
       "id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
@@ -78,7 +78,13 @@
       "topic": "Desktop-Fortsetzung: Unity-Spielsysteme, Station, Bergbaudrohnen und Integration; vorhandener Hauptchat umbenannt",
       "source_archive": "05-MainDev.md",
       "source_thread_id": "01a11007-2934-7520-96c3-3991e89ccaf8",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T00:03:50.518Z",
+        "basis": "Existing curated project prefix retained; only reviewed project continuation after prior snapshot appended. Earlier raw texts deliberately excluded.",
+        "after": "2026-10-09T18:12:00.786090+00:00"
+      }
     },
     {
       "id": "01a11264-3942-7ed1-90f4-94bd00b82d06",
@@ -87,7 +93,12 @@
       "topic": "Desktop-Fortsetzung: Repository, Git, Rechnerwechsel und gemeinsame Kontext-/Chatsicherung",
       "source_archive": "04-GitHub.md",
       "source_thread_id": "01a11002-9eca-70a1-95ec-00cbc84132ee",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-09T18:09:33.078Z",
+        "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
+      }
     },
     {
       "id": "01a10dd1-fb99-7451-87bf-2d47afa4be7b",
@@ -96,7 +107,12 @@
       "topic": "Desktop-Fortsetzung: Asteroidenformen, Materialien, Generator und Darstellung; vorhandener Asteroidenchat umbenannt",
       "source_archive": "06-Asteroidenvarianten.md",
       "source_thread_id": "01a11007-53fc-7d60-af57-f15ed3399d0d",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-09T18:11:09.830Z",
+        "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
+      }
     },
     {
       "id": "01a10dac-caae-7492-bec8-24aac83ec430",
@@ -105,7 +121,12 @@
       "topic": "Desktop-Fortsetzung: Mira, Story, Intro und Sprechertexte; vorhandener Storychat weiterverwendet",
       "source_archive": "07-Story-und-Mira.md",
       "source_thread_id": "01a11007-910e-7ff0-a749-82c7af51fde7",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T00:01:10.106Z",
+        "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
+      }
     },
     {
       "id": "01a11264-4cc8-7ef3-8382-90ae4253b766",
@@ -114,7 +135,12 @@
       "topic": "Desktop-Fortsetzung: Mining-Pulse-Menü, modulare UI, Player-Einstellungen, Rebinding und Barrierefreiheit",
       "source_archive": "08-Settings-UI.md",
       "source_thread_id": "01a110c0-50f2-7fa3-8a18-6905e864e5d9",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-25T23:27:47.510Z",
+        "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
+      }
     },
     {
       "id": "01a11264-5c12-7473-99be-5d5931f63656",
@@ -123,7 +149,12 @@
       "topic": "Desktop-Fortsetzung: Gameplay-/Configuration-Musik, Loops, Übergänge und Effekte",
       "source_archive": "09-Sound-und-Effekte.md",
       "source_thread_id": "01a110fe-dd07-7f93-9a3d-922c469eccf6",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-10T22:33:40.641Z",
+        "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
+      }
     },
     {
       "id": "01a11264-6c41-7131-9f43-3de64ff13f86",
@@ -132,7 +163,12 @@
       "topic": "Desktop-Fortsetzung: Tier-I-Techtree, Forschungsdarstellung und spätere Forschungsmechanik",
       "source_archive": "10-TechTree.md",
       "source_thread_id": "01a110fc-1a02-7ad0-8b6e-48129d0b7453",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-19T21:18:21.291Z",
+        "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
+      }
     },
     {
       "id": "01a11264-7f0e-7dc2-abf0-aa313f838f8c",
@@ -141,14 +177,24 @@
       "topic": "Desktop-Fortsetzung: Fahrzeuge und Drohnen, Gestaltung und Abläufe",
       "source_archive": "11-Vehicels.md",
       "source_thread_id": "01a11127-1368-7990-b23f-38b3524b44ca",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-26T00:02:36.072Z",
+        "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
+      }
     },
     {
       "id": "01a112cc-1896-7182-8dae-4f9802fab337",
       "title": "Ideenbacklog prüfen",
       "file": "21-Ideenbacklog-Desktop.md",
       "topic": "Entwicklungsideen, Drohnenrollen und Umbauten, Stationsnavigation, Sonne und Planeten, Gefahren, Intro-Cinematic und Steam-Ausbaustufe",
-      "host_id": "local"
+      "host_id": "local",
+      "export_review": {
+        "review_date": "2026-10-26",
+        "through": "2026-10-09T18:10:15.610Z",
+        "basis": "Visible project messages reviewed; historical assertions retained as history, not current verification."
+      }
     },
     {
       "id": "01a11a1b-ae77-7c81-95a0-6b1713dd0579",
@@ -166,5 +212,6 @@
       "source": "cloud_snapshot",
       "snapshot_date": "2026-10-08"
     }
-  ]
+  ],
+  "review_scope": "Registered project sources only; no raw session import or reconstructed attachments."
 }

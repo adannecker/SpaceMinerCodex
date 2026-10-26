@@ -1,0 +1,782 @@
+[
+  {
+    "File": "Assets/SpaceMiner/AvatarLab/MiraAvatar.cs",
+    "SHA256": "46299682f5be6408e034e3da7ffcb6bd009b3a2ef67771fd3e08e859124c691c"
+  },
+  {
+    "File": "Assets/SpaceMiner/AvatarLab/MiraAvatar3D.cs",
+    "SHA256": "142394e83af1094c7985bb649793eeddefa338ae84ab2c9d71e74aed19e11f7e"
+  },
+  {
+    "File": "Assets/SpaceMiner/AvatarLab/MiraDialoguePreview.cs",
+    "SHA256": "5c7bde5dd9c67180e0473d7267da5d84788b7c143e12e0d04ceed405f08cced0"
+  },
+  {
+    "File": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs",
+    "SHA256": "52321949eb5f4fa56698e56b1091fd4dd0c7ddee7165190795c3806b6b7a450e"
+  },
+  {
+    "File": "Assets/SpaceMiner/AvatarLab/MiraTripoDialogueCheck.cs",
+    "SHA256": "7b335462ac9cd6c3fbcd4b1320037625dbfb85cefa33da0f2b23475ed3546bdb"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/AsteroidAssets.cs",
+    "SHA256": "db583485fa82d52e8fc1a4148783bd7ff41cbdc54ddfc074670a42850a882a7c"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/AsteroidValidation.cs",
+    "SHA256": "1d1520aab797e3175adfabf43f812665b2e08195224ea154f961d0c509087c58"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/ConfigurationAudioValidation.cs",
+    "SHA256": "0651fb32102394b1b87435e9e317d40a3eac0a954e65b9f8d8f74d02a637d838"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/HallExperimentBuild.cs",
+    "SHA256": "1b75076de40b8594b97b3a66c35dcf6dfad9eb755afd1b92ba8b464dbf95d0fe"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/IndoorDroneTrafficBuild.cs",
+    "SHA256": "f5032f347989d3b75ec4498eb11668412bee45d4dc62c38ed394136be2d28c66"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/MemoryCinematicBuild.cs",
+    "SHA256": "6806b430b1e7ca386ed4cb2b066fd613d541ae0ffb6426fc2dd1d92e40c157a5"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/Mira3DDemoBuild.cs",
+    "SHA256": "3ec7225d735fd6bbd34d4cb34e3a65ff3a500c153d060cbb0632f1aed21fda45"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/MiraAvatarLabBuild.cs",
+    "SHA256": "5ea0a0239a063a3bdaa6aa476be6fe4493c9f89ef0cf9e603f9c3127fdc47e78"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/MiraDialogueBuild.cs",
+    "SHA256": "f9741d04262282cf5f93b3f31b2be7b76034b382924a47cd228ff275e90ede25"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/MiraDialogueModelsBuild.cs",
+    "SHA256": "6c167361072d2f91097af27448551ace62fee20868f8d26ac30a70b5d719cb3d"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/MiraTripoDemoBuild.cs",
+    "SHA256": "9c20b15069e80583219d47679e53f48c304a93b70e4df38d059c22dc85ecec0a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/MiraTripoFaceShapes.cs",
+    "SHA256": "fed783de54081b2e473933e9f82aad923f6b61681b326868efc7ded377d08af4"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/PowerDashboardBuild.cs",
+    "SHA256": "2164e88c98a6addc4899c2b5181892b7c3f8bc82cb4dbc72c01a0406bf5f8b92"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/PrototypeSetup.cs",
+    "SHA256": "729ce838a7c2fea8bba0df99acf433b069a6b267598aa7d5beb9c1a4e6dcd7ae"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/ResearchSimulationValidation.cs",
+    "SHA256": "f811c6ce92c9582bc730d7dee6481f68da26d14f8afa3a6741656aa79295bb46"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/RingSimulatorBuild.cs",
+    "SHA256": "68feb24371fa2fe35b185c52ef5d8793e648ecfdfe0e902034a9cc60202ff088"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/SettingsValidation.cs",
+    "SHA256": "85b90fbaa2fdf290f94d85e224742e5ee26fa69f83ac80137e68c81a2e4ca893"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/StartMenuBuild.cs",
+    "SHA256": "23827932efdf230d50ff04cd64b159304ade61b0fd43e962f79d64d938c6583a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/StationEntryBuild.cs",
+    "SHA256": "7d3b701e7a290d68ff66646e1095abb7c9cd4459bd5a28af39989c8b9faf9e37"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/StationLodBuild.cs",
+    "SHA256": "63d87d5eb568e56551e6ff7c134ef7fb0d4c78c76be5d43c7d4b21e8f6276a2d"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/StationUpgrade.cs",
+    "SHA256": "2692b4f99ae2576e08c5d447e6b5b30d02aa175d92f9f00015e37ee775ca234f"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/TechTreeValidation.cs",
+    "SHA256": "890d016d8e35dc718f40082ca88e2dd37c5b854315dd7789ff8c2e13196c9989"
+  },
+  {
+    "File": "Assets/SpaceMiner/Editor/TripoModelBuild.cs",
+    "SHA256": "d4c5728220ceb8b5a01b98b1ceec3a693c5ff3953371392c7648e9e0d2abacc6"
+  },
+  {
+    "File": "Assets/SpaceMiner/HallLab/HallExperimentCheck.cs",
+    "SHA256": "1d38a18356c4b8019d28d1d83a2ed701335bbb4384df616ba6867cc84a370114"
+  },
+  {
+    "File": "Assets/SpaceMiner/HallLab/HallExperimentView.cs",
+    "SHA256": "7dcd2755d1c4cb084f6acdc7d7b687c34daeba96c5e0ac1bbf8aeed68fd1c100"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/AsteroidCatalog.cs",
+    "SHA256": "81f2088a828420b2d0b4f8af0bdcb2ff95401e1706693f8ecb1d60120a61f2b7"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/AsteroidGenerator.cs",
+    "SHA256": "e50198bbc7e9cbad433c013746ae65e9bd6a4527ab8e45d3d814e4bd140ab8bb"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/AsteroidMeshBuilder.cs",
+    "SHA256": "66809de8d700412268ac49fe88d3932b7541f13adbd5dc7f790e10916cf6818e"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/AsteroidResource.cs",
+    "SHA256": "83706a2b6e82ba8f34e661b0e92bc8d5dc0a877e40ee853cb2084b684cca6080"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/AsteroidType.cs",
+    "SHA256": "48bff065a15e3dfe602c8ef5a553eaeaac45005ed9d8a716dc935fa3726ffedd"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/BeltSettings.cs",
+    "SHA256": "76f47d073d91bdafe0c0eb0fe636bee0d5335c7d1564d89f53048e95ab7889d2"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/CampaignDroneFleet.cs",
+    "SHA256": "9242b77c87741191cc5484343fff433b24c274d85ae6cd60277f4c15e9527042"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/CinematicLibrary.cs",
+    "SHA256": "5a54319412d351301bd50e6e28503d74605f6f3998604689c2910e1c1727fb3a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/CommandRoomLayout.cs",
+    "SHA256": "cf92e8991009107792ae2f7f59fa316b36ecfa8e4615824a152cd7d3dd516b46"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/CommandRoomPlanner.cs",
+    "SHA256": "67707f669a4fe1e397ffc616ee8687a58081829b91e9a526febc3311bc9777c7"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/CommandRoomPlannerCheck.cs",
+    "SHA256": "1253b0c4a126a4bfdb85e8f7e2f04856d72c870d80a93488adf3b9d99e8a03aa"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ConfigurationAudio.cs",
+    "SHA256": "089d49ce60077c11d998c973782551cfe87b303cceabdfc9650640762cb70934"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ConfigurationAudioCheck.cs",
+    "SHA256": "651243d4903942cd6bbc17eac2f24276f535d1fa536cc9861a9307ab22e7ad44"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DeveloperGameConfiguration.cs",
+    "SHA256": "f73e8c88ff1bc1241f80e4cece670b17d6120e2f7be1c2b2b5c06e7796cf3630"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DisplayModeController.cs",
+    "SHA256": "7548b22e79425e132fa442ad905da626b40f4d0ff7913b8aae2d0ada35a5acd0"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DroneAgent.cs",
+    "SHA256": "d7d608fc65dda872785a1b6fc4e8c0704295fb331947f54d3e4ef28d03fbf8e5"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DroneCargoFillVisual.cs",
+    "SHA256": "964855eaea4f1f7873019490a2e9eec8801cb29ef20ea3fa8f0177d6e042355b"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DroneCargoProfile.cs",
+    "SHA256": "f45408db17900da69d47169a8096a785f34547e4e922bea622e8f5974ff72c40"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DroneFleetReadModel.cs",
+    "SHA256": "cef7059d3f69d2ec405324827bb5d30f78ceee5e30d6308ff058959718c9270d"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DroneFlightPlanner.cs",
+    "SHA256": "12d53538b7163c4c600f25267788b2ebd34b0643ce970e4b8d27fad19eddbca4"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DroneSizingCheck.cs",
+    "SHA256": "49778a5124e4327136f0e55b9364d0ccee1a1214d5670e83a5796a01a2ba4f45"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/DroneToolMount.cs",
+    "SHA256": "cbd708f5af9fd2b467b7b1342065e98e0c3df5f4ac1ba2b67e036aaab3257bba"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/HoneycombHull.cs",
+    "SHA256": "640a2e46b0d205086fbefd51b58e004d0529397de4c0de95d06f2cd3b6430415"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/IntroSequence.cs",
+    "SHA256": "2325e9a49ca59b3d6d6243cdc6eda8f5cdb7e8222223ec9dc71a96019180ead2"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/KeilStationCheck.cs",
+    "SHA256": "96b3d868712d12b50dbf60ea07ae2827f44a66bd9771687df6b500bfb15d46f8"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/LightingVisualCheck.cs",
+    "SHA256": "ab7dcd850e54c37ab19f0a915ed17f8aef26337338821edfefb521a2491c8779"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MaintenanceDroneShowcase.cs",
+    "SHA256": "6fea7606ddeb0b217a08ed10696a5f08d813664bd0f6c338a54fed0fff67d290"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MaintenanceLaserVisual.cs",
+    "SHA256": "22e13736cd9ab5972bd46f12710b4469bcaff496074f7a7918a7e704f025652a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MemoryCinematic.cs",
+    "SHA256": "fa2950e299af3172d7d5be0e91c36b8e6d18d037a80f8e6bbcf50a50bfa122d4"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MemoryCinematicCheck.cs",
+    "SHA256": "3a4310b745c33215c6f5c6188dac790818d413505fad5c1232d5ff3fb6ca3ea4"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MemoryCinematicExport.cs",
+    "SHA256": "a7053db01717715517fae0d97513c69125ab113f4f1844ab9cb9c2bd407f7223"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MillionAsteroidCloud.cs",
+    "SHA256": "db163bdf82fceb9d46583496b2e45a3c63b27e36176093287026af08eda2a6cc"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiningBalanceCheck.cs",
+    "SHA256": "f071d559413d34170ab2962324e5304c1395666da72b182a4b863186ea6514ce"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiningDroneVisual.cs",
+    "SHA256": "5d394d720df4d7b8ab13f1a08df000054bd844f949638f313a0cb66674f8b4ac"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiningResearch.cs",
+    "SHA256": "66f5ac8a290bcf9766546a922aca08e5c3a8982ecb82bdae4aca1e34898a62c5"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraDialogueActing.cs",
+    "SHA256": "2462a521ad88333717775cdb287c490766f0ae7e7b0a1e108dcc0fc50a049640"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraDialogueActingCheck.cs",
+    "SHA256": "f57e7dfe648b21c0c9f23bbf0a3ca31eb3be3e1dafca084d036b1e0a88041359"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraDialogueDemo.cs",
+    "SHA256": "e20173793c9310eabedd1fa328fd5e863e8daeef377e409079cd29abee234404"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraDialogueModelsCheck.cs",
+    "SHA256": "87eae8b88d822af380479c1457c5aa495cac7dbdf0e1a0c65d3a383a8d520055"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraDialogueModule.cs",
+    "SHA256": "45945730c0bde4b2d03ae0624c4a55453e37605d1bcb077b2625052618fc3d77"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraDialogueModuleCheck.cs",
+    "SHA256": "5940937232c82e7de917c0f0cf5a988d6e91843c79dc775d569e8dcab39aadcd"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraPortraitView.cs",
+    "SHA256": "fc11593b5c6fe67ee2f07a658fa947f21e342a8283030199fac2bd224896028d"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraQuestDialogueCheck.cs",
+    "SHA256": "83fe65b3819fb3979edc18c96ae11c93d41638b9d21f3d992d3df319ae4eca0a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraQuestDialogues.cs",
+    "SHA256": "80b905e427a81c7f70c49a419694a0433b57366f7171692fa090b54f54056493"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraQuestPreview.cs",
+    "SHA256": "a4e8193094f61070bacfbfcc3059e0fecc04b22bdba7765efb7d5fd1c6b4a473"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/MiraVisorOverlay.cs",
+    "SHA256": "bbeea000af3d4997a5660714c9529e9951c4de3047f67039dfaf9547495060e8"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/OrbitCamera.cs",
+    "SHA256": "d1ea27461e97ab0516bea3f520f15cfd68044a084692a7cd4295a5413253090c"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/PlanetLore.cs",
+    "SHA256": "470e124708c7d8fd73fb00c6b56ef53e3059fc18fd1792b1cef08e6a605292ca"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/PlayerAudio.cs",
+    "SHA256": "7abf659e99b300230a318bf8eb5c116b0be9cb35229942e86d4b2822aa69f1f9"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/PlayerInput.cs",
+    "SHA256": "7a9e1acc5cfad125afaad663f2138626688365ef238fca7dc93572318fc3fad8"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/PlayerSettings.cs",
+    "SHA256": "1e41a6be5d19f72c2d3e58f05389c06b5cc18c2a41f7423cb9270c284ae3e1b6"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/PlayerSettingsStorage.cs",
+    "SHA256": "30b99e55094b7dc20492657681169bbcf67d823b5fb6acd2ec42321471df07ef"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/PlayerVitals.cs",
+    "SHA256": "ce7a0ab05208c162a82d5a7e56cace71f172f82c61cdf855c23952761af7fc56"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/PlayerVitalsCheck.cs",
+    "SHA256": "26de2fb1f2d2934dfb395db8628c1f2dc4a48211ca0684fb06be31e1d92896c6"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/PrototypeSmokeTest.cs",
+    "SHA256": "5ba42094c1bff28189b496c82682782667979ce7a6a9070265438cebe2c67ff7"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/QuitMenu.cs",
+    "SHA256": "29c03ca648aade20e2311f87577cb05ccd08563029260eb4db0af496e96b9cf1"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ResearchIconCatalog.cs",
+    "SHA256": "f2c254e9cb028b46defc0b4fb011d0342d5ff1ed25ab0e7f617ed65d0fc218cd"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ResearchLaboratory.cs",
+    "SHA256": "538badcd3c9fea6b2be90dcfa5d3a14e54a676837d3dbe5ff37448ac97558004"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ResearchMiniatures.cs",
+    "SHA256": "0dab8622661119113ca4c10b56bfedf2ed6fba5f1c9066a762166e77ac0b7fa0"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ResearchSimulation.cs",
+    "SHA256": "07318a90e7fd73b21cd019f2b0b344122e2b04c21128c3ea97a72b65cdfdf6e0"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ResearchTreeViewport.cs",
+    "SHA256": "d59c3426c4074824e74ca7fa45c029f85687fb93a0119be8298ac6cd512f1652"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingConstructionCheck.cs",
+    "SHA256": "8ba1c1fa67c1cf38acd468a6df5cbf1943424eab2bae89374aa15ebbc7a6af11"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingConstructionModel.cs",
+    "SHA256": "299f34ed3f5ab2b9d47dcc2350be7357e9a0da4ebf5dfc13b5323f06230b6209"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingConstructionSimulator.cs",
+    "SHA256": "96d25629eb8dd7182106da22ec9eb9b7f59f17f54f56042798d06f61b188d0d8"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingConstructionView.cs",
+    "SHA256": "0a2b2c7d0f0f53a6e7b0c355fa132e9406fcfcf53e1640e98058039cf6a6e467"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingWalkthrough.BatteryBays.cs",
+    "SHA256": "5a314befa21666e14db016754498543b98421145d5c92076afc778a75d96d147"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingWalkthrough.cs",
+    "SHA256": "a29678484ba8d457f766ff489da94708f6f578dd6a5496b9cdadc149f71739ce"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingWalkthrough.Expansion.cs",
+    "SHA256": "c78fe3db7965babfeaf7b61d3a1b471cf2a2c0b37b835833cdf4dc585b485516"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingWalkthrough.Exterior.cs",
+    "SHA256": "238f05efa7d2e6f528b3f224647eb0bf1d64985de905a290cb61e6ff541013f8"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingWalkthrough.HullFrames.cs",
+    "SHA256": "4e49a193e359372e0e33a35945683dec38a4419cf611f04442990538ab105cb7"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingWalkthrough.MagneticLanes.cs",
+    "SHA256": "6bcdd72127afb0a1714d50f239cdc375d5a6bfb8c3f81ab6f685924690439597"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RingWalkthroughCheck.cs",
+    "SHA256": "7dd7264372ed1e28bac42f2202d5fa28c09e2d39e8964ec6855fdc44141286a7"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RoomDefinition.cs",
+    "SHA256": "92ca620013adf89c9b05869d079c87e3bf000e7a6c1e38c4e674bccdadc1fd6f"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/RuinedWorld.cs",
+    "SHA256": "104e314fd2f4651c150e521417ff2752d8feb7fded2da6885d444d188461f918"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SaveGameMenu.cs",
+    "SHA256": "c7c1894719a89bee663248c2b20e5615cac588f58a32d11c354c7b7608d55885"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SaveGameStore.cs",
+    "SHA256": "0a232058f87d5c51f4941924dea9f8c4e7f7421aa48f4d3fa76c23d6cfb228cb"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SaveSessionCheck.cs",
+    "SHA256": "3d989507ae22512fb4d7b2ae3a77c38f5b73e4f0d6d0fe67f8a84272f781e345"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ScannerProgression.cs",
+    "SHA256": "75827eac0962b58b830083b28f033ae6606341984b10c9a0ed214c2d5d22e748"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/ScanSaveCheck.cs",
+    "SHA256": "a4479c67219f7c0169aea1d6f631fd76e6526461c9ee1aae171b632e27a98355"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SettingsMenu.cs",
+    "SHA256": "78cd843795709c464c1706dfa24a99aa5f0dfa25361c9e2c033611dcd59c97db"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SettingsSession.cs",
+    "SHA256": "624a8f3ded744ebc571464f38e7bb113d23bbd0a84c43bab9900e03510c9a538"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SettingsUiAudio.cs",
+    "SHA256": "724048450038d5816f87824f2da8651a74886c4579b76236e99cccb2590c1252"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SpaceMinerUi.cs",
+    "SHA256": "763770769d67375c5661a18a1056e12b3396df65cc5f3dbbfbe351861931f776"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SpaceObject.cs",
+    "SHA256": "0cae912f20d3c1b77edd0f45f377127fde3c9efafb1f1ecdfb0cb12f7f38b602"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SpiralAsteroid.cs",
+    "SHA256": "ec3815e04c785218b4dc87936b4a0e803ce4da6108212e217b17d5323ecd81b9"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SpiralBelt.cs",
+    "SHA256": "0a139bae5bdf0b716b668dedacb0fd84566022f6b4fcbe81351cae1d4faa34d3"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/SplashAudioCheck.cs",
+    "SHA256": "d96174d5bf7e65c1bf9d023f36c46a827ba242aa788f65a41848c9b5823b180e"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/Starfield.cs",
+    "SHA256": "89c75ba55b503a3f51d2be9c41a1805ccbaaf4fca9e2c07ea14e3fe11ab02713"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StartMenu.cs",
+    "SHA256": "579cab21fb65d0e56aa857c24dda2aec5cab9a429790335ae0d46331a4551773"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StartStationCheck.cs",
+    "SHA256": "df7717b4f0ec79fa10a1d911c77789058d0282baac2f7d1029e60f30e9dc0bfd"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationAirlock.cs",
+    "SHA256": "0c277464a62fdc6f5744bc46a75e48f28ebc91d06c960ee8b479efb3e455fb75"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationAperture.cs",
+    "SHA256": "8c905261cdb903e2ce1068965d651bac320ebf61c9bb9832b47e9de2e5b8d1a1"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationBatteryBay.cs",
+    "SHA256": "b551b307570046ecdd96a7334d4add21e65a448a5a5e253ab20cec1216970ced"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationBatteryBayCheck.cs",
+    "SHA256": "4366bcfed2c29dce59692fd42ea2f5aa4dc54cb8e55d0bf90df82a262536cfff"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationBatteryPlacement.cs",
+    "SHA256": "8a278fe884d944137ff3c35c00ce68679beccbc5a53d28247f19c329f72cb86e"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationBatteryTelemetry.cs",
+    "SHA256": "830155be56566c53dc8a6db5f1aa1cbe6ca8a41d382b7681ac49149173280567"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationCameraVerticalCheck.cs",
+    "SHA256": "84a8e9f7e1fa3a3d3942c8979d77e1e3b54a5b9209f41b3c6c60b3a6f7d85140"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationConstructionPreview.cs",
+    "SHA256": "33bcceeeb1fddec7d038e4832eb2bd6087670b9c0f52c94bcfc48756e9b40a6a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationDebrisCheck.cs",
+    "SHA256": "e64ee3ef4d756ebfb00bacff90445dfe3923473923ad82b815d959715a0d8fcd"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationDisplay.cs",
+    "SHA256": "d9aba28d7d986084283f7e18d87b3689bd70704e4e4db4690ea0874a6e6946f6"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationDockInfrastructure.cs",
+    "SHA256": "2501b2e16dfb4b7ab3ad45121bae57e7e8d5e31ea4b71abbaf2a3ed5917b885f"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationDroneConsoleCheck.cs",
+    "SHA256": "d91a1de7901776057228e890935a070b38921ab17d213ca629a85bd63f2ebb7b"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationDroneHall.cs",
+    "SHA256": "25f96005efce1603c4fe7586ebf32113e072613f946922769dc35d14e5b7fb11"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationFirstPersonHands.cs",
+    "SHA256": "078e6250c990466d3078061ad308630e5c8268c06fe1eb2855236d203155931b"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationFirstPersonHandsCheck.cs",
+    "SHA256": "a8a1c72c26c0bfb6b4655291bab2c981951e7738e1f27aef680a8711250c1cd6"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationHabitatCheck.cs",
+    "SHA256": "48cf17541a8cb35d7aa3e8406ef0b62eb6b1cea3deaf9d1236a7d0a60cbcbb82"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationIcePlant.cs",
+    "SHA256": "0bdbee8759bbccd2e7dcd64f27047d633435ae85d1b4cc99dd502eb3efdc62ae"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationIcePlantCheck.cs",
+    "SHA256": "94677032931497fb737766c5e24c9a8f2c5fd79738c3e53942845cf2df3afd70"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationIndoorTraffic.Crossings.cs",
+    "SHA256": "0178b49bc9e3938780814910cb2d42a27008957893881674a20cc90ada685051"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationIndoorTraffic.cs",
+    "SHA256": "c1a366fdf1350e0fbfe9df7afcc37950d0768ae105cbdd98a43ebd49b5d0bb27"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationIndoorTrafficCheck.cs",
+    "SHA256": "7cfdb8940c4acb07aedea0125f27c327ecb1975d973af281ee51adacfb87ea8b"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationInteractionAudio.cs",
+    "SHA256": "42c9de177a8383249fd16bb5ae38c9f54406cdeb6288b8ad324ba596cbccd982"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationInteriorCheck.cs",
+    "SHA256": "ed4fd70a0108b7befd2910f8bde4e20a2692904eea93b40b00dd80902200ef7a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationInteriorLayout.cs",
+    "SHA256": "d38fe4f4e07af6347725b45671b656f54fc2197b35ce3342ad7cc4af02288cea"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationInteriorMode.cs",
+    "SHA256": "8d35e81c27dc8f71837ae0800cf525d1c4508d21ce3ddaab2bc55a6ba8fe303f"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationModelLod.cs",
+    "SHA256": "0642af09cde78cdd643d6fcfb3493002f72604e68118baeb4a03e6b913e29ed8"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Batteries.cs",
+    "SHA256": "f03525c95751704cd6290caf397c1eae54baa58c42d562b38f0cdaeacc4c7902"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Building.cs",
+    "SHA256": "6f5d1874175cebe2eb4a28b0d94b8051be2505dd735d76b7273ff428f97941c6"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.cs",
+    "SHA256": "4720c39b03f46a93c7d630a091f7537d9cc3057c4d6f3b3f99b17ce2589a98a7"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Debris.cs",
+    "SHA256": "1fa7cdc70bec468543f08803a92a4276fcc8039ea2e31c4c90158987425e2f02"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.DroneCommands.cs",
+    "SHA256": "7dca7616e606246ece1bb2a6091c4c46a4800b078498481f40594bd5cb41d5e3"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.DroneConsole.cs",
+    "SHA256": "8ba230bc6091a3282de146620d1e6c2e020e358ea61eb6ca7dddd12a907465a2"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Geometry.cs",
+    "SHA256": "f29b5e8ba0e95933aa1e22aa1281225749a6759872ac98aafd83bcec95decd5f"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.IcePlantGeometry.cs",
+    "SHA256": "e8c1e7cf65c8fdd7aa7f946a13eb13232e965cf821e978f5902e3e8d5883f9ae"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.IcePlantUi.cs",
+    "SHA256": "a48d0b9b7b27e9cb05208d4a4679665b3b1a8cd89b5947d876f2711521f9dca5"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Mira.cs",
+    "SHA256": "70dcc20c733f6f20b3fa136bdd2aee1d50dc01a2800841a162d95a278e2aa646"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Navigation.cs",
+    "SHA256": "c8e733f5c5670d3f2ea9fc42bca8c8bd439ff37a30ec339ad8a1baf068bab950"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Optimization.cs",
+    "SHA256": "d3d56ff5543a824ccc50df613cfce3afac530d4e406db4d92da3d81e9539e945"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Power.cs",
+    "SHA256": "31bf767a84a028e9523d4ffc5b44ddd6c31f1ef7b447573af7623b7c2a1760ec"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.PowerConsole.cs",
+    "SHA256": "142192b5d96bbd52dd8375b917e3e8579da49880a0de50fe9af8d13c2eeed778"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.PowerTelemetry.cs",
+    "SHA256": "c7d506b8c5f34f5579f1320c64ac33950fa9b031c96eef80746c1ad4c6b8d490"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.RoomPlan.cs",
+    "SHA256": "cdb11ac24296280d4e4d9dbcd6d65592116e41f7593c14f611dcea7e71ecb22a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Rooms.cs",
+    "SHA256": "ae73da944bcb6bc8ecec3736ad2142ede738d6ca0c84a91311f50f1b50cba579"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.TacticalOverview.cs",
+    "SHA256": "c9764caf3115f5e424eee70ad79265ea0514ed31a6dfadfc26f792f1d60b6158"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Ui.cs",
+    "SHA256": "2cab73cab66a9bbef6669e638859e054c877b35181a66326f4e15eb4f0aff817"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.Workshop.cs",
+    "SHA256": "5f5b3aa0fb8f088bc7ded0e27230fb7713fdc4bbefa05e6f42d9f4af5f6a2864"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperations.WorkshopRefit.cs",
+    "SHA256": "71c5122e7c9cb77ecb425ae9bac27337caae3be9bdf6fa50bc631511a1615e72"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperationsCheck.cs",
+    "SHA256": "4ea2aa0e1db86336b85bdc59097b6de6fe49df204597a2384565cee655c7e366"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationOperationsUiCheck.cs",
+    "SHA256": "fd0f406030ede42d7dac9c7cb0fb6cf30f8159aeb5f75b289acc85b3f077b137"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationPowerConsoleCheck.cs",
+    "SHA256": "275b0597f0d6a01278dfb4fa216634b9fcd9d4927422ed0076a0e6ee095b42ae"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationPowerHistory.cs",
+    "SHA256": "d0e234385a4fa3d6b767a9e407ba375908436e3182581157abfc59d9f754897a"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationPowerModelView.cs",
+    "SHA256": "a2326ab1cf65e322d3cd1087b37d3af32dfa032f687dd9185b1167b1e938b089"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationPowerReadModel.cs",
+    "SHA256": "6ab7d1cc3c600808e216773bb5b3d2c583914483eaa64d112e7eb260d8e2f822"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationPressureGate.cs",
+    "SHA256": "de07c52a19175572734087ffaf3a604edcb3593d7d9c8e7df01c84a3dfb837e5"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationResources.cs",
+    "SHA256": "388e833311ed20f66bb6fe70fdd2e845ad936167871d0bbd45448ea4934a59f2"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationRingLanes.cs",
+    "SHA256": "3bbbab333e86c18bb9c7523f24ebc0fe9761f0ec08d92e7a9b865f4769386580"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationRoomPlanningCheck.cs",
+    "SHA256": "c2730381f9486d7900fd77bd48871d2929b550221dbda968e148ef75d7c44389"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationSupplyNetwork.cs",
+    "SHA256": "168a242cf66fc5d7676859cf18c3377bf4aac4b478f26973333eccddb8fb6d9b"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationSurfaceMaterials.cs",
+    "SHA256": "83c6f01fac9433b6a8f9a21facfc54d77af1517615efb8d67a0bc5552bb347dd"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationTacticalCheck.cs",
+    "SHA256": "be97fb00606eeaa68c3c4fb0fc10f54c5933187b2b47a32219a0563706689b64"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationTextureCache.cs",
+    "SHA256": "8627d7b73269a8697d3cd70a8bb35749a56917a6de6ea73ec366ba5be895f89e"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationUiAudioCheck.cs",
+    "SHA256": "f77a7da4f6e22c7c946616d57d6dbc408a412aeaa7f4bfa7141c5c29187bb598"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationVisual.cs",
+    "SHA256": "cdbe5802fa4c571503f7813a1083eb1458b909dbdb26b13b53643b7a6d905201"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationWork.cs",
+    "SHA256": "949020a9d21688c25e49d644de6a395ee18fd21edc8be034a0d0b9170d335b3e"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/StationWorkshopCheck.cs",
+    "SHA256": "1aaafaa67b38b3c12730536db8446a58282abc6affd7f455c641d53a953263ae"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/TechnologyCatalog.cs",
+    "SHA256": "26c73430917dfd48dd505850ffea48e35f21e8e2a28dbc3f76229053fd83b77f"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/TechnologyIcons.cs",
+    "SHA256": "85b0bf74d88d49028dbecbbefc92e38f5fa8427cb97af98ea1aca09ae1f01b66"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/TechTreeMenu.cs",
+    "SHA256": "083ad6dff7964d7fa9d8290b67823de1c5b1201b2f425bdb8f7484d1458d0251"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/TripoDockPreview.cs",
+    "SHA256": "248fbe236cc2e46abe10e1250f57cd8dea5442be7669b3d809cd21e5f4a2f9ae"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/TripoMiningDroneVisual.cs",
+    "SHA256": "353478141ea18fe1a3fe12da424318687c9551442815565d9efa89ad5fa1472c"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/TripoMiningShowcase.cs",
+    "SHA256": "768d26110d91ce14bff9799f16897a46d4de726609b3e8d51f2156247ac6dbd8"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/UiLayout.cs",
+    "SHA256": "d45e2599d6cd8ecc3b48a1236a2a21868bcc353b47e7c5e7ac7147e7b9dc97fb"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/UnifiedPresentationCheck.cs",
+    "SHA256": "8cd852c7c412b7bec631058954285bfcaaa00055f49caf70467cc3d26f83f6bf"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/WaterScenario.cs",
+    "SHA256": "bdfaf58d6131c50fc27707fcfb043fd8856d593a0dbc8f3180df7337a2debdca"
+  },
+  {
+    "File": "Assets/SpaceMiner/Scripts/WaterScenarioHud.cs",
+    "SHA256": "6e15f166d9c0b189ffe15d235620062f1ec153daaffd0a1809d20fc1f6da4dc7"
+  }
+]

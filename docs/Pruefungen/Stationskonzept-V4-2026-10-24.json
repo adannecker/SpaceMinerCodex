@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-24",
+  "version": "V4",
+  "scope": "Radially tapered inward annular sectors; reactor size research and proposed model brief",
+  "generator": "built-in image_gen edit of V3",
+  "image": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v4.png",
+  "imageSha256": "f9097eca36b12af9ce99e8a44d555669230cb45f3fa1c6590a731eaa9ef309c1",
+  "pixels": [
+    1536,
+    1024
+  ],
+  "prompt": "docs/Art/Station/Station-Erste-Ausbaustufe-2026-10-24-v4.prompt.txt",
+  "specification": "docs/Stationskonzept-V4-2026-10-24.md",
+  "reactorBrief": "docs/Reaktor-Designbrief.md",
+  "geometryProposal": {
+    "innerRadii": [
+      18,
+      29
+    ],
+    "walkRadii": [
+      29,
+      38
+    ],
+    "outerRadii": [
+      38,
+      54
+    ],
+    "sectorAngleDegrees": 30,
+    "innerCenters": [
+      30,
+      60,
+      120,
+      150,
+      210,
+      240,
+      300,
+      330
+    ],
+    "reservedServiceAxes": [
+      0,
+      90,
+      180,
+      270
+    ],
+    "decks": 1,
+    "innerChordWidthsMetres": [
+      9.317,
+      15.012
+    ]
+  },
+  "reactorModelProposal": {
+    "housingDiameterMetres": 8,
+    "housingHeightMetres": 6,
+    "collarOuterDiameterMetres": 16,
+    "shieldingVerified": false,
+    "newPowerRatingDecided": false
+  },
+  "checks": [
+    "Visual review of annular inward wedges, taper and free service axes",
+    "PNG signature, pixel dimensions and SHA256",
+    "Sector indices, depth arithmetic and chord widths",
+    "Local document links",
+    "Source read: WaterScenario default 2kW reactor and 0.5kW solar, StationVisual nominal cylinder diameter7 height5",
+    "NASA original PDF online verified: sections III.A.1, III.A.3/4"
+  ],
+  "localLinksChecked": [
+    "docs\\Art\\Station\\Station-Erste-Ausbaustufe-2026-10-24-v4.png",
+    "docs\\Art\\Station\\Station-Erste-Ausbaustufe-2026-10-24-v4.prompt.txt",
+    "docs\\Stationskonzept-V3-2026-10-24.md",
+    "docs\\Reaktor-Designbrief.md"
+  ],
+  "limits": [
+    "Image illustrative, text geometry governs",
+    "NASA 40kWe lunar reference is not a validated central station installation",
+    "No thermal or radiation shielding calculation",
+    "No Unity source change/build/runtime test in this concept step",
+    "Previous uncommitted changes preserved; no commit or push"
+  ]
+}

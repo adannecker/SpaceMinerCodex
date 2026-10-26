@@ -1,0 +1,28 @@
+Use case: precise-object-edit / buildable modular space-station concept revision V3.
+EDIT the supplied V2 concept board. The user requests that the inward rooms ALSO DOCK AS INDIVIDUAL MODULES in the same module/sector unit size as the outside modules. Keep the previously requested11m radial inward depth; do NOT silently change this to the outside16m depth. "Same size" is implemented here as the same30-degree sector grid, alignment, facade height, independent hulls and docking-collar language; an inward wedge naturally has less circumferential frontage at its smaller radius.
+ONE TARGETED CHANGE: replace the four long continuous inner arc buildings in V2 with EIGHT DISTINCT DOCKED INNER MODULES, two per quadrant. Make individual module hulls, gaps and couplings unmistakable in the main view and plan.
+EXACT BUILDABLE RASTER:
+- Main annular body remains radius29–54m,108m outer diameter; ring walk radius29–38m9m deep, outside module belt radius38–54m16m deep.
+- Outside has the EXISTING twelve30-degree main module sectors; do not redesign it.
+- Inner module centers align radially one-to-one with outside module centers on the SAME twelve30-degree sector axes.
+- Four axis slots at0/90/180/270 degrees belong to the FOUR reactor service corridors and must contain NO inward room module.
+- Therefore the EIGHT inward modules have centers30,60,120,150,210,240,300,330 degrees. Two separate inward modules per quadrant.
+- Each has a nominal30-degree sector footprint like its matching outer module, with slightly recessed sides/dark separation joints; a practical body occupies27degrees with short docking collars. Do not merge pairs into a continuous room band.
+- All inward modules remain radius18–29m,11m radial depth, with a rounded/faceted inward-facing end facade. They are closed flat-roof hulls on the same single inhabited deck, not open balconies.
+- At the RING INTERFACE of EACH inward module, show a proper recessed neck/collar and pressure doorway that docks it to the circulation ring; repeat the same kind of clear structural joint used by outside modules. Avoid cosmetic-only surface lines: separate box/wedge hulls must read as removable units.
+- Keep all four3m-wide sealed reactor corridors, central shielded cylindrical reactor and maintenance collar, and external drone dock unchanged. Service corridors remain free all the way from ring to center. No crossing walls or hanging gaps.
+- Leave the center void and36m diameter between opposing inner room frontages. Do not enlarge reactor or add a second floor.
+COMPOSITION AND STYLE:
+Preserve V2's clean industrial blue-gray/ivory/cyan/amber palette, practical Unity-buildable wedge geometry, black starfield, main high isometric composition and the three bottom insets. Main view must visibly show the eight independent inner hulls and their ring docking collars, mostly roofs on, with at most one small illustrative cutaway.
+Bottom-left plan must CLEARLY SHOW eight inward units and the SAME sector alignment as the outside modules, with four larger reserved service-axis gaps. Short faint radial alignment guides may clarify one pair of matching inner/outer modules; do not add extra rings.
+Bottom-middle sector close-up must show ONE outer module, its9m ring passage section and ONE corresponding11m inner module with a distinct docking collar. The three radial zones and labels stay correct. Do not make a giant continuous inner block or a lower deck.
+Side-profile stays one flat inhabited deck with5.5m room height.
+TEXT exact German:
+Title unchanged "STATION · ERSTE AUSBAUSTUFE".
+Subtitle becomes "KONZEPT V3 · EINHEITLICHES MODULRASTER".
+Add readable main callout "Innenmodule im gleichen Sektorraster".
+Keep "Innenmodule 11 m", "Ringgang 9 m", "Modulgürtel 16 m", "4 Servicegänge", "Abgeschirmter Reaktor", "Drohnenbucht / Außendock" and outer108m dimension.
+Top-down plan: "8 Innenmodule · 4 freie Serviceachsen", inner dimension "Zwischen Innenfronten Ø 36 m".
+Close-up inner label: "Innenmodul 11 m (18–29 m)".
+Footer: "Maßvorschlag · 30°-Modulraster · Eine Ebene".
+Critical: distinguish the eight inward docked module bodies physically. Merely relabeling the four long V2 arcs is not enough. Preserve all other layout and styling decisions. No unrelated redesign, no new functions, no watermark.

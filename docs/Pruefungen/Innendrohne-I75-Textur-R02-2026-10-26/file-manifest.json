@@ -1,0 +1,102 @@
+[
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/glb-verification.json",
+    "bytes": 144,
+    "sha256": "c5717e7ed96e8f339ad28694f869a49ea17475d6cd09a2e9849bf750f60cf5ff"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.blend",
+    "bytes": 11075846,
+    "sha256": "aeeadba2aac1fef2edae3ef956b46d767177decd3916475d9f83d335507bde3c"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.fbx",
+    "bytes": 645804,
+    "sha256": "8ed41f816657a1881bd5ff8672fc9753450c22dac358ae7f5362a71234425420"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/I75_V02_Surface_R02.glb",
+    "bytes": 10403284,
+    "sha256": "1bd6efd7e314764e9b1fbb84521a4ba94027fe556da8e1b7d62fd722bf4af64a"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/README.md",
+    "bytes": 891,
+    "sha256": "dcff6a08f533a78eddbd0898914aa3cfe1c8bd7a03de15bfc1318d9e30771b36"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/reimport-verification.json",
+    "bytes": 452,
+    "sha256": "5db391be1ed1ee255f8b9b81587ff3913f80bb12a1abb2b595bdf57746ecda5d"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/surface-report.json",
+    "bytes": 1722,
+    "sha256": "a9392f8966875a9ca863dd13f410ceeeff1a88bd4b58087b9194632027d2eb0e"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_BaseColor.png",
+    "bytes": 3495549,
+    "sha256": "119c0ce2ff10ae23da71785ee5b8013427435341bec9c23a9c49bb02b8f77452"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_Emission.png",
+    "bytes": 81936,
+    "sha256": "847936465220d47a1ed73db8ff7371d1c5b37a31451b1cc04175f25e67d50b00"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_Height.png",
+    "bytes": 4443260,
+    "sha256": "ae818e7686813f215d6df5dc980895ddb83d94baccfbf85ed1d4ff1f9e4b1435"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_Normal.png",
+    "bytes": 191137,
+    "sha256": "054e126c4727b6ffadf0099fddcfc4674cd71242919d314374d3d3d7cf7b6952"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_Occlusion.png",
+    "bytes": 2324971,
+    "sha256": "639ea8faa5b8edc21b0aad7916f97599678dca2d9d816bdc958b7c848a2a76c2"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_ORM.png",
+    "bytes": 5544733,
+    "sha256": "5aa70bcb44d9a6b590163431068c7734767ce95df645fc786f87548b8efd9855"
+  },
+  {
+    "path": "Design/Models/IndoorDroneI75/Surface-R02-2026-10-26/Textures/I75_R02_UnityMetalSmooth.png",
+    "bytes": 4434946,
+    "sha256": "67793c5bada116282769f6726f7e5aaca6af476eeb7f855c11c573f0d8d8ab8d"
+  },
+  {
+    "path": "docs/Art/Drohnen/I75-Textur-R02-2026-10-26/01-I75-R02-hero.png",
+    "bytes": 2875721,
+    "sha256": "e2cbf51c5f78fa193f9403a6415e205d9e4e797c484cfe27537780d5e3398261"
+  },
+  {
+    "path": "docs/Art/Drohnen/I75-Textur-R02-2026-10-26/02-I75-R02-rear.png",
+    "bytes": 2877637,
+    "sha256": "2dd2df0cd15f0242dbcb10b6f2e8e8d2a20efa85d4c0c755bdfde4cdc14a29a0"
+  },
+  {
+    "path": "docs/Art/Drohnen/I75-Textur-R02-2026-10-26/03-I75-R02-side.png",
+    "bytes": 2711065,
+    "sha256": "09437ef64a5aec2760b9161dd61945371954567fb8086270f1c4f16f48d204fd"
+  },
+  {
+    "path": "docs/Art/Drohnen/I75-Textur-R02-2026-10-26/04-I75-R01-R02-Vergleich.png",
+    "bytes": 2024953,
+    "sha256": "fdd98acf397b450c645e14746871dd983d7bbd7b06db51df8ace2f088b0d1805"
+  },
+  {
+    "path": "docs/Art/Drohnen/I75-Textur-R02-2026-10-26/05-I75-R02-Stahldetail.png",
+    "bytes": 1368254,
+    "sha256": "05f55db0abf6a5730495c0964fa1fcd66d8a0bd325fe2b4295ed191c51e0e1b1"
+  },
+  {
+    "path": "tools/TextureIndoorDroneI75R02.py",
+    "bytes": 18849,
+    "sha256": "d415c3c8598e25f0b4bb402b88bb85d78526469d13724b1c6fdf97cab84dc099"
+  }
+]

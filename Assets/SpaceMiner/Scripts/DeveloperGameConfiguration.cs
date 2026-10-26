@@ -5,6 +5,7 @@ namespace SpaceMiner
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
     public sealed class DeveloperGameConfiguration
     {
+        public const float MaxBatteryKwh = 200f, MaxFuelLiters = 100f, MaxCargoKg = 2000f, MaxThrustNewtons = 100f;
         public float SimulationRate;
         public float MiningRate;
         public float MiningPower, OnboardPower, Reserve, BatteryCapacity, FuelCapacity, CargoCapacity, CruiseSpeed, Thrust, HeatingEnergy;
@@ -33,11 +34,11 @@ namespace SpaceMiner
                 scenario.Worker.MiningPowerKw = Mathf.Clamp(MiningPower, 1, 150);
                 scenario.Worker.OnboardPowerKw = Mathf.Clamp(OnboardPower, 0, 1);
                 scenario.Worker.ReserveFraction = Mathf.Clamp(Reserve, 0, .5f);
-                scenario.Worker.BatteryCapacityKwh = Mathf.Clamp(BatteryCapacity, 1, 30);
-                scenario.Worker.FuelCapacityLiters = Mathf.Clamp(FuelCapacity, 2, 30);
-                scenario.Worker.CargoCapacityKg = Mathf.Clamp(CargoCapacity, 5, 150);
+                scenario.Worker.BatteryCapacityKwh = Mathf.Clamp(BatteryCapacity, 1, MaxBatteryKwh);
+                scenario.Worker.FuelCapacityLiters = Mathf.Clamp(FuelCapacity, 2, MaxFuelLiters);
+                scenario.Worker.CargoCapacityKg = Mathf.Clamp(CargoCapacity, 5, MaxCargoKg);
                 scenario.Worker.CruiseSpeed = Mathf.Clamp(CruiseSpeed, .5f, 10);
-                scenario.Worker.ThrustNewtons = Mathf.Clamp(Thrust, 1, 50);
+                scenario.Worker.ThrustNewtons = Mathf.Clamp(Thrust, 1, MaxThrustNewtons);
                 scenario.Worker.HeatingKwhPerLiter = Mathf.Clamp(HeatingEnergy, .15f, 2);
                 if (capacitiesChanged) scenario.Worker.ResetDrone();
             }

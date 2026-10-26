@@ -1,0 +1,31 @@
+Use case: stylized-concept.
+Asset: one high-resolution landscape industrial game concept sheet, about 3:2, for SpaceMiner's SMALL INTERIOR DRONE I-75. Create an original, appealing, physically modelable design, not a screenshot or UI mockup.
+Input image 1: design-family reference ONLY, existing larger blue outdoor maintenance drone and its modular tool cassette. Input image 2: station interior materials/context ONLY. Do not copy the game UI, large outdoor drone size, landing cradle, or image layout.
+
+USER REQUIREMENTS:
+A much smaller indoor utility drone, approximately 75 CENTIMETRES in size, that moves by magnetic levitation and is convertible between building/laser work, dismantling, and carrying objects from A to B. EACH INDIVIDUAL DRONE has ONE task role and ONE task cassette fitted at a time. Show three ALTERNATIVE configurations of the SAME platform, not a universal all-tools-at-once machine. Workshop refit changes its role.
+
+FORM AND SCALE:
+Interpret 75 cm as the longest nominal dimension of the compact chassis with tools stowed; concept body around 75 cm long x 55 cm wide x 45 cm high. Clearly label this interpretation. Keep scale convincingly knee-high and much smaller than a human. Low stable rounded-rectangular faceted body with beveled corners, muted navy blue removable bolted upper panels, warm pale metal perimeter bumpers, dark graphite underbody. Small cyan status strip and twin compact sensor lenses; these are machine sensors, not cartoon eyes. A single visible FRONT mechanical tool-cassette socket with keyed guides, two robust locking latches and recessed power/data contacts. Rear removable battery service hatch, protected cable paths, sturdy lift points. Retractable small landing/support feet for power-off parking and mechanical stabilization at work. All parts manufacturable in Blender/Unity; separate chassis, shell panels, cassette, manipulators, joints and underbody magnetic pads. Mild operational scratches, industrial precision rather than clutter.
+
+MAGNETIC MOTION:
+Hover at a VERY SMALL controlled gap just over flush metallic floor drive tiles / magnetic guide lanes with stationary electromagnetic coils below the floor. Four flat underside magnetic modules; faint realistic shadow through narrow gap, no propulsion flame, no fan blades, no wheels, no antigravity beam, no free flight high in a room. Do not imply levitation over arbitrary unprepared flooring. Add a small clean underside / floor-interface detail showing paired magnetic pads above the tiled drive surface. Caption: "MAGNETSCHWEBEN ÜBER BODENFAHRSPUR". The operating gap is symbolic, not an engineering dimension. Keep feet tucked up while hovering and show a work variant using support feet or a docking fixture when exerting force.
+
+COMPOSITION:
+Top 60 percent: one LARGE, beautiful close three-quarter hero view of I-75 in TRANSPORT configuration on a small realistic tile-floor patch in the station workshop. Two compact opposed articulated GRIPPER ARMS from the single transport cassette hold a small 25-30 cm sealed equipment box, supported low in a cradle and mechanically secured at multiple points. All load physically connected to grippers/cradle, no floating cargo and no cargo force field. Maintain a clear view of blue chassis, underbody and rear battery hatch. No laser or disassembly bits fitted to this transport example. Neutral workshop light, controlled reflections, crisp geometry, subtle depth of field; show the whole drone including base, no cropped extremities. Background muted station wall, not a huge scene.
+Bottom: three equal clean panels with smaller full three-quarter views of the SAME chassis at the SAME scale, each clearly different only through its one installed tool cassette:
+1. "BAU / LASER": single folded articulated arm carrying a compact protected laser welding/cutting head, with a small stabilizing fixture clamp integral to this cassette. Work on a tiny panel seam at a compact fixture; short local pinpoint light, restrained sparks only, never a long sci-fi beam. No transport crate or dismantling screwdriver fitted.
+2. "DEMONTAGE": fine torque-controlled driver/unscrewing head with opposing small work-holding jaw and an enclosed small parts catch tray; show a screw or bracket being removed into tray. No laser head or transport crate fitted.
+3. "TRANSPORT": opposed soft-padded mechanical grippers/cradle carrying the sealed little box. No laser or driver fitted.
+A compact upper-right inset shows one 1.8 m human silhouette and the same small folded 75 cm drone at matching scale, so the smallness is unmistakable. Another tiny inset or clean callout shows the common quick-change cassette mounting and separate inactive modules on a workshop rack. These are ONLY stored alternatives, not additional installed tools.
+
+TEXT:
+Main title "SPACEMINER · INNENDROHNE I-75"
+Subtitle "75 cm GRUNDKÖRPERLÄNGE · UMRÜSTBARE ARBEITSPLATTFORM"
+Small callouts "WECHSELKASSETTE", "MAGNETMODULE", "AKKUFACH", "MECHANISCH GESICHERTE LAST"
+Bottom footer "EINE DROHNE · EINE AUFGABE · ROLLENWECHSEL IN DER WERKSTATT"
+Small secondary line "KONZEPT · MASSANGABE VORLÄUFIG · SCHWEBETECHNIK NOCH AUSZULEGEN"
+Use precise, readable German text sparingly. Main focus is the actual drone's convincing visual design.
+
+AVOID:
+No full-size 2 metre drone, no humanoid arms/face, no toy robot, no cute mascot, no rotorcraft, no unlimited hovering in open air, no luminous magnetic force-field cage, no all-in-one multi-tool Christmas-tree machine, no attached mining auger or outdoor rocket thrusters, no giant load, no weapon aesthetic, no exposed high-voltage arcs. Keep alternate roles visibly exclusive and the design consistent across hero and three variants.

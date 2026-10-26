@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-25",
+  "scope": "Analytical four-burn 10 km each-way reference; actual campaign flight acceptance recorded separately.",
+  "hardware": {
+    "DryMassKg": 250.0,
+    "FuelCapacityLiters": 15.0,
+    "BatteryCapacityKwh": 16.0,
+    "CargoCapacityKg": 1200.0,
+    "CruiseSpeed": 2.0,
+    "ThrustNewtons": 5.0,
+    "ExhaustSpeed": 1000.0,
+    "HeatingKwhPerLiter": 1.2,
+    "MiningRateKgPerSecond": 0.5,
+    "MiningPowerKw": 4.0,
+    "OnboardPowerKw": 0.05,
+    "ReserveFraction": 0.1
+  },
+  "cargoProfile": {
+    "DefaultUsableVolumeM3": 1.458,
+    "DefaultTargetFillFraction": 0.9,
+    "DefaultPackingFraction": 0.75,
+    "DefaultIceDensityKgM3": 917.0,
+    "DefaultRestDensityKgM3": 2500.0
+  },
+  "rawLoadAt80PercentWaterKg": 1033.3259480626546,
+  "pureIceLoadKg": 902.4655499999999,
+  "rawLoadAt65PercentWaterKg": 1159.4151314268095,
+  "miningSpecificToolEnergyKwhPerTonne": 2.2222222222222223,
+  "referenceSorties": [
+    {
+      "cruiseMps": 2,
+      "waterUsedLiters": 6.236590763975126,
+      "propulsionKwh": 7.483908916770151,
+      "miningSeconds": 2066.651896125309,
+      "miningToolKwh": 2.2962798845836767,
+      "onboardKwh": 0.17627753160208853,
+      "totalConsumedKwh": 9.956466332955916,
+      "returnBatteryKwh": 6.043533667044084,
+      "returnWaterLiters": 8.763409236024874,
+      "flightMinutes": 177.08883965375105,
+      "withinWaterAndEnergyReserves": true
+    },
+    {
+      "cruiseMps": 5,
+      "waterUsedLiters": 15.529116548231773,
+      "propulsionKwh": 18.634939857878127,
+      "miningSeconds": 2066.651896125309,
+      "miningToolKwh": 2.2962798845836767,
+      "onboardKwh": 0.10597191450261063,
+      "totalConsumedKwh": 21.037191656964414,
+      "returnBatteryKwh": -5.0371916569644135,
+      "returnWaterLiters": -0.529116548231773,
+      "flightMinutes": 92.72209913437759,
+      "withinWaterAndEnergyReserves": false
+    }
+  ],
+  "limits": [
+    "80/20 mixture uses assumed mineral density; geometry and packing are sizing assumptions.",
+    "Heater 1.2 kWh/L and mechanical .5 kg/s at 4 kW are declared first game-sizing assumptions, not NASA-certified hardware.",
+    "No additional dock, return-to-berth, avoidance, asteroid gravity or torque burns in this four-burn reference.",
+    "Time uses conservative constant initial mass per leg. No spent water is replenished before the return burn.",
+    "Station tank demand may limit actual cargo below the 90 percent maximum."
+  ]
+}

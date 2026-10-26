@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-25",
+  "modelId": "0add4eb7-94ba-4147-9bb1-06b2e47eb0ac",
+  "modelVersion": "HD Model H3.1",
+  "exportOptions": {
+    "format": "FBX",
+    "preset": "Blender",
+    "textureResolution": "4K Current"
+  },
+  "creditsBefore": 3005,
+  "creditsAfterDisplayed": 3005,
+  "observedCreditDeduction": 0,
+  "newGenerationTriggered": false,
+  "sourceArchiveName": "Mira_Head_Shoulders_H31_4K_2026-10-25.zip",
+  "archiveBytes": 8036291,
+  "archiveSha256": "882dfc9e083278ae16d1c476ab16d2d9f9d1dd5f9e0b726bf43e2c66f5ae26e1",
+  "entries": [
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbx",
+      "bytes": 2755356,
+      "sha256": "1fc98738b518634d607ea5f4159c7bdb6f1965f59ddff4ea8dd4239ee9802e2c",
+      "fbxVersion": 7400
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Color.jpg",
+      "bytes": 1368992,
+      "sha256": "313b7e98b92c4f656ff1ab85fb7be7d422059879a65d82e8e33d49b1d949c36b",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "mode": "RGB"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Mira_Head_Shoulders_H31_4K_2026-10-25_metallic.JPEG",
+      "bytes": 334947,
+      "sha256": "fc01ecbae4726b955d74fbec1bcb01d263ed5f934bfb419931976a3289a84a5c",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "mode": "L"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Mira_Head_Shoulders_H31_4K_2026-10-25_roughness.JPEG",
+      "bytes": 553860,
+      "sha256": "73c5ebc11b0b0a96a54f5f8f97d4da82b4d2ec385ad747604d9400f9c058bf5a",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "mode": "L"
+    },
+    {
+      "path": "docs/Art/Mira3D/Tripo-H31-2026-10-25/tripo_convert_9f5e7633-adc3-4bde-a675-fb9715bcdbad.fbm/Normal.png",
+      "bytes": 3326576,
+      "sha256": "07fdd0657a4760ef0bbf5692d0a6c008d6c809a9d6e3f475b05f8cc80ecc7e55",
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "localArchiveBackup": "Imports/Tripo/Mira_Head_Shoulders_H31_4K_2026-10-25.zip",
+  "originalsDirectory": "docs/Art/Mira3D/Tripo-H31-2026-10-25",
+  "fbxObjectCounts": {
+    "Geometry": 1,
+    "Model": 1,
+    "Material": 1,
+    "Texture": 4,
+    "Video": 4
+  },
+  "fbxObjects": [
+    {
+      "kind": "Geometry",
+      "type": "Mesh"
+    },
+    {
+      "kind": "Model",
+      "type": "Mesh"
+    },
+    {
+      "kind": "Material",
+      "type": ""
+    },
+    {
+      "kind": "Texture",
+      "type": ""
+    },
+    {
+      "kind": "Texture",
+      "type": ""
+    },
+    {
+      "kind": "Texture",
+      "type": ""
+    },
+    {
+      "kind": "Texture",
+      "type": ""
+    },
+    {
+      "kind": "Video",
+      "type": "Clip"
+    },
+    {
+      "kind": "Video",
+      "type": "Clip"
+    },
+    {
+      "kind": "Video",
+      "type": "Clip"
+    },
+    {
+      "kind": "Video",
+      "type": "Clip"
+    }
+  ],
+  "meshGeometry": [
+    {
+      "vertices": 46105,
+      "polygons": 46009,
+      "polygonSizes": {
+        "4": 45742,
+        "3": 213,
+        "5": 51,
+        "6": 3
+      },
+      "trianglesIfFanTriangulated": 91862
+    }
+  ],
+  "embeddedRigOrShapesPresent": false,
+  "inspectionLimits": [
+    "Structural FBX inspection only, not a Blender viewport or Unity import",
+    "No anatomical validation of eyes, mouth cavity, teeth or tongue",
+    "No face animation, performance or game-integration test"
+  ],
+  "assessment": "Worth a comparison in the isolated Mira dialogue preview. Do not copy H2.5 vertex-based facial shapes onto this different topology. Campaign integration and design approval remain pending.",
+  "proofImage": "docs/Pruefungen/Mira-Tripo-H31-Export-2026-10-25/Tripo-Export-4K.jpg",
+  "proofImageDimensions": [
+    1331,
+    1244
+  ],
+  "proofImageSha256": "4c414a8bd79a1d037c69e299a4a9e03e9c67a0e8e781cefe5219aceba8c7b1cd",
+  "checksPassed": [
+    "Archive CRC",
+    "Safe paths and expected five source files",
+    "Binary FBX signature/version",
+    "All four textures decode and are 4096x4096",
+    "SHA256-identical archive backup and extracted originals",
+    "Official Blender reader parses FBX objects and mesh arrays",
+    "Visible UI credit balance unchanged after completed download"
+  ]
+}

@@ -111,7 +111,7 @@ namespace SpaceMiner
                 Require(Time.realtimeSinceStartup<clipDeadline,"voice clip "+cue+" completed without timeout");
             }
             preview.Speech.Stop();yield return new WaitForSecondsRealtime(.6f);
-            Require(spoken==14 && textOnly==2,"current dialogue preserves fourteen voices and two revised text instructions");
+            Require(spoken==16 && textOnly==0,"current dialogue has sixteen recorded lines");
             Require(audioFrames>100 && shapeFrames>20 && maximumMouth>.07f && maximumWeight>2,"voice produces actual mesh animation");
             Require(driver.Mouth<.02f && avatar.Face.GetBlendShapeWeight(jaw)<2,"silence restores resting mouth");
             Require(timedClips==14 && performance.VisemeChanges>100 && maximumRound>30 && maximumWide>15,"recorded timing drives distinct rounded and wide speech shapes");
@@ -129,7 +129,7 @@ namespace SpaceMiner
             yield return null;yield return new WaitForEndOfFrame();
             ScreenCapture.CaptureScreenshot(Path.Combine(Folder,"05-blinking.png"));yield return new WaitForEndOfFrame();yield return null;
             File.WriteAllText(Path.Combine(Folder,"result.json"),JsonUtility.ToJson(new MotionResult{checks=checks,spokenCues=spoken,textOnlyCues=textOnly,audioFrames=audioFrames,shapeFrames=shapeFrames,vertices=mesh.vertexCount,affectedVertices=affected,maximumShapeDeltaMeters=maximumDelta,maximumMouth=maximumMouth,maximumWeight=maximumWeight,timedClips=timedClips,visemeChanges=performance.VisemeChanges,blinks=performance.Blinks,gazeChanges=performance.GazeChanges,maximumHeadDegrees=maximumHead,maximumGazeWeight=maximumGaze,maximumRoundWeight=maximumRound,maximumWideWeight=maximumWide},true));
-            Debug.Log("MIRA TRIPO CHECK PASSED: "+checks+" checks, 14 voice clips and 2 text instructions");Application.Quit(0);
+            Debug.Log("MIRA TRIPO CHECK PASSED: "+checks+" checks, 16 voice clips");Application.Quit(0);
         }
         private void Require(bool condition,string message){if(!condition)throw new Exception(message);checks++;}
         private static float Weight(MiraAvatar3D avatar,string shape)=>avatar.Face.GetBlendShapeWeight(avatar.Face.sharedMesh.GetBlendShapeIndex(shape));

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SpaceMiner · I75 Modellansicht</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#17222c;color:#e5ecf0;font:14px "Segoe UI",sans-serif;overflow:hidden}
+    #stage{position:absolute;inset:0;touch-action:none}canvas{display:block;outline:none}
+    header{position:absolute;top:16px;left:16px;right:16px;display:flex;align-items:center;gap:12px;pointer-events:none}
+    h1{font-size:23px;margin:0;letter-spacing:2px}header span{font-size:11px;letter-spacing:1px;color:#a3bcc9}
+    #tools{position:absolute;left:16px;right:16px;bottom:16px;padding:12px;border:1px solid #53667588;background:#14212bec;border-radius:10px;backdrop-filter:blur(12px)}
+    #tools>div{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin-top:9px}#tools>div:first-child{margin-top:0}
+    select,button{font:inherit;font-size:12px;color:#e5ecf0;background:#263945;border:1px solid #586f7d;border-radius:5px;padding:7px 10px;cursor:pointer}
+    button:hover,select:hover{background:#395360}button:focus-visible,select:focus-visible{outline:2px solid #62d6e7}select{flex:1;min-width:160px}
+    label{display:flex;align-items:center;gap:5px;font-size:12px;margin-right:8px}input{accent-color:#5ac7d9}
+    #status{font-size:12px;color:#b5d8e4;min-height:17px}#help{font-size:11px;color:#a3b7c4;line-height:1.5}
+    #status.error{color:#ffb99f}@media(max-width:420px){header{top:10px;left:10px}#tools{left:8px;right:8px;bottom:8px}header span{display:none}}
+  </style>
+  <script type="importmap">{"imports":{"three":"./vendor/build/three.module.js","three/addons/":"./vendor/examples/jsm/"}}</script>
+</head>
+<body>
+  <div id="stage" aria-label="Interaktives 3D-Modell der I75"></div>
+  <header><h1>I–75</h1><span>SPACEMINER / MODELLANSICHT</span></header>
+  <section id="tools" aria-label="Ansichtssteuerung">
+    <div><select id="variant" aria-label="Modellvariante"><option value="R02">R02 · kantig / gebrauchtes Metall</option><option value="R01">R01 · erste Lackierung</option></select><button id="reset">Zurücksetzen</button></div>
+    <div><button data-view="front">Vorne</button><button data-view="back">Hinten</button><button data-view="side">Seite</button><button data-view="top">Oben</button></div>
+    <div><label><input id="rotate" type="checkbox">Automatisch drehen</label><label><input id="wire" type="checkbox">Drahtgitter</label></div>
+    <div id="status" role="status">3D-Ansicht wird geladen …</div>
+    <div id="help">Ziehen: drehen · Scrollrad: zoomen · Rechte Maustaste + ziehen: verschieben<br>Touch: mit einem Finger drehen, mit zwei Fingern zoomen/verschieben</div>
+  </section>
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>

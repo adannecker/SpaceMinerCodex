@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-24",
+  "scope": "Two-layer geometric honeycomb hull throughout the starting station; four-role internal-to-exterior construction study",
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "campaignLayoutRevision": 6,
+  "build": {
+    "method": "SpaceMiner.Editor.StartMenuBuild.Run",
+    "development": true,
+    "exitCode": 0,
+    "log": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/honeycomb-20261024-build-accepted.log"
+  },
+  "construction": {
+    "passed": true,
+    "checks": 28,
+    "pieces": 1697,
+    "batches": 215,
+    "massKg": 12503,
+    "modelSeconds": 195300,
+    "exitCode": 0,
+    "defaultSpeed": 1280,
+    "defaultDurationSeconds": 152.578125,
+    "maximumPiecesPerDelivery": 8,
+    "maximumPackedStackMetres": 1.8,
+    "maximumPrinterDimensionMetres": 2.4,
+    "roles": [
+      "B01 internal fabrication",
+      "B02 internal staging",
+      "B03 exterior multi-part transport",
+      "B04 joining and sealing"
+    ],
+    "log": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/honeycomb-20261024-construction-accepted.log"
+  },
+  "stationRegression": {
+    "checks": 195,
+    "exitCode": 0,
+    "screenCaptureWarnings": 15,
+    "log": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/honeycomb-20261024-station-accepted.log"
+  },
+  "hull": {
+    "panelCircumradiusMetres": 0.78,
+    "geometricPanelThicknessMetres": 0.08,
+    "newBuildLayerCentreSpacingMetres": 0.28,
+    "newBuildClearGapMetres": 0.2,
+    "campaignCladding": "Inner pressure panel faces plus outer layer offset from existing structure; existing colliders retained, previous flat backing renderers hidden",
+    "topology": "Clipped hexagonal closed panels, annular rooms retained, separate circular reactor-cap clipping; grouped campaign surface meshes",
+    "scope": "Ring deck/roof/walls, command shell, hall shell, exterior dock floor/parapets, internal workshop, water storage, surviving service spans, collar and capsule cover; preserve windows, gates, solar cells and real corridor gaps"
+  },
+  "verified": [
+    "Rectangular clipping including narrow edge fragments covers full domain",
+    "Circular reactor cap tiling covers its 48-sided circular rim",
+    "Actual new-build outer mesh envelope extends beyond roof, underside, side and end pressure panels",
+    "All actual mesh vertices fit printer and all racks fit packing limits",
+    "Continuous cargo trajectories across production, staging, exterior handoff and installation",
+    "1001 trajectory samples: transfer gate interlock and finite doorway crossing; actual delivery-body/load-frame envelopes clear layer25 station colliders on first complete delivery",
+    "Full sequential build maintains production order, resources, inventory isolation and inspection prerequisites",
+    "Reusable grouped installed geometry, pause, invalid time, reset and large-step completion",
+    "195 station checks: ring and module traversal, save migration, all three hall gates, damaged-corridor safety, water trip and docking"
+  ],
+  "iterationFindings": [
+    "Initial gate check incorrectly treated flight above/beside the doorway as crossing; constrained to finite opening",
+    "Flatter takeoff passed too close to the closing outer door: rise vertically outside, then fly; return descends vertically",
+    "Internal body height and waiting position adjusted for the actual 2.92m coupling rim, not just nominal3.1m portal",
+    "Exterior waiting point moved to r59.75m so the complete load frame clears existing charging posts on ascent"
+  ],
+  "images": [
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/01-anschluss-und-drucker.png",
+      "sha256": "7dc67a40ce685e8f3c7da0257a18b00fe9695063c56f57046bb10702f3192c43"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/02-drucker-einzelteile.png",
+      "sha256": "403bdb81de96f2236e62ea77c604f83a6af435f243a0cc669083575e4862e89d"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/03-interne-bereitstellung.png",
+      "sha256": "04d3a558a97a818a2574f83118e5fced144fad5460bea46d12abee4f42dff694"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/04-uebergabe-gesichert.png",
+      "sha256": "69aecf771624541941fd11eef8472fe1ff20ad102f4e79eee8d92d11b94b01a3"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/05-aussendrohne-uebernimmt.png",
+      "sha256": "c0f84a6f0eb5173255315c8f2b50dda3fce5bf3c069d8dbefa398e951185755e"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/08-fertiges-modul.png",
+      "sha256": "23e0c8e4d3e4e92a95cf169041c6644419a646cc90e7de11a1af2929ab0b69c4"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/09-wabenhuelle-detail.png",
+      "sha256": "06801d2daa4f010d9d397d2aa6e27d19b0da63b96a8a9ff6bbe0ffa324d86c4b"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/10-station-zweischichtig.png",
+      "sha256": "81b1644a6f4c2062d67fdaf04b95a9998c0d4bac9cc4435b66595d9d1b85a9a0"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/stage-0.png",
+      "sha256": "7dc67a40ce685e8f3c7da0257a18b00fe9695063c56f57046bb10702f3192c43"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/stage-1.png",
+      "sha256": "94a00a3a7e9c613be11b2560b1ae1df68abafdde38f5238e2fcf20cd159476d2"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/stage-2.png",
+      "sha256": "c50a7569df748ec579f7a66a37c0dae67e4cfb3460d42f585d1379f489c168a5"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/stage-3.png",
+      "sha256": "cf715f0ef7fdd1c5873e9ba0e43eca6884e904e656e5e789990212a1e4d85333"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/stage-4.png",
+      "sha256": "5b52ea347eced4aa3188cabc32c03b55c01a1fc62ee0a3722f172ba072e1e603"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/stage-5.png",
+      "sha256": "2dd914b0249e1ceac79ec4f575a73b62886a685dd9b3a6a1b77f641a60078406"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Construction/stage-6.png",
+      "sha256": "23e0c8e4d3e4e92a95cf169041c6644419a646cc90e7de11a1af2929ab0b69c4"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Station/07-modulhuellen-aussen.png",
+      "sha256": "e3c3c2ea1468fc51dba63ad1e8eb225e0938ed6eabb910fe5c0b28753de1a6aa"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Station/11-aussendock-uebersicht.png",
+      "sha256": "84171dc8c0abf35c6c1871edfed1b22718462a3b516144fc74bffee2b31f59f1"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Station/18-stationsgrundriss.png",
+      "sha256": "20e3639253d9b0f9a88e09cd56effebb70f01275b730fb4c66e6b79160da541e"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Station/19-reaktor-innenmodule.png",
+      "sha256": "5cc7ffe5b116f78f410ad151552c34af8146fb4bda5de66dd414d0f5fa2c7608"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Station/20-gangbruch-schotten.png",
+      "sha256": "0919bdc4bc93fc0ca772337772073b170d1508b086c78ef7600e5d126c52ea4c"
+    },
+    {
+      "path": "docs/Pruefungen/Wabenhuelle-Baudrohnen-2026-10-24/Station/21-solarfeld-tragarm.png",
+      "sha256": "0d660bdad34eb7db489cc783a094b3a28c2a5bbd0ecdb3bfe865122ea0644f32"
+    }
+  ],
+  "visualReview": [
+    "Construction printer detail, exterior pickup, completed honeycomb extension and closed station",
+    "Normal station final reactor/corridor and ring hull view; direct Camera.Render images only"
+  ],
+  "sourceFilesMatchingBuildCopy": [
+    {
+      "path": "Assets/SpaceMiner/Scripts/RingWalkthrough.cs",
+      "sha256": "cc902d4223f46e758267e7bffa5defa8956450cca73ebe95d04aff814436634c"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerSettings.cs",
+      "sha256": "e107081e5185d8b76542373dcaea4a4d8b6884234c307346490a1c3e66a643c3"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationConstructionPreview.cs",
+      "sha256": "f1dbcbd69fa93c75a012830d7505e567a006c255cca430e8320c2e8a93509869"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationConstructionPreview.cs.meta",
+      "sha256": "5c60161e78be5649f0b474e466492289a93c71c14d2bb6cccece6b87d32be7eb"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorLayout.cs",
+      "sha256": "ce06f80087335021b825d420d4468702ef719648d150d4dc59f8f27fba3c945b"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationVisual.cs",
+      "sha256": "3f3c9f9213fd33030fcfe1aa3e47a15bc180d49c0abdda4764357c25649a602a"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StartStationCheck.cs",
+      "sha256": "e1ad29592963d9df0a0e1b5661871edd2a722ab74c2e6b538c494718ca7bff98"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorMode.cs",
+      "sha256": "d621868cdc8f2b662bdbfd0a3ebc966175ed5b5bbb5d03307d010eb6f1d69d15"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerVitalsCheck.cs",
+      "sha256": "c413e5e1bb13efddb296522c19cab40f5f49b413abb170aa37fa7b8f3f81e0ec"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/HoneycombHull.cs",
+      "sha256": "1e0f80ff4c311175f1477c77be90a89139a342362d0ab046dda641d52950988e"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/HoneycombHull.cs.meta",
+      "sha256": "6c40ea105b9fa3fc7c834a7ea17f677c72349679a561f8cd386885d4aa4750da"
+    }
+  ],
+  "deployed": {
+    "path": "Builds/Windows",
+    "previousBuild": "Builds/Windows-before-honeycomb-20261024",
+    "filesSha256Matched": 247,
+    "assemblySha256": "563a38d59211089dc48e80e8e374a85f37a27c62cd52996e8b7462c2836936ce",
+    "launcher": "Start-Stationsbau-Zeitraffer.cmd",
+    "visiblePreview": {
+      "pid": 41072,
+      "responding": true,
+      "title": "Space Miner - Prototyp 01",
+      "arguments": [
+        "-stationConstructionPreview"
+      ],
+      "log": "Logs/honeycomb-player-20261024.log",
+      "startupLogRuntimeExceptionsFound": false
+    }
+  },
+  "limits": [
+    "Prototype fixed trajectories and role models, not a campaign manufacturing/economy/navigation integration",
+    "No physical pressure, heat, shield-performance or real production-time validation; transfer chamber shown as cutaway",
+    "No new manual GUI/input acceptance, Release build or performance benchmark",
+    "Hidden ScreenCapture failures are reported; images are explicit 3D RenderTexture captures",
+    "No commit/push; unrelated reactor art sources preserved"
+  ]
+}

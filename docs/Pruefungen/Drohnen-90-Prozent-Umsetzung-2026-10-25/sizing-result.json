@@ -1,0 +1,18 @@
+{
+    "passed": true,
+    "checks": 98,
+    "rawKg": 1033.3258056640625,
+    "fillFraction": 0.8999999165534973,
+    "occupiedM3": 1.3121998310089111,
+    "deliveredWaterLiters": 826.66064453125,
+    "simulationSeconds": 4719.0,
+    "miningSeconds": 2065.0,
+    "batteryAtDockKwh": 4.406081676483154,
+    "fuelAtDockLiters": 7.308261871337891,
+    "consumedBatteryKwh": 11.593917846679688,
+    "burnedWaterLiters": 7.691709518432617,
+    "observedMiningEnergyKwh": 2.3237075805664063,
+    "minimumBatteryKwh": 4.406081676483154,
+    "minimumFuelLiters": 7.308261871337891,
+    "scope": "Actual A01 launch, mining, loaded return, unloading and berthing; 2000 L receiving-tank fixture with 20 L initial water, 20 kWh station reserve. Normal 200 L / 20 L stock separately caps the goal at 225 kg. Volume/mixture/mechanical constraints; real disk saves in mining and return; old twelve-value hardware and optional profiles; actual new Demo after a legacy load, distinguished from ordinary simulation resets. Existing direct water-unloading convention retained; no raw-ice processing, residue-conservation, structural certification or complete orbital/thermal claim."
+}

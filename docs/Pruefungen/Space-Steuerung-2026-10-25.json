@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-25",
+  "build": "space-navigation-build-02",
+  "passed": true,
+  "unity": "6000.6.4f1",
+  "sourceUnity": "6000.4.7f1",
+  "configuration": "Development",
+  "runs": [
+    {
+      "name": "vitals",
+      "checks": 51,
+      "exitCode": 0,
+      "images": 2
+    },
+    {
+      "name": "camera",
+      "checks": 37,
+      "exitCode": 0,
+      "images": 2
+    },
+    {
+      "name": "tactical",
+      "checks": 137,
+      "exitCode": 0,
+      "images": 6
+    },
+    {
+      "name": "console",
+      "checks": 179,
+      "exitCode": 0,
+      "images": 12
+    }
+  ],
+  "assertions": 404,
+  "imagesSaved": 22,
+  "sourceFilesMatched": 282,
+  "sourceManifest": "source-manifest.json",
+  "userPlansPreserved": true,
+  "scope": [
+    "Grounded-only 0.55m interior jump, real CharacterController floor/ceiling collision and landing.",
+    "Held-key, airborne spam, focus and modal jump guards; development stamina remains full.",
+    "Outside held-Space world-Y ascent, Shift+Space descent, frame-step/zoom scaling and explicit release of drone follow.",
+    "Space no longer changes simulation pause. Real search/settings/Mira/inside camera guards.",
+    "Tactical navigation and natural first-water-quest regression with visible Mira acknowledgements."
+  ],
+  "limitations": [
+    "Programmatic held-key/controller and native framebuffer checks, no new OS keyboard or manual comfort acceptance.",
+    "Battery bays are a separately saved visual concept; no new bay geometry, battery capacity, bank activation or save fields in this build.",
+    "No new Release, headset, 100k rendering or FPS acceptance."
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": "Builds/Windows",
+  "deliveredFilesMatched": 247,
+  "deliveredManifest": "delivered-manifest.json",
+  "preservedPreviousBuild": "Builds/Windows-before-space-navigation-20261025"
+}

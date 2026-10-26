@@ -1,0 +1,16 @@
+[
+  {
+    "Id": "mira_12",
+    "Original": "Assets/SpaceMiner/Resources/Intro/mira_12.wav",
+    "Backup": "docs/Dialoge/Sprachproben/Aoede_Nachvertonung_2026-10-25/previous-unassigned/mira_12.wav",
+    "SHA256": "0245EDA30FB7EB4624C6048CCC3CBC1CA229AB37985BB249C24EEFA9115F40F9",
+    "Status": "previous_recording_not_assigned_to_current_text"
+  },
+  {
+    "Id": "mira_13",
+    "Original": "Assets/SpaceMiner/Resources/Intro/mira_13.wav",
+    "Backup": "docs/Dialoge/Sprachproben/Aoede_Nachvertonung_2026-10-25/previous-unassigned/mira_13.wav",
+    "SHA256": "800C82A722AF58861CF0F22CD579796ED8D73558F0BA493ADD638CEF63C76834",
+    "Status": "previous_recording_not_assigned_to_current_text"
+  }
+]

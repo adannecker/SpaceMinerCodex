@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-24",
+  "scope": "V4 station proportions and connected walkable structures integrated into campaign",
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "layoutRevision": 5,
+  "dimensionsMetres": {
+    "walkingRingRadii": [
+      29,
+      38
+    ],
+    "outerBeltRadii": [
+      38,
+      54
+    ],
+    "innerModuleRadii": [
+      18,
+      29
+    ],
+    "innerModuleCount": 8,
+    "deckCount": 1,
+    "clearDeckHeight": 5.5,
+    "bodyDiameter": 108,
+    "retainedDockRadii": [
+      54,
+      70
+    ],
+    "reactorHousingDiameter": 8,
+    "reactorHousingHeight": 6,
+    "maintenanceCollarOuterDiameter": 16,
+    "serviceCorridors": 4,
+    "serviceClearWidth": 3
+  },
+  "build": {
+    "method": "SpaceMiner.Editor.StartMenuBuild.Run",
+    "development": true,
+    "exitCode": 0,
+    "log": "docs/Pruefungen/Stationsumbau-V4-2026-10-24/station-v4-20261024-build.log"
+  },
+  "runtime": [
+    {
+      "name": "station",
+      "checks": 178,
+      "exitCode": 0,
+      "log": "docs/Pruefungen/Stationsumbau-V4-2026-10-24/station-v4-20261024-check.log",
+      "screenCaptureWarnings": 15
+    },
+    {
+      "name": "vitals",
+      "checks": 29,
+      "exitCode": 0,
+      "log": "docs/Pruefungen/Stationsumbau-V4-2026-10-24/station-v4-20261024-vitals.log",
+      "screenCaptureWarnings": 1
+    }
+  ],
+  "verified": [
+    "All12 outer entrances and ring joins walkable",
+    "All8 inward sectors entered and returned with campaign capsule",
+    "All4 reactor corridors traversed in both directions and side-wall confinement",
+    "Sealed reactor capsule blocks player; core excluded from saved positions",
+    "Reactor renderer bounds diameter8 height6",
+    "Old long command wing and deep inner room poses safely relocated",
+    "Existing valid old pose and current save/view roundtrip retained",
+    "Detailed hall ring passage, all3 exterior gates, closed-door collision and occupancy protection",
+    "Ten parked drones and unobstructed launches",
+    "Complete water mining/unloading trip and exact return to dock",
+    "Developer fast walking/no stamina and persistence regression"
+  ],
+  "directRenderImages": [
+    {
+      "path": "docs/Pruefungen/Stationsumbau-V4-2026-10-24/07-modulhuellen-aussen.png",
+      "sha256": "e4eb71d4d3636458e34933a0d590c9517b31c28ef0d6bf22a72d4b8d7d1cb6e4"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsumbau-V4-2026-10-24/11-aussendock-uebersicht.png",
+      "sha256": "63cbde4fa41a82851890e2b728795a5e2bfd4310e95d97bc4f7ce2761e5712b9"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsumbau-V4-2026-10-24/18-stationsgrundriss.png",
+      "sha256": "00f870565645bea10d1cbbeed5bbf2e636a684382891c62c72fcf648b4ac82c5"
+    },
+    {
+      "path": "docs/Pruefungen/Stationsumbau-V4-2026-10-24/19-reaktor-innenmodule.png",
+      "sha256": "2793b3b1780fd6041b52367c8fb648d1e50af74bd4dd38824b1ec4fd472a9eef"
+    }
+  ],
+  "visuallyReviewed": [
+    "18-stationsgrundriss.png",
+    "19-reaktor-innenmodule.png"
+  ],
+  "sourcesMatchingBuildCopy": [
+    {
+      "path": "Assets/SpaceMiner/Scripts/RingWalkthrough.cs",
+      "sha256": "bf5fe982a709c6da31d563934a5cc7dc1fc42a58f74a6f3eff1e057e83045b41"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorLayout.cs",
+      "sha256": "33e4a6e19fe22d0e1da7c7f366b643641acc54105ead1a3a26bc9264976bbc97"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationVisual.cs",
+      "sha256": "1b8da8793966683f86da63190a0a578032ec2014b9cca1badb16fca5ae47b618"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StartStationCheck.cs",
+      "sha256": "b6b33bae45849558715e421bfc546ae017f8589445e1ba006270c0a5fc4b748e"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorMode.cs",
+      "sha256": "d621868cdc8f2b662bdbfd0a3ebc966175ed5b5bbb5d03307d010eb6f1d69d15"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerVitalsCheck.cs",
+      "sha256": "c413e5e1bb13efddb296522c19cab40f5f49b413abb170aa37fa7b8f3f81e0ec"
+    }
+  ],
+  "deployed": {
+    "directory": "Builds/Windows",
+    "filesSha256Matched": 247,
+    "assemblySha256": "ec5248b1cb2d7e6c7ecd38e37a478d2af65594f9e46e3a703aa6f4fe5f5d722d",
+    "previousBuild": "Builds/Windows-before-station-v4-20261024",
+    "started": {
+      "pid": 52512,
+      "windowTitle": "Space Miner - Prototyp 01",
+      "responding": true,
+      "arguments": [
+        "-startStationPreview"
+      ],
+      "log": "Logs/station-v4-player-20261024.log",
+      "note": "Visible player running; existing exclusive-fullscreen fallback logged, no runtime exception found in inspected startup log."
+    }
+  },
+  "limits": [
+    "Reactor visual blockout, no new power/thermal/radiation simulation",
+    "ScreenCapture fails in hidden batch test; four explicit RenderTexture images retained, no new GUI screenshot acceptance",
+    "No manual input or performance benchmark",
+    "No new Release or standalone walkthrough/hall build",
+    "No commit or push; other chat assets preserved"
+  ]
+}

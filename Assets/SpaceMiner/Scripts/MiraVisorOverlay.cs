@@ -27,7 +27,7 @@ namespace SpaceMiner
                 Footer=new Rect(textX,bounds.yMax-48,bounds.xMax-textX-20,32)
             };
         }
-        public bool Draw(Rect bounds,string title,string text,MiraAvatar.Mood mood=MiraAvatar.Mood.Focused,string hint="",string action=null,bool showText=true,float alpha=1)
+        public bool Draw(Rect bounds,string title,string text,MiraAvatar.Mood mood=MiraAvatar.Mood.Focused,string hint="",string action=null,bool showText=true,float alpha=1,Texture portraitTexture=null)
         {
             ui.Configure(SettingsStore.Current.Accessibility);
             if(portraits==null)portraits=Resources.Load<Texture2D>("Mira/MiraDialoguePortraits");
@@ -39,7 +39,8 @@ namespace SpaceMiner
                 Frame(bounds,new Color(.25f,.68f,.77f,.75f),alpha);
                 var frame=new Rect(layout.Portrait.x-3,layout.Portrait.y-3,layout.Portrait.width+6,layout.Portrait.height+6);
                 Fill(frame,new Color(.02f,.085f,.10f,.8f),alpha);Frame(frame,SpaceMinerUi.Cyan,alpha);
-                if(portraits!=null){int cell=(int)mood;GUI.DrawTextureWithTexCoords(layout.Portrait,portraits,new Rect(cell%2*.5f,cell<2?.5f:0,.5f,.5f),true);}
+                if(portraitTexture!=null) GUI.DrawTexture(layout.Portrait,portraitTexture,ScaleMode.ScaleToFit,true);
+                else if(portraits!=null){int cell=(int)mood;GUI.DrawTextureWithTexCoords(layout.Portrait,portraits,new Rect(cell%2*.5f,cell<2?.5f:0,.5f,.5f),true);}
                 GUI.Label(new Rect(bounds.x+18,bounds.y+13,190,24),"MIRA  /  VERBINDUNG AKTIV",new GUIStyle(ui.Small){fontSize=12});
                 var titleStyle=new GUIStyle(ui.Text){fontStyle=FontStyle.Bold};
                 layout.Title.height=Mathf.Max(layout.Title.height,titleStyle.CalcHeight(new GUIContent(title),layout.Title.width));

@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-25",
+  "decisionDate": "2026-10-24",
+  "scope": "Three short radial storage stages: first intact, two differently ruined; independent side transfer docks and compact construction study",
+  "sourceUnity": "6000.4.7f1",
+  "buildUnity": "6000.6.4f1",
+  "campaignLayoutRevision": 7,
+  "build": {
+    "method": "SpaceMiner.Editor.StartMenuBuild.Run",
+    "development": true,
+    "exitCode": 0,
+    "log": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/storage-thirds-20261024-build-final.log"
+  },
+  "storage": {
+    "sector": 8,
+    "angleDegrees": 210,
+    "radialStageDepthMetres": 5.333333333333333,
+    "radialLimitsMetres": [
+      38,
+      43.333333333333336,
+      48.666666666666664,
+      54
+    ],
+    "operationalStages": 1,
+    "damagedStages": 2,
+    "dockCount": 3,
+    "activeDockIndices": [
+      0
+    ],
+    "dockBoundaryDegrees": 223.5,
+    "socketOffsetFromSideMetres": 0.8,
+    "transferApertureMetres": [
+      1.92,
+      1.3
+    ],
+    "areaMeaning": "Three equal radial depths in an annular sector, not three equal areas or volumes",
+    "balance": "Existing200L prototype tank and saved resource values retained"
+  },
+  "stationRegression": {
+    "passed": true,
+    "checks": 217,
+    "exitCode": 0,
+    "screenCaptureWarnings": 15,
+    "log": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/storage-thirds-20261024-station-final.log"
+  },
+  "constructionRegression": {
+    "passed": true,
+    "checks": 29,
+    "pieces": 777,
+    "batches": 100,
+    "massKg": 5973,
+    "modelSeconds": 91800,
+    "exitCode": 0,
+    "radialDepthMetres": 5.333333333333333,
+    "defaultSpeed": 1280,
+    "defaultDurationSeconds": 71.71875,
+    "log": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/storage-thirds-20261024-construction-final.log"
+  },
+  "verified": [
+    "Only inner short storage stage is a valid walkable/saved volume; two damaged stages have no hidden usable centre floor",
+    "Real campaign character enters shortened storage and stops before sealed ruin boundary",
+    "Three distinct transfer sockets with one operational socket and separate stage centres",
+    "Receiver aperture through wall collider and both visible skins; campaign docking body clears station hull",
+    "Old revision6 player positions in destroyed stages relocate safely, valid inner-stage pose remains",
+    "Old unloading pose migrates to active receiver while preserving phase, cargo and battery",
+    "Actual mining trip aligns cargo outlet with active first-stage inlet, delivers water and returns to original berth",
+    "Shared five-and-one-third-metre rule reflected in actual construction-panel envelope",
+    "Full29-check staged construction regression including four roles, transfer gate interlock, packing, complete build, pause/reset and campaign isolation"
+  ],
+  "sourceFilesMatchingBuildCopy": [
+    {
+      "path": "Assets/SpaceMiner/Scripts/RingWalkthrough.cs",
+      "sha256": "4238b6002a5619c4026af1ad835b200b4545a0d9566e3d0dd265564240763c96"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerSettings.cs",
+      "sha256": "bf13ff9474f71fc98663421ebbc170f099bea4e09c2f79614e9b1a037fd74c5c"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationConstructionPreview.cs",
+      "sha256": "33bcceeeb1fddec7d038e4832eb2bd6087670b9c0f52c94bcfc48756e9b40a6a"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationConstructionPreview.cs.meta",
+      "sha256": "5c60161e78be5649f0b474e466492289a93c71c14d2bb6cccece6b87d32be7eb"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorLayout.cs",
+      "sha256": "a10e51c98dd0d67c4e977781ee629469bd9247fc66f41dc79f78cca1a6e76591"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationVisual.cs",
+      "sha256": "0437716d1c619b898269dd394cce0a933449bd4831efa30a55507065bf200c52"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StartStationCheck.cs",
+      "sha256": "02c3eeaf9fb71986827dd2411d1e5528da997541ad27930a56b63a0f57dce85c"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/StationInteriorMode.cs",
+      "sha256": "d621868cdc8f2b662bdbfd0a3ebc966175ed5b5bbb5d03307d010eb6f1d69d15"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerVitalsCheck.cs",
+      "sha256": "c413e5e1bb13efddb296522c19cab40f5f49b413abb170aa37fa7b8f3f81e0ec"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/HoneycombHull.cs",
+      "sha256": "1e0f80ff4c311175f1477c77be90a89139a342362d0ab046dda641d52950988e"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/HoneycombHull.cs.meta",
+      "sha256": "6c40ea105b9fa3fc7c834a7ea17f677c72349679a561f8cd386885d4aa4750da"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/TripoMiningShowcase.cs",
+      "sha256": "a3bc45a3514d2030cbe75df96d493454fce270c7060142d219752f151f449f57"
+    }
+  ],
+  "images": [
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/01-anschluss-und-drucker.png",
+      "sha256": "33153551009eeda76890f8caa112ea016fec6b6b3322f4accecf5c993b8907ec"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/02-drucker-einzelteile.png",
+      "sha256": "907b621fb5a53ee3094b29daf7312ca0c155363d3bd1b89c876c49653753e596"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/03-interne-bereitstellung.png",
+      "sha256": "dad67752dcd6a0ddfc264ed049b727eedae0a2b2dd5f98cb76b95a87db2b7b11"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/04-uebergabe-gesichert.png",
+      "sha256": "0b15a97241aaa28069e83b0b20549b4bcb55465089e62bb0fd935511ac81bf38"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/05-aussendrohne-uebernimmt.png",
+      "sha256": "fbb4238ec3d2abb8b10261b4901b452b903907bb45509a0ad363d75d25ee3a53"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/08-fertiges-modul.png",
+      "sha256": "cff3aa4c9bb7e2f812f4bc0834ffa11acf0b0bddea446d97354eb3ffad409894"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/09-wabenhuelle-detail.png",
+      "sha256": "09937af665e7871e3bb12f2b40ef573ca500ac150ede85e4ead08fce3259c5f8"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/10-station-zweischichtig.png",
+      "sha256": "283d1581c7bc868aaaa2df72f8b187d1ca2e611ed4865ab972bcd3c3c0a3d946"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/stage-0.png",
+      "sha256": "9078f24c429ef6c972e7a36f1579500505e20035f73ed501e13f01ba1a5eb910"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/stage-1.png",
+      "sha256": "28e26726610c8eaad0abb6483108e03172427a0c82a5aba8753e01c14b3e5fed"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/stage-2.png",
+      "sha256": "03a889a2bd65abc386884a586802be50d29a70ce43a9775a20add04a971b4afe"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/stage-3.png",
+      "sha256": "532c26b789cea7afc4268209233893ff7168819a233c39f0ae90977514c9cf60"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/stage-4.png",
+      "sha256": "ffb1e3c816172b2b1c735339eb45defa152f21d40f5cca12911c80dbc2021389"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/stage-5.png",
+      "sha256": "fd0c7c36d7ea9cfa51003cf86819a412a628a24f57d63144dd84371f4be69185"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Construction/stage-6.png",
+      "sha256": "cff3aa4c9bb7e2f812f4bc0834ffa11acf0b0bddea446d97354eb3ffad409894"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/07-modulhuellen-aussen.png",
+      "sha256": "7118e238caa3ba6a3f65824dfed56867ad26aa59d0efc59feeda0c74be9e8742"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/11-aussendock-uebersicht.png",
+      "sha256": "8dd14174c1b672e57c846ae63459bf4b36cd3b4b3dfa7350c502abaaeccf1640"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/18-stationsgrundriss.png",
+      "sha256": "6276148159c221dddc6c0e8edee93c4c21282cc3ba211316e8c9c92bc319b6ac"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/19-reaktor-innenmodule.png",
+      "sha256": "58d22bfe8c8491eb18a88b01ea2200ad37faef5aa0db49e01a5fb6c31d673ed1"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/20-gangbruch-schotten.png",
+      "sha256": "0919bdc4bc93fc0ca772337772073b170d1508b086c78ef7600e5d126c52ea4c"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/21-solarfeld-tragarm.png",
+      "sha256": "1ab65aaf301806aeb9d654d7484c1cd52b9ee481624594f447fb61bce82e7ad6"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/22-wasserlager-drei-stufen.png",
+      "sha256": "84c0aaec74506232ae211b0e6916a397f0ce72fa834748bafaff64b9b10c3853"
+    },
+    {
+      "path": "docs/Pruefungen/Rohstofflager-Drittel-2026-10-25/Station/23-wasserlager-aktiver-anschluss.png",
+      "sha256": "f6bbf5c9dd962169625db02433f1a9616c83c1fce1624c4ba26672beb125f17c"
+    }
+  ],
+  "visualReview": [
+    "Three-stage water-storage overview and active receiver closeup",
+    "Completed compact construction module in cutaway context"
+  ],
+  "preview": {
+    "launcher": "Start-Wasserlager-Station.cmd",
+    "argument": "-storagePreview",
+    "startsPaused": true,
+    "preferences": "Logs/StoragePreview-settings/player-settings.json",
+    "saves": "Logs/StoragePreview/Saves"
+  },
+  "deployed": {
+    "path": "Builds/Windows",
+    "previousBuild": "Builds/Windows-before-storage-thirds-20261025",
+    "filesSha256Matched": 247,
+    "assemblySha256": "26bda2c2ef1c6f9727298bca49ae0c5e9fea96b425a7351961e92be4f2e8535e",
+    "visiblePreview": {
+      "pid": 68092,
+      "responding": true,
+      "title": "Space Miner - Prototyp 01",
+      "arguments": [
+        "-storagePreview"
+      ],
+      "log": "Logs/storage-player.log",
+      "startupLogRuntimeExceptionsFound": false
+    }
+  },
+  "limits": [
+    "Repair/unlock gameplay and additional storage capacity are future work; ruined docks remain disabled",
+    "The3D blockout is not a volume, pressure, energy or material-strength calculation",
+    "Battery charging stays at existing drone berths; new side sockets are material-transfer positions",
+    "No new manual GUI/input acceptance, Release build, performance benchmark or full imported-Tripo-showcase validation",
+    "Tripo receiver source binding adapted to the new side aperture; no model asset changes",
+    "15 hidden ScreenCapture failures reported separately from explicit RenderTexture images",
+    "Unrelated reactor concept assets and pre-existing checkout changes preserved; no commit/push"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+    "passed": true,
+    "checks": 1844,
+    "layout": 13,
+    "pictures": [
+        "08-aktive-drohne-im-umbauplatz.png",
+        "01-kommando-wandterminals.png",
+        "02-drohnenhalle-zwei-umbauplaetze.png",
+        "03-halle-wandmoebel-und-schrott.png",
+        "04-geschlossenes-havarie-gelenk.png",
+        "05-groesseres-aussendock.png",
+        "09-bodengleiche-dockreihen-und-fahrgassen.png",
+        "10-breites-ringschott.png",
+        "06-display-vorderseite.png",
+        "07-display-rueckseite.png"
+    ],
+    "scope": "Closed seams, fall recovery, real terminal approaches, display geometry, shared workshop/dock utilities, physical refit transit, disk save/load and cancellation. Explicit later-game helper/research/water/power fixtures; no manual keyboard or frame-rate claim."
+}

@@ -1,0 +1,287 @@
+{
+  "Date": "2026-10-26",
+  "Task": "Nine individually voiced Mira quest conversations in shared game/demo module",
+  "UnitySource": "6000.4.7f1",
+  "UnityBuild": "6000.6.4f1",
+  "QuestCount": 9,
+  "QuestRecordings": 22,
+  "QuestAudioSeconds": 538.6459863945578,
+  "CompleteQuestWavs": 9,
+  "IntroRecordings": 16,
+  "Original14RecordingsHashUnchanged": true,
+  "QuestMouthIntervals": 3580,
+  "AdditionalIntroMouthIntervals": 121,
+  "BuildExit": 0,
+  "FinalAssertions": 618,
+  "FinalRuns": [
+    {
+      "Name": "quests-demo-1440",
+      "Exit": 0,
+      "Folder": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Logs\\MiraQuests-2026-10-26\\quests-demo-1440",
+      "Result": {
+        "passed": true,
+        "game": false,
+        "checks": 137,
+        "pictures": 2,
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "Name": "quests-demo-960",
+      "Exit": 0,
+      "Folder": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Logs\\MiraQuests-2026-10-26\\quests-demo-960",
+      "Result": {
+        "passed": true,
+        "game": false,
+        "checks": 137,
+        "pictures": 2,
+        "width": 960,
+        "height": 600
+      }
+    },
+    {
+      "Name": "quests-game",
+      "Exit": 0,
+      "Folder": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Logs\\MiraQuests-2026-10-26\\quests-game",
+      "Result": {
+        "passed": true,
+        "game": true,
+        "checks": 53,
+        "pictures": 2,
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "Name": "dialogue-demo",
+      "Exit": 0,
+      "Folder": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Logs\\MiraQuests-2026-10-26\\dialogue-demo",
+      "Result": {
+        "passed": true,
+        "checks": 70,
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "Name": "dialogue-game",
+      "Exit": 0,
+      "Folder": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Logs\\MiraQuests-2026-10-26\\dialogue-game",
+      "Result": {
+        "passed": true,
+        "checks": 10,
+        "width": 1600,
+        "height": 1000
+      }
+    },
+    {
+      "Name": "models-demo",
+      "Exit": 0,
+      "Folder": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Logs\\MiraQuests-2026-10-26\\models-demo",
+      "Result": {
+        "passed": true,
+        "checks": 64,
+        "pictures": 21,
+        "lowVertices": 116465
+      }
+    },
+    {
+      "Name": "models-game",
+      "Exit": 0,
+      "Folder": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Logs\\MiraQuests-2026-10-26\\models-game",
+      "Result": {
+        "passed": true,
+        "checks": 64,
+        "pictures": 21,
+        "lowVertices": 116465
+      }
+    },
+    {
+      "Name": "acting",
+      "Exit": 0,
+      "Folder": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Logs\\MiraQuests-2026-10-26\\acting-retry",
+      "Result": {
+        "passed": true,
+        "checks": 83,
+        "pictures": 8,
+        "maxHeadDegrees": 3.6647,
+        "maxTorsoDegrees": 0.6846,
+        "maxShoulderMetres": 0.00148,
+        "visemeChanges": 529
+      },
+      "RetryNote": "First real-time run exceeded a 16-second completion deadline at unchanged original cue 08. Same binary passed the full rerun; cause not established."
+    }
+  ],
+  "FinalPictures": 61,
+  "SharedRuntimeSHA256": "ec910d8a609edb52c79c7738e6ad3345b8e5ba6bd6ba6083bc87ff3d83013a22",
+  "DeliveredPlayerFileCounts": {
+    "MiraDialogueDemo": 247,
+    "MiraDialogueGame": 247
+  },
+  "SourceSnapshot": "docs\\Pruefungen\\Mira-Questdialoge-2026-10-26-sources.json",
+  "QuestClips": [
+    {
+      "Id": "quest_00_start",
+      "Duration": 27.480272108843536,
+      "MouthIntervals": 189,
+      "SHA256": "ab4335e720cf4a7576d3b272dc50cf5c711ca3aafc7ad4ddf63bf29493f8978d"
+    },
+    {
+      "Id": "quest_00_complete",
+      "Duration": 17.000272108843536,
+      "MouthIntervals": 115,
+      "SHA256": "2155c5a9db055a318f1125362b451043dbbb7a4343b0cc9efdcfba2463b754eb"
+    },
+    {
+      "Id": "quest_01_start",
+      "Duration": 35.44027210884354,
+      "MouthIntervals": 231,
+      "SHA256": "21e1bf14c3977465dd670b2516ba19d6b32455918dc7aeab40fceb08fde15cbf"
+    },
+    {
+      "Id": "quest_01_complete",
+      "Duration": 16.20027210884354,
+      "MouthIntervals": 112,
+      "SHA256": "f3dd96cc6d5fc7deb4d72f7ef5f246e891980baf13ad75d2482a76f11b7ec09c"
+    },
+    {
+      "Id": "quest_02_start",
+      "Duration": 26.960272108843537,
+      "MouthIntervals": 174,
+      "SHA256": "730b8886023e99b7f5f6c701c8e93f1fa8445b3f99648ed99c0f6ae65ad3d119"
+    },
+    {
+      "Id": "quest_02_complete",
+      "Duration": 16.600272108843537,
+      "MouthIntervals": 115,
+      "SHA256": "7f3469c53d2a0b24f044dac93d2a96d5856af9fedd6807b95fb72b6b1c719a8b"
+    },
+    {
+      "Id": "quest_03_start",
+      "Duration": 28.480272108843536,
+      "MouthIntervals": 176,
+      "SHA256": "c125a61a45ca0934806aab371ede6b16877934c5420d42af7b6284043dd2aaaf"
+    },
+    {
+      "Id": "quest_03_complete",
+      "Duration": 18.720272108843538,
+      "MouthIntervals": 120,
+      "SHA256": "d3656eef3e1fdbef50d3f4464d885cca6f2ebdf5ca29279c55030b61d452081d"
+    },
+    {
+      "Id": "quest_04_start",
+      "Duration": 30.04027210884354,
+      "MouthIntervals": 207,
+      "SHA256": "4a9cbb705c6ca504bdc384263a35b24d993ca58eeb46073a4cd17ef8097e0ddd"
+    },
+    {
+      "Id": "quest_04_complete",
+      "Duration": 16.52027210884354,
+      "MouthIntervals": 118,
+      "SHA256": "3bcbf9cc5cbc37ff235b7225866a72985b8ae0e3038e96a6ab3ebc4d04dfc3af"
+    },
+    {
+      "Id": "quest_05_start",
+      "Duration": 27.960272108843537,
+      "MouthIntervals": 187,
+      "SHA256": "6e9d68ee603183b59ef9c244168671fee90033f3626863a3702da4efb90d17f9"
+    },
+    {
+      "Id": "quest_05_complete",
+      "Duration": 19.640272108843536,
+      "MouthIntervals": 133,
+      "SHA256": "804e8835e7e0608ed73a3b3e65c58658ad1579347e0e244f1c8a56e81f86585d"
+    },
+    {
+      "Id": "quest_06_start",
+      "Duration": 32.480272108843536,
+      "MouthIntervals": 221,
+      "SHA256": "5e0b01a76941d52adeddbf254d6a2a512e740d3927b9531a672bf5bc0f9b66e9"
+    },
+    {
+      "Id": "quest_06_complete",
+      "Duration": 18.000272108843536,
+      "MouthIntervals": 111,
+      "SHA256": "68d742f5a7ec742149a89b4c8f01469d529acb6016f5c32495d5528e4792967a"
+    },
+    {
+      "Id": "quest_07_start",
+      "Duration": 33.96027210884354,
+      "MouthIntervals": 248,
+      "SHA256": "92dd6e40aa3736ffa33db6866b8458af42c8aba6909723f0bd27514e99ed7928"
+    },
+    {
+      "Id": "quest_07_complete",
+      "Duration": 16.760272108843537,
+      "MouthIntervals": 93,
+      "SHA256": "54790fd514e2368370b428df7fea00ef672fcced9f8f834ac375198da82c767b"
+    },
+    {
+      "Id": "quest_08_start",
+      "Duration": 37.200272108843535,
+      "MouthIntervals": 259,
+      "SHA256": "d4b42accb6ed9e3065d629cee2107effe66cb00307ebe7fc3111d88ae95c2150"
+    },
+    {
+      "Id": "quest_08_complete",
+      "Duration": 22.960272108843537,
+      "MouthIntervals": 133,
+      "SHA256": "4e7d24fb28c76e6d0e1c50a88cb8ec1fd352f62d9091bbe15099b457022845d2"
+    },
+    {
+      "Id": "quest_support_recycle",
+      "Duration": 23.600272108843537,
+      "MouthIntervals": 138,
+      "SHA256": "58781263b37ba3cb970029db82df21c2a8d14f746709ad98cf7494b75b143b0d"
+    },
+    {
+      "Id": "quest_support_print_parts",
+      "Duration": 21.88027210884354,
+      "MouthIntervals": 148,
+      "SHA256": "3d0b5416b08a807aedf5d9de4118266bcbd9b542c6dcad6ca968f5a9b8defeca"
+    },
+    {
+      "Id": "quest_support_repair_researched",
+      "Duration": 26.760272108843537,
+      "MouthIntervals": 185,
+      "SHA256": "dfde736c6e3b8ba4954f5ec04a2edfeb68fa616291ea90ea13e90e3d672d10ea"
+    },
+    {
+      "Id": "quest_support_laser_ready",
+      "Duration": 24.000272108843536,
+      "MouthIntervals": 167,
+      "SHA256": "8868fb522dacb94a56f4efdff0173039684181f7e76d9f930995347de837af9a"
+    }
+  ],
+  "ArchiveSHA256": "aa2c04916b0502ee1c0aea54d30b77b5708e7dbc7271cc7883d1bf2ddb014a94",
+  "Backups": [
+    {
+      "Backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\MiraDialogueDemo-before-quests-20261026-005459",
+      "Player": "MiraDialogueDemo"
+    },
+    {
+      "Backup": "C:\\Users\\achim\\Documents\\ChatGPT\\SpaceMinerCodex\\Builds\\MiraDialogueGame-before-quests-20261026-005459",
+      "Player": "MiraDialogueGame"
+    }
+  ],
+  "ReviewedImages": [
+    "docs\\Pruefungen\\Mira-Questdialoge-2026-10-26\\Dialogstudio-Quests-1440.png",
+    "docs\\Pruefungen\\Mira-Questdialoge-2026-10-26\\Dialogstudio-Quests-960.png",
+    "docs\\Pruefungen\\Mira-Questdialoge-2026-10-26\\Spiel-Questdialog.png"
+  ],
+  "PriorIssues": [
+    "Original data export blocked in browser; private Cloud Shell file preview download succeeded. Temporary export server stopped after verified import.",
+    "Google API rejected several requests with HTTP400; bounded retries preserved completed clips. One success clip generated in Studio and merged with per-recording style provenance.",
+    "First quest-game fixture ran during the intentional intro completion frame guard; fixture corrected, both players rebuilt and all eight final runs executed.",
+    "First complete-intro real-time run exceeded 16 seconds at unchanged old cue08; same binary passed full rerun, cause not established. Earlier failed logs retained."
+  ],
+  "Limits": [
+    "Quest game run uses declared quest-state fixtures to verify real predicates, dispatch, persistence and rendering; not a complete natural campaign playthrough.",
+    "No subjective listening, native OS input, VR/headset, release or FPS acceptance.",
+    "Builds/Windows untouched; a separate Mira quest game player is supplied. Other chats may have newer changes outside this frozen build snapshot.",
+    "Legacy complete prototype smoke suite not rerun; stale intro assertions were updated to sixteen clips and the shared audio source."
+  ],
+  "SpokenTextParityVerified": 22,
+  "DocumentationEncoding": "UTF-8; Markdown, runtime catalog, recorded metadata and source texts matched after correction."
+}

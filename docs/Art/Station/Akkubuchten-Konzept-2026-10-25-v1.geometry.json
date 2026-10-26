@@ -1,0 +1,105 @@
+{
+  "status": "proposal, no Unity battery geometry or capacity change",
+  "date": "2026-10-25",
+  "coordinateSystem": "station local, metres; positive z points towards command module at 0 degrees",
+  "bayOuterSize": {
+    "alongSpoke": 4.5,
+    "transverse": 2.6,
+    "height": 2.8
+  },
+  "spokeLocalBounds": {
+    "uAbsMin": 2.2,
+    "uAbsMax": 4.8,
+    "zMin": 23.8,
+    "zMax": 28.3,
+    "yMin": 0,
+    "yMax": 2.8
+  },
+  "ringInnerRadius": 29,
+  "ringOuterRadius": 38,
+  "maxBayCornerRadius": 28.704180880143575,
+  "bankCapacityKwh": null,
+  "existingCampaignCapacityKwh": 24,
+  "bays": [
+    {
+      "axisDegrees": 0,
+      "sideFromRing": "left",
+      "centre": {
+        "x": 3.5,
+        "y": 1.4,
+        "z": 26.05
+      },
+      "plannedState": "empty"
+    },
+    {
+      "axisDegrees": 0,
+      "sideFromRing": "right",
+      "centre": {
+        "x": -3.5,
+        "y": 1.4,
+        "z": 26.05
+      },
+      "plannedState": "empty"
+    },
+    {
+      "axisDegrees": 90,
+      "sideFromRing": "left",
+      "centre": {
+        "x": 26.05,
+        "y": 1.4,
+        "z": -3.5
+      },
+      "plannedState": "empty"
+    },
+    {
+      "axisDegrees": 90,
+      "sideFromRing": "right",
+      "centre": {
+        "x": 26.05,
+        "y": 1.4,
+        "z": 3.5
+      },
+      "plannedState": "empty"
+    },
+    {
+      "axisDegrees": 180,
+      "sideFromRing": "left",
+      "centre": {
+        "x": -3.5,
+        "y": 1.4,
+        "z": -26.05
+      },
+      "plannedState": "active"
+    },
+    {
+      "axisDegrees": 180,
+      "sideFromRing": "right",
+      "centre": {
+        "x": 3.5,
+        "y": 1.4,
+        "z": -26.05
+      },
+      "plannedState": "off"
+    },
+    {
+      "axisDegrees": 270,
+      "sideFromRing": "left",
+      "centre": {
+        "x": -26.05,
+        "y": 1.4,
+        "z": 3.5
+      },
+      "plannedState": "empty"
+    },
+    {
+      "axisDegrees": 270,
+      "sideFromRing": "right",
+      "centre": {
+        "x": -26.05,
+        "y": 1.4,
+        "z": -3.5
+      },
+      "plannedState": "empty"
+    }
+  ]
+}
