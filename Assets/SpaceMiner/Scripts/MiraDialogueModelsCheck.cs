@@ -103,7 +103,7 @@ namespace SpaceMiner
                         "model switch preserves shared voice, pause and position " + label);
                     var avatar = module.Portrait.ActiveAvatar;
                     Require(avatar != null && avatar.Driver.Speech == speech, "rig bound to actual dialogue AudioSource " + label);
-                    Require(avatar.Face.sharedMesh.blendShapeCount == 13 && avatar.Face.bones.Length == (mode == MiraVisualMode.HighModel ? 5 : 2), "complete model-specific face/head/body rig " + label);
+                    Require(avatar.Face.sharedMesh.blendShapeCount == (mode==MiraVisualMode.HighModel?21:13) && avatar.Face.bones.Length == (mode == MiraVisualMode.HighModel ? 5 : 2), "complete model-specific face/head/body rig " + label);
                     Require(Mathf.Abs(avatar.Bust.InverseTransformPoint(avatar.Face.bones[1].position).y - (mode == MiraVisualMode.HighModel ? .19f : .245f)) < .005f,
                         "model-specific neck pivot " + label);
                     Require(module.Portrait.Texture.width == (mode == MiraVisualMode.HighModel ? 1024 : 512), "model-specific render resolution " + label);
@@ -152,7 +152,7 @@ namespace SpaceMiner
                     var performance = module.Portrait.Performance;
                     performance.DiagnosticPose = true;
                     var avatar = module.Portrait.ActiveAvatar;
-                    for (int i = 0; i < 13; i++) avatar.Face.SetBlendShapeWeight(i,0);
+                    for (int i = 0; i < avatar.Face.sharedMesh.blendShapeCount; i++) avatar.Face.SetBlendShapeWeight(i,0);
                     avatar.Face.SetBlendShapeWeight(avatar.Face.sharedMesh.GetBlendShapeIndex("BlinkLeft"),100);
                     avatar.Face.SetBlendShapeWeight(avatar.Face.sharedMesh.GetBlendShapeIndex("BlinkRight"),100);
                 });
@@ -160,7 +160,7 @@ namespace SpaceMiner
                 Step(() => CapturePortrait(label + "-closed-eyes"));
                 Step(() => {
                     var avatar = module.Portrait.ActiveAvatar;
-                    for (int i = 0; i < 13; i++) avatar.Face.SetBlendShapeWeight(i,0);
+                    for (int i = 0; i < avatar.Face.sharedMesh.blendShapeCount; i++) avatar.Face.SetBlendShapeWeight(i,0);
                     avatar.Face.SetBlendShapeWeight(avatar.Face.sharedMesh.GetBlendShapeIndex("JawOpen"),100);
                     avatar.Face.SetBlendShapeWeight(avatar.Face.sharedMesh.GetBlendShapeIndex("Round"),70);
                 });

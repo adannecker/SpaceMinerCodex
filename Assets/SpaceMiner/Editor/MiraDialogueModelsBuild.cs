@@ -124,6 +124,19 @@ namespace SpaceMiner.Editor
             for (int eye = 0; eye < eyes.Length; eye++)
             {
                 var center = eyes[eye];
+                string side=eye==0?"Left":"Right";
+                float cornerX=eye==0?.030f:-.038f;
+                Shape("Smile"+side,v=>new Vector3(eye==0?.002f:-.002f,.0054f,.0005f)
+                    * Bell((v.x-cornerX)/.026f)*Bell((v.y-Seam(v))/.031f)*Front(v));
+                Shape("CheekRaise"+side,v=>new Vector3(eye==0?.0007f:-.0007f,.0048f,.0013f)
+                    *Bell((v.x-(center.x+(eye==0?.010f:-.010f)))/.035f)
+                    *Bell((v.y-(center.y-.047f+.15f*(v.x-center.x)))/.032f)*Front(v));
+                Shape("EyeSmile"+side,v=>new Vector3(0,.0024f,.0002f)
+                    *Bell((v.x-center.x)/.036f)
+                    *Bell((v.y-(center.y-.011f+.15f*(v.x-center.x)))/.010f)*Front(v));
+                Shape("BrowLift"+side,v=>Vector3.up*.0048f
+                    *Bell((v.x-center.x)/.042f)
+                    *Bell((v.y-(center.y+.031f+.15f*(v.x-center.x)))/.021f)*Front(v));
                 Shape(eye == 0 ? "BlinkLeft" : "BlinkRight", v => {
                     float x = (v.x - center.x) / .036f;
                     float line = center.y + .15f * (v.x - center.x) - .001f + .002f * Mathf.Min(1, x * x);
@@ -147,10 +160,10 @@ namespace SpaceMiner.Editor
 
         private static void Validate(Mesh mesh)
         {
-            if (mesh.blendShapeCount != 13 || mesh.boneWeights.Length != mesh.vertexCount || mesh.bindposes.Length != 5)
+            if (mesh.blendShapeCount != 21 || mesh.boneWeights.Length != mesh.vertexCount || mesh.bindposes.Length != 5)
                 throw new InvalidOperationException("H3.1 rig is incomplete");
             var delta = new Vector3[mesh.vertexCount]; var vertices = mesh.vertices;
-            for (int shape = 0; shape < 13; shape++)
+            for (int shape = 0; shape < mesh.blendShapeCount; shape++)
             {
                 mesh.GetBlendShapeFrameVertices(shape, 0, delta, null, null);
                 for (int i = 0; i < vertices.Length; i++)

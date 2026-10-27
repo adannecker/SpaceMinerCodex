@@ -1,5 +1,17 @@
 # Mira: interne Dialog-Vorschau
 
+## Gekoppelte Mimik am Highmodell (27.10.2026)
+
+Nutzerreferenz: [Loora-Reel mit ausdrucksstarker Sprechmimik](https://www.facebook.com/reel/2291344751717840). Die sichtbaren Wechsel zwischen Lippenformen, angehobenen Wangen, lächelnden Augen und Brauen dienen als Bewegungsreferenz für Mira; keine Übernahme der Figur oder Behauptung über das dort verwendete Animationssystem.
+
+Das Highmodell erhält acht zusätzliche, auf seine eigenen Landmarken begrenzte Formen: seitliche Mundwinkel, Wangenheben, lächelnde Unterlider und Brauenheben jeweils links/rechts. `MiraFacePerformance` koppelt diese an die vorhandenen vier Stimmungen, mit sanften Übergängen und kleiner Asymmetrie. Gerundete Lippen und Sprechverschlüsse haben Vorrang vor dem Lächeln. Kleine Akzente ergänzen die bestehende Kopfregie; vorhandene Aufnahmen und Lautzeitdaten bleiben Grundlage.
+
+Im Dialogstudio regelt **Lebendige Mimik** von0 (bisherige Kopplung) bis1 (neue Gesichtssteuerung). Die bestehenden Mimik-/Augen-/Kopf-/Körperschalter bleiben erhalten. **Großansicht** vergrößert das Porträt mit zugänglichem Vergleichsregler und Wiedergabeknöpfen; Escape führt zunächst zurück ins Studio. `Start-Mira-Mimikprobe.cmd` beziehungsweise `-miraExpressivePreview` öffnet diese Ansicht und spielt das Erwachen fortlaufend ab. Gemeinsamer Laufzeitcode in Studio und Spielvorschau; das Lowmodell behält seine13 Formen. Highmodell jetzt21 Formen. Dies ist eine Weiterentwicklung des vorhandenen Oberflächenrigs, keine anatomische Gesichtsretopologie oder neue Mundinnengeometrie.
+
+Mit der festgelegten Unity6000.6.5f1 beide Mira-Development-Player neu gebaut. **439 Prüfungen in sieben finalen Läufen / alle Exit0**: gekoppelte Mimik in Studio und Spielhost, beide Modelle, Großansicht bei960×600, gemeinsame Wiedergabe und vollständiges16-teiliges Erwachen mit Kopf-/Schulterregie. Vergleichsbilder und Großansicht visuell geprüft. Identische gemeinsame Laufzeitbibliothek in beiden Playern; Original-FBX, Low-Mesh, Hauptspielszene und Projektversion hashgleich erhalten. Frühere Player neben den aktuellen Builds gesichert. Eine beim ersten Vergleichslauf erkannte leere Audiospur-Abfrage wurde korrigiert und im finalen Test mitgeprüft. [Nachweis, Bilder und Grenzen](Pruefungen/Mira-Mimik-2026-10-27.json).
+
+Der Ausdruck ist gegenüber dem vorhandenen Rig erweitert, erreicht aber noch nicht die vollständige Feinheit der Referenz. Subjektive Mimik-/Hörabnahme durch den Nutzer bleibt offen. Normale Spielinstallation unter `Builds/Windows` und Release wurden in diesem Auftrag nicht ersetzt. Kein neuer Release-, VR-, FPS- oder nativer OS-Eingabenachweis; keine neuen Sprachaufnahmen oder Credits verbraucht.
+
 <!-- mira-quests-status-begin -->
 ## Questgespräche (26.10.2026)
 

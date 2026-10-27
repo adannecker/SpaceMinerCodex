@@ -19,6 +19,7 @@ namespace SpaceMiner
         public bool HeadMotion = true, EyeMotion = true, Expressions = true;
         public bool BodyMotion = true;
         public float MovementStrength = 1;
+        public float ExpressionCoupling = 1;
         public MiraDialogueActing Acting;
         public float MouthStrength = 1;
         public bool Visible;
@@ -109,6 +110,7 @@ namespace SpaceMiner
             Performance.Acting = Acting;
             Performance.BodyMotion = BodyMotion;
             Performance.MovementStrength = Mathf.Clamp(MovementStrength, 0, 1.5f);
+            Performance.ExpressionCoupling = Mathf.Clamp01(ExpressionCoupling);
             Render();
         }
 

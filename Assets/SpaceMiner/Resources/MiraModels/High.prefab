@@ -193,6 +193,7 @@ MonoBehaviour:
   MovementStrength: 1
   EyeMotion: 1
   Expressions: 1
+  ExpressionCoupling: 1
 --- !u!1 &3095200715662631620
 GameObject:
   m_ObjectHideFlags: 0

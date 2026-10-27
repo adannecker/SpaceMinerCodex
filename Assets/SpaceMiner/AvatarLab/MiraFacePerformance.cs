@@ -19,6 +19,11 @@ namespace SpaceMiner
         public Vector3 TorsoAngles { get; private set; }
         public float ShoulderLift { get; private set; }
         public bool EyeMotion=true, Expressions=true;
+        public float ExpressionCoupling=1;
+        public bool HasExpressiveRig => shapes.ContainsKey("CheekRaiseLeft");
+        public float CheekActivation {get;private set;}
+        public float EyeSmileActivation {get;private set;}
+        public float BrowLiftActivation {get;private set;}
         public int Blinks { get; private set; }
         public int GazeChanges { get; private set; }
         public int VisemeChanges { get; private set; }
@@ -32,7 +37,7 @@ namespace SpaceMiner
         private float nextBlink=2.6f,blinkAt=-10,nextGaze=1.2f,nextHead=1.7f;
         private Vector2 gaze,targetGaze;
         private Vector3 headTarget;
-        private float jaw,round,wide,close,smile,concern,focus;
+        private float jaw,round,wide,close,smile,concern,focus,expressionAccent;
         private Vector3 torsoRest, leftRest, rightRest;
         private float actingWeight;
         // Used only by the deterministic pose inspection in the editor/test player.
@@ -110,15 +115,34 @@ namespace SpaceMiner
             wide=Mathf.Lerp(wide,targetWide,blend);close=Mathf.Lerp(close,targetClose,blend);
             Set("JawOpen",jaw*Avatar.JawWeight);Set("Round",round*100);Set("Wide",wide*100);Set("LipClose",close*100);
             float emotion=Acting!=null?Mathf.Clamp01(Acting.MoodIntensity):1;
-            float desiredSmile=(driver.CurrentMood==MiraAvatar.Mood.Encouraging?.48f:driver.CurrentMood==MiraAvatar.Mood.Friendly?.20f:0)*emotion;
+            float natural=HasExpressiveRig?Mathf.Clamp01(ExpressionCoupling):0;
+            float phraseTime=speech!=null&&speech.clip!=null?speech.time:0;
+            float cadence=speaking?.5f+.5f*Mathf.Sin(phraseTime*2.1f):.25f;
+            expressionAccent=Mathf.Lerp(expressionAccent,speaking?driver.Mouth:0,1-Mathf.Exp(-dt*5));
+            float desiredSmile=(driver.CurrentMood==MiraAvatar.Mood.Encouraging?Mathf.Lerp(.48f,.66f,natural):
+                driver.CurrentMood==MiraAvatar.Mood.Friendly?Mathf.Lerp(.20f,.36f,natural):0)*emotion;
             smile=Mathf.Lerp(smile,Expressions?desiredSmile:0,1-Mathf.Exp(-dt*3));
             concern=Mathf.Lerp(concern,Expressions && driver.CurrentMood==MiraAvatar.Mood.Concerned?.6f*emotion:0,1-Mathf.Exp(-dt*3));
             focus=Mathf.Lerp(focus,Expressions && driver.CurrentMood==MiraAvatar.Mood.Focused?.5f*emotion:0,1-Mathf.Exp(-dt*3));
-            Set("Smile",smile*100);Set("BrowConcern",concern*100);Set("BrowFocus",focus*100);
+            // Rounding and bilabial closures take precedence over expressive mouth corners.
+            float smileGate=1-natural*Mathf.Clamp01(round*.78f+(speaking?close*.55f:0));
+            Set("Smile",smile*100*smileGate);Set("BrowConcern",concern*100);Set("BrowFocus",focus*100);
             if(time>=nextBlink){blinkAt=time;nextBlink=time+Range(2.8f,6.2f);if(EyeMotion)Blinks++;}
             float phase=time-blinkAt;
             Blink=EyeMotion?(phase<.085f?Mathf.SmoothStep(0,1,phase/.085f):1-Mathf.SmoothStep(0,1,(phase-.085f)/.15f)):0;
             Set("BlinkLeft",Blink*100);Set("BlinkRight",Blink*98);
+            float asymmetry=Mathf.Sin(phraseTime*.73f+.4f)*.10f;
+            CheekActivation=smile*natural*(.70f+cadence*.12f);
+            EyeSmileActivation=EyeMotion?CheekActivation*.65f*(1-Blink):0;
+            BrowLiftActivation=Expressions?natural*Mathf.Clamp01(smile*.36f+concern*.12f+expressionAccent*.30f):0;
+            Set("SmileLeft",smile*natural*smileGate*(.78f+asymmetry)*100);
+            Set("SmileRight",smile*natural*smileGate*(.78f-asymmetry)*100);
+            Set("CheekRaiseLeft",CheekActivation*(1+asymmetry)*100);
+            Set("CheekRaiseRight",CheekActivation*(1-asymmetry)*100);
+            Set("EyeSmileLeft",EyeSmileActivation*(1+asymmetry)*100);
+            Set("EyeSmileRight",EyeSmileActivation*(1-asymmetry)*100);
+            Set("BrowLiftLeft",BrowLiftActivation*(.85f+cadence*.2f)*100);
+            Set("BrowLiftRight",BrowLiftActivation*(.7f+cadence*.15f)*100);
             if(time>=nextGaze)
             {
                 targetGaze=random.NextDouble()<.65?Vector2.zero:new Vector2(Range(-.65f,.65f),Range(-.35f,.35f));
@@ -144,6 +168,8 @@ namespace SpaceMiner
                 driver.CurrentMood==MiraAvatar.Mood.Concerned?new Vector3(1.1f,0,-.8f):
                 driver.CurrentMood==MiraAvatar.Mood.Focused?new Vector3(1.5f,0,0):new Vector3(-.8f,0,-1);
             var acted=gesture+(Expressions?posture*emotion:Vector3.zero)+headTarget*.25f+new Vector3(0,gaze.x*2,0);
+            // A small phrase accent complements the authored gestures; it never drives the head from each viseme.
+            if(Expressions)acted+=natural*new Vector3(expressionAccent*.45f,0,smile*cadence*.35f);
             angles=Vector3.Lerp(angles,acted,actingWeight)*Mathf.Clamp(MovementStrength,0,1.5f);
             HeadAngles=Vector3.Lerp(HeadAngles,driver.Motion?angles:Vector3.zero,1-Mathf.Exp(-dt*2.8f));
             if(Head!=null)Head.localRotation=Quaternion.Euler(HeadAngles);

@@ -1,0 +1,162 @@
+{
+  "date": "2026-10-27",
+  "baseCommit": "4b491b1d18f13b873e4035e61e3bc0b0c75b800b",
+  "unity": "6000.6.5f1",
+  "passed": true,
+  "checks": 439.0,
+  "runs": [
+    {
+      "exit": 0,
+      "name": "expression-demo",
+      "report": {
+        "passed": true,
+        "checks": 47,
+        "pictures": 6
+      }
+    },
+    {
+      "exit": 0,
+      "name": "expression-game",
+      "report": {
+        "passed": true,
+        "checks": 47,
+        "pictures": 6
+      }
+    },
+    {
+      "exit": 0,
+      "name": "models-demo",
+      "report": {
+        "passed": true,
+        "checks": 64,
+        "pictures": 21,
+        "lowVertices": 116465
+      }
+    },
+    {
+      "exit": 0,
+      "name": "models-large-960",
+      "report": {
+        "passed": true,
+        "checks": 64,
+        "pictures": 21,
+        "lowVertices": 116465
+      }
+    },
+    {
+      "exit": 0,
+      "name": "models-game",
+      "report": {
+        "passed": true,
+        "checks": 64,
+        "pictures": 21,
+        "lowVertices": 116465
+      }
+    },
+    {
+      "exit": 0,
+      "name": "module-demo",
+      "report": {
+        "passed": true,
+        "checks": 70,
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "exit": 0,
+      "name": "acting-full-intro",
+      "report": {
+        "passed": true,
+        "checks": 83,
+        "pictures": 8,
+        "maxHeadDegrees": 3.813,
+        "maxTorsoDegrees": 0.6846,
+        "maxShoulderMetres": 0.001478,
+        "visemeChanges": 529
+      }
+    }
+  ],
+  "scope": "Highmodell mit21 Gesichtsformen; gekoppelte Mundwinkel/Wangen/Unterlider/Brauen, vier Stimmungen, Priorität für Lippenrundung/Sprechverschluss, sanfte Akzente zur bestehenden Kopfregie. Großansicht mit Vergleichsregler. Tatsächliche lokale Aufnahmen, vollständiges16-teiliges Erwachen.",
+  "reference": "https://www.facebook.com/reel/2291344751717840",
+  "buildLog": "Logs/mira-expression-final-build-20261027.log",
+  "sharedRuntimeSha256": "0AA4EA5647F46E783C0E4AEF3414F3C7B92206CD431D9BD4B62741D03C3FB5C9",
+  "originals": [
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/Original.fbx",
+      "sha256": "1FC98738B518634D607EA5F4159C7BDB6F1965F59DDFF4EA8DD4239EE9802E2C",
+      "preserved": true
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH25/MiraTripoMesh.asset",
+      "sha256": "B241C20857605993AB565904021277520A455019E207EF869DF756DFB9647285",
+      "preserved": true
+    },
+    {
+      "path": "Assets/SpaceMiner/Scenes/AsteroidBelt.unity",
+      "sha256": "4214DF275946B8A7BFA69DF5C7C10E4388B9862753054D762EA49592A2630DE9",
+      "preserved": true
+    },
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "sha256": "842E40D6D7C2763128C272109FD51C6233891C2692BDA34594BF9E7E52D85B24",
+      "preserved": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/MiraFacePerformance.cs",
+      "sha256": "F47E567F3F4A8AA5D8BADB6C2259539F58AC1868322094E1A785B4A332048DF9"
+    },
+    {
+      "path": "Assets/SpaceMiner/Editor/MiraDialogueModelsBuild.cs",
+      "sha256": "BC8AFCDC1FD3D46BEF0A7746A3E5B7AF6A66A0C2E439A3A1B4869A7CB6E42653"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraPortraitView.cs",
+      "sha256": "CDC02E450DF9B1A1E51D0B998622572EE69AF54170BE0EDCAD389F354690B6E3"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraDialogueDemo.cs",
+      "sha256": "22B6C9AFB0E292805095F878EC280BB6DB29FA0D6E8FFB85866B540E80E6B71A"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraDialogueModelsCheck.cs",
+      "sha256": "C9699E66E95B5DDE7CADECA2DD7FE195D7CACA3ED839CEBFFA71416F2BA7DD8D"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/PlayerSettings.cs",
+      "sha256": "506783C37611E0EDAC9EE8A278DC2D2B6F6A0987B62564E0BDF828ED03871A39"
+    },
+    {
+      "path": "Assets/SpaceMiner/Scripts/MiraExpressionCheck.cs",
+      "sha256": "8B2C0A58DA3682D3A457FE90E909B0A05D1BB9BE866CB60E1EF51810C5AD3A75"
+    },
+    {
+      "path": "Assets/SpaceMiner/AvatarLab/TripoH31/MiraHighMesh.asset",
+      "sha256": "4A138D0990FB5692B04DD36F5DDF5E472FCBF14A9C50031611A24ACE11019BD0"
+    }
+  ],
+  "pictures": [
+    "07-Grossansicht-960.png",
+    "08-Introabschluss.png",
+    "04-Besorgt.png",
+    "02-Gekoppelt-ermutigend.png",
+    "06-Sprechform.png",
+    "03-Freundlich.png",
+    "05-Konzentriert.png",
+    "01-Bisherige-Mimik.png"
+  ],
+  "earlierFindings": "Erste Vergleichsbilder führten zu stärkerer, weiterhin begrenzter Wangen-/Mundwinkelbewegung. Eine Abfrage von AudioSource.time ohne Clip erzeugte Warnungen; Guard ergänzt, neue47er-Prüfung kontrolliert sauberen Lauf. Finale sieben Läufe bestanden.",
+  "limits": [
+    "Weiterentwicklung des vorhandenen Oberflächenrigs; keine neue Gesichtsretopologie oder Mundinnengeometrie",
+    "Nicht die vollständige Feinheit der Loora-Referenz; subjektive Mimik-/Hörabnahme durch Nutzer offen",
+    "Game-Ausdrucksprobe isoliert Scanner-Pausensteuerung; separate Modellprüfung verwendet den normalen Spielhost",
+    "Keine neue Release-, VR-, FPS- oder native OS-Eingabeabnahme",
+    "Separate Mira-Spielvorschau gebaut; Builds/Windows und WindowsRelease nicht ersetzt"
+  ],
+  "backups": [
+    "Builds/MiraDialogueDemo-before-expression-20261027",
+    "Builds/MiraDialogueGame-before-expression-20261027"
+  ]
+}

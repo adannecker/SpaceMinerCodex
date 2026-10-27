@@ -13,6 +13,7 @@ namespace SpaceMiner
         public int SelectedQuest { get; private set; } = -1;
         public bool ShowingHelpers { get; private set; }
         public float ConversationDuration { get; private set; }
+        public bool LargePortrait {get;set;}
         private readonly SpaceMinerUi ui = new SpaceMinerUi();
         private Vector2 listScroll, navigationScroll;
         private bool questsExpanded = true;
@@ -34,6 +35,7 @@ namespace SpaceMiner
             MeasureConversation();
             if (Array.IndexOf(Environment.GetCommandLineArgs(), "-miraQuests") >= 0) SelectQuest(0);
             else Play(0);
+            if(Array.IndexOf(Environment.GetCommandLineArgs(),"-miraExpressivePreview")>=0){Continuous=true;LargePortrait=true;}
         }
 
         public void SelectAwakening()
@@ -87,7 +89,7 @@ namespace SpaceMiner
             if (Input.GetKeyDown(KeyCode.Space)) Dialogue.SetPaused(!Dialogue.Paused);
             if (Input.GetKeyDown(KeyCode.LeftArrow)) Play(Selected - 1);
             if (Input.GetKeyDown(KeyCode.RightArrow)) Play(Selected + 1);
-            if (Input.GetKeyDown(KeyCode.Escape)) Application.Quit();
+            if (Input.GetKeyDown(KeyCode.Escape)){if(LargePortrait)LargePortrait=false;else Application.Quit();}
         }
 
         private void OnGUI()
@@ -100,6 +102,7 @@ namespace SpaceMiner
             using (var layout = new UiLayout.Scope(UiLayout.Scale()))
             {
                 float width = UiLayout.Width, height = UiLayout.Height;
+                if(LargePortrait){DrawLargePortrait(width,height);return;}
                 GUI.Label(new Rect(28, 22, width - 56, 40), "MIRA / DIALOGSTUDIO", ui.Heading);
                 GUI.Label(new Rect(28, 66, width - 56, 32), (Script.Title ?? "Erwachen") + " · " + Script.Voice, ui.Small);
                 float contentHeight = Mathf.Min(360, height - 460);
@@ -133,6 +136,7 @@ namespace SpaceMiner
                 var portraitBounds = new Rect(574, 112, 320, 320);
                 ui.Panel(portraitBounds);
                 Dialogue.Portrait.Draw(new Rect(582, 120, 304, 304));
+                if(GUI.Button(new Rect(756,120,130,30),"Großansicht",ui.Button))LargePortrait=true;
                 float x = 918, w = width - x - 28;
                 GUI.Label(new Rect(x, 116, w, 32), "ABSCHNITT " + (Selected + 1) + " / " + Script.Cues.Length, ui.Heading);
                 string state = !Dialogue.Visible ? "GESCHLOSSEN" : Dialogue.Paused ? "PAUSIERT"
@@ -169,6 +173,11 @@ namespace SpaceMiner
                     Dialogue.Portrait.BodyMotion = GUI.Toggle(new Rect(28, 488, 526, 28), Dialogue.Portrait.BodyMotion, "Schultern / Oberkörper", ui.ToggleStyle);
                     GUI.Label(new Rect(28, 535, 150, 28), "Bewegung", ui.Small);
                     Dialogue.Portrait.MovementStrength = GUI.HorizontalSlider(new Rect(180, 548, 170, 20), Dialogue.Portrait.MovementStrength, 0, 1.5f);
+                    if(Dialogue.Portrait.Mode==MiraVisualMode.HighModel)
+                    {
+                        GUI.Label(new Rect(28,575,160,28),"Lebendige Mimik",ui.Small);
+                        Dialogue.Portrait.ExpressionCoupling=GUI.HorizontalSlider(new Rect(194,588,156,20),Dialogue.Portrait.ExpressionCoupling,0,1);
+                    }
                     string[] moods = { "freundlich", "besorgt", "konzentriert", "ermutigend" };
                     GUI.Label(new Rect(x + 210, 195, w - 210, 28), moods[(int)Dialogue.Portrait.Mood], ui.Small);
                 }
@@ -176,6 +185,26 @@ namespace SpaceMiner
                 Dialogue.Draw(bounds, "DIALOGSTUDIO / MIRA · " + (Selected + 1) + " / " + Script.Cues.Length, "Verstanden");
                 GUI.Label(new Rect(28, height - 24, width - 56, 22), "← / → Abschnitt   ·   Leertaste Pause / Weiter   ·   Escape Schließen", ui.Small);
             }
+        }
+        private void DrawLargePortrait(float width,float height)
+        {
+            ui.Panel(new Rect(20,20,width-40,height-40));
+            GUI.Label(new Rect(40,34,width-220,40),"MIRA / MIMIK VERGLEICHEN",ui.Heading);
+            if(GUI.Button(new Rect(width-190,34,145,38),"Zurück",ui.Button))LargePortrait=false;
+            float side=Mathf.Min(height-130,width-440);
+            Dialogue.Portrait.Draw(new Rect(40,90,side,side));
+            float x=side+68,w=width-x-42,y=96;
+            GUI.Label(new Rect(x,y,w,60),Script.Cues[Selected].Heading,ui.Heading);y+=72;
+            if(GUI.Button(new Rect(x,y,w,42),Dialogue.Paused?"Fortsetzen":"Pause",ui.Button))Dialogue.SetPaused(!Dialogue.Paused);y+=52;
+            if(GUI.Button(new Rect(x,y,w,42),"Abschnitt wiederholen",ui.Button))Play(Selected);y+=52;
+            if(GUI.Button(new Rect(x,y,w,42),"Nächster Abschnitt →",ui.Button))Play(Selected+1);y+=60;
+            GUI.Label(new Rect(x,y,w,30),"Lebendige Mimik",ui.Text);y+=40;
+            Dialogue.Portrait.ExpressionCoupling=GUI.HorizontalSlider(new Rect(x,y,w,24),Dialogue.Portrait.ExpressionCoupling,0,1);y+=35;
+            GUI.Label(new Rect(x,y,w,55),"Links: bisherige Wirkung\nRechts: gekoppelte Gesichtsmimik",ui.Small);y+=65;
+            Dialogue.Portrait.Expressions=GUI.Toggle(new Rect(x,y,w,28),Dialogue.Portrait.Expressions,"Mimik",ui.ToggleStyle);y+=35;
+            Continuous=GUI.Toggle(new Rect(x,y,w,28),Continuous,"Gespräch fortlaufend",ui.ToggleStyle);y+=45;
+            GUI.Label(new Rect(x,y,w,Mathf.Max(40,height-y-65)),Script.Cues[Selected].Text,ui.Text);
+            GUI.Label(new Rect(40,height-40,width-80,25),"← / → Abschnitt · Leertaste Pause · Escape zurück zum Studio",ui.Small);
         }
         private void OnDestroy() { UiLayout.EndPreview(); ui.Dispose(); }
     }

@@ -75,7 +75,8 @@ namespace SpaceMiner
                 if (Array.IndexOf(args, "-miraQuestPreview") >= 0)
                     return Path.GetFullPath("Logs/MiraQuestPreview/settings/player-settings.json");
                 if (Array.IndexOf(args, "-miraDialogueIntegrationCheck") >= 0 || Array.IndexOf(args, "-miraDialogueCheck") >= 0 || Array.IndexOf(args, "-miraModelsCheck") >= 0
-                    || Array.IndexOf(args, "-miraQuestsCheck") >= 0 || Array.IndexOf(args, "-miraQuestGameCheck") >= 0)
+                    || Array.IndexOf(args, "-miraQuestsCheck") >= 0 || Array.IndexOf(args, "-miraQuestGameCheck") >= 0
+                    || Array.IndexOf(args, "-miraExpressionCheck") >= 0)
                     return Path.GetFullPath("Logs/MiraDialogue/settings/player-settings.json");
                 if(Array.IndexOf(args,"-commandRoomPlannerCheck")>=0)return Path.GetFullPath("Logs/CommandRoomPlannerCheck/settings/player-settings.json");
                 if(Array.IndexOf(args,"-stationRoomPlanningCheck")>=0)return Path.GetFullPath("Logs/StationRoomPlanning/settings/player-settings.json");
